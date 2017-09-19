@@ -1,0 +1,801 @@
+[
+    {
+        "pk": 1,
+        "model": "barriers.BarrierType",
+        "fields": {
+            "is_sps": true,
+            "ec_barrier_code": "01",
+            "barrier_type_name": "Animal Health Reasons",
+            "parent_id": 0
+        }
+    },
+    {
+        "pk": 2,
+        "model": "barriers.BarrierType",
+        "fields": {
+            "is_sps": true,
+            "ec_barrier_code": "0101",
+            "barrier_type_name": "Foot and Mouth Disease (FMD)",
+            "is_sps": true,
+        }
+    },
+    {
+        "pk": 3,
+        "model": "barriers.BarrierType",
+        "fields": {
+            "is_sps": true,
+            "ec_barrier_code": "0102",
+            "barrier_type_name": "Swine Vesicular Disease (SVD)",
+            "is_sps": true,
+        }
+    },
+    {
+        "pk": 4,
+        "model": "barriers.BarrierType",
+        "fields": {
+            "is_sps": true,
+            "ec_barrier_code": "0103",
+            "barrier_type_name": "Bluetongue",
+            "is_sps": true,
+        }
+    },
+    {
+        "pk": 5,
+        "model": "barriers.BarrierType",
+        "fields": {
+            "is_sps": true,
+            "ec_barrier_code": "0104",
+            "barrier_type_name": "African Horse Sickness (AHS)",
+            "is_sps": true,
+        }
+    },
+    {
+        "pk": 6,
+        "model": "barriers.BarrierType",
+        "fields": {
+            "ec_barrier_code": "0105",
+            "barrier_type_name": "Classical Swine Fever (CSF)",
+            "is_sps": true,
+        }
+    },
+    {
+        "pk": 7,
+        "model": "barriers.BarrierType",
+        "fields": {
+            "ec_barrier_code": "0106",
+            "barrier_type_name": "Newcastle Disease (ND)"
+            "is_sps": true,
+        }
+    },
+    {
+        "pk": 8,
+        "model": "barriers.BarrierType",
+        "fields": {
+            "ec_barrier_code": "0107",
+            "barrier_type_name": ""African Swine Fever (ASF)",
+            "is_sps": true,
+        }
+    },
+    {
+        "pk": 9,
+        "model": "barriers.BarrierType",
+        "fields": {
+            "ec_barrier_code": "0108",
+            "barrier_type_name": "Avian Influenza (AI)",
+            "is_sps": true,
+        }
+    },
+    {
+        "pk": 10,
+        "model": "barriers.BarrierType",
+        "fields": {
+            "ec_barrier_code": "0130",
+            "barrier_type_name": "Bovine Spongiform Encephalopaty (BSE)", # sic - should be Encephalopathy
+            "is_sps": true,
+        }
+    },
+    {
+        "pk": 11,
+        "model": "barriers.BarrierType",
+        "fields": {
+            "ec_barrier_code": "0131",
+            "barrier_type_name": "Scrapie",
+            "is_sps": true,
+        }
+    },
+    {
+        "pk": 12,
+        "model": "barriers.BarrierType",
+        "fields": {
+            "ec_barrier_code": "0132",
+            "barrier_type_name": "Porcine Reproductive and Respiratory Syndrome (PRRS)",
+            "is_sps": true,
+        }
+    },
+    {
+        "pk": 13,
+        "model": "barriers.BarrierType",
+        "fields": {
+            "ec_barrier_code": "0133",
+            "barrier_type_name": "Infectious bursal disease (Gumboro disease)",
+            "is_sps": true,
+        }
+    },
+    {
+        "pk": 14,
+        "model": "barriers.BarrierType",
+        "fields": {
+            "ec_barrier_code": "0134",
+            "barrier_type_name": "Schmallenberg virus",
+            "is_sps": true,
+        }
+    },
+    {
+        "pk": 15,
+        "model": "barriers.BarrierType",
+        "fields": {
+            "ec_barrier_code": "0136",
+            "barrier_type_name": ""Animal health reasons",
+            "is_sps": true,
+        }
+    },
+    {
+        "pk": 16,
+        "model": "barriers.BarrierType",
+        "fields": {
+            "ec_barrier_code": "02",
+            "barrier_type_name" : "PLANT HEALTH REASONS",
+            "is_sps" : true
+        }
+    },
+    {
+        "pk": 17,
+        "model": "barriers.BarrierType",
+        "fields": {
+            "ec_barrier_code": "0201",
+            "barrier_type_name" : "Plant pests",
+            "is_sps" : true
+        }
+   },
+   {
+        "pk": 18,
+        "model": "barriers.BarrierType",
+        "fields": {
+            "ec_barrier_code": "0204",
+            "barrier_type_name" : "Treatments (e.g. methyl bromide, cold treatment)",
+            "is_sps" : true
+        }
+   },
+   {
+        "pk": 19,
+        "model": "barriers.BarrierType",
+        "fields": {
+            "ec_barrier_code": "0210",
+            "barrier_type_name" : "Plant health reasons",
+            "is_sps" : true
+        }
+   },
+   {
+        "pk": 20,
+        "model": "barriers.BarrierType",
+        "fields": {
+            "ec_barrier_code": "03",
+            "barrier_type_name" : "PUBLIC HEALTH REASONS",
+            "is_sps" : true
+        }
+   },
+   {
+        "pk": 21,
+        "model": "barriers.BarrierType",
+        "fields": {
+            "ec_barrier_code": "0301",
+            "barrier_type_name" : "Maximum Residue Limits (MRL)",
+            "is_sps" : true
+        }
+   },
+   {
+        "pk": 22,
+        "model": "barriers.BarrierType",
+        "fields": {
+            "ec_barrier_code": "0302",
+            "barrier_type_name" : "Food additives",
+            "is_sps" : true
+        }
+   },
+   {
+        "pk": 23,
+        "model": "barriers.BarrierType",
+        "fields": {
+            "ec_barrier_code": "0303",
+            "barrier_type_name" : "Toxins",
+            "is_sps" : true
+        }
+   },
+   {
+        "pk": 24,
+        "model": "barriers.BarrierType",
+        "fields": {
+            "ec_barrier_code": "0304",
+            "barrier_type_name" : "Micro-organisms (public health)",
+            "is_sps" : true
+        }
+   },
+   {
+        "pk": 25,
+        "model": "barriers.BarrierType",
+        "fields": {
+            "ec_barrier_code": "0305",
+            "barrier_type_name" : "Novel Influenza (H1N1)"
+            "is_sps" : true
+        }
+   },
+   {
+        "pk": 26,
+        "model": "barriers.BarrierType",
+        "fields": {
+            "ec_barrier_code": "0306",
+            "barrier_type_name" : "Food contact materials",
+            "is_sps" : true
+        }
+   },
+   {
+        "pk": 27,
+        "model": "barriers.BarrierType",
+        "fields": {
+            "ec_barrier_code": "0307",
+            "barrier_type_name" : "Residues of veterinary drugs",
+            "is_sps" : true
+        }
+   },
+   {
+        "pk": 28,
+        "model": "barriers.BarrierType",
+        "fields": {
+            "ec_barrier_code": "0308",
+            "barrier_type_name" : "Contaminants - Dioxins and PCBs",
+            "is_sps": true
+        }
+   },
+   {
+        "pk": 29,
+        "model": "barriers.BarrierType",
+        "fields": {
+            "ec_barrier_code": "0309",
+            "barrier_type_name" : "Contaminants - Heavy metals",
+            "is_sps" : true
+        }
+   },
+   {
+        "pk": 30,
+        "model": "barriers.BarrierType",
+        "fields": {
+            "ec_barrier_code": "0310",
+            "barrier_type_name" : "Contaminants - Pesticide residues",
+            "is_sps" : true
+        }
+   },
+   {
+        "pk": 31,
+        "model": "barriers.BarrierType",
+        "fields": {
+            "ec_barrier_code": "0320",
+            "barrier_type_name" : "Public health reasons",
+            "is_sps" : true
+        }
+   },
+   {
+        "pk": 32,
+        "model": "barriers.BarrierType",
+        "fields": {
+            "ec_barrier_code": "04",
+            "barrier_type_name" : "OTHER SPS IMPORT RESTRICTIONS",
+            "is_sps" : true
+        }
+   },
+   {
+        "pk": 33,
+        "model": "barriers.BarrierType",
+        "fields": {
+            "is_sps": true,
+            "ec_barrier_code": "0401",
+            "barrier_type_name" : "Certification",
+            "is_sps" : true
+        }
+   },
+   {
+        "pk": 34,
+        "model": "barriers.BarrierType",
+        "fields": {
+            "ec_barrier_code": "0402",
+            "barrier_type_name" : "Sampling",
+            "is_sps": true,
+        }
+   },
+   {
+        "pk": 35,
+        "model": "barriers.BarrierType",
+        "fields": {
+            "ec_barrier_code": "0403",
+            "barrier_type_name" : "Risk analyses (including PRA - Pest Risk Analyses)",
+            "is_sps" : true
+        }
+   },
+   {
+        "pk": 36,
+        "model": "barriers.BarrierType",
+        "fields": {
+            "ec_barrier_code": "0404",
+            "barrier_type_name" : "Traceability (animal identification, animal movement)",
+            "is_sps": true,
+        }
+   },
+   {
+        "pk": 37,
+        "model": "barriers.BarrierType",
+        "fields": {
+            "ec_barrier_code": "0405",
+            "barrier_type_name" : "Import licence/permit",
+            "is_sps" : true
+        }
+   },
+   {
+        "pk": 38,
+        "model": "barriers.BarrierType",
+        "fields": {
+            "is_sps": true,
+            "ec_barrier_code": "0406",
+            "barrier_type_name" : "Quarantine (including post entry quarantine)",
+            "is_sps" : true
+        }
+   },
+   {
+        "pk": 39,
+        "model": "barriers.BarrierType",
+        "fields": {
+            "ec_barrier_code": "0407",
+            "barrier_type_name" : "Food contact materials",
+            "is_sps" : true
+        }
+   },
+   {
+        "pk": 40,
+        "model": "barriers.BarrierType",
+        "fields": {
+            "ec_barrier_code": "0408",
+            "barrier_type_name" : "Non compliance with international standards",
+            "is_sps" : true
+        }
+   },
+   {
+        "pk": 41,
+        "model": "barriers.BarrierType",
+        "fields": {
+            "ec_barrier_code": "0409",
+            "barrier_type_name" : "Non recognition of regionalisation",
+            "is_sps" : true
+        }
+   },
+   {
+        "pk": 42,
+        "model": "barriers.BarrierType",
+        "fields": {
+            "ec_barrier_code": "0410",
+            "barrier_type_name" : "Non-listing of establishments",
+            "is_sps" : true
+        }
+    },
+    {
+        "pk": 43,
+        "model": "barriers.BarrierType",
+        "fields": {
+            "ec_barrier_code": "0411",
+            "barrier_type_name" : "Non-transparent legislation",
+            "is_sps" : true
+        }
+    },
+    {
+        "pk": 44,
+        "model": "barriers.BarrierType",
+        "fields": {
+            "ec_barrier_code": "0412",
+            "barrier_type_name" : "Long approval procedures",
+            "is_sps" : true
+        }
+    },
+    {
+        "pk": 45,
+        "model": "barriers.BarrierType",
+        "fields": {
+            "ec_barrier_code": "0413",
+            "barrier_type_name" : "Animal Welfare",
+            "is_sps" : true
+        }
+    },
+    {
+        "pk": 46,
+        "model": "barriers.BarrierType",
+        "fields": {
+            "ec_barrier_code": "0414",
+            "barrier_type_name" : "Other SPS import restrictions",
+            "is_sps" : true
+        }
+    },
+    {
+        "pk": 47,
+        "model": "barriers.BarrierType",
+        "fields": {
+            "ec_barrier_code": "02",
+            "barrier_type_name": "Tariffs and Duties",
+            "is_sps" : false
+        }
+    },
+    {
+        "pk": 48,
+        "model": "barriers.BarrierType",
+        "fields": {
+            "ec_barrier_code": "0201",
+            "barrier_type_name": "Tariff Levels",
+            "is_sps" : false
+        }
+    },
+    {
+        "pk": 49,
+        "model": "barriers.BarrierType",
+        "fields": {
+            "ec_barrier_code": "0202",
+            "barrier_type_name": "Tariff Quotas",
+            "is_sps" : false
+        }
+    },
+    {
+        "pk": 50,
+        "model": "barriers.BarrierType",
+        "fields": {
+            "ec_barrier_code": "0203",
+            "barrier_type_name": "Internal Taxation",
+            "is_sps" : false
+        }
+    },
+    {
+        "pk": 51,
+        "model": "barriers.BarrierType",
+        "fields": {
+            "ec_barrier_code": "0204",
+            "barrier_type_name": "Other Tariffs and Duties",
+            "is_sps" : false
+        }
+    },
+    {
+        "pk": 52,
+        "model": "barriers.BarrierType",
+        "fields": {
+            "ec_barrier_code": "03",
+            "barrier_type_name": "Trade Defense Instruments",
+            "is_sps" : false
+        }
+    },
+    {
+        "pk": 53,
+        "model": "barriers.BarrierType",
+        "fields": {
+            "ec_barrier_code": "0301",
+            "barrier_type_name": "Anti-Dumping Measure",
+            "is_sps" : false
+        }
+    },
+    {
+        "pk": 54,
+        "model": "barriers.BarrierType",
+        "fields": {
+            "ec_barrier_code": "0302",
+            "barrier_type_name": "Countervailing Measure",
+            "is_sps" : false
+        }
+    },
+    {
+        "pk": 55,
+        "model": "barriers.BarrierType",
+        "fields": {
+            "ec_barrier_code": "0303",
+            "barrier_type_name": "Safeguard Measures",
+            "is_sps" : false
+        }
+    },
+    {
+        "pk": 56,
+        "model": "barriers.BarrierType",
+        "fields": {
+            "ec_barrier_code": "0304",
+            "barrier_type_name": "Other Trade Defense Instruments",
+            "is_sps" : false
+        }
+    },
+    {
+        "pk": 57,
+        "model": "barriers.BarrierType",
+        "fields": {
+            "ec_barrier_code": "04",
+            "barrier_type_name": "Non Tariff Barriers",
+            "is_sps" : false
+        }
+    },
+    {
+        "pk": 58,
+        "model": "barriers.BarrierType",
+        "fields": {
+            "ec_barrier_code": "0401",
+            "barrier_type_name": "Registration, Documentation, Customs Procedures",
+            "is_sps" : false
+        }
+    },
+    {
+        "pk": 59,
+        "model": "barriers.BarrierType",
+        "fields": {
+            "ec_barrier_code": "0402",
+            "barrier_type_name": "Quantitative Restrictions and Related Measures",
+            "is_sps" : false
+        }
+    },
+    {
+        "pk": 60,
+        "model": "barriers.BarrierType",
+        "fields": {
+            "ec_barrier_code": "0403",
+            "barrier_type_name": "Competition Issues",
+            "is_sps" : false
+        }
+    },
+    {
+        "pk": 61,
+        "model": "barriers.BarrierType",
+        "fields": {
+            "ec_barrier_code": "0404",
+            "barrier_type_name": "Standards, Sanitary  and Other Technical Requirements",
+            "is_sps" : false # bizarrely
+        }
+    },
+    {
+        "pk": 62,
+        "model": "barriers.BarrierType",
+        "fields": {
+            "ec_barrier_code": "0405",
+            "barrier_type_name": "Government Procurement",
+            "is_sps" : false
+        }
+    },
+    {
+        "pk": 63,
+        "model": "barriers.BarrierType",
+        "fields": {
+            "ec_barrier_code": "0406",
+            "barrier_type_name": "Subsidies",
+            "is_sps" : false
+        }
+    },
+    {
+        "pk": 64,
+        "model": "barriers.BarrierType",
+        "fields": {
+            "ec_barrier_code": "0408",
+            "barrier_type_name": "Other Non-Tariff Measures",
+            "is_sps" : false
+        }
+    },
+    {
+        "pk": 65,
+        "model": "barriers.BarrierType",
+        "fields": {
+            "ec_barrier_code": "0409",
+            "barrier_type_name": "Sanitary and Phytosanitary measures",
+            "is_sps" : false
+        }
+    },
+    {
+        "pk": 66,
+        "model": "barriers.BarrierType",
+        "fields": {
+            "ec_barrier_code": "05",
+            "barrier_type_name": "stment Related Barriers",
+            "is_sps" : false
+        }
+    },
+    {
+        "pk": 67,
+        "model": "barriers.BarrierType",
+        "fields": {
+            "ec_barrier_code": "0501",
+            "barrier_type_name": "Trade Related Investment Measures",
+            "is_sps" : false
+        }
+    },
+    {
+        "pk": 68,
+        "model": "barriers.BarrierType",
+        "fields": {
+            "ec_barrier_code": "0502",
+            "barrier_type_name": "Direct Foreign Investment Limitations",
+            "is_sps" : false
+        }
+    },
+    {
+        "pk": 69,
+        "model": "barriers.BarrierType",
+        "fields": {
+            "ec_barrier_code": "0505",
+            "barrier_type_name":  Other",
+            "is_sps" : false
+        }
+    },
+    {
+        "pk": 70,
+        "model": "barriers.BarrierType",
+        "fields": {
+            "ec_barrier_code": "06",
+            "barrier_type_name": "IPR",
+            "is_sps" : false
+        }
+    },
+    {
+        "pk": 71,
+        "model": "barriers.BarrierType",
+        "fields": {
+            "ec_barrier_code": "0601",
+            "barrier_type_name": "Legislation on Copyright and Related Rights",
+            "is_sps" : false
+        }
+    },
+    {
+        "pk": 72,
+        "model": "barriers.BarrierType",
+        "fields": {
+            "ec_barrier_code": "0602",
+            "barrier_type_name": "Trademarks Legislation",
+            "is_sps" : false
+        }
+    },
+    {
+        "pk": 73,
+        "model": "barriers.BarrierType",
+        "fields": {
+            "ec_barrier_code": "0603",
+            "barrier_type_name": "Legislation on Appelations of Origin and Geographic Indications",
+            "is_sps" : false
+        }
+    },
+    {
+        "pk": 74,
+        "model": "barriers.BarrierType",
+        "fields": {
+            "ec_barrier_code": "0604",
+            "barrier_type_name": "Industrial Design Legislation",
+            "is_sps" : false
+        }
+    },
+    {
+        "pk": 75,
+        "model": "barriers.BarrierType",
+        "fields": {
+            "ec_barrier_code": "0605",
+            "barrier_type_name": "Legislation on Patents (Including Plant Varieties)",
+            "is_sps" : false
+        }
+    },
+    {
+        "pk": 76,
+        "model": "barriers.BarrierType",
+        "fields": {
+            "ec_barrier_code": "0606",
+            "barrier_type_name": "Legislation on Layout Designs of Integrated Circuits",
+            "is_sps" : false
+        }
+    },
+    {
+        "pk": 77,
+        "model": "barriers.BarrierType",
+        "fields": {
+            "ec_barrier_code": "0607",
+            "barrier_type_name": "Enforcement problems on IPR",
+            "is_sps" : false
+        }
+    },
+    {
+        "pk": 78,
+        "model": "barriers.BarrierType",
+        "fields": {
+            "ec_barrier_code": "0608",
+            "barrier_type_name": "Other IPR Related Problems",
+            "is_sps" : false
+        }
+    },
+    {
+        "pk": 79,
+        "model": "barriers.BarrierType",
+        "fields": {
+            "ec_barrier_code": "07",
+            "barrier_type_name": "Other (export related)",
+            "is_sps" : false
+        }
+    },
+    {
+        "pk": 80,
+        "model": "barriers.BarrierType",
+        "fields": {
+            "ec_barrier_code": "0701",
+            "barrier_type_name": "Export Prohibition and Other Quantitative Restrictions",
+            "is_sps" : false
+        }
+    },
+    {
+        "pk": 81,
+        "model": "barriers.BarrierType",
+        "fields": {
+            "ec_barrier_code": "0702",
+            "barrier_type_name": "Export Taxes",
+            "is_sps" : false
+        }
+    },
+    {
+        "pk": 82,
+        "model": "barriers.BarrierType",
+        "fields": {
+            "ec_barrier_code": "0703",
+            "barrier_type_name": "Discriminating Export Licensing",
+            "is_sps" : false
+        }
+    },
+    {
+        "pk": 83,
+        "model": "barriers.BarrierType",
+        "fields": {
+            "ec_barrier_code": "0704",
+            "barrier_type_name": "Export Subsidies",
+            "is_sps" : false
+        }
+    },
+    {
+        "pk": 84,
+        "model": "barriers.BarrierType",
+        "fields": {
+            "ec_barrier_code": "08",
+            "barrier_type_name": "Services specific Measures",
+            "is_sps" : false
+        }
+    },
+    {
+        "pk": 85,
+        "model": "barriers.BarrierType",
+        "fields": {
+            "ec_barrier_code": "0801",
+            "barrier_type_name": "Market Access (quantitative) restrictions",
+            "is_sps" : false
+        }
+    },
+    {
+        "pk": 86,
+        "model": "barriers.BarrierType",
+        "fields": {
+            "ec_barrier_code": "0802",
+            "barrier_type_name": "Discriminatory treatment",
+            "is_sps" : false
+        }
+    },
+    {
+        "pk": 87,
+        "model": "barriers.BarrierType",
+        "fields": {
+            "ec_barrier_code": "0803",
+            "barrier_type_name": "Non quantitative, non discriminatory measures (domestic regulation)",
+            "is_sps" : false
+        }
+    },
+    {
+        "pk": 88,
+        "model": "barriers.BarrierType",
+        "fields": {
+            "ec_barrier_code": "0804",
+            "barrier_type_name": "Other trade in services issues"
+            "is_sps" : false
+        }
+    }
+}

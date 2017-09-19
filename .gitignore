@@ -1,0 +1,9 @@
+static
+staticfiles
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+.DS_Store
+src
+marketaccess/db.sqlite3

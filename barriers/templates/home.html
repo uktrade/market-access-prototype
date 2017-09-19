@@ -1,0 +1,69 @@
+{% extends './govuk_layout.html' %}
+{% load staticfiles %}
+{% load trans from i18n %}
+{% block css %}
+    <link href="{% static 'main.css' %}" media="all" rel="stylesheet" />
+    <link href="{% static 'dit-alpha.css' %}" media="all" rel="stylesheet" />
+    <style>
+      .dit-hero__copy{
+        padding-top: 235px;
+      }
+
+      @media screen and (max-width: 768px){
+        .dit-hero__copy{
+          padding-top: 20px;
+        }
+      }
+
+      .dit-hero__title{
+        font-size: 72px;
+      }
+    </style>
+{% endblock %}
+{% block head_title %}Market Access Barriers{% endblock %}
+{% block sub_header %}{# prevent the subheader from showing on form pages #}{% endblock %}
+{% block hero_title %}
+Get seen by motivated overseas buyers
+{% endblock %}
+
+{% block css_layout_class %}
+tr-home
+{% endblock %}
+
+{% block content %}
+  <div class="dit-hero" style="background-image: url(//placehold.it/1290x410);">
+    <div class="row">
+      <div class="ten columns dit-hero__copy">
+          <h1 class="dit-hero__title">{% trans "Trade Barriers" %}</h1>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="twelve columns dit-page-summary">
+        <p>{% trans "Trade barriers can stop you exporting goods and services, or they can make your products less competitive than those produced locally. If you think you’ve got a problem, you can get help here." %}</p>
+    </div>
+    <div class="twelve columns dit-card-holder">
+        <div class="entry content rich-text four columns dit-card">
+          <img src="//placehold.it/368x244" alt="" class="dit-card__media">
+          <div class="dit-card__body">
+            <h2 class="dit-card__title"><a href="{% url 'report-barrier' %}">Find out about trade barriers</a></h2>
+            <p>Find out about the different types of trade barrier and how the government deals with them.</p>
+          </div>
+        </div>
+        <div class="entry content rich-text four columns dit-card">
+          <img src="//placehold.it/368x244" alt="" class="dit-card__media">
+          <div class="dit-card__body">
+            <h2 class="dit-card__title"><a href="{% url 'report-barrier' %}">Check trade barriers in your target market</a></h2>
+            <p>Tell us what you want to export and where, and we’ll tell you if we know of any potential problems.</p>
+          </div>
+        </div>
+        <div class="entry content rich-text four columns dit-card">
+          <img src="//placehold.it/368x244" alt="" class="dit-card__media">
+          <div class="dit-card__body">
+            <h2 class="dit-card__title"><a href="{% url 'report-barrier' %}">Report a trade barriers</a></h2>
+            <p>There are a lot of different ways to tackle a trade barrier. Tell us about your problem and how you think we can help.</p>
+          </div>
+        </div>
+    </div>
+  </div>
+{% endblock %}

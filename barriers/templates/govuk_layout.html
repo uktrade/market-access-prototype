@@ -1,0 +1,254 @@
+{% load static from staticfiles %}<!DOCTYPE html>
+<!--[if lt IE 9]><html class="lte-ie8" lang="en"><![endif]-->
+<!--[if gt IE 8]><!--><html lang="en"><!--<![endif]-->
+    <head>
+        <meta id="utmCookieDomain" value="{{ analytics.UTM_COOKIE_DOMAIN }}" />
+        {# include 'google_tag_manager_head.html' #}
+        <meta charset="utf-8" />
+        <title>{% block head_title %}Find a Buyer - GREAT.gov.uk{% endblock %}</title>
+        <link rel="shortcut icon" href="{% static 'govuk-0.18.0/assets/images/favicon.ico' %}" type="image/x-icon" />
+        <link rel="mask-icon" href="{% static 'govuk-0.18.0/assets/images/gov.uk_logotype_crown.svg' %}" color="#0b0c0c">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="{% static 'govuk-0.18.0/assets/images/apple-touch-icon-152x152.png' %}">
+        <link rel="apple-touch-icon-precomposed" sizes="120x120" href="{% static 'govuk-0.18.0/assets/images/apple-touch-icon-120x120.png' %}">
+        <link rel="apple-touch-icon-precomposed" sizes="76x76" href="{% static 'govuk-0.18.0/assets/images/apple-touch-icon-76x76.png' %}">
+        <link rel="apple-touch-icon-precomposed" href="{% static 'govuk-0.18.0/assets/images/apple-touch-icon-60x60.png' %}">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta property="og:image" content="{% static 'govuk-0.18.0/assets/images/opengraph-image.png' %}">
+        <link href="{% static 'Dit-Pattern-Styling/public/css/main.css' %}" media="all" rel="stylesheet" />
+        <link href="{% static 'vendor/bootstrap/css/bootstrap-grid-only.css' %}" media="all" rel="stylesheet" />
+        <link href="{% static 'vendor/bootstrap/css/bootstrap-responsive.css' %}" media="all" rel="stylesheet" />
+
+        {% block css %}
+            <link href="{% static 'main.css' %}" media="all" rel="stylesheet" />
+        {% endblock %}
+        <style type="text/css">
+            .js-disabled-only {
+                display: none;
+            }
+        </style>
+        <noscript>
+            <style type="text/css">
+                .navigation-toggle {
+                    display: block;
+                }
+                .js-disabled-only {
+                    display: block;
+                }
+                .js-enabled-only {
+                    display: none;
+                }
+            </style>
+        </noscript>
+    </head>
+
+    <body>
+
+        <script>document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script>
+
+        {# include 'google_tag_manager_body.html' #}
+
+        <svg style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <symbol id="icon-dittriangle-down" viewBox="0 0 24 32">
+              <title>triangle-down</title>
+              <path d="M0 12l11.992 11.992 11.992-11.992h-23.984z"/>
+            </symbol>
+            <symbol id="icon-ditcheckmark" viewBox="0 0 32 32">
+              <title>checkmark</title>
+              <path d="M27 4l-15 15-7-7-5 5 12 12 20-20z"/>
+            </symbol>
+            <symbol id="icon-search" viewBox="0 0 1024 1024">
+              <title>search</title>
+              <path d="M898.304 791.962l-193.485-193.485c29.184-47.974 45.978-104.192 45.978-164.454 0-174.899-151.603-326.502-326.554-326.502-174.899 0-316.723 141.824-316.723 316.723 0 174.95 151.552 326.554 326.502 326.554 58.163 0 112.64-15.77 159.488-43.162l194.509 194.56c19.098 19.046 49.92 19.046 68.915 0l48.282-48.23c18.995-19.046 12.083-43.008-6.912-62.003zM205.005 424.243c0-121.088 98.15-219.29 219.238-219.29 121.139 0 229.069 107.93 229.069 229.069s-98.15 219.29-219.29 219.29-229.018-107.93-229.018-229.069z"/>
+            </symbol>
+          </defs>
+        </svg>
+
+        <header role="banner">
+          <div class="navigation">
+            <div class="navigation-strip background--dark-navy">
+              <div class="outer-container">
+                <ul class="list-inline list-separators">
+                  <li class="float--left soft-half--right navigation-skip-to"><a class="link link--grey" href="#content" title="Skip to main content"><strong>Skip to main content</strong></a></li>
+                  <li class="float--left soft-half--right"><a class="logo-hmg" href="https://www.gov.uk/" title="Go to the GOV.UK homepage"><img src="{% static 'images/hm-gov-horizontal.svg' %}" alt="HM Government logo"></a></li>
+                  <li class="float--left soft-half--left"><a class="link link--white" href="https://www.great.gov.uk/" title="part of great.gov.uk"><span class="hide-mobile font-light-grey font-light">Part of </span><span class="font-regular">great.gov.uk</span></a></li>
+                </ul>
+
+                <ul class="list-inline list-separators float--right navigation-login font-regular">
+                  {% if not sso_is_logged_in %}
+                  <li class="float--left soft-half--right"><a class="link--white" href="{{ sso_login_url }}" title="Sign in"><i class="icon icon--left icon-sign-in"><span class="visuallyhidden">Sign in icon</span></i><span class="hide-mobile">Sign in</span></a></li>
+                  <li class="float--left soft-half--left hide-mobile"><a class="link--white" href="{{ sso_register_url }}" title="Register"><span>Register</span></a></li>
+                  {% else %}
+                  <li class="float--left soft-half--right"><a class="link--white" href="{{ sso_profile_url }}" title="Profile"><i class="icon icon--left icon-sign-out"><span class="visuallyhidden">Profile icon</span></i><span class="hide-mobile">Profile</span></a></li>
+                  <li class="float--left soft-half--left hide-mobile"><a class="link--white" href="{{ sso_logout_url }}" title="Sign out"><span>Sign out</span></a></li>
+                  {% endif %}
+                </ul>
+                <ul class="list-inline list-separators float--right navigation-login font-regular" id="sso-signout" style="display:none">
+                  {% if not sso_is_logged_in %}
+                  <li class="float--left soft-half--right"><a class="link--white" href="{{ sso_login_url }}" title="Sign in"><i class="icon icon--left icon-sign-in"></i><span class="hide-mobile">Sign in</span></a></li>
+                  <li class="float--left soft-half--left hide-mobile"><a class="link--white" href="{{ sso_register_url }}" title="Register"><span>Register</span></a></li>
+                  {% else %}
+                  <li class="float--left soft-half--right"><a class="link--white" href="{{ sso_profile_url }}" title="Profile"><i class="icon icon--left icon-sign-out"></i><span class="hide-mobile">Profile</span></a></li>
+                  <li class="float--left soft-half--left hide-mobile"><a class="link--white" href="{{ sso_logout_url }}" title="Sign out"><span>Sign out</span></a></li>
+                  {% endif %}
+                </ul>
+              </div>
+            </div>
+            <div class="background--great-blue">
+              <div class="outer-container">
+                <a href="https://www.export.great.gov.uk" title="Go to the Exporting is GREAT homepage" class="navigation-logo-link float--left">
+                  <img src="{% static 'images/dfit-logo-white.png' %}" alt="Department for International Trade" class="navigation-logo" width="200">
+                </a>
+              </div>
+            </div>
+            <div class="navigation-main background--dark-blue">
+              <div class="navigation-main-section outer-container">
+                <nav>
+                  <ul class="list-inline list-separators navigation-main-menu">
+                    <li><a title="new to exporting" href="https://www.export.great.gov.uk/new/" class="navigation-main-link navigation-main-link--primary background--light-blue font-regular">New to exporting</a></li>
+                    <li><a title="occasional exporter" href="https://www.export.great.gov.uk/occasional/" class="navigation-main-link navigation-main-link--primary background--light-blue font-regular">Occasional exporter</a></li>
+                    <li><a title="regular exporter" href="https://www.export.great.gov.uk/regular/" class="navigation-main-link navigation-main-link--primary background--light-blue font-regular">Regular exporter</a></li>
+                    <li><a href="https://www.export.great.gov.uk/opportunities" title="Export opportunities" class="navigation-main-link navigation-main-link--secondary">Export opportunities</a></li>
+                    <li><a href="http://find-a-buyer.export.great.gov.uk/" title="Find a buyer" class="navigation-main-link navigation-main-link--secondary{% if header_footer_css_active_classes.fab %} navigation-main-link--active{% endif %}">Find a buyer</a></li>
+                    <li><a href="https://selling-online-overseas.export.great.gov.uk/markets/" title="Selling online overseas" class="navigation-main-link navigation-main-link--secondary">Selling online overseas</a></li>
+                    <li><a href="https://export.great.gov.uk/get-finance/" title="Get finance" class="navigation-main-link navigation-main-link--secondary">Get finance</a></li>
+                    <li><a href="https://events.trade.gov.uk/" title="Events" class="navigation-main-link navigation-main-link--secondary">Events</a></li>
+                  </ul>
+                </nav>
+                <a class="button navigation-main-button font-white" title="" href=""><i class="icon icon-menu"></i>All</a>
+              </div>
+              <div class="navigation-toggle background--dark-navy">
+                <div class="outer-container">
+                  <div class="col-3">
+                    <div class="navigation-toggle-services-section">
+                      <h3 class="font-large font-light-grey font-light push--bottom hide-mobile">Export readiness</h3>
+                      <ul class="font-regular">
+                        <li class="navigation-toggle-item navigation-toggle-services"><a title="new to exporting" href="https://www.export.great.gov.uk/new/">New to exporting</a></li>
+                        <li class="navigation-toggle-item navigation-toggle-services"><a title="occasional exporter" href="https://www.export.great.gov.uk/occasional/">Occasional exporter</a></li>
+                        <li class="navigation-toggle-item navigation-toggle-services"><a title="regular exporter" href="https://www.export.great.gov.uk/regular/" class="last">Regular exporter</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="col-3">
+                    <h3 class="font-large font-light-grey font-light push--bottom hide-mobile soft--left">Online tools</h3>
+                    <ul class="navigation-toggle-middle">
+                      <li class="navigation-toggle-item"><a href="https://www.export.great.gov.uk/opportunities" title="Export opportunities">Export opportunities</a></li>
+                      <li class="navigation-toggle-item"><a href="http://find-a-buyer.export.great.gov.uk/" title="Find a buyer" class="{% if header_footer_css_active_classes.fab %}navigation-toggle-active{% endif %}">Find a buyer</a></li>
+                      <li class="navigation-toggle-item"><a href="https://selling-online-overseas.export.great.gov.uk/markets/" title="Selling online overseas">Selling online overseas</a></li>
+                    </ul>
+                  </div>
+                  <div class="col-3">
+                    <h3 class="font-large font-light-grey font-light push--bottom hide-mobile soft--left">Other support</h3>
+                    <ul class="navigation-toggle-middle">
+                      <li class="navigation-toggle-item"><a href="https://export.great.gov.uk/get-finance/" title="Get finance">Get finance</a></li>
+                      <li class="navigation-toggle-item"><a href="https://events.trade.gov.uk/" title="Events">Events</a></li>
+                    </ul>
+                  </div>
+                  <div class="col-3">
+                    <h3 class="font-large font-light-grey font-light soft--left push--bottom hide-mobile">About us</h3>
+                    <ul class="navigation-toggle-middle">
+                      <li class="navigation-toggle-item"><a href="https://www.export.great.gov.uk/about/" title="About great.gov.uk">About great.gov.uk</a></li>
+                      <li class="navigation-toggle-item"><a href="https://contact-us.export.great.gov.uk/selling_online_overseas" title="Contact us" class="last">Contact us</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </header>
+
+        {% block sub_header %}
+
+            <section class="ed-hero-sub-header">
+                <div class="outer-container">
+                    <div class="row-fluid">
+                        <span class="span12 ed-hero-sub-header-title">
+                            <h1 class="h1">{% block hero_title %}{% endblock %}</h1>
+                        </span>
+                    </div>
+                    <div class="row-fluid ed-hero-sub-header-synopsis">
+                        <span class="span9">
+                            <span>{% block hero_text %}{% endblock %}</span>
+                        </span>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+            </section>
+
+        {% endblock sub_header %}
+
+        <main id="content" class="{% block css_layout_class %}{% endblock css_layout_class %} enrolment-content" role="main">
+            {% block content %}
+            {% endblock content %}
+        </main>
+
+        {% load trans from i18n %}
+        {% load external_url from constants_tags %}
+        <footer role="contentinfo">
+          <div class="footer background--great-blue soft--top">
+              <div class="outer-container">
+                <div class="footer-section">
+                  <div class="col-8">
+                    <a href="https://www.exportingisgreat.gov.uk/" title="Go to the Exporting is Great homepage">
+                      <img src="{% static 'images/EiG-logo-stacked.svg' %}" alt="Exporting is Great logo" class="footer-logo">
+                    </a>
+                  </div>
+
+                  <div class="col-4">
+                    <ul class="footer-links footer-links--border">
+                      <li class="push-half--bottom"><a href="{% external_url 'new_to_exporting' %}" title="New to exporting">{% trans 'New to exporting' %}</a></li>
+                      <li class="push-half--bottom"><a href="{% external_url 'occasional_exporter' %}" title="Occasional exporter">{% trans 'Occasional exporter' %}</a></li>
+                      <li><a href="{% external_url 'regular_exporter' %}" title="Regular exporter">{% trans 'Regular exporter' %}</a></li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="footer-section footer-section-right">
+
+                  <div class="col-6">
+                    <ul class="footer-links footer-middle-section">
+                      <li class="push-half--bottom"><a href="{% external_url 'export_opportunities' %}" title="Export opportunities">{% trans 'Export opportunities' %}</a></li>
+                      <li class="push-half--bottom"><a href="{% external_url 'find_a_buyer' %}" title="Find a buyer">{% trans 'Find a buyer' %}</a></li>
+                      <li class="push-half--bottom"><a href="{% external_url 'selling_online_overseas' %}" title="Selling online overseas">{% trans 'Selling online overseas' %}</a></li>
+                      <li class="push-half--bottom"><a href="https://export.great.gov.uk/get-finance/" title="Get Finance">{% trans 'Get Finance' %}</a></li>
+                      <li class=""><a href="{% external_url 'events' %}" title="Events">{% trans 'Events' %}</a></li>
+                    </ul>
+                  </div>
+
+                  <div class="col-6">
+                    <ul class="footer-links footer-links--border">
+                      <li class="push-half--bottom"><a href="{% external_url 'about' %}" title="About great.gov.uk">{% trans 'About great.gov.uk' %}</a></li>
+                      <li class="push-half--bottom"><a href="{{ header_footer_contact_us_url }}" title="">{% trans 'Contact us' %}</a></li>
+                      <li class="push-half--bottom"><a href="{% external_url 'privacy' %}" title="Privacy and Cookies">{% trans 'Privacy &amp; cookies' %}</a></li>
+                      <li class="push-half--bottom"><a href="{% external_url 'terms' %}" title="Terms and conditions">{% trans 'Terms &amp; conditions' %}</a></li>
+                      <li><a href="{% external_url 'DIT' %}" title="Department for International Trade">{% trans 'Department for International Trade' %}</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="outer-container">
+                <div class="footer-bottom">
+                  <div class="navigation-strip">
+                    <ul class="list-inline list-separators">
+                      <li class="float--left soft--right"><a class="" href="https://www.gov.uk/" title="hm government"><img src="{% static 'images/hm-gov-horizontal.svg' %}"></a></li>
+                      <li class="float--left soft--left footer-links--border"><a class="link--grey"  href="https://www.great.gov.uk/" title="part of great.gov.uk">{% trans 'Part of' %} <strong>great.gov.uk</strong></a></li>
+                    </ul>
+                  </div>
+                  <div class="footer-copy font-light-grey font-xsmall">
+                    <p>&copy; {% trans 'Crown copyright' %} {% now "Y" %}. {% trans 'All rights reserved.' %}</p>
+                  </div>
+                </div>
+              </div>
+          </div>
+        </footer>
+
+        <div id="global-app-error" class="app-error hidden"></div>
+
+        <script src="{% static 'Dit-Pattern-Styling/public/js/jquery.js' %}"></script>
+        <!--[if IE 8]><script src="{% static 'Dit-Pattern-Styling/public/js/ie8.js' }"></script><![endif]-->
+        <!--[if IE 8]><script type="text/javascript" src="js/selectivizr.js"></script><![endif]-->
+        <script type="text/javascript" src="{% static 'Dit-Pattern-Styling/public/js/navigation.js' %}"></script>
+        {% block bodyScripts %}{% endblock bodyScripts %}
+    </body>
+</html>

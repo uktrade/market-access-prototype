@@ -1,0 +1,54 @@
+{% extends './govuk_layout.html' %}
+{% load staticfiles %}
+{% load trans from i18n %}
+{% block css %}
+    <link href="{% static 'landing-page.css' %}" media="all" rel="stylesheet" />
+    <link href="{% static 'main.css' %}" media="all" rel="stylesheet" />
+{% endblock %}
+{% block head_title %}Market Access Barriers{% endblock %}
+{% block sub_header %}{# prevent the subheader from showing on form pages #}{% endblock %}
+{% block hero_title %}
+Get seen by motivated overseas buyers
+{% endblock %}
+
+{% block css_layout_class %}
+tr-home
+{% endblock %}
+
+{% block content %}
+  <div class="legacy">
+    <main class="main" role="main">
+      <article class="article row post status-publish format-standard">
+        <header class="twelve columns">
+            <h1>{% trans "Existing Trade Barriers in " %}{{country}}</h1>
+        </header>
+        <div class="entry content rich-text eight columns">
+            <ul>
+                {% for object in object_list %}
+                <li>
+                    <a href="{% url 'barrier-detail' pk=object.pk %}">
+                        {{ object }}
+                    </a>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+        <aside class="four columns">
+            <div class="next-steps">
+                <h3>Next steps</h3>
+                <ul class="next-steps__list">
+                    <li class="next-steps__step">
+                        <a href="{% url 'report-barrier' %}" class="wob-link no-decoration-link">
+                            <p class="next-steps__step-copy">Report a new trade barrier</p>
+                            <div class="next-steps__arrow">
+                                <img src="{% static 'images/blue-chevron.png' %}">
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </aside>
+      </article>
+    </main>
+  </legacy>
+{% endblock %}

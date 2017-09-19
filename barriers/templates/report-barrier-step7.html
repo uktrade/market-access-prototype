@@ -1,0 +1,39 @@
+{% extends './govuk_layout.html' %}
+{% load staticfiles %}
+{% load trans from i18n %}
+{% block css %}
+    <link href="{% static 'main.css' %}" media="all" rel="stylesheet" />
+    <link href="{% static 'dit-alpha.css' %}" media="all" rel="stylesheet" />
+    <link href="{% static 'gds-forms.css' %}" media="all" rel="stylesheet" />
+    <style>
+         </style>
+{% endblock %}
+{% block bodyScripts %}
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js"></script>
+  <script src="{% static 'dit-alpha.js' %}"></script>
+{% endblock bodyScripts %}
+{% block head_title %}Report a trade barrier - Step 7 of 8: TITLE HERE{% endblock %}
+{% block sub_header %}{# prevent the subheader from showing on form pages #}{% endblock %}
+{% block css_layout_class %}
+{% endblock %}
+
+{% block content %}
+  <div class="dit-breadcrumb row">
+      <div class="twelve columns">
+        <a href="https://www.great.gov.uk/">Great.gov.uk</a> <span aria-hidden="true">></span> <a href="/">Trade Barriers</a> <span aria-hidden="true">></span> <a href="{% url 'report-barrier' %}">Report a Trade Barrier</a> <span aria-hidden="true">></span> <strong>Step 7 of 8: TITLE HERE</strong>
+      </div>
+  </div>
+ <div class="row">
+    <div class="twelve columns">
+      <h1 class="">Step 7 of 8: TITLE HERE</h1>
+      <form action="{% url 'report-barrier-step8' %}" method="post" class="dit-form">
+        {% csrf_token %}
+        <div class="dit-buttons">
+          <a href="{% url 'report-barrier-step6' %}">Back</a>
+          <button class="button button-red" type="submit">Next</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+{% endblock %}
