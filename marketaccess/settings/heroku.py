@@ -5,7 +5,7 @@ from marketaccess.settings.base import *
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.environ.get('DEBUG', False)
 
-ALLOWED_HOSTS = ['market-acces-prototype.herokuapp.com']
+ALLOWED_HOSTS = ['market-access-prototype.herokuapp.com']
 
 # Update database configuration with Heroku's $DATABASE_URL config.
 import dj_database_url
