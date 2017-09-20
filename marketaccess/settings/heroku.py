@@ -14,4 +14,5 @@ DATABASES['default'].update(db_from_env)
 
 MIDDLEWARE += [
     'whitenoise.middleware.WhiteNoiseMiddleware',
+    'marketaccess.http_auth_middleware.HttpAuthMiddleware',
 ]
