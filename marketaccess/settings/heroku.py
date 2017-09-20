@@ -29,3 +29,4 @@ auth = re.search('https\:\/\/(.*)\@', bonsai).group(1).split(':')
 host = bonsai.replace('https://%s:%s@' % (auth[0], auth[1]), '')
 
 ELASTICSEARCH_DSL['default']['hosts'] = host
+ELASTICSEARCH_DSL['default']['http_auth'] = (auth[0], auth[1])
