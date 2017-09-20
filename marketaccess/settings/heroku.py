@@ -23,6 +23,7 @@ MIDDLEWARE += [
 # logging.basicConfig(level=logging.INFO)
 
 # Parse the auth and host from env:
+import re
 bonsai = os.environ['BONSAI_URL']
 auth = re.search('https\:\/\/(.*)\@', bonsai).group(1).split(':')
 host = bonsai.replace('https://%s:%s@' % (auth[0], auth[1]), '')
