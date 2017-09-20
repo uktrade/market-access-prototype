@@ -16,3 +16,15 @@ MIDDLEWARE += [
     'whitenoise.middleware.WhiteNoiseMiddleware',
     'marketaccess.http_auth_middleware.HttpAuthMiddleware',
 ]
+
+from elasticsearch import Elasticsearch
+
+# Log transport details (optional):
+logging.basicConfig(level=logging.INFO)
+
+# Parse the auth and host from env:
+bonsai = os.environ['BONSAI_URL']
+auth = re.search('https\:\/\/(.*)\@', bonsai).group(1).split(':')
+host = bonsai.replace('https://%s:%s@' % (auth[0], auth[1]), '')
+
+ELASTICSEARCH_DSL['default']['hosts'] = host
