@@ -18,8 +18,10 @@ from django.contrib.auth import authenticate
 
 import base64
 from functools import wraps
- 
-class HttpAuthMiddleware(object):
+
+from django.utils.deprecation import MiddlewareMixin
+
+class HttpAuthMiddleware(MiddlewareMixin):
     """
     Some middleware to authenticate all requests at this site.
     """
@@ -53,12 +55,12 @@ def _http_auth_helper(request):
     # At this point, the user is either not logged in, or must log in using
     # http auth.  If they have a header that indicates a login attempt, then
     # use this to try to login.
-    if request.META.has_key('HTTP_AUTHORIZATION'):
+    if 'HTTP_AUTHORIZATION' in request.META:
         auth = request.META['HTTP_AUTHORIZATION'].split()
         if len(auth) == 2:
             if auth[0].lower() == 'basic':
                 # Currently, only basic http auth is used.
-                uname, passwd = base64.b64decode(auth[1]).split(':')
+                uname, passwd = base64.b64decode(auth[1]).split(b':')
                 user = authenticate(username=uname, password=passwd)
                 if user:
                     # If the user successfully logged in, then add/overwrite
