@@ -1,0 +1,497 @@
+/******   General   *****/
+.js-hidden {
+  display:none;
+}
+.pull-right {
+  float: right;
+}
+.pull-left {
+  float: left;
+}
+.float-end {
+  content: '';
+  display: block;
+};
+.column-full {
+/*   overflow:hidden; */
+}
+.margin-bottom-1 {
+  margin-bottom:1em;
+}
+.type-date input {
+  width: 100%;
+}
+.type-date div div {
+  float: left;
+  padding: 0 30px 0 0;
+  width: 60px;
+}
+.type-date div input, .type-date div label {
+  float: left;
+  clear:both;
+} 
+.form-group {
+  width: 100%;
+  float:left;
+  clear:both;
+  position: relative;
+}
+.form-group.highlight {
+  outline: 3px solid #06ecd366;
+  position: relative;
+}
+
+.form-group .question-edit-block {
+  position: absolute;
+  right:0;
+  top:0;
+  width: 24px;
+  height: 24px;
+  background-size: 24px 624px;
+  background-image: url('images/sprite@2x.png');
+  background-position: 0px -480px;
+}
+.form-group .question-edit-block:hover {
+  opacity: 0.8;
+  cursor:pointer;
+}
+
+.multiple-choice {
+  margin: 20px 30px 0px 0px !important;
+}
+.progress {
+  margin-top:20px;
+  height: 30px;
+  width: 100%;
+  border: 2px solid black;
+  position: relative;
+}
+.progress div {
+  background: #7474bb;
+  height: 100%;
+  width: 0%;
+}
+.ui-autocomplete {
+  background: #f1f1f1;
+  border: 1px solid black;
+  padding: 0;
+  width: 500px;
+  /* width: 321px; */
+  max-height:200px;
+  overflow-y: auto;
+}
+.ui-autocomplete .ui-menu-item-wrapper {
+  padding: 5px;
+  font-size: 18px;
+}
+.ui-autocomplete .ui-state-active {
+  background: rgba(0,126,163,0.5);
+  color: white;
+  cursor: pointer;
+}
+/*  Tabs  */
+ul.tabset {
+  width: 100%;
+  overflow: hidden;
+  height: 45px;
+  position: relative;
+  margin-bottom: 20px;
+}
+ul.tabset::before {
+  content:'';
+  border-bottom: 2px solid #ccc;
+  position: absolute;
+  width: 100%;
+  left: 0;
+  right: 0;
+  bottom: 0px;
+  z-index: 1;
+}
+ul.tabset li {
+    float: left;
+    padding: 7px 30px 7px 30px;
+    font-size: 22px;
+    font-weight: bold;
+    border: 2px solid #c1c1c1;
+    margin: 0px 0px 0 10px;
+    position: relative;
+    top: 1px;
+    background: white;
+    opacity: 0.6;
+    color: #555;
+}
+ul.tabset li.selected {
+    z-index: 1;
+    opacity: 1;
+}
+
+/******   Boxes  *****/
+.well {
+    border: 1px solid #ccc;
+    padding: 20px 25px;
+    margin: 15px 0;
+}
+.well.grey {
+  background: #eee;
+  border: none;
+}
+.section {
+  overflow:hidden;
+  /* border-bottom: 1px solid #000; */
+  padding: 0 0 20px 0;
+}
+.section h3 {
+  margin-top: 0;
+}
+.button-grey {
+  background-color: #bbb;
+  color: #000;
+}
+.button-grey:hover, .button-grey:focus {
+  background-color: #aaa;
+  color: #000;
+}
+/*.button:hover {
+  opacity: 0.8;
+}*/
+
+/******  forms ********/
+.form-label {
+  margin: 5px 0;
+}
+.form-label .form-hint {
+  margin-top: 20px;
+}
+.form-control {
+  border-color:  #b2c0c0;
+}
+
+/********* form navigator  ********/
+.nav {
+  float: right;
+  width: 28%;
+}
+.nav li {
+  margin-bottom: 5px;
+  position: relative;
+}
+.nav a {
+  text-decoration: none;
+}
+.nav .selected::before {
+    content: '';
+    background: #9c9fa1;
+    width: 4px;
+    position: absolute;
+    left: -10px;
+    top: 0;
+    bottom: 0;
+}
+
+/********  widget specific  ******/
+.form-group.type-fileuploadtemplate {
+  background: #f0f0f0;
+  padding: 25px;
+}
+
+.form-group.type-fileupload button.file-upload, .form-group.type-fileuploadtemplate button.file-upload{
+  margin-top: 10px;
+}
+
+div.repeat-block {
+  overflow: hidden;
+  background: #f0f0f0;
+  padding: 0;
+  float: left;
+  width: 100%;
+  margin: 16px 0;
+}
+div.repeat-block .inner {
+  padding: 20px;
+  overflow: hidden;
+}
+.hide-remove-buttons button.btn-remove {
+  display:none;
+}
+
+/******  label value list ******/
+.label-value-list div {
+  width: 50%;
+  float: left;
+  margin: 5px 0;
+}
+.label-value-list .label {
+  font-weight: bold;
+  clear: both;
+}
+/*******   Card header - edit in place ********/
+
+.last-changed {
+    font-size: smaller;
+    color: #777;
+}
+.card-head {
+  position: relative;
+  margin: 0px -10px 19px 0px;
+}
+.edit-button, .edit-buttons{
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  color: blue;
+  border: none;
+  background:none;
+  font-family: arial;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+}
+.edit-buttons button {
+  border: none;
+  background:none;
+  cursor: pointer;
+}
+.edit-buttons button:hover {
+  opacity: 0.8;
+}
+.edit-button img {
+  margin: 0px 0 -5px 5px;
+}
+
+/*********   Icons  **********/
+.icon {
+    width: 24px;
+    height: 24px;
+    background-size: 24px 624px;
+    background-image: url('images/sprite@2x.png');
+}
+.icon.icon-pen {
+  background-position: 0px -480px;
+}
+.icon.icon-down {
+  background-position: 0px -45px;
+}
+.icon.icon-tick {
+  background-position: 0px -384px;
+}
+.icon.icon-cross {
+  background-position: 0px -144px;
+}
+
+/**********   File icons   **********/
+.icon-file {
+  width: 40px;
+  height: 46px;
+  background-size: 40px 465px;
+  background-image: url('images/file-icons.png')
+}
+.icon-file.doc {
+  background-position: 0px 0px;
+}
+.icon-file.jpg {
+  background-position: 0px -46px;
+}
+.icon-file.pdf {
+  background-position: 0px -92px;
+}
+.icon-file.xls {
+  background-position: 0px -138px;
+}
+.icon-file.zip {
+  background-position: 0px -186px;
+}
+
+/********  expander  ***********/
+
+button.expander {
+    float: right;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    outline:none !important;
+    transition: transform 0.3s;
+}
+.expand-section {
+  height:0px;
+  overflow:hidden;
+  transition: height 0.3s;
+}
+button.expander.expanded {
+  transform: rotate(90deg);
+}
+
+/*************    Documents   ***********/
+li.document {
+  padding:20px;
+  vertical-align: middle;
+}
+li.document img {
+    margin-right:20px;
+}
+
+/************  Overlays ***********/
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  /*&.active {
+      background: rgba(0,0,0,0.4);
+      //transition: background 0.5s;
+  }*/ }
+  .overlay.active .semi-transparent {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+    background: #000;
+    z-index: -1; }
+    .overlay.active .semi-transparent.op0 {
+      opacity: 0;
+      filter: alpha(opacity=0); }
+    .overlay.active .semi-transparent.op33 {
+      opacity: 0.33;
+      filter: alpha(opacity=33); }
+    .overlay.active .semi-transparent.op66 {
+      opacity: 0.66;
+      filter: alpha(opacity=66); }
+    .overlay.active .semi-transparent.op75 {
+      opacity: 0.75;
+      filter: alpha(opacity=75); }
+    .overlay.active .semi-transparent.op85 {
+      opacity: 0.85;
+      filter: alpha(opacity=85); }
+  .overlay.active > .semi-transparent {
+    position: fixed; }
+
+.pop-up {
+  margin: 0 auto;
+  background: white;
+  border: 5px solid #BFC1CF;
+  border-radius: 5px;
+  z-index: 150;
+  outline: none;
+  position: absolute;
+  min-width: 280px; }
+  .pop-up > .outer {
+    overflow: auto;
+    padding: 20px;
+    font-size: 19px; }
+    .pop-up > .outer select {
+      font-size: 19px; }
+    .pop-up > .outer img {
+      border: 5px solid #DEE0E2;
+      border-radius: 5px;
+      display: block;
+      margin: 0 auto 10px; }
+    .pop-up > .outer .title {
+      margin-bottom: 20px; }
+  .pop-up > .title {
+    background: #5A5ADC;
+    width: 100%;
+    overflow: hidden;
+    color: #fff;
+    font-weight: bold; }
+    .pop-up > .title h1 {
+      margin: 4px 10px; }
+  .pop-up .button-container {
+    /*padding: 20px 0;
+    margin: 0 -3px; */} 
+    .pop-up .button-container button {
+      float: left;
+      margin: 12px 6px;
+      padding: 6px 30px;
+      font-weight: bold; }
+      .pop-up .button-container button.btn-primary {
+        float: right; }
+  .pop-up > .pop-up-header {
+    position: relative; }
+    .pop-up > .pop-up-header .dlg-close {
+      background: transparent;
+      border: none;
+      position: absolute;
+      right: 10px;
+      top: 14px;
+      height: auto;
+      padding: 6px 7px; }
+  .pop-up h1 {
+    font-weight: bold;
+    font-size: 1.2em; }
+  .pop-up table {
+    width: auto; }
+  .pop-up tr.active {
+    background: #F6E0DD; }
+  .pop-up tr td, .pop-up tr th {
+    padding: 0.5em;
+    font-size: 18px; }
+
+.alert {
+  border-width: 2px; }
+  .alert h1 {
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 1.5;
+    margin: 0px;
+    font-weight: bold; }
+  .alert a.alert-link {
+    text-decoration: underline;
+    font-weight: normal; }
+  .alert .error-summary-list {
+    margin: 0; }
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0; } 
+
+  /************************   Pop up editing  ***************/
+
+.pop-up .outer {
+  width: 700px
+}
+.pop-up .outer div {
+    overflow: hidden;
+    margin-bottom: 20px;
+
+}
+.pop-up .outer label, .pop-up .outer input {
+    float: left;
+}
+.pop-up .outer label {
+    width: 126px;
+    clear: both;
+    font-weight: bold;
+}
+.pop-up .outer textarea {
+  min-width:550px;
+  min-height:120px;
+}
+
+/**************   menu  ***************/
+.threeline-menu {
+  display: none;
+  height: 30px;
+  width: 30px;
+  position: absolute;
+  right: 20px;
+  top: 13px;
+  background-image: url(images/threelines.png);
+  background-repeat: no-repeat;
+}
+.config-menu {
+  position: absolute;
+  right: 0;
+  top: 10px;
+}
+.config-menu button {
+  margin:0 3px;
+}
