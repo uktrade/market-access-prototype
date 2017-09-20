@@ -17,10 +17,10 @@ MIDDLEWARE += [
     'marketaccess.http_auth_middleware.HttpAuthMiddleware',
 ]
 
-from elasticsearch import Elasticsearch
+# from elasticsearch import Elasticsearch
 
 # Log transport details (optional):
-logging.basicConfig(level=logging.INFO)
+# logging.basicConfig(level=logging.INFO)
 
 # Parse the auth and host from env:
 bonsai = os.environ['BONSAI_URL']
