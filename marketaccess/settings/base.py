@@ -157,41 +157,41 @@ ELASTICSEARCH_DSL={
         'hosts': 'localhost:9200'
     },
     # from https://www.elastic.co/guide/en/elasticsearch/reference/current/analysis-lang-analyzer.html#english-analyzer
-#    'analysis': {
-#      'filter': {
-#        'english_stop': {
-#          'type':       "stop",
-#          'stopwords':  '_english_'
-#        },
-#        'english_keywords': {
-#          'type':       'keyword_marker',
-#          'keywords':   ['example']
-#        },
-#        "english_stemmer": {
-#          'type':       'stemmer',
-#          'language':   'english'
-#        },
-#        'english_possessive_stemmer': {
-#          'type':       'stemmer',
-#          'language':   'possessive_english'
-#        }
-#      },
-#      'analyzer': {
-#        'english': {
-#          'tokenizer':  'standard',
-#          'filter': [
-#            'english_possessive_stemmer',
-#            'lowercase',
-#            'english_stop',
-#            'english_keywords',
-#            'english_stemmer'
-#          ]
-#        }
-#      }
-#    }
+    'analysis': {
+      'filter': {
+        'english_stop': {
+          'type':       "stop",
+          'stopwords':  '_english_'
+        },
+        'english_keywords': {
+          'type':       'keyword_marker',
+          'keywords':   ['example']
+        },
+        "english_stemmer": {
+          'type':       'stemmer',
+          'language':   'english'
+        },
+        'english_possessive_stemmer': {
+          'type':       'stemmer',
+          'language':   'possessive_english'
+        }
+      },
+      'analyzer': {
+        'english': {
+          'tokenizer':  'standard',
+          'filter': [
+            'english_possessive_stemmer',
+            'lowercase',
+            'english_stop',
+            'english_keywords',
+            'english_stemmer'
+          ]
+        }
+      }
+    }
 }
 
-ELASTICSEARCH_DEFAULT_ANALYZER = "english_analyzer"
+# ELASTICSEARCH_DEFAULT_ANALYZER = "english_analyzer"
 
 # directory-api
 API_CLIENT_CLASSES = {

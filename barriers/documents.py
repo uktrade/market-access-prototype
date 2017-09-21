@@ -28,24 +28,24 @@ custom_analyzer = analyzer(
 class CaseDocument(DocType):
 
     # remember Django gives us an 'id' primary key by default, we don't have to define one
-    wto_symbol = fields.TextField(analyzer='english',)
+    wto_symbol = fields.TextField()
     # turn this into a country lookup code?? make it one:many?
-    notifying_member = fields.TextField(analyzer='english',)
-    title = fields.TextField(analyzer='english',)
-    description = fields.TextField(analyzer='english',)
-    distribution_date = fields.DateField(analyzer='english',)
-    products_text = fields.TextField(analyzer='english',)
-    product_codes = fields.TextField(analyzer='english',)
-    objectives = fields.TextField(analyzer='english',)
+    notifying_member = fields.TextField()
+    title = fields.TextField()
+    description = fields.TextField()
+    distribution_date = fields.DateField()
+    products_text = fields.TextField()
+    product_codes = fields.TextField()
+    objectives = fields.TextField()
     # SPS only
-    keywords = fields.TextField(analyzer='english',)
+    keywords = fields.TextField()
     # SPS only
-    regions_affected = fields.TextField(analyzer='english',)
-    comments_due_date = fields.TextField(analyzer='english',)
-    notification_type = fields.TextField(analyzer='english',)
+    regions_affected = fields.TextField()
+    comments_due_date = fields.TextField()
+    notification_type = fields.TextField()
     # don't need to index this?
-    # document_link = fields.TextField(analyzer='english',)
-    # wto_link = fields.TextField(analyzer='english',)
+    # document_link = fields.TextField()
+    # wto_link = fields.TextField()
 
     class Meta:
         model = MarketAccessBarrier  # The model associate with this DocType
