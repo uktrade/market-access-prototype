@@ -2,37 +2,58 @@
 {% load staticfiles %}
 {% load trans from i18n %}
 {% block css %}
-    <link href="{% static 'main.css' %}" media="all" rel="stylesheet" />
-    <link href="{% static 'dit-alpha.css' %}" media="all" rel="stylesheet" />
-    <link href="{% static 'gds-forms.css' %}" media="all" rel="stylesheet" />
-    <style>
-         </style>
 {% endblock %}
 {% block bodyScripts %}
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js"></script>
-  <script src="{% static 'dit-alpha.js' %}"></script>
 {% endblock bodyScripts %}
-{% block head_title %}Report a trade barrier - Step 5 of 8: TITLE HERE{% endblock %}
+{% block head_title %}Report a trade barrier - Step 5 of 6: Any other details{% endblock %}
 {% block sub_header %}{# prevent the subheader from showing on form pages #}{% endblock %}
 {% block css_layout_class %}
 {% endblock %}
 
 {% block content %}
-  <div class="dit-breadcrumb row">
-      <div class="twelve columns">
-        <a href="https://www.great.gov.uk/">Great.gov.uk</a> <span aria-hidden="true">></span> <a href="/">Trade Barriers</a> <span aria-hidden="true">></span> <a href="{% url 'report-barrier' %}">Report a Trade Barrier</a> <span aria-hidden="true">></span> <strong>Step 5 of 8: TITLE HERE</strong>
+  <div class="outer-container">
+    <div class="dit-breadcrumb grid-container grid-container--inner">
+        <div class="column-full flush--bottom">
+        <a href="https://www.great.gov.uk/">Great.gov.uk</a> <span aria-hidden="true">></span> <a href="/">Trade Barriers</a> <span aria-hidden="true">></span> <a href="{% url 'report-barrier' %}">Report a barrier</a> <span aria-hidden="true">></span> <strong>Step 5 of 6: Any other details</strong>
       </div>
+    </div>
   </div>
- <div class="row">
-    <div class="twelve columns">
-      <h1 class="">Step 5 of 8: TITLE HERE</h1>
-      <form action="{% url 'report-barrier-step6' %}" method="post" class="dit-form">
-        {% csrf_token %}
-        <div class="dit-buttons">
-          <a href="{% url 'report-barrier-step4' %}">Back</a>
-          <button class="button button-red" type="submit">Next</button>
-        </div>
-      </form>
+  <div class="outer-container push--top">
+    <div class="grid-container grid-container--inner">
+      <div class="column-one-third dit-progress-bar">
+        <div class="h4">Report Progress</div>
+        <ol>
+          <li><a href="{% url 'report-barrier-step1' %}">1: About you</a></li>
+          <li><a href="{% url 'report-barrier-step2' %}">2: About the problem</a></li>
+          <li><a href="{% url 'report-barrier-step3' %}">3: Select the type of barrier</a></li>
+          <li><a href="{% url 'report-barrier-step4' %}">4: Working out the next steps</a></li>
+          <li class="is-selected">5: Any other details</li>
+          <li>6: Summary</li>
+        </ol>
+      </div>
+      <div class="column-two-third">
+        <h1 class="h3 push--bottom push--top">Step 5 of 6: Any other details about the problem?</h1>
+        <form action="{% url 'report-barrier-step6' %}" method="post" class="dit-form">
+          {% csrf_token %}
+
+          <div class="js-saved-success" aria-hidden="true" style="display: none;" tabindex="0">
+            <p class="h3">Thank you</p><p>Your details have been saved.</p>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="dit-step5-extra">
+              Is there anything else you would like us to understand about the situation?
+            </label>
+            <textarea class="form-control" id="dit-step5-extra" name="dit[step4][extra]" rows="5" cols="10"></textarea>
+          </div>
+
+          <div class="dit-buttons">
+            <a href="{% url 'report-barrier-step4' %}" class="button button-white button-border">Back</a>
+            <button class="button button-blue" type="submit">Next</button>
+            <button class="button button-transparent-blue button-border float--right js-save-button" type="submit">Save Progress</button>
+          </div>
+        </form>
+      </div>
     </div>
   </div>
 

@@ -1,0 +1,90 @@
+{% extends './govuk_layout.html' %}
+{% load staticfiles %}
+{% load trans from i18n %}
+{% block css %}
+<style>
+  .dit-copy .h4{
+    font-weight: bold;
+    margin-bottom: 5px;
+    margin-top: 30px;
+  }
+
+  .dit-copy p{
+    font-style: italic;
+  }
+</style>
+{% endblock %}
+{% block head_title %}{% trans "Trade Barrier Detail" %}{% endblock %}
+{% block sub_header %}{# prevent the subheader from showing on form pages #}{% endblock %}
+{% block hero_title %}
+Get seen by motivated overseas buyers
+{% endblock %}
+
+{% block css_layout_class %}
+tr-home
+{% endblock %}
+
+{% block content %}
+  <div class="outer-container">
+    <div class="dit-breadcrumb grid-container grid-container--inner">
+        <div class="column-full flush--bottom">
+          <a href="https://www.great.gov.uk/">Great.gov.uk</a> <span aria-hidden="true">></span> <a href="/">Trade Barriers</a> <span aria-hidden="true">></span> <strong>Find out about Trade Barriers</strong>
+        </div>
+    </div>
+  </div>
+    <div class="dit-hero" style="background-image: url({% static 'images/placeholder-hero.png' %});">
+    <div class="outer-container">
+      <div class="grid-container grid-container--inner">
+        <div class="column-two-third dit-hero__copy">
+          <h1 class="dit-hero__title">{% trans "Find out about Trade Barriers" %}</h1>
+          <p class="dit-hero__summary">When you export goods or services to another country you are protected by rules. They might be the regulations set out by the World Trade Organisation, or by the terms of a free trade agreement between the UK and the country you are exporting to. Most of the time, the rules work well but sometimes there can be problems. The Government works with the World Trade Organisation and other governments to overcome them.</p>
+          <p class="dit-hero__summary">Teams from the Department of International Trade, the Foreign and Commonwealth Office and other departments stand ready to assist UK companies who report trade barriers.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="outer-container">
+    <div class="grid-container grid-container--inner">
+      <div class="column-two-third">
+        <div class="dit-copy">
+          <h2 class="h3">If your problem is being caused by a trade barrier, it will probably fall into
+  one of these categories:</h2>
+          <h3 class="h4">Tariffs and taxes imposed to protect, or favour, local producers</h3>
+          <p>Usually charges imposed on imports to make them more expensive than domestically produced
+          goods.</p>
+          <h3 class="h4">Unfair use of state help or subsidies </h3>
+          <p>Local producers or suppliers receive money or assistance from their government which makes it
+          harder for non-domestic producers and suppliersto compete.</p>
+          <h3 class="h4">Unjustified import quotas </h3>
+          <p>Restrictions on what can be sold in a country which go beyond what is allowed by relevant trade
+          agreements.</p>
+          <h3 class="h4">Burdensome customs procedures </h3>
+          <p>Requirements that goods go through checks, or provide documentation, which seems to serve no
+          practical purpose.</p>
+          <p><a href="{% url 'barriers-case-study' %}">Read case study</a></p>
+          <h3 class="h4">Restrictive government procurement rules and practices </h3>
+          <p>Regulations or special requirements which make it difficult or impossible for non domestic suppliers
+          to compete for a contract.</p>
+          <h3 class="h4">Technical regulations, standards and conformity assessment procedures </h3>
+          <p>Regulations or processes which don't seem to serve any legitimate purpose, or which discriminate
+          against importers.</p>
+          <h3 class="h4">Poor protection of intellectual property rights and geographical indicators </h3>
+          <p>Instances of piracy, counterfeiting or mis-labelling which undermine legitimate export trade.
+          Geographical indicators include Scotch whisky and Stilton cheese. </p>
+          <h3 class="h4">Sanitary and phytosanitary measures </h3>
+          <p>Measures purporting to protect consumer health, animal and plant welfare or the environment which
+          seem unreasonable. </p>
+          <h3 class="h4">Restrictions on access to raw materials </h3>
+          <p>Typically, requirements that goods must contain a high proportion of locally produced material.</p>
+          <h3 class="h4">Barriers to trade in services and investment, such as unjustified foreign ownership caps, joint venture obligations and discriminatory treatment </h3>
+          <p>Financial rules which make imported services uncompetitive, or unreasonably discourage foreign
+          investment.</p>
+        </div>
+
+        {% include 'components/reporting-cta.html' %}
+
+      </div>
+    </div>
+  </div>
+
+  {% endblock %}

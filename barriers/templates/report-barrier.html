@@ -2,19 +2,7 @@
 {% load staticfiles %}
 {% load trans from i18n %}
 {% block css %}
-    <link href="{% static 'main.css' %}" media="all" rel="stylesheet" />
-    <link href="{% static 'dit-alpha.css' %}" media="all" rel="stylesheet" />
     <style>
-      .dit-button{
-        margin-top: 65px;
-        text-align: center;
-        width: 100%;
-      }
-
-      .dit-button--red:link,
-      .dit-button--red:visited{
-        background-color: #E41F13;
-      }
     </style>
 {% endblock %}
 {% block head_title %}Market Access Barriers{% endblock %}
@@ -28,90 +16,60 @@ tr-home
 {% endblock %}
 
 {% block content %}
-  <div class="dit-breadcrumb row">
-      <div class="twelve columns">
-        <a href="https://www.great.gov.uk/">Great.gov.uk</a> <span aria-hidden="true">></span> <a href="/">Trade Barriers</a> <span aria-hidden="true">></span> <strong>Report a Trade Barrier</strong>
-      </div>
+  <div class="outer-container">
+    <div class="dit-breadcrumb grid-container grid-container--inner">
+        <div class="column-full flush--bottom">
+          <a href="https://www.great.gov.uk/">Great.gov.uk</a> <span aria-hidden="true">></span> <a href="/">Trade Barriers</a> <span aria-hidden="true">></span> <strong>Report a Trade Barrier</strong>
+        </div>
+    </div>
   </div>
-  <div class="dit-hero" style="background-image: url(//placehold.it/1290x410);">
-    <div class="row">
-      <div class="nine columns dit-hero__copy">
-          <h1 class="dit-hero__title">{% trans "Report a trade barrier" %}</h1>
-          <p class="dit-hero__summary">The Government works with the World Trade Organisation and other governments around the world to reduce the impact
-of trade barriers. By reporting a trade barrier you can get help and you'll also be providing information which will enable us to
-focus our resources where they are most needed.</p>
+
+  <div class="dit-hero" style="background-image: url({% static 'images/placeholder-hero.png' %});">
+    <div class="outer-container">
+      <div class="grid-container grid-container--inner">
+        <div class="column-full dit-hero__copy">
+            <h1 class="dit-hero__title">{% trans "Report a trade barrier" %}</h1>
+            <p class="dit-hero__summary">The government works with the WTO and other governments around the world to reduce the impact of trade barriers. Departments and agencies
+work together to understand the problems and develop action plans to resolve them. Steps may include using our representatives abroad, Ministerial visits, or direct negotiations with overseas governments or the WTO.</p>
+            <div class="grid-container grid-container--inner">
+              <div class="column-two-third">
+                <p class="dit-hero__summary">By reporting a trade barrier you can get the help you need, and also provide information
+which will help us to focus resources where they can be most effective. </p>
+              </div>
+              <div class="column-one-third">
+                <a href="{% url 'report-barrier-step1' %}" class="button button-red button-large">Report a barrier</a>
+              </div>
+            </div>
+        </div>
       </div>
     </div>
   </div>
-  <div class="row">
-    <div class="twelve columns">
-      <div class="rich-text seven columns dit-page-details">
-          <h2>Use our service and you’ll be able to:</h2>
-          <ul>
-            <li>Tell us about a problem you’re experiencing</li>
-            <li>Tell us how you think it should be handled</li>
-            <li>Get the right kind of help</li>
-            <li>Keep your information confidential</li>
-            <li>Get updates on progress</li>
-          </ul>
-      </div>
-      <div class="three columns">
-          <!--<form action="{% url 'report-barrier' %}" method="post">
-              {% csrf_token %}
-              {{ form }}
-              <input type="submit" value="Submit" />
-          </form>-->
-          <a href="{% url 'report-barrier-form' %}" class="button button-red dit-button dit-button--red">Get started</a>
-      </div>
-    </div>
-    <div class="twelve columns">
-        <ol class="dit-steps twelve columns">
-            <li class="dit-step four columns">
-              <div class="dit-step__header">
-                <a href="{% url 'report-barrier-form' %}">
-                   <img src="//placehold.it/230x230" alt="" class="dit-step__media" height="230" width="230">
-                </a>
-              </div>
-              <div class="dit-step__body">
-                <div>
-                  <h3 class="dit-step__title"><a href="{% url 'report-barrier-form' %}">Reporting the problem</a></h3>
-                  <p>You tell us what’s happened and how it’s affecting your company.</p>
-                </div>
-              </div>
-              <span class="dit-step__arrow">
-                <svg width="44" height="80" viewBox="0 0 44 80" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><path id="a" d="M9.037 9.312H.03V.292h9.007z"/></defs><g fill="none" fill-rule="evenodd"><path d="M39.497 35.856c-2.487 0-4.504 2.02-4.504 4.51 0 2.49 2.017 4.51 4.504 4.51 2.487 0 4.503-2.02 4.503-4.51 0-2.49-2.016-4.51-4.503-4.51" fill="#D8D8D8"/><path d="M22.38 27.733c-2.49 0-4.505-2.02-4.505-4.51 0-2.49 2.016-4.51 4.504-4.51 2.484 0 4.502 2.02 4.502 4.51 0 2.49-2.018 4.51-4.503 4.51" fill="#DCE0DF"/><path d="M4.516 18.713c-2.487 0-4.503 2.02-4.503 4.51 0 2.49 2.016 4.51 4.503 4.51s4.503-2.02 4.503-4.51c0-2.49-2.017-4.51-4.504-4.51M4.516.32C2.03.32.013 2.34.013 4.83c0 2.49 2.017 4.51 4.503 4.51 2.487 0 4.503-2.02 4.503-4.51C9.02 2.34 7.002.32 4.515.32M22.138 53.24c-2.487 0-4.503 2.018-4.503 4.51 0 2.49 2.016 4.51 4.503 4.51 2.488 0 4.504-2.02 4.504-4.51 0-2.492-2.016-4.51-4.504-4.51M4.516 53.24c-2.487 0-4.503 2.018-4.503 4.51 0 2.49 2.016 4.51 4.503 4.51 2.488 0 4.504-2.02 4.504-4.51 0-2.492-2.016-4.51-4.504-4.51" fill="#D8D8D8"/><g transform="matrix(-1 0 0 1 9.05 69.89)"><mask id="b" fill="#fff"><use xlink:href="#a"/></mask><path d="M4.533.292c2.487 0 4.504 2.02 4.504 4.51 0 2.49-2.017 4.51-4.504 4.51-2.488 0-4.504-2.02-4.504-4.51 0-2.49 2.015-4.51 4.503-4.51" fill="#D8D8D8" mask="url(#b)"/></g><path d="M22.006 35.856c-2.487 0-4.503 2.02-4.503 4.51 0 2.49 2.016 4.51 4.503 4.51s4.503-2.02 4.503-4.51c0-2.49-2.017-4.51-4.504-4.51M4.516 35.856c-2.487 0-4.503 2.02-4.503 4.51 0 2.49 2.016 4.51 4.503 4.51s4.503-2.02 4.503-4.51c0-2.49-2.017-4.51-4.504-4.51" fill="#D8D8D8"/></g></svg>
-              </span>
-            </li>
-            <li class="dit-step four columns">
-              <div class="dit-step__header">
-                <a href="{% url 'report-barrier-form' %}">
-                   <img src="//placehold.it/230x230" alt="" class="dit-step__media" height="230" width="230">
-                </a>
-              </div>
-              <div class="dit-step__body">
-                <div>
-                  <h3 class="dit-step__title"><a href="{% url 'report-barrier-form' %}">Analysing and taking action</a></h3>
-                  <p>We’ll work with you to decide how best to respond</p>
-                </div>
-              </div>
-              <span class="dit-step__arrow">
-                <svg width="44" height="80" viewBox="0 0 44 80" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><path id="a" d="M9.037 9.312H.03V.292h9.007z"/></defs><g fill="none" fill-rule="evenodd"><path d="M39.497 35.856c-2.487 0-4.504 2.02-4.504 4.51 0 2.49 2.017 4.51 4.504 4.51 2.487 0 4.503-2.02 4.503-4.51 0-2.49-2.016-4.51-4.503-4.51" fill="#D8D8D8"/><path d="M22.38 27.733c-2.49 0-4.505-2.02-4.505-4.51 0-2.49 2.016-4.51 4.504-4.51 2.484 0 4.502 2.02 4.502 4.51 0 2.49-2.018 4.51-4.503 4.51" fill="#DCE0DF"/><path d="M4.516 18.713c-2.487 0-4.503 2.02-4.503 4.51 0 2.49 2.016 4.51 4.503 4.51s4.503-2.02 4.503-4.51c0-2.49-2.017-4.51-4.504-4.51M4.516.32C2.03.32.013 2.34.013 4.83c0 2.49 2.017 4.51 4.503 4.51 2.487 0 4.503-2.02 4.503-4.51C9.02 2.34 7.002.32 4.515.32M22.138 53.24c-2.487 0-4.503 2.018-4.503 4.51 0 2.49 2.016 4.51 4.503 4.51 2.488 0 4.504-2.02 4.504-4.51 0-2.492-2.016-4.51-4.504-4.51M4.516 53.24c-2.487 0-4.503 2.018-4.503 4.51 0 2.49 2.016 4.51 4.503 4.51 2.488 0 4.504-2.02 4.504-4.51 0-2.492-2.016-4.51-4.504-4.51" fill="#D8D8D8"/><g transform="matrix(-1 0 0 1 9.05 69.89)"><mask id="b" fill="#fff"><use xlink:href="#a"/></mask><path d="M4.533.292c2.487 0 4.504 2.02 4.504 4.51 0 2.49-2.017 4.51-4.504 4.51-2.488 0-4.504-2.02-4.504-4.51 0-2.49 2.015-4.51 4.503-4.51" fill="#D8D8D8" mask="url(#b)"/></g><path d="M22.006 35.856c-2.487 0-4.503 2.02-4.503 4.51 0 2.49 2.016 4.51 4.503 4.51s4.503-2.02 4.503-4.51c0-2.49-2.017-4.51-4.504-4.51M4.516 35.856c-2.487 0-4.503 2.02-4.503 4.51 0 2.49 2.016 4.51 4.503 4.51s4.503-2.02 4.503-4.51c0-2.49-2.017-4.51-4.504-4.51" fill="#D8D8D8"/></g></svg>
-              </span>
-            </li>
-            <li class="dit-step four columns">
-              <div class="dit-step__header">
-                <a href="{% url 'report-barrier-form' %}">
-                   <img src="//placehold.it/230x230" alt="" class="dit-step__media" height="230" width="230">
-                </a>
-              </div>
-              <div class="dit-step__body">
-                <div>
-                  <h3 class="dit-step__title"><a href="{% url 'report-barrier-form' %}">Recording the outcome</a></h3>
-                  <p>We’ll keep you updated and log any outcomes for future reference</p>
-                </div>
-              </div>
-            </li>
+
+  <div class="outer-container">
+    <div class="grid-container grid-container--inner">
+      <div class="column-one-half" style="border-right: 1px solid #979797;">
+        <h2 class="h3">How it works</h2>
+        <ol class="dit-number-list">
+          <li>Tell us about you/your role</li>
+          <li>Describe the problem</li>
+          <li>Select the trade barrier from a list</li>
+          <li>Review next steps</li>
+          <li>Provide additional information that may help us</li>
         </ol>
+        <p>We'll respect any needs you have for confidentiality, and we'll keep
+you updated on progress.</p>
+        <p><a href="{% url 'report-barrier-step1' %}" class="button button-red button-large float--right push--right">Report a barrier</a></p>
+      </div>
+      <div class="column-one-half">
+        <h2 class="h3">In an emergency</h2>
+        <p><a href="{% url 'request-fast-track' %}">Request a fast track response to a trade barrier problem</a></p>
+        <p>Only make a fast track request if:</p>
+        <p>
+          - you are facing significant and imminent financial or other loss<br>
+          - you need action to be taken within the next 48 hours
+        </p>
+      </div>
     </div>
   </div>
+
 {% endblock %}

@@ -2,135 +2,119 @@
 {% load staticfiles %}
 {% load trans from i18n %}
 {% block css %}
-    <link href="{% static 'main.css' %}" media="all" rel="stylesheet" />
-    <link href="{% static 'dit-alpha.css' %}" media="all" rel="stylesheet" />
-    <link href="{% static 'gds-forms.css' %}" media="all" rel="stylesheet" />
     <style>
-         </style>
+    </style>
 {% endblock %}
 {% block bodyScripts %}
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js"></script>
-  <script src="{% static 'dit-alpha.js' %}"></script>
 {% endblock bodyScripts %}
-{% block head_title %}Report a trade barrier - Step 1 of 8 - Describe the problem{% endblock %}
+{% block head_title %}Report a trade barrier - Step 1 of 6 - About you{% endblock %}
 {% block sub_header %}{# prevent the subheader from showing on form pages #}{% endblock %}
 {% block css_layout_class %}
 {% endblock %}
 
 {% block content %}
-  <div class="dit-breadcrumb row">
-      <div class="twelve columns">
-        <a href="https://www.great.gov.uk/">Great.gov.uk</a> <span aria-hidden="true">></span> <a href="/">Trade Barriers</a> <span aria-hidden="true">></span> <a href="{% url 'report-barrier' %}">Report a Trade Barrier</a> <span aria-hidden="true">></span> <strong>Step 1 - Describe the problem</strong>
-      </div>
-  </div>
- <div class="row">
-    <div class="twelve columns">
-      <h1 class="">Step 1 - Describe the problem</h1>
-      <form action="{% url 'report-barrier-step2' %}" method="post" class="dit-form">
-        {% csrf_token %}
-        <div class="form-group">
-          <label class="form-label" for="full-name-f1">
-            Input field
-            <span class="form-hint">
-              Hint text
-            </span>
-          </label>
-          <input class="form-control" id="full-name-f1" type="text" name="full-name-f1">
+  <div class="outer-container">
+    <div class="dit-breadcrumb grid-container grid-container--inner">
+        <div class="column-full flush--bottom">
+          <a href="https://www.great.gov.uk/">Great.gov.uk</a> <span aria-hidden="true">></span> <a href="/">Trade Barriers</a> <span aria-hidden="true">></span> <a href="{% url 'report-barrier' %}">Report a barrier</a> <span aria-hidden="true">></span> <strong>Step 1 - About you</strong>
         </div>
-        <div class="form-group form-group-error">
-          <label class="form-label" for="example-form-control">
-            This is the label text
-            <span class="form-hint">
-              This is hint text
-            </span>
-            <span class="error-message">
-              Error message goes here
-            </span>
-          </label>
-          <input class="form-control form-control-error" id="example-form-control" type="text">
-        </div>
-        <div class="form-group">
-          <label class="form-label-bold" for="select-box-g">
-            This is the label text
-            <span class="form-hint">
-              This the hint text
-            </span>
-          </label>
-          <select class="form-control" id="select-box-g">
-            <option>GOV.UK elements option 1</option>
-            <option>GOV.UK elements option 2</option>
-            <option>GOV.UK elements option 3</option>
-          </select>
-        </div>
-        <div class="form-group">
-          <fieldset>
-
-            <legend>
-              <h1 class="heading-medium">Radio buttons</h1>
-            </legend>
-
-            <div class="multiple-choice">
-              <input id="radio-1" name="radio-group" value="Northern Ireland" type="radio">
-              <label for="radio-1">Option 1</label>
-            </div>
-            <div class="multiple-choice">
-              <input id="radio-2" name="radio-group" value="Isle of Man or the Channel Islands" type="radio">
-              <label for="radio-2">Option 2</label>
-            </div>
-            <p class="form-block">or</p>
-            <div class="multiple-choice">
-              <input id="radio-3" name="radio-group" value="I am a British citizen living abroad" type="radio">
-              <label for="radio-3">Option 3</label>
-            </div>
-
-          </fieldset>
-        </div>
-        <div class="form-group">
-          <fieldset>
-            <legend>
-              <h3 class="heading-medium">Which types of waste do you transport regularly?</h3>
-              <span class="body-text">Select all that apply</span>
-            </legend>
-            <div class="multiple-choice">
-              <input id="waste-type-1" name="waste-types" value="waste-animal" type="checkbox">
-              <label for="waste-type-1">Waste from animal carcasses</label>
-            </div>
-            <div class="multiple-choice">
-              <input id="waste-type-2" name="waste-types" value="waste-mines" type="checkbox">
-              <label for="waste-type-2">Waste from mines or quarries</label>
-            </div>
-            <div class="multiple-choice">
-              <input id="waste-type-3" name="waste-types" value="waste-farm-agricultural" type="checkbox">
-              <label for="waste-type-3">Farm or agricultural waste</label>
-            </div>
-          </fieldset>
-        </div>
-        <div class="form-group">
-          <fieldset class="inline">
-
-            <legend>
-              <h1 class="heading-medium">
-                Do you already have a personal user account?
-              </h1>
-            </legend>
-
-            <div class="multiple-choice">
-              <input id="radio-inline-1" name="radio-inline-group" value="Yes" type="radio">
-              <label for="radio-inline-1">Yes</label>
-            </div>
-            <div class="multiple-choice">
-              <input id="radio-inline-2" name="radio-inline-group" value="No" type="radio">
-              <label for="radio-inline-2">No</label>
-            </div>
-
-          </fieldset>
-        </div>
-        <div class="dit-buttons">
-          <a href="{% url 'report-barrier-form' %}">Back</a>
-          <button class="button button-red" type="submit">Next</button>
-        </div>
-      </form>
     </div>
   </div>
+  <div class="outer-container push--top">
+    <div class="grid-container grid-container--inner">
+      <div class="column-one-third dit-progress-bar">
+        <div class="h4">Report Progress</div>
+        <ol>
+          <li class="is-selected">Step 1: About you</li>
+          <li>2: About the problem</li>
+          <li>3: Select the type of barrier</li>
+          <li>4: Working out the next steps</li>
+          <li>5: Any other details</li>
+          <li>6: Summary</li>
+        </ol>
+      </div>
+      <div class="column-two-third">
+        <h1 class="h3 push--bottom push--top">Step 1 - About you</h1>
+        <form action="{% url 'report-barrier-step2' %}" method="post" class="dit-form">
+          {% csrf_token %}
+
+          <div class="js-saved-success" aria-hidden="true" style="display: none;" tabindex="0">
+            <p class="h3">Thank you</p><p>Your details have been saved.</p>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="dit-step1-your-name">
+              Your Name
+            </label>
+            <input class="form-control" id="dit-step1-your-name" type="text" name="dit[step1][your_name]">
+          </div>
+
+          <div class="form-group">
+            <fieldset>
+
+              <legend class="visuallyhidden">
+                Describe your position
+              </legend>
+
+              <div class="multiple-choice">
+                <input id="dit-step1-type-1" name="dit[step1][type]" value="I am an exporter/seeking to export" type="radio">
+                <label for="dit-step1-type-1">I am an exporter/seeking to export</label>
+              </div>
+              <div class="multiple-choice">
+                <input id="dit-step1-type-2" name="dit[step1][type]" value="I work for a trade association" type="radio">
+                <label for="dit-step1-type-2">I work for a trade association</label>
+              </div>
+
+            </fieldset>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="dit-step1-company-name">
+              Company Name
+            </label>
+            <input class="form-control" id="dit-step1-company-name" type="text" name="dit[step1][company_name]">
+          </div>
+
+          <div class="form-group">
+            <button class="button button-blue" type="button">Search Companies House</button>
+          </div>
+
+          <div class="form-group">
+            <div class="multiple-choice">
+              <input name="dit[step1][no_companies_house_number]" value="false" type="checkbox">
+              <input id="dit-step1-no-companies-house" name="dit[step1][no_companies_house_number]" value="I do not have a Companies House Number" type="checkbox">
+              <label for="dit-step1-no-companies-house">I don't have a Companies House Number</label>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="dit-step1-your-role-job-title">
+              Your Role / Job Title
+            </label>
+            <input class="form-control" id="dit-step1-your-role-job-title" type="text" name="dit[step1][your_role_job_title]">
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="dit-step1-email-address">
+              Email Address
+            </label>
+            <input class="form-control" id="dit-step1-email-address" type="email" name="dit[step1][email_address]">
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="dit-step1-contact-telephone-number">
+              Contact Telephone Number
+            </label>
+            <input class="form-control" id="dit-step1-contact-telephone-number" type="tel" name="dit[step1][contact_telephone_number]">
+          </div>
+
+          <div class="dit-buttons">
+            <button class="button button-blue" type="submit">Next</button>
+            <button class="button button-transparent-blue button-border float--right js-save-button" type="submit">Save Progress</button>
+          </div>
+        </form>
+      </div>
+    </div>
+ </div>
 
 {% endblock %}
