@@ -1,0 +1,802 @@
+/**
+ * DIT Market Access (alpha)
+ * CSS mostly inherits from main.css on great.gov.uk
+ * @author philthompson.co.uk for TransformUK
+ */
+
+a{
+  color: #006CCC;
+}
+
+strong{
+  font-weight: bold;
+}
+
+button:focus{
+  outline: 3px solid #ffbf47;
+}
+
+.column-full{
+  width: 100%;
+}
+
+.form-control{
+  background-color: inherit;
+}
+
+/**
+ * Buttons looking like links
+ */
+.dit-button-link{
+  appearance: none;
+  background: transparent;
+  border: none;
+  color: currentColor;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 18px;
+  margin: 0;
+  padding: 0 20px;
+  text-decoration: underline;
+}
+
+.dit-button-link:hover{
+  text-decoration: none;
+}
+
+.dit-buttons .button + .button:not(.float--right) {
+  margin-left: 30px;
+}
+
+/**
+ * Footer sections
+ */
+.dit-footer-section{
+  padding-top: 20px;
+  position: relative;
+}
+
+.dit-footer-section::before{
+  background: #E41F13;
+  content: '';
+  display: block;
+  height: 2px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 40px;
+}
+
+.dit-footer-section__title{
+  color: #dfd5c5;
+}
+
+.dit-footer-auxiliary-nav{
+  border-top: 1px solid white;
+  border-top-color: rgba(255,255,255,.2);
+  font-size: 12px;
+  padding-top: 15px;
+}
+
+.dit-footer-auxiliary-nav a:hover{
+  border-bottom: 1px dotted;
+}
+
+.dit-header{
+  float: left;
+  padding: 20px 0 0;
+  position: relative;
+  width: 100%;
+}
+
+@media screen and (min-width: 768px){
+  .dit-header{
+    padding-bottom: 20px;
+  }
+}
+
+.dit-header__nav{
+  clear: both;
+  display: block;
+  margin-top: 10px;
+}
+
+@media screen and (min-width: 768px){
+  .dit-header__nav{
+    bottom: 0;
+    color: #fff;
+    margin: 0;
+    position: absolute;
+    right: 0;
+  }
+}
+
+.dit-header__nav-list{
+  color: #fff;
+}
+
+@media screen and (max-width: 767px){
+  .dit-header__nav-list{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
+}
+
+.dit-header__nav-list a{
+  color: currentColor;
+}
+
+.dit-header__nav-list > li{
+  display: inline-block;
+}
+
+.dit-header__nav-link{
+  background: transparent;
+  appearance: none;
+  border: none;
+  color: currentColor;
+  cursor: pointer;
+  display: block;
+  font-size: 14px;
+  padding: 10px 5px;
+}
+
+.dit-header__nav-link:hover{
+  text-decoration: underline;
+}
+
+.dit-header__nav-link:hover:focus{
+  text-decoration: none;
+}
+
+@media screen and (min-width: 768px){
+  .dit-header__nav-link{
+    font-size: 100%;
+    padding: 20px;
+  }
+}
+
+
+.dit-header__nav-link img{
+  display: inline-block;
+  margin-left: 5px;
+  position: relative;
+  top: -2px;
+}
+
+.dit-header__nav-child-list{
+  display: none;
+}
+
+@media screen and (min-width: 768px){
+  .dit-header__nav-child-list{
+    display: none;
+  }
+
+  .dit-header__nav-child-list ul{
+    display: flex;
+    float: right;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+    max-width: 100%;
+  }
+}
+
+.dit-header__nav-child-list li{
+  background: #00549F;
+  color: #fff;
+  display: block;
+}
+
+@media screen and (min-width: 768px){
+  .dit-header__nav-child-list li{
+    display: inline-block;
+  }
+}
+
+.dit-header__nav-child-list a{
+  color: currentColor;
+  padding: 10px 30px;
+  position: relative;
+}
+
+.dit-header__nav-child-list a:hover{
+  text-decoration: underline;
+}
+
+@media screen and (min-width: 768px){
+  .dit-header__nav-child-list a{
+    padding: 40px 30px;
+  }
+}
+
+.dit-header__nav-link:hover{
+  background: rgba(0, 84, 159, .5);
+  color: #fff;
+}
+
+.dit-header__nav-list button[aria-expanded="true"]{
+  background: #00549F;
+  color: #fff;
+}
+
+.dit-header__nav-child-list[aria-hidden="false"]{
+ display: block;
+ margin: 0 -10px;
+ width: calc(100% + 20px);
+}
+
+@media screen and (min-width: 768px){
+.dit-header__nav-child-list[aria-hidden="false"]{
+   display: block;
+   margin: auto;
+   width: auto;
+  }
+}
+
+/**
+ * Breadcrumb
+ */
+.dit-breadcrumb{
+  font-size: 16px;
+  line-height: 25px;
+  padding-bottom: 20px;
+  padding-top: 25px;
+}
+
+.dit-breadcrumb a{
+  color: currentColor;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.dit-breadcrumb a:hover{
+  text-decoration: none;
+}
+
+/**
+ * Hero
+ */
+.dit-hero{
+  background-color: grey;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 410px;
+  margin-bottom: 50px;
+  position: relative;
+}
+
+@media screen and (max-width: 768px){
+  .dit-hero{
+    margin-bottom: 20px;
+  }
+}
+
+.dit-hero__copy{
+  color: white;
+  padding-top: 50px;
+  position: relative;
+}
+
+@media screen and (max-width: 768px){
+  .dit-hero__copy{
+    padding-top: 20px;
+  }
+}
+
+.dit-hero__title{
+  font-size: 32px;
+  font-weight: normal;
+  line-height: 1;
+}
+
+.dit-hero__summary{
+  font-size: 18px;
+  line-height: 1.38;
+  margin-top: 10px;
+}
+
+.dit-hero__form{
+  background: black;
+  background: rgba(0, 0, 0, .5);
+  padding: 18px;
+}
+
+.dit-hero__form button [aria-hidden="true"]{
+  display: none;
+}
+
+/**
+ * Page summary
+ */
+.dit-page-summary{
+  border-top: 1px solid #D8D8D8;
+  font-size: 18px;
+  line-height: 1.38;
+  margin-bottom: 50px;
+  margin-top: 50px;
+  padding-top: 90px;
+}
+
+@media screen and (max-width: 768px){
+  .dit-page-summary{
+    margin-top: 20px;
+    padding-top: 30px;
+  }
+}
+
+/**
+ * Card
+ */
+.dit-card{
+  border: 1px solid #D8D8D8;
+  margin-bottom: 65px;
+}
+
+.dit-card__media{
+  display: block;
+  height: auto;
+  width: 100%;
+}
+
+.dit-card__body{
+  font-size: 18px;
+  line-height: 1.667;
+  padding: 30px;
+}
+
+.dit-card__title{
+  font-size: 24px;
+  line-height: 1.5;
+  margin-bottom: 15px;
+}
+
+.dit-card__title a{
+  text-decoration: underline;
+}
+
+.dit-card__title a:hover{
+  text-decoration: none;
+}
+
+/* Grid makes the 'cards' line up but isn't available in all browsers yet */
+@supports (display:grid){
+  @media screen and (min-width: 768px){
+    .dit-card-holder{
+      display: grid !important;
+	    grid-template-columns: repeat(3, 1fr);
+	    grid-gap: 30px;
+      justify-content: center;
+    }
+    .dit-card{
+      float: none !important;
+      margin-left: 0 !important;
+      margin-right: 0 !important;
+      width: auto !important;
+    }
+  }
+}
+
+/**
+ * Page details
+ */
+.dit-page-details h2{
+  font-size: 24px;
+  line-height: 1.5;
+}
+
+.dit-page-details ul{
+  margin-top: 20px;
+}
+
+.dit-page-details li{
+  list-style: disc;
+  margin-left: 1.5em;
+  padding-left: .5em;
+}
+
+/**
+ * Forms
+ */
+@media screen and (min-width: 768px){
+  .dit-inline-form-fields{
+    align-items: end;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .dit-input-field{
+    width: 30%;
+    width: calc(33.33% - 30px);
+  }
+
+  .dit-input-field .button{
+    margin-bottom: 0;
+  }
+
+  @supports (display:grid){
+    .dit-inline-form-fields{
+      display: grid !important;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 30px;
+      justify-content: center;
+    }
+
+    .dit-input-field{
+      width: auto;
+    }
+
+  }
+}
+
+.dit-inline-form-fields label{
+  display: block;
+  margin-bottom: 10px;
+}
+
+.dit-inline-form-fields input,
+.dit-inline-form-fields select,
+.dit-inline-form-fields textarea,
+.dit-inline-form-fields .select2-container{
+  display: block;
+  width: 100%;
+}
+
+.dit-inline-form-fields input,
+.dit-inline-form-fields select,
+.dit-inline-form-fields textarea{
+  background-color: #fff;
+  border: none;
+  color: #333;
+  font-size: 16px;
+  padding: 15px 14px;
+  height: 50px;
+  width: 100%;
+}
+
+.dit-input-field--advanced[aria-hidden="true"]{
+  display: none;
+}
+
+.js-enabled .select2-hidden-accessible {
+    border: 0 none;
+    clip: rect(0px, 0px, 0px, 0px);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+.select2-selection__choice__remove,
+.select2-results__option{
+  cursor: pointer;
+}
+
+.select2-container{
+  width: auto !important;
+}
+
+.select2-selection__rendered{
+  background: white;
+  color: black;
+}
+
+.select2-selection__rendered:focus-within{
+  outline: 3px solid #ffbf47;
+}
+
+.select2-selection__rendered li:not(:only-child) input{
+  padding-left: 5px;
+}
+
+.select2-selection__rendered input:focus{
+  outline: none;
+}
+
+.select2-selection__rendered li{
+  display: inline-block;
+}
+
+.select2-results__options{
+  background: white;
+  border: 1px solid #ccc;
+  border-width: 0 1px 1px;
+  color: black;
+  max-height: 300px;
+  overflow: auto;
+  width: 100%;
+}
+
+.select2-results__option{
+  border-bottom: 1px solid #ccc;
+  cursor: pointer;
+  padding: 10px 10px 10px 0;
+}
+
+.select2-results__option:last-child{
+  border-bottom: none;
+}
+
+.select2-results__option:hover{
+  background-color: #fefefe;
+  color: #000;
+}
+
+.select2-results__option[aria-selected="true"]{
+  background: #1e1348;
+  color: #fff;
+}
+
+.select2-results__option .icon {
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+  visibility: hidden;
+}
+
+.select2-results__option[aria-selected="true"] .icon{
+  visibility: visible;
+}
+
+.select2-selection__choice{
+  background-color: #dfd5c5;
+  border: medium none;
+  border-radius: 8px;
+  color: #292929;
+  cursor: default;
+  float: left;
+  font-size: 14px;
+  height: 28px;
+  line-height: 1.64;
+  margin-right: 5px;
+  margin-top: 10px;
+  padding: 3px 5px;
+  text-align: left;
+}
+
+.select2-selection__choice:first-child{
+  margin-left: 10px;
+}
+
+.select2-selection__choice__remove{
+  background-color: #00549f;
+  border-radius: 50%;
+  color: #fff;
+  display: inline-block;
+  float: right;
+  height: 20px;
+  line-height: 18px;
+  margin-left: 6px;
+  margin-right: 0;
+  position: relative;
+  text-align: center;
+  /*text-indent: -9999px;*/
+  top: 1px;
+  width: 20px;
+}
+
+.select2-search--inline:only-child{
+  width: 100%;
+}
+
+/**
+ * Big number list e.g. (1) Item
+ */
+.dit-number-list{
+  counter-reset: list;
+  margin: 10px 0 30px;
+}
+
+.dit-number-list li{
+  counter-increment: list;
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+.dit-number-list li::before{
+  border: 5px solid #1e1348;
+  border-radius: 50%;
+  color: #ccc;
+  content: counter(list);
+  display: inline-block;
+  font-size: 30px;
+  height: 55px;
+  line-height: 55px;
+  margin-right: 15px;
+  text-align: center;
+  width: 55px;
+}
+
+
+/**
+ * Report Progress
+ */
+.dit-progress-bar{
+  margin-top: 80px;
+}
+
+.dit-progress-bar ol{
+  background: #f0f0f0;
+  font-size: 18px;
+  margin: 10px 0;
+  max-width: 260px;
+  padding: 20px 0;
+}
+
+.dit-progress-bar a{
+  color: #00549f;
+  text-decoration: underline;
+}
+
+.dit-progress-bar a:hover{
+  text-decoration: none;
+}
+
+.dit-progress-bar li{
+  display: block;
+  padding: 15px 10px;
+}
+
+.dit-progress-bar li + li{
+  margin-top: 20px;
+}
+
+.dit-progress-bar .is-selected{
+  background: #00549f;
+  color: #fff;
+}
+
+@media screen and (max-width: 767px){
+  .dit-progress-bar{
+    display: none;
+  }
+}
+
+
+/***
+
+Accordion Tabs
+======
+* Class name: `dit-accordion`
+* Tags used on: `<div>`
+
+Expanding/Collapsing content
+
+*Dev note:*
+
+The `[role="tab"]` div must match the values in the `[role="tabcontent"]` and these must be unique too.
+
+If you have 2 sets of tabs on the same page e.g.
+`<div id="accordion1" aria-labelledby="accordion1">` can't appear multiple times
+
+***/
+
+[role="tabpanel"]{
+	display: none;
+	overflow: hidden;
+
+	@media print{
+		display: block;
+		max-height: none;
+		overflow: visible;
+	}
+}
+
+.no-js [role="tabpanel"]{
+	display: block;
+	overflow: visible;
+}
+
+[role="tabpanel"][aria-hidden="false"]{
+	display: block !important;
+}
+
+.dit-accordion-list{
+  border-bottom: 2px solid #e8e8e8;
+  margin-bottom: 20px;
+  padding-bottom: 40px;
+}
+
+.dit-accordion{
+  border-top: 2px solid #e8e8e8;
+}
+
+.dit-accordion__title{
+	appearance: none;
+	background: transparent;
+	border: none;
+	border-radius: none;
+	color: currentColor;
+	cursor: pointer;
+	display: block;
+	margin: 0;
+	padding: 12px 45px 12px 0;
+	position: relative;
+	text-align: left;
+	width: 100%;
+
+	@media screen and (min-width: $bp-ipad-portrait){
+		padding-bottom: 17px;
+		padding-top: 17px;
+	}
+}
+
+.dit-accordion__title[aria-expanded="true"]{
+	color: black;
+}
+
+.dit-accordion__title:hover{
+	background: transparent;
+}
+
+.dit-accordion__toggle--hide{
+	display: none;
+}
+
+.dit-accordion__title > *{
+	margin-bottom: 0;
+	pointer-events: none;
+}
+
+/**
+ * 1 Allow only .dit-accordion__title to be clickable
+ */
+.dit-accordion__btn{
+  color: #0b89ff;
+  font-size: 30px;
+  font-weight: bold;
+	pointer-events: none; /* 1 */
+	position: absolute;
+	right: 18px;
+	top: 10px;
+}
+
+@media screen and (min-width: 1024px){
+  .dit-accordion__btn{
+    right: 140px;
+  }
+}
+
+.dit-accordion__btn svg{
+	display: block;
+}
+
+.dit-accordion__title[aria-expanded="true"] .dit-accordion__toggle--hide{
+	display: block;
+}
+
+.dit-accordion__title[aria-expanded="true"] .dit-accordion__toggle--show{
+	display: none;
+}
+
+.dit-accordion__body{
+	/** this selector is here just to show structure **/
+}
+
+.dit-accordion__body[aria-hidden="false"]{
+
+}
+
+.dit-accordion__inner{
+	padding: 25px 0 25px;
+
+	> *:first-child{
+		margin-top: 0;
+	}
+
+	> p:last-child{
+		margin-bottom: 0;
+		padding-bottom: 0;
+	}
+}
+
+.dit-accordion__body .table{
+	border: none;
+}
