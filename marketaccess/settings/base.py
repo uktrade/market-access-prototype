@@ -191,7 +191,7 @@ ELASTICSEARCH_DSL={
 #    }
 }
 
-# ELASTICSEARCH_DEFAULT_ANALYZER = "english_analyzer"
+ELASTICSEARCH_DEFAULT_ANALYZER = "english_analyzer"
 
 # directory-api
 API_CLIENT_CLASSES = {
