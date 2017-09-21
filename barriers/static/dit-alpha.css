@@ -16,12 +16,24 @@ button:focus{
   outline: 3px solid #ffbf47;
 }
 
+textarea{
+  resize: vertical;
+}
+
 .column-full{
   width: 100%;
 }
 
 .form-control{
   background-color: inherit;
+}
+
+main a{
+  text-decoration: underline;
+}
+
+main a:hover{
+  text-decoration: none;
 }
 
 /**
@@ -261,10 +273,11 @@ button:focus{
  * Hero
  */
 .dit-hero{
-  background-color: grey;
+  background-color: #F0F0F0;
   background-position: center center;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
+  color: #000;
   height: 410px;
   margin-bottom: 50px;
   position: relative;
@@ -272,12 +285,15 @@ button:focus{
 
 @media screen and (max-width: 768px){
   .dit-hero{
+    background: transparent;
+    background-image: none !important;
+    color: inherit;
     margin-bottom: 20px;
   }
 }
 
 .dit-hero__copy{
-  color: white;
+  color: currentColor;
   padding-top: 50px;
   position: relative;
 }
@@ -303,6 +319,7 @@ button:focus{
 .dit-hero__form{
   background: black;
   background: rgba(0, 0, 0, .5);
+  color: #fff;
   padding: 18px;
 }
 
@@ -318,8 +335,8 @@ button:focus{
   font-size: 18px;
   line-height: 1.38;
   margin-bottom: 50px;
-  margin-top: 50px;
-  padding-top: 90px;
+  margin-top: 30px;
+  padding-top: 60px;
 }
 
 @media screen and (max-width: 768px){
@@ -397,6 +414,13 @@ button:focus{
   list-style: disc;
   margin-left: 1.5em;
   padding-left: .5em;
+}
+
+.js-saved-success{
+  border: 5px solid green;
+  margin-bottom: 30px;
+  margin-top: 30px;
+  padding: 20px 15px 0;
 }
 
 /**
@@ -745,6 +769,16 @@ If you have 2 sets of tabs on the same page e.g.
 	pointer-events: none;
 }
 
+.dit-accordion__title-wording{
+  display: inline-block;
+}
+
+@media screen and (min-width: 1024px){
+  .dit-accordion__title-wording{
+    padding-right: 140px;
+  }
+}
+
 /**
  * 1 Allow only .dit-accordion__title to be clickable
  */
@@ -799,4 +833,17 @@ If you have 2 sets of tabs on the same page e.g.
 
 .dit-accordion__body .table{
 	border: none;
+}
+
+/**
+ * Reporting CTA
+ */
+.dit-reporting-cta{
+  border-top: 1px solid #E8E8E8;
+  margin-top: 40px;
+  padding-top: 40px;
+}
+
+.dit-reporting-cta__title{
+  margin-bottom: 30px;
 }

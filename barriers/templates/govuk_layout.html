@@ -1,4 +1,6 @@
-{% load static from staticfiles %}<!DOCTYPE html>
+{% load static from staticfiles %}
+{% load trans from i18n %}
+{% load external_url from constants_tags %}<!DOCTYPE html>
 <!--[if lt IE 9]><html class="lte-ie8" lang="en"><![endif]-->
 <!--[if gt IE 8]><!--><html lang="en"><!--<![endif]-->
     <head>
@@ -15,12 +17,12 @@
 
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta property="og:image" content="{% static 'govuk-0.18.0/assets/images/opengraph-image.png' %}">
-        <link href="{% static 'Dit-Pattern-Styling/public/css/main.css' %}" media="all" rel="stylesheet" />
-        <link href="{% static 'vendor/bootstrap/css/bootstrap-grid-only.css' %}" media="all" rel="stylesheet" />
-        <link href="{% static 'vendor/bootstrap/css/bootstrap-responsive.css' %}" media="all" rel="stylesheet" />
+        <link href="{% static 'great-pattern-library.css' %}" media="all" rel="stylesheet" />
+        <link href="{% static 'main.css' %}" media="all" rel="stylesheet" />
+        <link href="{% static 'dit-alpha.css' %}" media="all" rel="stylesheet" />
 
         {% block css %}
-            <link href="{% static 'main.css' %}" media="all" rel="stylesheet" />
+
         {% endblock %}
         <style type="text/css">
             .js-disabled-only {
@@ -69,40 +71,98 @@
           <div class="navigation">
             <div class="navigation-strip background--dark-navy">
               <div class="outer-container">
-                <ul class="list-inline list-separators">
+                <ul class="list-inline">
                   <li class="float--left soft-half--right navigation-skip-to"><a class="link link--grey" href="#content" title="Skip to main content"><strong>Skip to main content</strong></a></li>
                   <li class="float--left soft-half--right"><a class="logo-hmg" href="https://www.gov.uk/" title="Go to the GOV.UK homepage"><img src="{% static 'images/hm-gov-horizontal.svg' %}" alt="HM Government logo"></a></li>
                   <li class="float--left soft-half--left"><a class="link link--white" href="https://www.great.gov.uk/" title="part of great.gov.uk"><span class="hide-mobile font-light-grey font-light">Part of </span><span class="font-regular">great.gov.uk</span></a></li>
                 </ul>
 
-                <ul class="list-inline list-separators float--right navigation-login font-regular">
+                <ul class="list-inline float--right navigation-login font-regular">
                   {% if not sso_is_logged_in %}
-                  <li class="float--left soft-half--right"><a class="link--white" href="{{ sso_login_url }}" title="Sign in"><i class="icon icon--left icon-sign-in"><span class="visuallyhidden">Sign in icon</span></i><span class="hide-mobile">Sign in</span></a></li>
-                  <li class="float--left soft-half--left hide-mobile"><a class="link--white" href="{{ sso_register_url }}" title="Register"><span>Register</span></a></li>
+                  <li class="float--left soft-half--right"><a class="link--yellow" href="https://opportunities.export.great.gov.uk/dashboard">Sign in</a></li>
+                  <li class="float--left"><a class="link--yellow" href="https://sso.trade.great.gov.uk/accounts/signup/">Register</a></li>
                   {% else %}
-                  <li class="float--left soft-half--right"><a class="link--white" href="{{ sso_profile_url }}" title="Profile"><i class="icon icon--left icon-sign-out"><span class="visuallyhidden">Profile icon</span></i><span class="hide-mobile">Profile</span></a></li>
-                  <li class="float--left soft-half--left hide-mobile"><a class="link--white" href="{{ sso_logout_url }}" title="Sign out"><span>Sign out</span></a></li>
+                  <li class="float--left soft-half--right"><a class="link--yellow" href="{{ sso_profile_url }}">Profile</a></li>
+                  <li class="float--left"><a class="link--yellow" href="{{ sso_logout_url }}">Sign out</a></li>
                   {% endif %}
                 </ul>
                 <ul class="list-inline list-separators float--right navigation-login font-regular" id="sso-signout" style="display:none">
                   {% if not sso_is_logged_in %}
-                  <li class="float--left soft-half--right"><a class="link--white" href="{{ sso_login_url }}" title="Sign in"><i class="icon icon--left icon-sign-in"></i><span class="hide-mobile">Sign in</span></a></li>
-                  <li class="float--left soft-half--left hide-mobile"><a class="link--white" href="{{ sso_register_url }}" title="Register"><span>Register</span></a></li>
+                  <li class="float--left soft-half--right"><a class="link--yellow" href="{{ sso_login_url }}">Sign in</a></li>
+                  <li class="float--left "><a class="link--yellow" href="{{ sso_register_url }}" >Register</a></li>
                   {% else %}
-                  <li class="float--left soft-half--right"><a class="link--white" href="{{ sso_profile_url }}" title="Profile"><i class="icon icon--left icon-sign-out"></i><span class="hide-mobile">Profile</span></a></li>
-                  <li class="float--left soft-half--left hide-mobile"><a class="link--white" href="{{ sso_logout_url }}" title="Sign out"><span>Sign out</span></a></li>
+                  <li class="float--left soft-half--right"><a class="link--yellow" href="{{ sso_profile_url }}">Profile</a></li>
+                  <li class="float--left"><a class="link--yellow" href="{{ sso_logout_url }}">Sign out</a></li>
                   {% endif %}
                 </ul>
               </div>
             </div>
             <div class="background--great-blue">
               <div class="outer-container">
-                <a href="https://www.export.great.gov.uk" title="Go to the Exporting is GREAT homepage" class="navigation-logo-link float--left">
-                  <img src="{% static 'images/dfit-logo-white.png' %}" alt="Department for International Trade" class="navigation-logo" width="200">
-                </a>
+                <div class="dit-header">
+                    <a href="https://www.export.great.gov.uk" title="Go to the Exporting is GREAT homepage" class="navigation-logo-link float--left">
+                      <img src="{% static 'images/dfit-logo-white.svg' %}" alt="Department for International Trade" class="xnavigation-logo" width="148" height="70">
+                    </a>
+                    <nav class="dit-header__nav">
+                      <ul class="dit-header__nav-list">
+
+                        <li><a href="/" class="dit-header__nav-link">Home</a></li>
+                        <li>
+                          <button type="button" class="js-dit-toggle-nav dit-header__nav-link" aria-has-popup="true" aria-expanded="false" aria-controls="menu1">
+                            Export readiness <img src="{% static 'images/down-arrow.png' %}" alt="" aria-hidden="true" height="5" width="8">
+                          </button>
+                        </li>
+                        <li>
+                          <button type="button" class="js-dit-toggle-nav dit-header__nav-link" aria-has-popup="true" aria-expanded="false" aria-controls="menu2">
+                            Guidance <img src="{% static 'images/down-arrow.png' %}" alt="" aria-hidden="true" height="5" width="8">
+                          </button>
+                        </li>
+                        <li>
+                          <button type="button" class="js-dit-toggle-nav dit-header__nav-link" aria-has-popup="true" aria-expanded="false" aria-controls="menu3">
+                            Services <img src="{% static 'images/down-arrow.png' %}" alt="" aria-hidden="true" height="5" width="8">
+                          </button>
+                        </li>
+                      </ul>
+                    </nav>
+
+                </div>
               </div>
             </div>
-            <div class="navigation-main background--dark-blue">
+            <div class="outer-container">
+              <nav class="dit-header__nav-child-list js-dit-nav" id="menu1" aria-hidden="true">
+                <div>
+                  <ul>
+                    <li><a href="https://www.export.great.gov.uk/new/" class="">New to Exporting</a></li>
+                    <li><a href="https://www.export.great.gov.uk/occasional/" class="">Occasional Exporter</a></li>
+                    <li><a href="https://www.export.great.gov.uk/regular/" class="">Regular Exporter</a></li>
+                  </ul>
+                </div>
+              </nav>
+              <nav class="dit-header__nav-child-list js-dit-nav" id="menu2" aria-hidden="true">
+                <div>
+                  <ul>
+                    <li><a href="https://events.trade.gov.uk/" class="">Events</a></li>
+                    <li><a href="http://find-a-buyer.export.great.gov.uk/" class="">Find a Buyer</a></li>
+                    <li><a href="https://selling-online-overseas.export.great.gov.uk/" class="">Selling Online Overseas</a></li>
+                    <li><a href="https://export.great.gov.uk/get-finance/" class="">Get Finance</a></li>
+                    <li><a href="https://events.trade.gov.uk/" class="">Export Opportunities</a></li>
+                  </ul>
+                </div>
+              </nav>
+              <nav class="dit-header__nav-child-list js-dit-nav" id="menu3" aria-hidden="true">
+                <div>
+                  <ul>
+                    <li><a href="{% external_url 'about' %}" title="About great.gov.uk">{% trans 'About great.gov.uk' %}</a></li>
+                    <li><a href="{{ header_footer_contact_us_url }}" title="">{% trans 'Contact us' %}</a></li>
+                    <li><a href="{% external_url 'privacy' %}" title="Privacy and Cookies">{% trans 'Privacy &amp; cookies' %}</a></li>
+                    <li><a href="{% external_url 'terms' %}" title="Terms and conditions">{% trans 'Terms &amp; conditions' %}</a></li>
+                    <li><a href="{% external_url 'DIT' %}" title="Department for International Trade">{% trans 'Department for International Trade' %}</a></li>
+                  </ul>
+                </div>
+              </nav>
+            </div>
+
+            <!--<div class="navigation-main background--dark-blue">
               <div class="navigation-main-section outer-container">
                 <nav>
                   <ul class="list-inline list-separators navigation-main-menu">
@@ -155,7 +215,7 @@
                 </div>
               </div>
             </div>
-          </div>
+          </div>-->
         </header>
 
         {% block sub_header %}
@@ -178,7 +238,7 @@
 
         {% endblock sub_header %}
 
-        <main id="content" class="{% block css_layout_class %}{% endblock css_layout_class %} enrolment-content" role="main">
+        <main id="content" class="{% block css_layout_class %}{% endblock css_layout_class %}" role="main">
             {% block content %}
             {% endblock content %}
         </main>
@@ -186,28 +246,28 @@
         {% load trans from i18n %}
         {% load external_url from constants_tags %}
         <footer role="contentinfo">
-          <div class="footer background--great-blue soft--top">
+          <div class="footer background--great-blue soft--top"  style="font-size: 14px;">
               <div class="outer-container">
-                <div class="footer-section">
-                  <div class="col-8">
-                    <a href="https://www.exportingisgreat.gov.uk/" title="Go to the Exporting is Great homepage">
+                <div class="grid-container grid-container grid-container--inner">
+                  <div class="column-one-quarter">
+                    <img src="{% static 'images/dfit-logo-white.svg' %}" alt="Department for International Trade" width="148" height="70" style="display: block; margin-bottom: 20px">
+
+                    <a href="https://www.export.great.gov.uk/" title="Go to the Exporting is Great homepage">
                       <img src="{% static 'images/EiG-logo-stacked.svg' %}" alt="Exporting is Great logo" class="footer-logo">
                     </a>
                   </div>
-
-                  <div class="col-4">
-                    <ul class="footer-links footer-links--border">
+                  <div class="column-one-quarter dit-footer-section">
+                    <h3 class="h4 dit-footer-section__title">Export readiness</h3>
+                    <ul class="footer-links">
                       <li class="push-half--bottom"><a href="{% external_url 'new_to_exporting' %}" title="New to exporting">{% trans 'New to exporting' %}</a></li>
                       <li class="push-half--bottom"><a href="{% external_url 'occasional_exporter' %}" title="Occasional exporter">{% trans 'Occasional exporter' %}</a></li>
                       <li><a href="{% external_url 'regular_exporter' %}" title="Regular exporter">{% trans 'Regular exporter' %}</a></li>
                     </ul>
                   </div>
-                </div>
 
-                <div class="footer-section footer-section-right">
-
-                  <div class="col-6">
-                    <ul class="footer-links footer-middle-section">
+                  <div class="column-one-quarter dit-footer-section">
+                    <h3 class="h4 dit-footer-section__title">Guidance</h3>
+                    <ul class="footer-links">
                       <li class="push-half--bottom"><a href="{% external_url 'export_opportunities' %}" title="Export opportunities">{% trans 'Export opportunities' %}</a></li>
                       <li class="push-half--bottom"><a href="{% external_url 'find_a_buyer' %}" title="Find a buyer">{% trans 'Find a buyer' %}</a></li>
                       <li class="push-half--bottom"><a href="{% external_url 'selling_online_overseas' %}" title="Selling online overseas">{% trans 'Selling online overseas' %}</a></li>
@@ -216,8 +276,9 @@
                     </ul>
                   </div>
 
-                  <div class="col-6">
-                    <ul class="footer-links footer-links--border">
+                  <div class="column-one-quarter dit-footer-section">
+                    <h3 class="h4 dit-footer-section__title">Services</h3>
+                    <ul class="footer-links">
                       <li class="push-half--bottom"><a href="{% external_url 'about' %}" title="About great.gov.uk">{% trans 'About great.gov.uk' %}</a></li>
                       <li class="push-half--bottom"><a href="{{ header_footer_contact_us_url }}" title="">{% trans 'Contact us' %}</a></li>
                       <li class="push-half--bottom"><a href="{% external_url 'privacy' %}" title="Privacy and Cookies">{% trans 'Privacy &amp; cookies' %}</a></li>
@@ -225,17 +286,28 @@
                       <li><a href="{% external_url 'DIT' %}" title="Department for International Trade">{% trans 'Department for International Trade' %}</a></li>
                     </ul>
                   </div>
+              </div>
+              <div class="grid-container grid-container grid-container--inner">
+                <div class="column-full dit-footer-auxiliary-nav">
+
+                  <ul class="list-inline">
+                    <li class="soft--right"><a class="link--grey" href="https://www.great.gov.uk/">{% trans 'Part of' %} <strong>great.gov.uk</strong></a></li>
+                    <li class="soft--right"><a class="link--grey" href="https://www.export.great.gov.uk/about/">{% trans 'About us' %}</a></li>
+                    <li class="soft--right"><a class="link--grey" href="https://contact-us.export.great.gov.uk/selling_online_overseas">{% trans 'Contact us' %}</a></li>
+                    <li class="soft--right"><a class="link--grey" href="https://www.great.gov.uk/uk/privacy-policy">{% trans 'Privacy and cookies' %}</a></li>
+                    <li class="soft--right"><a class="link--grey" href="https://www.great.gov.uk/uk/terms-and-conditions">{% trans 'Terms and conditions' %}</a></li>
+                    <li><a class="link--grey" href="https://www.export.great.gov.uk/">{% trans 'Department for International Trade' %}</a></li>
+                  </ul>
                 </div>
               </div>
+          </div>
+          <div class="footer-bottom navigation-strip">
               <div class="outer-container">
-                <div class="footer-bottom">
-                  <div class="navigation-strip">
-                    <ul class="list-inline list-separators">
-                      <li class="float--left soft--right"><a class="" href="https://www.gov.uk/" title="hm government"><img src="{% static 'images/hm-gov-horizontal.svg' %}"></a></li>
-                      <li class="float--left soft--left footer-links--border"><a class="link--grey"  href="https://www.great.gov.uk/" title="part of great.gov.uk">{% trans 'Part of' %} <strong>great.gov.uk</strong></a></li>
-                    </ul>
+                <div class="grid-container grid-container grid-container--inner">
+                  <div class="column-one-half flush--bottom">
+                    <a class="" href="https://www.gov.uk/" title="hm government"><img src="{% static 'images/hm-gov-horizontal.svg' %}"></a>
                   </div>
-                  <div class="footer-copy font-light-grey font-xsmall">
+                  <div class="footer-copy font-light-grey font-xsmall column-one-half flush--bottom">
                     <p>&copy; {% trans 'Crown copyright' %} {% now "Y" %}. {% trans 'All rights reserved.' %}</p>
                   </div>
                 </div>
@@ -249,6 +321,8 @@
         <!--[if IE 8]><script src="{% static 'Dit-Pattern-Styling/public/js/ie8.js' }"></script><![endif]-->
         <!--[if IE 8]><script type="text/javascript" src="js/selectivizr.js"></script><![endif]-->
         <script type="text/javascript" src="{% static 'Dit-Pattern-Styling/public/js/navigation.js' %}"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js"></script>
+        <script src="{% static 'dit-alpha.js' %}"></script>
         {% block bodyScripts %}{% endblock bodyScripts %}
     </body>
 </html>

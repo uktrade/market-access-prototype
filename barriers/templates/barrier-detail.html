@@ -2,10 +2,8 @@
 {% load staticfiles %}
 {% load trans from i18n %}
 {% block css %}
-    <link href="{% static 'landing-page.css' %}" media="all" rel="stylesheet" />
-    <link href="{% static 'main.css' %}" media="all" rel="stylesheet" />
 {% endblock %}
-{% block head_title %}Market Access Barriers{% endblock %}
+{% block head_title %}{% trans "Trade Barrier Detail" %}{% endblock %}
 {% block sub_header %}{# prevent the subheader from showing on form pages #}{% endblock %}
 {% block hero_title %}
 Get seen by motivated overseas buyers
@@ -16,52 +14,39 @@ tr-home
 {% endblock %}
 
 {% block content %}
-  <div class="legacy">
-    <main class="main" role="main">
-      <article class="article row post status-publish format-standard">
-        <header class="twelve columns">
-            <h1>{% trans "Trade Barrier Detail" %}</h1>
-        </header>
-        <div class="entry content rich-text eight columns">
-            <h2>{{ object.title }}</h2>
-            <p>WTO Symbol: <a href="{{ object.wto_link }}">{{ object.wto_symbol }}</a></p>
-            <p>Barrier Type: {{ object.mab_type }}</p>
-            <p>Notifying Member: {{ object.notifying_member }}</p>
-            <p>Distribution Date: {{ object.distribution_date }}</p>
-            <p>{{ object.description }}</p>
-            <ul>
-                <li>Products affected: {{ object.products_text }}</li>
-                <li>Objectives: {{ object.objectives }}</li>
-                <li>Regions affected (according to reporting country): {{ object.regions_affected }}</li>
-                <li>Comments due date: {{ object.comments_due_date }}</li>
-                <li>Notification type: {{ object.notification_type }}</li>
-                <li>Documents: {{ object.document_link }}</li>
-            </ul>
+  <div class="outer-container">
+    <div class="dit-breadcrumb grid-container grid-container--inner">
+        <div class="column-full flush--bottom">
+          <a href="https://www.great.gov.uk/">Great.gov.uk</a> <span aria-hidden="true">></span> <a href="/">Trade Barriers</a> <span aria-hidden="true">></span> <a href="{% url 'barriers-by-country' country=object.notifying_member %}">{% trans "Existing Trade Barriers in Spain" %}</a> <span aria-hidden="true">></span> <strong>{% trans "Trade Barrier Detail" %}</strong>
         </div>
-        <aside class="four columns">
-            <div class="next-steps">
-                <h3>Next steps</h3>
-                <ul class="next-steps__list">
-                    <li class="next-steps__step">
-                        <a href="{% url 'barriers-by-country' country=object.notifying_member %}" class="wob-link no-decoration-link">
-                            <p class="next-steps__step-copy">View other current trade barriers from {{ object.notifying_member }}</p>
-                            <div class="next-steps__arrow">
-                                <img src="{% static 'images/blue-chevron.png' %}">
-                            </div>
-                        </a>
-                    </li>
-                    <li class="next-steps__step">
-                        <a href="{% url 'report-barrier' %}" class="wob-link no-decoration-link">
-                            <p class="next-steps__step-copy">Report a trade barrier</p>
-                            <div class="next-steps__arrow">
-                                <img src="{% static 'images/blue-chevron.png' %}">
-                            </div>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </aside>
-      </article>
-    </main>
-  </legacy>
-{% endblock %}
+    </div>
+  </div>
+  <div class="outer-container">
+    <div class="grid-container grid-container--inner">
+      <div class="column-full">
+        <h1 class="h3">{% trans "Trade Barrier Detail" %}</h1>
+      </div>
+      <div class="column-two-third">
+          <h2 id="barrier-title">{{ object.title }}</h2>
+          <p>WTO Symbol: <a href="{{ object.wto_link }}">{{ object.wto_symbol }}</a></p>
+          <p>Barrier Type: {{ object.mab_type }}</p>
+          <p>Notifying Member: {{ object.notifying_member }}</p>
+          <p>Distribution Date: {{ object.distribution_date }}</p>
+          <p>{{ object.description }}</p>
+          <ul>
+              <li>Products affected: {{ object.products_text }}</li>
+              <li>Objectives: {{ object.objectives }}</li>
+              <li>Regions affected (according to reporting country): {{ object.regions_affected }}</li>
+              <li>Comments due date: {{ object.comments_due_date }}</li>
+              <li>Notification type: {{ object.notification_type }}</li>
+              <li>Documents: {{ object.document_link }}</li>
+          </ul>
+          <p><a href="{% url 'barriers-by-country' country=object.notifying_member %}" class="button button-white button-border">Back to search results</a></p>
+      </div>
+      <div class="column-one-third">
+          <p><a href="{% url 'report-barrier-step1' %}" class="button button-red" aria-labelledby="barrier-title">Make a report</a></p>
+      </div>
+    </div>
+  </div>
+
+  {% endblock %}

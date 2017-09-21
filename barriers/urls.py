@@ -13,11 +13,12 @@ from django.conf.urls import url  # , include
 from .views import (
     HomeView,
     ReportBarrierView, ReportBarrierShowCurrentBarriersView, ReportBarrierFormView,
-    BarrierDetailView, BarriersByCountryView,
+    BarrierDetailView, BarrierSubscribeView, BarriersByCountryView,
     ReportBarrierStep1View, ReportBarrierStep2View, ReportBarrierStep3View,
     ReportBarrierStep4View, ReportBarrierStep5View, ReportBarrierStep6View,
-    ReportBarrierStep7View, ReportBarrierStep8View,
-    ReportBarrierRegisterView
+    ReportBarrierRegisterView,
+    BarriersGeneralInfoView, BarriersCaseStudyView,
+    RequestFastTrackView
 )
 
 urlpatterns = [
@@ -26,6 +27,10 @@ urlpatterns = [
         BarriersByCountryView.as_view(),
         name='barriers-by-country'
     ),
+    url(r'^barrier/subscribe',
+        BarrierSubscribeView.as_view(),
+        name='barrier-subscribe'
+    ),
     url(r'^barriers/(?P<pk>\d+)',
         BarrierDetailView.as_view(),
         name='barrier-detail'
@@ -33,6 +38,14 @@ urlpatterns = [
     url(r'^report/show-current-barriers/countries/(?P<countries>\w+)',
         ReportBarrierShowCurrentBarriersView.as_view(),
         name='report-barrier-show-current-barriers'
+    ),
+    url(r'^barriers/general-info',
+        BarriersGeneralInfoView.as_view(),
+        name='barriers-general-info'
+    ),
+    url(r'^barriers/case-study',
+        BarriersCaseStudyView.as_view(),
+        name='barriers-case-study'
     ),
     url(r'^report/step1',
         ReportBarrierStep1View.as_view(),
@@ -58,14 +71,6 @@ urlpatterns = [
         ReportBarrierStep6View.as_view(),
         name='report-barrier-step6'
     ),
-    url(r'^report/step7',
-        ReportBarrierStep7View.as_view(),
-        name='report-barrier-step7'
-    ),
-    url(r'^report/step8',
-        ReportBarrierStep8View.as_view(),
-        name='report-barrier-step8'
-    ),
     url(r'^report/register',
         ReportBarrierRegisterView.as_view(),
         name='report-barrier-register'
@@ -77,5 +82,9 @@ urlpatterns = [
     url(r'^report',
          ReportBarrierView.as_view(),
         name='report-barrier'
+    ),
+    url(r'^request-fast-track',
+         RequestFastTrackView.as_view(),
+        name='request-fast-track'
     ),
 ]

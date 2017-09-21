@@ -6009,6 +6009,81 @@ $(document).ready(function(){
 });
 
 
+// Quick and dirty local storage on save/submit form fields
+$(document).ready(function(){
+
+  var $saveButton = $('.js-save-button');
+  var $form = $('.dit-form');
+
+  /*
+  // Commented out as it isn't 100% working yet
+  if (typeof localStorage !== 'undefined') {
+
+    loadSavedData();
+
+    $saveButton.click(function(e){
+      saveFunctions();
+      e.preventDefault();
+
+      // Show a hidden success message and focus the user there
+      $('.js-saved-success').show().attr('aria-hidden', 'false').focus();
+    });
+
+    $form.on('submit', function(e){
+      saveFunctions();
+    });
+
+  }
+  */
+
+  // Loop through fields on the page and save them
+  function saveFunctions(){
+    var $fields = $form.find('[name]');
+
+    $fields.each(function(){
+      if($(this).attr('type') === 'checkbox' || $(this).attr('type') === 'radio'){
+        localStorage.setItem($(this).attr('name'), $('[name="' + $(this).attr('name') + '"]:checked').val());
+      } else{
+        localStorage.setItem($(this).attr('name'), $(this).val());
+      }
+    });
+  }
+
+  // if a field exists with name="x" or a div with data-name="x" then populate it
+  function loadSavedData(){
+    var $fields = $form.find('[name]');
+    var $displays = $form.find('[data-name]');
+
+    if($fields.length > 0){
+      $fields.each(function(){
+        var savedValue = localStorage.getItem($(this).attr('name'));
+
+        // checkbox/radio
+        if($(this).attr('type') === 'checkbox' || $(this).attr('type') === 'radio'){
+          if($(this).attr('value') === savedValue){
+            $(this).attr('checked', 'checked');
+          } else {
+            $(this).removeAttr('checked');
+          }
+        } else{
+           $(this).val(savedValue);
+        }
+      });
+    }
+
+    if($displays.length > 0){
+      $displays.each(function(){
+        var savedValue = localStorage.getItem($(this).attr('data-name'));
+
+        if(savedValue !== null && typeof savedValue !== 'undefined' && savedValue !== 'undefined' && savedVale.length > 0){
+          $(this).html(savedValue);
+        }
+      });
+    }
+  }
+
+});
+
 
 // Create a global object we can reference
 window.DITAlpha = window.DITAlpha || {};
@@ -6032,7 +6107,7 @@ window.DITAlpha = window.DITAlpha || {};
 
 		/**
 		 * @param {boolean}
-		 * The tab content e.g. the contne tthat is toggled by the tabs above.
+		 * The tab content e.g. the content that is toggled by the tabs above.
 		 */
 		tabPanels: null,
 

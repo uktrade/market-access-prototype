@@ -96,44 +96,55 @@ class BarriersByCountryView(ListView):
         context_data['country'] = self.country
         return context_data
 
+class PostGetTemplateView(TemplateView):
+    def post(self, *args, **kwargs):
+        return self.get(*args, **kwargs)
 
 class BarrierDetailView(DetailView):
     model = MarketAccessBarrier
     template_name = 'barrier-detail.html'
 
-class ReportBarrierStep1View(TemplateView):
+class BarrierSubscribeView(TemplateView):
+    model = MarketAccessBarrier
+    template_name = 'barrier-subscribe.html'
+
+class BarriersGeneralInfoView(TemplateView):
+    model = MarketAccessBarrier
+    template_name = 'barriers-general-info.html'
+
+class BarriersCaseStudyView(TemplateView):
+    model = MarketAccessBarrier
+    template_name = 'barriers-case-study.html'
+
+class ReportBarrierStep1View(PostGetTemplateView):
     model = MarketAccessBarrier
     template_name = 'report-barrier-step1.html'
 
-class ReportBarrierStep2View(TemplateView):
+class ReportBarrierStep2View(PostGetTemplateView):
     model = MarketAccessBarrier
     template_name = 'report-barrier-step2.html'
 
-class ReportBarrierStep3View(TemplateView):
+class ReportBarrierStep3View(PostGetTemplateView):
     model = MarketAccessBarrier
     template_name = 'report-barrier-step3.html'
 
-class ReportBarrierStep4View(TemplateView):
+class ReportBarrierStep4View(PostGetTemplateView):
     model = MarketAccessBarrier
     template_name = 'report-barrier-step4.html'
 
-class ReportBarrierStep5View(TemplateView):
+class ReportBarrierStep5View(PostGetTemplateView):
     model = MarketAccessBarrier
     template_name = 'report-barrier-step5.html'
 
-class ReportBarrierStep6View(TemplateView):
+class ReportBarrierStep6View(PostGetTemplateView):
     model = MarketAccessBarrier
     template_name = 'report-barrier-step6.html'
 
-class ReportBarrierStep7View(TemplateView):
-    model = MarketAccessBarrier
-    template_name = 'report-barrier-step7.html'
-
-class ReportBarrierStep8View(TemplateView):
-    model = MarketAccessBarrier
-    template_name = 'report-barrier-step8.html'
-
-class ReportBarrierRegisterView(TemplateView):
+class ReportBarrierRegisterView(PostGetTemplateView):
     model = MarketAccessBarrier
     template_name = 'report-barrier-register.html'
+
+class RequestFastTrackView(TemplateView):
+    model = MarketAccessBarrier
+    template_name = 'request-fast-track.html'
 

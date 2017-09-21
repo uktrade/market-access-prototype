@@ -2,10 +2,8 @@
 {% load staticfiles %}
 {% load trans from i18n %}
 {% block css %}
-    <link href="{% static 'landing-page.css' %}" media="all" rel="stylesheet" />
-    <link href="{% static 'main.css' %}" media="all" rel="stylesheet" />
 {% endblock %}
-{% block head_title %}Market Access Barriers{% endblock %}
+{% block head_title %}{% trans "Existing Trade Barriers in " %}{{country}}{% endblock %}
 {% block sub_header %}{# prevent the subheader from showing on form pages #}{% endblock %}
 {% block hero_title %}
 Get seen by motivated overseas buyers
@@ -16,39 +14,110 @@ tr-home
 {% endblock %}
 
 {% block content %}
-  <div class="legacy">
-    <main class="main" role="main">
-      <article class="article row post status-publish format-standard">
-        <header class="twelve columns">
-            <h1>{% trans "Existing Trade Barriers in " %}{{country}}</h1>
-        </header>
-        <div class="entry content rich-text eight columns">
-            <ul>
-                {% for object in object_list %}
-                <li>
-                    <a href="{% url 'barrier-detail' pk=object.pk %}">
-                        {{ object }}
-                    </a>
-                </li>
-                {% endfor %}
-            </ul>
+  <div class="outer-container">
+    <div class="dit-breadcrumb grid-container grid-container--inner">
+        <div class="column-full flush--bottom">
+          <a href="https://www.great.gov.uk/">Great.gov.uk</a> <span aria-hidden="true">></span> <a href="/">Trade Barriers</a> <span aria-hidden="true">></span> <a href="{% url 'report-barrier' %}">Report a barrier</a> <span aria-hidden="true">></span> <strong>{% trans "Existing Trade Barriers in " %}{{country}}</strong>
         </div>
-        <aside class="four columns">
-            <div class="next-steps">
-                <h3>Next steps</h3>
-                <ul class="next-steps__list">
-                    <li class="next-steps__step">
-                        <a href="{% url 'report-barrier' %}" class="wob-link no-decoration-link">
-                            <p class="next-steps__step-copy">Report a new trade barrier</p>
-                            <div class="next-steps__arrow">
-                                <img src="{% static 'images/blue-chevron.png' %}">
-                            </div>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </aside>
-      </article>
-    </main>
-  </legacy>
+    </div>
+  </div>
+
+  {% include 'components/filters.html' %}
+
+  <div class="outer-container" id="results">
+    <div class="grid-container grid-container--inner">
+      <div class="column-full">
+        <h2 class="h3">Keep me updated</h2>
+        <p>Tell me about changes to Trade Barriers which relate to my search</p>
+        <p><a href="{% url 'barrier-subscribe' %}" class="button button-blue">Subscribe</a></p>
+
+
+        <h2 class="h3">Results</h2>
+        <p>Click on the ‘plus’ symbol for a brief description of the barrier or click on the name to read a full summary. <br>If you’re being affected by the barrier, or you’ve come across a similar barrier, report your experience to the UK government.</p>
+
+        <h3 class="h4" style="margin-top: 80px;"><strong>Barriers affecting UK exporters</strong></h3>
+        <ul class="" data-module="Accordion">
+            {% for object in object_list %}
+            <li class="grid-container grid-container--inner" style="border-bottom: 1px solid #E8E8E8; margin-bottom: 20px;">
+              <div class="column-two-third">
+
+                <div class="dit-summary-section dit-accordion" style="border:none;">
+                  <button type="button"
+    								class="dit-accordion__title h4"
+    								id="accordion-button-{{ object.id }}"
+    								aria-selected="false"
+    								role="tab"
+    								tabindex="0"
+    								aria-controls="accordion{{ object.id }}"
+    								aria-expanded="false"
+    						   >
+    						   <span class="dit-accordion__title-wording">{{ object.title }}</span><br>
+                    <span class="font-small dit-accordion__toggle--show">Country: Spain</span>
+    								<span class="dit-accordion__btn" aria-hidden="true">
+    									<span class="dit-accordion__toggle--show">+</span>
+    									<span class="dit-accordion__toggle--hide">-</span>
+    								</span>
+                  </button>
+                  <div
+    								id="accordion{{ object.id }}"
+    								class="dit-accordion__body"
+    								aria-labelledby="accordion-button-{{ object.id }}"
+    								aria-hidden="true"
+    								role="tabpanel"
+    							>
+      							<div class="dit-accordion__inner">
+                      {#<p>{{ object }}</p>#}
+                      <p>Country: Spain<br>
+                        Sector: Pharmaceuticals<br>
+                        Barrier Type: Burdensome customs procedures</p>
+
+                      <p>We are getting reports that the Venezuelan Health Ministry is discussing
+                      a plan to force overseas exporters of medicinal drugs to have them tested in
+                      Venezuelan laboratories before they can be sold in shops. </p>
+                      <p><a href="{% url 'barrier-detail' pk=object.pk %}" aria-labelledby="accordion-button-{{ object.id }}">More detail</a></p>
+      							</div>
+                </div>
+                </div>
+              </div>
+              <div class="column-one-third">
+                <a href="{% url 'report-barrier-step1' %}" class="button button-red" aria-labelledby="accordion-button-{{ object.id }}">Make a report</a>
+              </div>
+            </li>
+            {% endfor %}
+        </ul>
+        <h3 class="h4" style="margin-top: 60px;"><strong>Barriers reported to WTO and EC</strong></h3>
+        <ul class="">
+            <li class="grid-container grid-container--inner" style="border-bottom: 1px solid #E8E8E8; margin-bottom: 20px;">
+              <div class="column-two-third">
+
+                <div class="dit-summary-section dit-accordion" style="border:none;">
+                  <div class="h4">
+                    <a href="{% url 'barrier-detail' pk=2392 %}" id="wto-title-1">Title here</a><br>
+                    <span class="font-small">Country: Spain</span>
+                  </div>
+                </div>
+              </div>
+              <div class="column-one-third">
+                <a href="{% url 'report-barrier-step1' %}" class="button button-red" aria-labelledby="wto-title-2">Make a report</a>
+              </div>
+            </li>
+            <li class="grid-container grid-container--inner" style="border-bottom: 1px solid #E8E8E8; margin-bottom: 20px;">
+              <div class="column-two-third">
+
+                <div class="dit-summary-section dit-accordion" style="border:none;">
+                  <div class="h4">
+                    <a href="{% url 'barrier-detail' pk=2392 %}" id="wto-title-2">Title here</a><br>
+                    <span class="font-small">Country: Spain</span>
+                  </div>
+                </div>
+              </div>
+              <div class="column-one-third">
+                <a href="{% url 'report-barrier-step1' %}" class="button button-red" aria-labelledby="wto-title-2">Make a report</a>
+              </div>
+            </li>
+        </ul>
+
+      </div>
+    </div>
+  </div>
 {% endblock %}

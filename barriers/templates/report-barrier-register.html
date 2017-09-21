@@ -2,33 +2,37 @@
 {% load staticfiles %}
 {% load trans from i18n %}
 {% block css %}
-    <link href="{% static 'main.css' %}" media="all" rel="stylesheet" />
-    <link href="{% static 'dit-alpha.css' %}" media="all" rel="stylesheet" />
-    <link href="{% static 'gds-forms.css' %}" media="all" rel="stylesheet" />
-    <style>
-         </style>
 {% endblock %}
 {% block bodyScripts %}
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js"></script>
-  <script src="{% static 'dit-alpha.js' %}"></script>
 {% endblock bodyScripts %}
-{% block head_title %}Report a trade barrier - Register{% endblock %}
+{% block head_title %}Report a trade barrier - Register/Log in{% endblock %}
 {% block sub_header %}{# prevent the subheader from showing on form pages #}{% endblock %}
 {% block css_layout_class %}
 {% endblock %}
 
 {% block content %}
-  <div class="dit-breadcrumb row">
-      <div class="twelve columns">
-        <a href="https://www.great.gov.uk/">Great.gov.uk</a> <span aria-hidden="true">></span> <a href="/">Trade Barriers</a> <span aria-hidden="true">></span> <a href="{% url 'report-barrier' %}">Report a Trade Barrier</a> <span aria-hidden="true">></span> <strong>Step 8 of 8: Summary</strong>
-      </div>
+  <div class="outer-container">
+    <div class="dit-breadcrumb grid-container grid-container--inner">
+        <div class="column-full flush--bottom">
+          <a href="https://www.great.gov.uk/">Great.gov.uk</a> <span aria-hidden="true">></span> <a href="/">Trade Barriers</a> <span aria-hidden="true">></span> <a href="{% url 'report-barrier' %}">Report a barrier</a> <span aria-hidden="true">></span> <strong>Register/Log in</strong>
+        </div>
+    </div>
   </div>
- <div class="row">
-    <div class="twelve columns">
-      <h1 class="">Register for Trade account</h1>
-      <a href="#" class="button button-blue">Log in</a>
-      or
-      <a href="#" class="button button-blue">Register</a>
+  <div class="outer-container">
+    <div class="grid-container grid-container--inner">
+      <div class="column-two-third">
+        <h1 class="h3 push--top">Thank you</h1>
+        <p class="push--top"><strong>Thank you for getting in touch. You will shortly receive an email to confirm this submission.</strong> We will process your report within <span>x</span> working days and contact you to tell you what we will do next.</p>
+        <div class="panel panel--border-top-none">
+          <h2 class="h3">Stay updated</h1>
+          <p>Save this report to your Trade Profile, and get updates from UK Government</p>
+          <div style="float: left; border-right: 1px solid #666;">
+            <a href="#" class="button button-blue push--right flush--bottom ">Create a Trade Profile</a>
+          </div>
+
+          <a href="#" class="button button-blue push--left flush--bottom ">Log in to your Great.gov.uk account</a>
+        </div>
+      </div>
     </div>
   </div>
 

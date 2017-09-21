@@ -2,37 +2,393 @@
 {% load staticfiles %}
 {% load trans from i18n %}
 {% block css %}
-    <link href="{% static 'main.css' %}" media="all" rel="stylesheet" />
-    <link href="{% static 'dit-alpha.css' %}" media="all" rel="stylesheet" />
-    <link href="{% static 'gds-forms.css' %}" media="all" rel="stylesheet" />
-    <style>
-         </style>
+<style>
+  .select2-container{
+    background-color: inherit;
+    border: 1px solid #6f777b;
+    display: block;
+    width: 75% !important;
+  }
+
+  .select2-container input{
+    font-family: "Roboto",arial,helvetica,sans-serif;
+    font-size: 16px;
+    padding: 10px;
+  }
+
+  .select2-selection__choice{
+    position: relative;
+    top: -3px;
+  }
+
+  .select2-container{
+    max-width: 560px !important;
+  }
+
+  .select2-search__field{
+    appearance: none;
+    border: none;
+  }
+</style>
 {% endblock %}
 {% block bodyScripts %}
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js"></script>
-  <script src="{% static 'dit-alpha.js' %}"></script>
 {% endblock bodyScripts %}
-{% block head_title %}Report a trade barrier - Step 2 of 8: Who’s involved? {% endblock %}
+{% block head_title %}Report a trade barrier - Step 2 of 6: About the problem{% endblock %}
 {% block sub_header %}{# prevent the subheader from showing on form pages #}{% endblock %}
 {% block css_layout_class %}
 {% endblock %}
 
 {% block content %}
-  <div class="dit-breadcrumb row">
-      <div class="twelve columns">
-        <a href="https://www.great.gov.uk/">Great.gov.uk</a> <span aria-hidden="true">></span> <a href="/">Trade Barriers</a> <span aria-hidden="true">></span> <a href="{% url 'report-barrier' %}">Report a Trade Barrier</a> <span aria-hidden="true">></span> <strong>Step 2 of 8: Who’s involved?</strong>
-      </div>
-  </div>
- <div class="row">
-    <div class="twelve columns">
-      <h1 class="">Step 2 of 8: Who’s involved? </h1>
-      <form action="{% url 'report-barrier-step3' %}" method="post" class="dit-form">
-        {% csrf_token %}
-        <div class="dit-buttons">
-          <a href="{% url 'report-barrier-step1' %}">Back</a>
-          <button class="button button-red" type="submit">Next</button>
+  <div class="outer-container">
+    <div class="dit-breadcrumb grid-container grid-container--inner">
+        <div class="column-full flush--bottom">
+          <a href="https://www.great.gov.uk/">Great.gov.uk</a> <span aria-hidden="true">></span> <a href="/">Trade Barriers</a> <span aria-hidden="true">></span> <a href="{% url 'report-barrier' %}">Report a barrier</a> <span aria-hidden="true">></span> <strong>Step 2 of 6: About the problem</strong>
         </div>
-      </form>
+    </div>
+  </div>
+  <div class="outer-container push--top">
+    <div class="grid-container grid-container--inner">
+      <div class="column-one-third dit-progress-bar">
+        <div class="h4">Report Progress</div>
+        <ol>
+          <li><a href="{% url 'report-barrier-step1' %}">1: About you</a></li>
+          <li class="is-selected">2: About the problem</li>
+          <li>3: Select the type of barrier</li>
+          <li>4: Working out the next steps</li>
+          <li>5: Any other details</li>
+          <li>6: Summary</li>
+        </ol>
+      </div>
+      <div class="column-two-third">
+        <h1 class="h3 push--bottom push--top">Step 2 of 6: About the problem</h1>
+        <form action="{% url 'report-barrier-step3' %}" method="post" class="dit-form">
+          {% csrf_token %}
+
+          <div class="js-saved-success" aria-hidden="true" style="display: none;" tabindex="0">
+            <p class="h3">Thank you</p><p>Your details have been saved.</p>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="dit-step2-product">
+              What is the product or service you want to export?
+            </label>
+            <input class="form-control" id="dit-step2-product" type="text" name="dit[step2][product]">
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="dit-step2-code">
+              Enter your product/commodity code (if known/appropriate)
+              <span class="form-hint">
+                Commodity codes are  part of an internationally standardised system of names and numbers to classify traded products.
+              </span>
+            </label>
+            <input class="form-control" id="dit-step2-code" type="text" name="dit[step2][code]">
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="dit-step2-country">
+              Which country are you trying to export to?
+            </label>
+            <select id="dit-step2-country" name="dit[step2][country]" autocomplete="off" class="form-control select-custom select2-hidden-accessible" data-placeholder="Type to find country" multiple>
+              <option value="afghanistan">Afghanistan</option>
+              <option value="albania">Albania</option>
+              <option value="algeria">Algeria</option>
+              <option value="andorra">Andorra</option>
+              <option value="angola">Angola</option>
+              <option value="antigua-and-barbuda">Antigua and Barbuda</option>
+              <option value="argentina">Argentina</option>
+              <option value="armenia">Armenia</option>
+              <option value="australia">Australia</option>
+              <option value="austria">Austria</option>
+              <option value="azerbaijan">Azerbaijan</option>
+              <option value="bahamas">Bahamas</option>
+              <option value="bahrain">Bahrain</option>
+              <option value="bangladesh">Bangladesh</option>
+              <option value="barbados">Barbados</option>
+              <option value="belarus">Belarus</option>
+              <option value="belgium">Belgium</option>
+              <option value="belize">Belize</option>
+              <option value="benin">Benin</option>
+              <option value="bhutan">Bhutan</option>
+              <option value="bolivia">Bolivia</option>
+              <option value="bosnia-and-herzegovina">Bosnia and Herzegovina</option>
+              <option value="botswana">Botswana</option>
+              <option value="brazil">Brazil</option>
+              <option value="british-virgin-islands">British Virgin Islands</option>
+              <option value="brunei">Brunei</option>
+              <option value="bulgaria">Bulgaria</option>
+              <option value="burkina-faso">Burkina Faso</option>
+              <option value="burma">Burma</option>
+              <option value="burundi">Burundi</option>
+              <option value="cambodia">Cambodia</option>
+              <option value="cameroon">Cameroon</option>
+              <option value="canada">Canada</option>
+              <option value="cape-verde">Cape Verde</option>
+              <option value="central-african-republic">Central African Republic</option>
+              <option value="chad">Chad</option>
+              <option value="chile">Chile</option>
+              <option value="china">China</option>
+              <option value="colombia">Colombia</option>
+              <option value="comoros">Comoros</option>
+              <option value="congo">Congo</option>
+              <option value="costa-rica">Costa Rica</option>
+              <option value="croatia">Croatia</option>
+              <option value="cuba">Cuba</option>
+              <option value="cyprus">Cyprus</option>
+              <option value="czech-republic">Czech Republic</option>
+              <option value="democratic-republic-of-congo">Democratic Republic of Congo</option>
+              <option value="denmark">Denmark</option>
+              <option value="dit-hq">DIT HQ</option>
+              <option value="dominica">Dominica</option>
+              <option value="dominican-republic">Dominican Republic</option>
+              <option value="dso-hq">DSO HQ</option>
+              <option value="east-timor">East Timor</option>
+              <option value="ecuador">Ecuador</option>
+              <option value="egypt">Egypt</option>
+              <option value="el-salvador">El Salvador</option>
+              <option value="equatorial-guinea">Equatorial Guinea</option>
+              <option value="eritrea">Eritrea</option>
+              <option value="estonia">Estonia</option>
+              <option value="ethiopia">Ethiopia</option>
+              <option value="fiji">Fiji</option>
+              <option value="finland">Finland</option>
+              <option value="france">France</option>
+              <option value="gabon">Gabon</option>
+              <option value="georgia">Georgia</option>
+              <option value="germany">Germany</option>
+              <option value="ghana">Ghana</option>
+              <option value="greece">Greece</option>
+              <option value="grenada">Grenada</option>
+              <option value="guatemala">Guatemala</option>
+              <option value="guinea">Guinea</option>
+              <option value="guinea-bissau">Guinea-Bissau</option>
+              <option value="guyana">Guyana</option>
+              <option value="haiti">Haiti</option>
+              <option value="honduras">Honduras</option>
+              <option value="hong-kong">Hong Kong</option>
+              <option value="hungary">Hungary</option>
+              <option value="iceland">Iceland</option>
+              <option value="india">India</option>
+              <option value="indonesia">Indonesia</option>
+              <option value="iran">Iran</option>
+              <option value="iraq">Iraq</option>
+              <option value="ireland">Ireland</option>
+              <option value="israel">Israel</option>
+              <option value="italy">Italy</option>
+              <option value="ivory-coast">Ivory Coast</option>
+              <option value="jamaica">Jamaica</option>
+              <option value="japan">Japan</option>
+              <option value="jordan">Jordan</option>
+              <option value="kazakhstan">Kazakhstan</option>
+              <option value="kenya">Kenya</option>
+              <option value="kiribati">Kiribati</option>
+              <option value="kosovo">Kosovo</option>
+              <option value="kuwait">Kuwait</option>
+              <option value="kyrgyzstan">Kyrgyzstan</option>
+              <option value="laos">Laos</option>
+              <option value="latvia">Latvia</option>
+              <option value="lebanon">Lebanon</option>
+              <option value="lesotho">Lesotho</option>
+              <option value="liberia">Liberia</option>
+              <option value="libya">Libya</option>
+              <option value="liechtenstein">Liechtenstein</option>
+              <option value="lithuania">Lithuania</option>
+              <option value="luxembourg">Luxembourg</option>
+              <option value="macao">Macao</option>
+              <option value="macedonia">Macedonia</option>
+              <option value="madagascar">Madagascar</option>
+              <option value="malawi">Malawi</option>
+              <option value="malaysia">Malaysia</option>
+              <option value="maldives">Maldives</option>
+              <option value="mali">Mali</option>
+              <option value="malta">Malta</option>
+              <option value="marshall-islands">Marshall Islands</option>
+              <option value="mauritania">Mauritania</option>
+              <option value="mauritius">Mauritius</option>
+              <option value="mexico">Mexico</option>
+              <option value="micronesia">Micronesia</option>
+              <option value="moldova">Moldova</option>
+              <option value="mongolia">Mongolia</option>
+              <option value="montenegro">Montenegro</option>
+              <option value="morocco">Morocco</option>
+              <option value="mozambique">Mozambique</option>
+              <option value="namibia">Namibia</option>
+              <option value="nato">NATO</option>
+              <option value="nauru">Nauru</option>
+              <option value="nepal">Nepal</option>
+              <option value="netherlands">Netherlands</option>
+              <option value="new-zealand">New Zealand</option>
+              <option value="nicaragua">Nicaragua</option>
+              <option value="niger">Niger</option>
+              <option value="nigeria">Nigeria</option>
+              <option value="norway">Norway</option>
+              <option value="oman">Oman</option>
+              <option value="pakistan">Pakistan</option>
+              <option value="palau">Palau</option>
+              <option value="palestinian-territories">Palestinian Territories</option>
+              <option value="panama">Panama</option>
+              <option value="papua-new-guinea">Papua New Guinea</option>
+              <option value="paraguay">Paraguay</option>
+              <option value="peru">Peru</option>
+              <option value="the-philippines">Philippines</option>
+              <option value="poland">Poland</option>
+              <option value="portugal">Portugal</option>
+              <option value="qatar">Qatar</option>
+              <option value="romania">Romania</option>
+              <option value="russia">Russia</option>
+              <option value="rwanda">Rwanda</option>
+              <option value="samoa">Samoa</option>
+              <option value="san-marino">San Marino</option>
+              <option value="sao-tome-and-principe">Sao Tome and Principe</option>
+              <option value="saudi-arabia">Saudi Arabia</option>
+              <option value="senegal">Senegal</option>
+              <option value="serbia">Serbia</option>
+              <option value="seychelles">Seychelles</option>
+              <option value="sierra-leone">Sierra Leone</option>
+              <option value="singapore">Singapore</option>
+              <option value="slovakia">Slovakia</option>
+              <option value="slovenia">Slovenia</option>
+              <option value="solomen-islands">Solomon Islands</option>
+              <option value="somalia">Somalia</option>
+              <option value="south-africa">South Africa</option>
+              <option value="south-korea">South Korea</option>
+              <option value="south-sudan">South Sudan</option>
+              <option value="spain">Spain</option>
+              <option value="sri-lanka">Sri Lanka</option>
+              <option value="st-kitts-and-nevis">St Kitts and Nevis</option>
+              <option value="st-lucia">St Lucia</option>
+              <option value="st-vincent">St Vincent</option>
+              <option value="sudan">Sudan</option>
+              <option value="surinam">Surinam</option>
+              <option value="swaziland">Swaziland</option>
+              <option value="sweden">Sweden</option>
+              <option value="switzerland">Switzerland</option>
+              <option value="taiwan">Taiwan</option>
+              <option value="tajikistan">Tajikistan</option>
+              <option value="tanzania">Tanzania</option>
+              <option value="thailand">Thailand</option>
+              <option value="the-gambia">The Gambia</option>
+              <option value="togo">Togo</option>
+              <option value="tonga">Tonga</option>
+              <option value="trinidad-and-tobago">Trinidad and Tobago</option>
+              <option value="tunisia">Tunisia</option>
+              <option value="turkey">Turkey</option>
+              <option value="turkmenistan">Turkmenistan</option>
+              <option value="tuvalu">Tuvalu</option>
+              <option value="the-united-arab-emirates">UAE</option>
+              <option value="uganda">Uganda</option>
+              <option value="ukraine">Ukraine</option>
+              <option value="ukrep">UKREP</option>
+              <option value="uruguay">Uruguay</option>
+              <option value="the-usa">USA</option>
+              <option value="uzbekistan">Uzbekistan</option>
+              <option value="vanuatu">Vanuatu</option>
+              <option value="vatican-city">Vatican City</option>
+              <option value="venezuela">Venezuela</option>
+              <option value="vietnam">Vietnam</option>
+              <option value="zambia">Zambia</option>
+              <option value="zimbabwe">Zimbabwe</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="dit-step2-description">
+              Provide a brief description of the problem, including:
+              <span class="form-hint">
+                - what is obstructing your export<br>
+                - any explanation you've been given
+              </span>
+            </label>
+            <textarea class="form-control" id="dit-step2-description" name="dit[step2][description]" rows="10" cols="5"></textarea>
+          </div>
+
+          <div class="form-group">
+            <fieldset>
+
+              <legend>
+                <span class="form-label" title="export-yn">
+                  Do you export this product/service to other countries?
+                </span>
+              </legend>
+
+              <div class="multiple-choice">
+                <input id="dit-step4-export-yn-yes" name="dit[step4][export_yn]" value="Yes" type="radio">
+                <label for="dit-step4-export-yn-yes">Yes</label>
+              </div>
+
+              <div class="multiple-choice">
+                <input id="dit-step4-export-yn-no" name="dit[step4][export_yn]" value="No" type="radio">
+                <label for="dit-step4-export-yn-no">No</label>
+              </div>
+            </fieldset>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="dit-step2-export-to-other-countries" aria-labelledby="export-yn">
+              If yes, have you experienced this problem in your other export markets?
+              <span class="form-hint">Provide details of problem, explanations given, and any steps taken to resolve the problem.</span>
+            </label>
+            <textarea class="form-control" id="dit-step2-export-to-other-countries" name="dit[step2][export_to_other_countries]" rows="10" cols="5"></textarea>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="dit-step2-impact">
+              What impact do you expect this to have on your business, including:
+              <span class="form-hint">
+                - Predicted financial value of loss of export sales (5 years)<br>
+                - Value of your company’s current total sales (1 year)
+              </span>
+            </label>
+            <textarea class="form-control" id="dit-step2-impact" name="dit[step2][impact]" rows="10" cols="5"></textarea>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="dit-step2-duration">
+              What's the duration of the problem, including:
+              <span class="form-hint">
+                - When it started<br>
+                - If it's a one-off or an ongoing problem
+              </span>
+            </label>
+            <textarea class="form-control" id="dit-step2-duration" name="dit[step2][duration]" rows="5" cols="10"></textarea>
+          </div>
+
+          <div class="form-group">
+            <fieldset class="inline">
+
+              <legend class="form-label">
+                  Are any other companies affected?
+              </legend>
+
+              <div class="multiple-choice">
+                <input id="dit-step2-others-affected-yes" name="dit[step2][others_affected]" value="Yes" type="radio">
+                <label for="dit-step2-others-affected-yes">Yes</label>
+              </div>
+              <div class="multiple-choice">
+                <input id="dit-step2-others-affected-no" name="dit[step2][others_affected]" value="No" type="radio">
+                <label for="dit-step2-others-affected-no">No</label>
+              </div>
+              <div class="multiple-choice">
+                <input id="dit-step2-others-affected-dont-know" name="dit[step2][others_affected]" value="Don't Know" type="radio">
+                <label for="dit-step2-others-affected-dont-know">Don't know</label>
+              </div>
+
+            </fieldset>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label form-label--light" for="dit-step2-others-affected-details">
+              If yes, please describe below
+            </label>
+            <textarea class="form-control" id="dit-step2-others-affected-details" name="dit[step2][others_affected_details]" rows="" cols=""></textarea>
+          </div>
+
+          <div class="dit-buttons">
+            <a href="{% url 'report-barrier-step1' %}" class="button button-transparent-blue button-border">Back</a>
+            <button class="button button-blue" type="submit">Next</button>
+            <button class="button button-transparent-blue button-border float--right js-save-button" type="submit">Save Progress</button>
+          </div>
+        </form>
+      </div>
     </div>
   </div>
 
