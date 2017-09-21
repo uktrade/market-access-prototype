@@ -1,0 +1,44 @@
+{% extends './govuk_layout.html' %}
+{% load staticfiles %}
+{% load trans from i18n %}
+{% block css %}
+    <style>
+    </style>
+{% endblock %}
+{% block head_title %}Request a fast track response{% endblock %}
+{% block sub_header %}{# prevent the subheader from showing on form pages #}{% endblock %}
+{% block hero_title %}
+Get seen by motivated overseas buyers
+{% endblock %}
+
+{% block css_layout_class %}
+tr-home
+{% endblock %}
+
+{% block content %}
+  <div class="outer-container">
+    <div class="dit-breadcrumb grid-container grid-container--inner">
+        <div class="column-full flush--bottom">
+          <a href="https://www.great.gov.uk/">Great.gov.uk</a> <span aria-hidden="true">></span> <a href="/">Trade Barriers</a> <span aria-hidden="true">></span> <strong>Request a fast track response</strong>
+        </div>
+    </div>
+  </div>
+
+  <div class="outer-container">
+    <div class="grid-container grid-container--inner">
+      <div class="column-one-half" style="border-right: 1px solid #979797;">
+        <h2 class="h3">How to request a fast track response</h2>
+        <p>Call this number: 0800 123 4567</p>
+
+      </div>
+      <div class="column-one-half">
+        <p>Only make a fast track request if:</p>
+        <p>
+          - you are facing significant and imminent financial or other loss<br>
+          - you need action to be taken within the next 48 hours
+        </p>
+      </div>
+    </div>
+  </div>
+
+{% endblock %}
