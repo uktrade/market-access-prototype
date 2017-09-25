@@ -13,7 +13,7 @@ from django.conf.urls import url  # , include
 from .views import (
     HomeView,
     ReportBarrierView, ReportBarrierShowCurrentBarriersView, ReportBarrierFormView,
-    BarrierDetailView, BarrierSubscribeView, BarriersByCountryView,
+    BarrierDetailView, BarrierDetailStaticView, BarrierSubscribeView, BarriersByCountryView,
     ReportBarrierStep1View, ReportBarrierStep2View, ReportBarrierStep3View,
     ReportBarrierStep4View, ReportBarrierStep5View, ReportBarrierStep6View,
     ReportBarrierRegisterView,
@@ -30,6 +30,10 @@ urlpatterns = [
     url(r'^barrier/subscribe',
         BarrierSubscribeView.as_view(),
         name='barrier-subscribe'
+    ),
+    url(r'^barriers/detail',
+        BarrierDetailStaticView.as_view(),
+        name='barrier-detail-static'
     ),
     url(r'^barriers/(?P<pk>\d+)',
         BarrierDetailView.as_view(),
