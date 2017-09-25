@@ -240,6 +240,10 @@ main a:hover{
   text-decoration: underline;
 }
 
+.dit-header__nav-child-list a[aria-current="true"]{
+  text-decoration: underline;
+}
+
 @media screen and (min-width: 768px){
   .dit-header__nav-child-list a{
     padding: 40px 30px;
