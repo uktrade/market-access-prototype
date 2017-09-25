@@ -39,9 +39,6 @@ tr-home
 
         <h3 class="h4 push--top"><strong>Barriers affecting UK exporters</strong></h3>
         <ul class="" data-module="Accordion">
-            {% for object in object_list %}
-            <li><p><a href="{% url 'barrier-detail-static' %}" aria-labelledby="accordion-button-{{ id }}">More detail</a></p></li>
-            {% endfor %}
             {% for i in "xxxxx" %}
               {% include 'components/barrier-detail-accordion.html' with id=forloop.counter0 title="Lorem ipsum dolor sit amet" %}
             {% endfor %}
