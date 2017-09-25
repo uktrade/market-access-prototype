@@ -98,7 +98,16 @@ class BarriersByCountryView(ListView):
 
 class PostGetTemplateView(TemplateView):
     def post(self, *args, **kwargs):
+        if 'dit[step1][type]' in self.request.POST:
+            if self.request.POST['dit[step1][type]'] == 'I work for a trade association':
+                self.request.session['is_trade_association'] = True
         return self.get(*args, **kwargs)
+
+    def get_context_data(self, *args, **kwargs):
+        context = super(PostGetTemplateView, self).get_context_data(*args, **kwargs)
+        if 'is_trade_association' in self.request.session:
+            context['is_trade_association'] = self.request.session['is_trade_association']
+        return context
 
 class BarrierDetailView(DetailView):
     model = MarketAccessBarrier
