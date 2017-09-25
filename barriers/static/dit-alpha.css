@@ -462,6 +462,7 @@ main a:hover{
 /**
  * Forms
  */
+
 @media screen and (min-width: 768px){
   .dit-inline-form-fields{
     align-items: end;
@@ -510,6 +511,7 @@ main a:hover{
 .dit-inline-form-fields input,
 .dit-inline-form-fields select,
 .dit-inline-form-fields textarea{
+  -webkit-appearance: none;
   background-color: #fff;
   border: none;
   color: #333;
