@@ -113,6 +113,10 @@ class BarrierDetailView(DetailView):
     model = MarketAccessBarrier
     template_name = 'barrier-detail.html'
 
+class BarrierDetailStaticView(TemplateView):
+    model = MarketAccessBarrier
+    template_name = 'barrier-detail-static.html'
+
 class BarrierSubscribeView(TemplateView):
     model = MarketAccessBarrier
     template_name = 'barrier-subscribe.html'

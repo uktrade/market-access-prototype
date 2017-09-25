@@ -1,0 +1,44 @@
+<li class="grid-container grid-container--inner" style="border-bottom: 1px solid #E8E8E8; margin-bottom: 20px;">
+              <div class="column-two-third">
+
+                <div class="dit-summary-section dit-accordion" style="border:none;">
+                  <button type="button"
+    								class="dit-accordion__title h4"
+    								id="accordion-button-{{ id }}"
+    								aria-selected="false"
+    								role="tab"
+    								tabindex="0"
+    								aria-controls="accordion{{ id }}"
+    								aria-expanded="false"
+    						   >
+    						   <span class="dit-accordion__title-wording">{{ title }}</span><br>
+                    <span class="font-small dit-accordion__toggle--show">Country: Spain</span>
+    								<span class="dit-accordion__btn" aria-hidden="true">
+    									<span class="dit-accordion__toggle--show">+</span>
+    									<span class="dit-accordion__toggle--hide">-</span>
+    								</span>
+                  </button>
+                  <div
+    								id="accordion{{ id }}"
+    								class="dit-accordion__body"
+    								aria-labelledby="accordion-button-{{ id }}"
+    								aria-hidden="true"
+    								role="tabpanel"
+    							>
+      							<div class="dit-accordion__inner">
+                      <p>Country: Spain<br>
+                        Sector: Pharmaceuticals<br>
+                        Barrier type: Burdensome customs procedures</p>
+
+                      <p>We are getting reports that the Venezuelan Health Ministry is discussing
+                      a plan to force overseas exporters of medicinal drugs to have them tested in
+                      Venezuelan laboratories before they can be sold in shops. </p>
+                      <p><a href="{% url 'barrier-detail-static' %}" aria-labelledby="accordion-button-{{ id }}">More detail</a></p>
+      							</div>
+                </div>
+                </div>
+              </div>
+              <div class="column-one-third">
+                <a href="{% url 'report-barrier' %}" class="button button-red" aria-labelledby="accordion-button-{{ id }}">Make a report</a>
+              </div>
+            </li>

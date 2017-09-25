@@ -1,0 +1,53 @@
+{% extends './govuk_layout.html' %}
+{% load staticfiles %}
+{% load trans from i18n %}
+{% block css %}
+{% endblock %}
+{% block head_title %}{% trans "Trade Barrier Detail" %}{% endblock %}
+{% block sub_header %}{# prevent the subheader from showing on form pages #}{% endblock %}
+{% block hero_title %}
+Get seen by motivated overseas buyers
+{% endblock %}
+
+{% block css_layout_class %}
+tr-home
+{% endblock %}
+
+{% block content %}
+  <div class="outer-container">
+    <div class="dit-breadcrumb grid-container grid-container--inner">
+        <div class="column-full flush--bottom">
+          <a href="https://www.great.gov.uk/">Great.gov.uk</a> <span aria-hidden="true">></span> <a href="/">Trade Barriers</a> <span aria-hidden="true">></span> <a href="{% url 'barriers-by-country' country="Spain" %}">{% trans "Existing Trade Barriers in Spain" %}</a> <span aria-hidden="true">></span> <strong>{% trans "Trade barrier detail" %}</strong>
+        </div>
+    </div>
+  </div>
+  <div class="outer-container">
+    <div class="grid-container grid-container--inner">
+      <div class="column-full">
+        <h1 class="h3">{% trans "Trade barrier detail" %}</h1>
+      </div>
+      <div class="column-two-third">
+          <h2 id="barrier-title" class="h3">Lorem ipsum dolor sit amet</h2>
+          <p><strong>WTO symbol:</strong> <a href="#">Lorem ipsum dolor sit amet</a></p>
+          <p><strong>Barrier type:</strong> Lorem ipsum dolor sit amet</p>
+          <p><strong>Notifying member:</strong> Lorem ipsum dolor sit amet</p>
+          <p><strong>Distribution date:</strong> Lorem ipsum dolor sit amet</p>
+          <p class="h4">Lorem ipsum dolor sit amet</p>
+          <ul class="list">
+              <li class="list-item">Products affected: Lorem ipsum dolor sit amet</li>
+              <li class="list-item">Objectives: Lorem ipsum dolor sit amet</li>
+              <li class="list-item">Regions affected (according to reporting country): Lorem ipsum dolor sit amet</li>
+              <li class="list-item">Comments due date: Lorem ipsum dolor sit amet</li>
+              <li class="list-item">Notification type: Lorem ipsum dolor sit amet</li>
+              <li class="list-item">Documents: Lorem ipsum dolor sit amet</li>
+          </ul>
+          <p>&nbsp;</p>
+          <p><a href="{% url 'barriers-by-country' country="Spain" %}" class="button button-white button-border">Back to search results</a></p>
+      </div>
+      <div class="column-one-third">
+          <p><a href="{% url 'report-barrier' %}" class="button button-red" aria-labelledby="barrier-title">Make a report</a></p>
+      </div>
+    </div>
+  </div>
+
+  {% endblock %}
