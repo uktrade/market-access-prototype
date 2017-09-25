@@ -101,6 +101,9 @@ class PostGetTemplateView(TemplateView):
         if 'dit[step1][type]' in self.request.POST:
             if self.request.POST['dit[step1][type]'] == 'I work for a trade association':
                 self.request.session['is_trade_association'] = True
+            else:
+                # Allow it to be turned off again
+                self.request.session['is_trade_association'] = False
         return self.get(*args, **kwargs)
 
     def get_context_data(self, *args, **kwargs):
