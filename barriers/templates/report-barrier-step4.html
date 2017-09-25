@@ -5,7 +5,7 @@
 {% endblock %}
 {% block bodyScripts %}
 {% endblock bodyScripts %}
-{% block head_title %}Report a trade barrier - Step 4 of 6: Working out the next steps{% endblock %}
+{% block head_title %}Report a trade barrier - Section 4 of 6: Working out the next steps{% endblock %}
 {% block sub_header %}{# prevent the subheader from showing on form pages #}{% endblock %}
 {% block css_layout_class %}
 {% endblock %}
@@ -14,19 +14,19 @@
   <div class="outer-container">
     <div class="dit-breadcrumb grid-container grid-container--inner">
         <div class="column-full flush--bottom">
-        <a href="https://www.great.gov.uk/">Great.gov.uk</a> <span aria-hidden="true">></span> <a href="/">Trade Barriers</a> <span aria-hidden="true">></span> <a href="{% url 'report-barrier' %}">Report a barrier</a> <span aria-hidden="true">></span> <strong>Step 4 of 6: Working out the next steps</strong>
+        <a href="https://www.great.gov.uk/">Great.gov.uk</a> <span aria-hidden="true">></span> <a href="/">Trade Barriers</a> <span aria-hidden="true">></span> <a href="{% url 'report-barrier' %}">Report a barrier</a> <span aria-hidden="true">></span> <strong>Section 4 of 6: Working out the next steps</strong>
       </div>
     </div>
   </div>
   <div class="outer-container push--top">
     <div class="grid-container grid-container--inner">
       <div class="column-one-third dit-progress-bar">
-        <div class="h4">Report Progress</div>
+        <div class="h4">Section</div>
         <ol>
-          <li><a href="{% url 'report-barrier-step1' %}">Step 1: About you</a></li>
-          <li><a href="{% url 'report-barrier-step2' %}">Step 2: About the problem</a></li>
-          <li><a href="{% url 'report-barrier-step3' %}">Step 3: Select the type of barrier</a></li>
-          <li class="is-selected">Step 4: Working out the next steps</li>
+          <li><a href="{% url 'report-barrier-step1' %}">1: About you</a></li>
+          <li><a href="{% url 'report-barrier-step2' %}">2: About the problem</a></li>
+          <li><a href="{% url 'report-barrier-step3' %}">3: Select the type of barrier</a></li>
+          <li class="is-selected">4: Working out the next steps</li>
           <li>5: Any other details</li>
           <li>6: Summary</li>
         </ol>
@@ -36,9 +36,7 @@
         <form action="{% url 'report-barrier-step5' %}" method="post" class="dit-form">
           {% csrf_token %}
 
-          <div class="js-saved-success" aria-hidden="true" style="display: none;" tabindex="0">
-            <p class="h3">Thank you</p><p>Your details have been saved.</p>
-          </div>
+          {% include 'components/form-validation.html' %}
 
           <div class="form-group">
             <label class="form-label" for="dit-step4-steps-taken">
@@ -56,7 +54,8 @@
             <label class="form-label" for="dit-step4-outcome">
               What outcome are you looking for?
             </label>
-            <textarea class="form-control" id="dit-step4-outcome" name="dit[step4][outcome]" rows="5" cols="10"></textarea>
+            <span class="error-message hidden" aria-hidden="true">Enter the outcome you are looking for</span>
+            <textarea class="form-control" id="dit-step4-outcome" name="dit[step4][outcome]" rows="5" cols="10" required></textarea>
           </div>
 
           <div class="form-group">
@@ -66,16 +65,18 @@
                 <span class="form-label">What kind of UK Government support would you like?</span>
               </legend>
 
+              <span class="error-message hidden" aria-hidden="true">Select the kind of UK Government support you would like</span>
+
               <div class="multiple-choice">
-                <input id="dit-step4-support-1" name="dit[step4][support]" value="None - this is for your information only" type="radio">
+                <input id="dit-step4-support-1" name="dit[step4][support]" value="None - this is for your information only" type="radio" required>
                 <label for="dit-step4-support-1">None - this is for your information only</label>
               </div>
               <div class="multiple-choice">
-                <input id="dit-step4-support-2" name="dit[step4][support]" value="Local engagement only with UK Government officials in the country I am trying to export to" type="radio">
+                <input id="dit-step4-support-2" name="dit[step4][support]" value="Local engagement only with UK Government officials in the country I am trying to export to" type="radio" required>
                 <label for="dit-step4-support-2">Local engagement only with UK Government officials in the country I am trying to export to</label>
               </div>
               <div class="multiple-choice">
-                <input id="dit-step4-support-3" name="dit[step4][support]" value="Broader UK Government involvement" type="radio">
+                <input id="dit-step4-support-3" name="dit[step4][support]" value="Broader UK Government involvement" type="radio" required>
                 <label for="dit-step4-support-3">Broader UK Government involvement</label>
               </div>
 
@@ -101,18 +102,20 @@
                 </span>
               </legend>
 
+              <span class="error-message hidden" aria-hidden="true">Select whether or not you are happy for us to publish a summary of your problem</span>
+
               <div class="multiple-choice">
-                <input id="dit-step4-publish-yes" name="dit[step4][publish]" value="Yes" type="radio">
+                <input id="dit-step4-publish-yes" name="dit[step4][publish]" value="Yes" type="radio" required>
                 <label for="dit-step4-publish-yes">Yes</label>
               </div>
 
               <div class="multiple-choice">
-                <input id="dit-step4-publish-no" name="dit[step4][publish]" value="No" type="radio">
+                <input id="dit-step4-publish-no" name="dit[step4][publish]" value="No" type="radio" required>
                 <label for="dit-step4-publish-no">No</label>
               </div>
 
               <div class="multiple-choice">
-                <input id="dit-step4-publish-maybe" name="dit[step4][publish]" value="Maybe, following consultation with me" type="radio">
+                <input id="dit-step4-publish-maybe" name="dit[step4][publish]" value="Maybe, following consultation with me" type="radio" required>
                 <label for="dit-step4-publish-maybe">Maybe, following consultation with me</label>
               </div>
 

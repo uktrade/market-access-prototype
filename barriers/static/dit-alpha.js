@@ -5880,6 +5880,7 @@ ukti.ScrollTo = (function($) {
 
 })();
 
+// Custom checkboxes
 var selectCustom = $('.select-custom');
 if (selectCustom.length) {
 
@@ -5916,11 +5917,18 @@ if (selectCustom.length) {
 	});
 }
 
+// Quick and simple function to stop Firefox from remembering checkbox/radio buttons after a refresh
+// because for alpha we do not need that
+$(document).ready(function(){
+  $(':radio:checked').prop('checked', false);
+  $(':checkbox:checked').prop('checked', false);
+});
+
 // Quick and simple toggle to show/hide the advanced filters
 $(document).ready(function(){
 
   var $button = $('.js-dit-toggle-filters');
-  var $filters = $('.dit-input-field--advanced')
+  var $filters = $('.dit-input-field--advanced');
 
   $button.on('click', function(){
     if($button.attr('aria-pressed') == 'false'){
@@ -5937,6 +5945,55 @@ $(document).ready(function(){
   });
 
 });
+
+// Quick and simple toggle to show/hide the companies house list
+$(document).ready(function(){
+  var $button = $('.js-companies-house');
+  var $input = $('.js-companies-house-input');
+  var $list = $('.js-companies-house-list');
+
+  $button.on('click', function(){
+
+    if($input.val().length === 0){
+      $button.closest('.form-group').addClass('form-group-error');
+      $button.closest('.form-group').find('.error-message').removeClass('hidden').attr('aria-hidden', 'false');
+
+      $button.attr('aria-pressed', 'false');
+      $list.attr('aria-hidden', 'true');
+      $list.addClass('hidden');
+      $list.find('input').removeAttr('required');
+    } else if($button.attr('aria-pressed') == 'false' && $input.val().length > 0){
+      $button.closest('.form-group').removeClass('form-group-error');
+      $button.closest('.form-group').find('.error-message').addClass('hidden').attr('aria-hidden', 'true');
+
+      $button.attr('aria-pressed', 'true');
+      $list.attr('aria-hidden', 'false');
+      $list.removeClass('hidden');
+      $list.find('input').attr('required', 'required');
+    }
+  });
+});
+
+
+// Quick and simple toggle to show/hide the companies house list
+$(document).ready(function(){
+  var $checkbox = $('.js-dit-step1-no-companies-house');
+  var $field = $('.js-company-address');
+
+  $checkbox.on('change', function(){
+    if($checkbox.is(':checked')){
+      $field.attr('aria-hidden', 'false');
+      $field.removeClass('hidden');
+      $field.find('input').attr('required', 'required');
+    } else{
+      $field.attr('aria-hidden', 'true');
+      $field.addClass('hidden');
+      $field.find('input').removeAttr('required');
+    }
+  });
+
+});
+
 
 // Quick and simple toggle to show/hide the header's drop down menu
 $(document).ready(function(){
@@ -6015,14 +6072,14 @@ $(document).ready(function(){
   var $saveButton = $('.js-save-button');
   var $form = $('.dit-form');
 
-  /*
+
   // Commented out as it isn't 100% working yet
   if (typeof localStorage !== 'undefined') {
 
-    loadSavedData();
+    // loadSavedData();
 
     $saveButton.click(function(e){
-      saveFunctions();
+      // saveFunctions();
       e.preventDefault();
 
       // Show a hidden success message and focus the user there
@@ -6030,11 +6087,10 @@ $(document).ready(function(){
     });
 
     $form.on('submit', function(e){
-      saveFunctions();
+      // saveFunctions();
     });
 
   }
-  */
 
   // Loop through fields on the page and save them
   function saveFunctions(){
@@ -6075,7 +6131,7 @@ $(document).ready(function(){
       $displays.each(function(){
         var savedValue = localStorage.getItem($(this).attr('data-name'));
 
-        if(savedValue !== null && typeof savedValue !== 'undefined' && savedValue !== 'undefined' && savedVale.length > 0){
+        if(savedValue !== null && typeof savedValue !== 'undefined' && savedValue !== 'undefined' && savedValue.length > 0){
           $(this).html(savedValue);
         }
       });
@@ -6085,8 +6141,142 @@ $(document).ready(function(){
 });
 
 
+
+
 // Create a global object we can reference
 window.DITAlpha = window.DITAlpha || {};
+
+(function ($) {
+
+	"use strict";
+
+	window.DITAlpha.FormValidation = {
+
+  	$form: $('.dit-form'),
+
+
+  	init: function(){
+    	var self = this;
+
+    	self.$form.attr('novalidate', 'true');
+
+      self.$form.submit(function(e){
+        self.checkForErrors(e);
+      });
+
+      self.$form.find('.required-checkboxes').find('[type="checkbox"]').on('change', function(){
+        self.swapAroundCheckboxProps($(this));
+      });
+
+    },
+
+    /**
+     * On submit we want to check to see if our form is
+     * valid. `Valid` means, does it pass basic HTML5 rules
+     * like `required` fields not being NULL or number fields
+     * not exceeding their `max` value.
+     *
+     * If the form is not valid we don't submit it. Instead
+     * we loop through the separate form fields showing/unshowing
+     * the relevant inline error message.
+     *
+     * We also show a global error message which could sit at the top of the form or above the submit button
+     */
+    checkForErrors: function(e){
+      var self = this,
+          $field = {},
+          $globalError = self.$form.find('.error-summary'),
+          errors = [],
+          errorsHTML = [];
+
+      // Assume we're valid and hide all errors
+      self.$form.find('.error-message').addClass('hidden').attr('aria-hidden', 'true');
+      $globalError.addClass('hidden').attr('aria-hidden', 'true');
+      self.$form.find('.form-group-error').removeClass('form-group-error');
+      self.$form.find('.form-control-error').removeClass('form-control-error');
+      $globalError.find('ul').html('');
+
+      // Now check the form and if it isn't valid then show them
+      if(self.$form[0].checkValidity() !== true){
+
+        // Stop form from submitting
+        e.preventDefault();
+
+        // Unhide the main error message
+        $globalError.removeClass('hidden').attr('aria-hidden', 'false');
+
+        // Unhide inline error message for individual fields
+        // Maybe this needs more thought for #a11y requirements
+        self.$form.find('input, select, textarea').each(function() {
+
+          var newError;
+
+          $field = $(this);
+
+          newError = $field.closest('.form-group').find('.error-message').text();
+
+          if($field[0].checkValidity() !== true){
+            $field.addClass('form-control-error');
+            $field.closest('.form-group').addClass('form-group-error')
+              .find('.error-message')
+              .removeClass('hidden').attr('aria-hidden', 'false');
+
+            if(errors.indexOf(newError) === -1){
+              errors.push(newError);
+              errorsHTML.push('<li><a href="#' + $field.attr('id') + '">' + newError + '</a></li>');
+            }
+          }
+        });
+
+        // Send focus to the error summary so users know an error has occurred
+        $globalError.focus();
+        $globalError.find('ul').html(errorsHTML);
+
+
+        //
+        self.clickToFocusOnError();
+
+      }
+
+    },
+
+    clickToFocusOnError: function(){
+      var self = this;
+
+      self.$form.find('.error-summary-list').find('a').on('click', function(e){
+        e.preventDefault();
+
+        $($(this).attr('href')).focus();
+      });
+    },
+
+    /**
+     * Swap around the required attribute of the checkbox
+     * to the active checkbox with the same name attribute value
+     * This will trick our HTML5 validation sufficiently.
+     *
+     * This would work for a group of any inputs with a little
+     * work.
+     */
+    swapAroundCheckboxProps: function($checkbox){
+
+      var currentName = $checkbox.attr('name');
+      var $group = $('[name="' + currentName + '"]');
+
+      // Set/unset the required attribute accordingly
+      $group.prop('required', true);
+      if($group.is(":checked")){
+        $group.prop('required', false);
+      }
+    }
+
+	};
+
+	window.DITAlpha.FormValidation.init();
+
+}(jQuery));
+
+// Accordion
 
 (function ($) {
 

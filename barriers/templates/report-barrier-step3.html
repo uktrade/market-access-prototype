@@ -5,7 +5,7 @@
 {% endblock %}
 {% block bodyScripts %}
 {% endblock bodyScripts %}
-{% block head_title %}Report a trade barrier - Step 3 of 6: Select the type of barrier{% endblock %}
+{% block head_title %}Report a trade barrier - Section 3 of 6: Select the type of barrier{% endblock %}
 {% block sub_header %}{# prevent the subheader from showing on form pages #}{% endblock %}
 {% block css_layout_class %}
 {% endblock %}
@@ -14,46 +14,46 @@
   <div class="outer-container">
     <div class="dit-breadcrumb grid-container grid-container--inner">
         <div class="column-full flush--bottom">
-        <a href="https://www.great.gov.uk/">Great.gov.uk</a> <span aria-hidden="true">></span> <a href="/">Trade Barriers</a> <span aria-hidden="true">></span> <a href="{% url 'report-barrier' %}">Report a barrier</a> <span aria-hidden="true">></span> <strong>Step 3 of 6: Select the type of barrier</strong>
+        <a href="https://www.great.gov.uk/">Great.gov.uk</a> <span aria-hidden="true">></span> <a href="/">Trade Barriers</a> <span aria-hidden="true">></span> <a href="{% url 'report-barrier' %}">Report a barrier</a> <span aria-hidden="true">></span> <strong>Section 3 of 6: Select the type of barrier</strong>
       </div>
     </div>
   </div>
   <div class="outer-container push--top">
     <div class="grid-container grid-container--inner">
       <div class="column-one-third dit-progress-bar">
-        <div class="h4">Report Progress</div>
+        <div class="h4">Section</div>
         <ol>
-          <li><a href="{% url 'report-barrier-step1' %}">1: About you</a></li>
-          <li><a href="{% url 'report-barrier-step2' %}">2: About the problem</a></li>
-          <li class="is-selected">3: Select the type of barrier</li>
-          <li>4: Working out the next steps</li>
-          <li>5: Any other details</li>
-          <li>6: Summary</li>
+          <li><a href="{% url 'report-barrier-step1' %}">1 About you</a></li>
+          <li><a href="{% url 'report-barrier-step2' %}">2 About the problem</a></li>
+          <li class="is-selected">3 Select the type of barrier</li>
+          <li>4 Working out the next steps</li>
+          <li>5 Any other details</li>
+          <li>6 Summary</li>
         </ol>
       </div>
       <div class="column-two-third">
-        <h1 class="h3 push--bottom push--top">Step 3 of 6: Select the type(s) of barrier</h1>
+        <h1 class="h3 push--bottom push--top">Section 3 of 6: Select the type(s) of barrier</h1>
         <form action="{% url 'report-barrier-step4' %}" method="post" class="dit-form">
 
           {% csrf_token %}
 
-          <div class="js-saved-success" aria-hidden="true" style="display: none;" tabindex="0">
-            <p class="h3">Thank you</p><p>Your details have been saved.</p>
-          </div>
+          {% include 'components/form-validation.html' %}
 
-          <div class="form-group push--top">
+          <div class="form-group push--top required-checkboxes">
             <fieldset>
 
               <legend>
                 <h2 class="form-label">
-                  Choose the type of barrier which best describes your problem.
+                  Choose the type(s) of barrier which best describes your problem.
                   <br><br>
                   If you are not sure, or you feel the barrier is not described here, please/select Other/Not Sure.
                 </h2>
               </legend>
 
+              <span class="error-message hidden" aria-hidden="true">Choose a type of barrier</span>
+
               <div class="multiple-choice push--top">
-                <input id="dit-step3-1" name="dit[step3][choice]" value="Tariffs and taxes imposed to protect, or favour, local producers" type="checkbox">
+                <input id="dit-step3-1" name="dit[step3][choice]" value="Tariffs and taxes imposed to protect, or favour, local producers" type="checkbox" required>
                 <label for="dit-step3-1" class="form-label">
                   1) Tariffs and taxes imposed to protect, or favour, local producers
                   <span class="form-hint">
@@ -62,7 +62,7 @@
                 </label>
               </div>
               <div class="multiple-choice">
-                <input id="dit-step3-2" name="dit[step3][choice]" value="Unfair use of state help or subsidies" type="checkbox">
+                <input id="dit-step3-2" name="dit[step3][choice]" value="Unfair use of state help or subsidies" type="checkbox" required>
                 <label for="dit-step3-2" class="form-label">
                   2) Unfair use of state help or subsidies
                   <span class="form-hint">
@@ -71,7 +71,7 @@
                 </label>
               </div>
               <div class="multiple-choice">
-                <input id="dit-step3-3" name="dit[step3][choice]" value="Import quotas" type="checkbox">
+                <input id="dit-step3-3" name="dit[step3][choice]" value="Import quotas" type="checkbox" required>
                 <label for="dit-step3-3" class="form-label">
                   3) Import quotas
                   <span class="form-hint">
@@ -81,7 +81,7 @@ relevant trade agreements or which seem unjustified.
                 </label>
               </div>
               <div class="multiple-choice">
-                <input id="dit-step3-4" name="dit[step3][choice]" value="Burdensome customs procedures" type="checkbox">
+                <input id="dit-step3-4" name="dit[step3][choice]" value="Burdensome customs procedures" type="checkbox" required>
                 <label for="dit-step3-4" class="form-label">
                   4) Burdensome customs procedures
                   <span class="form-hint">
@@ -90,7 +90,7 @@ relevant trade agreements or which seem unjustified.
                 </label>
               </div>
               <div class="multiple-choice">
-                <input id="dit-step3-5" name="dit[step3][choice]" value="Restrictive government procurement rules and practices" type="checkbox">
+                <input id="dit-step3-5" name="dit[step3][choice]" value="Restrictive government procurement rules and practices" type="checkbox" required>
                 <label for="dit-step3-5" class="form-label">
                   5) Restrictive government procurement rules and practices
                   <span class="form-hint">
@@ -100,7 +100,7 @@ relevant trade agreements or which seem unjustified.
                 </label>
               </div>
               <div class="multiple-choice">
-                <input id="dit-step3-6" name="dit[step3][choice]" value="Technical regulations, standards and conformity assessment procedures" type="checkbox">
+                <input id="dit-step3-6" name="dit[step3][choice]" value="Technical regulations, standards and conformity assessment procedures" type="checkbox" required>
                 <label for="dit-step3-6" class="form-label">
                   6) Technical regulations, standards and conformity assessment procedures
                   <span class="form-hint">
@@ -109,7 +109,7 @@ relevant trade agreements or which seem unjustified.
                 </label>
               </div>
               <div class="multiple-choice">
-                <input id="dit-step3-7" name="dit[step3][choice]" value="Poor protection of intellectual property rights and geographical indicators" type="checkbox">
+                <input id="dit-step3-7" name="dit[step3][choice]" value="Poor protection of intellectual property rights and geographical indicators" type="checkbox" required>
                 <label for="dit-step3-7" class="form-label">
                   7) Poor protection of intellectual property rights and geographical indicators
 
@@ -120,7 +120,7 @@ relevant trade agreements or which seem unjustified.
                 </label>
               </div>
               <div class="multiple-choice">
-                <input id="dit-step3-8" name="dit[step3][choice]" value="Sanitary and phytosanitary measures" type="checkbox">
+                <input id="dit-step3-8" name="dit[step3][choice]" value="Sanitary and phytosanitary measures" type="checkbox" required>
                 <label for="dit-step3-8" class="form-label">
                   8) Sanitary and phytosanitary measures
                   <span class="form-hint">
@@ -128,7 +128,7 @@ relevant trade agreements or which seem unjustified.
                 </label>
               </div>
               <div class="multiple-choice">
-                <input id="dit-step3-9" name="dit[step3][choice]" value="Restrictions on access to raw materials" type="checkbox">
+                <input id="dit-step3-9" name="dit[step3][choice]" value="Restrictions on access to raw materials" type="checkbox" required>
                 <label for="dit-step3-9" class="form-label">
                   9) Restrictions on access to raw materials
                   <span class="form-hint">Typically, requirements that goods must contain a high proportion of locally produced material.
@@ -137,7 +137,7 @@ relevant trade agreements or which seem unjustified.
               </div>
               <div class="multiple-choice">
                 <input id="dit-step3-10" name="dit[step3][choice]" value="Barriers to trade in services and investment, such as unjustified foreign ownership caps, joint
-  venture  obligations and discriminatory treatment" type="checkbox">
+  venture  obligations and discriminatory treatment" type="checkbox" required>
                 <label for="dit-step3-10" class="form-label">
                   10) Barriers to trade in services and investment, such as unjustified foreign ownership caps, joint
   venture  obligations and discriminatory treatment
@@ -147,7 +147,7 @@ relevant trade agreements or which seem unjustified.
                 </label>
               </div>
               <div class="multiple-choice">
-                <input id="dit-step3-11" name="dit[step3][choice]" value="Other/Not Sure" type="checkbox">
+                <input id="dit-step3-11" name="dit[step3][choice]" value="Other/Not Sure" type="checkbox" required>
                 <label for="dit-step3-11" class="form-label">
                   11) Other/Not Sure
                 </label>

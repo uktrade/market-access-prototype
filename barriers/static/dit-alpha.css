@@ -20,12 +20,25 @@ textarea{
   resize: vertical;
 }
 
+.hidden, [hidden]{
+  display: none;
+}
+
 .column-full{
   width: 100%;
 }
 
 .form-control{
   background-color: inherit;
+}
+
+.form-group-child:not(.form-group-error){
+  border-left: 5px solid #bfc1c3;
+  padding: 15px;
+}
+
+.error-message--global[aria-hidden="false"]{
+  margin-bottom: 40px;
 }
 
 main a{
@@ -165,6 +178,7 @@ main a:hover{
 @media screen and (min-width: 768px){
   .dit-header__nav-link{
     font-size: 100%;
+    line-height: 1;
     padding: 20px;
   }
 }
@@ -177,8 +191,15 @@ main a:hover{
   top: -2px;
 }
 
+.dit-header__nav-child-container{
+  position: relative;
+}
+
 .dit-header__nav-child-list{
   display: none;
+  position: absolute;
+  right: 0;
+  z-index: 999;
 }
 
 @media screen and (min-width: 768px){
@@ -380,6 +401,21 @@ main a:hover{
   text-decoration: none;
 }
 
+/* Flexbox puts items on a grid (and is a good fallback for display:grid but must be prefixed for IE10 */
+@media screen and (min-width: 768px){
+    .dit-card-holder{
+      display: -ms-flexbox;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    .dit-card{
+      width: 30%;
+      width: calc(33.33% - 30px);
+    }
+}
+
 /* Grid makes the 'cards' line up but isn't available in all browsers yet */
 @supports (display:grid){
   @media screen and (min-width: 768px){
@@ -528,6 +564,10 @@ main a:hover{
   display: inline-block;
 }
 
+.select2-container input{
+  max-width: 100%;
+}
+
 .select2-results__options{
   background: white;
   border: 1px solid #ccc;
@@ -640,7 +680,7 @@ main a:hover{
 
 
 /**
- * Report Progress
+ * Section
  */
 .dit-progress-bar{
   margin-top: 80px;

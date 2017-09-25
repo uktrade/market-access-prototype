@@ -7,7 +7,7 @@
 {% endblock %}
 {% block bodyScripts %}
 {% endblock bodyScripts %}
-{% block head_title %}Report a trade barrier - Step 1 of 6 - About you{% endblock %}
+{% block head_title %}Report a trade barrier - Section 1 of 6 - About you{% endblock %}
 {% block sub_header %}{# prevent the subheader from showing on form pages #}{% endblock %}
 {% block css_layout_class %}
 {% endblock %}
@@ -16,37 +16,36 @@
   <div class="outer-container">
     <div class="dit-breadcrumb grid-container grid-container--inner">
         <div class="column-full flush--bottom">
-          <a href="https://www.great.gov.uk/">Great.gov.uk</a> <span aria-hidden="true">></span> <a href="/">Trade Barriers</a> <span aria-hidden="true">></span> <a href="{% url 'report-barrier' %}">Report a barrier</a> <span aria-hidden="true">></span> <strong>Step 1 - About you</strong>
+          <a href="https://www.great.gov.uk/">Great.gov.uk</a> <span aria-hidden="true">></span> <a href="/">Trade Barriers</a> <span aria-hidden="true">></span> <a href="{% url 'report-barrier' %}">Report a barrier</a> <span aria-hidden="true">></span> <strong>Section 1 - About you</strong>
         </div>
     </div>
   </div>
   <div class="outer-container push--top">
     <div class="grid-container grid-container--inner">
       <div class="column-one-third dit-progress-bar">
-        <div class="h4">Report Progress</div>
+        <div class="h4">Section</div>
         <ol>
-          <li class="is-selected">Step 1: About you</li>
-          <li>2: About the problem</li>
-          <li>3: Select the type of barrier</li>
-          <li>4: Working out the next steps</li>
-          <li>5: Any other details</li>
-          <li>6: Summary</li>
+          <li class="is-selected">1 About you</li>
+          <li>2 About the problem</li>
+          <li>3 Select the type of barrier</li>
+          <li>4 Working out the next steps</li>
+          <li>5 Any other details</li>
+          <li>6 Summary</li>
         </ol>
       </div>
       <div class="column-two-third">
-        <h1 class="h3 push--bottom push--top">Step 1 - About you</h1>
+        <h1 class="h3 push--bottom push--top">Section 1 - About you</h1>
         <form action="{% url 'report-barrier-step2' %}" method="post" class="dit-form">
           {% csrf_token %}
 
-          <div class="js-saved-success" aria-hidden="true" style="display: none;" tabindex="0">
-            <p class="h3">Thank you</p><p>Your details have been saved.</p>
-          </div>
+          {% include 'components/form-validation.html' %}
 
           <div class="form-group">
             <label class="form-label" for="dit-step1-your-name">
               Your Name
             </label>
-            <input class="form-control" id="dit-step1-your-name" type="text" name="dit[step1][your_name]">
+            <span class="error-message hidden" aria-hidden="true">Enter your name</span>
+            <input class="form-control" id="dit-step1-your-name" type="text" name="dit[step1][your_name]" required>
           </div>
 
           <div class="form-group">
@@ -56,12 +55,14 @@
                 Describe your position
               </legend>
 
+              <span class="error-message hidden" aria-hidden="true">Select whether you are an exporter/seeking to export or working for a trade association</span>
+
               <div class="multiple-choice">
                 <input id="dit-step1-type-1" name="dit[step1][type]" value="I am an exporter/seeking to export" type="radio">
                 <label for="dit-step1-type-1">I am an exporter/seeking to export</label>
               </div>
               <div class="multiple-choice">
-                <input id="dit-step1-type-2" name="dit[step1][type]" value="I work for a trade association" type="radio">
+                <input id="dit-step1-type-2" name="dit[step1][type]" value="I work for a trade association" type="radio" required>
                 <label for="dit-step1-type-2">I work for a trade association</label>
               </div>
 
@@ -72,40 +73,79 @@
             <label class="form-label" for="dit-step1-company-name">
               Organisation Name
             </label>
-            <input class="form-control" id="dit-step1-company-name" type="text" name="dit[step1][company_name]">
+            <span class="error-message hidden" aria-hidden="true">Enter an organisation name</span>
+            <input class="form-control js-companies-house-input" id="dit-step1-company-name" type="text" name="dit[step1][company_name]" required>
           </div>
 
           <div class="form-group">
-            <button class="button button-blue" type="button">Search Companies House</button>
+            <span class="error-message hidden" aria-hidden="true">Enter an organisation name to search with</span>
+            <button class="button button-blue js-companies-house" id="companies-house-button" type="button" aria-pressed="false">Search Companies House</button>
+          </div>
+
+          <div class="form-group hidden js-companies-house-list form-group-child" aria-hidden="true" aria-labelledby="companies-house-button">
+            <fieldset>
+
+              <legend>
+                <h2 class="form-label">
+                  Companies House listings
+                </h2>
+              </legend>
+
+              <span class="error-message hidden" aria-hidden="true">Choose organisation from the list</span>
+
+              <div class="multiple-choice push--top">
+                <input id="dit-step1-1" name="dit[step1][organisation_name_radio]" value="Company Name 1" type="radio">
+                <label for="dit-step1-1" class="form-label">
+                  Company Name 1
+                </label>
+              </div>
+              <div class="multiple-choice">
+                <input id="dit-step1-2" name="dit[step1][organisation_name_radio]" value="Company Name 2" type="radio">
+                <label for="dit-step1-2" class="form-label">
+                  Company Name 2
+                </label>
+              </div>
+            </fieldset>
           </div>
 
           <div class="form-group">
             <div class="multiple-choice">
               <input name="dit[step1][no_companies_house_number]" value="false" type="checkbox">
-              <input id="dit-step1-no-companies-house" name="dit[step1][no_companies_house_number]" value="I do not have a Companies House Number" type="checkbox">
+              <input id="dit-step1-no-companies-house" name="dit[step1][no_companies_house_number]" value="I do not have a Companies House Number" type="checkbox" class="js-dit-step1-no-companies-house">
               <label for="dit-step1-no-companies-house">I don't have a Companies House Number</label>
             </div>
+          </div>
+
+          <div class="form-group js-company-address hidden form-group-child" aria-hidden="true">
+            <label class="form-label" for="dit-step1-your-role-job-title">
+              Organisation address
+            </label>
+            <span class="error-message hidden" aria-hidden="true">Enter the organisation address</span>
+            <input class="form-control" id="dit-step1-organisation-address" type="text" name="dit[step1][organisation_address]">
           </div>
 
           <div class="form-group">
             <label class="form-label" for="dit-step1-your-role-job-title">
               Your Role / Job Title
             </label>
-            <input class="form-control" id="dit-step1-your-role-job-title" type="text" name="dit[step1][your_role_job_title]">
+            <span class="error-message hidden" aria-hidden="true">Enter your role / your title</span>
+            <input class="form-control" id="dit-step1-your-role-job-title" type="text" name="dit[step1][your_role_job_title]" required>
           </div>
 
           <div class="form-group">
             <label class="form-label" for="dit-step1-email-address">
               Email Address
+            <span class="error-message hidden" aria-hidden="true">Enter an email address</span>
             </label>
-            <input class="form-control" id="dit-step1-email-address" type="email" name="dit[step1][email_address]">
+            <input class="form-control" id="dit-step1-email-address" type="email" name="dit[step1][email_address]" required>
           </div>
 
           <div class="form-group">
             <label class="form-label" for="dit-step1-contact-telephone-number">
               Contact Telephone Number
+            <span class="error-message hidden" aria-hidden="true">Enter a contact number</span>
             </label>
-            <input class="form-control" id="dit-step1-contact-telephone-number" type="tel" name="dit[step1][contact_telephone_number]">
+            <input class="form-control" id="dit-step1-contact-telephone-number" type="tel" name="dit[step1][contact_telephone_number]" required>
           </div>
 
           <div class="dit-buttons">

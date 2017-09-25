@@ -220,7 +220,7 @@
                     </select>
                   </div>
                   <div class="dit-input-field dit-input-field--advanced" aria-hidden="true">
-                    <label class="filters__label" for="sectors">What sectors are relevant to you?</label>
+                    <label class="filters__label" for="sectors">What sectors are you in?</label>
                     <select autocomplete="off" class="select-custom select2-hidden-accessible" data-placeholder="Filter by sector" id="sectors" multiple="" name="sectors[]" tabindex="-1" aria-hidden="true">
                       <option value="aerospace">Aerospace</option>
                       <option value="agriculture-horticulture-fisheries">Agriculture, Horticulture &amp; Fisheries</option>
@@ -261,7 +261,7 @@
                     </select>
                   </div>
                   <div class="dit-input-field dit-input-field--advanced" aria-hidden="true">
-                    <label class="filters__label" for="values">What value contract are you interested in?</label>
+                    <label class="filters__label" for="values">Commodity code(s)</label>
                     <select autocomplete="off" class="select-custom select2-hidden-accessible" data-placeholder="Filter by value" id="values" multiple="" name="values[]" tabindex="-1" aria-hidden="true">
                       <option value="10k">Less than £100k</option>
                       <option value="100k">More than £100k</option>
@@ -269,12 +269,8 @@
                     </select>
                   </div>
                   <div class="dit-input-field dit-input-field--advanced" aria-hidden="true">
-                    <label class="filters__label" for="type">What types of contract are you interested in?</label>
-                    <select autocomplete="off" class="select-custom select2-hidden-accessible" data-placeholder="Filter by type" id="type" multiple="" name="types[]" tabindex="-1" aria-hidden="true">
-                      <option value="aid-funded-business">Aid Funded Business</option>
-                      <option value="private-sector">Private Sector</option>
-                      <option value="public-sector">Public Sector</option>
-                    </select>
+                    <label class="filters__label" for="type">Key words</label>
+                    <input autocomplete="off" id="keywords" name="types" class="filters__field">
                   </div>
                   <div class="dit-input-field">
                     <button class="button button-red" type="submit" style="white-space: nowrap;">Find barriers</button>
