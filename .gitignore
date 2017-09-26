@@ -6,3 +6,4 @@ __pycache__/
 .DS_Store
 src
 marketaccess/db.sqlite3
+/app-env

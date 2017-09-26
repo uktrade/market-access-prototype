@@ -79,7 +79,7 @@
 
           <div class="form-group">
             <span class="error-message hidden" aria-hidden="true">Enter an organisation name to search with</span>
-            <button class="button button-blue js-companies-house" id="companies-house-button" type="button" aria-pressed="false">Search Companies House</button>
+            <button class="button button-blue js-companies-house" id="companies-house-button" type="button" aria-pressed="false" data-copy-loading="Searching Companies House database..." data-copy-original="Search Companies House">Search Companies House</button>
           </div>
 
           <div class="form-group hidden js-companies-house-list form-group-child" aria-hidden="true" aria-labelledby="companies-house-button">
@@ -93,20 +93,24 @@
 
               <span class="error-message hidden" aria-hidden="true">Choose organisation from the list</span>
 
-              <div class="multiple-choice push--top">
-                <input id="dit-step1-1" name="dit[step1][organisation_name_radio]" value="Company Name 1" type="radio">
-                <label for="dit-step1-1" class="form-label">
-                  Company Name 1
-                </label>
-              </div>
-              <div class="multiple-choice">
-                <input id="dit-step1-2" name="dit[step1][organisation_name_radio]" value="Company Name 2" type="radio">
-                <label for="dit-step1-2" class="form-label">
-                  Company Name 2
-                </label>
+              <div class="push--top js-companies-house-callback">
+
               </div>
             </fieldset>
           </div>
+          <script type="text/template" class="js-companies-house-template">
+            <div class="multiple-choice">
+                <input id="dit-step1-{NUMBER}" name="dit[step1][organisation_name_radio]" value="{NUMBER}" type="radio">
+                <label for="dit-step1-{NUMBER}" class="form-label">
+                  {NAME}
+                  <span class="form-hint">{ADDRESS}</span>
+                </label>
+              </div>
+          </script>
+
+          <script type="text/template" class="js-companies-house-template-error">
+            <p>There are no results for your search, please try again with a different search or if you do not have a Companies House number check the `I don't have a Companies House Number` box below.</p>
+          </script>
 
           <div class="form-group">
             <div class="multiple-choice">

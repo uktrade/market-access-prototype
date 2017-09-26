@@ -177,9 +177,9 @@ class CompaniesHouseRequestView(TemplateView):
         return super(CompaniesHouseRequestView, self).dispatch(request, *args, **kwargs)
 
     def render_to_response(self, context, **kwargs):
-        api_response = requests.get('https://api.companieshouse.gov.uk/search/companies'
-                         '?q={}'
-                         .format(self.search_company),
+        url = ('https://api.companieshouse.gov.uk/search/companies'
+                         '?items_per_page=10&q={}'.format(self.search_company))
+        api_response = requests.get(url,
                          auth=(settings.COMPANIES_HOUSE_API_KEY, ''))
         kwargs['content_type'] = 'application/json'
         return HttpResponse(api_response.text, **kwargs)
