@@ -1,6 +1,10 @@
 # marketaccess/views.py
 
-# from django.shortcuts import render
+import json
+import requests
+
+from django.conf import settings
+from django.shortcuts import HttpResponse
 from django.views.generic import TemplateView, FormView, ListView, DetailView
 from django.urls import reverse_lazy
 
@@ -18,7 +22,7 @@ class HomeView(TemplateView):
     template_name = 'home.html'
 
     def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
+        context = super(HomeView, self).get_context_data(**kwargs)
         user = self.request.sso_user
         context['user'] = user
         context['user_has_company'] = (
@@ -48,7 +52,7 @@ class ReportBarrierShowCurrentBarriersView(ListView):
     countries_affected = ''
     model = MarketAccessBarrier
 
-    def dispatch(self, *args, **kwargs):
+    def dispatch(self, request, *args, **kwargs):
         self.countries_affected = kwargs['countries']
         return super(ReportBarrierShowCurrentBarriersView, self).dispatch(*args, **kwargs)
 
@@ -78,15 +82,14 @@ class ReportBarrierFormView(FormView):
         return super(ReportBarrierView, self).form_valid(form)
 
 
-
 class BarriersByCountryView(ListView):
     template_name = 'barriers-by-country.html'
     country = ''
     model = MarketAccessBarrier
 
-    def dispatch(self, *args, **kwargs):
+    def dispatch(self, request, *args, **kwargs):
         self.country = kwargs['country']
-        return super(BarriersByCountryView, self).dispatch(*args, **kwargs)
+        return super(BarriersByCountryView, self).dispatch(request, *args, **kwargs)
 
     def get_queryset(self, *args, **kwargs):
         return MarketAccessBarrier.objects.filter(notifying_member=self.country)
@@ -164,3 +167,19 @@ class RequestFastTrackView(TemplateView):
     model = MarketAccessBarrier
     template_name = 'request-fast-track.html'
 
+
+class CompaniesHouseRequestView(TemplateView):
+    template_name = 'companies-house-api.html'
+    search_company = ''
+
+    def dispatch(self, request, *args, **kwargs):
+        self.search_company = request.GET.get('company', '')
+        return super(CompaniesHouseRequestView, self).dispatch(request, *args, **kwargs)
+
+    def render_to_response(self, context, **kwargs):
+        api_response = requests.get('https://api.companieshouse.gov.uk/search/companies'
+                         '?q={}'
+                         .format(self.search_company),
+                         auth=(settings.COMPANIES_HOUSE_API_KEY, ''))
+        kwargs['content_type'] = 'application/json'
+        return HttpResponse(api_response.text, **kwargs)

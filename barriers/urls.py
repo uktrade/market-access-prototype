@@ -18,7 +18,8 @@ from .views import (
     ReportBarrierStep4View, ReportBarrierStep5View, ReportBarrierStep6View,
     ReportBarrierRegisterView,
     BarriersGeneralInfoView, BarriersCaseStudyView,
-    RequestFastTrackView
+    RequestFastTrackView,
+    CompaniesHouseRequestView
 )
 
 urlpatterns = [
@@ -90,5 +91,9 @@ urlpatterns = [
     url(r'^request-fast-track',
          RequestFastTrackView.as_view(),
         name='request-fast-track'
+    ),
+    url(r'^api/companieshouse',
+        CompaniesHouseRequestView.as_view(),
+        name='companies-house-lookup'
     ),
 ]
