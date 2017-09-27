@@ -1,0 +1,106 @@
+/**
+ *
+ *
+ *
+ */
+
+main{
+  padding-bottom: 30px;
+}
+
+@media screen and (min-width: 960px){
+  main{
+    padding-bottom: 60px;
+  }
+}
+
+.container{
+  margin: 0 auto;
+  max-width: 960px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+@media screen and (min-width: 640px){
+  .container{
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+
+/* When we hit max width + padding width - remove the padding */
+@media screen and (min-width: 1020px){
+  .container{
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+/**
+ * Phase tag
+ * What setting are we in ALPHA? BETA?
+ */
+.phase-tag {
+  background-color: #005ea5;
+  color: #fff;
+  display: inline-block;
+  font-family: "nta",Arial,sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  line-height: 1.14286;
+  margin: 0 0 0 5px;
+  padding: 2px 5px 0;
+  position: relative;
+  top: -3px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+@media screen and (min-width: 960px){
+  .phase-tag {
+    font-size: 16px;
+    line-height: 1.25;
+  }
+}
+
+#global-header .header-wrapper{
+  color: #fff; /* background is set to black in another CSS file :/ */
+}
+
+.header-proposition a{
+  color: currentColor;
+}
+
+
+/**
+ * Nav bar
+ */
+.nav-bar{
+  background: #DEE0E2;
+  color: #000;
+  padding: 10px 0;
+}
+
+.nav-bar a{
+  color: currentColor;
+  text-decoration: none;
+}
+
+.nav-bar [aria-current="true"]{
+  color: #005EA5;
+  border-bottom: 5px solid;
+}
+
+/**
+ * Title bar
+ */
+.title-bar{
+  background-color: #F8F8F8;
+  color: #000;
+  padding: 20px 0;
+}
+
+.title-bar__breadcrumb{
+
+}

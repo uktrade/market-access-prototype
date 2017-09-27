@@ -1,1 +1,18 @@
+{% extends './datahub_layout.html' %}
+{% load staticfiles %}
+{% load trans from i18n %}
+{% block css %}
+{% endblock %}
+{% block head_title %}Data Hub - Trade Barriers{% endblock %}
+{% block sub_header %}{# prevent the subheader from showing on form pages #}{% endblock %}
+{% block hero_title %}
+Get seen by motivated overseas buyers
+{% endblock %}
+
+{% block css_layout_class %}
+tr-home
+{% endblock %}
+
 {{ object_list }}
+
+Hello World
