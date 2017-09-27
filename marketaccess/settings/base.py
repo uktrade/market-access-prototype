@@ -42,7 +42,9 @@ INSTALLED_APPS = [
     'django.contrib.admin',
     # django library for dealing with hierarchical elements
     'mptt',
+    # our apps
     'barriers',
+    'backend'
 ]
 
 SITE_ID = 1

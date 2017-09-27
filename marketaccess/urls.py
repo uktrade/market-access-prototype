@@ -17,9 +17,11 @@ from django.conf import settings
 from django.conf.urls import url, include
 from django.contrib import admin
 from barriers import urls as barriers_urls
+from backend import urls as backend_urls
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
+    url(r'^backend/', include(backend_urls)),
     url(r'', include(barriers_urls)),
 ]
 
