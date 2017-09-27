@@ -5966,7 +5966,8 @@ $(document).ready(function(){
       $button.closest('.form-group').find('.error-message').removeClass('hidden').attr('aria-hidden', 'false');
 
       // Unpress the button for ARIA... Question: should we do this?
-      $button.attr('aria-pressed', 'false');
+      $button.attr('aria-expanded', 'false');
+
       // Hide the old list of results (if visible)
       $list.attr('aria-hidden', 'true');
       $list.addClass('hidden');
@@ -5980,8 +5981,8 @@ $(document).ready(function(){
       $button.closest('.form-group').removeClass('form-group-error');
       $button.closest('.form-group').find('.error-message').addClass('hidden').attr('aria-hidden', 'true');
 
-      // Press the button for ARIA... Question: should we do this?
-      $button.attr('aria-pressed', 'true');
+      // Tell ARIA that the results container is now open
+      $button.attr('aria-expanded', 'true');
 
       // Show a loading indicator
       $callback.html('Contacting Companies House. Please wait...');

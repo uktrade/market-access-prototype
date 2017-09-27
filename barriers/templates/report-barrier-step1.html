@@ -79,10 +79,10 @@
 
           <div class="form-group">
             <span class="error-message hidden" aria-hidden="true">Enter an organisation name to search with</span>
-            <button class="button button-blue js-companies-house" id="companies-house-button" type="button" aria-pressed="false" data-copy-loading="Searching Companies House database..." data-copy-original="Search Companies House">Search Companies House</button>
+            <button class="button button-blue js-companies-house" id="companies-house-button" type="button" aria-expanded="false" aria-controls="companies-house-results" data-copy-loading="Searching Companies House database..." data-copy-original="Search Companies House">Search Companies House</button>
           </div>
 
-          <div class="form-group hidden js-companies-house-list form-group-child" aria-hidden="true" aria-labelledby="companies-house-button">
+          <div class="form-group hidden js-companies-house-list form-group-child" aria-hidden="true" id="companies-house-results">
             <fieldset>
 
               <legend>
