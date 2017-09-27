@@ -5917,6 +5917,7 @@ if (selectCustom.length) {
 	});
 }
 
+
 // Quick and simple function to stop Firefox from remembering checkbox/radio buttons after a refresh
 // because for alpha we do not need that
 $(document).ready(function(){
@@ -5949,37 +5950,125 @@ $(document).ready(function(){
 // Quick and simple toggle to show/hide the companies house list
 $(document).ready(function(){
   var $button = $('.js-companies-house');
+  var buttonCopy = $button.html();
   var $input = $('.js-companies-house-input');
   var $list = $('.js-companies-house-list');
+  var $callback = $('.js-companies-house-callback');
+  var $templateError = $('.js-companies-house-template-error');
+  var resultsHTML = '';
+  var AJAX_URL = '/api/companieshouse?company='
 
   $button.on('click', function(){
 
     if($input.val().length === 0){
+      // User has clicked the button but not entered any search keywords so display the error
       $button.closest('.form-group').addClass('form-group-error');
       $button.closest('.form-group').find('.error-message').removeClass('hidden').attr('aria-hidden', 'false');
 
-      $button.attr('aria-pressed', 'false');
+      // Unpress the button for ARIA... Question: should we do this?
+      $button.attr('aria-expanded', 'false');
+
+      // Hide the old list of results (if visible)
       $list.attr('aria-hidden', 'true');
       $list.addClass('hidden');
+
+      // The radio buttons in the list of companies are no longer `required`
+      // if there is no company name (othewrwise users will get confused to see an error referencing seemingly invisible fields)
       $list.find('input').removeAttr('required');
-    } else if($button.attr('aria-pressed') == 'false' && $input.val().length > 0){
+    } else if($input.val().length > 0){
+      $button.html($button.data('copy-loading'));
+      // Remove any errors from the field and hide any existing results
       $button.closest('.form-group').removeClass('form-group-error');
       $button.closest('.form-group').find('.error-message').addClass('hidden').attr('aria-hidden', 'true');
 
-      $button.attr('aria-pressed', 'true');
+      // Tell ARIA that the results container is now open
+      $button.attr('aria-expanded', 'true');
+
+      // Show a loading indicator
+      $callback.html('Contacting Companies House. Please wait...');
+
+      // Show the results
       $list.attr('aria-hidden', 'false');
       $list.removeClass('hidden');
       $list.find('input').attr('required', 'required');
+
+      // Fetch JSON results from API/this app
+      $.ajax({
+        url: AJAX_URL + $input.val(),
+        context: document.body,
+        data: {}
+      }).fail(function(jqXHR) {
+        //
+      })
+      .always(function() {
+        $button.html(buttonCopy);
+      })
+      .done(function(json) {
+
+        // Build up the HTML
+        resultsHTML = '';
+
+        if(json && json.total_results > 0){
+          json.items.forEach(function(obj) {
+            resultsHTML = resultsHTML + convertJSONToHTML(obj);
+          });
+        } else {
+          resultsHTML = $templateError.html();
+        }
+
+        // Populate results either with a list of companies OR an error message
+        // Temporarily delay the response until we have AJAX in place i.e. FAKE IT for user testing
+        $callback.html(resultsHTML);
+
+        $list.find('input:first').focus();
+
+      });
+
     }
   });
+
+  /**
+   * convertJSONToHTML
+   * Take an on-page HTML template and convert our JSON to it
+   * @param {string} JSON - our JSON object (just one object in the array of items)
+   *
+   * @return {string}
+   */
+  function convertJSONToHTML(json){
+
+    /**
+     * @param {object}
+     */
+    var $template = $('.js-companies-house-template');
+
+    /**
+     * @param {string}
+     */
+    var x = $template.html();
+
+    x = x.replace(/\{NAME\}/g, json.title);
+    x = x.replace(/\{NUMBER\}/g, json.company_number);
+    x = x.replace(/\{ADDRESS\}/g, json.address_snippet);
+
+    return x;
+  }
 });
 
 
 // Quick and simple toggle to show/hide the companies house list
 $(document).ready(function(){
+
+  /**
+   * @param {object}
+   */
   var $checkbox = $('.js-dit-step1-no-companies-house');
+
+  /**
+   * @param {object}
+   */
   var $field = $('.js-company-address');
 
+  // Set event listener
   $checkbox.on('change', function(){
     if($checkbox.is(':checked')){
       $field.attr('aria-hidden', 'false');
@@ -5998,9 +6087,26 @@ $(document).ready(function(){
 // Quick and simple toggle to show/hide the header's drop down menu
 $(document).ready(function(){
 
+  /**
+   * @param {object}
+   */
   var $buttons = $('.js-dit-toggle-nav');
+
+  /**
+   * @param {object}
+   */
   var $navs = $('.js-dit-nav');
 
+  /**
+   * @param {object}
+   */
+  var $body = $('body');
+
+  /**
+   * closeAllNavs
+   *
+   * @return {void}
+   */
   function closeAllNavs(){
     $buttons.attr('aria-expanded', 'false');
     $navs.attr('aria-hidden', 'true');
@@ -6025,7 +6131,7 @@ $(document).ready(function(){
   });
 
   // Close when click outside (Note: this is good for a11y)
-  $('body').on('click', function(e){
+  $body.on('click', function(e){
     var $currentNav = $navs.filter('[aria-hidden="false"]');
 
     if($currentNav.length > 0 && $(e.target).hasClass('js-dit-toggle-nav') !== true && $(e.target).hasClass('js-dit-nav') !== true){
@@ -6034,7 +6140,7 @@ $(document).ready(function(){
   });
 
   // Close when click Esc (Note: this is good for a11y)
-  $('body').on('keydown', function(e){
+  $body.on('keydown', function(e){
     var $currentNav = $navs.filter('[aria-hidden="false"]');
 
     if ($currentNav.length > 0 && e.keyCode == 27) {
@@ -6043,10 +6149,10 @@ $(document).ready(function(){
   });
 
   // Close when tab outside the open menu (Note: this is good for a11y)
-  $('body').on('keydown', function(e){
+  $body.on('keydown', function(e){
     var $currentNav = $navs.filter('[aria-hidden="false"]');
-    var $lastItem;
-    var $firstItem;
+    var $lastItem = {};
+    var $firstItem = {};
 
     if($currentNav.length === 0){
       return;
@@ -6062,86 +6168,51 @@ $(document).ready(function(){
     }
   });
 
-
 });
 
 
 // Quick and dirty local storage on save/submit form fields
 $(document).ready(function(){
 
+  /**
+   * @param {object}
+   */
   var $saveButton = $('.js-save-button');
+
+  /**
+   * @param {object}
+   */
   var $form = $('.dit-form');
 
+  init();
 
-  // Commented out as it isn't 100% working yet
-  if (typeof localStorage !== 'undefined') {
-
-    // loadSavedData();
-
+  /**
+   * init
+   * Run on load
+   *
+   * @return {void}
+   */
+  function init(){
     $saveButton.click(function(e){
-      // saveFunctions();
-      e.preventDefault();
-
-      // Show a hidden success message and focus the user there
-      $('.js-saved-success').show().attr('aria-hidden', 'false').focus();
-    });
-
-    $form.on('submit', function(e){
-      // saveFunctions();
-    });
-
-  }
-
-  // Loop through fields on the page and save them
-  function saveFunctions(){
-    var $fields = $form.find('[name]');
-
-    $fields.each(function(){
-      if($(this).attr('type') === 'checkbox' || $(this).attr('type') === 'radio'){
-        localStorage.setItem($(this).attr('name'), $('[name="' + $(this).attr('name') + '"]:checked').val());
-      } else{
-        localStorage.setItem($(this).attr('name'), $(this).val());
-      }
+      saveFunctions(e);
     });
   }
 
-  // if a field exists with name="x" or a div with data-name="x" then populate it
-  function loadSavedData(){
-    var $fields = $form.find('[name]');
-    var $displays = $form.find('[data-name]');
-
-    if($fields.length > 0){
-      $fields.each(function(){
-        var savedValue = localStorage.getItem($(this).attr('name'));
-
-        // checkbox/radio
-        if($(this).attr('type') === 'checkbox' || $(this).attr('type') === 'radio'){
-          if($(this).attr('value') === savedValue){
-            $(this).attr('checked', 'checked');
-          } else {
-            $(this).removeAttr('checked');
-          }
-        } else{
-           $(this).val(savedValue);
-        }
-      });
-    }
-
-    if($displays.length > 0){
-      $displays.each(function(){
-        var savedValue = localStorage.getItem($(this).attr('data-name'));
-
-        if(savedValue !== null && typeof savedValue !== 'undefined' && savedValue !== 'undefined' && savedValue.length > 0){
-          $(this).html(savedValue);
-        }
-      });
-    }
+  /**
+   * saveFunctions
+   * Show a hidden success message and focus the user there
+   * In the future we will send an AJAX call to the back-end to save our data
+   *
+   * @param {object} e - click event
+   *
+   * @return {void}
+   */
+  function saveFunctions(e){
+    e.preventDefault();
+    $('.js-saved-success').show().attr('aria-hidden', 'false').focus();
   }
 
 });
-
-
-
 
 // Create a global object we can reference
 window.DITAlpha = window.DITAlpha || {};
@@ -6152,9 +6223,16 @@ window.DITAlpha = window.DITAlpha || {};
 
 	window.DITAlpha.FormValidation = {
 
+    /**
+     * @param {object}
+     */
   	$form: $('.dit-form'),
 
-
+    /**
+     * init
+     *
+     * @return {void}
+     */
   	init: function(){
     	var self = this;
 
@@ -6181,6 +6259,10 @@ window.DITAlpha = window.DITAlpha || {};
      * the relevant inline error message.
      *
      * We also show a global error message which could sit at the top of the form or above the submit button
+     *
+     * @param {object} e - click event
+     *
+     * @return {void}
      */
     checkForErrors: function(e){
       var self = this,
@@ -6240,6 +6322,11 @@ window.DITAlpha = window.DITAlpha || {};
 
     },
 
+    /**
+     * clickToFocusOnError
+     *
+     * @return {void}
+     */
     clickToFocusOnError: function(){
       var self = this;
 
@@ -6257,6 +6344,8 @@ window.DITAlpha = window.DITAlpha || {};
      *
      * This would work for a group of any inputs with a little
      * work.
+     *
+     * @param {object} $checkbox
      */
     swapAroundCheckboxProps: function($checkbox){
 
