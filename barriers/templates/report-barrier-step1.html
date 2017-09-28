@@ -109,7 +109,11 @@
           </script>
 
           <script type="text/template" class="js-companies-house-template-error">
-            <p>There are no results for your search, please try again with a different search or if you do not have a Companies House number check the `I don't have a Companies House Number` box below.</p>
+            <p>There are no results for your search, please try again with a different search term or if you do not have a Companies House number check the `I don't have a Companies House Number` box below.</p>
+          </script>
+
+          <script type="text/template" class="js-companies-house-template-fail">
+            <p>There was a problem with the Companies House Search. Please try again or check the `I don't have a Companies House Number` box below and fill in your organisation address manually.</p>
           </script>
 
           <div class="form-group">
@@ -120,13 +124,27 @@
             </div>
           </div>
 
-          <div class="form-group js-company-address hidden form-group-child" aria-hidden="true">
-            <label class="form-label" for="dit-step1-your-role-job-title">
-              Organisation address
-            </label>
-            <span class="error-message hidden" aria-hidden="true">Enter the organisation address</span>
-            <input class="form-control" id="dit-step1-organisation-address" type="text" name="dit[step1][organisation_address]">
-          </div>
+          <fieldset class="js-company-address hidden" aria-hidden="true">
+
+            <legend class="form-label">Organisation address</legend>
+
+            <div class="form-group  form-group-child">
+              <label class="form-label" for="dit-step1-organisation-address">
+                Address first line and city/town
+              </label>
+              <span class="error-message hidden" aria-hidden="true">Enter the organisation address first line and city/town</span>
+              <input class="form-control" id="dit-step1-organisation-address" type="text" name="dit[step1][organisation_address]">
+            </div>
+
+            <div class="form-group form-group-child">
+              <label class="form-label" for="dit-step1-organisation-postcode">
+                Postcode
+              </label>
+              <span class="error-message hidden" aria-hidden="true">Enter the organisation postcode</span>
+              <input class="form-control" id="dit-step1-organisation-postcode" type="text" name="dit[step1][organisation_postcode]">
+            </div>
+
+          </fieldset>
 
           <div class="form-group">
             <label class="form-label" for="dit-step1-your-role-job-title">

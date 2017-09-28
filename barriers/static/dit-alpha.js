@@ -5955,6 +5955,7 @@ $(document).ready(function(){
   var $list = $('.js-companies-house-list');
   var $callback = $('.js-companies-house-callback');
   var $templateError = $('.js-companies-house-template-error');
+  var $templateFail = $('.js-companies-house-template-fail');
   var resultsHTML = '';
   var AJAX_URL = '/api/companieshouse?company='
 
@@ -5998,7 +5999,10 @@ $(document).ready(function(){
         context: document.body,
         data: {}
       }).fail(function(jqXHR) {
-        //
+        // If we fail feedback to the user what they can do
+        // As this is only an alpha this is not so important but really we need
+        // a fallback in case the API fails for whatever reason
+        $callback.html($templateFail.html());
       })
       .always(function() {
         $button.html(buttonCopy);
