@@ -303,10 +303,13 @@
         <div id="global-app-error" class="app-error hidden"></div>
 
         <script src="{% static 'Dit-Pattern-Styling/public/js/jquery.js' %}"></script>
+        {% comment %}
         <!--[if IE 8]><script src="{% static 'Dit-Pattern-Styling/public/js/ie8.js' }"></script><![endif]-->
         <!--[if IE 8]><script type="text/javascript" src="js/selectivizr.js"></script><![endif]-->
         <script type="text/javascript" src="{% static 'Dit-Pattern-Styling/public/js/navigation.js' %}"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js"></script>
+        {% endcomment %}
+        <script src="{% static 'select2.js' %}"></script>
         <script src="{% static 'dit-alpha.js' %}"></script>
         {% block bodyScripts %}{% endblock bodyScripts %}
     </body>
