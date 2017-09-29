@@ -7,176 +7,128 @@
 {% block local_header__title %}Trade Barriers{% endblock %}
 
 {% block sidebar %}
-<nav class="c-local-nav " aria-label="local navigation">
-    <a class="c-local-nav__link is-active" href="/investment-projects/d1d61e24-fb4d-47b1-b953-374b8c4dd291/details">Project details</a>
-    <a class="c-local-nav__link " href="/investment-projects/d1d61e24-fb4d-47b1-b953-374b8c4dd291/team">Project team</a>
-    <a class="c-local-nav__link " href="/investment-projects/d1d61e24-fb4d-47b1-b953-374b8c4dd291/interactions">Interactions</a>
-    <a class="c-local-nav__link " href="/investment-projects/d1d61e24-fb4d-47b1-b953-374b8c4dd291/evaluation">Evaluations</a>
-    <a class="c-local-nav__link " href="/investment-projects/d1d61e24-fb4d-47b1-b953-374b8c4dd291/audit">Audit history</a>
+<nav class="c-local-nav" aria-label="local navigation">
+    <a class="c-local-nav__link is-active" href="#">Report summary</a>
+    <a class="c-local-nav__link" href="#">About the problem</a>
+    <a class="c-local-nav__link" href="#">Barrier type</a>
+    <a class="c-local-nav__link" href="#">Requested gov action</a>
 </nav>
 
 <form method="get" class="c-collection-filters js-AutoSubmit">
 
-    <input name="sortby" value="modified_on:desc" type="hidden">
+  <input name="sortby" value="modified_on:desc" type="hidden">
 
-    <input name="custom" value="true" type="hidden">
+  <input name="custom" value="true" type="hidden">
 
-    <header class="u-clearfix">
-        <h2 class="c-collection-filters__heading">Filter results</h2>
-    </header>
+  <header class="u-clearfix">
+      <h2 class="c-collection-filters__heading">Filter results</h2>
+  </header>
 
-    <div id="group-field-company_name" class="
-        c-form-group
-
-         c-form-group--light c-form-group--smaller
-
-      ">
-        <label class="c-form-group__label " for="field-company_name">
-            <span class="c-form-group__label-text">
+  <div id="group-field-sidebar_input" class="c-form-group c-form-group--light c-form-group--smaller">
+      <label class="c-form-group__label " for="field-sidebar-input">
+          <span class="c-form-group__label-text">
           Company name
-        </span>
+          </span>
+          <span class="c-form-group__hint" id="hint-field-sidebar-input">At least three characters</span>
+      </label>
+      <div class="c-form-group__inner">
+          <input name="field_sidebar_input" id="field-sidebar-input" value="" class="c-form-control  c-form-control--light c-form-control--smaller " aria-describedby="hint-field-sidebar-input" type="text">
+      </div>
+  </div>
+  <div id="group-field-sidebar_input" class="c-form-group c-form-group--light c-form-group--smaller">
+      <label class="c-form-group__label " for="field-sidebar-input">
+          <span class="c-form-group__label-text">
+          Product or service
+          </span>
+          <span class="c-form-group__hint" id="hint-field-sidebar-input">At least three characters</span>
+      </label>
+      <div class="c-form-group__inner">
+          <input name="field_sidebar_input" id="field-sidebar-input" value="" class="c-form-control  c-form-control--light c-form-control--smaller " aria-describedby="hint-field-sidebar-input" type="text">
+      </div>
+  </div>
 
-            <span class="c-form-group__hint" id="hint-field-company_name">At least three characters</span>
-
-        </label>
-
-        <div class="c-form-group__inner">
-
-            <input name="company_name" id="field-company_name" value="" class="c-form-control  c-form-control--light c-form-control--smaller  " aria-describedby="hint-field-company_name" type="text">
-
-        </div>
-
-    </div>
-
-    <div id="group-field-company_sector" class="
-        c-form-group
-
-         c-form-group--light c-form-group--smaller
-
-      ">
-        <label class="c-form-group__label " for="field-company_sector">
-            <span class="c-form-group__label-text">
-          Sectors
-        </span>
-
-        </label>
-
-        <div class="c-form-group__inner">
-
-            <select id="field-company_sector" name="company_sector" class="c-form-control  c-form-control--light c-form-control--smaller  ">
-
-                <option value="">All sectors</option>
-
-                <option value="af959812-6095-e211-a939-e4115bead28a">
-                    Advanced Engineering
-                </option>
-
-                <option value="9538cecc-5f95-e211-a939-e4115bead28a">
-                    Aerospace
-                </option>
-
-                <option value="af22c9d2-5f95-e211-a939-e4115bead28a">
-                    Aerospace : Aircraft Design
-                </option>
-
-            </select>
-
-        </div>
-
-    </div>
-
-    <div id="group-field-address_country" class="
-        c-form-group
-
-         c-form-group--light c-form-group--smaller
-
-      ">
-        <label class="c-form-group__label " for="field-address_country">
-            <span class="c-form-group__label-text">
+  <div id="group-field-sidebar_select" class="c-form-group c-form-group--light c-form-group--smaller">
+      <label class="c-form-group__label" for="field-sidebar-select">
+        <span class="c-form-group__label-text">
           Country
         </span>
+      </label>
 
+      <div class="c-form-group__inner">
+          <select id="field-sidebar-select" name="sidebar_select" class="c-form-control c-form-control--light c-form-control--smaller">
+              <option value="">Default empty</option>
+              <option value="1">Option 1</option>
+          </select>
+      </div>
+  </div>
+
+  <div id="group-field-sidebar_select" class="c-form-group c-form-group--light c-form-group--smaller">
+      <label class="c-form-group__label" for="field-sidebar-select">
+        <span class="c-form-group__label-text">
+          Sector
+        </span>
+      </label>
+
+      <div class="c-form-group__inner">
+          <select id="field-sidebar-select" name="sidebar_select" class="c-form-control c-form-control--light c-form-control--smaller">
+              <option value="">Default empty</option>
+              <option value="1">Option 1</option>
+          </select>
+      </div>
+  </div>
+
+  <div id="group-field-sidebar_select" class="c-form-group c-form-group--light c-form-group--smaller">
+      <label class="c-form-group__label" for="field-sidebar-select">
+        <span class="c-form-group__label-text">
+          Barrier type
+        </span>
+      </label>
+
+      <div class="c-form-group__inner">
+          <select id="field-sidebar-select" name="sidebar_select" class="c-form-control c-form-control--light c-form-control--smaller">
+              <option value="">Default empty</option>
+              <option value="1">Option 1</option>
+          </select>
+      </div>
+  </div>
+  <fieldset class="form-group form-group__checkbox-group c-form-group--light c-form-group--smaller" id="group-field-sidebar_checkboxes">
+      <legend class="form-label-bold">Status</legend>
+      <div class="c-multiple-choice">
+        <input class="c-multiple-choice__input" name="stage" value="" id="field-stage-2" checked="checked" type="checkbox">
+        <label class="c-multiple-choice__label" for="field-stage-2">
+            <span class="c-multiple-choice__label-text">Screening</span>
         </label>
+      </div>
+      <div class="c-multiple-choice">
+        <input class="c-multiple-choice__input" name="stage" value="" id="field-stage-3" type="checkbox">
+        <label class="c-multiple-choice__label" for="field-stage-3">
+          <span class="c-multiple-choice__label-text">Assessment</span>
+        </label>
+      </div>
+      <div class="c-multiple-choice">
+        <input class="c-multiple-choice__input" name="stage" value="" id="field-stage-3" type="checkbox">
+        <label class="c-multiple-choice__label" for="field-stage-3">
+          <span class="c-multiple-choice__label-text">Resolution</span>
+        </label>
+      </div>
+      <div class="c-multiple-choice">
+        <input class="c-multiple-choice__input" name="stage" value="" id="field-stage-3" type="checkbox">
+        <label class="c-multiple-choice__label" for="field-stage-3">
+          <span class="c-multiple-choice__label-text">Rejected</span>
+        </label>
+      </div>
+      <div class="c-multiple-choice">
+        <input class="c-multiple-choice__input" name="stage" value="" id="field-stage-3" type="checkbox">
+        <label class="c-multiple-choice__label" for="field-stage-3">
+          <span class="c-multiple-choice__label-text">Archive</span>
+        </label>
+      </div>
+  </fieldset>
+  <div style="clear:both;">&nbsp;</div>
 
-        <div class="c-form-group__inner">
-
-            <select id="field-address_country" name="address_country" class="c-form-control  c-form-control--light c-form-control--smaller  ">
-
-                <option value="">All countries</option>
-
-                <option value="87756b9a-5d95-e211-a939-e4115bead28a">
-                    Afghanistan
-                </option>
-
-                <option value="88756b9a-5d95-e211-a939-e4115bead28a">
-                    Aland Islands
-                </option>
-
-                <option value="280be5c4-5d95-e211-a939-e4115bead28a">
-                    St Kitts and Nevis
-                </option>
-
-                <option value="290be5c4-5d95-e211-a939-e4115bead28a">
-                    St Lucia
-                </option>
-
-                <option value="7c756b9a-5d95-e211-a939-e4115bead28a">
-                    St Martin
-                </option>
-
-                <option value="2a0be5c4-5d95-e211-a939-e4115bead28a">
-                    St Pierre and Miquelon
-                </option>
-
-                <option value="2b0be5c4-5d95-e211-a939-e4115bead28a">
-                    St Vincent
-                </option>
-
-                <option value="2c0be5c4-5d95-e211-a939-e4115bead28a">
-                    Sudan
-                </option>
-
-                <option value="7e756b9a-5d95-e211-a939-e4115bead28a">
-                    Sudan, South
-                </option>
-
-                <option value="2d0be5c4-5d95-e211-a939-e4115bead28a">
-                    Surinam
-                </option>
-
-                <option value="2e0be5c4-5d95-e211-a939-e4115bead28a">
-                    Svalbard and Jan Mayen Islands
-                </option>
-
-                <option value="2f0be5c4-5d95-e211-a939-e4115bead28a">
-                    Swaziland
-                </option>
-
-                <option value="300be5c4-5d95-e211-a939-e4115bead28a">
-                    Sweden
-                </option>
-
-                <option value="310be5c4-5d95-e211-a939-e4115bead28a">
-                    Switzerland
-                </option>
-
-                <option value="a46ee1ca-5d95-e211-a939-e4115bead28a">
-                    Syria
-                </option>
-
-                <option value="a56ee1ca-5d95-e211-a939-e4115bead28a">
-                    Taiwan
-                </option>
-
-            </select>
-
-        </div>
-
-    </div>
-
-    <div class="c-form-actions u-js-hidden">
-        <button class="button">Refresh results</button>
-    </div>
+  <div class="c-form-actions u-js-hidden">
+      <button class="button">Refresh results</button>
+  </div>
 
 </form>
 {% endblock %}
@@ -187,7 +139,7 @@
         <label class="form-label-bold" for="name">
             Input
         </label>
-        <input id="name" class="form-control" name="name" value="Sony Ericsson Mobile Communications (Global HQ)" type="text">
+        <input id="name" class="form-control" name="name" value="" type="text">
     </div>
     <div class="form-group " id="name-wrapper">
         <label class="form-label-bold" for="description">
@@ -213,256 +165,105 @@
         <label class="block-label selection-button-radio selected">
             <input name="headquarters" value="" checked="" type="radio"> Default
         </label>
-
         <label class="block-label selection-button-radio ">
-            <input name="headquarters" value="eb59eaeb-eeb8-4f54-9506-a5e08773046b" type="radio"> Option 1
+            <input name="headquarters" value="" type="radio"> Option 1
         </label>
-
         <label class="block-label selection-button-radio ">
-            <input name="headquarters" value="43281c5e-92a4-4794-867b-b4d5f801e6f3" type="radio"> Option 2
+            <input name="headquarters" value="" type="radio"> Option 2
         </label>
-
     </fieldset>
-    <fieldset id="group-field-primary" class="
-        c-form-group
-
-         c-form-group--inline
-
-      ">
-        <legend class="c-form-group__label ">
-            <span class="c-form-group__label-text">
+    <fieldset id="group-field-primary" class="c-form-group c-form-group--inline">
+      <legend class="c-form-group__label ">
+        <span class="c-form-group__label-text">
           Inline radio buttons
         </span>
-
-        </legend>
-
-        <div class="c-form-group__inner">
-
-            <div class="c-multiple-choice  c-multiple-choice--inline">
-                <input class="c-multiple-choice__input" name="primary" value="yes" id="field-primary-1" checked="checked" type="radio">
-                <label class="c-multiple-choice__label" for="field-primary-1">
-                    <span class="c-multiple-choice__label-text">Yes</span>
-
-                </label>
-
-            </div>
-
-            <div class="c-multiple-choice  c-multiple-choice--inline">
-                <input class="c-multiple-choice__input" name="primary" value="no" id="field-primary-2" type="radio">
-                <label class="c-multiple-choice__label" for="field-primary-2">
-                    <span class="c-multiple-choice__label-text">No</span>
-
-                </label>
-
-            </div>
-
+      </legend>
+      <div class="c-form-group__inner">
+        <div class="c-multiple-choice  c-multiple-choice--inline">
+          <input class="c-multiple-choice__input" name="primary" value="yes" id="field-primary-1" checked="checked" type="radio">
+          <label class="c-multiple-choice__label" for="field-primary-1">
+            <span class="c-multiple-choice__label-text">Yes</span>
+          </label>
         </div>
-
+        <div class="c-multiple-choice  c-multiple-choice--inline">
+          <input class="c-multiple-choice__input" name="primary" value="no" id="field-primary-2" type="radio">
+          <label class="c-multiple-choice__label" for="field-primary-2">
+            <span class="c-multiple-choice__label-text">No</span>
+          </label>
+        </div>
+      </div>
     </fieldset>
     <fieldset class="form-group form-group__checkbox-group" id="headquarters-wrapper">
         <legend class="form-label-bold">Checkboxes title</legend>
-
         <div class="c-multiple-choice">
-            <input class="c-multiple-choice__input" name="stage" value="c9864359-fb1a-4646-a4c1-97d10189fc03" id="field-stage-2" checked="checked" type="checkbox">
-            <label class="c-multiple-choice__label" for="field-stage-2">
-                <span class="c-multiple-choice__label-text">Option 1</span>
-
-            </label>
+          <input class="c-multiple-choice__input" name="stage" value="" id="field-stage-2" checked="checked" type="checkbox">
+          <label class="c-multiple-choice__label" for="field-stage-2">
+              <span class="c-multiple-choice__label-text">Option 1</span>
+          </label>
         </div>
-
         <div class="c-multiple-choice">
-            <input class="c-multiple-choice__input" name="stage" value="c9864359-fb1a-4646-a4c1-97d10189fc03" id="field-stage-3" type="checkbox">
-            <label class="c-multiple-choice__label" for="field-stage-3">
-                <span class="c-multiple-choice__label-text">Option 2</span>
-
-            </label>
+          <input class="c-multiple-choice__input" name="stage" value="" id="field-stage-3" type="checkbox">
+          <label class="c-multiple-choice__label" for="field-stage-3">
+            <span class="c-multiple-choice__label-text">Option 2</span>
+          </label>
         </div>
-
     </fieldset>
-    <fieldset id="group-field-business_type" class="
-        c-form-group
-
-
-
-
-      ">
+    <fieldset id="group-field-business_type" class="c-form-group">
       <legend class="c-form-group__label ">
         <span class="c-form-group__label-text">
           Checkboxes that lead to hidden fields
         </span>
-
-
       </legend>
-
-
-        <div class="c-form-group__inner">
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      <div class="c-multiple-choice ">
-        <input class="c-multiple-choice__input" name="hidden_parent" value="1" id="field-business_type-1" type="radio">
-        <label class="c-multiple-choice__label" for="field-business_type-1">
-          <span class="c-multiple-choice__label-text">UK private or public limited company</span>
-
-            <span class="c-multiple-choice__hint">Must be a company registered with Companies House</span>
-
-        </label>
-
-
-      </div>
-
-
-
-
-
-      <div class="c-multiple-choice ">
-        <input class="c-multiple-choice__input" name="hidden_parent" value="2" id="field-business_type-2" type="radio">
-        <label class="c-multiple-choice__label" for="field-business_type-2">
-          <span class="c-multiple-choice__label-text">Other type of UK organisation</span>
-
-            <span class="c-multiple-choice__hint">UK organisation not registered with Companies House</span>
-
-        </label>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  <div id="group-field-business_type_uk_other" class="c-form-group js-ConditionalSubfield c-form-group--subfield" data-controlled-by="hidden_parent" data-control-value="2" aria-expanded="false" aria-hidden="true">
-      <label class="c-form-group__label " for="field-business_type_uk_other">
-        <span class="c-form-group__label-text">
-          Type of organisation
-        </span>
-
-
-      </label>
-
-
-        <div class="c-form-group__inner">
-
-
-
-
-
-
-  <select id="field-business_type_uk_other" name="business_type_uk_other" class="c-form-control  c-form-control--subfield  ">
-
-      <option value="">Select type</option>
-
-
-      <option value="Charity">
-        Charity
-      </option>
-
-  </select>
-
-
-
-
-
-
+      <div class="c-form-group__inner">
+        <div class="c-multiple-choice ">
+          <input class="c-multiple-choice__input" name="hidden_parent" value="1" id="field-business_type-1" type="radio">
+          <label class="c-multiple-choice__label" for="field-business_type-1">
+            <span class="c-multiple-choice__label-text">No hidden extra fields</span>
+            <span class="c-multiple-choice__hint">Hint here</span>
+          </label>
         </div>
-
-    </div>
-
-
-      </div>
-
-
-
-
-
-      <div class="c-multiple-choice ">
+        <div class="c-multiple-choice ">
+          <input class="c-multiple-choice__input" name="hidden_parent" value="2" id="field-business_type-2" type="radio">
+          <label class="c-multiple-choice__label" for="field-business_type-2">
+            <span class="c-multiple-choice__label-text">Other type of UK organisation</span>
+              <span class="c-multiple-choice__hint">UK organisation not registered with Companies House</span>
+          </label>
+          <div id="group-field-business_type_uk_other" class="c-form-group js-ConditionalSubfield c-form-group--subfield" data-controlled-by="hidden_parent" data-control-value="2" aria-expanded="false" aria-hidden="true">
+            <label class="c-form-group__label " for="field-business_type_uk_other">
+              <span class="c-form-group__label-text">Type of organisation</span>
+            </label>
+            <div class="c-form-group__inner">
+              <select id="field-business_type_uk_other" name="business_type_uk_other" class="c-form-control  c-form-control--subfield  ">
+                <option value="">Select type</option>
+                <option value="Charity">Charity</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="c-multiple-choice ">
         <input class="c-multiple-choice__input" name="hidden_parent" value="3" id="field-business_type-3" type="radio">
         <label class="c-multiple-choice__label" for="field-business_type-3">
           <span class="c-multiple-choice__label-text">Foreign organisation</span>
-
         </label>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  <div id="group-field-business_type_for_other" class="c-form-group js-ConditionalSubfield c-form-group--subfield" data-controlled-by="hidden_parent" data-control-value="3" aria-expanded="false" aria-hidden="true">
-      <label class="c-form-group__label " for="field-business_type_for_other">
-        <span class="c-form-group__label-text">
-          Type of organisation
-        </span>
-
-
-      </label>
-
-
+        <div id="group-field-business_type_for_other" class="c-form-group js-ConditionalSubfield c-form-group--subfield" data-controlled-by="hidden_parent" data-control-value="3" aria-expanded="false" aria-hidden="true">
+        <label class="c-form-group__label " for="field-business_type_for_other">
+          <span class="c-form-group__label-text">Type of organisation</span>
+        </label>
         <div class="c-form-group__inner">
-
-
-
-
-
-
-  <select id="field-business_type_for_other" name="business_type_for_other" class="c-form-control  c-form-control--subfield  ">
-
-      <option value="">Select type</option>
-
-
-      <option value="Company">
-        Company
-      </option>
-
-  </select>
-
-
-
-
-
-
+          <select id="field-business_type_for_other" name="business_type_for_other" class="c-form-control  c-form-control--subfield  ">
+            <option value="">Select type</option>
+            <option value="Company">Company</option>
+          </select>
         </div>
-
-    </div>
-
-
       </div>
-
-
-        </div>
-
+    </div>
+      </div>
     </fieldset>
     <div class="save-bar">
         <button class="button button--save" type="submit">Save</button>
     </div>
 </form>
 <article>
-
     <h2 class="heading-medium">Project value (Test D)</h2>
 
     <table class="table--key-value">
@@ -470,20 +271,12 @@
 
             <tr>
                 <th>Primary sector</th>
-                <td>
-
-                    Food and Drink
-
-                </td>
+                <td>Food and Drink</td>
             </tr>
 
             <tr>
                 <th>Total investment</th>
-                <td>
-
-                    Not Known
-
-                </td>
+                <td>Not Know</td>
             </tr>
         </tbody>
     </table>
@@ -495,28 +288,24 @@
         <div class="c-collection__header-row">
             <div class="c-collection__header-intro">
                 <span class="c-collection__result-count">0</span> interactions
-
             </div>
 
             <div class="c-collection__header-actions">
-
                 <a href="interactions/create" class="button button-secondary">Add interaction</a>
-
             </div>
 
             <div class="c-collection__filter-summary">
-
-                <span class="c-collection__filter-tag">
-              <span class="c-collection__filter-label">Estimated land date before</span>
+              <span class="c-collection__filter-tag">
+                <span class="c-collection__filter-label">Estimated land date before</span>
                 <span class="c-collection__filter-value">6 April 2018</span>
                 <a class="c-collection__filter-remove js-xhr" href="?custom=true&amp;estimated_land_date_after=2017-04-05&amp;sortby=estimated_land_date%3Aasc" aria-label="Remove filter">×</a>
-                </span>
+              </span>
 
-                <span class="c-collection__filter-tag">
-              <span class="c-collection__filter-label">Estimated land date after</span>
+              <span class="c-collection__filter-tag">
+                <span class="c-collection__filter-label">Estimated land date after</span>
                 <span class="c-collection__filter-value">5 April 2017</span>
                 <a class="c-collection__filter-remove js-xhr" href="?custom=true&amp;estimated_land_date_before=2018-04-06&amp;sortby=estimated_land_date%3Aasc" aria-label="Remove filter">×</a>
-                </span>
+              </span>
 
             </div>
 
@@ -528,17 +317,12 @@
 
 <article>
 
-    <form method="POST" action="change-project-stage" class="flash flash--info">
+    <form method="POST" action="#" class="flash flash--info">
 
-        <p>
+        <p>Complete this stage to move to the Assign PM stage.</p>
 
-            Complete this stage to move to the Assign PM stage.
-
-        </p>
-
-        <div class="c-form-actions ">
-            <button class="button  " disabled="&quot;disabled&quot;">Move to Assign PM stage</button>
-
+        <div class="c-form-actions">
+            <button class="button" disabled="disabled">Move to Assign PM stage</button>
         </div>
 
     </form>
@@ -551,115 +335,58 @@
             <tr>
                 <th>Client</th>
                 <td>
-
-                    <a href="/companies/view/foreign/eb688f85-a098-e211-a939-e4115bead28a">Sony Ericsson Mobile Communications (Global HQ)</a>
-
+                  <a href="#">With a link</a>
                 </td>
             </tr>
-
             <tr>
-                <th>Type of investment</th>
-                <td>
-
-                    Commitment to invest
-
-                </td>
+                <th>Heading</th>
+                <td>Content</td>
             </tr>
-
             <tr>
-                <th>Primary sector</th>
-                <td>
-
-                    Food and Drink
-
-                </td>
+                <th>Heading</th>
+                <td>Content</td>
             </tr>
-
             <tr>
-                <th>Business activity</th>
-                <td>
-
-                    Distribution
-
-                </td>
+                <th>Heading</th>
+                <td>Content</td>
             </tr>
-
-            <tr>
-                <th>Project description</th>
-                <td>
-
-                    Test
-
-                </td>
-            </tr>
-
-            <tr>
-                <th>Non-disclosure agreement</th>
-                <td>
-
-                    Signed
-
-                </td>
-            </tr>
-
-            <tr>
-                <th>Estimated land date</th>
-                <td>
-
-                    July 2017
-
-                </td>
-            </tr>
-
         </tbody>
     </table>
 
-    <p>
-        <a href="edit-details" class="button-secondary">
-      Edit summary
-    </a>
-    </p>
+    <p><a href="#" class="button-secondary">Link button</a></p>
 
-    <h2 class="heading-medium">Requirements and location</h2>
+    <h2 class="heading-medium">Heading (medium)</h2>
 
     <p class="infostrip">
-        Please complete this section to move to Assign PM stage
+        This is an infostrip
     </p>
 
     <p>
-        <a href="edit-requirements" class="button">
-      Add requirements
-    </a>
+      <a href="#" class="button">Button link</a>
     </p>
 
-    <h2 class="heading-medium">Value</h2>
+    <h2 class="heading-medium">Heading (medium)</h2>
 
     <p class="infostrip">
-        Please complete ‘Total investment’ and ‘Number of new jobs’ to move to Assign PM stage
+        This is an infostrip
     </p>
 
     <p>
-        <a href="edit-value" class="button">
-      Add value
-    </a>
+        <a href="#" class="button">Button link</a>
     </p>
 
-    <h2 class="heading-medium">Archive project</h2>
-    <p>Archive this project if it has been lost or abandoned</p>
+    <h2 class="heading-medium">Heading (medium)</h2>
+    <p>Lorem ipsum lorem ipsum</p>
 
-    <a class="button" href="#" aria-hidden="false">Archive</a>
-    <form class="archive-form js-archiveForm u-hidden" method="POST" aria-hidden="true">
-        <input name="_csrf" value="dWhQd97g-L_e6pzUkjaeq3unc_N5mWvdc5r4" type="hidden">
+    <a class="button" href="#" aria-hidden="false">Button link</a>
 
-        <fieldset id="group-field-archived_reason" class="
-        c-form-group
+    <form class="archive-form js-archiveForm u-hidden" method="post" aria-hidden="true">
 
-      ">
+        <fieldset id="group-field-archived_reason" class="c-form-group">
             <legend class="c-form-group__label ">
                 <span class="c-form-group__label-text">
-          Archive reason
-        </span>
-
+                  Form legend
+                </span>
             </legend>
 
             <div class="c-form-group__inner">
@@ -668,29 +395,22 @@
                     <input class="c-multiple-choice__input" name="archived_reason" value="Abandoned" id="field-archived_reason-1" type="radio">
                     <label class="c-multiple-choice__label" for="field-archived_reason-1">
                         <span class="c-multiple-choice__label-text">Abandoned</span>
-
                     </label>
-
                 </div>
 
                 <div class="c-multiple-choice ">
                     <input class="c-multiple-choice__input" name="archived_reason" value="Lost" id="field-archived_reason-2" type="radio">
                     <label class="c-multiple-choice__label" for="field-archived_reason-2">
                         <span class="c-multiple-choice__label-text">Lost</span>
-
                     </label>
-
                 </div>
 
                 <div class="c-multiple-choice ">
                     <input class="c-multiple-choice__input" name="archived_reason" value="Other" id="field-archived_reason-3" type="radio">
                     <label class="c-multiple-choice__label" for="field-archived_reason-3">
                         <span class="c-multiple-choice__label-text">Other</span>
-
                     </label>
-
                 </div>
-
             </div>
 
         </fieldset>
@@ -703,7 +423,8 @@
         </div>
 
         <div class="save-bar">
-            <button class="button button--save" type="submit">Archive</button><a class="button-link" href="#">Cancel</a>
+            <button class="button button--save" type="submit">Archive</button>
+            <a class="button-link" href="#">Cancel</a>
         </div>
     </form>
 
@@ -713,7 +434,6 @@
             <div class="c-collection__header-row">
                 <div class="c-collection__header-intro">
                     <span class="c-collection__result-count">4,352</span> contacts
-
                 </div>
 
             </div>
@@ -721,24 +441,18 @@
             <div class="c-collection__header-row">
 
                 <span class="c-collection__pagination-summary">
-            Page 1 of 436
-          </span>
+                  Page 1 of 436
+                </span>
 
                 <form method="get" class="c-collection__sort-form js-AutoSubmit">
 
                     <input name="custom" value="true" type="hidden">
 
-                    <div id="group-field-sortby" class="
-        c-form-group
-
-         c-form-group--light c-form-group--inline c-form-group--small
-
-      ">
+                    <div id="group-field-sortby" class="c-form-group c-form-group--light c-form-group--inline c-form-group--small">
                         <label class="c-form-group__label " for="field-sortby">
                             <span class="c-form-group__label-text">
-          Sort by
-        </span>
-
+                              Sort by
+                            </span>
                         </label>
 
                         <div class="c-form-group__inner">
@@ -822,92 +536,9 @@
                     <div class="c-entity__header">
                         <h3 class="c-entity__title">
 
-            <a href="/contacts/25f6ab60-7011-4b75-8600-9ed30b8aeb7f">Nandakumar Dalawa</a>
+                            <a href="#">Jaylan McDermott</a>
 
-        </h3>
-
-                        <div class="c-entity__badges">
-
-                            <div class="c-meta-list ">
-
-                                <div class="c-meta-list__item">
-
-                                    <span class="c-meta-list__item-label u-visually-hidden">
-          Contact type
-        </span>
-
-                                    <span class="c-badge  c-badge--secondary">Primary</span>
-
-                                </div>
-
-                                <div class="c-meta-list__item">
-
-                                    <span class="c-meta-list__item-label u-visually-hidden">
-          Country
-        </span>
-
-                                    <span class="c-badge ">United Kingdom</span>
-
-                                </div>
-
-                            </div>
-
-                        </div>
-
-                    </div>
-
-                    <div class="c-entity__content">
-
-                        <div class="c-meta-list  c-meta-list--split c-meta-list--inline">
-
-                            <div class="c-meta-list__item">
-
-                                <span class="c-meta-list__item-label ">
-          Company
-        </span>
-
-                                <span class="c-meta-list__item-value">Mars Components Ltd</span>
-
-                            </div>
-
-                            <div class="c-meta-list__item">
-
-                                <span class="c-meta-list__item-label ">
-          Updated
-        </span>
-
-                                <span class="c-meta-list__item-value">15 Sep 2017, 11:07am</span>
-
-                            </div>
-
-                            <div class="c-meta-list__item">
-
-                                <span class="c-meta-list__item-label ">
-          Sector
-        </span>
-
-                                <span class="c-meta-list__item-value">Retail</span>
-
-                            </div>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </li>
-
-            <li class="c-entity-list__item">
-
-                <div class="c-entity c-entity--contact">
-
-                    <div class="c-entity__header">
-                        <h3 class="c-entity__title">
-
-            <a href="/contacts/5453b62a-5d28-4c3c-bbb9-5032b2d7c95b">Jaylan McDermott</a>
-
-        </h3>
+                        </h3>
 
                         <div class="c-entity__badges">
 
@@ -916,8 +547,8 @@
                                 <div class="c-meta-list__item">
 
                                     <span class="c-meta-list__item-label u-visually-hidden">
-          Contact type
-        </span>
+                                      Contact type
+                                    </span>
 
                                     <span class="c-badge  c-badge--secondary">Primary</span>
 
@@ -926,8 +557,8 @@
                                 <div class="c-meta-list__item">
 
                                     <span class="c-meta-list__item-label u-visually-hidden">
-          Country
-        </span>
+                                      Country
+                                    </span>
 
                                     <span class="c-badge ">France</span>
 
@@ -946,8 +577,8 @@
                             <div class="c-meta-list__item">
 
                                 <span class="c-meta-list__item-label ">
-          Company
-        </span>
+                                  Company
+                                </span>
 
                                 <span class="c-meta-list__item-value">Lambda plc</span>
 
@@ -956,8 +587,8 @@
                             <div class="c-meta-list__item">
 
                                 <span class="c-meta-list__item-label ">
-          Updated
-        </span>
+                                  Updated
+                                </span>
 
                                 <span class="c-meta-list__item-value">30 Aug 2017, 5:53pm</span>
 
@@ -966,8 +597,8 @@
                             <div class="c-meta-list__item">
 
                                 <span class="c-meta-list__item-label ">
-          Sector
-        </span>
+                                  Sector
+                                </span>
 
                                 <span class="c-meta-list__item-value">Retail</span>
 
@@ -987,10 +618,8 @@
 
                     <div class="c-entity__header">
                         <h3 class="c-entity__title">
-
-            <a href="/contacts/69fd1107-a417-4957-a7c1-013b224b08f7">Eli Harber</a>
-
-        </h3>
+                            <a href="#">Eli Harber</a>
+                        </h3>
 
                         <div class="c-entity__badges">
 
@@ -999,8 +628,8 @@
                                 <div class="c-meta-list__item">
 
                                     <span class="c-meta-list__item-label u-visually-hidden">
-          Country
-        </span>
+                                      Country
+                                    </span>
 
                                     <span class="c-badge ">United Kingdom</span>
 
@@ -1019,8 +648,8 @@
                             <div class="c-meta-list__item">
 
                                 <span class="c-meta-list__item-label ">
-          Company
-        </span>
+                                  Company
+                                </span>
 
                                 <span class="c-meta-list__item-value">Lambda plc</span>
 
@@ -1029,8 +658,8 @@
                             <div class="c-meta-list__item">
 
                                 <span class="c-meta-list__item-label ">
-          Updated
-        </span>
+                                  Updated
+                                </span>
 
                                 <span class="c-meta-list__item-value">30 Aug 2017, 5:53pm</span>
 
@@ -1039,8 +668,8 @@
                             <div class="c-meta-list__item">
 
                                 <span class="c-meta-list__item-label ">
-          Sector
-        </span>
+                                  Sector
+                                </span>
 
                                 <span class="c-meta-list__item-value">Retail</span>
 
@@ -1061,53 +690,45 @@
             <ul class="c-pagination__list">
 
                 <li class="c-pagination__list-item">
-
-                    <a href="?page=1&amp;sortby=modified_on%3Adesc" class="c-pagination__label is-current">
-                  1
-                </a>
-
-                </li>
-
-                <li class="c-pagination__list-item">
-
-                    <a href="?page=2&amp;sortby=modified_on%3Adesc" class="c-pagination__label ">
-                  2
-                </a>
+                  <a href="?page=1&amp;sortby=modified_on%3Adesc" class="c-pagination__label is-current">
+                    1
+                  </a>
 
                 </li>
 
                 <li class="c-pagination__list-item">
-
-                    <a href="?page=3&amp;sortby=modified_on%3Adesc" class="c-pagination__label ">
-                  3
-                </a>
-
-                </li>
-
-                <li class="c-pagination__list-item">
-
-                    <a href="?page=4&amp;sortby=modified_on%3Adesc" class="c-pagination__label ">
-                  4
-                </a>
+                  <a href="?page=2&amp;sortby=modified_on%3Adesc" class="c-pagination__label ">
+                    2
+                  </a>
 
                 </li>
 
                 <li class="c-pagination__list-item">
-
-                    <span class="c-pagination__label c-pagination__label--truncation">
-                  …
-                </span>
+                  <a href="?page=3&amp;sortby=modified_on%3Adesc" class="c-pagination__label ">
+                    3
+                  </a>
 
                 </li>
 
                 <li class="c-pagination__list-item">
-
-                    <a href="?page=436&amp;sortby=modified_on%3Adesc" class="c-pagination__label ">
-                  436
-                </a>
+                  <a href="?page=4&amp;sortby=modified_on%3Adesc" class="c-pagination__label ">
+                    4
+                  </a>
 
                 </li>
 
+                <li class="c-pagination__list-item">
+                   <span class="c-pagination__label c-pagination__label--truncation">
+                    &hellip;
+                  </span>
+
+                </li>
+
+                <li class="c-pagination__list-item">
+                  <a href="?page=436&amp;sortby=modified_on%3Adesc" class="c-pagination__label ">
+                    436
+                  </a>
+                </li>
             </ul>
 
             <a href="?page=2&amp;sortby=modified_on%3Adesc" class="c-pagination__label c-pagination__label--next">Next</a>
