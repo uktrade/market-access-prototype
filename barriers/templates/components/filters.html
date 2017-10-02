@@ -1,5 +1,12 @@
 
 {% load staticfiles %}
+<style>
+  @media screen and (min-width: 768px){
+    .dit-hero{
+      height: 500px;
+    }
+  }
+</style>
 <div class="dit-hero" style="background-image: url({% static 'images/placeholder-hero.png' %});">
     <div class="outer-container">
       <div class="grid-container grid-container--inner">
@@ -219,7 +226,7 @@
                       <option value="zimbabwe">Zimbabwe</option>
                     </select>
                   </div>
-                  <div class="dit-input-field dit-input-field--advanced" aria-hidden="true">
+                  <div class="dit-input-field dit-input-field--advanced" aria-hidden="false">
                     <label class="filters__label" for="sectors">What sectors are you in?</label>
                     <select autocomplete="off" class="select-custom select2-hidden-accessible" data-placeholder="Filter by sector" id="sectors" multiple="" name="sectors[]" tabindex="0" aria-hidden="true">
                       <option value="aerospace">Aerospace</option>
@@ -260,7 +267,7 @@
                       <option value="water">Water</option>
                     </select>
                   </div>
-                  <div class="dit-input-field dit-input-field--advanced" aria-hidden="true">
+                  <div class="dit-input-field dit-input-field--advanced" aria-hidden="false">
                     <label class="filters__label" for="values">Commodity code(s)</label>
                     <select autocomplete="off" class="select-custom select2-hidden-accessible" data-placeholder="Filter by value" id="values" multiple="" name="values[]" tabindex="0" aria-hidden="true">
                       <option >100087</option>
@@ -268,16 +275,18 @@
                       <option value="">Unknown</option>
                     </select>
                   </div>
-                  <div class="dit-input-field dit-input-field--advanced" aria-hidden="true">
+                  <div class="dit-input-field dit-input-field--advanced" aria-hidden="false">
                     <label class="filters__label" for="type">Key words</label>
                     <input autocomplete="off" id="keywords" type="search" name="keywords" class="filters__field">
                   </div>
                   <div class="dit-input-field">
                     <button class="button button-red" type="submit" style="white-space: nowrap;">Find barriers</button>
-                    <button type="button" class="js-dit-toggle-filters dit-button-link" aria-pressed="false">
-                      <span class="close" aria-hidden="true">Fewer filters</span>
-                      <span class="open" aria-hidden="false">More filters</span>
+                    {% comment %}
+                    <button type="button" class="js-dit-toggle-filters dit-button-link" aria-pressed="true">
+                      <span class="close" aria-hidden="false">Fewer filters</span>
+                      <span class="open" aria-hidden="true">More filters</span>
                     </button>
+                    {% endcomment %}
                   </div>
                 </div>
             </form>

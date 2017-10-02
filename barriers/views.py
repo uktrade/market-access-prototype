@@ -123,6 +123,10 @@ class BarrierDetailStaticView(TemplateView):
     model = MarketAccessBarrier
     template_name = 'barrier-detail-static.html'
 
+class BarrierExtraDetailView(TemplateView):
+    model = MarketAccessBarrier
+    template_name = 'barrier-extra-detail.html'
+
 class BarrierSubscribeView(TemplateView):
     model = MarketAccessBarrier
     template_name = 'barrier-subscribe.html'
@@ -166,6 +170,10 @@ class ReportBarrierRegisterView(PostGetTemplateView):
 class RequestFastTrackView(TemplateView):
     model = MarketAccessBarrier
     template_name = 'request-fast-track.html'
+
+class ExampleSummaryView(TemplateView):
+    model = MarketAccessBarrier
+    template_name = 'example-summary.html'
 
 
 class CompaniesHouseRequestView(TemplateView):

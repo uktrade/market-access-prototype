@@ -80,17 +80,13 @@
 
           <div class="form-group">
             <label class="form-label" for="dit-step2-code">
-              {% if is_trade_association == True %}
-                Enter your product/commodity code
-              {% else %}
-                Enter your product/commodity code (if known/appropriate)
-              {% endif %}
+              Enter your product/commodity code (optional)
               <span class="form-hint">
                 Commodity codes are  part of an internationally standardised system of names and numbers to classify traded products.
               </span>
             </label>
             <span class="error-message hidden" aria-hidden="true">Enter your product/commodity code</span>
-            <input class="form-control" id="dit-step2-code" type="text" name="dit[step2][code]" {% if is_trade_association == True %} required{% endif %}>
+            <input class="form-control" id="dit-step2-code" type="text" name="dit[step2][code]">
           </div>
 
           <div class="form-group">
@@ -403,9 +399,9 @@
 
           <div class="form-group">
             <label class="form-label form-label--light" for="dit-step2-others-affected-details">
-              If yes, please describe below
+              If yes, please list them below
             </label>
-            <textarea class="form-control" id="dit-step2-others-affected-details" name="dit[step2][others_affected_details]" rows="" cols=""></textarea>
+            <textarea class="form-control" id="dit-step2-others-affected-details" name="dit[step2][others_affected_details]" rows="10" cols="5"></textarea>
           </div>
 
           <div class="dit-buttons">

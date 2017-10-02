@@ -1,0 +1,41 @@
+{% extends './govuk_layout.html' %}
+{% load staticfiles %}
+{% load trans from i18n %}
+{% block css %}
+{% endblock %}
+{% block head_title %}{% trans "Trade Barrier Detail" %}{% endblock %}
+{% block sub_header %}{# prevent the subheader from showing on form pages #}{% endblock %}
+{% block hero_title %}
+Get seen by motivated overseas buyers
+{% endblock %}
+
+{% block css_layout_class %}
+tr-home
+{% endblock %}
+
+{% block content %}
+  <div class="outer-container">
+    <div class="dit-breadcrumb grid-container grid-container--inner">
+        <div class="column-full flush--bottom">
+          <a href="https://www.great.gov.uk/">Great.gov.uk</a> <span aria-hidden="true">></span> <a href="/">Trade Barriers</a> <span aria-hidden="true">></span> <a href="{% url 'barriers-general-info' %}">{% trans "Find out about Trade Barriers" %}</a> <span aria-hidden="true">></span> <strong>{% trans "Tariffs and taxes imposed to protect, or favour, local producers" %}</strong>
+        </div>
+    </div>
+  </div>
+  <div class="outer-container">
+    <div class="grid-container grid-container--inner">
+      <div class="column-full">
+        <h1 class="h3" id="barrier-title">{% trans "Tariffs and taxes imposed to protect, or favour, local producers" %}</h1>
+      </div>
+      <div class="column-two-third">
+        <p>Usually charges imposed on imports to make them more expensive than domestically produced
+          goods.</p>
+        <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse porta erat in rhoncus pretium. Donec vitae ex bibendum, aliquet sem vel, malesuada metus. Mauris non suscipit dolor, vel tempor risus. Praesent vel urna molestie, interdum libero non, feugiat nibh. Vestibulum ultricies sit amet ante ac ultricies. Suspendisse fermentum sem justo, a fermentum nunc feugiat eget. Donec convallis augue leo, non ornare felis venenatis a.</p>
+        <p>Vestibulum vehicula bibendum nunc, sit amet accumsan diam finibus eu. Nulla eu metus ipsum. Vestibulum sit amet maximus risus. Pellentesque at quam id risus vulputate accumsan at at purus. Nunc ac nisl eleifend magna vestibulum auctor. Mauris vulputate, enim a volutpat finibus, leo enim lobortis orci, tincidunt condimentum nunc ipsum non ligula. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Fusce vehicula fringilla aliquet. Suspendisse posuere facilisis velit quis molestie. Sed nec eros tincidunt, consequat sem vel, bibendum neque. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nam auctor sapien et nisi scelerisque molestie. </p>
+      </div>
+      <div class="column-one-third">
+          <p><a href="{% url 'report-barrier' %}" class="button button-red" aria-labelledby="barrier-title">This barrier is affecting me</a></p>
+      </div>
+    </div>
+  </div>
+
+  {% endblock %}

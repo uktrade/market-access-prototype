@@ -44,7 +44,7 @@
               <span class="form-hint">
                 - people you have contacted<br>
                 - when you contacted them<br>
-                - what happened<br>
+                - what happened
               </span>
             </label>
             <textarea class="form-control" id="dit-step4-steps-taken" name="dit[step4][steps_taken]" rows="5" cols="10"></textarea>
@@ -53,6 +53,10 @@
           <div class="form-group">
             <label class="form-label" for="dit-step4-outcome">
               What outcome are you looking for?
+              <span class="form-hint">
+                - <br>
+                -
+              </span>
             </label>
             <span class="error-message hidden" aria-hidden="true">Enter the outcome you are looking for</span>
             <textarea class="form-control" id="dit-step4-outcome" name="dit[step4][outcome]" rows="5" cols="10" required></textarea>
@@ -79,6 +83,10 @@
                 <input id="dit-step4-support-3" name="dit[step4][support]" value="Broader UK Government involvement" type="radio" required>
                 <label for="dit-step4-support-3">Broader UK Government involvement</label>
               </div>
+              <div class="multiple-choice">
+                <input id="dit-step4-support-4" name="dit[step4][support]" value="Not sure" type="radio" required>
+                <label for="dit-step4-support-4">Not sure</label>
+              </div>
 
             </fieldset>
           </div>
@@ -97,7 +105,8 @@
                 <span class="form-label">
                   Are you happy for us to publish a summary of your problem on Great.gov.uk?
                   <span class="form-hint">
-                    This will help us to alert other UK exporters to the problem
+                    This will help us to alert other UK exporters to the problem<br>
+                    <a href="{% url 'example-summary' %}" target="_blank">View an example summary</a>
                   </span>
                 </span>
               </legend>

@@ -103,6 +103,7 @@
                     <div class="js-form-field" data-name="dit[step1][contact_telephone_number]">0776123456789</div>
                   </div>
   							</div>
+                <a href="{% url 'report-barrier-step1' %}" class="button button-blue" aria-labelledby="accordion-button1">Edit</a>
               </div>
             </div>
             <!--/ Tab 1 -->
@@ -146,7 +147,7 @@
                       {% if is_trade_association == True %}
                         Your product/commodity code
                       {% else %}
-                        Your product/commodity code (if known/appropriate)
+                        Your product/commodity code (optional)
                       {% endif %}
                     </div>
                     <div class="js-form-field" data-name="dit[step2][code]">Lorem ipsum</div>
@@ -198,6 +199,7 @@
                     <div class="js-form-field" data-name="dit[step2][others_affected_details]">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean scelerisque suscipit vulputate. Aliquam vitae congue arcu. In congue mi non orci elementum, ut imperdiet nisi ultricies. Nulla in mollis mi. Aliquam sit amet nisl id ex auctor scelerisque hendrerit at nunc. Pellentesque ultricies molestie quam. Proin ultrices hendrerit risus id eleifend. Aliquam erat volutpat. Cras tempus lorem massa. </div>
                   </div>
   							</div>
+                <a href="{% url 'report-barrier-step2' %}" class="button button-blue" aria-labelledby="accordion-button2">Edit</a>
               </div>
             </div>
             <!--/ Tab 2 -->
@@ -230,6 +232,7 @@
                     <div class="form-label">Choose the type(s) of barrier which best describes your problem. </div>
                     <div class="js-form-field" data-name="dit[step3][choice]">Burdensome customs procedures</div>
                   </div>
+                <a href="{% url 'report-barrier-step3' %}" class="button button-blue" aria-labelledby="accordion-button3">Edit</a>
   							</div>
               </div>
             </div>
@@ -281,6 +284,7 @@
                   </div>
 
   							</div>
+                <a href="{% url 'report-barrier-step4' %}" class="button button-blue" aria-labelledby="accordion-button4">Edit</a>
               </div>
             </div>
             <!--/ Tab 4 -->
@@ -313,6 +317,7 @@
                     <div class="form-label">Is there anything else you would like us to understand about the situation? </div>
                     <div class="js-form-field" data-name="dit[step5][extra]">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean scelerisque suscipit vulputate. Aliquam vitae congue arcu. In congue mi non orci elementum, ut imperdiet nisi ultricies. Nulla in mollis mi. Aliquam sit amet nisl id ex auctor scelerisque hendrerit at nunc. Pellentesque ultricies molestie quam. Proin ultrices hendrerit risus id eleifend. Aliquam erat volutpat. Cras tempus lorem massa. </div>
                   </div>
+                <a href="{% url 'report-barrier-step5' %}" class="button button-blue" aria-labelledby="accordion-button5">Edit</a>
   							</div>
               </div>
             </div>

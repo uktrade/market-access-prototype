@@ -7,7 +7,7 @@
 {% endblock %}
 {% block bodyScripts %}
 {% endblock bodyScripts %}
-{% block head_title %}Report a trade barrier - Section 1 of 6 - About you{% endblock %}
+{% block head_title %}Report a trade barrier - Section 1 of 6: About you{% endblock %}
 {% block sub_header %}{# prevent the subheader from showing on form pages #}{% endblock %}
 {% block css_layout_class %}
 {% endblock %}
@@ -34,7 +34,7 @@
         </ol>
       </div>
       <div class="column-two-third">
-        <h1 class="h3 push--bottom push--top">Section 1 - About you</h1>
+        <h1 class="h3 push--bottom push--top">Section 1 of 6: About you</h1>
         <form action="{% url 'report-barrier-step2' %}" method="post" class="dit-form">
           {% csrf_token %}
 

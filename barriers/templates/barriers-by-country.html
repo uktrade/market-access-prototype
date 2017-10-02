@@ -39,7 +39,7 @@ tr-home
 
         <h3 class="h4 push--top"><strong>Barriers affecting UK exporters</strong></h3>
         <ul class="" data-module="Accordion">
-            {% for i in "xxxxx" %}
+            {% for i in "xx" %}
               {% include 'components/barrier-detail-accordion.html' with id=forloop.counter0 title="Lorem ipsum dolor sit amet" %}
             {% endfor %}
         </ul>
@@ -48,6 +48,8 @@ tr-home
             {% include 'components/barrier-detail.html' with id=123 %}
             {% include 'components/barrier-detail.html' with id=456 %}
         </ul>
+
+        <p><a href="{% url 'report-barrier' %}">My barrier is not listed here</a></p>
       </div>
     </div>
   </div>

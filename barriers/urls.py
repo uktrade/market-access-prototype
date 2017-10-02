@@ -13,12 +13,13 @@ from django.conf.urls import url  # , include
 from .views import (
     HomeView,
     ReportBarrierView, ReportBarrierShowCurrentBarriersView, ReportBarrierFormView,
-    BarrierDetailView, BarrierDetailStaticView, BarrierSubscribeView, BarriersByCountryView,
+    BarrierDetailView, BarrierDetailStaticView, BarrierExtraDetailView, BarrierSubscribeView, BarriersByCountryView,
     ReportBarrierStep1View, ReportBarrierStep2View, ReportBarrierStep3View,
     ReportBarrierStep4View, ReportBarrierStep5View, ReportBarrierStep6View,
     ReportBarrierRegisterView,
     BarriersGeneralInfoView, BarriersCaseStudyView,
     RequestFastTrackView,
+    ExampleSummaryView,
     CompaniesHouseRequestView
 )
 
@@ -35,6 +36,10 @@ urlpatterns = [
     url(r'^barriers/detail',
         BarrierDetailStaticView.as_view(),
         name='barrier-detail-static'
+    ),
+    url(r'^barriers/extra-detail',
+        BarrierExtraDetailView.as_view(),
+        name='barrier-extra-detail'
     ),
     url(r'^barriers/(?P<pk>\d+)',
         BarrierDetailView.as_view(),
@@ -91,6 +96,10 @@ urlpatterns = [
     url(r'^request-fast-track',
          RequestFastTrackView.as_view(),
         name='request-fast-track'
+    ),
+    url(r'^summary',
+        ExampleSummaryView.as_view(),
+        name='example-summary'
     ),
     url(r'^api/companieshouse',
         CompaniesHouseRequestView.as_view(),

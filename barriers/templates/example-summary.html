@@ -1,0 +1,27 @@
+{% extends './govuk_layout.html' %}
+{% load staticfiles %}
+{% load trans from i18n %}
+{% block css %}
+{% endblock %}
+{% block head_title %}Example Summary Trade Barriers{% endblock %}
+{% block sub_header %}{# prevent the subheader from showing on form pages #}{% endblock %}
+
+{% block content %}
+  <div class="outer-container">
+    <div class="dit-breadcrumb grid-container grid-container--inner">
+        <div class="column-full flush--bottom">
+          <a href="https://www.great.gov.uk/">Great.gov.uk</a> <span aria-hidden="true">></span> <a href="/">Trade Barriers</a> <span aria-hidden="true">></span> <strong>Example summary</strong>
+        </div>
+    </div>
+  </div>
+
+  <div class="outer-container">
+    <div class="outer-container push--top">
+    <div class="grid-container grid-container--inner">
+      <div class="column-two-third">
+        <h1 class="h2">An example summary would appear here</h1>
+        <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse porta erat in rhoncus pretium. Donec vitae ex bibendum, aliquet sem vel, malesuada metus. Mauris non suscipit dolor, vel tempor risus. Praesent vel urna molestie, interdum libero non, feugiat nibh. Vestibulum ultricies sit amet ante ac ultricies. Suspendisse fermentum sem justo, a fermentum nunc feugiat eget. Donec convallis augue leo, non ornare felis venenatis a.</p>
+        <p>Vestibulum vehicula bibendum nunc, sit amet accumsan diam finibus eu. Nulla eu metus ipsum. Vestibulum sit amet maximus risus. Pellentesque at quam id risus vulputate accumsan at at purus. Nunc ac nisl eleifend magna vestibulum auctor. Mauris vulputate, enim a volutpat finibus, leo enim lobortis orci, tincidunt condimentum nunc ipsum non ligula. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Fusce vehicula fringilla aliquet. Suspendisse posuere facilisis velit quis molestie. Sed nec eros tincidunt, consequat sem vel, bibendum neque. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nam auctor sapien et nisi scelerisque molestie. </p>
+      </div>
+  </div>
+{% endblock %}
