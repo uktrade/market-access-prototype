@@ -147,7 +147,7 @@ class BarrierDetailStaticView(TemplateView):
     template_name = 'barrier-detail-static.html'
 
 class BarrierExtraDetailView(TemplateView):
-    model = MarketAccessBarrier
+    model = BarrierRecord
     template_name = 'barrier-extra-detail.html'
 
 class BarrierSubscribeView(TemplateView):
@@ -195,7 +195,7 @@ class RequestFastTrackView(TemplateView):
     template_name = 'request-fast-track.html'
 
 class ExampleSummaryView(TemplateView):
-    model = MarketAccessBarrier
+    model = BarrierRecord
     template_name = 'example-summary.html'
 
 

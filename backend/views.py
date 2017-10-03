@@ -9,6 +9,6 @@ class DashboardView(ListView):
     pass
 
 class ReportHomeView(ListView):
-    model = MarketAccessBarrier
+    model = BarrierReport
     template_name = 'backend/report-home.html'
     pass
