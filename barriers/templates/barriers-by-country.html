@@ -39,17 +39,22 @@ tr-home
           {% include 'components/barrier-detail-accordion.html' with id=2 title="Wind propellers held up in Texas" country="United States" sector="Energy equipment" barrier="Unreasonable sanitary and phytosanitary measures" summary="The Wind Technology Consortium is reporting a number of attempts by officials in Houston and Austin to impose local regulations on consignments of wind propellers from the UK. They are claiming that propellers with a span of more than 30 metres pose unacceptable risks to local wildlife." %}
           {% include 'components/barrier-detail-accordion.html' with id=3 title="Heat pumps subject to punitive tariff" country="United States" sector="Energy equipment" barrier="Restrictive rules of origin" summary="British company Energise has reported that a batch of its heat pumps has been subject to an import tariff of 50% by officials in Salt Lake City, Utah. They are claiming that this is a legitimate interpretation of the recent Utah State regulation restricting green energy installations to locally based companies. " %}
         </ul>
-        <h3 class="h4" style="margin-top: 60px;"><strong>Barriers reported to WTO and EC</strong></h3>
+        <h3 class="h4" style="margin-top: 60px;"><strong>Barriers reported to European Commission</strong></h3>
         <ul class="">
             {% include 'components/barrier-detail.html' with id=123 title="Cumbersome compulsory conformity assessment for electro technical products" country="United States" %}
             {% include 'components/barrier-detail.html' with id=456 title="Preference for national goods in public procurement" country="United States" %}
         </ul>
+        <h3 class="h4" style="margin-top: 60px;"><strong>WTO Notifications</strong></h3>
+        <p>The WTO manages a list of self-reported measures that can affect international trade.</p>
+        <p><a href="#">Browse notifications related to your search here</a></p>
 
+        {% comment %}
         <div class="dit-reporting-cta" style="border-top: none;">
           <p class="h3 dit-reporting-cta__title">If you are experiencing a trade barrier that isn't listed here you can report it.</p>
           <p class="h3"><a href="{% url 'report-barrier' %}">Report a trade barrier</a></p>
           <p class="h3"><a href="{% url 'report-barrier-form' %}">Check trade barriers in your target market</a></p>
         </div>
+        {% endcomment %}
       </div>
     </div>
   </div>

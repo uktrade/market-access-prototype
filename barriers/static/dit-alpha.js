@@ -476,7 +476,7 @@ $(document).ready(function(){
   function saveFunctions(e){
     e.preventDefault();
     $('.js-saved-success').show().attr('aria-hidden', 'false').focus();
-    $form.find('.form-group, .dit-buttons').hide().attr('aria-hidden', 'true');
+    $form.find('.form-group, .dit-summary-sections, .dit-buttons').hide().attr('aria-hidden', 'true');
   }
 
   /**
@@ -490,7 +490,7 @@ $(document).ready(function(){
   function closeFunctions(e){
     e.preventDefault();
     $('.js-saved-success').hide().attr('aria-hidden', 'true');
-    $form.find('.form-group, .dit-buttons').css('display', '').attr('aria-hidden', 'false');
+    $form.find('.form-group, .dit-summary-sections, .dit-buttons').css('display', '').attr('aria-hidden', 'false');
     $form.find('.form-control').eq(0).focus();
   }
 

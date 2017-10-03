@@ -12,7 +12,7 @@ from django.conf.urls import url  # , include
 
 from .views import (
     HomeView,
-    ReportBarrierView, ReportBarrierShowCurrentBarriersView, ReportBarrierFormView,
+    ReportBarrierView, ReportBarrierExistingView, ReportBarrierShowCurrentBarriersView, ReportBarrierFormView,
     BarrierDetailView, BarrierDetailStaticView, BarrierExtraDetailView, BarrierSubscribeView, BarriersByCountryView,
     ReportBarrierStep1View, ReportBarrierStep2View, ReportBarrierStep3View,
     ReportBarrierStep4View, ReportBarrierStep5View, ReportBarrierStep6View,
@@ -88,6 +88,10 @@ urlpatterns = [
     url(r'^report/form',
         ReportBarrierFormView.as_view(),
         name='report-barrier-form'
+    ),
+    url(r'^report-existing',
+        ReportBarrierExistingView.as_view(),
+        name='report-barrier-existing'
     ),
     url(r'^report',
          ReportBarrierView.as_view(),

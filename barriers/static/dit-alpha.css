@@ -485,6 +485,14 @@ main a:hover{
  * Forms
  */
 
+.dit-input-field{
+  margin-bottom: 20px;
+}
+
+.dit-input-field .button{
+  margin-top: 10px;
+}
+
 @media screen and (min-width: 768px){
   .dit-inline-form-fields{
     align-items: end;
@@ -494,12 +502,14 @@ main a:hover{
   }
 
   .dit-input-field{
+    margin-bottom: 0;
     width: 30%;
     width: calc(33.33% - 30px);
   }
 
   .dit-input-field .button{
     margin-bottom: 0;
+    margin-top: 0;
   }
 
   @supports (display:grid){

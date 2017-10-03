@@ -28,16 +28,23 @@ tr-home
     <div class="outer-container">
       <div class="grid-container grid-container--inner">
         <div class="column-full dit-hero__copy">
-            <h1 class="dit-hero__title">{% trans "Report a trade barrier" %}</h1>
-            <p class="dit-hero__summary">The government works with the WTO and other governments around the world to reduce the impact of trade barriers. Departments and agencies
-work together to understand the problems and develop action plans to resolve them. Steps may include using our representatives abroad, Ministerial visits, or direct negotiations with overseas governments or the WTO.</p>
+            <h1 class="dit-hero__title">{% trans "This barrier is affecting me" %}</h1>
+            <p class="dit-hero__summary">Photo voltaic panels</p>
             <div class="grid-container grid-container--inner">
               <div class="column-two-third">
-                <p class="dit-hero__summary">By reporting a trade barrier you can get the help you need, and also provide information
-which will help us to focus resources where they can be most effective. </p>
+                <p class="dit-hero__summary">
+                  Country: United States<br>
+                  Sector: Energy equipment<br>
+                  Barrier type: Burdensome customs procedures
+                </p>
+
+                <p class="dit-hero__summary">Consignments of photo voltaic panels from EU countries are being subject to particularly rigorous document inspection procedures at all ports of entry to the US. Onward transport has been delayed at San Francisco, New York, Delaware and Houston.</p>
               </div>
               <div class="column-one-third">
-                <a href="{% url 'report-barrier-step1' %}" class="button button-red button-large">Report a barrier</a>
+                <form action="{% url 'report-barrier-step1' %}" method="get">
+                  <input type="hidden" name="existing" value="true">
+                  <button type="submit" class="button button-red button-large">Start your report</button>
+                </form>
               </div>
             </div>
         </div>
@@ -48,8 +55,7 @@ which will help us to focus resources where they can be most effective. </p>
   <div class="outer-container">
     <div class="grid-container grid-container--inner">
       <div class="column-full">
-        <h2 class="h3">Why report?</h2>
-
+        <h2 class="h3">Why report the problem?</h2>
         <p>By reporting a trade barrier you can get the help you need, and also provide information which will help us to focus resources where they can be most effective.</p>
         <p>Our team will review your report and respond to it within five working days. </p>
     </div>
@@ -69,7 +75,10 @@ which will help us to focus resources where they can be most effective. </p>
         </ol>
         <p>We'll respect any needs you have for confidentiality, and we'll keep
 you updated on progress.</p>
-        <p><a href="{% url 'report-barrier-step1' %}" class="button button-red button-large float--right push--right">Report a barrier</a></p>
+        <form action="{% url 'report-barrier-step1' %}" method="get">
+          <input type="hidden" name="existing" value="true">
+          <button type="submit" class="button button-red button-large float--right push--right">Start your report</button>
+        </form>
       </div>
       <div class="column-one-half">
         <h2 class="h3">In an emergency</h2>
