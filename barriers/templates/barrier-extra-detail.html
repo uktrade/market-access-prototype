@@ -31,16 +31,17 @@ tr-home
           <li class="list-item">Take advice from other companies who’ve exported successfully to the same destination
           <li class="list-item">Make sure you’ve got the right insurance and are tracking your products in real time</p>
         </ul>
+        <p><strong>Watch this:</strong> How customs procedures can be used to obstruct trade, and the things exporters can do to find a way through.</p>
         <p>
-          <img src="{% static 'images/placeholder-video.png' %}" alt="" title="Video: how customs procedures can be used to obstruct trade, and the things exporters can do to find a way through."><br>
-          <span style="display: block; font-style: italic; text-align: center;">How customs procedures can be used to obstruct trade, and the things exporters can do to find a way through.</span></p>
-          <h2 class="h3">Case studies</h2>
-          <p><a href="{% url 'barriers-case-study' %}" aria-labelledby="barrier-title">An example of customs issues in Latin America</a></p>
-          <p><a href="{% url 'barriers-case-study' %}" aria-labelledby="barrier-title">An example of customs issues in Africa</a></p>
-          <p><a href="{% url 'barriers-case-study' %}" aria-labelledby="barrier-title">An example of customs issues in the Far East</a></p>
-          <hr>
+
+          <img src="{% static 'images/placeholder-video.png' %}" alt="" title="A video will be here"></p>
+          <p><a href="{% url 'barriers-case-study' %}" aria-labelledby="barrier-title">Case study 1: An example of customs issues in Latin America</a></p>
+          <p><a href="{% url 'barriers-case-study' %}" aria-labelledby="barrier-title">Case study 2: An example of customs issues in Africa</a></p>
+          <p><a href="{% url 'barriers-case-study' %}" aria-labelledby="barrier-title">Case study 3: An example of customs issues in the Far East</a></p>
           <p>The WTO sets out rules to ensure the fair, uniform and neutral valuation of goods for customs purposes. You can read them here.</p>
           <p>Learn about the wider opportunities and challenges of exporting in our country profiles.</p>
+
+          {% include 'components/reporting-cta.html' %}
       </div>
       <div class="column-one-third">
           <p><a href="{% url 'report-barrier' %}" class="button button-red" aria-labelledby="barrier-title">This barrier is affecting me</a></p>
