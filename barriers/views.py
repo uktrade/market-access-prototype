@@ -13,7 +13,7 @@ from .helpers import (
     store_companies_house_profile_in_session_and_validate,
     has_company
 )
-from .models import MarketAccessBarrier
+from .models import BarrierRecord, BarrierSource
 from .forms import BarrierCountryForm, ReportBarrierForm
 
 from sso.utils import SSOSignUpRequiredMixin
@@ -28,7 +28,7 @@ class HomeView(TemplateView):
         context['user_has_company'] = (
             user and has_company(user.session_id)
         )
-        context['num_barriers'] = MarketAccessBarrier.objects.count
+        context['num_barriers'] = BarrierRecord.objects.count
         return context
 
 class ReportBarrierView(FormView):
@@ -50,14 +50,14 @@ class ReportBarrierView(FormView):
 class ReportBarrierShowCurrentBarriersView(ListView):
     template_name = 'report-barrier-show-current-barriers.html'
     countries_affected = ''
-    model = MarketAccessBarrier
+    model = BarrierRecord
 
     def dispatch(self, request, *args, **kwargs):
         self.countries_affected = kwargs['countries']
         return super(ReportBarrierShowCurrentBarriersView, self).dispatch(*args, **kwargs)
 
     def get_queryset(self, *args, **kwargs):
-        return MarketAccessBarrier.objects.filter(notifying_member=self.countries_affected)
+        return BarrierRecord.objects.filter(notifying_member=self.countries_affected)
 
     def get_context_data(self, **kwargs):
         context_data =  super(ReportBarrierShowCurrentBarriersView, self).get_context_data(**kwargs)
@@ -85,18 +85,25 @@ class ReportBarrierFormView(FormView):
 class BarriersByCountryView(ListView):
     template_name = 'barriers-by-country.html'
     country = ''
-    model = MarketAccessBarrier
+    model = BarrierRecord
 
     def dispatch(self, request, *args, **kwargs):
         self.country = kwargs['country']
         return super(BarriersByCountryView, self).dispatch(request, *args, **kwargs)
 
     def get_queryset(self, *args, **kwargs):
-        return MarketAccessBarrier.objects.filter(notifying_member=self.country)
+        uk_source = BarrierSource.objects.get(short_name='UK')
+        return BarrierRecord.objects.filter(notifying_member=self.country).filter(barrier_source=uk_source)
 
     def get_context_data(self, **kwargs):
         context_data =  super(BarriersByCountryView, self).get_context_data(**kwargs)
         context_data['country'] = self.country
+        # "objects" will be UK barriers, make "wto_barriers"
+        # and "ec_barriers" contain the appropriate ones
+        wto_source = BarrierSource.objects.get(short_name='WTO')
+        ec_source = BarrierSource.objects.get(short_name='EC MADB')
+        context_data['wto_barriers'] = BarrierRecord.objects.filter(notifying_member=self.country).filter(barrier_source=wto_source)
+        context_data['ec_barriers'] = BarrierRecord.objects.filter(notifying_member=self.country).filter(barrier_source=ec_source)
         return context_data
 
 class PostGetTemplateView(TemplateView):
@@ -116,11 +123,11 @@ class PostGetTemplateView(TemplateView):
         return context
 
 class BarrierDetailView(DetailView):
-    model = MarketAccessBarrier
+    model = BarrierRecord
     template_name = 'barrier-detail.html'
 
 class BarrierDetailStaticView(TemplateView):
-    model = MarketAccessBarrier
+    model = BarrierRecord
     template_name = 'barrier-detail-static.html'
 
 class BarrierExtraDetailView(TemplateView):
@@ -128,47 +135,47 @@ class BarrierExtraDetailView(TemplateView):
     template_name = 'barrier-extra-detail.html'
 
 class BarrierSubscribeView(TemplateView):
-    model = MarketAccessBarrier
+    model = BarrierRecord
     template_name = 'barrier-subscribe.html'
 
 class BarriersGeneralInfoView(TemplateView):
-    model = MarketAccessBarrier
+    model = BarrierRecord
     template_name = 'barriers-general-info.html'
 
 class BarriersCaseStudyView(TemplateView):
-    model = MarketAccessBarrier
+    model = BarrierRecord
     template_name = 'barriers-case-study.html'
 
 class ReportBarrierStep1View(PostGetTemplateView):
-    model = MarketAccessBarrier
+    model = BarrierRecord
     template_name = 'report-barrier-step1.html'
 
 class ReportBarrierStep2View(PostGetTemplateView):
-    model = MarketAccessBarrier
+    model = BarrierRecord
     template_name = 'report-barrier-step2.html'
 
 class ReportBarrierStep3View(PostGetTemplateView):
-    model = MarketAccessBarrier
+    model = BarrierRecord
     template_name = 'report-barrier-step3.html'
 
 class ReportBarrierStep4View(PostGetTemplateView):
-    model = MarketAccessBarrier
+    model = BarrierRecord
     template_name = 'report-barrier-step4.html'
 
 class ReportBarrierStep5View(PostGetTemplateView):
-    model = MarketAccessBarrier
+    model = BarrierRecord
     template_name = 'report-barrier-step5.html'
 
 class ReportBarrierStep6View(PostGetTemplateView):
-    model = MarketAccessBarrier
+    model = BarrierRecord
     template_name = 'report-barrier-step6.html'
 
 class ReportBarrierRegisterView(PostGetTemplateView):
-    model = MarketAccessBarrier
+    model = BarrierRecord
     template_name = 'report-barrier-register.html'
 
 class RequestFastTrackView(TemplateView):
-    model = MarketAccessBarrier
+    model = BarrierRecord
     template_name = 'request-fast-track.html'
 
 class ExampleSummaryView(TemplateView):
@@ -185,9 +192,9 @@ class CompaniesHouseRequestView(TemplateView):
         return super(CompaniesHouseRequestView, self).dispatch(request, *args, **kwargs)
 
     def render_to_response(self, context, **kwargs):
-        url = ('https://api.companieshouse.gov.uk/search/companies'
-                         '?items_per_page=10&q={}'.format(self.search_company))
-        api_response = requests.get(url,
+        api_response = requests.get('https://api.companieshouse.gov.uk/search/companies'
+                         '?q={}'
+                         .format(self.search_company),
                          auth=(settings.COMPANIES_HOUSE_API_KEY, ''))
         kwargs['content_type'] = 'application/json'
         return HttpResponse(api_response.text, **kwargs)

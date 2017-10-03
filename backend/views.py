@@ -1,10 +1,10 @@
 from django.shortcuts import render
 from django.views.generic import ListView, TemplateView
 
-from barriers.models import MarketAccessBarrier
+from barriers.models import BarrierReport
 
 class DashboardView(ListView):
-    model = MarketAccessBarrier
+    model = BarrierReport
     template_name = 'backend/dashboard.html'
     pass
 

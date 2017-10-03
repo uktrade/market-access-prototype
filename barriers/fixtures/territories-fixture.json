@@ -1,0 +1,1029 @@
+[
+    {
+        "pk": 500,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "Aruba",
+            "created_date": "2016-12-15T12:15:07Z",
+            "updated_date": "2017-09-28 11:23:06",
+            "code": "AW",
+            "official_name": "Aruba",
+            "govuk_index_entry_code": "TERRITORY-9",
+            "country_or_territory": "territory"
+        }
+    },
+    {
+        "pk": 501,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "Melilla",
+            "created_date": "2016-12-15T12:15:07Z",
+            "updated_date": "2017-09-28 11:23:06",
+            "code": "ES-ML",
+            "official_name": "Melilla",
+            "govuk_index_entry_code": "TERRITORY-47",
+            "country_or_territory": "territory"
+        }
+    },
+    {
+        "pk": 502,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "Palmyra Atoll",
+            "created_date": "2016-12-15T12:15:07Z",
+            "updated_date": "2017-09-28 11:23:06",
+            "code": "UM-95",
+            "official_name": "Palmyra Atoll",
+            "govuk_index_entry_code": "TERRITORY-56",
+            "country_or_territory": "territory"
+        }
+    },
+    {
+        "pk": 503,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "British Antarctic Territory",
+            "created_date": "2016-12-15T12:15:07Z",
+            "updated_date": "2017-09-28 11:23:06",
+            "code": "BAT",
+            "official_name": "British Antarctic Territory",
+            "govuk_index_entry_code": "TERRITORY-14",
+            "country_or_territory": "territory"
+        }
+    },
+    {
+        "pk": 504,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "Bermuda",
+            "created_date": "2016-12-15T12:15:07Z",
+            "updated_date": "2017-09-28 11:23:06",
+            "code": "BM",
+            "official_name": "Bermuda",
+            "govuk_index_entry_code": "TERRITORY-11",
+            "country_or_territory": "territory"
+        }
+    },
+    {
+        "pk": 505,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "Ascension",
+            "created_date": "2016-12-15T12:15:07Z",
+            "updated_date": "2017-09-28 11:23:06",
+            "code": "SH-AC",
+            "official_name": "Ascension Island",
+            "govuk_index_entry_code": "TERRITORY-2",
+            "country_or_territory": "territory"
+        }
+    },
+    {
+        "pk": 506,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "Mayotte",
+            "created_date": "2016-12-15T12:15:07Z",
+            "updated_date": "2017-09-28 11:23:06",
+            "code": "YT",
+            "official_name": "Mayotte",
+            "govuk_index_entry_code": "TERRITORY-46",
+            "country_or_territory": "territory"
+        }
+    },
+    {
+        "pk": 507,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "Saint Helena",
+            "created_date": "2016-12-15T12:15:07Z",
+            "updated_date": "2017-09-28 11:23:06",
+            "code": "SH-HL",
+            "official_name": "Saint Helena",
+            "govuk_index_entry_code": "TERRITORY-63",
+            "country_or_territory": "territory"
+        }
+    },
+    {
+        "pk": 508,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "Niue",
+            "created_date": "2016-12-15T12:15:07Z",
+            "updated_date": "2017-09-28 11:23:06",
+            "code": "NU",
+            "official_name": "Niue",
+            "govuk_index_entry_code": "TERRITORY-52",
+            "country_or_territory": "territory"
+        }
+    },
+    {
+        "pk": 509,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "Umm al-Quwain",
+            "created_date": "2016-12-15T12:15:07Z",
+            "updated_date": "2017-09-28 11:23:06",
+            "code": "AE-UQ",
+            "official_name": "Emirate of Umm al-Quwain",
+            "govuk_index_entry_code": "TERRITORY-75",
+            "country_or_territory": "territory"
+        }
+    },
+    {
+        "pk": 510,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "South Georgia and South Sandwich Islands",
+            "created_date": "2016-12-15T12:15:07Z",
+            "updated_date": "2017-09-28 11:23:06",
+            "code": "GS",
+            "official_name": "South Georgia and the South Sandwich Islands",
+            "govuk_index_entry_code": "TERRITORY-69",
+            "country_or_territory": "territory"
+        }
+    },
+    {
+        "pk": 511,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "Saint-Martin (French part)",
+            "created_date": "2016-12-15T12:15:07Z",
+            "updated_date": "2017-09-28 11:23:06",
+            "code": "MF",
+            "official_name": "Collectivity of Saint Martin",
+            "govuk_index_entry_code": "TERRITORY-64",
+            "country_or_territory": "territory"
+        }
+    },
+    {
+        "pk": 512,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "Greenland",
+            "created_date": "2016-12-15T12:15:07Z",
+            "updated_date": "2017-09-28 11:23:06",
+            "code": "GL",
+            "official_name": "Greenland",
+            "govuk_index_entry_code": "TERRITORY-32",
+            "country_or_territory": "territory"
+        }
+    },
+    {
+        "pk": 513,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "Gibraltar",
+            "created_date": "2016-12-15T12:15:07Z",
+            "updated_date": "2017-09-28 11:23:06",
+            "code": "GI",
+            "official_name": "Gibraltar",
+            "govuk_index_entry_code": "TERRITORY-31",
+            "country_or_territory": "territory"
+        }
+    },
+    {
+        "pk": 514,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "Isle of Man",
+            "created_date": "2016-12-15T12:15:07Z",
+            "updated_date": "2017-09-28 11:23:06",
+            "code": "IM",
+            "official_name": "Isle of Man",
+            "govuk_index_entry_code": "TERRITORY-39",
+            "country_or_territory": "territory"
+        }
+    },
+    {
+        "pk": 515,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "Anguilla",
+            "created_date": "2016-12-15T12:15:07Z",
+            "updated_date": "2017-09-28 11:23:06",
+            "code": "AI",
+            "official_name": "Anguilla",
+            "govuk_index_entry_code": "TERRITORY-7",
+            "country_or_territory": "territory"
+        }
+    },
+    {
+        "pk": 516,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "Pitcairn, Henderson, Ducie and Oeno Islands",
+            "created_date": "2016-12-15T12:15:07Z",
+            "updated_date": "2017-09-28 11:23:06",
+            "code": "PN",
+            "official_name": "Pitcairn, Henderson, Ducie and Oeno Islands",
+            "govuk_index_entry_code": "TERRITORY-57",
+            "country_or_territory": "territory"
+        }
+    },
+    {
+        "pk": 517,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "Midway Islands",
+            "created_date": "2016-12-15T12:15:07Z",
+            "updated_date": "2017-09-28 11:23:06",
+            "code": "UM-71",
+            "official_name": "Midway Islands",
+            "govuk_index_entry_code": "TERRITORY-48",
+            "country_or_territory": "territory"
+        }
+    },
+    {
+        "pk": 518,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "\u00c5land Islands",
+            "created_date": "2016-12-15T12:15:07Z",
+            "updated_date": "2017-09-28 11:23:06",
+            "code": "AX",
+            "official_name": "\u00c5land Islands",
+            "govuk_index_entry_code": "TERRITORY-5",
+            "country_or_territory": "territory"
+        }
+    },
+    {
+        "pk": 519,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "Bouvet Island",
+            "created_date": "2016-12-15T12:15:07Z",
+            "updated_date": "2017-09-28 11:23:06",
+            "code": "BV",
+            "official_name": "Bouvet Island",
+            "govuk_index_entry_code": "TERRITORY-13",
+            "country_or_territory": "territory"
+        }
+    },
+    {
+        "pk": 520,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "Guernsey",
+            "created_date": "2016-12-15T12:15:07Z",
+            "updated_date": "2017-09-28 11:23:06",
+            "code": "GG",
+            "official_name": "Bailiwick of Guernsey",
+            "govuk_index_entry_code": "TERRITORY-35",
+            "country_or_territory": "territory"
+        }
+    },
+    {
+        "pk": 521,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "Sint Eustatius",
+            "created_date": "2016-12-15T12:15:07Z",
+            "updated_date": "2017-09-28 11:23:06",
+            "code": "BQ-SE",
+            "official_name": "Sint Eustatius",
+            "govuk_index_entry_code": "TERRITORY-67",
+            "country_or_territory": "territory"
+        }
+    },
+    {
+        "pk": 522,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "Tokelau",
+            "created_date": "2016-12-15T12:15:07Z",
+            "updated_date": "2017-09-28 11:23:06",
+            "code": "TK",
+            "official_name": "Tokelau",
+            "govuk_index_entry_code": "TERRITORY-72",
+            "country_or_territory": "territory"
+        }
+    },
+    {
+        "pk": 523,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "Guam",
+            "created_date": "2016-12-15T12:15:07Z",
+            "updated_date": "2017-09-28 11:23:06",
+            "code": "GU",
+            "official_name": "Territory of Guam",
+            "govuk_index_entry_code": "TERRITORY-34",
+            "country_or_territory": "territory"
+        }
+    },
+    {
+        "pk": 524,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "Saint Pierre and Miquelon",
+            "created_date": "2016-12-15T12:15:07Z",
+            "updated_date": "2017-09-28 11:23:06",
+            "code": "PM",
+            "official_name": "Saint Pierre and Miquelon",
+            "govuk_index_entry_code": "TERRITORY-65",
+            "country_or_territory": "territory"
+        }
+    },
+    {
+        "pk": 525,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "Guadeloupe",
+            "created_date": "2016-12-15T12:15:07Z",
+            "updated_date": "2017-09-28 11:23:06",
+            "code": "GP",
+            "official_name": "Guadeloupe",
+            "govuk_index_entry_code": "TERRITORY-33",
+            "country_or_territory": "territory"
+        }
+    },
+    {
+        "pk": 526,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "Kingman Reef",
+            "created_date": "2016-12-15T12:15:07Z",
+            "updated_date": "2017-09-28 11:23:06",
+            "code": "UM-89",
+            "official_name": "Kingman Reef",
+            "govuk_index_entry_code": "TERRITORY-43",
+            "country_or_territory": "territory"
+        }
+    },
+    {
+        "pk": 527,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "Faroe Islands",
+            "created_date": "2016-12-15T12:15:07Z",
+            "updated_date": "2017-09-28 11:23:06",
+            "code": "FO",
+            "official_name": "Faroe Islands",
+            "govuk_index_entry_code": "TERRITORY-26",
+            "country_or_territory": "territory"
+        }
+    },
+    {
+        "pk": 528,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "Montserrat",
+            "created_date": "2016-12-15T12:15:07Z",
+            "updated_date": "2017-09-28 11:23:06",
+            "code": "MS",
+            "official_name": "Montserrat",
+            "govuk_index_entry_code": "TERRITORY-49",
+            "country_or_territory": "territory"
+        }
+    },
+    {
+        "pk": 529,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "Abu Dhabi",
+            "created_date": "2016-12-15T12:15:07Z",
+            "updated_date": "2017-09-28 11:23:06",
+            "code": "AE-AZ",
+            "official_name": "Emirate of Abu Dhabi",
+            "govuk_index_entry_code": "TERRITORY-1",
+            "country_or_territory": "territory"
+        }
+    },
+    {
+        "pk": 530,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "Falkland Islands",
+            "created_date": "2016-12-15T12:15:07Z",
+            "updated_date": "2017-09-28 11:23:06",
+            "code": "FK",
+            "official_name": "Falkland Islands",
+            "govuk_index_entry_code": "TERRITORY-25",
+            "country_or_territory": "territory"
+        }
+    },
+    {
+        "pk": 531,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "Tristan da Cunha",
+            "created_date": "2016-12-15T12:15:07Z",
+            "updated_date": "2017-09-28 11:23:06",
+            "code": "SH-TA",
+            "official_name": "Tristan da Cunha",
+            "govuk_index_entry_code": "TERRITORY-73",
+            "country_or_territory": "territory"
+        }
+    },
+    {
+        "pk": 532,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "British Virgin Islands",
+            "created_date": "2016-12-15T12:15:07Z",
+            "updated_date": "2017-09-28 11:23:06",
+            "code": "VG",
+            "official_name": "The Virgin Islands",
+            "govuk_index_entry_code": "TERRITORY-16",
+            "country_or_territory": "territory"
+        }
+    },
+    {
+        "pk": 533,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "Ajman",
+            "created_date": "2016-12-15T12:15:07Z",
+            "updated_date": "2017-09-28 11:23:06",
+            "code": "AE-AJ",
+            "official_name": "Emirate of Ajman",
+            "govuk_index_entry_code": "TERRITORY-3",
+            "country_or_territory": "territory"
+        }
+    },
+    {
+        "pk": 534,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "Howland Island",
+            "created_date": "2016-12-15T12:15:07Z",
+            "updated_date": "2017-09-28 11:23:06",
+            "code": "UM-84",
+            "official_name": "Howland Island",
+            "govuk_index_entry_code": "TERRITORY-38",
+            "country_or_territory": "territory"
+        }
+    },
+    {
+        "pk": 535,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "Jersey",
+            "created_date": "2016-12-15T12:15:07Z",
+            "updated_date": "2017-09-28 11:23:06",
+            "code": "JE",
+            "official_name": "Bailiwick of Jersey",
+            "govuk_index_entry_code": "TERRITORY-41",
+            "country_or_territory": "territory"
+        }
+    },
+    {
+        "pk": 536,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "Bonaire",
+            "created_date": "2016-12-15T12:15:07Z",
+            "updated_date": "2017-09-28 11:23:06",
+            "code": "BQ-BO",
+            "official_name": "Bonaire",
+            "govuk_index_entry_code": "TERRITORY-12",
+            "country_or_territory": "territory"
+        }
+    },
+    {
+        "pk": 537,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "Western Sahara",
+            "created_date": "2016-12-15T12:15:07Z",
+            "updated_date": "2017-09-28 11:23:06",
+            "code": "EH",
+            "official_name": "Western Sahara",
+            "govuk_index_entry_code": "TERRITORY-79",
+            "country_or_territory": "territory"
+        }
+    },
+    {
+        "pk": 538,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "Heard Island and McDonald Islands",
+            "created_date": "2016-12-15T12:15:07Z",
+            "updated_date": "2017-09-28 11:23:06",
+            "code": "HM",
+            "official_name": "Territory of Heard Island and McDonald Islands",
+            "govuk_index_entry_code": "TERRITORY-36",
+            "country_or_territory": "territory"
+        }
+    },
+    {
+        "pk": 539,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "Svalbard and Jan Mayen",
+            "created_date": "2016-12-15T12:15:07Z",
+            "updated_date": "2017-09-28 11:23:06",
+            "code": "SJ",
+            "official_name": "Svalbard and Jan Mayen",
+            "govuk_index_entry_code": "TERRITORY-70",
+            "country_or_territory": "territory"
+        }
+    },
+    {
+        "pk": 540,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "Saint Barth\u00e9lemy",
+            "created_date": "2016-12-15T12:15:07Z",
+            "updated_date": "2017-09-28 11:23:06",
+            "code": "BL",
+            "official_name": "Saint Barth\u00e9lemy",
+            "govuk_index_entry_code": "TERRITORY-62",
+            "country_or_territory": "territory"
+        }
+    },
+    {
+        "pk": 541,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "Dhekelia",
+            "created_date": "2016-12-15T12:15:07Z",
+            "updated_date": "2017-09-28 11:23:06",
+            "code": "XXD",
+            "official_name": "Sovereign Base Areas of Akrotiri and Dhekelia",
+            "govuk_index_entry_code": "TERRITORY-23",
+            "country_or_territory": "territory"
+        }
+    },
+    {
+        "pk": 542,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "French Guiana",
+            "created_date": "2016-12-15T12:15:07Z",
+            "updated_date": "2017-09-28 11:23:06",
+            "code": "GF",
+            "official_name": "French Guiana",
+            "govuk_index_entry_code": "TERRITORY-27",
+            "country_or_territory": "territory"
+        }
+    },
+    {
+        "pk": 543,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "United States Virgin Islands",
+            "created_date": "2016-12-15T12:15:07Z",
+            "updated_date": "2017-09-28 11:23:06",
+            "code": "VI",
+            "official_name": "Virgin Islands of the United States",
+            "govuk_index_entry_code": "TERRITORY-76",
+            "country_or_territory": "territory"
+        }
+    },
+    {
+        "pk": 544,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "Occupied Palestinian Territories",
+            "created_date": "2016-12-15T12:15:07Z",
+            "updated_date": "2017-09-28 11:23:06",
+            "code": "PS",
+            "official_name": "The Occupied Palestinian Territories",
+            "govuk_index_entry_code": "TERRITORY-55",
+            "country_or_territory": "territory"
+        }
+    },
+    {
+        "pk": 545,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "Macao",
+            "created_date": "2016-12-15T12:15:07Z",
+            "updated_date": "2017-09-28 11:23:06",
+            "code": "MO",
+            "official_name": "Macao Special Administrative Region",
+            "govuk_index_entry_code": "TERRITORY-44",
+            "country_or_territory": "territory"
+        }
+    },
+    {
+        "pk": 546,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "Wallis and Futuna",
+            "created_date": "2016-12-15T12:15:07Z",
+            "updated_date": "2017-09-28 11:23:06",
+            "code": "WF",
+            "official_name": "Territory of the Wallis and Futuna Islands",
+            "govuk_index_entry_code": "TERRITORY-78",
+            "country_or_territory": "territory"
+        }
+    },
+    {
+        "pk": 547,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "French Southern Territories",
+            "created_date": "2016-12-15T12:15:07Z",
+            "updated_date": "2017-09-28 11:23:06",
+            "code": "TF",
+            "official_name": "French Southern Territories",
+            "govuk_index_entry_code": "TERRITORY-29",
+            "country_or_territory": "territory"
+        }
+    },
+    {
+        "pk": 548,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "Fujairah",
+            "created_date": "2016-12-15T12:15:07Z",
+            "updated_date": "2017-09-28 11:23:06",
+            "code": "AE-FU",
+            "official_name": "Emirate of Fujairah",
+            "govuk_index_entry_code": "TERRITORY-30",
+            "country_or_territory": "territory"
+        }
+    },
+    {
+        "pk": 549,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "Martinique",
+            "created_date": "2016-12-15T12:15:07Z",
+            "updated_date": "2017-09-28 11:23:06",
+            "code": "MQ",
+            "official_name": "Martinique",
+            "govuk_index_entry_code": "TERRITORY-45",
+            "country_or_territory": "territory"
+        }
+    },
+    {
+        "pk": 550,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "French Polynesia",
+            "created_date": "2016-12-15T12:15:07Z",
+            "updated_date": "2017-09-28 11:23:06",
+            "code": "PF",
+            "official_name": "French Polynesia",
+            "govuk_index_entry_code": "TERRITORY-28",
+            "country_or_territory": "territory"
+        }
+    },
+    {
+        "pk": 551,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "Sint Maarten (Dutch part)",
+            "created_date": "2016-12-15T12:15:07Z",
+            "updated_date": "2017-09-28 11:23:06",
+            "code": "SX",
+            "official_name": "Sint Maarten",
+            "govuk_index_entry_code": "TERRITORY-68",
+            "country_or_territory": "territory"
+        }
+    },
+    {
+        "pk": 552,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "Norfolk Island",
+            "created_date": "2016-12-15T12:15:07Z",
+            "updated_date": "2017-09-28 11:23:06",
+            "code": "NF",
+            "official_name": "Territory of Norfolk Island",
+            "govuk_index_entry_code": "TERRITORY-53",
+            "country_or_territory": "territory"
+        }
+    },
+    {
+        "pk": 553,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "Cook Islands",
+            "created_date": "2016-12-15T12:15:07Z",
+            "updated_date": "2017-09-28 11:23:06",
+            "code": "CK",
+            "official_name": "Cook Islands",
+            "govuk_index_entry_code": "TERRITORY-20",
+            "country_or_territory": "territory"
+        }
+    },
+    {
+        "pk": 554,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "American Samoa",
+            "created_date": "2016-12-15T12:15:07Z",
+            "updated_date": "2017-09-28 11:23:06",
+            "code": "AS",
+            "official_name": "Territory of American Samoa",
+            "govuk_index_entry_code": "TERRITORY-6",
+            "country_or_territory": "territory"
+        }
+    },
+    {
+        "pk": 555,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "Cayman Islands",
+            "created_date": "2016-12-15T12:15:07Z",
+            "updated_date": "2017-09-28 11:23:06",
+            "code": "KY",
+            "official_name": "Cayman Islands",
+            "govuk_index_entry_code": "TERRITORY-17",
+            "country_or_territory": "territory"
+        }
+    },
+    {
+        "pk": 556,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "Navassa Island",
+            "created_date": "2016-12-15T12:15:07Z",
+            "updated_date": "2017-09-28 11:23:06",
+            "code": "UM-76",
+            "official_name": "Navassa Island",
+            "govuk_index_entry_code": "TERRITORY-50",
+            "country_or_territory": "territory"
+        }
+    },
+    {
+        "pk": 557,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "Wake Island",
+            "created_date": "2016-12-15T12:15:07Z",
+            "updated_date": "2017-09-28 11:23:06",
+            "code": "UM-79",
+            "official_name": "Wake Island",
+            "govuk_index_entry_code": "TERRITORY-77",
+            "country_or_territory": "territory"
+        }
+    },
+    {
+        "pk": 558,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "R\u00e9union",
+            "created_date": "2016-12-15T12:15:07Z",
+            "updated_date": "2017-09-28 11:23:06",
+            "code": "RE",
+            "official_name": "R\u00e9union",
+            "govuk_index_entry_code": "TERRITORY-59",
+            "country_or_territory": "territory"
+        }
+    },
+    {
+        "pk": 559,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "Sharjah",
+            "created_date": "2016-12-15T12:15:07Z",
+            "updated_date": "2017-09-28 11:23:06",
+            "code": "AE-SH",
+            "official_name": "Emirate of Sharjah",
+            "govuk_index_entry_code": "TERRITORY-66",
+            "country_or_territory": "territory"
+        }
+    },
+    {
+        "pk": 560,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "Christmas Island",
+            "created_date": "2016-12-15T12:15:07Z",
+            "updated_date": "2017-09-28 11:23:06",
+            "code": "CX",
+            "official_name": "Territory of Christmas Island",
+            "govuk_index_entry_code": "TERRITORY-18",
+            "country_or_territory": "territory"
+        }
+    },
+    {
+        "pk": 561,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "Jarvis Island",
+            "created_date": "2016-12-15T12:15:07Z",
+            "updated_date": "2017-09-28 11:23:06",
+            "code": "UM-86",
+            "official_name": "Jarvis Island",
+            "govuk_index_entry_code": "TERRITORY-40",
+            "country_or_territory": "territory"
+        }
+    },
+    {
+        "pk": 562,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "Ceuta",
+            "created_date": "2016-12-16T13:10:16Z",
+            "updated_date": "2017-09-28 11:23:06",
+            "code": "ES-CE",
+            "official_name": "Ceuta",
+            "govuk_index_entry_code": "TERRITORY-80",
+            "country_or_territory": "territory"
+        }
+    },
+    {
+        "pk": 563,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "New Caledonia",
+            "created_date": "2016-12-15T12:15:07Z",
+            "updated_date": "2017-09-28 11:23:06",
+            "code": "NC",
+            "official_name": "New Caledonia",
+            "govuk_index_entry_code": "TERRITORY-51",
+            "country_or_territory": "territory"
+        }
+    },
+    {
+        "pk": 564,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "Akrotiri",
+            "created_date": "2016-12-15T12:15:07Z",
+            "updated_date": "2017-09-28 11:23:06",
+            "code": "XQZ",
+            "official_name": "Sovereign Base Areas of Akrotiri and Dhekelia",
+            "govuk_index_entry_code": "TERRITORY-4",
+            "country_or_territory": "territory"
+        }
+    },
+    {
+        "pk": 565,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "Saba",
+            "created_date": "2016-12-15T12:15:07Z",
+            "updated_date": "2017-09-28 11:23:06",
+            "code": "BQ-SA",
+            "official_name": "Saba",
+            "govuk_index_entry_code": "TERRITORY-61",
+            "country_or_territory": "territory"
+        }
+    },
+    {
+        "pk": 566,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "Taiwan",
+            "created_date": "2016-12-15T12:15:07Z",
+            "updated_date": "2017-09-28 11:23:06",
+            "code": "TW",
+            "official_name": "Taiwan",
+            "govuk_index_entry_code": "TERRITORY-71",
+            "country_or_territory": "territory"
+        }
+    },
+    {
+        "pk": 567,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "Cura\u00e7ao",
+            "created_date": "2016-12-15T12:15:07Z",
+            "updated_date": "2017-09-28 11:23:06",
+            "code": "CW",
+            "official_name": "Country of Cura\u00e7ao",
+            "govuk_index_entry_code": "TERRITORY-22",
+            "country_or_territory": "territory"
+        }
+    },
+    {
+        "pk": 568,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "Baker Island",
+            "created_date": "2016-12-15T12:15:07Z",
+            "updated_date": "2017-09-28 11:23:06",
+            "code": "UM-81",
+            "official_name": "Baker Island",
+            "govuk_index_entry_code": "TERRITORY-10",
+            "country_or_territory": "territory"
+        }
+    },
+    {
+        "pk": 569,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "Dubai",
+            "created_date": "2016-12-15T12:15:07Z",
+            "updated_date": "2017-09-28 11:23:06",
+            "code": "AE-DU",
+            "official_name": "Emirate of Dubai",
+            "govuk_index_entry_code": "TERRITORY-24",
+            "country_or_territory": "territory"
+        }
+    },
+    {
+        "pk": 570,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "Antarctica",
+            "created_date": "2016-12-15T12:15:07Z",
+            "updated_date": "2017-09-28 11:23:06",
+            "code": "AQ",
+            "official_name": "Antarctica",
+            "govuk_index_entry_code": "TERRITORY-8",
+            "country_or_territory": "territory"
+        }
+    },
+    {
+        "pk": 571,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "Cocos (Keeling) Islands",
+            "created_date": "2016-12-15T12:15:07Z",
+            "updated_date": "2017-09-28 11:23:06",
+            "code": "CC",
+            "official_name": "Territory of the Cocos (Keeling) Islands",
+            "govuk_index_entry_code": "TERRITORY-19",
+            "country_or_territory": "territory"
+        }
+    },
+    {
+        "pk": 572,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "Johnston Atoll",
+            "created_date": "2016-12-15T12:15:07Z",
+            "updated_date": "2017-09-28 11:23:06",
+            "code": "UM-67",
+            "official_name": "Johnston Atoll",
+            "govuk_index_entry_code": "TERRITORY-42",
+            "country_or_territory": "territory"
+        }
+    },
+    {
+        "pk": 573,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "Northern Mariana Islands",
+            "created_date": "2016-12-15T12:15:07Z",
+            "updated_date": "2017-09-28 11:23:06",
+            "code": "MP",
+            "official_name": "Commonwealth of the Northern Mariana Islands",
+            "govuk_index_entry_code": "TERRITORY-54",
+            "country_or_territory": "territory"
+        }
+    },
+    {
+        "pk": 574,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "Hong Kong",
+            "created_date": "2016-12-15T12:15:07Z",
+            "updated_date": "2017-09-28 11:23:06",
+            "code": "HK",
+            "official_name": "Hong Kong Special Administrative Region",
+            "govuk_index_entry_code": "TERRITORY-37",
+            "country_or_territory": "territory"
+        }
+    },
+    {
+        "pk": 575,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "Turks and Caicos Islands",
+            "created_date": "2016-12-15T12:15:07Z",
+            "updated_date": "2017-09-28 11:23:06",
+            "code": "TC",
+            "official_name": "Turks and Caicos Islands",
+            "govuk_index_entry_code": "TERRITORY-74",
+            "country_or_territory": "territory"
+        }
+    },
+    {
+        "pk": 576,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "Puerto Rico",
+            "created_date": "2016-12-15T12:15:07Z",
+            "updated_date": "2017-09-28 11:23:06",
+            "code": "PR",
+            "official_name": "Commonwealth of Puerto Rico",
+            "govuk_index_entry_code": "TERRITORY-58",
+            "country_or_territory": "territory"
+        }
+    },
+    {
+        "pk": 577,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "British Indian Ocean Territory",
+            "created_date": "2016-12-15T12:15:07Z",
+            "updated_date": "2017-09-28 11:23:06",
+            "code": "IO",
+            "official_name": "The British Indian Ocean Territory",
+            "govuk_index_entry_code": "TERRITORY-15",
+            "country_or_territory": "territory"
+        }
+    },
+    {
+        "pk": 578,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "Ras al-Khaimah",
+            "created_date": "2016-12-15T12:15:07Z",
+            "updated_date": "2017-09-28 11:23:06",
+            "code": "AE-RK",
+            "official_name": "Emirate of Ras al-Khaimah",
+            "govuk_index_entry_code": "TERRITORY-60",
+            "country_or_territory": "territory"
+        }
+    }
+]

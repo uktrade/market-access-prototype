@@ -25,7 +25,7 @@ from .views import (
 
 urlpatterns = [
     url(r'^$', HomeView.as_view(), name='home'),
-    url(r'^barriers/countries/(?P<country>\w+)',
+    url(r'^barriers/countries/(?P<country>[\w ]+)',
         BarriersByCountryView.as_view(),
         name='barriers-by-country'
     ),

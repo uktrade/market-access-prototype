@@ -4,7 +4,7 @@
 
 from elasticsearch_dsl import analyzer  # tokenizer, filter, stemmer
 from django_elasticsearch_dsl import DocType, Index, fields
-from .models import MarketAccessBarrier
+from .models import BarrierRecord
 
 # Name of the Elasticsearch index
 case = Index('market-access-barriers-demo')
@@ -27,32 +27,14 @@ custom_analyzer = analyzer(
 @case.doc_type
 class CaseDocument(DocType):
 
-    # remember Django gives us an 'id' primary key by default, we don't have to define one
-    wto_symbol = fields.TextField()
-    # turn this into a country lookup code?? make it one:many?
-    notifying_member = fields.TextField()
-    title = fields.TextField()
-    description = fields.TextField()
-    distribution_date = fields.DateField()
-    products_text = fields.TextField()
-    product_codes = fields.TextField()
-    objectives = fields.TextField()
-    # SPS only
-    keywords = fields.TextField()
-    # SPS only
-    regions_affected = fields.TextField()
-    comments_due_date = fields.TextField()
-    notification_type = fields.TextField()
-    # don't need to index this?
-    # document_link = fields.TextField()
-    # wto_link = fields.TextField()
-
     class Meta:
-        model = MarketAccessBarrier  # The model associate with this DocType
+        model = BarrierRecord  # The model associate with this DocType
         # The fields of the model you want to be indexed in Elasticsearch
-        #fields = [
-        #    # The only one left that isn't a custom field!
-        #]
+        fields = [
+            'title', 'description',
+            # actually these should be facets
+            'products_text', 'sectors_text',
+        ]
 
         # To ignore auto updating of Elasticsearch when a model is save
         # or delete
