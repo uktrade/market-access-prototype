@@ -1,0 +1,2537 @@
+[
+    {
+        "pk": 1,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "Serbia",
+            "created_date": "2016-04-05T13:23:05Z",
+            "updated_date": "2017-09-28 11:21:22",
+            "code": "RS",
+            "official_name": "The Republic of Serbia",
+            "govuk_index_entry_code": "COUNTRY-160",
+            "country_or_territory": "country"
+        }
+    },
+    {
+        "pk": 2,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "Congo",
+            "created_date": "2016-04-05T13:23:05Z",
+            "updated_date": "2017-09-28 11:21:22",
+            "code": "CG",
+            "official_name": "The Republic of the Congo",
+            "govuk_index_entry_code": "COUNTRY-46",
+            "country_or_territory": "country"
+        }
+    },
+    {
+        "pk": 3,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "Chile",
+            "created_date": "2016-04-05T13:23:05Z",
+            "updated_date": "2017-09-28 11:21:22",
+            "code": "CL",
+            "official_name": "The Republic of Chile",
+            "govuk_index_entry_code": "COUNTRY-42",
+            "country_or_territory": "country"
+        }
+    },
+    {
+        "pk": 4,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "Eritrea",
+            "created_date": "2016-04-05T13:23:05Z",
+            "updated_date": "2017-09-28 11:21:22",
+            "code": "ER",
+            "official_name": "The State of Eritrea",
+            "govuk_index_entry_code": "COUNTRY-62",
+            "country_or_territory": "country"
+        }
+    },
+    {
+        "pk": 5,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "South Korea",
+            "created_date": "2016-04-05T13:23:05Z",
+            "updated_date": "2017-09-28 11:21:22",
+            "code": "KR",
+            "official_name": "The Republic of Korea",
+            "govuk_index_entry_code": "COUNTRY-98",
+            "country_or_territory": "country"
+        }
+    },
+    {
+        "pk": 6,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "Marshall Islands",
+            "created_date": "2016-04-05T13:23:05Z",
+            "updated_date": "2017-09-28 11:21:22",
+            "code": "MH",
+            "official_name": "The Republic of the Marshall Islands",
+            "govuk_index_entry_code": "COUNTRY-118",
+            "country_or_territory": "country"
+        }
+    },
+    {
+        "pk": 7,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "Zambia",
+            "created_date": "2016-04-05T13:23:05Z",
+            "updated_date": "2017-09-28 11:21:22",
+            "code": "ZM",
+            "official_name": "The Republic of Zambia",
+            "govuk_index_entry_code": "COUNTRY-199",
+            "country_or_territory": "country"
+        }
+    },
+    {
+        "pk": 8,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "Sri Lanka",
+            "created_date": "2016-04-05T13:23:05Z",
+            "updated_date": "2017-09-28 11:21:22",
+            "code": "LK",
+            "official_name": "The Democratic Socialist Republic of Sri Lanka",
+            "govuk_index_entry_code": "COUNTRY-171",
+            "country_or_territory": "country"
+        }
+    },
+    {
+        "pk": 9,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "The Bahamas",
+            "created_date": "2016-04-05T13:23:05Z",
+            "updated_date": "2017-09-28 11:21:22",
+            "code": "BS",
+            "official_name": "The Commonwealth of The Bahamas",
+            "govuk_index_entry_code": "COUNTRY-203",
+            "country_or_territory": "country"
+        }
+    },
+    {
+        "pk": 10,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "East Timor",
+            "created_date": "2016-04-05T13:23:05Z",
+            "updated_date": "2017-09-28 11:21:22",
+            "code": "TL",
+            "official_name": "The Democratic Republic of Timor-Leste",
+            "govuk_index_entry_code": "COUNTRY-57",
+            "country_or_territory": "country"
+        }
+    },
+    {
+        "pk": 11,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "Cyprus",
+            "created_date": "2016-04-05T13:23:05Z",
+            "updated_date": "2017-09-28 11:21:22",
+            "code": "CY",
+            "official_name": "The Republic of Cyprus",
+            "govuk_index_entry_code": "COUNTRY-51",
+            "country_or_territory": "country"
+        }
+    },
+    {
+        "pk": 12,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "Jamaica",
+            "created_date": "2016-04-05T13:23:05Z",
+            "updated_date": "2017-09-28 11:21:22",
+            "code": "JM",
+            "official_name": "Jamaica",
+            "govuk_index_entry_code": "COUNTRY-91",
+            "country_or_territory": "country"
+        }
+    },
+    {
+        "pk": 13,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "Namibia",
+            "created_date": "2016-04-05T13:23:05Z",
+            "updated_date": "2017-09-28 11:21:22",
+            "code": "NA",
+            "official_name": "The Republic of Namibia",
+            "govuk_index_entry_code": "COUNTRY-129",
+            "country_or_territory": "country"
+        }
+    },
+    {
+        "pk": 14,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "Croatia",
+            "created_date": "2016-04-05T13:23:05Z",
+            "updated_date": "2017-09-28 11:21:22",
+            "code": "HR",
+            "official_name": "The Republic of Croatia",
+            "govuk_index_entry_code": "COUNTRY-49",
+            "country_or_territory": "country"
+        }
+    },
+    {
+        "pk": 15,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "Zimbabwe",
+            "created_date": "2016-04-05T13:23:05Z",
+            "updated_date": "2017-09-28 11:21:22",
+            "code": "ZW",
+            "official_name": "The Republic of Zimbabwe",
+            "govuk_index_entry_code": "COUNTRY-200",
+            "country_or_territory": "country"
+        }
+    },
+    {
+        "pk": 16,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "Togo",
+            "created_date": "2016-04-05T13:23:05Z",
+            "updated_date": "2017-09-28 11:21:22",
+            "code": "TG",
+            "official_name": "The Togolese Republic",
+            "govuk_index_entry_code": "COUNTRY-181",
+            "country_or_territory": "country"
+        }
+    },
+    {
+        "pk": 17,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "El Salvador",
+            "created_date": "2016-04-05T13:23:05Z",
+            "updated_date": "2017-09-28 11:21:22",
+            "code": "SV",
+            "official_name": "The Republic of El Salvador",
+            "govuk_index_entry_code": "COUNTRY-60",
+            "country_or_territory": "country"
+        }
+    },
+    {
+        "pk": 18,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "Monaco",
+            "created_date": "2016-04-05T13:23:05Z",
+            "updated_date": "2017-09-28 11:21:22",
+            "code": "MC",
+            "official_name": "The Principality of Monaco",
+            "govuk_index_entry_code": "COUNTRY-124",
+            "country_or_territory": "country"
+        }
+    },
+    {
+        "pk": 19,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "Macedonia",
+            "created_date": "2016-04-05T13:23:05Z",
+            "updated_date": "2017-09-28 11:21:22",
+            "code": "MK",
+            "official_name": "The Republic of Macedonia",
+            "govuk_index_entry_code": "COUNTRY-111",
+            "country_or_territory": "country"
+        }
+    },
+    {
+        "pk": 20,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "Algeria",
+            "created_date": "2016-04-05T13:23:05Z",
+            "updated_date": "2017-09-28 11:21:22",
+            "code": "DZ",
+            "official_name": "The People's Democratic Republic of Algeria",
+            "govuk_index_entry_code": "COUNTRY-9",
+            "country_or_territory": "country"
+        }
+    },
+    {
+        "pk": 21,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "Swaziland",
+            "created_date": "2016-04-05T13:23:05Z",
+            "updated_date": "2017-09-28 11:21:22",
+            "code": "SZ",
+            "official_name": "The Kingdom of Swaziland",
+            "govuk_index_entry_code": "COUNTRY-174",
+            "country_or_territory": "country"
+        }
+    },
+    {
+        "pk": 22,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "Brazil",
+            "created_date": "2016-04-05T13:23:05Z",
+            "updated_date": "2017-09-28 11:21:22",
+            "code": "BR",
+            "official_name": "The Federative Republic of Brazil",
+            "govuk_index_entry_code": "COUNTRY-30",
+            "country_or_territory": "country"
+        }
+    },
+    {
+        "pk": 23,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "Romania",
+            "created_date": "2016-04-05T13:23:05Z",
+            "updated_date": "2017-09-28 11:21:22",
+            "code": "RO",
+            "official_name": "Romania",
+            "govuk_index_entry_code": "COUNTRY-149",
+            "country_or_territory": "country"
+        }
+    },
+    {
+        "pk": 24,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "South Sudan",
+            "created_date": "2016-04-05T13:23:05Z",
+            "updated_date": "2017-09-28 11:21:22",
+            "code": "SS",
+            "official_name": "The Republic of South Sudan",
+            "govuk_index_entry_code": "COUNTRY-169",
+            "country_or_territory": "country"
+        }
+    },
+    {
+        "pk": 25,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "Yemen",
+            "created_date": "2016-04-05T13:23:05Z",
+            "updated_date": "2017-09-28 11:21:22",
+            "code": "YE",
+            "official_name": "The Republic of Yemen",
+            "govuk_index_entry_code": "COUNTRY-198",
+            "country_or_territory": "country"
+        }
+    },
+    {
+        "pk": 26,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "Turkmenistan",
+            "created_date": "2016-04-05T13:23:05Z",
+            "updated_date": "2017-09-28 11:21:22",
+            "code": "TM",
+            "official_name": "Turkmenistan",
+            "govuk_index_entry_code": "COUNTRY-186",
+            "country_or_territory": "country"
+        }
+    },
+    {
+        "pk": 27,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "Maldives",
+            "created_date": "2016-04-05T13:23:05Z",
+            "updated_date": "2017-09-28 11:21:22",
+            "code": "MV",
+            "official_name": "The Republic of Maldives",
+            "govuk_index_entry_code": "COUNTRY-115",
+            "country_or_territory": "country"
+        }
+    },
+    {
+        "pk": 28,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "Philippines",
+            "created_date": "2016-04-05T13:23:05Z",
+            "updated_date": "2017-09-28 11:21:22",
+            "code": "PH",
+            "official_name": "The Republic of the Philippines",
+            "govuk_index_entry_code": "COUNTRY-145",
+            "country_or_territory": "country"
+        }
+    },
+    {
+        "pk": 29,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "Ukraine",
+            "created_date": "2016-04-05T13:23:05Z",
+            "updated_date": "2017-09-28 11:21:22",
+            "code": "UA",
+            "official_name": "Ukraine",
+            "govuk_index_entry_code": "COUNTRY-189",
+            "country_or_territory": "country"
+        }
+    },
+    {
+        "pk": 30,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "Kenya",
+            "created_date": "2016-04-05T13:23:05Z",
+            "updated_date": "2017-09-28 11:21:22",
+            "code": "KE",
+            "official_name": "The Republic of Kenya",
+            "govuk_index_entry_code": "COUNTRY-95",
+            "country_or_territory": "country"
+        }
+    },
+    {
+        "pk": 31,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "Libya",
+            "created_date": "2016-04-05T13:23:05Z",
+            "updated_date": "2017-09-28 11:21:22",
+            "code": "LY",
+            "official_name": "Libya",
+            "govuk_index_entry_code": "COUNTRY-107",
+            "country_or_territory": "country"
+        }
+    },
+    {
+        "pk": 32,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "New Zealand",
+            "created_date": "2016-04-05T13:23:05Z",
+            "updated_date": "2017-09-28 11:21:22",
+            "code": "NZ",
+            "official_name": "New Zealand",
+            "govuk_index_entry_code": "COUNTRY-133",
+            "country_or_territory": "country"
+        }
+    },
+    {
+        "pk": 33,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "Greece",
+            "created_date": "2016-04-05T13:23:05Z",
+            "updated_date": "2017-09-28 11:21:22",
+            "code": "GR",
+            "official_name": "The Hellenic Republic",
+            "govuk_index_entry_code": "COUNTRY-73",
+            "country_or_territory": "country"
+        }
+    },
+    {
+        "pk": 34,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "Thailand",
+            "created_date": "2016-04-05T13:23:05Z",
+            "updated_date": "2017-09-28 11:21:22",
+            "code": "TH",
+            "official_name": "The Kingdom of Thailand",
+            "govuk_index_entry_code": "COUNTRY-180",
+            "country_or_territory": "country"
+        }
+    },
+    {
+        "pk": 35,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "Grenada",
+            "created_date": "2016-04-05T13:23:05Z",
+            "updated_date": "2017-09-28 11:21:22",
+            "code": "GD",
+            "official_name": "Grenada",
+            "govuk_index_entry_code": "COUNTRY-74",
+            "country_or_territory": "country"
+        }
+    },
+    {
+        "pk": 36,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "Somalia",
+            "created_date": "2016-04-05T13:23:05Z",
+            "updated_date": "2017-09-28 11:21:22",
+            "code": "SO",
+            "official_name": "Federal Republic of Somalia",
+            "govuk_index_entry_code": "COUNTRY-167",
+            "country_or_territory": "country"
+        }
+    },
+    {
+        "pk": 37,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "Fiji",
+            "created_date": "2016-04-05T13:23:05Z",
+            "updated_date": "2017-09-28 11:21:22",
+            "code": "FJ",
+            "official_name": "The Republic of Fiji",
+            "govuk_index_entry_code": "COUNTRY-65",
+            "country_or_territory": "country"
+        }
+    },
+    {
+        "pk": 38,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "Luxembourg",
+            "created_date": "2016-04-05T13:23:05Z",
+            "updated_date": "2017-09-28 11:21:22",
+            "code": "LU",
+            "official_name": "The Grand Duchy of Luxembourg",
+            "govuk_index_entry_code": "COUNTRY-110",
+            "country_or_territory": "country"
+        }
+    },
+    {
+        "pk": 39,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "Guatemala",
+            "created_date": "2016-04-05T13:23:05Z",
+            "updated_date": "2017-09-28 11:21:22",
+            "code": "GT",
+            "official_name": "The Republic of Guatemala",
+            "govuk_index_entry_code": "COUNTRY-75",
+            "country_or_territory": "country"
+        }
+    },
+    {
+        "pk": 40,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "Bosnia and Herzegovina",
+            "created_date": "2016-04-05T13:23:05Z",
+            "updated_date": "2017-09-28 11:21:22",
+            "code": "BA",
+            "official_name": "Bosnia and Herzegovina",
+            "govuk_index_entry_code": "COUNTRY-28",
+            "country_or_territory": "country"
+        }
+    },
+    {
+        "pk": 41,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "Honduras",
+            "created_date": "2016-04-05T13:23:05Z",
+            "updated_date": "2017-09-28 11:21:22",
+            "code": "HN",
+            "official_name": "The Republic of Honduras",
+            "govuk_index_entry_code": "COUNTRY-80",
+            "country_or_territory": "country"
+        }
+    },
+    {
+        "pk": 42,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "Sweden",
+            "created_date": "2016-04-05T13:23:05Z",
+            "updated_date": "2017-09-28 11:21:22",
+            "code": "SE",
+            "official_name": "The Kingdom of Sweden",
+            "govuk_index_entry_code": "COUNTRY-175",
+            "country_or_territory": "country"
+        }
+    },
+    {
+        "pk": 43,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "Cape Verde",
+            "created_date": "2016-04-05T13:23:05Z",
+            "updated_date": "2017-09-28 11:21:22",
+            "code": "CV",
+            "official_name": "The Republic of Cabo Verde",
+            "govuk_index_entry_code": "COUNTRY-39",
+            "country_or_territory": "country"
+        }
+    },
+    {
+        "pk": 44,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "Bahrain",
+            "created_date": "2016-04-05T13:23:05Z",
+            "updated_date": "2017-09-28 11:21:22",
+            "code": "BH",
+            "official_name": "The Kingdom of Bahrain",
+            "govuk_index_entry_code": "COUNTRY-19",
+            "country_or_territory": "country"
+        }
+    },
+    {
+        "pk": 45,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "Haiti",
+            "created_date": "2016-04-05T13:23:05Z",
+            "updated_date": "2017-09-28 11:21:22",
+            "code": "HT",
+            "official_name": "The Republic of Haiti",
+            "govuk_index_entry_code": "COUNTRY-79",
+            "country_or_territory": "country"
+        }
+    },
+    {
+        "pk": 46,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "France",
+            "created_date": "2016-04-05T13:23:05Z",
+            "updated_date": "2017-09-28 11:21:22",
+            "code": "FR",
+            "official_name": "The French Republic",
+            "govuk_index_entry_code": "COUNTRY-67",
+            "country_or_territory": "country"
+        }
+    },
+    {
+        "pk": 47,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "Chad",
+            "created_date": "2016-04-05T13:23:05Z",
+            "updated_date": "2017-09-28 11:21:22",
+            "code": "TD",
+            "official_name": "The Republic of Chad",
+            "govuk_index_entry_code": "COUNTRY-41",
+            "country_or_territory": "country"
+        }
+    },
+    {
+        "pk": 48,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "Bhutan",
+            "created_date": "2016-04-05T13:23:05Z",
+            "updated_date": "2017-09-28 11:21:22",
+            "code": "BT",
+            "official_name": "The Kingdom of Bhutan",
+            "govuk_index_entry_code": "COUNTRY-26",
+            "country_or_territory": "country"
+        }
+    },
+    {
+        "pk": 49,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "Rwanda",
+            "created_date": "2016-04-05T13:23:05Z",
+            "updated_date": "2017-09-28 11:21:22",
+            "code": "RW",
+            "official_name": "The Republic of Rwanda",
+            "govuk_index_entry_code": "COUNTRY-151",
+            "country_or_territory": "country"
+        }
+    },
+    {
+        "pk": 50,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "Canada",
+            "created_date": "2016-04-05T13:23:05Z",
+            "updated_date": "2017-09-28 11:21:22",
+            "code": "CA",
+            "official_name": "Canada",
+            "govuk_index_entry_code": "COUNTRY-38",
+            "country_or_territory": "country"
+        }
+    },
+    {
+        "pk": 51,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "Uruguay",
+            "created_date": "2016-04-05T13:23:05Z",
+            "updated_date": "2017-09-28 11:21:22",
+            "code": "UY",
+            "official_name": "The Oriental Republic of Uruguay",
+            "govuk_index_entry_code": "COUNTRY-192",
+            "country_or_territory": "country"
+        }
+    },
+    {
+        "pk": 52,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "Tonga",
+            "created_date": "2016-04-05T13:23:05Z",
+            "updated_date": "2017-09-28 11:21:22",
+            "code": "TO",
+            "official_name": "The Kingdom of Tonga",
+            "govuk_index_entry_code": "COUNTRY-182",
+            "country_or_territory": "country"
+        }
+    },
+    {
+        "pk": 53,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "Turkey",
+            "created_date": "2016-04-05T13:23:05Z",
+            "updated_date": "2017-09-28 11:21:22",
+            "code": "TR",
+            "official_name": "The Republic of Turkey",
+            "govuk_index_entry_code": "COUNTRY-185",
+            "country_or_territory": "country"
+        }
+    },
+    {
+        "pk": 54,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "Moldova",
+            "created_date": "2016-04-05T13:23:05Z",
+            "updated_date": "2017-09-28 11:21:22",
+            "code": "MD",
+            "official_name": "The Republic of Moldova",
+            "govuk_index_entry_code": "COUNTRY-123",
+            "country_or_territory": "country"
+        }
+    },
+    {
+        "pk": 55,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "Nauru",
+            "created_date": "2016-04-05T13:23:05Z",
+            "updated_date": "2017-09-28 11:21:22",
+            "code": "NR",
+            "official_name": "The Republic of Nauru",
+            "govuk_index_entry_code": "COUNTRY-130",
+            "country_or_territory": "country"
+        }
+    },
+    {
+        "pk": 56,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "Tajikistan",
+            "created_date": "2016-04-05T13:23:05Z",
+            "updated_date": "2017-09-28 11:21:22",
+            "code": "TJ",
+            "official_name": "The Republic of Tajikistan",
+            "govuk_index_entry_code": "COUNTRY-178",
+            "country_or_territory": "country"
+        }
+    },
+    {
+        "pk": 57,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "Denmark",
+            "created_date": "2016-04-05T13:23:05Z",
+            "updated_date": "2017-09-28 11:21:22",
+            "code": "DK",
+            "official_name": "The Kingdom of Denmark",
+            "govuk_index_entry_code": "COUNTRY-53",
+            "country_or_territory": "country"
+        }
+    },
+    {
+        "pk": 58,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "Paraguay",
+            "created_date": "2016-04-05T13:23:05Z",
+            "updated_date": "2017-09-28 11:21:22",
+            "code": "PY",
+            "official_name": "The Republic of Paraguay",
+            "govuk_index_entry_code": "COUNTRY-143",
+            "country_or_territory": "country"
+        }
+    },
+    {
+        "pk": 59,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "Congo (Democratic Republic)",
+            "created_date": "2016-04-05T13:23:05Z",
+            "updated_date": "2017-09-28 11:21:22",
+            "code": "CD",
+            "official_name": "The Democratic Republic of the Congo",
+            "govuk_index_entry_code": "COUNTRY-47",
+            "country_or_territory": "country"
+        }
+    },
+    {
+        "pk": 60,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "Burundi",
+            "created_date": "2016-04-05T13:23:05Z",
+            "updated_date": "2017-09-28 11:21:22",
+            "code": "BI",
+            "official_name": "The Republic of Burundi",
+            "govuk_index_entry_code": "COUNTRY-35",
+            "country_or_territory": "country"
+        }
+    },
+    {
+        "pk": 61,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "Micronesia",
+            "created_date": "2016-04-05T13:23:05Z",
+            "updated_date": "2017-09-28 11:21:22",
+            "code": "FM",
+            "official_name": "The Federated States of Micronesia",
+            "govuk_index_entry_code": "COUNTRY-122",
+            "country_or_territory": "country"
+        }
+    },
+    {
+        "pk": 62,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "Samoa",
+            "created_date": "2016-04-05T13:23:05Z",
+            "updated_date": "2017-09-28 11:21:22",
+            "code": "WS",
+            "official_name": "The Independent State of Samoa",
+            "govuk_index_entry_code": "COUNTRY-155",
+            "country_or_territory": "country"
+        }
+    },
+    {
+        "pk": 63,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "United Kingdom",
+            "created_date": "2016-04-05T13:23:05Z",
+            "updated_date": "2017-09-28 11:21:22",
+            "code": "GB",
+            "official_name": "The United Kingdom of Great Britain and Northern Ireland",
+            "govuk_index_entry_code": "COUNTRY-6",
+            "country_or_territory": "country"
+        }
+    },
+    {
+        "pk": 64,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "Vanuatu",
+            "created_date": "2016-04-05T13:23:05Z",
+            "updated_date": "2017-09-28 11:21:22",
+            "code": "VU",
+            "official_name": "The Republic of Vanuatu",
+            "govuk_index_entry_code": "COUNTRY-194",
+            "country_or_territory": "country"
+        }
+    },
+    {
+        "pk": 65,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "Nigeria",
+            "created_date": "2016-04-05T13:23:05Z",
+            "updated_date": "2017-09-28 11:21:22",
+            "code": "NG",
+            "official_name": "The Federal Republic of Nigeria",
+            "govuk_index_entry_code": "COUNTRY-136",
+            "country_or_territory": "country"
+        }
+    },
+    {
+        "pk": 66,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "Mauritania",
+            "created_date": "2016-04-05T13:23:05Z",
+            "updated_date": "2017-09-28 11:21:22",
+            "code": "MR",
+            "official_name": "The Islamic Republic of Mauritania",
+            "govuk_index_entry_code": "COUNTRY-119",
+            "country_or_territory": "country"
+        }
+    },
+    {
+        "pk": 67,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "Malta",
+            "created_date": "2016-04-05T13:23:05Z",
+            "updated_date": "2017-09-28 11:21:22",
+            "code": "MT",
+            "official_name": "The Republic of Malta",
+            "govuk_index_entry_code": "COUNTRY-117",
+            "country_or_territory": "country"
+        }
+    },
+    {
+        "pk": 68,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "Liechtenstein",
+            "created_date": "2016-04-05T13:23:05Z",
+            "updated_date": "2017-09-28 11:21:22",
+            "code": "LI",
+            "official_name": "The Principality of Liechtenstein",
+            "govuk_index_entry_code": "COUNTRY-108",
+            "country_or_territory": "country"
+        }
+    },
+    {
+        "pk": 69,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "United States",
+            "created_date": "2016-04-05T13:23:05Z",
+            "updated_date": "2017-09-28 11:21:22",
+            "code": "US",
+            "official_name": "The United States of America",
+            "govuk_index_entry_code": "COUNTRY-191",
+            "country_or_territory": "country"
+        }
+    },
+    {
+        "pk": 70,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "Iran",
+            "created_date": "2016-04-05T13:23:05Z",
+            "updated_date": "2017-09-28 11:21:22",
+            "code": "IR",
+            "official_name": "The Islamic Republic of Iran",
+            "govuk_index_entry_code": "COUNTRY-85",
+            "country_or_territory": "country"
+        }
+    },
+    {
+        "pk": 71,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "Mozambique",
+            "created_date": "2016-04-05T13:23:05Z",
+            "updated_date": "2017-09-28 11:21:22",
+            "code": "MZ",
+            "official_name": "The Republic of Mozambique",
+            "govuk_index_entry_code": "COUNTRY-128",
+            "country_or_territory": "country"
+        }
+    },
+    {
+        "pk": 72,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "Comoros",
+            "created_date": "2016-04-05T13:23:05Z",
+            "updated_date": "2017-09-28 11:21:22",
+            "code": "KM",
+            "official_name": "The Union of the Comoros",
+            "govuk_index_entry_code": "COUNTRY-45",
+            "country_or_territory": "country"
+        }
+    },
+    {
+        "pk": 73,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "Nicaragua",
+            "created_date": "2016-04-05T13:23:05Z",
+            "updated_date": "2017-09-28 11:21:22",
+            "code": "NI",
+            "official_name": "The Republic of Nicaragua",
+            "govuk_index_entry_code": "COUNTRY-134",
+            "country_or_territory": "country"
+        }
+    },
+    {
+        "pk": 74,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "Azerbaijan",
+            "created_date": "2016-04-05T13:23:05Z",
+            "updated_date": "2017-09-28 11:21:22",
+            "code": "AZ",
+            "official_name": "The Republic of Azerbaijan",
+            "govuk_index_entry_code": "COUNTRY-17",
+            "country_or_territory": "country"
+        }
+    },
+    {
+        "pk": 75,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "Malaysia",
+            "created_date": "2016-04-05T13:23:05Z",
+            "updated_date": "2017-09-28 11:21:22",
+            "code": "MY",
+            "official_name": "Malaysia",
+            "govuk_index_entry_code": "COUNTRY-114",
+            "country_or_territory": "country"
+        }
+    },
+    {
+        "pk": 76,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "Panama",
+            "created_date": "2016-04-05T13:23:05Z",
+            "updated_date": "2017-09-28 11:21:22",
+            "code": "PA",
+            "official_name": "The Republic of Panama",
+            "govuk_index_entry_code": "COUNTRY-141",
+            "country_or_territory": "country"
+        }
+    },
+    {
+        "pk": 77,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "Burma",
+            "created_date": "2016-04-05T13:23:05Z",
+            "updated_date": "2017-09-28 11:21:22",
+            "code": "MM",
+            "official_name": "The Republic of the Union of Myanmar",
+            "govuk_index_entry_code": "COUNTRY-34",
+            "country_or_territory": "country"
+        }
+    },
+    {
+        "pk": 78,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "Antigua and Barbuda",
+            "created_date": "2016-04-05T13:23:05Z",
+            "updated_date": "2017-09-28 11:21:22",
+            "code": "AG",
+            "official_name": "Antigua and Barbuda",
+            "govuk_index_entry_code": "COUNTRY-12",
+            "country_or_territory": "country"
+        }
+    },
+    {
+        "pk": 79,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "Equatorial Guinea",
+            "created_date": "2016-04-05T13:23:05Z",
+            "updated_date": "2017-09-28 11:21:22",
+            "code": "GQ",
+            "official_name": "The Republic of Equatorial Guinea",
+            "govuk_index_entry_code": "COUNTRY-61",
+            "country_or_territory": "country"
+        }
+    },
+    {
+        "pk": 80,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "Botswana",
+            "created_date": "2016-04-05T13:23:05Z",
+            "updated_date": "2017-09-28 11:21:22",
+            "code": "BW",
+            "official_name": "The Republic of Botswana",
+            "govuk_index_entry_code": "COUNTRY-29",
+            "country_or_territory": "country"
+        }
+    },
+    {
+        "pk": 81,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "Papua New Guinea",
+            "created_date": "2016-04-05T13:23:05Z",
+            "updated_date": "2017-09-28 11:21:22",
+            "code": "PG",
+            "official_name": "The Independent State of Papua New Guinea",
+            "govuk_index_entry_code": "COUNTRY-142",
+            "country_or_territory": "country"
+        }
+    },
+    {
+        "pk": 82,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "Switzerland",
+            "created_date": "2016-04-05T13:23:05Z",
+            "updated_date": "2017-09-28 11:21:22",
+            "code": "CH",
+            "official_name": "The Swiss Confederation",
+            "govuk_index_entry_code": "COUNTRY-176",
+            "country_or_territory": "country"
+        }
+    },
+    {
+        "pk": 83,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "Norway",
+            "created_date": "2016-04-05T13:23:05Z",
+            "updated_date": "2017-09-28 11:21:22",
+            "code": "NO",
+            "official_name": "The Kingdom of Norway",
+            "govuk_index_entry_code": "COUNTRY-137",
+            "country_or_territory": "country"
+        }
+    },
+    {
+        "pk": 84,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "Latvia",
+            "created_date": "2016-04-05T13:23:05Z",
+            "updated_date": "2017-09-28 11:21:22",
+            "code": "LV",
+            "official_name": "The Republic of Latvia",
+            "govuk_index_entry_code": "COUNTRY-103",
+            "country_or_territory": "country"
+        }
+    },
+    {
+        "pk": 85,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "Sierra Leone",
+            "created_date": "2016-04-05T13:23:05Z",
+            "updated_date": "2017-09-28 11:21:22",
+            "code": "SL",
+            "official_name": "The Republic of Sierra Leone",
+            "govuk_index_entry_code": "COUNTRY-162",
+            "country_or_territory": "country"
+        }
+    },
+    {
+        "pk": 86,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "Mali",
+            "created_date": "2016-04-05T13:23:05Z",
+            "updated_date": "2017-09-28 11:21:22",
+            "code": "ML",
+            "official_name": "The Republic of Mali",
+            "govuk_index_entry_code": "COUNTRY-116",
+            "country_or_territory": "country"
+        }
+    },
+    {
+        "pk": 87,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "North Korea",
+            "created_date": "2016-04-05T13:23:05Z",
+            "updated_date": "2017-09-28 11:21:22",
+            "code": "KP",
+            "official_name": "The Democratic People's Republic of Korea",
+            "govuk_index_entry_code": "COUNTRY-97",
+            "country_or_territory": "country"
+        }
+    },
+    {
+        "pk": 88,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "Ethiopia",
+            "created_date": "2016-04-05T13:23:05Z",
+            "updated_date": "2017-09-28 11:21:22",
+            "code": "ET",
+            "official_name": "The Federal Democratic Republic of Ethiopia",
+            "govuk_index_entry_code": "COUNTRY-64",
+            "country_or_territory": "country"
+        }
+    },
+    {
+        "pk": 89,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "Belize",
+            "created_date": "2016-04-05T13:23:05Z",
+            "updated_date": "2017-09-28 11:21:22",
+            "code": "BZ",
+            "official_name": "Belize",
+            "govuk_index_entry_code": "COUNTRY-24",
+            "country_or_territory": "country"
+        }
+    },
+    {
+        "pk": 90,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "Spain",
+            "created_date": "2016-04-05T13:23:05Z",
+            "updated_date": "2017-09-28 11:21:22",
+            "code": "ES",
+            "official_name": "The Kingdom of Spain",
+            "govuk_index_entry_code": "COUNTRY-170",
+            "country_or_territory": "country"
+        }
+    },
+    {
+        "pk": 91,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "South Africa",
+            "created_date": "2016-04-05T13:23:05Z",
+            "updated_date": "2017-09-28 11:21:22",
+            "code": "ZA",
+            "official_name": "The Republic of South Africa",
+            "govuk_index_entry_code": "COUNTRY-168",
+            "country_or_territory": "country"
+        }
+    },
+    {
+        "pk": 92,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "Czechia",
+            "created_date": "2016-11-11T16:25:07Z",
+            "updated_date": "2017-09-28 11:21:22",
+            "code": "CZ",
+            "official_name": "The Czech Republic",
+            "govuk_index_entry_code": "COUNTRY-205",
+            "country_or_territory": "country"
+        }
+    },
+    {
+        "pk": 93,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "Andorra",
+            "created_date": "2016-04-05T13:23:05Z",
+            "updated_date": "2017-09-28 11:21:22",
+            "code": "AD",
+            "official_name": "The Principality of Andorra",
+            "govuk_index_entry_code": "COUNTRY-10",
+            "country_or_territory": "country"
+        }
+    },
+    {
+        "pk": 94,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "Ireland",
+            "created_date": "2016-04-05T13:23:05Z",
+            "updated_date": "2017-09-28 11:21:22",
+            "code": "IE",
+            "official_name": "Ireland",
+            "govuk_index_entry_code": "COUNTRY-87",
+            "country_or_territory": "country"
+        }
+    },
+    {
+        "pk": 95,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "Laos",
+            "created_date": "2016-04-05T13:23:05Z",
+            "updated_date": "2017-09-28 11:21:22",
+            "code": "LA",
+            "official_name": "The Lao People's Democratic Republic",
+            "govuk_index_entry_code": "COUNTRY-102",
+            "country_or_territory": "country"
+        }
+    },
+    {
+        "pk": 96,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "Netherlands",
+            "created_date": "2016-04-05T13:23:05Z",
+            "updated_date": "2017-09-28 11:21:22",
+            "code": "NL",
+            "official_name": "The Kingdom of the Netherlands",
+            "govuk_index_entry_code": "COUNTRY-132",
+            "country_or_territory": "country"
+        }
+    },
+    {
+        "pk": 97,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "Pakistan",
+            "created_date": "2016-04-05T13:23:05Z",
+            "updated_date": "2017-09-28 11:21:22",
+            "code": "PK",
+            "official_name": "The Islamic Republic of Pakistan",
+            "govuk_index_entry_code": "COUNTRY-139",
+            "country_or_territory": "country"
+        }
+    },
+    {
+        "pk": 98,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "Tuvalu",
+            "created_date": "2016-04-05T13:23:05Z",
+            "updated_date": "2017-09-28 11:21:22",
+            "code": "TV",
+            "official_name": "Tuvalu",
+            "govuk_index_entry_code": "COUNTRY-187",
+            "country_or_territory": "country"
+        }
+    },
+    {
+        "pk": 99,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "Montenegro",
+            "created_date": "2016-04-05T13:23:05Z",
+            "updated_date": "2017-09-28 11:21:22",
+            "code": "ME",
+            "official_name": "Montenegro",
+            "govuk_index_entry_code": "COUNTRY-126",
+            "country_or_territory": "country"
+        }
+    },
+    {
+        "pk": 100,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "Australia",
+            "created_date": "2016-04-05T13:23:05Z",
+            "updated_date": "2017-09-28 11:21:22",
+            "code": "AU",
+            "official_name": "The Commonwealth of Australia",
+            "govuk_index_entry_code": "COUNTRY-15",
+            "country_or_territory": "country"
+        }
+    },
+    {
+        "pk": 101,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "Hungary",
+            "created_date": "2016-04-05T13:23:05Z",
+            "updated_date": "2017-09-28 11:21:22",
+            "code": "HU",
+            "official_name": "Hungary",
+            "govuk_index_entry_code": "COUNTRY-81",
+            "country_or_territory": "country"
+        }
+    },
+    {
+        "pk": 102,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "Venezuela",
+            "created_date": "2016-04-05T13:23:05Z",
+            "updated_date": "2017-09-28 11:21:22",
+            "code": "VE",
+            "official_name": "The Bolivarian Republic of Venezuela",
+            "govuk_index_entry_code": "COUNTRY-196",
+            "country_or_territory": "country"
+        }
+    },
+    {
+        "pk": 103,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "Afghanistan",
+            "created_date": "2016-04-05T13:23:05Z",
+            "updated_date": "2017-09-28 11:21:22",
+            "code": "AF",
+            "official_name": "The Islamic Republic of Afghanistan",
+            "govuk_index_entry_code": "COUNTRY-7",
+            "country_or_territory": "country"
+        }
+    },
+    {
+        "pk": 104,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "Kuwait",
+            "created_date": "2016-04-05T13:23:05Z",
+            "updated_date": "2017-09-28 11:21:22",
+            "code": "KW",
+            "official_name": "The State of Kuwait",
+            "govuk_index_entry_code": "COUNTRY-100",
+            "country_or_territory": "country"
+        }
+    },
+    {
+        "pk": 105,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "Madagascar",
+            "created_date": "2016-04-05T13:23:05Z",
+            "updated_date": "2017-09-28 11:21:22",
+            "code": "MG",
+            "official_name": "The Republic of Madagascar",
+            "govuk_index_entry_code": "COUNTRY-112",
+            "country_or_territory": "country"
+        }
+    },
+    {
+        "pk": 106,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "Jordan",
+            "created_date": "2016-04-05T13:23:05Z",
+            "updated_date": "2017-09-28 11:21:22",
+            "code": "JO",
+            "official_name": "The Hashemite Kingdom of Jordan",
+            "govuk_index_entry_code": "COUNTRY-93",
+            "country_or_territory": "country"
+        }
+    },
+    {
+        "pk": 107,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "Portugal",
+            "created_date": "2016-04-05T13:23:05Z",
+            "updated_date": "2017-09-28 11:21:22",
+            "code": "PT",
+            "official_name": "The Portuguese Republic",
+            "govuk_index_entry_code": "COUNTRY-147",
+            "country_or_territory": "country"
+        }
+    },
+    {
+        "pk": 108,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "Lebanon",
+            "created_date": "2016-04-05T13:23:05Z",
+            "updated_date": "2017-09-28 11:21:22",
+            "code": "LB",
+            "official_name": "The Lebanese Republic",
+            "govuk_index_entry_code": "COUNTRY-104",
+            "country_or_territory": "country"
+        }
+    },
+    {
+        "pk": 109,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "Mongolia",
+            "created_date": "2016-04-05T13:23:05Z",
+            "updated_date": "2017-09-28 11:21:22",
+            "code": "MN",
+            "official_name": "Mongolia",
+            "govuk_index_entry_code": "COUNTRY-125",
+            "country_or_territory": "country"
+        }
+    },
+    {
+        "pk": 110,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "Vietnam",
+            "created_date": "2016-04-05T13:23:05Z",
+            "updated_date": "2017-09-28 11:21:22",
+            "code": "VN",
+            "official_name": "The Socialist Republic of Vietnam",
+            "govuk_index_entry_code": "COUNTRY-197",
+            "country_or_territory": "country"
+        }
+    },
+    {
+        "pk": 111,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "Central African Republic",
+            "created_date": "2016-04-05T13:23:05Z",
+            "updated_date": "2017-09-28 11:21:22",
+            "code": "CF",
+            "official_name": "The Central African Republic",
+            "govuk_index_entry_code": "COUNTRY-40",
+            "country_or_territory": "country"
+        }
+    },
+    {
+        "pk": 112,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "Uganda",
+            "created_date": "2016-04-05T13:23:05Z",
+            "updated_date": "2017-09-28 11:21:22",
+            "code": "UG",
+            "official_name": "The Republic of Uganda",
+            "govuk_index_entry_code": "COUNTRY-188",
+            "country_or_territory": "country"
+        }
+    },
+    {
+        "pk": 113,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "Seychelles",
+            "created_date": "2016-04-05T13:23:05Z",
+            "updated_date": "2017-09-28 11:21:22",
+            "code": "SC",
+            "official_name": "The Republic of Seychelles",
+            "govuk_index_entry_code": "COUNTRY-161",
+            "country_or_territory": "country"
+        }
+    },
+    {
+        "pk": 114,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "Finland",
+            "created_date": "2016-04-05T13:23:05Z",
+            "updated_date": "2017-09-28 11:21:22",
+            "code": "FI",
+            "official_name": "The Republic of Finland",
+            "govuk_index_entry_code": "COUNTRY-66",
+            "country_or_territory": "country"
+        }
+    },
+    {
+        "pk": 115,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "Malawi",
+            "created_date": "2016-04-05T13:23:05Z",
+            "updated_date": "2017-09-28 11:21:22",
+            "code": "MW",
+            "official_name": "The Republic of Malawi",
+            "govuk_index_entry_code": "COUNTRY-113",
+            "country_or_territory": "country"
+        }
+    },
+    {
+        "pk": 116,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "Argentina",
+            "created_date": "2016-04-05T13:23:05Z",
+            "updated_date": "2017-09-28 11:21:22",
+            "code": "AR",
+            "official_name": "The Argentine Republic",
+            "govuk_index_entry_code": "COUNTRY-13",
+            "country_or_territory": "country"
+        }
+    },
+    {
+        "pk": 117,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "Solomon Islands",
+            "created_date": "2016-04-05T13:23:05Z",
+            "updated_date": "2017-09-28 11:21:22",
+            "code": "SB",
+            "official_name": "Solomon Islands",
+            "govuk_index_entry_code": "COUNTRY-166",
+            "country_or_territory": "country"
+        }
+    },
+    {
+        "pk": 118,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "Syria",
+            "created_date": "2016-04-05T13:23:05Z",
+            "updated_date": "2017-09-28 11:21:22",
+            "code": "SY",
+            "official_name": "The Syrian Arab Republic",
+            "govuk_index_entry_code": "COUNTRY-177",
+            "country_or_territory": "country"
+        }
+    },
+    {
+        "pk": 119,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "Guinea",
+            "created_date": "2016-04-05T13:23:05Z",
+            "updated_date": "2017-09-28 11:21:22",
+            "code": "GN",
+            "official_name": "The Republic of Guinea",
+            "govuk_index_entry_code": "COUNTRY-76",
+            "country_or_territory": "country"
+        }
+    },
+    {
+        "pk": 120,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "Barbados",
+            "created_date": "2016-04-05T13:23:05Z",
+            "updated_date": "2017-09-28 11:21:22",
+            "code": "BB",
+            "official_name": "Barbados",
+            "govuk_index_entry_code": "COUNTRY-21",
+            "country_or_territory": "country"
+        }
+    },
+    {
+        "pk": 121,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "Italy",
+            "created_date": "2016-04-05T13:23:05Z",
+            "updated_date": "2017-09-28 11:21:22",
+            "code": "IT",
+            "official_name": "The Italian Republic",
+            "govuk_index_entry_code": "COUNTRY-89",
+            "country_or_territory": "country"
+        }
+    },
+    {
+        "pk": 122,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "St Kitts and Nevis",
+            "created_date": "2016-04-05T13:23:05Z",
+            "updated_date": "2017-09-28 11:21:22",
+            "code": "KN",
+            "official_name": "The Federation of Saint Christopher and Nevis",
+            "govuk_index_entry_code": "COUNTRY-152",
+            "country_or_territory": "country"
+        }
+    },
+    {
+        "pk": 123,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "Costa Rica",
+            "created_date": "2016-04-05T13:23:05Z",
+            "updated_date": "2017-09-28 11:21:22",
+            "code": "CR",
+            "official_name": "The Republic of Costa Rica",
+            "govuk_index_entry_code": "COUNTRY-48",
+            "country_or_territory": "country"
+        }
+    },
+    {
+        "pk": 124,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "Egypt",
+            "created_date": "2016-04-05T13:23:05Z",
+            "updated_date": "2017-09-28 11:21:22",
+            "code": "EG",
+            "official_name": "The Arab Republic of Egypt",
+            "govuk_index_entry_code": "COUNTRY-59",
+            "country_or_territory": "country"
+        }
+    },
+    {
+        "pk": 125,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "Japan",
+            "created_date": "2016-04-05T13:23:05Z",
+            "updated_date": "2017-09-28 11:21:22",
+            "code": "JP",
+            "official_name": "Japan",
+            "govuk_index_entry_code": "COUNTRY-92",
+            "country_or_territory": "country"
+        }
+    },
+    {
+        "pk": 126,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "Lithuania",
+            "created_date": "2016-04-05T13:23:05Z",
+            "updated_date": "2017-09-28 11:21:22",
+            "code": "LT",
+            "official_name": "The Republic of Lithuania",
+            "govuk_index_entry_code": "COUNTRY-109",
+            "country_or_territory": "country"
+        }
+    },
+    {
+        "pk": 127,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "Germany",
+            "created_date": "2016-04-05T13:23:05Z",
+            "updated_date": "2017-09-28 11:21:22",
+            "code": "DE",
+            "official_name": "The Federal Republic of Germany",
+            "govuk_index_entry_code": "COUNTRY-71",
+            "country_or_territory": "country"
+        }
+    },
+    {
+        "pk": 128,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "Singapore",
+            "created_date": "2016-04-05T13:23:05Z",
+            "updated_date": "2017-09-28 11:21:22",
+            "code": "SG",
+            "official_name": "The Republic of Singapore",
+            "govuk_index_entry_code": "COUNTRY-163",
+            "country_or_territory": "country"
+        }
+    },
+    {
+        "pk": 129,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "Vatican City",
+            "created_date": "2016-04-05T13:23:05Z",
+            "updated_date": "2017-09-28 11:21:22",
+            "code": "VA",
+            "official_name": "Vatican City State",
+            "govuk_index_entry_code": "COUNTRY-204",
+            "country_or_territory": "country"
+        }
+    },
+    {
+        "pk": 130,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "Nepal",
+            "created_date": "2016-04-05T13:23:05Z",
+            "updated_date": "2017-09-28 11:21:22",
+            "code": "NP",
+            "official_name": "The Federal Democratic Republic of Nepal",
+            "govuk_index_entry_code": "COUNTRY-131",
+            "country_or_territory": "country"
+        }
+    },
+    {
+        "pk": 131,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "Djibouti",
+            "created_date": "2016-04-05T13:23:05Z",
+            "updated_date": "2017-09-28 11:21:22",
+            "code": "DJ",
+            "official_name": "The Republic of Djibouti",
+            "govuk_index_entry_code": "COUNTRY-54",
+            "country_or_territory": "country"
+        }
+    },
+    {
+        "pk": 132,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "Sudan",
+            "created_date": "2016-04-05T13:23:05Z",
+            "updated_date": "2017-09-28 11:21:22",
+            "code": "SD",
+            "official_name": "The Republic of the Sudan",
+            "govuk_index_entry_code": "COUNTRY-172",
+            "country_or_territory": "country"
+        }
+    },
+    {
+        "pk": 133,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "Gabon",
+            "created_date": "2016-04-05T13:23:05Z",
+            "updated_date": "2017-09-28 11:21:22",
+            "code": "GA",
+            "official_name": "The Gabonese Republic",
+            "govuk_index_entry_code": "COUNTRY-68",
+            "country_or_territory": "country"
+        }
+    },
+    {
+        "pk": 134,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "Dominica",
+            "created_date": "2016-04-05T13:23:05Z",
+            "updated_date": "2017-09-28 11:21:22",
+            "code": "DM",
+            "official_name": "The Commonwealth of Dominica",
+            "govuk_index_entry_code": "COUNTRY-55",
+            "country_or_territory": "country"
+        }
+    },
+    {
+        "pk": 135,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "Austria",
+            "created_date": "2016-04-05T13:23:05Z",
+            "updated_date": "2017-09-28 11:21:22",
+            "code": "AT",
+            "official_name": "The Republic of Austria",
+            "govuk_index_entry_code": "COUNTRY-16",
+            "country_or_territory": "country"
+        }
+    },
+    {
+        "pk": 136,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "Slovakia",
+            "created_date": "2016-04-05T13:23:05Z",
+            "updated_date": "2017-09-28 11:21:22",
+            "code": "SK",
+            "official_name": "The Slovak Republic",
+            "govuk_index_entry_code": "COUNTRY-164",
+            "country_or_territory": "country"
+        }
+    },
+    {
+        "pk": 137,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "Qatar",
+            "created_date": "2016-04-05T13:23:05Z",
+            "updated_date": "2017-09-28 11:21:22",
+            "code": "QA",
+            "official_name": "The State of Qatar",
+            "govuk_index_entry_code": "COUNTRY-148",
+            "country_or_territory": "country"
+        }
+    },
+    {
+        "pk": 138,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "Iraq",
+            "created_date": "2016-04-05T13:23:05Z",
+            "updated_date": "2017-09-28 11:21:22",
+            "code": "IQ",
+            "official_name": "The Republic of Iraq",
+            "govuk_index_entry_code": "COUNTRY-86",
+            "country_or_territory": "country"
+        }
+    },
+    {
+        "pk": 139,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "Niger",
+            "created_date": "2016-04-05T13:23:05Z",
+            "updated_date": "2017-09-28 11:21:22",
+            "code": "NE",
+            "official_name": "The Republic of Niger",
+            "govuk_index_entry_code": "COUNTRY-135",
+            "country_or_territory": "country"
+        }
+    },
+    {
+        "pk": 140,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "Israel",
+            "created_date": "2016-04-05T13:23:05Z",
+            "updated_date": "2017-09-28 11:21:22",
+            "code": "IL",
+            "official_name": "The State of Israel",
+            "govuk_index_entry_code": "COUNTRY-88",
+            "country_or_territory": "country"
+        }
+    },
+    {
+        "pk": 141,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "Dominican Republic",
+            "created_date": "2016-04-05T13:23:05Z",
+            "updated_date": "2017-09-28 11:21:22",
+            "code": "DO",
+            "official_name": "The Dominican Republic",
+            "govuk_index_entry_code": "COUNTRY-56",
+            "country_or_territory": "country"
+        }
+    },
+    {
+        "pk": 142,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "Russia",
+            "created_date": "2016-04-05T13:23:05Z",
+            "updated_date": "2017-09-28 11:21:22",
+            "code": "RU",
+            "official_name": "The Russian Federation",
+            "govuk_index_entry_code": "COUNTRY-150",
+            "country_or_territory": "country"
+        }
+    },
+    {
+        "pk": 143,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "Ecuador",
+            "created_date": "2016-04-05T13:23:05Z",
+            "updated_date": "2017-09-28 11:21:22",
+            "code": "EC",
+            "official_name": "The Republic of Ecuador",
+            "govuk_index_entry_code": "COUNTRY-58",
+            "country_or_territory": "country"
+        }
+    },
+    {
+        "pk": 144,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "Burkina Faso",
+            "created_date": "2016-04-05T13:23:05Z",
+            "updated_date": "2017-09-28 11:21:22",
+            "code": "BF",
+            "official_name": "Burkina Faso",
+            "govuk_index_entry_code": "COUNTRY-33",
+            "country_or_territory": "country"
+        }
+    },
+    {
+        "pk": 145,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "Bulgaria",
+            "created_date": "2016-04-05T13:23:05Z",
+            "updated_date": "2017-09-28 11:21:22",
+            "code": "BG",
+            "official_name": "The Republic of Bulgaria",
+            "govuk_index_entry_code": "COUNTRY-32",
+            "country_or_territory": "country"
+        }
+    },
+    {
+        "pk": 146,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "Cuba",
+            "created_date": "2016-04-05T13:23:05Z",
+            "updated_date": "2017-09-28 11:21:22",
+            "code": "CU",
+            "official_name": "The Republic of Cuba",
+            "govuk_index_entry_code": "COUNTRY-50",
+            "country_or_territory": "country"
+        }
+    },
+    {
+        "pk": 147,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "Georgia",
+            "created_date": "2016-04-05T13:23:05Z",
+            "updated_date": "2017-09-28 11:21:22",
+            "code": "GE",
+            "official_name": "Georgia",
+            "govuk_index_entry_code": "COUNTRY-70",
+            "country_or_territory": "country"
+        }
+    },
+    {
+        "pk": 148,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "Lesotho",
+            "created_date": "2016-04-05T13:23:05Z",
+            "updated_date": "2017-09-28 11:21:22",
+            "code": "LS",
+            "official_name": "The Kingdom of Lesotho",
+            "govuk_index_entry_code": "COUNTRY-105",
+            "country_or_territory": "country"
+        }
+    },
+    {
+        "pk": 149,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "Mauritius",
+            "created_date": "2016-04-05T13:23:05Z",
+            "updated_date": "2017-09-28 11:21:22",
+            "code": "MU",
+            "official_name": "The Republic of Mauritius",
+            "govuk_index_entry_code": "COUNTRY-120",
+            "country_or_territory": "country"
+        }
+    },
+    {
+        "pk": 150,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "St Lucia",
+            "created_date": "2016-04-05T13:23:05Z",
+            "updated_date": "2017-09-28 11:21:22",
+            "code": "LC",
+            "official_name": "Saint Lucia",
+            "govuk_index_entry_code": "COUNTRY-153",
+            "country_or_territory": "country"
+        }
+    },
+    {
+        "pk": 151,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "Senegal",
+            "created_date": "2016-04-05T13:23:05Z",
+            "updated_date": "2017-09-28 11:21:22",
+            "code": "SN",
+            "official_name": "The Republic of Senegal",
+            "govuk_index_entry_code": "COUNTRY-159",
+            "country_or_territory": "country"
+        }
+    },
+    {
+        "pk": 152,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "Uzbekistan",
+            "created_date": "2016-04-05T13:23:05Z",
+            "updated_date": "2017-09-28 11:21:22",
+            "code": "UZ",
+            "official_name": "The Republic of Uzbekistan",
+            "govuk_index_entry_code": "COUNTRY-193",
+            "country_or_territory": "country"
+        }
+    },
+    {
+        "pk": 153,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "Kyrgyzstan",
+            "created_date": "2016-04-05T13:23:05Z",
+            "updated_date": "2017-09-28 11:21:22",
+            "code": "KG",
+            "official_name": "The Kyrgyz Republic",
+            "govuk_index_entry_code": "COUNTRY-101",
+            "country_or_territory": "country"
+        }
+    },
+    {
+        "pk": 154,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "Belarus",
+            "created_date": "2016-04-05T13:23:05Z",
+            "updated_date": "2017-09-28 11:21:22",
+            "code": "BY",
+            "official_name": "The Republic of Belarus",
+            "govuk_index_entry_code": "COUNTRY-22",
+            "country_or_territory": "country"
+        }
+    },
+    {
+        "pk": 155,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "Guinea-Bissau",
+            "created_date": "2016-04-05T13:23:05Z",
+            "updated_date": "2017-09-28 11:21:22",
+            "code": "GW",
+            "official_name": "The Republic of Guinea-Bissau",
+            "govuk_index_entry_code": "COUNTRY-77",
+            "country_or_territory": "country"
+        }
+    },
+    {
+        "pk": 156,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "Mexico",
+            "created_date": "2016-04-05T13:23:05Z",
+            "updated_date": "2017-09-28 11:21:22",
+            "code": "MX",
+            "official_name": "The United Mexican States",
+            "govuk_index_entry_code": "COUNTRY-121",
+            "country_or_territory": "country"
+        }
+    },
+    {
+        "pk": 157,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "Tanzania",
+            "created_date": "2016-04-05T13:23:05Z",
+            "updated_date": "2017-09-28 11:21:22",
+            "code": "TZ",
+            "official_name": "The United Republic of Tanzania",
+            "govuk_index_entry_code": "COUNTRY-179",
+            "country_or_territory": "country"
+        }
+    },
+    {
+        "pk": 158,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "Ivory Coast",
+            "created_date": "2016-04-05T13:23:05Z",
+            "updated_date": "2017-09-28 11:21:22",
+            "code": "CI",
+            "official_name": "The Republic of Cote D'Ivoire",
+            "govuk_index_entry_code": "COUNTRY-90",
+            "country_or_territory": "country"
+        }
+    },
+    {
+        "pk": 159,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "Saudi Arabia",
+            "created_date": "2016-04-05T13:23:05Z",
+            "updated_date": "2017-09-28 11:21:22",
+            "code": "SA",
+            "official_name": "The Kingdom of Saudi Arabia",
+            "govuk_index_entry_code": "COUNTRY-158",
+            "country_or_territory": "country"
+        }
+    },
+    {
+        "pk": 160,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "Guyana",
+            "created_date": "2016-04-05T13:23:05Z",
+            "updated_date": "2017-09-28 11:21:22",
+            "code": "GY",
+            "official_name": "The Co-operative Republic of Guyana",
+            "govuk_index_entry_code": "COUNTRY-78",
+            "country_or_territory": "country"
+        }
+    },
+    {
+        "pk": 161,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "Sao Tome and Principe",
+            "created_date": "2016-04-05T13:23:05Z",
+            "updated_date": "2017-09-28 11:21:22",
+            "code": "ST",
+            "official_name": "The Democratic Republic of Sao Tome and Principe",
+            "govuk_index_entry_code": "COUNTRY-157",
+            "country_or_territory": "country"
+        }
+    },
+    {
+        "pk": 162,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "Cameroon",
+            "created_date": "2016-04-05T13:23:05Z",
+            "updated_date": "2017-09-28 11:21:22",
+            "code": "CM",
+            "official_name": "The Republic of Cameroon",
+            "govuk_index_entry_code": "COUNTRY-37",
+            "country_or_territory": "country"
+        }
+    },
+    {
+        "pk": 163,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "The Gambia",
+            "created_date": "2017-03-29T14:22:30Z",
+            "updated_date": "2017-09-28 11:21:22",
+            "code": "GM",
+            "official_name": "The Republic of The Gambia",
+            "govuk_index_entry_code": "COUNTRY-206",
+            "country_or_territory": "country"
+        }
+    },
+    {
+        "pk": 164,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "Belgium",
+            "created_date": "2016-04-05T13:23:05Z",
+            "updated_date": "2017-09-28 11:21:22",
+            "code": "BE",
+            "official_name": "The Kingdom of Belgium",
+            "govuk_index_entry_code": "COUNTRY-23",
+            "country_or_territory": "country"
+        }
+    },
+    {
+        "pk": 165,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "Kazakhstan",
+            "created_date": "2016-04-05T13:23:05Z",
+            "updated_date": "2017-09-28 11:21:22",
+            "code": "KZ",
+            "official_name": "The Republic of Kazakhstan",
+            "govuk_index_entry_code": "COUNTRY-94",
+            "country_or_territory": "country"
+        }
+    },
+    {
+        "pk": 166,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "China",
+            "created_date": "2016-04-05T13:23:05Z",
+            "updated_date": "2017-09-28 11:21:22",
+            "code": "CN",
+            "official_name": "The People's Republic of China",
+            "govuk_index_entry_code": "COUNTRY-43",
+            "country_or_territory": "country"
+        }
+    },
+    {
+        "pk": 167,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "Ghana",
+            "created_date": "2016-04-05T13:23:05Z",
+            "updated_date": "2017-09-28 11:21:22",
+            "code": "GH",
+            "official_name": "The Republic of Ghana",
+            "govuk_index_entry_code": "COUNTRY-72",
+            "country_or_territory": "country"
+        }
+    },
+    {
+        "pk": 168,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "Benin",
+            "created_date": "2016-04-05T13:23:05Z",
+            "updated_date": "2017-09-28 11:21:22",
+            "code": "BJ",
+            "official_name": "The Republic of Benin",
+            "govuk_index_entry_code": "COUNTRY-25",
+            "country_or_territory": "country"
+        }
+    },
+    {
+        "pk": 169,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "Estonia",
+            "created_date": "2016-04-05T13:23:05Z",
+            "updated_date": "2017-09-28 11:21:22",
+            "code": "EE",
+            "official_name": "The Republic of Estonia",
+            "govuk_index_entry_code": "COUNTRY-63",
+            "country_or_territory": "country"
+        }
+    },
+    {
+        "pk": 170,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "Morocco",
+            "created_date": "2016-04-05T13:23:05Z",
+            "updated_date": "2017-09-28 11:21:22",
+            "code": "MA",
+            "official_name": "The Kingdom of Morocco",
+            "govuk_index_entry_code": "COUNTRY-127",
+            "country_or_territory": "country"
+        }
+    },
+    {
+        "pk": 171,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "United Arab Emirates",
+            "created_date": "2016-04-05T13:23:05Z",
+            "updated_date": "2017-09-28 11:21:22",
+            "code": "AE",
+            "official_name": "The United Arab Emirates",
+            "govuk_index_entry_code": "COUNTRY-190",
+            "country_or_territory": "country"
+        }
+    },
+    {
+        "pk": 172,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "Brunei",
+            "created_date": "2016-04-05T13:23:05Z",
+            "updated_date": "2017-09-28 11:21:22",
+            "code": "BN",
+            "official_name": "Brunei Darussalam",
+            "govuk_index_entry_code": "COUNTRY-31",
+            "country_or_territory": "country"
+        }
+    },
+    {
+        "pk": 173,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "Tunisia",
+            "created_date": "2016-04-05T13:23:05Z",
+            "updated_date": "2017-09-28 11:21:22",
+            "code": "TN",
+            "official_name": "The Tunisian Republic",
+            "govuk_index_entry_code": "COUNTRY-184",
+            "country_or_territory": "country"
+        }
+    },
+    {
+        "pk": 174,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "San Marino",
+            "created_date": "2016-04-05T13:23:05Z",
+            "updated_date": "2017-09-28 11:21:22",
+            "code": "SM",
+            "official_name": "The Republic of San Marino",
+            "govuk_index_entry_code": "COUNTRY-156",
+            "country_or_territory": "country"
+        }
+    },
+    {
+        "pk": 175,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "Bolivia",
+            "created_date": "2016-04-05T13:23:05Z",
+            "updated_date": "2017-09-28 11:21:22",
+            "code": "BO",
+            "official_name": "The Plurinational State of Bolivia",
+            "govuk_index_entry_code": "COUNTRY-27",
+            "country_or_territory": "country"
+        }
+    },
+    {
+        "pk": 176,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "Albania",
+            "created_date": "2016-04-05T13:23:05Z",
+            "updated_date": "2017-09-28 11:21:22",
+            "code": "AL",
+            "official_name": "The Republic of Albania",
+            "govuk_index_entry_code": "COUNTRY-8",
+            "country_or_territory": "country"
+        }
+    },
+    {
+        "pk": 177,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "Colombia",
+            "created_date": "2016-04-05T13:23:05Z",
+            "updated_date": "2017-09-28 11:21:22",
+            "code": "CO",
+            "official_name": "The Republic of Colombia",
+            "govuk_index_entry_code": "COUNTRY-44",
+            "country_or_territory": "country"
+        }
+    },
+    {
+        "pk": 178,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "Kosovo",
+            "created_date": "2016-04-05T13:23:05Z",
+            "updated_date": "2017-09-28 11:21:22",
+            "code": "XK",
+            "official_name": "The Republic of Kosovo",
+            "govuk_index_entry_code": "COUNTRY-99",
+            "country_or_territory": "country"
+        }
+    },
+    {
+        "pk": 179,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "Armenia",
+            "created_date": "2016-04-05T13:23:05Z",
+            "updated_date": "2017-09-28 11:21:22",
+            "code": "AM",
+            "official_name": "The Republic of Armenia",
+            "govuk_index_entry_code": "COUNTRY-14",
+            "country_or_territory": "country"
+        }
+    },
+    {
+        "pk": 180,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "Peru",
+            "created_date": "2016-04-05T13:23:05Z",
+            "updated_date": "2017-09-28 11:21:22",
+            "code": "PE",
+            "official_name": "The Republic of Peru",
+            "govuk_index_entry_code": "COUNTRY-144",
+            "country_or_territory": "country"
+        }
+    },
+    {
+        "pk": 181,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "Cambodia",
+            "created_date": "2016-04-05T13:23:05Z",
+            "updated_date": "2017-09-28 11:21:22",
+            "code": "KH",
+            "official_name": "The Kingdom of Cambodia",
+            "govuk_index_entry_code": "COUNTRY-36",
+            "country_or_territory": "country"
+        }
+    },
+    {
+        "pk": 182,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "Trinidad and Tobago",
+            "created_date": "2016-04-05T13:23:05Z",
+            "updated_date": "2017-09-28 11:21:22",
+            "code": "TT",
+            "official_name": "The Republic of Trinidad and Tobago",
+            "govuk_index_entry_code": "COUNTRY-183",
+            "country_or_territory": "country"
+        }
+    },
+    {
+        "pk": 183,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "Kiribati",
+            "created_date": "2016-04-05T13:23:05Z",
+            "updated_date": "2017-09-28 11:21:22",
+            "code": "KI",
+            "official_name": "The Republic of Kiribati",
+            "govuk_index_entry_code": "COUNTRY-96",
+            "country_or_territory": "country"
+        }
+    },
+    {
+        "pk": 184,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "Poland",
+            "created_date": "2016-04-05T13:23:05Z",
+            "updated_date": "2017-09-28 11:21:22",
+            "code": "PL",
+            "official_name": "The Republic of Poland",
+            "govuk_index_entry_code": "COUNTRY-146",
+            "country_or_territory": "country"
+        }
+    },
+    {
+        "pk": 185,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "Liberia",
+            "created_date": "2016-04-05T13:23:05Z",
+            "updated_date": "2017-09-28 11:21:22",
+            "code": "LR",
+            "official_name": "The Republic of Liberia",
+            "govuk_index_entry_code": "COUNTRY-106",
+            "country_or_territory": "country"
+        }
+    },
+    {
+        "pk": 186,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "Slovenia",
+            "created_date": "2016-04-05T13:23:05Z",
+            "updated_date": "2017-09-28 11:21:22",
+            "code": "SI",
+            "official_name": "The Republic of Slovenia",
+            "govuk_index_entry_code": "COUNTRY-165",
+            "country_or_territory": "country"
+        }
+    },
+    {
+        "pk": 187,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "Oman",
+            "created_date": "2016-04-05T13:23:05Z",
+            "updated_date": "2017-09-28 11:21:22",
+            "code": "OM",
+            "official_name": "The Sultanate of Oman",
+            "govuk_index_entry_code": "COUNTRY-138",
+            "country_or_territory": "country"
+        }
+    },
+    {
+        "pk": 188,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "Indonesia",
+            "created_date": "2016-04-05T13:23:05Z",
+            "updated_date": "2017-09-28 11:21:22",
+            "code": "ID",
+            "official_name": "The Republic of Indonesia",
+            "govuk_index_entry_code": "COUNTRY-84",
+            "country_or_territory": "country"
+        }
+    },
+    {
+        "pk": 189,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "Suriname",
+            "created_date": "2016-04-05T13:23:05Z",
+            "updated_date": "2017-09-28 11:21:22",
+            "code": "SR",
+            "official_name": "The Republic of Suriname",
+            "govuk_index_entry_code": "COUNTRY-173",
+            "country_or_territory": "country"
+        }
+    },
+    {
+        "pk": 190,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "Palau",
+            "created_date": "2016-04-05T13:23:05Z",
+            "updated_date": "2017-09-28 11:21:22",
+            "code": "PW",
+            "official_name": "The Republic of Palau",
+            "govuk_index_entry_code": "COUNTRY-140",
+            "country_or_territory": "country"
+        }
+    },
+    {
+        "pk": 191,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "Bangladesh",
+            "created_date": "2016-04-05T13:23:05Z",
+            "updated_date": "2017-09-28 11:21:22",
+            "code": "BD",
+            "official_name": "The People's Republic of Bangladesh",
+            "govuk_index_entry_code": "COUNTRY-20",
+            "country_or_territory": "country"
+        }
+    },
+    {
+        "pk": 192,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "Angola",
+            "created_date": "2016-04-05T13:23:05Z",
+            "updated_date": "2017-09-28 11:21:22",
+            "code": "AO",
+            "official_name": "The Republic of Angola",
+            "govuk_index_entry_code": "COUNTRY-11",
+            "country_or_territory": "country"
+        }
+    },
+    {
+        "pk": 193,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "St Vincent",
+            "created_date": "2016-04-05T13:23:05Z",
+            "updated_date": "2017-09-28 11:21:22",
+            "code": "VC",
+            "official_name": "Saint Vincent and the Grenadines",
+            "govuk_index_entry_code": "COUNTRY-154",
+            "country_or_territory": "country"
+        }
+    },
+    {
+        "pk": 194,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "Iceland",
+            "created_date": "2016-04-05T13:23:05Z",
+            "updated_date": "2017-09-28 11:21:22",
+            "code": "IS",
+            "official_name": "The Republic of Iceland",
+            "govuk_index_entry_code": "COUNTRY-82",
+            "country_or_territory": "country"
+        }
+    },
+    {
+        "pk": 195,
+        "model": "barriers.BarrierCountry",
+        "fields": {
+            "name": "India",
+            "created_date": "2016-04-05T13:23:05Z",
+            "updated_date": "2017-09-28 11:21:22",
+            "code": "IN",
+            "official_name": "The Republic of India",
+            "govuk_index_entry_code": "COUNTRY-83",
+            "country_or_territory": "country"
+        }
+    }
+]

@@ -1,0 +1,38 @@
+[
+    {
+        "pk": 1,
+        "model": "barriers.BarrierSource",
+        "fields": {
+            "name": "UK Trade Barriers Database",
+            "short_name": "UK",
+            "description": "TBT",
+            "remote_url": "Barriers tracked by the UK Government's Department for International Trade.",
+            "created_date": "2017-09-25",
+            "updated_date": "2017-09-25"
+        }
+    },
+    {
+        "pk": 2,
+        "model": "barriers.BarrierSource",
+        "fields": {
+            "name": "European Commission Market Access Database",
+            "short_name": "EC MADB",
+            "description": "TBT",
+            "remote_url": "http://madb.europa.eu/",
+            "created_date": "2017-09-25",
+            "updated_date": "2017-09-25"
+        }
+    },
+    {
+        "pk": 3,
+        "model": "barriers.BarrierSource",
+        "fields": {
+            "name": "WTO ePing database",
+            "short_name": "WTO",
+            "description": "The WTO ePing database tracks trade barriers self-reported by WTO member countries.",
+            "remote_url": "http://www.epingalert.org/",
+            "created_date": "2017-09-25",
+            "updated_date": "2017-09-25"
+        }
+    }
+]

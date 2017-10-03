@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     # django library for dealing with hierarchical elements
     'mptt',
     # our apps
+    'govuk_template',
     'barriers',
     'backend'
 ]
