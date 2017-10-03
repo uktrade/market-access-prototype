@@ -1,0 +1,27 @@
+{% extends './datahub_layout.html' %}
+{% load staticfiles %}
+{% load trans from i18n %}
+{% block css %}
+{% endblock %}
+{% block head_title %}Data Hub - Trade Barriers{% endblock %}
+{% block local_header__title_before %}{% endblock %}
+{% block local_header__title %}Company X v Country 1{% endblock %}
+{% block local_header__meta %}
+<div class="c-meta-list">
+  Sector, Barrier type, Country, Date added
+</div>
+{% endblock %}
+{% block local_header__progress %}{% endblock %}
+
+{% block sidebar %}
+<nav class="c-local-nav" aria-label="local navigation">
+    <a class="c-local-nav__link is-active" href="#">Report summary</a>
+    <a class="c-local-nav__link" href="#">About the problem</a>
+    <a class="c-local-nav__link" href="#">Barrier type</a>
+    <a class="c-local-nav__link" href="#">Requested gov action</a>
+</nav>
+{% endblock %}
+
+{% block content %}
+
+{% endblock %}

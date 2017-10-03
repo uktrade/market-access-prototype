@@ -27,25 +27,26 @@ tr-home
         <h1 class="h3">{% trans "Trade barrier detail" %}</h1>
       </div>
       <div class="column-two-third">
-          <h2 id="barrier-title" class="h3">Lorem ipsum dolor sit amet</h2>
-          <p><strong>WTO symbol:</strong> <a href="#">Lorem ipsum dolor sit amet</a></p>
-          <p><strong>Barrier type:</strong> Lorem ipsum dolor sit amet</p>
-          <p><strong>Notifying member:</strong> Lorem ipsum dolor sit amet</p>
-          <p><strong>Distribution date:</strong> Lorem ipsum dolor sit amet</p>
-          <p class="h4">Lorem ipsum dolor sit amet</p>
-          <ul class="list">
-              <li class="list-item">Products affected: Lorem ipsum dolor sit amet</li>
-              <li class="list-item">Objectives: Lorem ipsum dolor sit amet</li>
-              <li class="list-item">Regions affected (according to reporting country): Lorem ipsum dolor sit amet</li>
-              <li class="list-item">Comments due date: Lorem ipsum dolor sit amet</li>
-              <li class="list-item">Notification type: Lorem ipsum dolor sit amet</li>
-              <li class="list-item">Documents: Lorem ipsum dolor sit amet</li>
-          </ul>
-          <p>&nbsp;</p>
+          <h2 id="barrier-title" class="h3">Photo voltaic panels</h2>
+          <p>Country: United States<br>
+          Sector: Energy equipment<br>
+          Barrier type: Burdensome customs procedures</p>
+          <p>Consignments of photo voltaic panels from EU countries are being subject to particularly rigorous document inspection procedures at all ports of entry to the US. Onward transport has been delayed at San Francisco, New York, Delaware and Houston.</p>
+          <p>While no reason has been given for this, it seems likely that officials are concerned about the possibility of products sourced in China being exported under an EU flag. In particular, officials are paying particular attention to document GB34, which lists the components in each product and their countries of origin. Any consignment with this document not fully completed and attested are at risk of severe delay.</p>
+          <p>Reference No: 3425A<br>
+            Companies affected: Confidential, information available on request only<br>
+            Status: Assessment<br>
+            Actions: None at present</p>
+
+          {% include 'components/subscribe.html' %}
+
+          <hr>
           <p><a href="{% url 'barriers-by-country' country="Spain" %}" class="button button-white button-border">Back to search results</a></p>
       </div>
       <div class="column-one-third">
-          <p><a href="{% url 'report-barrier' %}" class="button button-red" aria-labelledby="barrier-title">Make a report</a></p>
+          <p><a href="{% url 'report-barrier' %}" class="button button-red" aria-labelledby="barrier-title">This barrier is affecting me</a></p>
+          <p><strong>Why report the problem?</strong></p>
+          <p>The government can be aware of a trade barrier without knowing how many companies it affects. The more we understand the scale of a trade barrier the more likely we are to be able to do something about it.</p>
       </div>
     </div>
   </div>

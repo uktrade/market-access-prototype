@@ -11,12 +11,17 @@ from django.conf.urls import url  # , include
 # from django.views import generic
 
 from .views import (
-    DashboardView
+    DashboardView,
+    ReportHomeView
 )
 
 urlpatterns = [
     url(r'^$',
         DashboardView.as_view(),
         name='home'
+    ),
+    url(r'^report-home$',
+        ReportHomeView.as_view(),
+        name='report-home'
     ),
 ]

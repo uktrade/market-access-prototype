@@ -25,11 +25,11 @@
       <div class="column-one-third dit-progress-bar">
         <div class="h4">Section</div>
         <ol>
-          <li class="is-selected">1 About you</li>
-          <li>2 About the problem</li>
-          <li>3 Select the type of barrier</li>
-          <li>4 Working out the next steps</li>
-          <li>5 Any other details</li>
+          <li class="is-selected"><span>1 About you</span></li>
+          <li><a href="{% url 'report-barrier-step2' %}"><span>2 About the problem</span></a></li>
+          <li><a href="{% url 'report-barrier-step3' %}"><span>3 Select the type of barrier</span></a></li>
+          <li><a href="{% url 'report-barrier-step4' %}"><span>4 Working out the next steps</span></a></li>
+          <li><a href="{% url 'report-barrier-step5' %}"><span>5 Any other details</span></a></li>
           <li>6 Summary</li>
         </ol>
       </div>
@@ -71,8 +71,9 @@
 
           <div class="form-group">
             <label class="form-label" for="dit-step1-company-name">
-              Organisation Name
+              Your organisation
             </label>
+            <span class="form-hint">Enter your organisation name then search to get details from Companies House</span>
             <span class="error-message hidden" aria-hidden="true">Enter an organisation name</span>
             <input class="form-control js-companies-house-input" id="dit-step1-company-name" type="text" name="dit[step1][company_name]" required>
           </div>
@@ -109,24 +110,32 @@
           </script>
 
           <script type="text/template" class="js-companies-house-template-error">
-            <p>There are no results for your search, please try again with a different search term or if you do not have a Companies House number check the `I don't have a Companies House Number` box below.</p>
+            <p>There are no results for your search, please try again with a different search term or if you do not have a Companies House number check the `My organisation is no registered with Companies House` box below.</p>
           </script>
 
           <script type="text/template" class="js-companies-house-template-fail">
-            <p>There was a problem with the Companies House Search. Please try again or check the `I don't have a Companies House Number` box below and fill in your organisation address manually.</p>
+            <p>There was a problem with the Companies House Search. Please try again or check the `My organisation is no registered with Companies House` box below and fill in your organisation address manually.</p>
           </script>
 
           <div class="form-group">
             <div class="multiple-choice">
               <input name="dit[step1][no_companies_house_number]" value="false" type="checkbox">
-              <input id="dit-step1-no-companies-house" name="dit[step1][no_companies_house_number]" value="I do not have a Companies House Number" type="checkbox" class="js-dit-step1-no-companies-house">
-              <label for="dit-step1-no-companies-house">I don't have a Companies House Number</label>
+              <input id="dit-step1-no-companies-house" name="dit[step1][no_companies_house_number]" value="My organisation is no registered with Companies House" type="checkbox" class="js-dit-step1-no-companies-house">
+              <label for="dit-step1-no-companies-house">My organisation is no registered with Companies House</label>
             </div>
           </div>
 
           <fieldset class="js-company-address hidden" aria-hidden="true">
 
-            <legend class="form-label">Organisation address</legend>
+            <legend class="form-label">Enter your organisation details</legend>
+
+            <div class="form-group form-group-child">
+            <label class="form-label" for="dit-step1-organisation-name">
+              Organisation Name
+            </label>
+            <span class="error-message hidden" aria-hidden="true">Enter an organisation name</span>
+            <input class="form-control" id="dit-step1-organisation-name" type="text" name="dit[step1][organisation_name]">
+          </div>
 
             <div class="form-group  form-group-child">
               <label class="form-label" for="dit-step1-organisation-address">

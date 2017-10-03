@@ -23,11 +23,11 @@
       <div class="column-one-third dit-progress-bar">
         <div class="h4">Section</div>
         <ol>
-          <li><a href="{% url 'report-barrier-step1' %}">1: About you</a></li>
-          <li><a href="{% url 'report-barrier-step2' %}">2: About the problem</a></li>
-          <li><a href="{% url 'report-barrier-step3' %}">3: Select the type of barrier</a></li>
+          <li><a href="{% url 'report-barrier-step1' %}"><span>1: About you</span> <img src="{% static 'images/tick.svg' %}" alt="Completed step"></a></li>
+          <li><a href="{% url 'report-barrier-step2' %}"><span>2: About the problem</span> <img src="{% static 'images/tick.svg' %}" alt="Completed step"></a></li>
+          <li><a href="{% url 'report-barrier-step3' %}"><span>3: Select the type of barrier</span> <img src="{% static 'images/tick.svg' %}" alt="Completed step"></a></li>
           <li class="is-selected">4: Working out the next steps</li>
-          <li>5: Any other details</li>
+          <li><a href="{% url 'report-barrier-step5' %}">5: Any other details</a></li>
           <li>6: Summary</li>
         </ol>
       </div>
@@ -43,7 +43,7 @@
               Tell us about any steps you have taken to resolve the problem, including:
               <span class="form-hint">
                 - people you have contacted<br>
-                - when you contacted them<br>
+                - when you contacted them <br>
                 - what happened
               </span>
             </label>
@@ -52,11 +52,7 @@
 
           <div class="form-group">
             <label class="form-label" for="dit-step4-outcome">
-              What outcome are you looking for?
-              <span class="form-hint">
-                - <br>
-                -
-              </span>
+              Do you have a view on how the problem is most likely to be resolved?
             </label>
             <span class="error-message hidden" aria-hidden="true">Enter the outcome you are looking for</span>
             <textarea class="form-control" id="dit-step4-outcome" name="dit[step4][outcome]" rows="5" cols="10" required></textarea>
@@ -103,10 +99,9 @@
 
               <legend>
                 <span class="form-label">
-                  Are you happy for us to publish a summary of your problem on Great.gov.uk?
+                  We’d like to publish a summary of this problem on Great.gov.uk.
                   <span class="form-hint">
-                    This will help us to alert other UK exporters to the problem<br>
-                    <a href="{% url 'example-summary' %}" target="_blank">View an example summary</a>
+                     This will mean other UK exporters can be made aware of the problem and they may then report similar experiences. We will only publish a summary with your permission. <a href="{% url 'example-summary' %}" target="_blank">View an existing summary</a>
                   </span>
                 </span>
               </legend>
@@ -114,18 +109,18 @@
               <span class="error-message hidden" aria-hidden="true">Select whether or not you are happy for us to publish a summary of your problem</span>
 
               <div class="multiple-choice">
-                <input id="dit-step4-publish-yes" name="dit[step4][publish]" value="Yes" type="radio" required>
-                <label for="dit-step4-publish-yes">Yes</label>
+                <input id="dit-step4-publish-yes" name="dit[step4][publish]" value="Yes, I give my permission" type="radio" required>
+                <label for="dit-step4-publish-yes">Yes, I give my permission</label>
               </div>
 
               <div class="multiple-choice">
-                <input id="dit-step4-publish-no" name="dit[step4][publish]" value="No" type="radio" required>
-                <label for="dit-step4-publish-no">No</label>
+                <input id="dit-step4-publish-no" name="dit[step4][publish]" value="No, I don’t give my permission" type="radio" required>
+                <label for="dit-step4-publish-no">No, I don’t give my permission</label>
               </div>
 
               <div class="multiple-choice">
-                <input id="dit-step4-publish-maybe" name="dit[step4][publish]" value="Maybe, following consultation with me" type="radio" required>
-                <label for="dit-step4-publish-maybe">Maybe, following consultation with me</label>
+                <input id="dit-step4-publish-maybe" name="dit[step4][publish]" value="Don’t publish before consulting me " type="radio" required>
+                <label for="dit-step4-publish-maybe">Don’t publish before consulting me </label>
               </div>
 
             </fieldset>

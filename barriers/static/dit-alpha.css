@@ -32,6 +32,12 @@ textarea{
   background-color: inherit;
 }
 
+@media screen and (max-width: 767px){
+  .form-control{
+    width: 100%;
+  }
+}
+
 .form-group-child:not(.form-group-error){
   border-left: 5px solid #bfc1c3;
   padding: 15px;
@@ -59,9 +65,10 @@ main a:hover{
   color: currentColor;
   cursor: pointer;
   display: inline-block;
-  font-size: 18px;
+  font-family: inherit;
+  font-size: inherit;
   margin: 0;
-  padding: 0 20px;
+  padding: 0;
   text-decoration: underline;
 }
 
@@ -69,8 +76,18 @@ main a:hover{
   text-decoration: none;
 }
 
-.dit-buttons .button + .button:not(.float--right) {
-  margin-left: 30px;
+@media screen and (max-width: 767px){
+  .dit-buttons{
+    clear: both;
+    float: left;
+    margin-top: 30px;
+    width: 100%;
+  }
+}
+@media screen and (min-width: 768px){
+  .dit-buttons .button + .button:not(.float--right) {
+    margin-left: 30px;
+  }
 }
 
 /**
@@ -303,7 +320,8 @@ main a:hover{
   background-repeat: no-repeat;
   background-size: contain;
   color: #000;
-  height: 410px;
+  height: auto;
+  min-height: 410px;
   margin-bottom: 50px;
   position: relative;
 }
@@ -457,10 +475,10 @@ main a:hover{
 }
 
 .js-saved-success{
-  border: 5px solid green;
+  /*border: 5px solid green;*/
   margin-bottom: 30px;
   margin-top: 30px;
-  padding: 20px 15px 0;
+  /*padding: 20px 15px 0;*/
 }
 
 /**
@@ -700,33 +718,42 @@ main a:hover{
 
 .dit-progress-bar ol{
   background: #f0f0f0;
-  font-size: 18px;
+  font-size: 16px;
   margin: 10px 0;
   max-width: 260px;
   padding: 20px 0;
 }
 
-.dit-progress-bar a{
+.dit-progress-bar a span{
   color: #00549f;
   text-decoration: underline;
 }
 
-.dit-progress-bar a:hover{
+.dit-progress-bar a:hover span{
   text-decoration: none;
 }
 
 .dit-progress-bar li{
+  clear: both;
   display: block;
   padding: 15px 10px;
 }
 
 .dit-progress-bar li + li{
-  margin-top: 20px;
+  margin-top: 15px;
 }
 
 .dit-progress-bar .is-selected{
   background: #00549f;
   color: #fff;
+}
+
+.dit-progress-bar img{
+  display: inline-block;
+  float: right;
+  position: relative;
+  top: -2px;
+  vertical-align: middle;
 }
 
 @media screen and (max-width: 767px){
@@ -841,12 +868,13 @@ If you have 2 sets of tabs on the same page e.g.
 	pointer-events: none; /* 1 */
 	position: absolute;
 	right: 18px;
-	top: 10px;
+	top: 2px;
 }
 
 @media screen and (min-width: 1024px){
   .dit-accordion__btn{
     right: 140px;
+    top: 10px;
   }
 }
 
@@ -898,4 +926,31 @@ If you have 2 sets of tabs on the same page e.g.
 
 .dit-reporting-cta__title{
   margin-bottom: 30px;
+}
+
+/* Register
+*/
+@media screen and (min-width: 1060px){
+  .dit-create-parent{
+    float: left;
+    border-right: 1px solid #666;
+  }
+
+  .dit-create-parent button{
+    display: inline-block;
+    width: auto;
+  }
+}
+@media screen and (max-width: 1059px){
+
+  .dit-create-parent .button{
+    display: block;
+    margin-right: 0;
+  }
+
+  .button.button-blue.push--left.flush--bottom{
+    display: block;
+    margin-left: 0;
+    margin-top: 20px;
+  }
 }

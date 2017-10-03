@@ -4,736 +4,320 @@
 {% block css %}
 {% endblock %}
 {% block head_title %}Data Hub - Trade Barriers{% endblock %}
+{% block local_header__title_before %}{% endblock %}
 {% block local_header__title %}Trade Barriers{% endblock %}
+{% block local_header__meta %}{% endblock %}
+{% block local_header__progress %}{% endblock %}
 
 {% block sidebar %}
-<nav class="c-local-nav" aria-label="local navigation">
-    <a class="c-local-nav__link is-active" href="#">Report summary</a>
-    <a class="c-local-nav__link" href="#">About the problem</a>
-    <a class="c-local-nav__link" href="#">Barrier type</a>
-    <a class="c-local-nav__link" href="#">Requested gov action</a>
-</nav>
 
 <form method="get" class="c-collection-filters js-AutoSubmit">
-
   <input name="sortby" value="modified_on:desc" type="hidden">
-
   <input name="custom" value="true" type="hidden">
-
   <header class="u-clearfix">
       <h2 class="c-collection-filters__heading">Filter results</h2>
   </header>
-
+  <fieldset class="c-form-group c-form-group__checkbox-group c-form-group--smaller" id="headquarters-wrapper">
+      <legend class="c-form-group__label">
+        <span class="c-form-group__label-text">Record type</span>
+      </legend>
+      <label class="block-label selection-button-radio">
+          <input name="field_sidebar_type" value="UK database" type="radio"> UK database
+      </label>
+      <label class="block-label selection-button-radio">
+          <input name="field_sidebar_type" value="All" type="radio"> All (<abbr title="including">inc</abbr> <abbr title="World Trade Organisation">WTO</abbr> and <abbr title="European Territorial Cooperation">ETC</abbr>)
+      </label>
+  </fieldset>
   <div id="group-field-sidebar_input" class="c-form-group c-form-group--light c-form-group--smaller">
-      <label class="c-form-group__label " for="field-sidebar-input">
+      <label class="c-form-group__label" for="field-sidebar-company">
           <span class="c-form-group__label-text">
           Company name
           </span>
-          <span class="c-form-group__hint" id="hint-field-sidebar-input">At least three characters</span>
+          <span class="c-form-group__hint" id="hint-field-sidebar-company">At least three characters</span>
       </label>
       <div class="c-form-group__inner">
-          <input name="field_sidebar_input" id="field-sidebar-input" value="" class="c-form-control  c-form-control--light c-form-control--smaller " aria-describedby="hint-field-sidebar-input" type="text">
+          <input name="field_sidebar_company" id="field-sidebar-company" value="" class="c-form-control c-form-control--light c-form-control--smaller" aria-describedby="hint-field-sidebar-company" type="text">
       </div>
   </div>
   <div id="group-field-sidebar_input" class="c-form-group c-form-group--light c-form-group--smaller">
-      <label class="c-form-group__label " for="field-sidebar-input">
+      <label class="c-form-group__label" for="field-sidebar-product">
           <span class="c-form-group__label-text">
           Product or service
           </span>
-          <span class="c-form-group__hint" id="hint-field-sidebar-input">At least three characters</span>
+          <span class="c-form-group__hint" id="hint-field-sidebar-product">At least three characters</span>
       </label>
       <div class="c-form-group__inner">
-          <input name="field_sidebar_input" id="field-sidebar-input" value="" class="c-form-control  c-form-control--light c-form-control--smaller " aria-describedby="hint-field-sidebar-input" type="text">
+          <input name="field_sidebar_product" id="field-sidebar-product" value="" class="c-form-control c-form-control--light c-form-control--smaller" aria-describedby="hint-field-sidebar-product" type="text">
       </div>
   </div>
-
-  <div id="group-field-sidebar_select" class="c-form-group c-form-group--light c-form-group--smaller">
-      <label class="c-form-group__label" for="field-sidebar-select">
+  <div id="group-field-sidebar_country" class="c-form-group c-form-group--light c-form-group--smaller">
+      <label class="c-form-group__label" for="field-sidebar-country">
         <span class="c-form-group__label-text">
           Country
         </span>
       </label>
-
       <div class="c-form-group__inner">
-          <select id="field-sidebar-select" name="sidebar_select" class="c-form-control c-form-control--light c-form-control--smaller">
-              <option value="">Default empty</option>
-              <option value="1">Option 1</option>
+          <select id="field-sidebar-country" name="sidebar_country" class="c-form-control c-form-control--light c-form-control--smaller">
+            <option value=""></option>
+            {% include 'components/countries.html' %}
           </select>
       </div>
   </div>
-
-  <div id="group-field-sidebar_select" class="c-form-group c-form-group--light c-form-group--smaller">
-      <label class="c-form-group__label" for="field-sidebar-select">
+  <div id="group-field-sidebar_sector" class="c-form-group c-form-group--light c-form-group--smaller">
+      <label class="c-form-group__label" for="field-sidebar-sector">
         <span class="c-form-group__label-text">
           Sector
         </span>
       </label>
-
       <div class="c-form-group__inner">
-          <select id="field-sidebar-select" name="sidebar_select" class="c-form-control c-form-control--light c-form-control--smaller">
-              <option value="">Default empty</option>
+          <select id="field-sidebar-sector" name="sidebar_sector" class="c-form-control c-form-control--light c-form-control--smaller">
+              <option value=""></option>
               <option value="1">Option 1</option>
           </select>
       </div>
   </div>
-
-  <div id="group-field-sidebar_select" class="c-form-group c-form-group--light c-form-group--smaller">
-      <label class="c-form-group__label" for="field-sidebar-select">
+  <div id="group-field-sidebar_barrier" class="c-form-group c-form-group--light c-form-group--smaller">
+      <label class="c-form-group__label" for="field-sidebar-barrier">
         <span class="c-form-group__label-text">
           Barrier type
         </span>
       </label>
-
       <div class="c-form-group__inner">
-          <select id="field-sidebar-select" name="sidebar_select" class="c-form-control c-form-control--light c-form-control--smaller">
-              <option value="">Default empty</option>
+          <select id="field-sidebar-barrier" name="sidebar_barrier" class="c-form-control c-form-control--light c-form-control--smaller">
+              <option value=""></option>
               <option value="1">Option 1</option>
           </select>
       </div>
   </div>
-  <fieldset class="form-group form-group__checkbox-group c-form-group--light c-form-group--smaller" id="group-field-sidebar_checkboxes">
-      <legend class="form-label-bold">Status</legend>
+  <fieldset class="c-form-group c-form-group__checkbox-group c-form-group--light c-form-group--smaller" id="group-field-sidebar_checkboxes">
+      <legend class="c-form-group__label">
+        <span class="c-form-group__label-text">Status</span>
+      </legend>
       <div class="c-multiple-choice">
-        <input class="c-multiple-choice__input" name="stage" value="" id="field-stage-2" checked="checked" type="checkbox">
-        <label class="c-multiple-choice__label" for="field-stage-2">
+        <input class="c-multiple-choice__input" name="sidebar_stage" value="Screening" id="field-sidebar-status-1" checked="checked" type="checkbox">
+        <label class="c-multiple-choice__label" for="field-sidebar-status-1">
             <span class="c-multiple-choice__label-text">Screening</span>
         </label>
       </div>
       <div class="c-multiple-choice">
-        <input class="c-multiple-choice__input" name="stage" value="" id="field-stage-3" type="checkbox">
-        <label class="c-multiple-choice__label" for="field-stage-3">
+        <input class="c-multiple-choice__input" name="sidebar_stage" value="Assessment" id="field-sidebar-status-2" type="checkbox">
+        <label class="c-multiple-choice__label" for="field-sidebar-status-2">
           <span class="c-multiple-choice__label-text">Assessment</span>
         </label>
       </div>
       <div class="c-multiple-choice">
-        <input class="c-multiple-choice__input" name="stage" value="" id="field-stage-3" type="checkbox">
-        <label class="c-multiple-choice__label" for="field-stage-3">
-          <span class="c-multiple-choice__label-text">Resolution</span>
+        <input class="c-multiple-choice__input" name="sidebar_stage" value="Action" id="field-sidebar-status-3" type="checkbox">
+        <label class="c-multiple-choice__label" for="field-sidebar-status-3">
+          <span class="c-multiple-choice__label-text">Action</span>
         </label>
       </div>
       <div class="c-multiple-choice">
-        <input class="c-multiple-choice__input" name="stage" value="" id="field-stage-3" type="checkbox">
-        <label class="c-multiple-choice__label" for="field-stage-3">
+        <input class="c-multiple-choice__input" name="sidebar_stage" value="Rejected" id="field-sidebar-status-4" type="checkbox">
+        <label class="c-multiple-choice__label" for="field-sidebar-status-4">
           <span class="c-multiple-choice__label-text">Rejected</span>
         </label>
       </div>
       <div class="c-multiple-choice">
-        <input class="c-multiple-choice__input" name="stage" value="" id="field-stage-3" type="checkbox">
-        <label class="c-multiple-choice__label" for="field-stage-3">
-          <span class="c-multiple-choice__label-text">Archive</span>
+        <input class="c-multiple-choice__input" name="sidebar_stage" value="Archived" id="field-sidebar-status-5" type="checkbox">
+        <label class="c-multiple-choice__label" for="field-sidebar-status-5">
+          <span class="c-multiple-choice__label-text">Archived</span>
         </label>
       </div>
   </fieldset>
   <div style="clear:both;">&nbsp;</div>
-
   <div class="c-form-actions u-js-hidden">
       <button class="button">Refresh results</button>
   </div>
-
 </form>
 {% endblock %}
 
 {% block content %}
-<form method="POST">
-    <div class="form-group " id="name-wrapper">
-        <label class="form-label-bold" for="name">
-            Input
-        </label>
-        <input id="name" class="form-control" name="name" value="" type="text">
-    </div>
-    <div class="form-group " id="name-wrapper">
-        <label class="form-label-bold" for="description">
-            Textarea
-        </label>
-        <textarea id="description" class="form-control" name="description" rows="5"></textarea>
-    </div>
-    <div class="form-group " id="employee_range-wrapper">
-        <label class="form-label-bold" for="employee_range">
-            Dropdown
-        </label>
-        <select id="employee_range" class="form-control" name="employee_range">
-            <option value="">Pick a value</option>
-        </select>
-    </div>
-    <div class="form-group">
-        <div class="form-label-bold">Section that shows/hides something</div>
-        <button id="add-trading-address" class="button-secondary" type="button">Show extra fields</button>
-        <button id="remove-trading-address" class="button-secondary u-hidden" type="button">Hide extra fields</button>
-    </div>
-    <fieldset class="form-group form-group__checkbox-group" id="headquarters-wrapper">
-        <legend class="form-label-bold">Radio buttons title</legend>
-        <label class="block-label selection-button-radio selected">
-            <input name="headquarters" value="" checked="" type="radio"> Default
-        </label>
-        <label class="block-label selection-button-radio ">
-            <input name="headquarters" value="" type="radio"> Option 1
-        </label>
-        <label class="block-label selection-button-radio ">
-            <input name="headquarters" value="" type="radio"> Option 2
-        </label>
-    </fieldset>
-    <fieldset id="group-field-primary" class="c-form-group c-form-group--inline">
-      <legend class="c-form-group__label ">
-        <span class="c-form-group__label-text">
-          Inline radio buttons
-        </span>
-      </legend>
-      <div class="c-form-group__inner">
-        <div class="c-multiple-choice  c-multiple-choice--inline">
-          <input class="c-multiple-choice__input" name="primary" value="yes" id="field-primary-1" checked="checked" type="radio">
-          <label class="c-multiple-choice__label" for="field-primary-1">
-            <span class="c-multiple-choice__label-text">Yes</span>
-          </label>
-        </div>
-        <div class="c-multiple-choice  c-multiple-choice--inline">
-          <input class="c-multiple-choice__input" name="primary" value="no" id="field-primary-2" type="radio">
-          <label class="c-multiple-choice__label" for="field-primary-2">
-            <span class="c-multiple-choice__label-text">No</span>
-          </label>
-        </div>
-      </div>
-    </fieldset>
-    <fieldset class="form-group form-group__checkbox-group" id="headquarters-wrapper">
-        <legend class="form-label-bold">Checkboxes title</legend>
-        <div class="c-multiple-choice">
-          <input class="c-multiple-choice__input" name="stage" value="" id="field-stage-2" checked="checked" type="checkbox">
-          <label class="c-multiple-choice__label" for="field-stage-2">
-              <span class="c-multiple-choice__label-text">Option 1</span>
-          </label>
-        </div>
-        <div class="c-multiple-choice">
-          <input class="c-multiple-choice__input" name="stage" value="" id="field-stage-3" type="checkbox">
-          <label class="c-multiple-choice__label" for="field-stage-3">
-            <span class="c-multiple-choice__label-text">Option 2</span>
-          </label>
-        </div>
-    </fieldset>
-    <fieldset id="group-field-business_type" class="c-form-group">
-      <legend class="c-form-group__label ">
-        <span class="c-form-group__label-text">
-          Checkboxes that lead to hidden fields
-        </span>
-      </legend>
-      <div class="c-form-group__inner">
-        <div class="c-multiple-choice ">
-          <input class="c-multiple-choice__input" name="hidden_parent" value="1" id="field-business_type-1" type="radio">
-          <label class="c-multiple-choice__label" for="field-business_type-1">
-            <span class="c-multiple-choice__label-text">No hidden extra fields</span>
-            <span class="c-multiple-choice__hint">Hint here</span>
-          </label>
-        </div>
-        <div class="c-multiple-choice ">
-          <input class="c-multiple-choice__input" name="hidden_parent" value="2" id="field-business_type-2" type="radio">
-          <label class="c-multiple-choice__label" for="field-business_type-2">
-            <span class="c-multiple-choice__label-text">Other type of UK organisation</span>
-              <span class="c-multiple-choice__hint">UK organisation not registered with Companies House</span>
-          </label>
-          <div id="group-field-business_type_uk_other" class="c-form-group js-ConditionalSubfield c-form-group--subfield" data-controlled-by="hidden_parent" data-control-value="2" aria-expanded="false" aria-hidden="true">
-            <label class="c-form-group__label " for="field-business_type_uk_other">
-              <span class="c-form-group__label-text">Type of organisation</span>
-            </label>
-            <div class="c-form-group__inner">
-              <select id="field-business_type_uk_other" name="business_type_uk_other" class="c-form-control  c-form-control--subfield  ">
-                <option value="">Select type</option>
-                <option value="Charity">Charity</option>
-              </select>
-            </div>
-          </div>
-        </div>
-        <div class="c-multiple-choice ">
-        <input class="c-multiple-choice__input" name="hidden_parent" value="3" id="field-business_type-3" type="radio">
-        <label class="c-multiple-choice__label" for="field-business_type-3">
-          <span class="c-multiple-choice__label-text">Foreign organisation</span>
-        </label>
-        <div id="group-field-business_type_for_other" class="c-form-group js-ConditionalSubfield c-form-group--subfield" data-controlled-by="hidden_parent" data-control-value="3" aria-expanded="false" aria-hidden="true">
-        <label class="c-form-group__label " for="field-business_type_for_other">
-          <span class="c-form-group__label-text">Type of organisation</span>
-        </label>
-        <div class="c-form-group__inner">
-          <select id="field-business_type_for_other" name="business_type_for_other" class="c-form-control  c-form-control--subfield  ">
-            <option value="">Select type</option>
-            <option value="Company">Company</option>
-          </select>
-        </div>
-      </div>
-    </div>
-      </div>
-    </fieldset>
-    <div class="save-bar">
-        <button class="button button--save" type="submit">Save</button>
-    </div>
-</form>
-<article>
-    <h2 class="heading-medium">Project value (Test D)</h2>
 
-    <table class="table--key-value">
-        <tbody>
-
-            <tr>
-                <th>Primary sector</th>
-                <td>Food and Drink</td>
-            </tr>
-
-            <tr>
-                <th>Total investment</th>
-                <td>Not Know</td>
-            </tr>
-        </tbody>
-    </table>
-</article>
-
-<article class="c-collection">
-
-    <header class="c-collection__header">
-        <div class="c-collection__header-row">
-            <div class="c-collection__header-intro">
-                <span class="c-collection__result-count">0</span> interactions
-            </div>
-
-            <div class="c-collection__header-actions">
-                <a href="interactions/create" class="button button-secondary">Add interaction</a>
-            </div>
-
-            <div class="c-collection__filter-summary">
-              <span class="c-collection__filter-tag">
-                <span class="c-collection__filter-label">Estimated land date before</span>
-                <span class="c-collection__filter-value">6 April 2018</span>
-                <a class="c-collection__filter-remove js-xhr" href="?custom=true&amp;estimated_land_date_after=2017-04-05&amp;sortby=estimated_land_date%3Aasc" aria-label="Remove filter">×</a>
-              </span>
-
-              <span class="c-collection__filter-tag">
-                <span class="c-collection__filter-label">Estimated land date after</span>
-                <span class="c-collection__filter-value">5 April 2017</span>
-                <a class="c-collection__filter-remove js-xhr" href="?custom=true&amp;estimated_land_date_before=2018-04-06&amp;sortby=estimated_land_date%3Aasc" aria-label="Remove filter">×</a>
-              </span>
-
-            </div>
-
-        </div>
-
-    </header>
-
-</article>
-
-<article>
-
-    <form method="POST" action="#" class="flash flash--info">
-
-        <p>Complete this stage to move to the Assign PM stage.</p>
-
-        <div class="c-form-actions">
-            <button class="button" disabled="disabled">Move to Assign PM stage</button>
-        </div>
-
-    </form>
-
-    <h2 class="heading-medium">Investment project summary</h2>
-
-    <table class="table--key-value table--striped">
-        <tbody>
-
-            <tr>
-                <th>Client</th>
-                <td>
-                  <a href="#">With a link</a>
-                </td>
-            </tr>
-            <tr>
-                <th>Heading</th>
-                <td>Content</td>
-            </tr>
-            <tr>
-                <th>Heading</th>
-                <td>Content</td>
-            </tr>
-            <tr>
-                <th>Heading</th>
-                <td>Content</td>
-            </tr>
-        </tbody>
-    </table>
-
-    <p><a href="#" class="button-secondary">Link button</a></p>
-
-    <h2 class="heading-medium">Heading (medium)</h2>
-
-    <p class="infostrip">
-        This is an infostrip
-    </p>
-
-    <p>
-      <a href="#" class="button">Button link</a>
-    </p>
-
-    <h2 class="heading-medium">Heading (medium)</h2>
-
-    <p class="infostrip">
-        This is an infostrip
-    </p>
-
-    <p>
-        <a href="#" class="button">Button link</a>
-    </p>
-
-    <h2 class="heading-medium">Heading (medium)</h2>
-    <p>Lorem ipsum lorem ipsum</p>
-
-    <a class="button" href="#" aria-hidden="false">Button link</a>
-
-    <form class="archive-form js-archiveForm u-hidden" method="post" aria-hidden="true">
-
-        <fieldset id="group-field-archived_reason" class="c-form-group">
-            <legend class="c-form-group__label ">
-                <span class="c-form-group__label-text">
-                  Form legend
-                </span>
-            </legend>
-
-            <div class="c-form-group__inner">
-
-                <div class="c-multiple-choice ">
-                    <input class="c-multiple-choice__input" name="archived_reason" value="Abandoned" id="field-archived_reason-1" type="radio">
-                    <label class="c-multiple-choice__label" for="field-archived_reason-1">
-                        <span class="c-multiple-choice__label-text">Abandoned</span>
-                    </label>
-                </div>
-
-                <div class="c-multiple-choice ">
-                    <input class="c-multiple-choice__input" name="archived_reason" value="Lost" id="field-archived_reason-2" type="radio">
-                    <label class="c-multiple-choice__label" for="field-archived_reason-2">
-                        <span class="c-multiple-choice__label-text">Lost</span>
-                    </label>
-                </div>
-
-                <div class="c-multiple-choice ">
-                    <input class="c-multiple-choice__input" name="archived_reason" value="Other" id="field-archived_reason-3" type="radio">
-                    <label class="c-multiple-choice__label" for="field-archived_reason-3">
-                        <span class="c-multiple-choice__label-text">Other</span>
-                    </label>
-                </div>
-            </div>
-
-        </fieldset>
-
-        <div class="js-ConditionalSubfield" data-controlled-by="archived_reason" data-control-value="Other" aria-expanded="false" aria-hidden="true">
-            <div class="form-group">
-                <label class="form-label-bold">Other</label>
-                <input class="form-control" name="archived_reason_other" type="text">
-            </div>
-        </div>
-
-        <div class="save-bar">
-            <button class="button button--save" type="submit">Archive</button>
-            <a class="button-link" href="#">Cancel</a>
-        </div>
-    </form>
-
-    <article class="c-collection">
+  <article class="c-collection">
 
         <header class="c-collection__header">
             <div class="c-collection__header-row">
-                <div class="c-collection__header-intro">
-                    <span class="c-collection__result-count">4,352</span> contacts
-                </div>
-
+              <div class="c-collection__header-intro">
+                  <span class="c-collection__result-count">309</span> barriers
+              </div>
+              <div class="c-collection__header-actions">
+                <a href="#" class="button-secondary">Add barrier</a>
+              </div>
+              <div class="c-collection__filter-summary">
+                <a href="">2 barriers: evaluation</a> |
+                <a href="">117 barriers: assessment</a> |
+                <a href="">190 barriers: in action</a>
+              </div>
             </div>
 
             <div class="c-collection__header-row">
-
                 <span class="c-collection__pagination-summary">
-                  Page 1 of 436
+                  Page 1 of 17
                 </span>
 
                 <form method="get" class="c-collection__sort-form js-AutoSubmit">
-
                     <input name="custom" value="true" type="hidden">
 
                     <div id="group-field-sortby" class="c-form-group c-form-group--light c-form-group--inline c-form-group--small">
-                        <label class="c-form-group__label " for="field-sortby">
+                        <label class="c-form-group__label" for="field-sortby">
                             <span class="c-form-group__label-text">
                               Sort by
                             </span>
                         </label>
 
                         <div class="c-form-group__inner">
-
-                            <select id="field-sortby" name="sortby" class="c-form-control  c-form-control--light c-form-control--inline c-form-control--small  ">
-
+                            <select id="field-sortby" name="sortby" class="c-form-control c-form-control--light c-form-control--inline c-form-control--small">
                                 <option value="created_on:desc">
                                     Newest
                                 </option>
-
                                 <option value="created_on:asc">
                                     Oldest
                                 </option>
-
                                 <option value="modified_on:desc" selected="">
                                     Recently updated
                                 </option>
-
                                 <option value="modified_on:asc">
                                     Least recently updated
                                 </option>
-
                                 <option value="first_name:asc">
                                     First name: A-Z
                                 </option>
-
                                 <option value="first_name:desc">
                                     First name: Z-A
                                 </option>
-
                                 <option value="last_name:asc">
                                     Last name: A-Z
                                 </option>
-
                                 <option value="last_name:desc">
                                     Last name: Z-A
                                 </option>
-
                                 <option value="address_country.name:asc">
                                     Country: A-Z
                                 </option>
-
                                 <option value="address_country.name:desc">
                                     Country: Z-A
                                 </option>
-
                                 <option value="company.name:asc">
                                     Company: A-Z
                                 </option>
-
                                 <option value="company.name:desc">
                                     Company: Z-A
                                 </option>
-
                                 <option value="company_sector.name:asc">
                                     Sector: A-Z
                                 </option>
-
                                 <option value="company_sector.name:desc">
                                     Sector: Z-A
                                 </option>
-
                             </select>
-
                         </div>
-
                     </div>
-
                 </form>
-
             </div>
-
         </header>
 
         <ol class="c-entity-list">
-
+          {% for i in "1234567890" %}
             <li class="c-entity-list__item">
-
                 <div class="c-entity c-entity--contact">
-
                     <div class="c-entity__header">
                         <h3 class="c-entity__title">
-
-                            <a href="#">Jaylan McDermott</a>
-
+                            <a href="{% url 'report-home' %}">Company X v Country 1</a>
                         </h3>
-
                         <div class="c-entity__badges">
-
                             <div class="c-meta-list ">
-
                                 <div class="c-meta-list__item">
-
-                                    <span class="c-meta-list__item-label u-visually-hidden">
-                                      Contact type
-                                    </span>
-
-                                    <span class="c-badge  c-badge--secondary">Primary</span>
-
-                                </div>
-
-                                <div class="c-meta-list__item">
-
                                     <span class="c-meta-list__item-label u-visually-hidden">
                                       Country
                                     </span>
-
-                                    <span class="c-badge ">France</span>
-
+                                    <span class="c-badge">Country 1</span>
                                 </div>
-
-                            </div>
-
-                        </div>
-
-                    </div>
-
-                    <div class="c-entity__content">
-
-                        <div class="c-meta-list  c-meta-list--split c-meta-list--inline">
-
-                            <div class="c-meta-list__item">
-
-                                <span class="c-meta-list__item-label ">
-                                  Company
-                                </span>
-
-                                <span class="c-meta-list__item-value">Lambda plc</span>
-
-                            </div>
-
-                            <div class="c-meta-list__item">
-
-                                <span class="c-meta-list__item-label ">
-                                  Updated
-                                </span>
-
-                                <span class="c-meta-list__item-value">30 Aug 2017, 5:53pm</span>
-
-                            </div>
-
-                            <div class="c-meta-list__item">
-
-                                <span class="c-meta-list__item-label ">
-                                  Sector
-                                </span>
-
-                                <span class="c-meta-list__item-value">Retail</span>
-
-                            </div>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </li>
-
-            <li class="c-entity-list__item">
-
-                <div class="c-entity c-entity--contact">
-
-                    <div class="c-entity__header">
-                        <h3 class="c-entity__title">
-                            <a href="#">Eli Harber</a>
-                        </h3>
-
-                        <div class="c-entity__badges">
-
-                            <div class="c-meta-list ">
-
                                 <div class="c-meta-list__item">
-
                                     <span class="c-meta-list__item-label u-visually-hidden">
                                       Country
                                     </span>
-
-                                    <span class="c-badge ">United Kingdom</span>
-
+                                    <span class="c-badge">Country 2</span>
                                 </div>
-
                             </div>
-
                         </div>
-
                     </div>
 
                     <div class="c-entity__content">
-
                         <div class="c-meta-list  c-meta-list--split c-meta-list--inline">
-
                             <div class="c-meta-list__item">
-
-                                <span class="c-meta-list__item-label ">
-                                  Company
-                                </span>
-
-                                <span class="c-meta-list__item-value">Lambda plc</span>
-
-                            </div>
-
-                            <div class="c-meta-list__item">
-
-                                <span class="c-meta-list__item-label ">
-                                  Updated
-                                </span>
-
-                                <span class="c-meta-list__item-value">30 Aug 2017, 5:53pm</span>
-
-                            </div>
-
-                            <div class="c-meta-list__item">
-
-                                <span class="c-meta-list__item-label ">
+                                <span class="c-meta-list__item-label  u-visually-hidden">
                                   Sector
                                 </span>
-
-                                <span class="c-meta-list__item-value">Retail</span>
-
+                                <span class="c-meta-list__item-value">Sector here</span>
                             </div>
 
+                            <div class="c-meta-list__item">
+                                <span class="c-meta-list__item-value">Status:
+                                {% if i == '1' or i == '6' %}
+                                  <span style="color:red;">Evaluation</span>
+                                {% elif i == '2' or i == '4' %}
+                                  <span style="color:orange;">Assessment</span>
+                                {% else %}
+                                  <span style="color:green;">Action</span>
+                                {% endif %}
+
+                            </div>
+                            <div class="c-meta-list__item">
+                                <span class="c-meta-list__item-label  u-visually-hidden">
+                                  Barrier
+                                </span>
+                                <span class="c-meta-list__item-value">Barrier here</span>
+                            </div>
+                            <div class="c-meta-list__item">
+                                <span class="c-meta-list__item-label  u-visually-hidden">
+                                  Updated
+                                </span>
+                                <span class="c-meta-list__item-value">Date updated</span>
+                            </div>
                         </div>
-
                     </div>
-
                 </div>
-
             </li>
-
+          {% endfor %}
         </ol>
 
         <nav class="c-pagination " aria-label="pagination: total 436 pages">
-
             <ul class="c-pagination__list">
-
                 <li class="c-pagination__list-item">
                   <a href="?page=1&amp;sortby=modified_on%3Adesc" class="c-pagination__label is-current">
                     1
                   </a>
-
                 </li>
-
                 <li class="c-pagination__list-item">
                   <a href="?page=2&amp;sortby=modified_on%3Adesc" class="c-pagination__label ">
                     2
                   </a>
-
                 </li>
-
                 <li class="c-pagination__list-item">
                   <a href="?page=3&amp;sortby=modified_on%3Adesc" class="c-pagination__label ">
                     3
                   </a>
-
                 </li>
-
                 <li class="c-pagination__list-item">
                   <a href="?page=4&amp;sortby=modified_on%3Adesc" class="c-pagination__label ">
                     4
                   </a>
-
                 </li>
-
                 <li class="c-pagination__list-item">
                    <span class="c-pagination__label c-pagination__label--truncation">
                     &hellip;
                   </span>
-
                 </li>
-
                 <li class="c-pagination__list-item">
                   <a href="?page=436&amp;sortby=modified_on%3Adesc" class="c-pagination__label ">
-                    436
+                    17
                   </a>
                 </li>
             </ul>
-
             <a href="?page=2&amp;sortby=modified_on%3Adesc" class="c-pagination__label c-pagination__label--next">Next</a>
-
         </nav>
 
     </article>
+
+
 {% endblock %}

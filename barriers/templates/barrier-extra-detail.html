@@ -5,9 +5,6 @@
 {% endblock %}
 {% block head_title %}{% trans "Trade Barrier Detail" %}{% endblock %}
 {% block sub_header %}{# prevent the subheader from showing on form pages #}{% endblock %}
-{% block hero_title %}
-Get seen by motivated overseas buyers
-{% endblock %}
 
 {% block css_layout_class %}
 tr-home
@@ -17,23 +14,38 @@ tr-home
   <div class="outer-container">
     <div class="dit-breadcrumb grid-container grid-container--inner">
         <div class="column-full flush--bottom">
-          <a href="https://www.great.gov.uk/">Great.gov.uk</a> <span aria-hidden="true">></span> <a href="/">Trade Barriers</a> <span aria-hidden="true">></span> <a href="{% url 'barriers-general-info' %}">{% trans "Find out about Trade Barriers" %}</a> <span aria-hidden="true">></span> <strong>{% trans "Tariffs and taxes imposed to protect, or favour, local producers" %}</strong>
+          <a href="https://www.great.gov.uk/">Great.gov.uk</a> <span aria-hidden="true">></span> <a href="/">Trade Barriers</a> <span aria-hidden="true">></span> <a href="{% url 'barriers-general-info' %}">{% trans "Find out about Trade Barriers" %}</a> <span aria-hidden="true">></span> <strong>{% trans "Burdensome customs procedures" %}</strong>
         </div>
     </div>
   </div>
   <div class="outer-container">
     <div class="grid-container grid-container--inner">
       <div class="column-full">
-        <h1 class="h3" id="barrier-title">{% trans "Tariffs and taxes imposed to protect, or favour, local producers" %}</h1>
+        <h1 class="h3" id="barrier-title">{% trans "Burdensome customs procedures" %}</h1>
       </div>
       <div class="column-two-third">
-        <p>Usually charges imposed on imports to make them more expensive than domestically produced
-          goods.</p>
-        <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse porta erat in rhoncus pretium. Donec vitae ex bibendum, aliquet sem vel, malesuada metus. Mauris non suscipit dolor, vel tempor risus. Praesent vel urna molestie, interdum libero non, feugiat nibh. Vestibulum ultricies sit amet ante ac ultricies. Suspendisse fermentum sem justo, a fermentum nunc feugiat eget. Donec convallis augue leo, non ornare felis venenatis a.</p>
-        <p>Vestibulum vehicula bibendum nunc, sit amet accumsan diam finibus eu. Nulla eu metus ipsum. Vestibulum sit amet maximus risus. Pellentesque at quam id risus vulputate accumsan at at purus. Nunc ac nisl eleifend magna vestibulum auctor. Mauris vulputate, enim a volutpat finibus, leo enim lobortis orci, tincidunt condimentum nunc ipsum non ligula. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Fusce vehicula fringilla aliquet. Suspendisse posuere facilisis velit quis molestie. Sed nec eros tincidunt, consequat sem vel, bibendum neque. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nam auctor sapien et nisi scelerisque molestie. </p>
+        <p>Customs procedures vary widely from country to country, sometimes even from port to port. Exporters can be caught out by recent changes. Local officials can make demands based on their own interpretation of the rules. Be prepared! Our advice to exporters worried about getting their products through customs are:</p>
+        <ul class="list">
+          <li class="list-item">Make sure you’re aware of the local customs’ requirements before you transport your products
+          <li class="list-item">Develop contacts in the country in advance, particularly people who speak the local language
+          <li class="list-item">Take advice from other companies who’ve exported successfully to the same destination
+          <li class="list-item">Make sure you’ve got the right insurance and are tracking your products in real time</p>
+        </ul>
+        <p>
+          <img src="{% static 'images/placeholder-video.png' %}" alt="" title="Video: how customs procedures can be used to obstruct trade, and the things exporters can do to find a way through."><br>
+          <span style="display: block; font-style: italic; text-align: center;">How customs procedures can be used to obstruct trade, and the things exporters can do to find a way through.</span></p>
+          <h2 class="h3">Case studies</h2>
+          <p><a href="{% url 'barriers-case-study' %}" aria-labelledby="barrier-title">An example of customs issues in Latin America</a></p>
+          <p><a href="{% url 'barriers-case-study' %}" aria-labelledby="barrier-title">An example of customs issues in Africa</a></p>
+          <p><a href="{% url 'barriers-case-study' %}" aria-labelledby="barrier-title">An example of customs issues in the Far East</a></p>
+          <hr>
+          <p>The WTO sets out rules to ensure the fair, uniform and neutral valuation of goods for customs purposes. You can read them here.</p>
+          <p>Learn about the wider opportunities and challenges of exporting in our country profiles.</p>
       </div>
       <div class="column-one-third">
           <p><a href="{% url 'report-barrier' %}" class="button button-red" aria-labelledby="barrier-title">This barrier is affecting me</a></p>
+          <p><strong>Why report the problem?</strong></p>
+          <p>The government can be aware of a trade barrier without knowing how many companies it affects. The more we understand the scale of a trade barrier the more likely we are to be able to do something about it. </p>
       </div>
     </div>
   </div>

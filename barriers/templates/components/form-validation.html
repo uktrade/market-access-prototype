@@ -1,6 +1,13 @@
+
 <div class="js-saved-success" aria-hidden="true" style="display: none;" tabindex="0">
+  {% comment %}
   <p class="h3">Thank you</p>
   <p>Your details have been saved.</p>
+  {% endcomment %}
+
+  {% include 'components/register.html' %}
+
+  <p>Alternatively, <button type="button" class="js-close-saved-success dit-button-link">click here to continue your report</button></p>
 </div>
 
 <div class="error-summary hidden" aria-hidden="true" tabindex="-1" aria-labelledby="error-summary-heading" role="alert">

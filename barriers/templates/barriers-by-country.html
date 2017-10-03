@@ -27,11 +27,7 @@ tr-home
   <div class="outer-container" id="results">
     <div class="grid-container grid-container--inner">
       <div class="column-full">
-        <h2 class="h3">Keep me updated</h2>
-        <p>Tell me about changes to Trade Barriers which relate to my search</p>
-        <p><a href="{% url 'barrier-subscribe' %}" class="button button-blue">Subscribe</a></p>
-
-
+        {% include 'components/subscribe.html' %}
         <h2 class="h3">Results</h2>
         <p>Click on the ‘plus’ symbol for a brief description of the barrier or click on the name to read a full summary. <br>If you’re being affected by the barrier, or you’ve come across a similar barrier, report your experience to the UK government.</p>
 
@@ -39,17 +35,21 @@ tr-home
 
         <h3 class="h4 push--top"><strong>Barriers affecting UK exporters</strong></h3>
         <ul class="" data-module="Accordion">
-            {% for i in "xx" %}
-              {% include 'components/barrier-detail-accordion.html' with id=forloop.counter0 title="Lorem ipsum dolor sit amet" %}
-            {% endfor %}
+          {% include 'components/barrier-detail-accordion.html' with id=1 title="Photo voltaic panels" country="United States" sector="Energy equipment" barrier="Burdensome customs procedures" summary="Consignments of photo voltaic panels from EU countries are being subject to particularly rigorous document inspection procedures at all ports of entry to the US. " %}
+          {% include 'components/barrier-detail-accordion.html' with id=2 title="Wind propellers held up in Texas" country="United States" sector="Energy equipment" barrier="Unreasonable sanitary and phytosanitary measures" summary="The Wind Technology Consortium is reporting a number of attempts by officials in Houston and Austin to impose local regulations on consignments of wind propellers from the UK. They are claiming that propellers with a span of more than 30 metres pose unacceptable risks to local wildlife." %}
+          {% include 'components/barrier-detail-accordion.html' with id=3 title="Heat pumps subject to punitive tariff" country="United States" sector="Energy equipment" barrier="Tariffs and taxes imposed to protect, or favour, local producers" summary="British company Energise has reported that a batch of its heat pumps has been subject to an import tariff of 50% by officials in Salt Lake City, Utah. They are claiming that this is a legitimate interpretation of the recent Utah State regulation restricting green energy installations to locally based companies. " %}
         </ul>
         <h3 class="h4" style="margin-top: 60px;"><strong>Barriers reported to WTO and EC</strong></h3>
         <ul class="">
-            {% include 'components/barrier-detail.html' with id=123 %}
-            {% include 'components/barrier-detail.html' with id=456 %}
+            {% include 'components/barrier-detail.html' with id=123 title="Cumbersome compulsory conformity assessment for electro technical products" country="United States" %}
+            {% include 'components/barrier-detail.html' with id=456 title="Preference for national goods in public procurement" country="United States" %}
         </ul>
 
-        <p><a href="{% url 'report-barrier' %}">My barrier is not listed here</a></p>
+        <div class="dit-reporting-cta" style="border-top: none;">
+          <p class="h3 dit-reporting-cta__title">If you are experiencing a trade barrier that isn't listed here you can report it.</p>
+          <p class="h3"><a href="{% url 'report-barrier' %}">Report a trade barrier</a></p>
+          <p class="h3"><a href="{% url 'report-barrier-form' %}">Check trade barriers in your target market</a></p>
+        </div>
       </div>
     </div>
   </div>

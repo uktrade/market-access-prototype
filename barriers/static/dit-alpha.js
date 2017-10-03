@@ -439,6 +439,11 @@ $(document).ready(function(){
   /**
    * @param {object}
    */
+  var $closeButton = $('.js-close-saved-success');
+
+  /**
+   * @param {object}
+   */
   var $form = $('.dit-form');
 
   init();
@@ -452,6 +457,10 @@ $(document).ready(function(){
   function init(){
     $saveButton.click(function(e){
       saveFunctions(e);
+    });
+
+    $closeButton.click(function(e){
+      closeFunctions(e);
     });
   }
 
@@ -467,6 +476,22 @@ $(document).ready(function(){
   function saveFunctions(e){
     e.preventDefault();
     $('.js-saved-success').show().attr('aria-hidden', 'false').focus();
+    $form.find('.form-group, .dit-buttons').hide().attr('aria-hidden', 'true');
+  }
+
+  /**
+   * closeFunctions
+   * Hide the active success message
+   *
+   * @param {object} e - click event
+   *
+   * @return {void}
+   */
+  function closeFunctions(e){
+    e.preventDefault();
+    $('.js-saved-success').hide().attr('aria-hidden', 'true');
+    $form.find('.form-group, .dit-buttons').css('display', '').attr('aria-hidden', 'false');
+    $form.find('.form-control').eq(0).focus();
   }
 
 });

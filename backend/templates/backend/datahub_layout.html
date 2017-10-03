@@ -15,11 +15,8 @@
     </title>
 
     <link href="{% static 'govuk-0.18.0/assets/stylesheets/datahub-alpha.css' %}" media="all" rel="stylesheet" />
-
-
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta property="og:image" content="{% static 'govuk-0.18.0/assets/images/opengraph-image.png' %}">
-
 
     <!--[if lte IE 8]><link href="{% static 'govuk-0.18.0/assets/stylesheets/application-ie8.css' %}" rel="stylesheet" type="text/css" /><![endif]-->
     <!--[if gt IE 8]><!-->
@@ -111,116 +108,71 @@
             <ul class="c-breadcrumb__list" itemscope="" itemtype="http://schema.org/BreadcrumbList">
 
                 <li class="c-breadcrumb__list-item" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
-
                     <a href="/" class="c-breadcrumb__link" itemprop="url">
                       <span itemprop="name">Home</span>
                     </a>
-
                 </li>
-
                 <li class="c-breadcrumb__list-item" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
-
                     <a href="#main-content" class="c-breadcrumb__link is-active" itemprop="url">
                       <span itemprop="name">Trade Barriers</span>
                     </a>
-
                 </li>
+                {% block breadcrumb %}
 
+                {% endblock %}
             </ul>
           </nav>
 
+          {% block local_header__title_before %}
           <div class="c-local-header__heading-before">
-            <a href="/companies/view/foreign/eb688f85-a098-e211-a939-e4115bead28a">Sony Ericsson Mobile Communications (Global HQ)</a>
+            <a href="#">Sony Ericsson Mobile Communications (Global HQ)</a>
           </div>
+          {% endblock %}
 
           <h1 class="c-local-header__heading">
             {% block local_header__title %}Trade Barriers{% endblock %}
           </h1>
 
-          <div class="c-meta-list ">
+          {% block local_header__meta %}
+          <div class="c-meta-list">
+            <div class="c-meta-list__item c-meta-list__item--stacked">
+                <span class="c-meta-list__item-label ">
+                  Project code
+                </span>
+                <span class="c-meta-list__item-value">DHP-00000002</span>
+            </div>
+            <div class="c-meta-list__item c-meta-list__item--stacked">
+                <span class="c-meta-list__item-label ">
+                  Valuation
+                </span>
+                <span class="c-meta-list__item-value">Not yet valued</span>
+            </div>
+          </div>
 
+          {% endblock %}
 
+          {% block local_header__progress %}
+          <div class="c-progress">
+            <ol class="c-progress-bar">
+                <li class="c-progress__stage is-active">
+                  <span class="c-progress__stage-title">Prospect</span>
+                </li>
+                <li class="c-progress__stage">
+                  <span class="c-progress__stage-title">Assign PM</span>
+                </li>
+                <li class="c-progress__stage">
+                  <span class="c-progress__stage-title">Active</span>
+                </li>
+                <li class="c-progress__stage">
+                  <span class="c-progress__stage-title">Verify win</span>
+                </li>
+                <li class="c-progress__stage">
+                  <span class="c-progress__stage-title">Won</span>
+                </li>
+            </ol>
+          </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-    <div class="c-meta-list__item c-meta-list__item--stacked">
-
-        <span class="c-meta-list__item-label ">
-          Project code
-        </span>
-
-
-        <span class="c-meta-list__item-value">DHP-00000002</span>
-
-    </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <div class="c-meta-list__item c-meta-list__item--stacked">
-
-        <span class="c-meta-list__item-label ">
-          Valuation
-        </span>
-
-
-        <span class="c-meta-list__item-value">Not yet valued</span>
-
-    </div>
-
-
-
-    </div>
-
-    <div class="c-progress">
-      <ol class="c-progress-bar">
-
-          <li class="c-progress__stage is-active">
-            <span class="c-progress__stage-title">Prospect</span>
-          </li>
-
-          <li class="c-progress__stage">
-            <span class="c-progress__stage-title">Assign PM</span>
-          </li>
-
-          <li class="c-progress__stage">
-            <span class="c-progress__stage-title">Active</span>
-          </li>
-
-          <li class="c-progress__stage">
-            <span class="c-progress__stage-title">Verify win</span>
-          </li>
-
-          <li class="c-progress__stage">
-            <span class="c-progress__stage-title">Won</span>
-          </li>
-
-      </ol>
-    </div>
-
+          {% endblock %}
         </div>
       </header>
       <div class="main-content__inner l-container" id="xhr-outlet">

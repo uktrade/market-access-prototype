@@ -23,11 +23,11 @@
       <div class="column-one-third dit-progress-bar">
         <div class="h4">Section</div>
         <ol>
-          <li><a href="{% url 'report-barrier-step1' %}">1 About you</a></li>
-          <li><a href="{% url 'report-barrier-step2' %}">2 About the problem</a></li>
+          <li><a href="{% url 'report-barrier-step1' %}"><span>1 About you</span> <img src="{% static 'images/tick.svg' %}" alt="Completed step"></a></li>
+          <li><a href="{% url 'report-barrier-step2' %}"><span>2 About the problem</span> <img src="{% static 'images/tick.svg' %}" alt="Completed step"></a></li>
           <li class="is-selected">3 Select the type of barrier</li>
-          <li>4 Working out the next steps</li>
-          <li>5 Any other details</li>
+          <li><a href="{% url 'report-barrier-step4' %}">4 Working out the next steps</a></li>
+          <li><a href="{% url 'report-barrier-step5' %}">5 Any other details</a></li>
           <li>6 Summary</li>
         </ol>
       </div>
