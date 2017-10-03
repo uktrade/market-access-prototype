@@ -1,4 +1,4 @@
-{% if 1 %}
+{% if existing and existing != 'false' %}
   <div class="dit-form-existing-message">
     <h3 class="dit-form-existing-message__title"><strong>You have said you are being affected by this barrier</strong></h3>
     <p><a href="{% url 'barrier-detail-static' %}" target="_blank">Burdensome customs procedures</a> (opens in new window)</p>

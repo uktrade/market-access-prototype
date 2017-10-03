@@ -37,7 +37,10 @@ work together to understand the problems and develop action plans to resolve the
 which will help us to focus resources where they can be most effective. </p>
               </div>
               <div class="column-one-third">
-                <a href="{% url 'report-barrier-step1' %}" class="button button-red button-large">Report a barrier</a>
+                <form action="{% url 'report-barrier-step1' %}" method="get">
+                  <input type="hidden" name="existing" value="false">
+                  <button type="submit" class="button button-red button-large">Report a barrier</button>
+                </form>
               </div>
             </div>
         </div>
@@ -69,7 +72,10 @@ which will help us to focus resources where they can be most effective. </p>
         </ol>
         <p>We'll respect any needs you have for confidentiality, and we'll keep
 you updated on progress.</p>
-        <p><a href="{% url 'report-barrier-step1' %}" class="button button-red button-large float--right push--right">Report a barrier</a></p>
+        <form action="{% url 'report-barrier-step1' %}" method="get">
+          <input type="hidden" name="existing" value="false">
+          <button type="submit" class="button button-red button-large float--right push--right">Report a barrier</button>
+        </form>
       </div>
       <div class="column-one-half">
         <h2 class="h3">In an emergency</h2>
