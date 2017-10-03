@@ -47,6 +47,22 @@ class ReportBarrierView(FormView):
         self.countries = form.cleaned_data['countries_affected']
         return super(ReportBarrierView, self).form_valid(form)
 
+class ReportBarrierExistingView(FormView):
+    template_name = 'report-barrier-existing.html'
+    form_class = BarrierCountryForm
+
+    countries = ''
+
+    def get_success_url(self, **kwargs):
+        return reverse_lazy(
+                    'report-barrier-show-current-barriers',
+                    kwargs= { 'countries' : self.countries }
+               )
+
+    def form_valid(self, form):
+        self.countries = form.cleaned_data['countries_affected']
+        return super(ReportBarrierView, self).form_valid(form)
+
 class ReportBarrierShowCurrentBarriersView(ListView):
     template_name = 'report-barrier-show-current-barriers.html'
     countries_affected = ''

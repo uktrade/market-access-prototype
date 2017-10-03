@@ -905,7 +905,7 @@ p.font-large {
     content: "";
     display: block;
 }
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1260px) {
     .outer-container {
         margin: 0 30px;
     }

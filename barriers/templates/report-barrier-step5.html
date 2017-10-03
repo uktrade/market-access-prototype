@@ -21,6 +21,7 @@
   <div class="outer-container push--top">
     <div class="grid-container grid-container--inner">
       <div class="column-one-third dit-progress-bar">
+        {% include 'components/form-existing-message.html' %}
         <div class="h4">Section</div>
         <ol>
           <li><a href="{% url 'report-barrier-step1' %}"><span>1 About you</span> <img src="{% static 'images/tick.svg' %}" alt="Completed step"></a></li>
@@ -40,7 +41,7 @@
 
           <div class="form-group">
             <label class="form-label" for="dit-step5-extra">
-              Is there anything else you would like us to understand about the situation?
+              Is there anything else we need to know about the problem?
             </label>
             <textarea class="form-control" id="dit-step5-extra" name="dit[step4][extra]" rows="5" cols="10"></textarea>
           </div>

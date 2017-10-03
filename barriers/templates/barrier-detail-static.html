@@ -38,15 +38,16 @@ tr-home
             Status: Assessment<br>
             Actions: None at present</p>
 
-          {% include 'components/subscribe.html' %}
-
-          <hr>
           <p><a href="{% url 'barriers-by-country' country="Spain" %}" class="button button-white button-border">Back to search results</a></p>
       </div>
       <div class="column-one-third">
-          <p><a href="{% url 'report-barrier' %}" class="button button-red" aria-labelledby="barrier-title">This barrier is affecting me</a></p>
+          <p><a href="{% url 'report-barrier-existing' %}" class="button button-red" aria-labelledby="barrier-title">This barrier is affecting me</a></p>
           <p><strong>Why report the problem?</strong></p>
           <p>The government can be aware of a trade barrier without knowing how many companies it affects. The more we understand the scale of a trade barrier the more likely we are to be able to do something about it.</p>
+
+          <h2 class="h3">Keep me updated</h2>
+          <p>Tell me about changes to Trade Barriers which relate to Burdensome customs procedures</p>
+          <p><a href="{% url 'barrier-subscribe' %}" class="button button-blue">Get updates</a></p>
       </div>
     </div>
   </div>

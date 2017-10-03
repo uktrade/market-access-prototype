@@ -485,6 +485,14 @@ main a:hover{
  * Forms
  */
 
+.dit-input-field{
+  margin-bottom: 20px;
+}
+
+.dit-input-field .button{
+  margin-top: 10px;
+}
+
 @media screen and (min-width: 768px){
   .dit-inline-form-fields{
     align-items: end;
@@ -494,12 +502,14 @@ main a:hover{
   }
 
   .dit-input-field{
+    margin-bottom: 0;
     width: 30%;
     width: calc(33.33% - 30px);
   }
 
   .dit-input-field .button{
     margin-bottom: 0;
+    margin-top: 0;
   }
 
   @supports (display:grid){
@@ -712,6 +722,18 @@ main a:hover{
 /**
  * Section
  */
+.dit-form-existing-message{
+  background: #f0f0f0;
+  font-size: 16px;
+  margin-bottom: 40px;
+  max-width: 260px;
+  padding: 20px 15px 10px;
+}
+
+.dit-form-existing-message__title{
+  margin-bottom: 10px;
+}
+
 .dit-progress-bar{
   margin-top: 80px;
 }

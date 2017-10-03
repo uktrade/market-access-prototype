@@ -49,6 +49,7 @@
   <div class="outer-container push--top">
     <div class="grid-container grid-container--inner">
       <div class="column-one-third dit-progress-bar">
+        {% include 'components/form-existing-message.html' %}
         <div class="h4">Section</div>
         <ol>
           <li><a href="{% url 'report-barrier-step1' %}"><span>1 About you</span> <img src="{% static 'images/tick.svg' %}" alt="Completed step"></a></li>
@@ -91,9 +92,9 @@
 
           <div class="form-group">
             <label class="form-label" for="dit-step2-country">
-              Which country are you trying to export to?
+              Which country/bloc are you trying to export to?
             </label>
-            <span class="error-message hidden" aria-hidden="true">Enter a country</span>
+            <span class="error-message hidden" aria-hidden="true">Enter a country/bloc</span>
             <select id="dit-step2-country" name="dit[step2][country]" autocomplete="off" class="form-control select-custom select2-hidden-accessible" data-placeholder="Type to find country" multiple required>
               {% include 'components/countries.html' %}
             </select>
@@ -136,8 +137,7 @@
           </div>
           <div class="form-group">
             <label class="form-label" for="dit-step2-export-to-other-countries" aria-labelledby="export-yn">
-              If yes, have you experienced this problem in your other export markets?
-              <span class="form-hint">Provide details of problem, explanations given, and any steps taken to resolve the problem.</span>
+              If yes, provide details of problem, explanations given, and any steps taken to resolve the problem
             </label>
             <textarea class="form-control" id="dit-step2-export-to-other-countries" name="dit[step2][export_to_other_countries]" rows="10" cols="5"></textarea>
           </div>
@@ -159,7 +159,7 @@
 
           <div class="form-group">
             <label class="form-label" for="dit-step2-sales">
-              What is the value of your company’s total annual sales? (optional)
+              What is the value of your company’s total annual sales?
 
               <span class="form-hint">
                 Leave blank if you are unsure
