@@ -612,18 +612,30 @@ main a:hover{
   width: 100%;
 }
 
+.select2-results__options .select2-results__options{
+  border: none;
+  border-top: 1px solid #ccc;
+  margin-top: 10px;
+  max-height: none;
+}
+
 .select2-results__option{
   border-bottom: 1px solid #ccc;
   cursor: pointer;
-  padding: 10px 10px 10px 0;
+  padding: 10px 0 0;
+}
+
+.select2-results__option:not([role="group"]){
+  padding-right: 10px;
+  padding-bottom: 10px;
 }
 
 .select2-results__option:last-child{
   border-bottom: none;
 }
 
-.select2-results__option:hover,
-.select2-results__option--highlighted{
+.select2-results__option:hover:not([role="group"]),
+.select2-results__option--highlighted:not([role="group"]){
   background-color: #1e1348;
   color: #fff;
 }
@@ -647,6 +659,10 @@ main a:hover{
 
 .select2-results__option[aria-selected="true"] .icon{
   visibility: visible;
+}
+
+.select2-results__group{
+  cursor: default;
 }
 
 .select2-selection__choice{
