@@ -722,6 +722,18 @@ main a:hover{
 /**
  * Section
  */
+.dit-form-existing-message{
+  background: #f0f0f0;
+  font-size: 16px;
+  margin-bottom: 40px;
+  max-width: 260px;
+  padding: 20px 15px 10px;
+}
+
+.dit-form-existing-message__title{
+  margin-bottom: 10px;
+}
+
 .dit-progress-bar{
   margin-top: 80px;
 }

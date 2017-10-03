@@ -145,11 +145,7 @@
                   </div>
                   <div class="form-group">
                     <div class="form-label">
-                      {% if is_trade_association == True %}
                         Your product/commodity code
-                      {% else %}
-                        Your product/commodity code (optional)
-                      {% endif %}
                     </div>
                     <div class="js-form-field" data-name="dit[step2][code]">Lorem ipsum</div>
                   </div>
@@ -315,7 +311,7 @@
 							>
   							<div class="dit-accordion__inner">
                   <div class="form-group">
-                    <div class="form-label">Is there anything else you would like us to understand about the situation? </div>
+                    <div class="form-label">Is there anything else we need to know about the problem?</div>
                     <div class="js-form-field" data-name="dit[step5][extra]">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean scelerisque suscipit vulputate. Aliquam vitae congue arcu. In congue mi non orci elementum, ut imperdiet nisi ultricies. Nulla in mollis mi. Aliquam sit amet nisl id ex auctor scelerisque hendrerit at nunc. Pellentesque ultricies molestie quam. Proin ultrices hendrerit risus id eleifend. Aliquam erat volutpat. Cras tempus lorem massa. </div>
                   </div>
                 <a href="{% url 'report-barrier-step5' %}" class="button button-blue" aria-labelledby="accordion-button5">Edit</a>
