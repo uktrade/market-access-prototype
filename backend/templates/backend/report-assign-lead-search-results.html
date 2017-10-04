@@ -1,0 +1,38 @@
+{% extends './datahub_layout.html' %}
+{% load staticfiles %}
+{% load trans from i18n %}
+{% block css %}
+{% endblock %}
+{% block head_title %}Data Hub - Trade Barriers{% endblock %}
+{% block breadcrumb %}{% include 'backend/components/breadcrumb.html' with title="Company X v Country 1" %}{% endblock %}
+{% block local_header__title_before %}{% endblock %}
+{% block local_header__title %}
+  Company X v Country 1
+{% endblock %}
+{% block local_header__meta %}
+<div class="c-meta-list">
+  Sector, Her Majesty’s Government barrier type, Country, Date added
+</div>
+{% endblock %}
+{% block local_header__progress %}{% endblock %}
+
+{% block sidebar %}
+  {% include 'backend/components/sidebar-nav.html' with nav="lead" extraNav="true" %}
+{% endblock %}
+
+{% block content %}
+<h2 class="heading-medium">Invite a lead</h2>
+<p>When you’re ready to proceed to Assessment, the person you
+invite to be lead facilitator will receive an invitation to take on the
+role.</p>
+
+<form action="{% url 'invite-lead-time-passes' %}" method="get">
+
+  <div class="c-form-actions">
+    <button class="button">Invite</button>
+    <a href="{% url 'report-assign-lead' %}">Back</a>
+  </div>
+
+</form>
+
+{% endblock %}

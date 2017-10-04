@@ -1,0 +1,78 @@
+<form method="get" class="c-collection__sort-form js-AutoSubmit">
+
+  <input name="custom" value="true" type="hidden">
+
+  <div id="group-field-sortby" class="c-form-group c-form-group--light c-form-group--inline c-form-group--small">
+      <label class="c-form-group__label " for="field-sortby">
+          <span class="c-form-group__label-text">
+            Sort by
+          </span>
+      </label>
+
+      <div class="c-form-group__inner">
+
+          <select id="field-sortby" name="sortby" class="c-form-control  c-form-control--light c-form-control--inline c-form-control--small  ">
+
+              <option value="created_on:desc">
+                  Newest
+              </option>
+
+              <option value="created_on:asc">
+                  Oldest
+              </option>
+
+              <option value="modified_on:desc" selected="">
+                  Recently updated
+              </option>
+
+              <option value="modified_on:asc">
+                  Least recently updated
+              </option>
+
+              <option value="first_name:asc">
+                  First name: A-Z
+              </option>
+
+              <option value="first_name:desc">
+                  First name: Z-A
+              </option>
+
+              <option value="last_name:asc">
+                  Last name: A-Z
+              </option>
+
+              <option value="last_name:desc">
+                  Last name: Z-A
+              </option>
+
+              <option value="address_country.name:asc">
+                  Country: A-Z
+              </option>
+
+              <option value="address_country.name:desc">
+                  Country: Z-A
+              </option>
+
+              <option value="company.name:asc">
+                  Company: A-Z
+              </option>
+
+              <option value="company.name:desc">
+                  Company: Z-A
+              </option>
+
+              <option value="company_sector.name:asc">
+                  Sector: A-Z
+              </option>
+
+              <option value="company_sector.name:desc">
+                  Sector: Z-A
+              </option>
+
+          </select>
+
+      </div>
+
+  </div>
+
+</form>

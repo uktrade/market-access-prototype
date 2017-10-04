@@ -1,0 +1,46 @@
+{% extends './datahub_layout.html' %}
+{% load staticfiles %}
+{% load trans from i18n %}
+{% block css %}
+{% endblock %}
+{% block head_title %}Data Hub - Trade Barriers{% endblock %}
+{% block breadcrumb %}{% include 'backend/components/breadcrumb.html' with title="Company X v Country 1" %}{% endblock %}
+{% block local_header__title_before %}{% endblock %}
+{% block local_header__title %}
+  Company X v Country 1
+{% endblock %}
+{% block local_header__meta %}
+<div class="c-meta-list">
+  Sector, Her Majesty’s Government barrier type, Country, Date added
+</div>
+{% endblock %}
+{% block local_header__progress %}{% endblock %}
+
+{% block sidebar %}
+  {% include 'backend/components/sidebar-nav.html' with nav="home" %}
+{% endblock %}
+
+{% block content %}
+  <h2 class="heading-medium">Screening</h2>
+  <form method="get" action="{% url 'report-home-decision-made' %}">
+
+    <fieldset class="form-group form-group__checkbox-group" id="decision-wrapper">
+      <legend class="form-label-bold">What’s next?</legend>
+      <label class="block-label selection-button-radio">
+        <input name="decision" value="Approve for assessment" type="radio"> Approve for assessment
+      </label>
+      <label class="block-label selection-button-radio">
+        <input name="decision" value="Ask for more information" type="radio"> Ask for more information
+      </label>
+      <label class="block-label selection-button-radio">
+        <input name="decision" value="Reject and inform the reporter" type="radio"> Reject and inform the reporter
+      </label>
+    </fieldset>
+
+    <div class="c-form-actions">
+      <button class="button ">Save</button>
+      <a href="{% url 'report-home' %}">Back</a>
+    </div>
+  </form>
+
+{% endblock %}

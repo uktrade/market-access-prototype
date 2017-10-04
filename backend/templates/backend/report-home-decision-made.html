@@ -17,7 +17,7 @@
 {% block local_header__progress %}{% endblock %}
 
 {% block sidebar %}
-  {% include 'backend/components/sidebar-nav.html' with nav="home" %}
+  {% include 'backend/components/sidebar-nav.html' with nav="home" extraNav="true" %}
 {% endblock %}
 
 {% block content %}
@@ -25,14 +25,28 @@
   <article>
 
     <h2 class="heading-medium">Screening</h2>
-    <p>Decide whether or not this barrier should move to assessment</p>
+    <p>Complete the following tasks to go to assessment</p>
 
     <div class="flash flash--info">
-        <p><a href="{% url 'report-barrier-type' %}">Confirm/change the HMG barrier type</a> to make your decision</p>
+        <p><a href="{% url 'report-create-barrier' %}">Assign a report</a></p>
+        <p><a href="{% url 'report-assign-lead' %}">Invite a lead facilitator</a></p>
     </div>
 
     <p>
-        <div class="button disabled">Make a screening decision</div>
+        <div class="button disabled">Go to assessment</div>
+    </p>
+
+    <table class="table--key-value table--striped">
+        <tbody>
+            <tr>
+                <th>Decision</th>
+                <td>Go to assessment</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <p>
+        <a class="button-secondary" href="{% url 'report-barrier-type' %}">Change</a>
     </p>
 
     <h2 class="heading-medium">About the reporter</h2>
@@ -89,18 +103,14 @@
         <tbody>
 
             <tr>
-                <th>Reported type(s)</th>
+                <th>Reported type</th>
                 <td>Easy-read barrier type 1</td>
-            </tr>
-            <tr>
-                <th></th>
-                <td>Easy-read barrier type 2</td>
             </tr>
         </tbody>
     </table>
 
     <div>
-      <a href="{% url 'report-barrier-type' %}" class="button">Confirm/change the HMG barrier type</a>
+      <a href="{% url 'report-barrier-type' %}" class="button">Edit HMG barrier type</a>
     </div>
 
     <h2 class="heading-medium">Requested action</h2>

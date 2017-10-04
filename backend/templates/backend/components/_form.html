@@ -1,0 +1,130 @@
+{# A generic form for copying and pasting from #}
+<form method="POST">
+    <div class="form-group " id="name-wrapper">
+        <label class="form-label-bold" for="name">
+            Input
+        </label>
+        <input id="name" class="form-control" name="name" value="" type="text">
+    </div>
+    <div class="form-group " id="name-wrapper">
+        <label class="form-label-bold" for="description">
+            Textarea
+        </label>
+        <textarea id="description" class="form-control" name="description" rows="5"></textarea>
+    </div>
+    <div class="form-group " id="employee_range-wrapper">
+        <label class="form-label-bold" for="employee_range">
+            Dropdown
+        </label>
+        <select id="employee_range" class="form-control" name="employee_range">
+            <option value="">Pick a value</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <div class="form-label-bold">Section that shows/hides something</div>
+        <button id="add-trading-address" class="button-secondary" type="button">Show extra fields</button>
+        <button id="remove-trading-address" class="button-secondary u-hidden" type="button">Hide extra fields</button>
+    </div>
+    <fieldset class="form-group form-group__checkbox-group" id="headquarters-wrapper">
+        <legend class="form-label-bold">Radio buttons title</legend>
+        <label class="block-label selection-button-radio selected">
+            <input name="headquarters" value="" checked="" type="radio"> Default
+        </label>
+        <label class="block-label selection-button-radio ">
+            <input name="headquarters" value="" type="radio"> Option 1
+        </label>
+        <label class="block-label selection-button-radio ">
+            <input name="headquarters" value="" type="radio"> Option 2
+        </label>
+    </fieldset>
+    <fieldset id="group-field-primary" class="c-form-group c-form-group--inline">
+      <legend class="c-form-group__label ">
+        <span class="c-form-group__label-text">
+          Inline radio buttons
+        </span>
+      </legend>
+      <div class="c-form-group__inner">
+        <div class="c-multiple-choice  c-multiple-choice--inline">
+          <input class="c-multiple-choice__input" name="primary" value="yes" id="field-primary-1" checked="checked" type="radio">
+          <label class="c-multiple-choice__label" for="field-primary-1">
+            <span class="c-multiple-choice__label-text">Yes</span>
+          </label>
+        </div>
+        <div class="c-multiple-choice  c-multiple-choice--inline">
+          <input class="c-multiple-choice__input" name="primary" value="no" id="field-primary-2" type="radio">
+          <label class="c-multiple-choice__label" for="field-primary-2">
+            <span class="c-multiple-choice__label-text">No</span>
+          </label>
+        </div>
+      </div>
+    </fieldset>
+    <fieldset class="form-group form-group__checkbox-group" id="headquarters-wrapper">
+        <legend class="form-label-bold">Checkboxes title</legend>
+        <div class="c-multiple-choice">
+          <input class="c-multiple-choice__input" name="stage" value="" id="field-stage-2" checked="checked" type="checkbox">
+          <label class="c-multiple-choice__label" for="field-stage-2">
+              <span class="c-multiple-choice__label-text">Option 1</span>
+          </label>
+        </div>
+        <div class="c-multiple-choice">
+          <input class="c-multiple-choice__input" name="stage" value="" id="field-stage-3" type="checkbox">
+          <label class="c-multiple-choice__label" for="field-stage-3">
+            <span class="c-multiple-choice__label-text">Option 2</span>
+          </label>
+        </div>
+    </fieldset>
+    <fieldset id="group-field-business_type" class="c-form-group">
+      <legend class="c-form-group__label ">
+        <span class="c-form-group__label-text">
+          Checkboxes that lead to hidden fields
+        </span>
+      </legend>
+      <div class="c-form-group__inner">
+        <div class="c-multiple-choice ">
+          <input class="c-multiple-choice__input" name="hidden_parent" value="1" id="field-business_type-1" type="radio">
+          <label class="c-multiple-choice__label" for="field-business_type-1">
+            <span class="c-multiple-choice__label-text">No hidden extra fields</span>
+            <span class="c-multiple-choice__hint">Hint here</span>
+          </label>
+        </div>
+        <div class="c-multiple-choice ">
+          <input class="c-multiple-choice__input" name="hidden_parent" value="2" id="field-business_type-2" type="radio">
+          <label class="c-multiple-choice__label" for="field-business_type-2">
+            <span class="c-multiple-choice__label-text">Other type of UK organisation</span>
+              <span class="c-multiple-choice__hint">UK organisation not registered with Companies House</span>
+          </label>
+          <div id="group-field-business_type_uk_other" class="c-form-group js-ConditionalSubfield c-form-group--subfield" data-controlled-by="hidden_parent" data-control-value="2" aria-expanded="false" aria-hidden="true">
+            <label class="c-form-group__label " for="field-business_type_uk_other">
+              <span class="c-form-group__label-text">Type of organisation</span>
+            </label>
+            <div class="c-form-group__inner">
+              <select id="field-business_type_uk_other" name="business_type_uk_other" class="c-form-control  c-form-control--subfield  ">
+                <option value="">Select type</option>
+                <option value="Charity">Charity</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="c-multiple-choice ">
+        <input class="c-multiple-choice__input" name="hidden_parent" value="3" id="field-business_type-3" type="radio">
+        <label class="c-multiple-choice__label" for="field-business_type-3">
+          <span class="c-multiple-choice__label-text">Foreign organisation</span>
+        </label>
+        <div id="group-field-business_type_for_other" class="c-form-group js-ConditionalSubfield c-form-group--subfield" data-controlled-by="hidden_parent" data-control-value="3" aria-expanded="false" aria-hidden="true">
+        <label class="c-form-group__label " for="field-business_type_for_other">
+          <span class="c-form-group__label-text">Type of organisation</span>
+        </label>
+        <div class="c-form-group__inner">
+          <select id="field-business_type_for_other" name="business_type_for_other" class="c-form-control  c-form-control--subfield  ">
+            <option value="">Select type</option>
+            <option value="Company">Company</option>
+          </select>
+        </div>
+      </div>
+    </div>
+      </div>
+    </fieldset>
+    <div class="save-bar">
+        <button class="button button--save" type="submit">Save</button>
+    </div>
+</form>

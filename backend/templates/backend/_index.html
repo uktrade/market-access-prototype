@@ -1,0 +1,46 @@
+{% extends './datahub_layout.html' %}
+{% load staticfiles %}
+{% load trans from i18n %}
+{% block css %}
+{% endblock %}
+{% block head_title %}Data Hub - Trade Barriers{% endblock %}
+{% block breadcrumb %}{% include 'backend/components/breadcrumb.html' with title="Company X v Country 1" %}{% endblock %}
+{% block local_header__title_before %}{% endblock %}
+{% block local_header__title %}
+  Company X v Country 1
+{% endblock %}
+{% block local_header__meta %}
+<div class="c-meta-list">
+  Sector, Her Majesty’s Government barrier type, Country, Date added
+</div>
+{% endblock %}
+{% block local_header__progress %}{% endblock %}
+
+{% block sidebar %}
+  {% include 'backend/components/sidebar-nav.html' with extraNav="true" %}
+{% endblock %}
+
+{% block content %}
+<style>
+  .index-link{
+    display: block;
+  }
+</style>
+<a href="{% url 'components' %}" class="index-link">All elements</a>
+<a href="{% url 'dashboard' %}" class="index-link">Dashboard</a>
+<a href="{% url 'report-home' %}" class="index-link">Report home</a>
+<a href="{% url 'report-barrier-type' %}" class="index-link">Report barrier type</a>
+<a href="{% url 'report-home-make-a-decision' %}" class="index-link">Report home - make a decision</a>
+<a href="{% url 'report-barrier-make-a-decision' %}" class="index-link">Report barrier - make a decision</a>
+<a href="{% url 'report-home-decision-made' %}" class="index-link">Report home - decision made</a>
+<a href="{% url 'report-create-barrier' %}" class="index-link">Report create barrier</a>
+<a href="{% url 'report-new-uk' %}" class="index-link">Report new UK</a>
+<a href="{% url 'report-new-instance' %}" class="index-link">Report new instance</a>
+<a href="{% url 'report-home-barrier-created' %}" class="index-link">Report home - barrier created</a>
+<a href="{% url 'report-assign-lead' %}" class="index-link">Report assign lead </a>
+<a href="{% url 'report-assign-lead-search-results' %}" class="index-link">Report assign lead search results</a>
+<a href="{% url 'report-home-ready-to-proceed' %}" class="index-link">Report home - ready to proceed</a>
+<a href="{% url 'report-home-proceed-to-assessment' %}" class="index-link">Report home - proceed to assessment</a>
+<a href="{% url 'invite-lead-time-passes' %}" class="index-link">Invite lead - time passes</a>
+
+{% endblock %}

@@ -25,14 +25,12 @@
   <article>
 
     <h2 class="heading-medium">Screening</h2>
-    <p>Decide whether or not this barrier should move to assessment</p>
-
     <div class="flash flash--info">
-        <p><a href="{% url 'report-barrier-type' %}">Confirm/change the HMG barrier type</a> to make your decision</p>
+        <p>Decide whether or not this barrier report should go to assessment</p>
     </div>
 
     <p>
-        <div class="button disabled">Make a screening decision</div>
+        <a class="button" href="{% url 'report-barrier-make-a-decision' %}">Make a screening decision</a>
     </p>
 
     <h2 class="heading-medium">About the reporter</h2>
