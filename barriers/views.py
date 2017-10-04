@@ -133,6 +133,9 @@ class BarrierDetailView(DetailView):
 
 
 class SessionContextMixin(object):
+    def post(self, *args, **kwargs):
+        return self.get(*args, **kwargs)
+
     def get_context_data(self, *args, **kwargs):
         context = super(SessionContextMixin, self).get_context_data(*args, **kwargs)
         if 'existing' in self.request.session:
