@@ -363,12 +363,6 @@ class BarrierCountry(AuditableModel):
     https://territory.register.gov.uk/records
     Note: Should establish a procedure for updating these periodically
     """
-    # used in the below field
-    COUNTRY_TYPE = 'CO'
-    TERRITORY_TYPE = 'TE'
-    COUNTRY_TYPE_CHOICES = (
-        (COUNTRY_TYPE, 'Country'),
-        (TERRITORY_TYPE, 'Territory'),
     )
     name = models.CharField(
         _('Country or Territory Name'),
@@ -390,9 +384,17 @@ class BarrierCountry(AuditableModel):
         max_length=20,
         null=True, blank=True
     )
+    # used in the below field
+    COUNTRY_TYPE_COUNTRY = 'country'
+    COUNTRY_TYPE_TERRITORY = 'territory'
+    COUNTRY_TYPE_BLOC = 'bloc'
+    COUNTRY_TYPE_CHOICES = (
+        (COUNTRY_TYPE_COUNTRY, 'Country'),
+        (COUNTRY_TYPE_TERRITORY, 'Territory'),
+        (COUNTRY_TYPE_BLOC, 'Trade Bloc'),
     country_or_territory = models.CharField(
         _('Country or Territory flag'),
-        max_length=2, choices=COUNTRY_TYPE_CHOICES, default=COUNTRY_TYPE
+        max_length=10, choices=COUNTRY_TYPE_CHOICES, default=COUNTRY_TYPE
     )
 
     def __str__(self):
