@@ -1,0 +1,118 @@
+<form method="get" class="c-collection-filters js-AutoSubmit">
+  <input name="sortby" value="modified_on:desc" type="hidden">
+  <input name="custom" value="true" type="hidden">
+  <header class="u-clearfix">
+      <h2 class="c-collection-filters__heading">Filter results</h2>
+  </header>
+  <fieldset class="c-form-group c-form-group__checkbox-group c-form-group--smaller" id="headquarters-wrapper">
+      <legend class="c-form-group__label">
+        <span class="c-form-group__label-text">Record type</span>
+      </legend>
+      <label class="block-label selection-button-radio">
+          <input name="field_sidebar_type" value="UK database" type="radio"> UK database
+      </label>
+      <label class="block-label selection-button-radio">
+          <input name="field_sidebar_type" value="All" type="radio"> All (<abbr title="including">inc</abbr> <abbr title="World Trade Organisation">WTO</abbr> and <abbr title="European Territorial Cooperation">ETC</abbr>)
+      </label>
+  </fieldset>
+  <div id="group-field-sidebar_input" class="c-form-group c-form-group--light c-form-group--smaller">
+      <label class="c-form-group__label" for="field-sidebar-company">
+          <span class="c-form-group__label-text">
+          Company name
+          </span>
+          <span class="c-form-group__hint" id="hint-field-sidebar-company">At least three characters</span>
+      </label>
+      <div class="c-form-group__inner">
+          <input name="field_sidebar_company" id="field-sidebar-company" value="" class="c-form-control c-form-control--light c-form-control--smaller" aria-describedby="hint-field-sidebar-company" type="text">
+      </div>
+  </div>
+  <div id="group-field-sidebar_input" class="c-form-group c-form-group--light c-form-group--smaller">
+      <label class="c-form-group__label" for="field-sidebar-product">
+          <span class="c-form-group__label-text">
+          Product or service
+          </span>
+          <span class="c-form-group__hint" id="hint-field-sidebar-product">At least three characters</span>
+      </label>
+      <div class="c-form-group__inner">
+          <input name="field_sidebar_product" id="field-sidebar-product" value="" class="c-form-control c-form-control--light c-form-control--smaller" aria-describedby="hint-field-sidebar-product" type="text">
+      </div>
+  </div>
+  <div id="group-field-sidebar_country" class="c-form-group c-form-group--light c-form-group--smaller">
+      <label class="c-form-group__label" for="field-sidebar-country">
+        <span class="c-form-group__label-text">
+          Country
+        </span>
+      </label>
+      <div class="c-form-group__inner">
+          <select id="field-sidebar-country" name="sidebar_country" class="c-form-control c-form-control--light c-form-control--smaller">
+            <option value=""></option>
+            {% include 'components/countries.html' %}
+          </select>
+      </div>
+  </div>
+  <div id="group-field-sidebar_sector" class="c-form-group c-form-group--light c-form-group--smaller">
+      <label class="c-form-group__label" for="field-sidebar-sector">
+        <span class="c-form-group__label-text">
+          Sector
+        </span>
+      </label>
+      <div class="c-form-group__inner">
+          <select id="field-sidebar-sector" name="sidebar_sector" class="c-form-control c-form-control--light c-form-control--smaller">
+              <option value=""></option>
+              <option value="1">Option 1</option>
+          </select>
+      </div>
+  </div>
+  <div id="group-field-sidebar_barrier" class="c-form-group c-form-group--light c-form-group--smaller">
+      <label class="c-form-group__label" for="field-sidebar-barrier">
+        <span class="c-form-group__label-text">
+          Barrier type
+        </span>
+      </label>
+      <div class="c-form-group__inner">
+          <select id="field-sidebar-barrier" name="sidebar_barrier" class="c-form-control c-form-control--light c-form-control--smaller">
+              <option value=""></option>
+              <option value="1">Option 1</option>
+          </select>
+      </div>
+  </div>
+  <fieldset class="c-form-group c-form-group__checkbox-group c-form-group--light c-form-group--smaller" id="group-field-sidebar_checkboxes">
+      <legend class="c-form-group__label">
+        <span class="c-form-group__label-text">Status</span>
+      </legend>
+      <div class="c-multiple-choice">
+        <input class="c-multiple-choice__input" name="sidebar_stage" value="Screening" id="field-sidebar-status-1" checked="checked" type="checkbox">
+        <label class="c-multiple-choice__label" for="field-sidebar-status-1">
+            <span class="c-multiple-choice__label-text">Screening</span>
+        </label>
+      </div>
+      <div class="c-multiple-choice">
+        <input class="c-multiple-choice__input" name="sidebar_stage" value="Assessment" id="field-sidebar-status-2" type="checkbox">
+        <label class="c-multiple-choice__label" for="field-sidebar-status-2">
+          <span class="c-multiple-choice__label-text">Assessment</span>
+        </label>
+      </div>
+      <div class="c-multiple-choice">
+        <input class="c-multiple-choice__input" name="sidebar_stage" value="Resolution" id="field-sidebar-status-3" type="checkbox">
+        <label class="c-multiple-choice__label" for="field-sidebar-status-3">
+          <span class="c-multiple-choice__label-text">Resolution</span>
+        </label>
+      </div>
+      <div class="c-multiple-choice">
+        <input class="c-multiple-choice__input" name="sidebar_stage" value="Rejected" id="field-sidebar-status-4" type="checkbox">
+        <label class="c-multiple-choice__label" for="field-sidebar-status-4">
+          <span class="c-multiple-choice__label-text">Rejected</span>
+        </label>
+      </div>
+      <div class="c-multiple-choice">
+        <input class="c-multiple-choice__input" name="sidebar_stage" value="Archived" id="field-sidebar-status-5" type="checkbox">
+        <label class="c-multiple-choice__label" for="field-sidebar-status-5">
+          <span class="c-multiple-choice__label-text">Archived</span>
+        </label>
+      </div>
+  </fieldset>
+  <div style="clear:both;">&nbsp;</div>
+  <div class="c-form-actions u-js-hidden">
+      <button class="button">Refresh results</button>
+  </div>
+</form>

@@ -1,0 +1,35 @@
+{% extends './datahub_layout.html' %}
+{% load staticfiles %}
+{% load trans from i18n %}
+{% block css %}
+{% endblock %}
+{% block head_title %}Data Hub - Trade Barriers{% endblock %}
+{% block breadcrumb %}{% include 'backend/components/breadcrumb.html' with title="Company X v Country 1" %}{% endblock %}
+{% block local_header__title_before %}{% endblock %}
+{% block local_header__title %}
+  Company X v Country 1
+{% endblock %}
+{% block local_header__meta %}
+<div class="c-meta-list">
+  Sector, Her Majesty’s Government barrier type, Country, Date added
+</div>
+{% endblock %}
+{% block local_header__progress %}{% endblock %}
+
+{% block sidebar %}
+  {% include 'backend/components/sidebar-nav.html' with extraNav="true" %}
+{% endblock %}
+
+{% block content %}
+<h2 class="heading-medium">Go to assessment</h2>
+
+<form action="{% url 'dashboard-success' %}" method="get">
+
+    <div class="c-form-actions">
+      <button class="button">Proceed</button>
+      <a href="{% url 'report-home-ready-to-proceed' %}">Back</a>
+    </div>
+
+</form>
+
+{% endblock %}

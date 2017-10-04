@@ -1,0 +1,11 @@
+<nav class="c-local-nav" aria-label="local navigation">
+    <a class="c-local-nav__link {% if nav == 'home' %}is-active{% endif %}" href="{% url 'report-home' %}">Report summary</a>
+    <a class="c-local-nav__link {% if nav == 'about' %}is-active{% endif %}" href="#">About the problem</a>
+    <a class="c-local-nav__link {% if nav == 'barrier' %}is-active{% endif %}" href="{% url 'report-barrier-type' %}">Barrier type</a>
+    <a class="c-local-nav__link {% if nav == 'requested' %}is-active{% endif %}" href="{% url 'report-home' %}">Requested action</a>
+    {% if extraNav %}
+    <a class="c-local-nav__link {% if nav == 'assign' %}is-active{% endif %}" href="{% url 'report-create-barrier' %}">Assign report</a>
+    <a class="c-local-nav__link {% if nav == 'associated' %}is-active{% endif %}" href="{% url 'report-home' %}">Associated barriers</a>
+    <a class="c-local-nav__link {% if nav == 'lead' %}is-active{% endif %}" href="{% url 'report-assign-lead' %}">Lead facilitator</a>
+    {% endif %}
+</nav>

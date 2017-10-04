@@ -157,6 +157,9 @@
             <textarea class="form-control" id="dit-step2-impact" name="dit[step2][impact]" rows="10" cols="5" required></textarea>
           </div>
 
+          {% if is_trade_association == True %}
+
+          {% else %}
           <div class="form-group">
             <label class="form-label" for="dit-step2-sales">
               What is the value of your company’s total annual sales?
@@ -167,6 +170,7 @@
             </label>
             <input class="form-control" id="dit-step2-sales" name="dit[step2][sales]" value="">
           </div>
+          {% endif %}
 
           <!--
           <div class="form-group multiple-choice">

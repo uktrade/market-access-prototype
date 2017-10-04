@@ -1,0 +1,227 @@
+{# All our components for easy copy and pasting action #}
+{% extends './datahub_layout.html' %}
+{% load staticfiles %}
+{% load trans from i18n %}
+{% block css %}
+{% endblock %}
+{% block head_title %}All elements - Data Hub - Trade Barriers{% endblock %}
+{% block breadcrumb %}{% include 'backend/components/breadcrumb.html' with title="All elements" %}{% endblock %}
+{% block local_header__title_before %}{% endblock %}
+{% block local_header__title %}All elements{% endblock %}
+{% block local_header__meta %}
+<div class="c-meta-list">
+  All elements needed in the admin area
+</div>
+{% endblock %}
+{% block local_header__progress %}{% endblock %}
+
+{% block sidebar %}
+  {% include 'backend/components/sidebar-nav.html' with nav="lead" extraNav="true" %}
+  {% include 'backend/components/sidebar-filters.html' %}
+{% endblock %}
+
+{% block content %}
+
+{% include 'backend/components/_form.html' %}
+
+<article>
+    <h2 class="heading-medium">Project value (Test D)</h2>
+
+    <table class="table--key-value">
+        <tbody>
+
+            <tr>
+                <th>Primary sector</th>
+                <td>Food and Drink</td>
+            </tr>
+
+            <tr>
+                <th>Total investment</th>
+                <td>Not Know</td>
+            </tr>
+        </tbody>
+    </table>
+</article>
+
+<article class="c-collection">
+
+    <header class="c-collection__header">
+        <div class="c-collection__header-row">
+            <div class="c-collection__header-intro">
+                <span class="c-collection__result-count">0</span> interactions
+            </div>
+
+            <div class="c-collection__header-actions">
+                <a href="interactions/create" class="button button-secondary">Add interaction</a>
+            </div>
+
+            <div class="c-collection__filter-summary">
+              <span class="c-collection__filter-tag">
+                <span class="c-collection__filter-label">Estimated land date before</span>
+                <span class="c-collection__filter-value">6 April 2018</span>
+                <a class="c-collection__filter-remove js-xhr" href="?custom=true&amp;estimated_land_date_after=2017-04-05&amp;sortby=estimated_land_date%3Aasc" aria-label="Remove filter">×</a>
+              </span>
+
+              <span class="c-collection__filter-tag">
+                <span class="c-collection__filter-label">Estimated land date after</span>
+                <span class="c-collection__filter-value">5 April 2017</span>
+                <a class="c-collection__filter-remove js-xhr" href="?custom=true&amp;estimated_land_date_before=2018-04-06&amp;sortby=estimated_land_date%3Aasc" aria-label="Remove filter">×</a>
+              </span>
+
+            </div>
+
+        </div>
+
+    </header>
+
+</article>
+
+<article>
+
+    <form method="POST" action="#" class="flash flash--info">
+
+        <p>Complete this stage to move to the Assign PM stage.</p>
+
+        <div class="c-form-actions">
+            <button class="button" disabled="disabled">Move to Assign PM stage</button>
+        </div>
+
+    </form>
+
+    <h2 class="heading-medium">Investment project summary</h2>
+
+    <table class="table--key-value table--striped">
+        <tbody>
+
+            <tr>
+                <th>Client</th>
+                <td>
+                  <a href="#">With a link</a>
+                </td>
+            </tr>
+            <tr>
+                <th>Heading</th>
+                <td>Content</td>
+            </tr>
+            <tr>
+                <th>Heading</th>
+                <td>Content</td>
+            </tr>
+            <tr>
+                <th>Heading</th>
+                <td>Content</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <p><a href="#" class="button-secondary">Link button</a></p>
+
+    <h2 class="heading-medium">Heading (medium)</h2>
+
+    <p class="infostrip">
+        This is an infostrip
+    </p>
+
+    <p>
+      <a href="#" class="button">Button link</a>
+    </p>
+
+    <h2 class="heading-medium">Heading (medium)</h2>
+
+    <p class="infostrip">
+        This is an infostrip
+    </p>
+
+    <p>
+        <a href="#" class="button">Button link</a>
+    </p>
+
+    <h2 class="heading-medium">Heading (medium)</h2>
+    <p>Lorem ipsum lorem ipsum</p>
+
+    <a class="button" href="#" aria-hidden="false">Button link</a>
+
+    <form class="archive-form js-archiveForm u-hidden" method="post" aria-hidden="true">
+
+        <fieldset id="group-field-archived_reason" class="c-form-group">
+            <legend class="c-form-group__label ">
+                <span class="c-form-group__label-text">
+                  Form legend
+                </span>
+            </legend>
+
+            <div class="c-form-group__inner">
+
+                <div class="c-multiple-choice ">
+                    <input class="c-multiple-choice__input" name="archived_reason" value="Abandoned" id="field-archived_reason-1" type="radio">
+                    <label class="c-multiple-choice__label" for="field-archived_reason-1">
+                        <span class="c-multiple-choice__label-text">Abandoned</span>
+                    </label>
+                </div>
+
+                <div class="c-multiple-choice ">
+                    <input class="c-multiple-choice__input" name="archived_reason" value="Lost" id="field-archived_reason-2" type="radio">
+                    <label class="c-multiple-choice__label" for="field-archived_reason-2">
+                        <span class="c-multiple-choice__label-text">Lost</span>
+                    </label>
+                </div>
+
+                <div class="c-multiple-choice ">
+                    <input class="c-multiple-choice__input" name="archived_reason" value="Other" id="field-archived_reason-3" type="radio">
+                    <label class="c-multiple-choice__label" for="field-archived_reason-3">
+                        <span class="c-multiple-choice__label-text">Other</span>
+                    </label>
+                </div>
+            </div>
+
+        </fieldset>
+
+        <div class="js-ConditionalSubfield" data-controlled-by="archived_reason" data-control-value="Other" aria-expanded="false" aria-hidden="true">
+            <div class="form-group">
+                <label class="form-label-bold">Other</label>
+                <input class="form-control" name="archived_reason_other" type="text">
+            </div>
+        </div>
+
+        <div class="save-bar">
+            <button class="button button--save" type="submit">Archive</button>
+            <a class="button-link" href="#">Cancel</a>
+        </div>
+    </form>
+
+    <article class="c-collection">
+
+        <header class="c-collection__header">
+            <div class="c-collection__header-row">
+                <div class="c-collection__header-intro">
+                    <span class="c-collection__result-count">4,352</span> contacts
+                </div>
+
+            </div>
+
+            <div class="c-collection__header-row">
+
+                <span class="c-collection__pagination-summary">
+                  Page 1 of 436
+                </span>
+
+                {% include 'backend/components/sort.html' with active="false" %}
+            </div>
+
+        </header>
+
+        <ol class="c-entity-list">
+          {% include 'backend/components/dashboard-result.html' with title="Company X vs Country 1" country1="Country 1" country2="Country 2" status="Screening" sector="Sector" barrier="Barrier" date="Date updated" %}
+          {% include 'backend/components/dashboard-result.html' with title="Company Y vs Country 2" country1="Country 1" country2="Country 2" status="Screening" sector="Sector" barrier="Barrier" date="Date updated" %}
+          {% include 'backend/components/dashboard-result.html' with title="Barrier name consisting of country and product at minimum" country1="Multiple countries" status="Assessment" sector="Sector" barrier="Barrier" date="Date updated" %}
+          {% include 'backend/components/dashboard-result.html' with title="Barrier name consisting of country and product at minimum" country1="Multiple countries" status="Assessment" sector="Sector" barrier="Barrier" date="Date updated" %}
+          {% include 'backend/components/dashboard-result.html' with title="Barrier name consisting of country and product at minimum" country1="Multiple countries" status="Resolution" sector="Sector" barrier="Barrier" date="Date updated" %}
+          {% include 'backend/components/dashboard-result.html' with title="Barrier name consisting of country and product at minimum" country1="Multiple countries" status="Resolution" sector="Sector" barrier="Barrier" date="Date updated" %}
+          {% include 'backend/components/dashboard-result.html' with title="Barrier name consisting of country and product at minimum" country1="Multiple countries" status="Resolution" sector="Sector" barrier="Barrier" date="Date updated" %}
+          {% include 'backend/components/dashboard-result.html' with title="Barrier name consisting of country and product at minimum" country1="Multiple countries" status="Resolution" sector="Sector" barrier="Barrier" date="Date updated" %}
+        </ol>
+
+        {% include 'backend/components/pagination.html' with totalPages="17" currentPage="1" %}
+
+    </article>
+{% endblock %}

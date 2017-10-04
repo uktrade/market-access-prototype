@@ -11,17 +11,97 @@ from django.conf.urls import url  # , include
 # from django.views import generic
 
 from .views import (
+    IndexView,
+    ComponentsView,
     DashboardView,
-    ReportHomeView
+    DashboardSuccessView,
+    ReportHomeView,
+    ReportBarrierTypeView,
+    ReportHomeMakeADecisionView,
+    ReportBarrierMakeADecisionView,
+    ReportHomeDecisionMadeView,
+    ReportCreateBarrierView,
+    ReportNewUKView,
+    ReportNewInstanceView,
+    ReportHomeBarrierCreatedView,
+    ReportAssignLeadView,
+    ReportAssignLeadSearchResultsView,
+    ReportHomeReadyToProceedCreatedView,
+    ReportHomeProceedToAssessmentView,
+    InviteLeadTimePassesView
 )
 
 urlpatterns = [
+    url(r'^index$',
+        IndexView.as_view(),
+        name='index'
+    ),
+    url(r'^components$',
+        ComponentsView.as_view(),
+        name='components'
+    ),
     url(r'^$',
         DashboardView.as_view(),
-        name='home'
+        name='dashboard'
+    ),
+    url(r'^success$',
+        DashboardSuccessView.as_view(),
+        name='dashboard-success'
     ),
     url(r'^report-home$',
         ReportHomeView.as_view(),
         name='report-home'
+    ),
+    url(r'^report-barrier-type$',
+        ReportBarrierTypeView.as_view(),
+        name='report-barrier-type'
+    ),
+    url(r'^report-home/make-a-decision$',
+        ReportHomeMakeADecisionView.as_view(),
+        name='report-home-make-a-decision'
+    ),
+    url(r'^report-barrier/make-a-decision$',
+        ReportBarrierMakeADecisionView.as_view(),
+        name='report-barrier-make-a-decision'
+    ),
+    url(r'^report-home/decision-made$',
+        ReportHomeDecisionMadeView.as_view(),
+        name='report-home-decision-made'
+    ),
+    url(r'^report-create-barrier$',
+        ReportCreateBarrierView.as_view(),
+        name='report-create-barrier'
+    ),
+    url(r'^report-new-uk$',
+        ReportNewUKView.as_view(),
+        name='report-new-uk'
+    ),
+    url(r'^report-new-instance$',
+        ReportNewInstanceView.as_view(),
+        name='report-new-instance'
+    ),
+    url(r'^report-home/barrier-created$',
+        ReportHomeBarrierCreatedView.as_view(),
+        name='report-home-barrier-created'
+    ),
+    url(r'^report/assign-lead$',
+        ReportAssignLeadView.as_view(),
+        name='report-assign-lead'
+    ),
+    url(r'^report/assign-lead/search-results$',
+        ReportAssignLeadSearchResultsView.as_view(),
+        name='report-assign-lead-search-results'
+    ),
+    url(r'^report-home/ready-to-proceed$',
+        ReportHomeReadyToProceedCreatedView.as_view(),
+        name='report-home-ready-to-proceed'
+    ),
+    url(r'^report-home/proceed-to-assessment$',
+        ReportHomeProceedToAssessmentView.as_view(),
+        name='report-home-proceed-to-assessment'
+    ),
+    url(r'^invite-lead-time-passes$',
+        InviteLeadTimePassesView.as_view(),
+        name='invite-lead-time-passes'
     ),
 ]

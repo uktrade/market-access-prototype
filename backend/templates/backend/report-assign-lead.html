@@ -1,0 +1,50 @@
+{% extends './datahub_layout.html' %}
+{% load staticfiles %}
+{% load trans from i18n %}
+{% block css %}
+{% endblock %}
+{% block head_title %}Data Hub - Trade Barriers{% endblock %}
+{% block breadcrumb %}{% include 'backend/components/breadcrumb.html' with title="Company X v Country 1" %}{% endblock %}
+{% block local_header__title_before %}{% endblock %}
+{% block local_header__title %}
+  Company X v Country 1
+{% endblock %}
+{% block local_header__meta %}
+<div class="c-meta-list">
+  Sector, Her Majesty’s Government barrier type, Country, Date added
+</div>
+{% endblock %}
+{% block local_header__progress %}{% endblock %}
+
+{% block sidebar %}
+  {% include 'backend/components/sidebar-nav.html' with nav="lead" extraNav="true" %}
+{% endblock %}
+
+{% block content %}
+<h2 class="heading-medium">Search for a lead facilitator</h2>
+<p>Search existing barrier records and the DIT people finder.</p>
+<p>You don’t have to complete all fields, but enter as much detail
+as possible to improve your search results.</p>
+
+
+<form action="{% url 'report-assign-lead-search-results' %}" method="get">
+
+    <div class="c-form-actions">
+      <button class="button">Search</button>
+      <a href="{% url 'report-home-barrier-created' %}">Back</a>
+    </div>
+
+</form>
+
+<form action="{% url 'report-assign-lead-search-results' %}" method="get">
+
+    <label>Alternatively:</label>
+
+    <div class="c-form-actions">
+      <button class="button">Assign yourself as lead facilitator</button>
+      <a href="{% url 'report-home-barrier-created' %}">Back</a>
+    </div>
+
+</form>
+
+{% endblock %}
