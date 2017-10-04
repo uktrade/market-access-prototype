@@ -387,7 +387,7 @@ class BarrierCountry(AuditableModel):
     )
     govuk_index_entry_code = models.CharField(
         _('GOV.UK index code'),
-        max_length=10,
+        max_length=20,
         null=True, blank=True
     )
     country_or_territory = models.CharField(
