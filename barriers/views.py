@@ -160,7 +160,15 @@ class BarriersGeneralInfoView(SessionContextMixin, TemplateView):
 
 class BarriersCaseStudyView(SessionContextMixin, TemplateView):
     model = BarrierRecord
-    template_name = 'barriers-case-study.html'
+    template_name = 'barriers-case-study1.html'
+
+class BarriersCaseStudy2View(SessionContextMixin, TemplateView):
+    model = BarrierRecord
+    template_name = 'barriers-case-study2.html'
+
+class BarriersCaseStudy3View(SessionContextMixin, TemplateView):
+    model = BarrierRecord
+    template_name = 'barriers-case-study3.html'
 
 class ReportBarrierStep1View(SessionContextMixin, TemplateView):
     model = BarrierRecord

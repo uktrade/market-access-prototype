@@ -17,7 +17,8 @@ from .views import (
     ReportBarrierStep1View, ReportBarrierStep2View, ReportBarrierStep3View,
     ReportBarrierStep4View, ReportBarrierStep5View, ReportBarrierStep6View,
     ReportBarrierRegisterView,
-    BarriersGeneralInfoView, BarriersCaseStudyView,
+    BarriersGeneralInfoView,
+    BarriersCaseStudyView, BarriersCaseStudy2View, BarriersCaseStudy3View,
     RequestFastTrackView,
     ExampleSummaryView,
     CompaniesHouseRequestView
@@ -53,9 +54,17 @@ urlpatterns = [
         BarriersGeneralInfoView.as_view(),
         name='barriers-general-info'
     ),
-    url(r'^barriers/case-study',
+    url(r'^barriers/case-study-1',
         BarriersCaseStudyView.as_view(),
         name='barriers-case-study'
+    ),
+    url(r'^barriers/case-study-2',
+        BarriersCaseStudy2View.as_view(),
+        name='barriers-case-study-2'
+    ),
+    url(r'^barriers/case-study-3',
+        BarriersCaseStudy3View.as_view(),
+        name='barriers-case-study-3'
     ),
     url(r'^report/step1',
         ReportBarrierStep1View.as_view(),
