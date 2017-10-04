@@ -4,20 +4,20 @@
 {% block css %}
 {% endblock %}
 {% block head_title %}Data Hub - Trade Barriers{% endblock %}
-{% block breadcrumb %}{% include 'backend/components/breadcrumb.html' with title="Company X v Country 1" %}{% endblock %}
+{% block breadcrumb %}{% include 'backend/components/breadcrumb.html' with title="Screening Walk-through" %}{% endblock %}
 {% block local_header__title_before %}{% endblock %}
 {% block local_header__title %}
-  Company X v Country 1
+  Screening
 {% endblock %}
 {% block local_header__meta %}
 <div class="c-meta-list">
-  Sector, Her Majesty’s Government barrier type, Country, Date added
+  All templates in the Screening Walk-through
 </div>
 {% endblock %}
 {% block local_header__progress %}{% endblock %}
 
 {% block sidebar %}
-  {% include 'backend/components/sidebar-nav.html' with extraNav="true" %}
+
 {% endblock %}
 
 {% block content %}
@@ -26,8 +26,10 @@
     display: block;
   }
 </style>
+<h2 class="heading-medium">Template index</h2>
 <a href="{% url 'components' %}" class="index-link">All elements</a>
 <a href="{% url 'dashboard' %}" class="index-link">Dashboard</a>
+<a href="{% url 'dashboard-success' %}" class="index-link">Dashboard (successfully completed the process)</a>
 <a href="{% url 'report-home' %}" class="index-link">Report home</a>
 <a href="{% url 'report-barrier-type' %}" class="index-link">Report barrier type</a>
 <a href="{% url 'report-home-make-a-decision' %}" class="index-link">Report home - make a decision</a>

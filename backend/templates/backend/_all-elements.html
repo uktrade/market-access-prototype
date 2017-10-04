@@ -4,11 +4,15 @@
 {% load trans from i18n %}
 {% block css %}
 {% endblock %}
-{% block head_title %}Data Hub - Trade Barriers{% endblock %}
-{% block breadcrumb %}{% include 'backend/components/breadcrumb.html' with title="Company X v Country 1" %}{% endblock %}
+{% block head_title %}All elements - Data Hub - Trade Barriers{% endblock %}
+{% block breadcrumb %}{% include 'backend/components/breadcrumb.html' with title="All elements" %}{% endblock %}
 {% block local_header__title_before %}{% endblock %}
-{% block local_header__title %}Trade Barriers{% endblock %}
-{% block local_header__meta %}{% endblock %}
+{% block local_header__title %}All elements{% endblock %}
+{% block local_header__meta %}
+<div class="c-meta-list">
+  All elements needed in the admin area
+</div>
+{% endblock %}
 {% block local_header__progress %}{% endblock %}
 
 {% block sidebar %}
@@ -18,7 +22,7 @@
 
 {% block content %}
 
-{% include 'backend/components/form.html'% }
+{% include 'backend/components/_form.html' %}
 
 <article>
     <h2 class="heading-medium">Project value (Test D)</h2>
