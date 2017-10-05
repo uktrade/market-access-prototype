@@ -15,7 +15,9 @@ from .helpers import (
     store_companies_house_profile_in_session_and_validate,
     has_company
 )
-from .models import BarrierRecord, BarrierSource, BarrierCountry
+from .models import (
+    BarrierRecord, BarrierSource, BarrierCountry, BarrierType
+)
 from .forms import BarrierCountryForm, ReportBarrierForm
 
 from sso.utils import SSOSignUpRequiredMixin
@@ -200,6 +202,17 @@ class ReportBarrierStep2View(SessionContextMixin, TemplateView):
 class ReportBarrierStep3View(SessionContextMixin, TemplateView):
     model = BarrierRecord
     template_name = 'report-barrier-step3.html'
+    # https://django-mptt.github.io/django-mptt/tutorial.html#template
+
+    def get_context_data(self, *args, **kwargs):
+        context = super(ReportBarrierStep3View, self).get_context_data(*args, **kwargs)
+        # warning - this will need to change if we change
+        # the code of the UK barrier source
+        uk_source = BarrierSource.objects.get(short_name='UK')
+        # exclude our tariffs category for now
+        uk_barrier_types = BarrierType.objects.filter(barrier_source=uk_source).exclude(barrier_code=12)
+        context['barrier_types'] = uk_barrier_types
+        return context
 
 class ReportBarrierStep4View(SessionContextMixin, TemplateView):
     model = BarrierRecord

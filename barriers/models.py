@@ -330,8 +330,11 @@ class BarrierType(MPTTModel, AuditableModel):
         order_insertion_by = ['name']
 
     def __str__(self):
-        return str(self.barrier_source) + ':' + str(self.name)
-        # return str(self.name)
+        # return str(self.barrier_source) + ':' + str(self.name)
+        return str(self.name)
+
+    def multiselect_label(self, obj):
+        return obj.barrier_code + ': ' + obj.name
 
 class BarrierTypeMapping(AuditableModel):
     """

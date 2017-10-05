@@ -1,6 +1,7 @@
 from django.shortcuts import render
-from django.views.generic import ListView, TemplateView
-from barriers.models import BarrierReport
+from django.views.generic import ListView, TemplateView, FormView
+from barriers.models import BarrierSource, BarrierReport, BarrierType
+from .forms import ChooseBarrierTypeForm
 
 class IndexView(ListView):
     model = BarrierReport
@@ -28,10 +29,20 @@ class ReportHomeView(ListView):
     template_name = 'backend/report-home.html'
     pass
 
-class ReportBarrierTypeView(ListView):
+class ReportBarrierTypeView(FormView):
     model = BarrierReport
     template_name = 'backend/report-barrier-type.html'
-    pass
+    form_class = ChooseBarrierTypeForm
+
+    def get_context_data(self, *args, **kwargs):
+        context = super(ReportBarrierTypeView, self).get_context_data(*args, **kwargs)
+        # warning - this will need to change if we change
+        # the code of the UK barrier source
+        uk_source = BarrierSource.objects.get(short_name='UK')
+        uk_barrier_types = BarrierType.objects.filter(barrier_source=uk_source)
+        context['barrier_types'] = uk_barrier_types
+        return context
+
 
 class ReportHomeMakeADecisionView(ListView):
     model = BarrierReport
