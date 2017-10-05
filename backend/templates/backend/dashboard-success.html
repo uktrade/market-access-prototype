@@ -3,7 +3,7 @@
 {% load trans from i18n %}
 {% block css %}
 {% endblock %}
-{% block head_title %}Data Hub - Trade Barriers{% endblock %}
+{% block head_title %}Success - Data Hub - Trade Barriers{% endblock %}
 {% block breadcrumb %}{% endblock %}
 {% block local_header__title_before %}{% endblock %}
 {% block local_header__title %}Trade Barriers{% endblock %}
@@ -34,16 +34,16 @@
               </div>
 
               <div class="c-collection__filter-summary">
-                <a href="#">2 barriers: screening</a> |
-                <a href="#">117 barriers: assessment</a> |
-                <a href="#">190 barriers: resolution</a>
+                <a href="#">{{ '2' }} barriers: screening</a> |
+                <a href="#">{{ '117' }} barriers: assessment</a> |
+                <a href="#">{{ '190' }} barriers: resolution</a>
               </div>
 
             </div>
 
             <div class="c-collection__header-row">
                 <span class="c-collection__pagination-summary">
-                  Page 1 of 17
+                  Page {{ '1' }} of {{ '17' }}
                 </span>
 
                 {% include 'backend/components/sort.html' with active="false" %}
@@ -65,6 +65,5 @@
         {% include 'backend/components/pagination.html' with totalPages="17" currentPage="1" %}
 
     </article>
-
 
 {% endblock %}
