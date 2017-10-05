@@ -22,48 +22,21 @@
 
   <article class="c-collection">
 
-        <header class="c-collection__header">
-            <div class="c-collection__header-row">
+      {% include 'backend/components/dashboard-table-header.html' with totalBarriers="309" screening="2" assessment="33" resolution="109" currentPage="1" totalPages="17" %}
 
-              <div class="c-collection__header-intro">
-                  <span class="c-collection__result-count">309</span> barriers
-              </div>
+      <ol class="c-entity-list">
+        {% include 'backend/components/dashboard-result.html' with title="Company X vs Country 1" country1="Country 1" country2="Country 2" status="Screening" sector="Sector" barrier="Barrier" date="Date updated" %}
+        {% include 'backend/components/dashboard-result.html' with title="Company Y vs Country 2" country1="Country 1" country2="Country 2" status="Screening" sector="Sector" barrier="Barrier" date="Date updated" %}
+        {% include 'backend/components/dashboard-result.html' with title="Barrier name consisting of country and product at minimum" country1="Multiple countries" status="Assessment" sector="Sector" barrier="Barrier" date="Date updated" %}
+        {% include 'backend/components/dashboard-result.html' with title="Barrier name consisting of country and product at minimum" country1="Multiple countries" status="Assessment" sector="Sector" barrier="Barrier" date="Date updated" %}
+        {% include 'backend/components/dashboard-result.html' with title="Barrier name consisting of country and product at minimum" country1="Multiple countries" status="Resolution" sector="Sector" barrier="Barrier" date="Date updated" %}
+        {% include 'backend/components/dashboard-result.html' with title="Barrier name consisting of country and product at minimum" country1="Multiple countries" status="Resolution" sector="Sector" barrier="Barrier" date="Date updated" %}
+        {% include 'backend/components/dashboard-result.html' with title="Barrier name consisting of country and product at minimum" country1="Multiple countries" status="Resolution" sector="Sector" barrier="Barrier" date="Date updated" %}
+        {% include 'backend/components/dashboard-result.html' with title="Barrier name consisting of country and product at minimum" country1="Multiple countries" status="Resolution" sector="Sector" barrier="Barrier" date="Date updated" %}
+      </ol>
 
-              <div class="c-collection__header-actions">
-                <a href="{% url 'report-create-barrier' %}" class="button">Add barrier</a>
-              </div>
+      {% include 'backend/components/pagination.html' with totalPages="17" currentPage="1" %}
 
-              <div class="c-collection__filter-summary">
-                <a href="#">{{ '2' }} barriers: screening</a> |
-                <a href="#">{{ '117' }} barriers: assessment</a> |
-                <a href="#">{{ '190' }} barriers: resolution</a>
-              </div>
-
-            </div>
-
-            <div class="c-collection__header-row">
-                <span class="c-collection__pagination-summary">
-                  Page {{ '1' }} of {{ '17' }}
-                </span>
-
-                {% include 'backend/components/sort.html' with active="false" %}
-
-            </div>
-        </header>
-
-        <ol class="c-entity-list">
-          {% include 'backend/components/dashboard-result.html' with title="Company X vs Country 1" country1="Country 1" country2="Country 2" status="Screening" sector="Sector" barrier="Barrier" date="Date updated" %}
-          {% include 'backend/components/dashboard-result.html' with title="Company Y vs Country 2" country1="Country 1" country2="Country 2" status="Screening" sector="Sector" barrier="Barrier" date="Date updated" %}
-          {% include 'backend/components/dashboard-result.html' with title="Barrier name consisting of country and product at minimum" country1="Multiple countries" status="Assessment" sector="Sector" barrier="Barrier" date="Date updated" %}
-          {% include 'backend/components/dashboard-result.html' with title="Barrier name consisting of country and product at minimum" country1="Multiple countries" status="Assessment" sector="Sector" barrier="Barrier" date="Date updated" %}
-          {% include 'backend/components/dashboard-result.html' with title="Barrier name consisting of country and product at minimum" country1="Multiple countries" status="Resolution" sector="Sector" barrier="Barrier" date="Date updated" %}
-          {% include 'backend/components/dashboard-result.html' with title="Barrier name consisting of country and product at minimum" country1="Multiple countries" status="Resolution" sector="Sector" barrier="Barrier" date="Date updated" %}
-          {% include 'backend/components/dashboard-result.html' with title="Barrier name consisting of country and product at minimum" country1="Multiple countries" status="Resolution" sector="Sector" barrier="Barrier" date="Date updated" %}
-          {% include 'backend/components/dashboard-result.html' with title="Barrier name consisting of country and product at minimum" country1="Multiple countries" status="Resolution" sector="Sector" barrier="Barrier" date="Date updated" %}
-        </ol>
-
-        {% include 'backend/components/pagination.html' with totalPages="17" currentPage="1" %}
-
-    </article>
+  </article>
 
 {% endblock %}
