@@ -19,7 +19,7 @@ from .views import (
     ReportBarrierRegisterView,
     BarriersGeneralInfoView,
     BarriersCaseStudyView, BarriersCaseStudy2View, BarriersCaseStudy3View,
-    RequestFastTrackView,
+    RequestFastTrackView, FastTrackPhoneTextView,
     ExampleSummaryView,
     CompaniesHouseRequestView
 )
@@ -109,6 +109,10 @@ urlpatterns = [
     url(r'^request-fast-track',
          RequestFastTrackView.as_view(),
         name='request-fast-track'
+    ),
+    url(r'^fast-track-phone-text',
+        FastTrackPhoneTextView.as_view(),
+        name='fast-track-phone-text'
     ),
     url(r'^summary',
         ExampleSummaryView.as_view(),

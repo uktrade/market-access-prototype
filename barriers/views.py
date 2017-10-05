@@ -234,6 +234,10 @@ class RequestFastTrackView(SessionContextMixin, TemplateView):
     model = BarrierRecord
     template_name = 'request-fast-track.html'
 
+class FastTrackPhoneTextView(SessionContextMixin, TemplateView):
+    model = BarrierRecord
+    template_name = 'fast-track-phone-text.html'
+
 class ExampleSummaryView(SessionContextMixin, TemplateView):
     model = BarrierRecord
     template_name = 'example-summary.html'
