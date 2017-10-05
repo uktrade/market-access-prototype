@@ -25,10 +25,36 @@
 
 <form action="{% url 'report-home-barrier-created' %}" method="get">
 
-    <div class="c-form-actions">
-      <button class="button ">Save</button>
-      <a href="{% url 'report-create-barrier' %}">Back</a>
-    </div>
+  {# Barrier record name #}
+  <div class="form-group " id="barrier-record-name-wrapper">
+      <label class="form-label-bold" for="barrier-record-name">
+        Barrier record name
+      </label>
+      <span class="form-hint">
+        Include both the product or service name and the country being
+exported to eg. Import of steel rods into India
+      </span>
+      <input id="barrier-record-name" class="form-control" name="barrier_record_name" value="" type="text">
+  </div>
+
+  {# Summary (textarea) #}
+  <div class="form-group " id="summary-wrapper">
+      <label class="form-label-bold" for="summary">
+          Summary
+      </label>
+      <span class="form-hint">
+        Provide a brief summary of the report. It is for government use only.
+      </span>
+      <textarea id="summary" class="form-control" name="summary" cols="10" rows="5"></textarea>
+      <span class="form-hint">
+        200 characters max.
+      </span>
+  </div>
+
+  <div class="c-form-actions">
+    <button class="button ">Save</button>
+    <a href="{% url 'report-create-barrier' %}">Back</a>
+  </div>
 
 </form>
 {% endblock %}

@@ -30,12 +30,99 @@ a new record, check that no existing record matches the report.</p>
 <p>Find out more about creating a barrier record or instances of an
 existing barrier record</p>
 
+<form action="{% url 'report-new-instance' %}" method="get">
+
+  <fieldset>
+    <legend>
+      <span class="form-label-bold">
+        1) Search for an existing barrier record and create an instance
+      </span>
+    </legend>
+
+    <p>If you find an appropriate barrier you can create a new instance of it
+    from this report.</p>
+
+    <p>You don’t have to complete all fields but, enter as much detail as
+    possible to improve your search results:</p>
+
+    {# Barrier name #}
+    <div class="form-group " id="barrier-name-wrapper">
+        <label class="form-label-bold" for="barrier-name">
+            Barrier name
+        </label>
+        <input id="barrier-name" class="form-control" name="barrier_name" value="" type="text">
+    </div>
+
+    {# Company(s) involved #}
+    <div class="form-group " id="companys-involved-wrapper">
+        <label class="form-label-bold" for="companys-involved">
+            Company(s) involved
+        </label>
+        <input id="companys-involved" class="form-control" name="companys_involved" value="" type="text">
+    </div>
+
+    {# Sector #}
+    <div class="form-group " id="sector-wrapper">
+        <label class="form-label-bold" for="sector">
+            Sector
+        </label>
+        <select id="sector" class="form-control" name="sector">
+          <option></option>
+          <option value="1">Choose</option>
+        </select>
+    </div>
+
+    {# Country (select) #}
+    <div class="form-group " id="-wrapper">
+        <label class="form-label-bold" for="country">
+            Country
+        </label>
+        {# <input id="country" class="form-control" name="country" value="" type="text"> #}
+        <select id="country" class="form-control" name="country">
+          <option value=""></option>
+          {% include 'components/countries.html' %}
+        </select>
+    </div>
+
+    {# HMG barrier type (select) #}
+    <div class="form-group " id="-wrapper">
+        <label class="form-label-bold" for="hmg-barrier-type">
+            HMG barrier type
+        </label>
+        <input id="hmg-barrier-type" class="form-control" name="hmg_barrier_type" value="" type="text">
+    </div>
+
+    {# Lead facilitator #}
+    <div class="form-group " id="lead-facilitator-wrapper">
+        <label class="form-label-bold" for="lead-facilitator">
+            Lead facilitator
+        </label>
+        <input id="lead-facilitator" class="form-control" name="lead_facilitator" value="" type="text">
+    </div>
+
+    {# Submit / Actions #}
+    <div class="c-form-actions">
+      <button class="button-secondary">Search</button>
+    </div>
+
+  </fieldset>
+
+</form>
+
 <form action="{% url 'report-new-uk' %}" method="get">
 
+  <fieldset>
+    <legend>
+      <span class="form-label-bold">
+        2) Create a new barrier record
+      </span>
+    </legend>
+
     <div class="c-form-actions">
-      <button class="button ">Save</button>
-      <a href="{% url 'report-home-decision-made' %}">Back</a>
+      <button class="button">Create</button>
     </div>
+
+  </fieldset>
 
 </form>
 

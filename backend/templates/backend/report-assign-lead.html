@@ -29,10 +29,79 @@ as possible to improve your search results.</p>
 
 <form action="{% url 'report-assign-lead-search-results' %}" method="get">
 
-    <div class="c-form-actions">
-      <button class="button">Search</button>
-      <a href="{% url 'report-home-barrier-created' %}">Back</a>
-    </div>
+  {# Name #}
+  <div class="form-group " id="name-wrapper">
+      <label class="form-label-bold" for="name">
+        Name
+      </label>
+      <input id="name" class="form-control" name="name" value="" type="text">
+  </div>
+
+  {# Department #}
+  <div class="form-group " id="department-wrapper">
+      <label class="form-label-bold" for="department">
+        Department
+      </label>
+      <input id="department" class="form-control" name="department" value="" type="text">
+  </div>
+
+  {# Team #}
+  <div class="form-group " id="team-wrapper">
+      <label class="form-label-bold" for="team">
+        Team
+      </label>
+      <input id="team" class="form-control" name="team" value="" type="text">
+  </div>
+
+  {# Sector #}
+  <div class="form-group " id="sector-wrapper">
+      <label class="form-label-bold" for="sector">
+        Sector
+      </label>
+      <select id="sector" class="form-control" name="sector">
+        <option></option>
+        <option value="1">Choose</option>
+      </select>
+  </div>
+
+  {# Country #}
+  <div class="form-group " id="country-wrapper">
+      <label class="form-label-bold" for="country">
+        Country
+      </label>
+      <select id="country" class="form-control" name="country">
+        {% include 'components/countries.html' %}
+      </select>
+  </div>
+
+  {# Email address #}
+  <div class="form-group " id="email-wrapper">
+      <label class="form-label-bold" for="email">
+        Email address
+      </label>
+      <input id="email" class="form-control" name="email" value="" type="email">
+  </div>
+
+  {# Name of other similar barrier #}
+  <div class="form-group " id="other-wrapper">
+      <label class="form-label-bold" for="other">
+        Name of other similar barrier
+      </label>
+      <input id="other" class="form-control" name="other" value="" type="text">
+  </div>
+
+  {# Other details #}
+  <div class="form-group " id="other-details-wrapper">
+      <label class="form-label-bold" for="other-details">
+        Other details? (e.g. company involved in similar barrier)
+      </label>
+      <input id="other-details" class="form-control" name="other_details" value="" type="text">
+  </div>
+
+  <div class="c-form-actions">
+    <button class="button">Search</button>
+    <a href="{% url 'report-home-barrier-created' %}">Back</a>
+  </div>
 
 </form>
 
