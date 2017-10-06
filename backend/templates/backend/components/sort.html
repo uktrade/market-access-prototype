@@ -8,71 +8,40 @@
             Sort by
           </span>
       </label>
-
       <div class="c-form-group__inner">
-
-          <select id="field-sortby" name="sortby" class="c-form-control  c-form-control--light c-form-control--inline c-form-control--small  ">
-
-              <option value="created_on:desc">
+          <select id="field-sortby" name="sortby" class="c-form-control  c-form-control--light c-form-control--inline c-form-control--small">
+              <option value="created_on:desc"{% if active == 'created_on:desc' %} selected{% endif %}>
                   Newest
               </option>
-
-              <option value="created_on:asc">
+              <option value="created_on:asc"{% if active == 'created_on:asc' %} selected{% endif %}>
                   Oldest
               </option>
-
-              <option value="modified_on:desc" selected="">
+              <option value="modified_on:desc"{% if active == 'modified_on:desc' %} selected{% endif %}>
                   Recently updated
               </option>
-
-              <option value="modified_on:asc">
+              <option value="modified_on:asc"{% if active == 'modified_on:asc' %} selected{% endif %}>
                   Least recently updated
               </option>
-
-              <option value="first_name:asc">
-                  First name: A-Z
-              </option>
-
-              <option value="first_name:desc">
-                  First name: Z-A
-              </option>
-
-              <option value="last_name:asc">
-                  Last name: A-Z
-              </option>
-
-              <option value="last_name:desc">
-                  Last name: Z-A
-              </option>
-
-              <option value="address_country.name:asc">
+              <option value="address_country.name:asc"{% if active == 'address_country.name:asc' %} selected{% endif %}>
                   Country: A-Z
               </option>
-
-              <option value="address_country.name:desc">
+              <option value="address_country.name:desc"{% if active == 'address_country.name:desc' %} selected{% endif %}>
                   Country: Z-A
-              </option>
-
-              <option value="company.name:asc">
+              </option
+              <option value="company.name:asc"{% if active == 'company.name:asc' %} selected{% endif %}>
                   Company: A-Z
               </option>
-
-              <option value="company.name:desc">
+              <option value="company.name:desc"{% if active == 'company.name:desc' %} selected{% endif %}>
                   Company: Z-A
               </option>
-
-              <option value="company_sector.name:asc">
+              <option value="company_sector.name:asc"{% if active == 'company_sector.name:asc' %} selected{% endif %}>
                   Sector: A-Z
               </option>
-
-              <option value="company_sector.name:desc">
+              <option value="company_sector.name:desc"{% if active == 'company_sector.name:desc' %} selected{% endif %}>
                   Sector: Z-A
               </option>
-
           </select>
-
       </div>
-
   </div>
 
 </form>

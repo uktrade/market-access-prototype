@@ -3123,11 +3123,19 @@ select.c-form-control {
     appearance: none;
     background: #fff url(/static/govuk-0.18.0/assets/images/icon-triangle.svg) no-repeat right 8px top 50%;
     background-size: .8em;
-    padding-right: 32px
+    padding-right: 32px;
+    max-width: 100%;
 }
 select.c-form-control::-ms-expand {
     display: none
 }
+
+select.c-form-control[multiple]{
+  background-image: none;
+  min-height: 5em;
+  padding-right: 10px;
+}
+
 @media (min-width: 0\0) and (min-resolution: 0.001dpcm) {
     select.c-form-control {
         background-image: none;

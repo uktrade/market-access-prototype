@@ -1,0 +1,28 @@
+<header class="c-collection__header">
+  <div class="c-collection__header-row">
+
+    <div class="c-collection__header-intro">
+        <span class="c-collection__result-count">{{ totalBarriers }}</span> barriers
+    </div>
+
+    <div class="c-collection__header-actions">
+      <a href="{% url 'report-create-barrier' %}" class="button">Add barrier</a>
+    </div>
+
+    <div class="c-collection__filter-summary">
+      <a href="javascript:void;">{{ screening }} barriers: screening</a> |
+      <a href="javascript:void;">{{ assessment }} barriers: assessment</a> |
+      <a href="javascript:void;">{{ resolution }} barriers: resolution</a>
+    </div>
+
+  </div>
+
+  <div class="c-collection__header-row">
+      <span class="c-collection__pagination-summary">
+        Page {{ currentPage }} of {{ totalPages }}
+      </span>
+
+      {% include 'backend/components/sort.html' with active="address_country.name:asc" %}
+
+  </div>
+</header>
