@@ -3,7 +3,7 @@
 {% load trans from i18n %}
 {% block css %}
 {% endblock %}
-{% block head_title %}{% trans "Trade Barrier Detail" %}{% endblock %}
+{% block head_title %}{% trans "Trade barrier detail" %}{% endblock %}
 {% block sub_header %}{# prevent the subheader from showing on form pages #}{% endblock %}
 {% block hero_title %}
 Get seen by motivated overseas buyers
@@ -17,21 +17,21 @@ tr-home
   <div class="outer-container">
     <div class="dit-breadcrumb grid-container grid-container--inner">
         <div class="column-full flush--bottom">
-          <a href="https://www.great.gov.uk/">Great.gov.uk</a> <span aria-hidden="true">></span> <a href="/">Trade Barriers</a> <span aria-hidden="true">></span> <a href="{% url 'barriers-by-country' country="Spain" %}">{% trans "Existing Trade Barriers in Spain" %}</a> <span aria-hidden="true">></span> <strong>{% trans "Trade Barrier Detail" %}</strong>
+          <a href="https://www.great.gov.uk/">Great.gov.uk</a> <span aria-hidden="true">></span> <a href="/">Trade Earriers</a> <span aria-hidden="true">></span> <a href="{% url 'barriers-by-country' country="Spain" %}">{% trans "Existing trade barriers in Spain" %}</a> <span aria-hidden="true">></span> <strong>{% trans "Trade barrier detail" %}</strong>
         </div>
     </div>
   </div>
   <div class="outer-container">
     <div class="grid-container grid-container--inner">
       <div class="column-full">
-        <h1 class="h3">{% trans "Trade Barrier Detail" %}</h1>
+        <h1 class="h3">{% trans "Trade barrier detail" %}</h1>
       </div>
       <div class="column-two-third">
           <h2 id="barrier-title">{{ object.title }}</h2>
           <p>WTO Symbol: <a href="{{ object.wto_link }}">{{ object.wto_symbol }}</a></p>
-          <p>Barrier Type: {{ object.mab_type }}</p>
-          <p>Notifying Member: {{ object.notifying_member }}</p>
-          <p>Distribution Date: {{ object.distribution_date }}</p>
+          <p>Barrier type: {{ object.mab_type }}</p>
+          <p>Notifying member: {{ object.notifying_member }}</p>
+          <p>Distribution date: {{ object.distribution_date }}</p>
           <p>{{ object.description }}</p>
           <ul>
               <li>Products affected: {{ object.products_text }}</li>
