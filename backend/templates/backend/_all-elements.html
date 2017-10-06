@@ -16,7 +16,8 @@
 {% block local_header__progress %}{% endblock %}
 
 {% block sidebar %}
-  {% include 'backend/components/sidebar-nav.html' with nav="lead" extraNav="true" %}
+  {% include 'backend/components/sidebar-nav--screening.html' with nav="lead" extraNav="true" %}
+  {% include 'backend/components/sidebar-nav--assess.html' with nav="lead" extraNav="true" %}
   {% include 'backend/components/sidebar-filters.html' %}
 {% endblock %}
 
