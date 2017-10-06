@@ -28,8 +28,13 @@ role.</p>
 
 <form action="{% url 'invite-lead-time-passes' %}" method="get">
 
+  <style scoped>
+    .table-search .block-label {
+      min-height: 35px;
+    }
+  </style>
 
-  <table class="table--key-value table--striped">
+  <table class="table--key-value table--striped table-search">
     <thead>
       <tr>
         <th scope="col" colspan="2">1) DIT people finder results</th>
@@ -43,6 +48,59 @@ role.</p>
     </tbody>
   </table>
 
+  <div class="c-form-actions">
+    <button class="button">Invite</button>
+    <a href="{% url 'report-assign-lead' %}">Back</a>
+  </div>
+
+</form>
+
+<form action="{% url 'invite-lead-time-passes' %}" method="get">
+
+  <style scoped>
+    .table-search .block-label {
+      min-height: 35px;
+    }
+  </style>
+
+  <table class="table--key-value table--striped table-search">
+    <thead>
+      <tr>
+        <th scope="col" colspan="2">2) Barrier record results</th>
+        <th scope="col" colspan="2">Invite</th>
+      </tr>
+    </thead>
+    <tbody>
+        {% include 'backend/components/person-result.html' with id="1" name="Firstname Lastname" department="Department A" %}
+    </tbody>
+  </table>
+
+  <div class="c-form-actions">
+    <button class="button">Invite</button>
+    <a href="{% url 'report-assign-lead' %}">Back</a>
+  </div>
+
+</form>
+
+<form action="{% url 'report-assign-lead' %}" method="get">
+
+  <label class="form-label-bold">3) Couldn’t find the right person?</label>
+
+  <div class="c-form-actions">
+    <button class="button">Search again</button>
+    <a href="{% url 'report-assign-lead' %}">Back</a>
+  </div>
+
+</form>
+
+
+
+<form action="{% url 'invite-lead-time-passes' %}" method="get">
+
+  <div class="form-group " id="email-wrapper">
+      <label class="form-label" for="email">or enter their email address below if you know it:</label>
+      <input id="email" class="form-control" name="email" value="" type="email">
+  </div>
 
   <div class="c-form-actions">
     <button class="button">Invite</button>

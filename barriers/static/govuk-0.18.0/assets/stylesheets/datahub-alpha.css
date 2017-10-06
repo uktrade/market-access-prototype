@@ -1024,6 +1024,11 @@ main {
         margin-bottom: .83333em
     }
 }
+
+article > .heading-medium:first-child{
+  margin-top: 0;
+}
+
 .heading-small {
     font-family: nta, Arial, sans-serif;
     font-weight: 700;
@@ -4750,11 +4755,15 @@ span.phase-badge {
     padding-top: 8px
 }
 .flash {
+    margin-bottom: 20px;
     padding: 15px 20px
 }
 .flash.flash--info {
     background-color: #e5eef6;
     border-left: 8px solid #005ea5
+}
+.flash > p:last-of-type{
+    margin-bottom: 0;
 }
 .stack-trace {
     margin-bottom: 32px;

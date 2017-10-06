@@ -22,8 +22,18 @@
 
 {% block content %}
 <h2 class="heading-medium">Go to assessment</h2>
+<p>Edit the message below and then click Proceed to start the assessment of the barrier.</p>
+<p>The invitee will receive your message below and a summary of the barrier. </p>
 
 <form action="{% url 'dashboard-success' %}" method="get">
+
+    {# Message #}
+    <div class="form-group " id="message-wrapper">
+        <label class="form-label-bold visually-hidden" for="message">
+          Enter message
+        </label>
+        <textarea id="message" class="form-control" name="message" rows="5" cols="10">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sit amet lacus tellus. Fusce ac massa ac arcu laoreet dictum in ut sapien. Aliquam congue dolor congue, malesuada nisl id, rutrum lectus. Sed non bibendum neque. Donec ullamcorper congue elementum. Aliquam maximus nibh a mauris dapibus, sit amet semper elit pharetra. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Pellentesque tempor posuere magna a ornare. Duis dapibus in tortor ac varius. Donec varius turpis ac sem interdum, et convallis justo placerat. Proin sodales nunc et justo venenatis auctor. </textarea>
+    </div>
 
     <div class="c-form-actions">
       <button class="button" type="submit">Proceed</button>
