@@ -43,6 +43,10 @@ textarea{
   padding: 15px;
 }
 
+.form-hint{
+  font-size: 100%;
+}
+
 .error-message--global[aria-hidden="false"]{
   margin-bottom: 40px;
 }
@@ -181,6 +185,7 @@ main a:hover{
   cursor: pointer;
   display: block;
   font-size: 14px;
+  line-height: 1;
   padding: 10px 5px;
 }
 
@@ -716,27 +721,53 @@ main a:hover{
  */
 .dit-number-list{
   counter-reset: list;
-  margin: 10px 0 30px;
+  margin: 20px 0 30px;
 }
 
 .dit-number-list li{
   counter-increment: list;
   font-size: 14px;
   margin-bottom: 15px;
+  min-height: 45px;
+  padding-left: 60px;
+  position: relative;
 }
 
 .dit-number-list li::before{
-  border: 5px solid #1e1348;
+  border: 3px solid #1e1348;
   border-radius: 50%;
   color: #ccc;
   content: counter(list);
-  display: inline-block;
-  font-size: 30px;
-  height: 55px;
-  line-height: 55px;
-  margin-right: 15px;
+  display: block;
+  font-size: 20px;
+  height: 40px;
+  left: 0;
+  line-height: 40px;
+  position: absolute;
   text-align: center;
-  width: 55px;
+  top: -10px;
+  width: 40px;
+}
+
+@media screen and (min-width: 768px){
+  .dit-number-list{
+    margin-top: 40px;
+  }
+
+  .dit-number-list li{
+    min-height: 65px;
+    padding-left: 85px;
+  }
+
+  .dit-number-list li::before{
+    border-width: 5px;
+    font-size: 30px;
+    height: 55px;
+    line-height: 55px;
+    margin-right: 15px;
+    top: -15px;
+    width: 55px;
+  }
 }
 
 
@@ -860,7 +891,6 @@ If you have 2 sets of tabs on the same page e.g.
 	border: none;
 	border-radius: none;
 	color: currentColor;
-	cursor: pointer;
 	display: block;
 	margin: 0;
 	padding: 12px 45px 12px 0;
@@ -897,7 +927,7 @@ If you have 2 sets of tabs on the same page e.g.
 
 @media screen and (min-width: 1024px){
   .dit-accordion__title-wording{
-    padding-right: 140px;
+    padding-right: 40px;
   }
 }
 
@@ -916,7 +946,6 @@ If you have 2 sets of tabs on the same page e.g.
 
 @media screen and (min-width: 1024px){
   .dit-accordion__btn{
-    right: 140px;
     top: 10px;
   }
 }
