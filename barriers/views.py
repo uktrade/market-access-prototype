@@ -46,7 +46,8 @@ class ReportBarrierView(FormView):
     def get(self, request, *args, **kwargs):
         # we're reporting a new barrier, so clear
         # any existing barriers from the session
-        del request.session['existingbarrier']
+        if 'existingbarrier' in request.session:
+            del request.session['existingbarrier']
         return super(ReportBarrierView, self).get(request, *args, **kwargs)
 
     def get_success_url(self, **kwargs):
