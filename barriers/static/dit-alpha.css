@@ -510,14 +510,14 @@ main a:hover{
 
 @media screen and (min-width: 768px){
   .dit-inline-form-fields{
-    align-items: end;
+    align-items: flex-end;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
   }
 
   .dit-input-field{
-    margin-bottom: 0;
+    margin-bottom: 15px;
     width: 30%;
     width: calc(33.33% - 30px);
   }
@@ -536,6 +536,7 @@ main a:hover{
     }
 
     .dit-input-field{
+      margin-bottom: 0;
       width: auto;
     }
 
