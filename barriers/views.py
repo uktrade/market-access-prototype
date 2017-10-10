@@ -205,17 +205,22 @@ class BarrierDetailStaticView(DetailView):
     model = BarrierRecord
     template_name = 'barrier-detail-static.html'
 
-class BarrierExtraDetailView(SessionContextMixin, TemplateView):
-    model = BarrierRecord
-    template_name = 'barrier-extra-detail.html'
+class BarrierTypeDetailView(SessionContextMixin, DetailView):
+    model = BarrierType
+    template_name = 'barrier-type-detail.html'
 
 class BarrierSubscribeView(SessionContextMixin, TemplateView):
     model = BarrierRecord
     template_name = 'barrier-subscribe.html'
 
-class BarriersGeneralInfoView(SessionContextMixin, TemplateView):
-    model = BarrierRecord
+class BarriersGeneralInfoView(SessionContextMixin, ListView):
+    model = BarrierType
     template_name = 'barriers-general-info.html'
+
+    def get_queryset(self):
+        # All UK Barrier Types excluding the "Other" category
+        uk_source = BarrierSource.objects.get(short_name='UK')
+        return BarrierType.objects.filter(barrier_source=uk_source).exclude(pk=122)
 
 class BarriersCaseStudyView(SessionContextMixin, TemplateView):
     model = BarrierRecord

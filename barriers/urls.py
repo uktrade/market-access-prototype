@@ -14,7 +14,7 @@ from .views import (
     HomeView,
     BarriersCheckResultsView,
     ReportBarrierView, ReportBarrierExistingView, ReportBarrierShowCurrentBarriersView, ReportBarrierFormView,
-    BarrierDetailView, BarrierDetailStaticView, BarrierExtraDetailView, BarrierSubscribeView,
+    BarrierDetailView, BarrierDetailStaticView, BarrierTypeDetailView, BarrierSubscribeView,
     ReportBarrierStep1View, ReportBarrierStep2View, ReportBarrierStep3View,
     ReportBarrierStep4View, ReportBarrierStep5View, ReportBarrierStep6View,
     ReportBarrierRegisterView,
@@ -39,13 +39,13 @@ urlpatterns = [
         BarrierSubscribeView.as_view(),
         name='barrier-subscribe'
     ),
-    url(r'^barriers/(?P<pk>[\d]+)/detail',
+    url(r'^barriers/(?P<pk>\d+)/detail',
         BarrierDetailStaticView.as_view(),
         name='barrier-detail-static'
     ),
-    url(r'^barriers/extra-detail',
-        BarrierExtraDetailView.as_view(),
-        name='barrier-extra-detail'
+    url(r'^barriers/types/(?P<pk>\d+)/',
+        BarrierTypeDetailView.as_view(),
+        name='barrier-type-detail'
     ),
     url(r'^barriers/(?P<pk>\w+)/report',
         ReportBarrierExistingView.as_view(),
