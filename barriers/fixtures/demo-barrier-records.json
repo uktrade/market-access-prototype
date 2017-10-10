@@ -1,0 +1,80 @@
+[
+{
+    "model": "barriers.barrierrecord",
+    "pk": 1,
+    "fields": {
+        "created_date": "2017-10-09T18:00:11.029Z",
+        "updated_date": "2017-10-09T18:01:21.825Z",
+        "is_deleted": false,
+        "status": "Assessment",
+        "title": "Photo voltaic panels",
+        "summary": "Consignments of photo voltaic panels from EU countries are being subject to particularly rigorous document inspection procedures at all ports of entry to the US. Onward transport has been delayed at San Francisco, New York, Delaware and Houston.",
+        "description": "Consignments of photo voltaic panels from EU countries are being subject to particularly rigorous document inspection procedures at all ports of entry to the US. Onward transport has been delayed at San Francisco, New York, Delaware and Houston.\r\n\r\nWhile no reason has been given for this, it seems likely that officials are concerned about the possibility of products sourced in China being exported under an EU flag. In particular, officials are paying particular attention to document GB34, which lists the components in each product and their countries of origin. Any consignment with this document not fully completed and attested are at risk of severe delay.",
+        "products_text": "",
+        "sectors_text": "Energy equipment",
+        "country": 69,
+        "barrier_source": 1,
+        "source_id": null,
+        "uk_reference_code": "3425A",
+        "distribution_date": "2017-09-01",
+        "external_link": "",
+        "companies_affected": "Confidential, information available on request only",
+        "actions_taken": "None at present",
+        "barrier_types": [
+            93
+        ]
+    }
+},
+{
+    "model": "barriers.barrierrecord",
+    "pk": 2,
+    "fields": {
+        "created_date": "2017-10-09T18:04:41.460Z",
+        "updated_date": "2017-10-09T18:04:41.460Z",
+        "is_deleted": false,
+        "status": "Assessment",
+        "title": "Wind propellers held up in Texas",
+        "summary": "The Wind Technology Consortium is reporting a number of attempts by officials in Houston and Austin to impose local regulations on consignments of wind propellers from the UK. They are claiming that propellers with a span of more than 30 metres pose unacceptable risks to local wildlife.",
+        "description": "The Wind Technology Consortium is reporting a number of attempts by officials in Houston and Austin to impose local regulations on consignments of wind propellers from the UK. They are claiming that propellers with a span of more than 30 metres pose unacceptable risks to local wildlife.",
+        "products_text": "",
+        "sectors_text": "Energy equipment",
+        "country": 69,
+        "barrier_source": 1,
+        "source_id": null,
+        "uk_reference_code": "7645F",
+        "distribution_date": "2017-09-09",
+        "external_link": "",
+        "companies_affected": "",
+        "actions_taken": "None at present.",
+        "barrier_types": [
+            105
+        ]
+    }
+},
+{
+    "model": "barriers.barrierrecord",
+    "pk": 3,
+    "fields": {
+        "created_date": "2017-10-09T18:41:38.578Z",
+        "updated_date": "2017-10-09T18:41:38.578Z",
+        "is_deleted": false,
+        "status": "Assessment",
+        "title": "Heat pumps subject to punitive tariff",
+        "summary": "British company Energise has reported that a batch of its heat pumps has been subject to an import tariff of 50% by officials in Salt Lake City, Utah. They are claiming that this is a legitimate interpretation of the recent Utah State regulation restricting green energy installations to locally based companies.",
+        "description": "British company Energise has reported that a batch of its heat pumps has been subject to an import tariff of 50% by officials in Salt Lake City, Utah. They are claiming that this is a legitimate interpretation of the recent Utah State regulation restricting green energy installations to locally based companies.",
+        "products_text": "",
+        "sectors_text": "Energy equipment",
+        "country": 69,
+        "barrier_source": 1,
+        "source_id": null,
+        "uk_reference_code": "61784J",
+        "distribution_date": "2017-10-09",
+        "external_link": "",
+        "companies_affected": "",
+        "actions_taken": "None at present.",
+        "barrier_types": [
+            106
+        ]
+    }
+}
+]
