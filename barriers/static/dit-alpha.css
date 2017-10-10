@@ -48,6 +48,7 @@ textarea{
   width: 75%;
 }
 
+legend .form-label,
 .form-label .form-hint{
   width: 100%;
 }
