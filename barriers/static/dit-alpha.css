@@ -45,6 +45,11 @@ textarea{
 
 .form-hint{
   font-size: 100%;
+  width: 75%;
+}
+
+.form-label .form-hint{
+  width: 100%;
 }
 
 .error-message--global[aria-hidden="false"]{
