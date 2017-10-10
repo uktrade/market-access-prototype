@@ -3,7 +3,7 @@
 
     <div class="dit-summary-section dit-accordion" style="border:none;">
       <div class="h4">
-        <a href="url 'barrier-detail-static' pk=barrier.pk" id="wto-title-{{ barrier.pk }}">{{ barrier.title }}</a><br>
+        <a href="{% url 'barrier-detail-static' pk=barrier.pk %}" id="wto-title-{{ barrier.pk }}">{{ barrier.title }}</a><br>
         <span class="font-small">Country: {{ barrier.country }}</span>
       </div>
     </div>
