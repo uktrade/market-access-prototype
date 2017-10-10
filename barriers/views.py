@@ -146,7 +146,7 @@ class CheckBarriersResultsView(ListView):
         self.uk_source = BarrierSource.objects.get(short_name='UK')
         #self.wto_source = BarrierSource.objects.get(short_name='WTO')
         self.ec_source = BarrierSource.objects.get(short_name='EC MADB')
-        return super(BarriersCheckResultsView, self).__init__(*args, **kwargs)
+        return super(CheckBarriersResultsView, self).__init__(*args, **kwargs)
 
     def dispatch(self, request, *args, **kwargs):
         self.country_search_text = request.GET.get('countries', None)
@@ -154,7 +154,7 @@ class CheckBarriersResultsView(ListView):
         self.sector_search_text = request.GET.get('sectors', None)
         self.commoditycode_search_text = request.GET.get('commoditycodes', None)
         self.uk_barriers_page_number = kwargs.get('page', 1)
-        return super(BarriersCheckResultsView, self).dispatch(request, *args, **kwargs)
+        return super(CheckBarriersResultsView, self).dispatch(request, *args, **kwargs)
 
     def get_queryset(self, *args, **kwargs):
         self.uk_barriers = BarrierRecord.objects.all()  # BarrierRecord doesn't have a source
@@ -174,7 +174,7 @@ class CheckBarriersResultsView(ListView):
         return self.uk_barriers
 
     def get_context_data(self, **kwargs):
-        context_data =  super(BarriersCheckResultsView, self).get_context_data(**kwargs)
+        context_data =  super(CheckBarriersResultsView, self).get_context_data(**kwargs)
         context_data['country'] = self.country_text
         # uk_barriers will be created by default
         context_data['ec_barriers'] = Paginator(self.ec_barriers, self.EC_BARRIERS_PAGE_SIZE).page(1)
