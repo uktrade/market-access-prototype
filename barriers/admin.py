@@ -36,7 +36,17 @@ class BarrierNotificationAdmin(admin.ModelAdmin):
         'pk', 'barrier_source', 'barrier_symbol',
         'title', 'country', 'distribution_date'
     )
-    pass
+    # fields to filter by on list page
+    list_filter = (
+        'barrier_source',
+        ('barrier_types', TreeRelatedFieldListFilter),
+        'country', 
+    )
+    # enables search in the admin
+    search_fields = [
+        'core_symbol', 'barrier_symbol', 'title',
+        'country', 'notification_type', 
+    ]
 
 
 class BarrierReportAdmin(admin.ModelAdmin):

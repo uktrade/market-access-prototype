@@ -4,39 +4,39 @@
                 <div class="dit-summary-section dit-accordion" style="border:none;">
                   <button type="button"
     								class="dit-accordion__title h4"
-    								id="accordion-button-{{ id }}"
+    								id="accordion-button-{{ barrier.pk }}"
     								aria-selected="false"
     								role="tab"
     								tabindex="0"
-    								aria-controls="accordion{{ id }}"
+    								aria-controls="accordion{{ barrier.pk }}"
     								aria-expanded="false"
     						   >
-    						   <span class="dit-accordion__title-wording">{{ title }}</span><br>
-                    <span class="font-small dit-accordion__toggle--show">Country: {{ country }}</span>
+    						   <span class="dit-accordion__title-wording">{{ barrier.title }}</span><br>
+                    <span class="font-small dit-accordion__toggle--show">Country: {{ barrier.country }}</span>
     								<span class="dit-accordion__btn" aria-hidden="true">
     									<span class="dit-accordion__toggle--show">+</span>
     									<span class="dit-accordion__toggle--hide">-</span>
     								</span>
                   </button>
                   <div
-    								id="accordion{{ id }}"
+    								id="accordion{{ barrier.pk }}"
     								class="dit-accordion__body"
-    								aria-labelledby="accordion-button-{{ id }}"
+    								aria-labelledby="accordion-button-{{ barrier.pk }}"
     								aria-hidden="true"
     								role="tabpanel"
     							>
       							<div class="dit-accordion__inner">
-                      <p>Country: {{ country }}<br>
-                        Sector: {{ sector }}<br>
-                        Barrier type: {{ barrier }}</p>
+                      <p>Country: {{ barrier.country }}<br>
+                        Sector: {{ barrier.sectors_text }}<br>
+                        Barrier type: {% for type in barrier.barrier_types.all %}{{type}}{% endfor %}</p>
 
-                      <p>{{ summary }} </p>
-                      <p><a href="{% url 'barrier-detail-static' %}" aria-labelledby="accordion-button-{{ id }}">More detail</a></p>
+                      <p>{{ barrier.summary }} </p>
+                      <p><a href="{% url 'barrier-detail-static' pk=barrier.pk %}" aria-labelledby="accordion-button-{{ barrier.pk }}">More detail</a></p>
       							</div>
                 </div>
                 </div>
               </div>
               <div class="column-one-third">
-                <a href="{% url 'report-barrier-existing' %}" class="button button-red" aria-labelledby="accordion-button-{{ id }}">This barrier is affecting me</a>
+                <a href="{% url 'report-barrier-existing' pk=barrier.pk %}" class="button button-red" aria-labelledby="accordion-button-{{ barrier.pk }}">This barrier is affecting me</a>
               </div>
             </li>

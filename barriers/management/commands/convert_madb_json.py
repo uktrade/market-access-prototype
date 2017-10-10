@@ -11,10 +11,13 @@ import csv
 import datetime
 import json
 import pprint
+
 from django.utils.html import strip_tags
 
 import sys
-from barriers.models import BarrierCountry, BarrierType, BarrierTypeMapping
+from barriers.models import (
+    BarrierRecord, BarrierCountry, BarrierType, BarrierTypeMapping
+)
 from django.core.exceptions import MultipleObjectsReturned
 
 DEBUG = False
@@ -22,11 +25,11 @@ DEBUG = False
 DEFAULT_INITIAL_PK = 1
 
 from django.core.management.base import BaseCommand, CommandError
-from barriers.models import BarrierCountry, BarrierRecord, BarrierType
+from barriers.models import BarrierCountry, BarrierNotification, BarrierType
 
 class Command(BaseCommand):
     help = ('Convert EC MADB JSON file into '
-            'Django fixture file format.')
+            'our notification fixture file format.')
 
     match_countries = {}
     barrier_types_by_ec_measure = {}
@@ -63,6 +66,11 @@ class Command(BaseCommand):
             self.match_countries[official_name_without_the] = country
             self.countries_list.append(country.name)
         return self.countries_list
+
+    def strip_tags(self, text):
+        stripped_text = strip_tags(text)
+        # also turn &nbsp; into " "
+        return stripped_text        
 
     def get_matching_country(self, lookup_country):
         return self.match_countries[lookup_country]
@@ -116,8 +124,7 @@ class Command(BaseCommand):
         countries = self.get_countries_list()
         # barrier_types = self.get_barrier_types()
         with open(options['filename'], mode='r') as file:
-            record_pk = options['recordstartpk']
-            notification_pk = options['notificationstartpk']
+            pk = options['startpk']
             madbdatarows = json.load(file)
             # madbdatarows = madbdata['publicBarriers']
             for row in madbdatarows:
@@ -172,10 +179,10 @@ class Command(BaseCommand):
                     external_link += ('barriers_details.htm?barrier_id={}'
                                     .format(row['barrierId']))
                 if row['barrierStatus'] == 'Active':
-                    barrier_status = BarrierRecord.BARRIER_RECORD_STATUS_ACTIVE
+                    barrier_status = BarrierNotification.BARRIER_NOTIFICATION_STATUS_ACTIVE
                 barrier_record_dict = {
                     'pk': pk,
-                    'model': 'barriers.BarrierRecord',
+                    'model': 'barriers.BarrierNotification',
                     'fields': {
                         'created_date': datetime.datetime.now().strftime("%Y-%m-%d"),
                         'updated_date': datetime.datetime.now().strftime("%Y-%m-%d"),
@@ -186,7 +193,7 @@ class Command(BaseCommand):
                         'country': country.pk,
                         'barrier_types': barrier_types,
                         'title': row['title'],
-                        'description': strip_tags(row['description']),
+                        'description': self.strip_tags(row['description']),
                         'distribution_date': self.convert_ddmonyyyy_date(row['reportedDate']),
                         'products_text': products_text,
                         'product_codes': product_codes,
@@ -201,4 +208,4 @@ class Command(BaseCommand):
                 pk += 1
                 barrier_record_rows.append(barrier_record_dict)
 
-        print(json.dumps(output_rows, indent=4))
+        print(json.dumps(barrier_record_rows, indent=4))

@@ -3,12 +3,12 @@
 
     <div class="dit-summary-section dit-accordion" style="border:none;">
       <div class="h4">
-        <a href="{% url 'barrier-detail-static' %}" id="wto-title-{{ id }}">{{ title }}</a><br>
-        <span class="font-small">Country: {{ country }}</span>
+        <a href="url 'barrier-detail-static' pk=barrier.pk" id="wto-title-{{ barrier.pk }}">{{ barrier.title }}</a><br>
+        <span class="font-small">Country: {{ barrier.country }}</span>
       </div>
     </div>
   </div>
   <div class="column-one-third">
-    <a href="{% url 'report-barrier-existing' %}" class="button button-red" aria-labelledby="wto-title-{{ id }}">This barrier is affecting me</a>
+    <a href="{% url 'report-notification-existing' pk=barrier.pk %}" class="button button-red" aria-labelledby="wto-title-{{ barrier.pk }}">This barrier is affecting me</a>
   </div>
 </li>

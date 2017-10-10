@@ -12,8 +12,9 @@ from django.conf.urls import url  # , include
 
 from .views import (
     HomeView,
+    BarriersCheckResultsView,
     ReportBarrierView, ReportBarrierExistingView, ReportBarrierShowCurrentBarriersView, ReportBarrierFormView,
-    BarrierDetailView, BarrierDetailStaticView, BarrierExtraDetailView, BarrierSubscribeView, BarriersByCountryView,
+    BarrierDetailView, BarrierDetailStaticView, BarrierExtraDetailView, BarrierSubscribeView,
     ReportBarrierStep1View, ReportBarrierStep2View, ReportBarrierStep3View,
     ReportBarrierStep4View, ReportBarrierStep5View, ReportBarrierStep6View,
     ReportBarrierRegisterView,
@@ -26,21 +27,29 @@ from .views import (
 
 urlpatterns = [
     url(r'^$', HomeView.as_view(), name='home'),
-    url(r'^barriers/countries/(?P<country>[\w ]+)',
-        BarriersByCountryView.as_view(),
-        name='barriers-by-country'
+    #url(r'^barriers/check/form',
+    #    BarriersCheckFormView.as_view(),
+    #    name='barriers-check-form'
+    #),
+    url(r'^barriers/check/results',
+        BarriersCheckResultsView.as_view(),
+        name='barriers-check-results'
     ),
     url(r'^barrier/subscribe',
         BarrierSubscribeView.as_view(),
         name='barrier-subscribe'
     ),
-    url(r'^barriers/detail',
+    url(r'^barriers/(?P<pk>[\d]+)/detail',
         BarrierDetailStaticView.as_view(),
         name='barrier-detail-static'
     ),
     url(r'^barriers/extra-detail',
         BarrierExtraDetailView.as_view(),
         name='barrier-extra-detail'
+    ),
+    url(r'^barriers/(?P<pk>\w+)/report',
+        ReportBarrierExistingView.as_view(),
+        name='report-barrier-existing'
     ),
     url(r'^barriers/(?P<pk>\d+)',
         BarrierDetailView.as_view(),
@@ -98,12 +107,12 @@ urlpatterns = [
         ReportBarrierFormView.as_view(),
         name='report-barrier-form'
     ),
-    url(r'^report-existing',
+    url(r'^barriers/notifications/(?P<pk>\w+)/report',
         ReportBarrierExistingView.as_view(),
-        name='report-barrier-existing'
+        name='report-notification-existing'
     ),
     url(r'^report',
-         ReportBarrierView.as_view(),
+        ReportBarrierView.as_view(),
         name='report-barrier'
     ),
     url(r'^request-fast-track',

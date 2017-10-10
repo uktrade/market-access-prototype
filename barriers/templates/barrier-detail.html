@@ -17,7 +17,7 @@ tr-home
   <div class="outer-container">
     <div class="dit-breadcrumb grid-container grid-container--inner">
         <div class="column-full flush--bottom">
-          <a href="https://www.great.gov.uk/">Great.gov.uk</a> <span aria-hidden="true">></span> <a href="/">Trade Earriers</a> <span aria-hidden="true">></span> <a href="{% url 'barriers-by-country' country="Spain" %}">{% trans "Existing trade barriers in Spain" %}</a> <span aria-hidden="true">></span> <strong>{% trans "Trade barrier detail" %}</strong>
+          <a href="https://www.great.gov.uk/">Great.gov.uk</a> <span aria-hidden="true">></span> <a href="/">Trade Earriers</a> <span aria-hidden="true">></span> <a href="{% url 'barriers-check-results' %}">{% trans "Existing trade barriers" %}</a> <span aria-hidden="true">></span> <strong>{% trans "Trade barrier detail" %}</strong>
         </div>
     </div>
   </div>
@@ -28,23 +28,19 @@ tr-home
       </div>
       <div class="column-two-third">
           <h2 id="barrier-title">{{ object.title }}</h2>
-          <p>WTO Symbol: <a href="{{ object.wto_link }}">{{ object.wto_symbol }}</a></p>
-          <p>Barrier type: {{ object.mab_type }}</p>
-          <p>Notifying member: {{ object.notifying_member }}</p>
+          <p>Barrier type: {% for type in object.barrier_types.all %}{{ type }}{% endfor %}</p>
+          <p>Country: {{ object.country }}</p>
           <p>Distribution date: {{ object.distribution_date }}</p>
           <p>{{ object.description }}</p>
+            {% if object.products_text %}
           <ul>
               <li>Products affected: {{ object.products_text }}</li>
-              <li>Objectives: {{ object.objectives }}</li>
-              <li>Regions affected (according to reporting country): {{ object.regions_affected }}</li>
-              <li>Comments due date: {{ object.comments_due_date }}</li>
-              <li>Notification type: {{ object.notification_type }}</li>
-              <li>Documents: {{ object.document_link }}</li>
           </ul>
-          <p><a href="{% url 'barriers-by-country' country=object.notifying_member %}" class="button button-white button-border">Back to search results</a></p>
+            {% endif %}
+          <p><a href="{% url 'barriers-check-results' %}" class="button button-white button-border">Back to search results</a></p>
       </div>
       <div class="column-one-third">
-          <p><a href="{% url 'report-barrier-existing' %}" class="button button-red" aria-labelledby="barrier-title">This barrier is affecting me</a></p>
+          <p><a href="{% url 'report-barrier-existing' pk=object.pk %}" class="button button-red" aria-labelledby="barrier-title">This barrier is affecting me</a></p>
       </div>
     </div>
   </div>

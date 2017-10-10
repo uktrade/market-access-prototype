@@ -35,14 +35,26 @@ tr-home
 
         <h3 class="h4 push--top"><strong>Barriers affecting UK exporters</strong></h3>
         <ul class="" data-module="Accordion">
-          {% include 'components/barrier-detail-accordion.html' with id=1 title="Photo voltaic panels" country="United States" sector="Energy equipment" barrier="Burdensome customs procedures" summary="Consignments of photo voltaic panels from EU countries are being subject to particularly rigorous document inspection procedures at all ports of entry to the US. " %}
-          {% include 'components/barrier-detail-accordion.html' with id=2 title="Wind propellers held up in Texas" country="United States" sector="Energy equipment" barrier="Unreasonable sanitary and phytosanitary measures" summary="The Wind Technology Consortium is reporting a number of attempts by officials in Houston and Austin to impose local regulations on consignments of wind propellers from the UK. They are claiming that propellers with a span of more than 30 metres pose unacceptable risks to local wildlife." %}
-          {% include 'components/barrier-detail-accordion.html' with id=3 title="Heat pumps subject to punitive tariff" country="United States" sector="Energy equipment" barrier="Restrictive rules of origin" summary="British company Energise has reported that a batch of its heat pumps has been subject to an import tariff of 50% by officials in Salt Lake City, Utah. They are claiming that this is a legitimate interpretation of the recent Utah State regulation restricting green energy installations to locally based companies. " %}
+        {% for uk_barrier in object_list %}
+          {% include 'components/barrier-detail-accordion.html' with barrier=uk_barrier %}
+        {% endfor %}
         </ul>
         <h3 class="h4" style="margin-top: 60px;"><strong>Barriers reported to European Commission</strong></h3>
         <ul class="">
-            {% include 'components/barrier-detail.html' with id=123 title="Cumbersome compulsory conformity assessment for electro technical products" country="United States" %}
-            {% include 'components/barrier-detail.html' with id=456 title="Preference for national goods in public procurement" country="United States" %}
+        {% for ecbarrier in ec_barriers %}
+            {% include 'components/barrier-detail.html' with barrier=ecbarrier %}
+        {% endfor %}
+        </ul>
+        {% if ec_barriers.paginator.num_pages > 1 %}
+        <p>
+            EC barriers {{ec_barriers.start_index}}-{{ec_barriers.end_index}} of {{ ec_barriers.paginator.count }}
+            <a href="?page={{ ec_barriers.next_page_number }}">Next page &raquo;</a>
+        </p>
+        {% endif %}
+        <ul class="">
+        {% for wtobarrier in wto_barriers %}
+            {% include 'components/barrier-detail.html' with barrier=wtobarrier %}
+        {% endfor %}
         </ul>
         <h3 class="h4" style="margin-top: 60px;"><strong>WTO Notifications</strong></h3>
         <p>The WTO manages a list of self-reported measures that can affect international trade.</p>

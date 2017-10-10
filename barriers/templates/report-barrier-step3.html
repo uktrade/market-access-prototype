@@ -22,7 +22,7 @@
   <div class="outer-container push--top">
     <div class="grid-container grid-container--inner">
       <div class="column-one-third dit-progress-bar">
-        {% include 'components/form-existing-message.html' %}
+        {% include 'components/form-existing-message.html' with existingbarrier=existingbarrier %}
         <div class="h4">Section</div>
         <ol>
           <li><a href="{% url 'report-barrier-step1' %}"><span>1 About you</span> <img src="{% static 'images/tick.svg' %}" alt="Completed step"></a></li>

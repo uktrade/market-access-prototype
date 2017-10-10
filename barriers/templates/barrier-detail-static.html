@@ -17,7 +17,7 @@ tr-home
   <div class="outer-container">
     <div class="dit-breadcrumb grid-container grid-container--inner">
         <div class="column-full flush--bottom">
-          <a href="https://www.great.gov.uk/">Great.gov.uk</a> <span aria-hidden="true">></span> <a href="/">Trade barriers</a> <span aria-hidden="true">></span> <a href="{% url 'barriers-by-country' country="Spain" %}">{% trans "Existing trade barriers in Venezuela" %}</a> <span aria-hidden="true">></span> <strong>{% trans "Trade barrier detail" %}</strong>
+          <a href="https://www.great.gov.uk/">Great.gov.uk</a> <span aria-hidden="true">></span> <a href="/">Trade barriers</a> <span aria-hidden="true">></span> <a href="{% url 'barriers-check-results' %}">{% trans "Existing trade barriers" %}</a> <span aria-hidden="true">></span> <strong>{% trans "Trade barrier detail" %}</strong>
         </div>
     </div>
   </div>
@@ -27,21 +27,20 @@ tr-home
         <h1 class="h3">{% trans "Trade barrier detail" %}</h1>
       </div>
       <div class="column-two-third">
-          <h2 id="barrier-title" class="h3">Photo voltaic panels</h2>
-          <p>Country: United States<br>
-          Sector: Energy equipment<br>
-          Barrier type: Burdensome customs procedures</p>
-          <p>Consignments of photo voltaic panels from EU countries are being subject to particularly rigorous document inspection procedures at all ports of entry to the US. Onward transport has been delayed at San Francisco, New York, Delaware and Houston.</p>
-          <p>While no reason has been given for this, it seems likely that officials are concerned about the possibility of products sourced in China being exported under an EU flag. In particular, officials are paying particular attention to document GB34, which lists the components in each product and their countries of origin. Any consignment with this document not fully completed and attested are at risk of severe delay.</p>
-          <p>Reference No: 3425A<br>
-            Companies affected: Confidential, information available on request only<br>
-            Status: Assessment<br>
-            Actions: None at present</p>
+          <h2 id="barrier-title" class="h3">{{ object.title }}</h2>
+          <p>Country: {{ object.country }}<br>
+          Sector: {{ object.sectors_text }}<br>
+          Barrier type: {% for type in object.barrier_types.all %}{{ type }}{% endfor %}</p>
+            {{ object.description|linebreaks }}
+          <p>Reference No: {{ object.uk_reference_code }}<br>
+            Companies affected: {{ object.companies_affected }}<br>
+            Status: {{ object.status }}<br>
+            Actions: {{ object.actions_taken }}</p>
 
-          <p><a href="{% url 'barriers-by-country' country="Spain" %}" class="button button-white button-border">Back to search results</a></p>
+          <p><a href="{% url 'barriers-check-results' %}" class="button button-white button-border">Back to search results</a></p>
       </div>
       <div class="column-one-third">
-          <p><a href="{% url 'report-barrier-existing' %}" class="button button-red" aria-labelledby="barrier-title">This barrier is affecting me</a></p>
+          <p><a href="{% url 'report-barrier-existing' pk=object.pk %}" class="button button-red" aria-labelledby="barrier-title">This barrier is affecting me</a></p>
           <p><strong>Why report the problem?</strong></p>
           <p>The government can be aware of a trade barrier without knowing how many companies it affects. The more we understand the scale of a trade barrier the more likely we are to be able to do something about it.</p>
 

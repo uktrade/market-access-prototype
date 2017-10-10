@@ -25,10 +25,10 @@ class BarrierRecord(AuditableModel):
     based on a report, or because a case worker created a record from
     scratch based on some other information.
     """
-    BARRIER_RECORD_STATUS_ACTIVE = "Active"
+    BARRIER_RECORD_STATUS_ASSESSMENT = "Assessment"
     # more statuses to be added soon...
     BARRIER_RECORD_STATUS_CHOICES = (
-        (BARRIER_RECORD_STATUS_ACTIVE, "Active"),
+        (BARRIER_RECORD_STATUS_ASSESSMENT, "Assessment"),
     )
     status = models.CharField(
         max_length=10,
@@ -38,6 +38,10 @@ class BarrierRecord(AuditableModel):
     )
     title = models.TextField(
         _('Title'),
+        blank=True
+    )
+    summary = models.TextField(
+        _('Summary'),
         blank=True
     )
     description = models.TextField(
@@ -66,6 +70,11 @@ class BarrierRecord(AuditableModel):
         max_length=20,
         null=True, blank=True
     )
+    uk_reference_code = models.CharField(
+        _('UK reference code'),
+        max_length=20,
+        null=True, blank=True
+    )
     barrier_types = TreeManyToManyField(
         'BarrierType',
         blank=True,
@@ -80,12 +89,37 @@ class BarrierRecord(AuditableModel):
         _('External site link'),
         max_length=1500, blank=True
     )
+    companies_affected = models.TextField(
+        _('Companies affected'),
+        max_length=200,
+        null=True, blank=True
+    )
+    actions_taken = models.TextField(
+        _('Actions taken'),
+        null=True, blank=True
+    )
+
+    def __str__(self):
+        return self.title
 
 class BarrierNotification(AuditableModel):
     """
     Information about a barrier that has come
     from the EC MADB or WTO databases.
     """
+
+    BARRIER_NOTIFICATION_STATUS_INACTIVE = "Inactive"
+    BARRIER_NOTIFICATION_STATUS_ACTIVE = "Active"
+    BARRIER_NOTIFICATION_STATUS_CHOICES = (
+        (BARRIER_NOTIFICATION_STATUS_INACTIVE, "Inactive"),
+        (BARRIER_NOTIFICATION_STATUS_ACTIVE, "Active"),
+    )
+    status = models.CharField(
+        max_length=20,
+        choices=BARRIER_NOTIFICATION_STATUS_CHOICES,
+        default=None,
+        null=True, blank=True
+    )
 
     title = models.TextField(
         _('Title'),
@@ -99,7 +133,7 @@ class BarrierNotification(AuditableModel):
         _('Distribution Date'),
         null=True, blank=True
     )
-    # where did this barrier information come from?
+    # the source that this barrier information came from
     barrier_source = models.ForeignKey(
         'BarrierSource'
     )
@@ -126,9 +160,9 @@ class BarrierNotification(AuditableModel):
     products_text = models.TextField(_('Products'), blank=True)
     product_codes = models.TextField(_('Product codes'), blank=True)
     objectives = models.TextField(_('Objectives'), blank=True)
-    # SPS only
+    # SPS only for WTO notifications
     keywords = models.TextField(_('Keywords'), blank=True)
-    # SPS only
+    # SPS only for WTO notifications
     regions_affected = models.TextField(
         _('Regions affected'),
         blank=True
@@ -166,7 +200,7 @@ class BarrierNotification(AuditableModel):
     @staticmethod
     def get_countries():
         from django.db.models import Count
-        return get_user_model().objects.values("notifying_member").annotate(count=Count("id")).order_by('-count')
+        return get_user_model().objects.values("country").annotate(count=Count("id")).order_by('-count')
 
 
 class BarrierReporter(AuditableModel):

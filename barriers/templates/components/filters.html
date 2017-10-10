@@ -14,7 +14,7 @@
           <h1 class="dit-hero__title">Check trade barriers in your target market</h1>
           <p class="dit-hero__summary" style="max-width: 66.66%;">Use the fields provided to narrow your search. The more fields you fill in, the more likely you are to get relevant results. If you don’t know your commodity code or codes, you can find them on GOV.UK</p>
           <div class="js-filters">
-            <form action="/barriers/countries/Spain#results" method="get" class="dit-hero__form">
+            <form action="{% url 'barriers-check-results' %}" method="get" class="dit-hero__form">
                 {% csrf_token %}
                 {# form #}
                 <div class="dit-inline-form-fields">
@@ -24,7 +24,7 @@
                   </div>
                   <div class="dit-input-field">
                     <label for="countries">What country/bloc are you planning to sell to?</label>
-                    <select autocomplete="off" class="select-custom select2-hidden-accessible" data-placeholder="Filter by country/bloc" id="countries" multiple="" name="countries[]">
+                    <select autocomplete="off" class="select-custom select2-hidden-accessible" data-placeholder="Filter by country/bloc" id="countries" multiple="" name="countries">
                       {% include 'components/countries.html' %}
                     </select>
                   </div>

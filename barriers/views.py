@@ -3,6 +3,7 @@
 import json
 import requests
 
+from django.core.paginator import Paginator
 from django.conf import settings
 from django.shortcuts import HttpResponse
 from django.views.generic import (
@@ -16,7 +17,8 @@ from .helpers import (
     has_company
 )
 from .models import (
-    BarrierRecord, BarrierSource, BarrierCountry, BarrierType
+    BarrierNotification, BarrierRecord, BarrierSource,
+    BarrierReport, BarrierCountry, BarrierType
 )
 from .forms import BarrierCountryForm, ReportBarrierForm
 
@@ -41,6 +43,12 @@ class ReportBarrierView(FormView):
 
     countries = ''
 
+    def get(self, request, *args, **kwargs):
+        # we're reporting a new barrier, so clear
+        # any existing barriers from the session
+        del request.session['existingbarrier']
+        return super(ReportBarrierView, self).get(request, *args, **kwargs)
+
     def get_success_url(self, **kwargs):
         return reverse_lazy(
                     'report-barrier-show-current-barriers',
@@ -50,6 +58,7 @@ class ReportBarrierView(FormView):
     def form_valid(self, form):
         self.countries = form.cleaned_data['countries_affected']
         return super(ReportBarrierView, self).form_valid(form)
+
 
 class ReportBarrierExistingView(FormView):
     template_name = 'report-barrier-existing.html'
@@ -57,6 +66,19 @@ class ReportBarrierExistingView(FormView):
 
     countries = ''
 
+    def get(self, request, *args, **kwargs):
+        self.barrier = BarrierRecord.objects.get(pk = kwargs['pk'])
+        request.session['existingbarrier'] = self.barrier.pk
+        #if 'existing' in request.GET:
+        #    if request.GET['existing'] == False:
+        #        del request.session['existingbarrier']
+        #        del request.session['existing']
+        #    else:
+        #        barrier_id = request.GET['existing']
+        #        # put barrier info in the session
+        #        request.session['existing'] = True
+        return super(ReportBarrierExistingView, self).get(request, *args, **kwargs)
+
     def get_success_url(self, **kwargs):
         return reverse_lazy(
                     'report-barrier-show-current-barriers',
@@ -66,6 +88,12 @@ class ReportBarrierExistingView(FormView):
     def form_valid(self, form):
         self.countries = form.cleaned_data['countries_affected']
         return super(ReportBarrierView, self).form_valid(form)
+
+    def get_context_data(self, *args, **kwargs):
+        context = super(ReportBarrierExistingView, self).get_context_data(*args, **kwargs)
+        context['barrier'] = self.barrier
+        return context
+
 
 class ReportBarrierShowCurrentBarriersView(ListView):
     template_name = 'report-barrier-show-current-barriers.html'
@@ -103,29 +131,53 @@ class ReportBarrierFormView(FormView):
         return super(ReportBarrierView, self).form_valid(form)
 
 
-class BarriersByCountryView(ListView):
-    template_name = 'barriers-by-country.html'
-    country = ''
+class BarriersCheckResultsView(ListView):
+    template_name = 'barriers-check-results.html'
+    country_text = ''
+    country_object = None
     model = BarrierRecord
+    context_object_name = 'uk_barriers'
+    paginate_by = 10 # page size for default queryset ie UK barrier reports
+    EC_BARRIERS_PAGE_SIZE = 5
+    WTO_BARRIERS_PAGE_SIZE = 5
+
+    def __init__(self, *args, **kwargs):
+        self.uk_source = BarrierSource.objects.get(short_name='UK')
+        #self.wto_source = BarrierSource.objects.get(short_name='WTO')
+        self.ec_source = BarrierSource.objects.get(short_name='EC MADB')
+        return super(BarriersCheckResultsView, self).__init__(*args, **kwargs)
 
     def dispatch(self, request, *args, **kwargs):
-        self.country_text = kwargs['country']
-        return super(BarriersByCountryView, self).dispatch(request, *args, **kwargs)
+        self.country_search_text = request.GET.get('countries', None)
+        self.product_search_text = request.GET.get('products', None)
+        self.sector_search_text = request.GET.get('sectors', None)
+        self.commoditycode_search_text = request.GET.get('commoditycodes', None)
+        self.uk_barriers_page_number = kwargs.get('page', 1)
+        return super(BarriersCheckResultsView, self).dispatch(request, *args, **kwargs)
 
     def get_queryset(self, *args, **kwargs):
-        uk_source = BarrierSource.objects.get(short_name='UK')
-        self.country_object = BarrierCountry.objects.get(name=self.country_text)
-        return BarrierRecord.objects.filter(country=self.country_object).filter(barrier_source=uk_source)
+        self.uk_barriers = BarrierRecord.objects.all()  # BarrierRecord doesn't have a source
+        self.ec_barriers = BarrierNotification.objects.filter(barrier_source=self.ec_source)
+        #self.wto_barriers = BarrierNotification.objects.filter(barrier_source=self.wto_source)
+        if self.country_search_text:
+            # FIXME currently assumes only one country in country_search_text
+            self.country_object = BarrierCountry.objects.get(name__iexact=self.country_search_text)
+            self.uk_barriers = self.uk_barriers.filter(country=self.country_object)
+            self.ec_barriers = self.ec_barriers.filter(country=self.country_object)
+            #self.wto_barriers = self.wto_barriers.filter(country=self.country_object)
+        if self.product_search_text:
+            self.uk_barriers = self.uk_barriers.filter(products=self.country_object)
+            self.ec_barriers = self.ec_barriers.filter(country=self.country_object)
+            #self.wto_barriers = self.wto_barriers.filter(country=self.country_object)
+        # uk_paginator = Paginator(self.uk_barriers, 25) # Show 25 contacts per page
+        return self.uk_barriers
 
     def get_context_data(self, **kwargs):
-        context_data =  super(BarriersByCountryView, self).get_context_data(**kwargs)
+        context_data =  super(BarriersCheckResultsView, self).get_context_data(**kwargs)
         context_data['country'] = self.country_text
-        # "objects" will be UK barriers, make "wto_barriers"
-        # and "ec_barriers" contain the appropriate ones
-        wto_source = BarrierSource.objects.get(short_name='WTO')
-        ec_source = BarrierSource.objects.get(short_name='EC MADB')
-        context_data['wto_barriers'] = BarrierRecord.objects.filter(country=self.country_object).filter(barrier_source=wto_source)
-        context_data['ec_barriers'] = BarrierRecord.objects.filter(country=self.country_object).filter(barrier_source=ec_source)
+        # uk_barriers will be created by default
+        context_data['ec_barriers'] = Paginator(self.ec_barriers, self.EC_BARRIERS_PAGE_SIZE).page(1)
+        #context_data['wto_barriers'] = Paginator(self.wto_barriers, self.WTO_BARRIERS_PAGE_SIZE).page(1)
         return context_data
 
 
@@ -140,14 +192,15 @@ class SessionContextMixin(object):
 
     def get_context_data(self, *args, **kwargs):
         context = super(SessionContextMixin, self).get_context_data(*args, **kwargs)
-        if 'existing' in self.request.session:
-            context['existing'] = self.request.session['existing']
+        if 'existingbarrier' in self.request.session:
+            existing_barrier_id = self.request.session['existingbarrier']
+            context['existingbarrier'] = BarrierRecord.objects.get(pk=existing_barrier_id)
         if 'is_trade_association' in self.request.session:
             context['is_trade_association'] = self.request.session['is_trade_association']
         return context
 
 
-class BarrierDetailStaticView(TemplateView):
+class BarrierDetailStaticView(DetailView):
     model = BarrierRecord
     template_name = 'barrier-detail-static.html'
 
@@ -179,12 +232,6 @@ class ReportBarrierStep1View(SessionContextMixin, TemplateView):
     model = BarrierRecord
     template_name = 'report-barrier-step1.html'
 
-    def get(self, request, *args, **kwargs):
-        if 'existing' in request.GET:
-            request.session['existing'] = request.GET['existing']
-        return super(ReportBarrierStep1View, self).get(request, *args, **kwargs)
-
-
 class ReportBarrierStep2View(SessionContextMixin, TemplateView):
     model = BarrierRecord
     template_name = 'report-barrier-step2.html'
@@ -195,7 +242,7 @@ class ReportBarrierStep2View(SessionContextMixin, TemplateView):
                 request.session['is_trade_association'] = True
             else:
                 # Allow it to be turned off again
-                request.session['is_trade_association'] = False
+                del request.session['is_trade_association']
         return self.get(request, *args, **kwargs)
 
 

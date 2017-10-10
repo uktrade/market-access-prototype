@@ -1,0 +1,1159 @@
+[
+{
+    "model": "barriers.barriertypemapping",
+    "pk": 1,
+    "fields": {
+        "created_date": "2017-10-02T16:28:36.432Z",
+        "updated_date": "2017-10-02T16:28:36.432Z",
+        "is_deleted": false,
+        "source_barrier_list": 2,
+        "source_barrier_type": 1,
+        "destination_barrier_list": 1,
+        "destination_barrier_type": 105
+    }
+},
+{
+    "model": "barriers.barriertypemapping",
+    "pk": 2,
+    "fields": {
+        "created_date": "2017-10-02T16:28:55.705Z",
+        "updated_date": "2017-10-02T16:28:55.705Z",
+        "is_deleted": false,
+        "source_barrier_list": 2,
+        "source_barrier_type": 3,
+        "destination_barrier_list": 1,
+        "destination_barrier_type": 123
+    }
+},
+{
+    "model": "barriers.barriertypemapping",
+    "pk": 3,
+    "fields": {
+        "created_date": "2017-10-02T16:29:23.367Z",
+        "updated_date": "2017-10-02T16:29:23.368Z",
+        "is_deleted": false,
+        "source_barrier_list": 2,
+        "source_barrier_type": 7,
+        "destination_barrier_list": 1,
+        "destination_barrier_type": 124
+    }
+},
+{
+    "model": "barriers.barriertypemapping",
+    "pk": 4,
+    "fields": {
+        "created_date": "2017-10-02T16:29:46.766Z",
+        "updated_date": "2017-10-02T16:29:46.766Z",
+        "is_deleted": false,
+        "source_barrier_list": 2,
+        "source_barrier_type": 10,
+        "destination_barrier_list": 1,
+        "destination_barrier_type": 125
+    }
+},
+{
+    "model": "barriers.barriertypemapping",
+    "pk": 5,
+    "fields": {
+        "created_date": "2017-10-02T16:30:56.223Z",
+        "updated_date": "2017-10-02T16:30:56.223Z",
+        "is_deleted": false,
+        "source_barrier_list": 2,
+        "source_barrier_type": 11,
+        "destination_barrier_list": 1,
+        "destination_barrier_type": 127
+    }
+},
+{
+    "model": "barriers.barriertypemapping",
+    "pk": 6,
+    "fields": {
+        "created_date": "2017-10-02T16:31:21.676Z",
+        "updated_date": "2017-10-02T16:31:21.676Z",
+        "is_deleted": false,
+        "source_barrier_list": 2,
+        "source_barrier_type": 6,
+        "destination_barrier_list": 1,
+        "destination_barrier_type": 128
+    }
+},
+{
+    "model": "barriers.barriertypemapping",
+    "pk": 7,
+    "fields": {
+        "created_date": "2017-10-02T16:31:44.629Z",
+        "updated_date": "2017-10-02T16:31:44.629Z",
+        "is_deleted": false,
+        "source_barrier_list": 2,
+        "source_barrier_type": 12,
+        "destination_barrier_list": 1,
+        "destination_barrier_type": 129
+    }
+},
+{
+    "model": "barriers.barriertypemapping",
+    "pk": 8,
+    "fields": {
+        "created_date": "2017-10-02T16:32:08.158Z",
+        "updated_date": "2017-10-02T16:32:08.158Z",
+        "is_deleted": false,
+        "source_barrier_list": 2,
+        "source_barrier_type": 8,
+        "destination_barrier_list": 1,
+        "destination_barrier_type": 130
+    }
+},
+{
+    "model": "barriers.barriertypemapping",
+    "pk": 9,
+    "fields": {
+        "created_date": "2017-10-02T16:32:46.866Z",
+        "updated_date": "2017-10-02T16:32:46.866Z",
+        "is_deleted": false,
+        "source_barrier_list": 2,
+        "source_barrier_type": 4,
+        "destination_barrier_list": 1,
+        "destination_barrier_type": 131
+    }
+},
+{
+    "model": "barriers.barriertypemapping",
+    "pk": 10,
+    "fields": {
+        "created_date": "2017-10-02T16:33:08.635Z",
+        "updated_date": "2017-10-02T16:33:08.635Z",
+        "is_deleted": false,
+        "source_barrier_list": 2,
+        "source_barrier_type": 15,
+        "destination_barrier_list": 1,
+        "destination_barrier_type": 132
+    }
+},
+{
+    "model": "barriers.barriertypemapping",
+    "pk": 11,
+    "fields": {
+        "created_date": "2017-10-02T16:33:34.721Z",
+        "updated_date": "2017-10-02T16:33:34.721Z",
+        "is_deleted": false,
+        "source_barrier_list": 2,
+        "source_barrier_type": 9,
+        "destination_barrier_list": 1,
+        "destination_barrier_type": 133
+    }
+},
+{
+    "model": "barriers.barriertypemapping",
+    "pk": 12,
+    "fields": {
+        "created_date": "2017-10-02T16:34:18.260Z",
+        "updated_date": "2017-10-02T16:34:18.260Z",
+        "is_deleted": false,
+        "source_barrier_list": 2,
+        "source_barrier_type": 14,
+        "destination_barrier_list": 1,
+        "destination_barrier_type": 134
+    }
+},
+{
+    "model": "barriers.barriertypemapping",
+    "pk": 13,
+    "fields": {
+        "created_date": "2017-10-02T16:54:54.160Z",
+        "updated_date": "2017-10-02T16:54:54.160Z",
+        "is_deleted": false,
+        "source_barrier_list": 2,
+        "source_barrier_type": 16,
+        "destination_barrier_list": 1,
+        "destination_barrier_type": 135
+    }
+},
+{
+    "model": "barriers.barriertypemapping",
+    "pk": 14,
+    "fields": {
+        "created_date": "2017-10-02T16:55:36.974Z",
+        "updated_date": "2017-10-02T16:55:36.974Z",
+        "is_deleted": false,
+        "source_barrier_list": 2,
+        "source_barrier_type": 13,
+        "destination_barrier_list": 1,
+        "destination_barrier_type": 136
+    }
+},
+{
+    "model": "barriers.barriertypemapping",
+    "pk": 15,
+    "fields": {
+        "created_date": "2017-10-02T16:55:59.687Z",
+        "updated_date": "2017-10-02T16:55:59.687Z",
+        "is_deleted": false,
+        "source_barrier_list": 2,
+        "source_barrier_type": 5,
+        "destination_barrier_list": 1,
+        "destination_barrier_type": 137
+    }
+},
+{
+    "model": "barriers.barriertypemapping",
+    "pk": 16,
+    "fields": {
+        "created_date": "2017-10-02T16:56:48.653Z",
+        "updated_date": "2017-10-02T16:56:48.653Z",
+        "is_deleted": false,
+        "source_barrier_list": 2,
+        "source_barrier_type": 18,
+        "destination_barrier_list": 1,
+        "destination_barrier_type": 153
+    }
+},
+{
+    "model": "barriers.barriertypemapping",
+    "pk": 17,
+    "fields": {
+        "created_date": "2017-10-02T16:57:40.800Z",
+        "updated_date": "2017-10-02T21:58:07.536Z",
+        "is_deleted": false,
+        "source_barrier_list": 2,
+        "source_barrier_type": 19,
+        "destination_barrier_list": 1,
+        "destination_barrier_type": 155
+    }
+},
+{
+    "model": "barriers.barriertypemapping",
+    "pk": 18,
+    "fields": {
+        "created_date": "2017-10-02T16:58:19.527Z",
+        "updated_date": "2017-10-02T16:58:19.527Z",
+        "is_deleted": false,
+        "source_barrier_list": 2,
+        "source_barrier_type": 20,
+        "destination_barrier_list": 1,
+        "destination_barrier_type": 156
+    }
+},
+{
+    "model": "barriers.barriertypemapping",
+    "pk": 19,
+    "fields": {
+        "created_date": "2017-10-02T16:58:45.985Z",
+        "updated_date": "2017-10-02T16:58:45.985Z",
+        "is_deleted": false,
+        "source_barrier_list": 2,
+        "source_barrier_type": 21,
+        "destination_barrier_list": 1,
+        "destination_barrier_type": 154
+    }
+},
+{
+    "model": "barriers.barriertypemapping",
+    "pk": 20,
+    "fields": {
+        "created_date": "2017-10-02T16:59:26.037Z",
+        "updated_date": "2017-10-02T16:59:26.037Z",
+        "is_deleted": false,
+        "source_barrier_list": 2,
+        "source_barrier_type": 22,
+        "destination_barrier_list": 1,
+        "destination_barrier_type": 157
+    }
+},
+{
+    "model": "barriers.barriertypemapping",
+    "pk": 21,
+    "fields": {
+        "created_date": "2017-10-02T16:59:47.394Z",
+        "updated_date": "2017-10-02T16:59:47.394Z",
+        "is_deleted": false,
+        "source_barrier_list": 2,
+        "source_barrier_type": 30,
+        "destination_barrier_list": 1,
+        "destination_barrier_type": 158
+    }
+},
+{
+    "model": "barriers.barriertypemapping",
+    "pk": 22,
+    "fields": {
+        "created_date": "2017-10-02T21:59:16.245Z",
+        "updated_date": "2017-10-02T21:59:16.245Z",
+        "is_deleted": false,
+        "source_barrier_list": 2,
+        "source_barrier_type": 31,
+        "destination_barrier_list": 1,
+        "destination_barrier_type": 159
+    }
+},
+{
+    "model": "barriers.barriertypemapping",
+    "pk": 23,
+    "fields": {
+        "created_date": "2017-10-02T21:59:42.130Z",
+        "updated_date": "2017-10-02T21:59:42.130Z",
+        "is_deleted": false,
+        "source_barrier_list": 2,
+        "source_barrier_type": 32,
+        "destination_barrier_list": 1,
+        "destination_barrier_type": 160
+    }
+},
+{
+    "model": "barriers.barriertypemapping",
+    "pk": 24,
+    "fields": {
+        "created_date": "2017-10-02T22:00:04.931Z",
+        "updated_date": "2017-10-02T22:00:04.931Z",
+        "is_deleted": false,
+        "source_barrier_list": 2,
+        "source_barrier_type": 24,
+        "destination_barrier_list": 1,
+        "destination_barrier_type": 161
+    }
+},
+{
+    "model": "barriers.barriertypemapping",
+    "pk": 25,
+    "fields": {
+        "created_date": "2017-10-02T22:00:22.694Z",
+        "updated_date": "2017-10-02T22:00:22.694Z",
+        "is_deleted": false,
+        "source_barrier_list": 2,
+        "source_barrier_type": 28,
+        "destination_barrier_list": 1,
+        "destination_barrier_type": 162
+    }
+},
+{
+    "model": "barriers.barriertypemapping",
+    "pk": 26,
+    "fields": {
+        "created_date": "2017-10-02T22:01:06.733Z",
+        "updated_date": "2017-10-02T22:01:06.733Z",
+        "is_deleted": false,
+        "source_barrier_list": 2,
+        "source_barrier_type": 23,
+        "destination_barrier_list": 1,
+        "destination_barrier_type": 163
+    }
+},
+{
+    "model": "barriers.barriertypemapping",
+    "pk": 27,
+    "fields": {
+        "created_date": "2017-10-02T22:01:28.533Z",
+        "updated_date": "2017-10-02T22:01:28.533Z",
+        "is_deleted": false,
+        "source_barrier_list": 2,
+        "source_barrier_type": 26,
+        "destination_barrier_list": 1,
+        "destination_barrier_type": 164
+    }
+},
+{
+    "model": "barriers.barriertypemapping",
+    "pk": 28,
+    "fields": {
+        "created_date": "2017-10-02T22:01:52.907Z",
+        "updated_date": "2017-10-02T22:01:52.907Z",
+        "is_deleted": false,
+        "source_barrier_list": 2,
+        "source_barrier_type": 27,
+        "destination_barrier_list": 1,
+        "destination_barrier_type": 165
+    }
+},
+{
+    "model": "barriers.barriertypemapping",
+    "pk": 29,
+    "fields": {
+        "created_date": "2017-10-02T22:02:21.323Z",
+        "updated_date": "2017-10-02T22:02:21.323Z",
+        "is_deleted": false,
+        "source_barrier_list": 2,
+        "source_barrier_type": 33,
+        "destination_barrier_list": 1,
+        "destination_barrier_type": 166
+    }
+},
+{
+    "model": "barriers.barriertypemapping",
+    "pk": 30,
+    "fields": {
+        "created_date": "2017-10-02T22:02:51.207Z",
+        "updated_date": "2017-10-02T22:02:51.207Z",
+        "is_deleted": false,
+        "source_barrier_list": 2,
+        "source_barrier_type": 29,
+        "destination_barrier_list": 1,
+        "destination_barrier_type": 167
+    }
+},
+{
+    "model": "barriers.barriertypemapping",
+    "pk": 31,
+    "fields": {
+        "created_date": "2017-10-02T22:03:11.664Z",
+        "updated_date": "2017-10-02T22:03:11.665Z",
+        "is_deleted": false,
+        "source_barrier_list": 2,
+        "source_barrier_type": 25,
+        "destination_barrier_list": 1,
+        "destination_barrier_type": 168
+    }
+},
+{
+    "model": "barriers.barriertypemapping",
+    "pk": 32,
+    "fields": {
+        "created_date": "2017-10-02T22:03:46.784Z",
+        "updated_date": "2017-10-02T22:03:46.784Z",
+        "is_deleted": false,
+        "source_barrier_list": 2,
+        "source_barrier_type": 48,
+        "destination_barrier_list": 1,
+        "destination_barrier_type": 138
+    }
+},
+{
+    "model": "barriers.barriertypemapping",
+    "pk": 33,
+    "fields": {
+        "created_date": "2017-10-02T22:04:17.577Z",
+        "updated_date": "2017-10-02T22:04:17.577Z",
+        "is_deleted": false,
+        "source_barrier_list": 2,
+        "source_barrier_type": 47,
+        "destination_barrier_list": 1,
+        "destination_barrier_type": 139
+    }
+},
+{
+    "model": "barriers.barriertypemapping",
+    "pk": 34,
+    "fields": {
+        "created_date": "2017-10-02T22:05:03.523Z",
+        "updated_date": "2017-10-02T22:05:03.523Z",
+        "is_deleted": false,
+        "source_barrier_list": 2,
+        "source_barrier_type": 35,
+        "destination_barrier_list": 1,
+        "destination_barrier_type": 140
+    }
+},
+{
+    "model": "barriers.barriertypemapping",
+    "pk": 35,
+    "fields": {
+        "created_date": "2017-10-02T22:05:40.344Z",
+        "updated_date": "2017-10-02T22:05:40.344Z",
+        "is_deleted": false,
+        "source_barrier_list": 2,
+        "source_barrier_type": 41,
+        "destination_barrier_list": 1,
+        "destination_barrier_type": 141
+    }
+},
+{
+    "model": "barriers.barriertypemapping",
+    "pk": 36,
+    "fields": {
+        "created_date": "2017-10-02T22:06:20.857Z",
+        "updated_date": "2017-10-02T22:06:20.858Z",
+        "is_deleted": false,
+        "source_barrier_list": 2,
+        "source_barrier_type": 39,
+        "destination_barrier_list": 1,
+        "destination_barrier_type": 142
+    }
+},
+{
+    "model": "barriers.barriertypemapping",
+    "pk": 37,
+    "fields": {
+        "created_date": "2017-10-02T22:06:39.574Z",
+        "updated_date": "2017-10-02T22:06:39.574Z",
+        "is_deleted": false,
+        "source_barrier_list": 2,
+        "source_barrier_type": 46,
+        "destination_barrier_list": 1,
+        "destination_barrier_type": 143
+    }
+},
+{
+    "model": "barriers.barriertypemapping",
+    "pk": 38,
+    "fields": {
+        "created_date": "2017-10-02T22:07:03.034Z",
+        "updated_date": "2017-10-02T22:07:03.034Z",
+        "is_deleted": false,
+        "source_barrier_list": 2,
+        "source_barrier_type": 42,
+        "destination_barrier_list": 1,
+        "destination_barrier_type": 144
+    }
+},
+{
+    "model": "barriers.barriertypemapping",
+    "pk": 39,
+    "fields": {
+        "created_date": "2017-10-02T22:07:23.920Z",
+        "updated_date": "2017-10-02T22:07:23.920Z",
+        "is_deleted": false,
+        "source_barrier_list": 2,
+        "source_barrier_type": 43,
+        "destination_barrier_list": 1,
+        "destination_barrier_type": 43
+    }
+},
+{
+    "model": "barriers.barriertypemapping",
+    "pk": 40,
+    "fields": {
+        "created_date": "2017-10-02T22:07:44.342Z",
+        "updated_date": "2017-10-02T22:07:44.342Z",
+        "is_deleted": false,
+        "source_barrier_list": 2,
+        "source_barrier_type": 44,
+        "destination_barrier_list": 1,
+        "destination_barrier_type": 146
+    }
+},
+{
+    "model": "barriers.barriertypemapping",
+    "pk": 41,
+    "fields": {
+        "created_date": "2017-10-02T22:08:06.909Z",
+        "updated_date": "2017-10-02T22:08:06.910Z",
+        "is_deleted": false,
+        "source_barrier_list": 2,
+        "source_barrier_type": 45,
+        "destination_barrier_list": 1,
+        "destination_barrier_type": 147
+    }
+},
+{
+    "model": "barriers.barriertypemapping",
+    "pk": 42,
+    "fields": {
+        "created_date": "2017-10-02T22:08:35.287Z",
+        "updated_date": "2017-10-02T22:08:35.287Z",
+        "is_deleted": false,
+        "source_barrier_list": 2,
+        "source_barrier_type": 48,
+        "destination_barrier_list": 1,
+        "destination_barrier_type": 148
+    }
+},
+{
+    "model": "barriers.barriertypemapping",
+    "pk": 43,
+    "fields": {
+        "created_date": "2017-10-02T22:08:53.831Z",
+        "updated_date": "2017-10-02T22:08:53.831Z",
+        "is_deleted": false,
+        "source_barrier_list": 2,
+        "source_barrier_type": 40,
+        "destination_barrier_list": 1,
+        "destination_barrier_type": 149
+    }
+},
+{
+    "model": "barriers.barriertypemapping",
+    "pk": 44,
+    "fields": {
+        "created_date": "2017-10-02T22:09:15.947Z",
+        "updated_date": "2017-10-02T22:09:15.947Z",
+        "is_deleted": false,
+        "source_barrier_list": 2,
+        "source_barrier_type": 37,
+        "destination_barrier_list": 1,
+        "destination_barrier_type": 150
+    }
+},
+{
+    "model": "barriers.barriertypemapping",
+    "pk": 45,
+    "fields": {
+        "created_date": "2017-10-02T22:09:34.622Z",
+        "updated_date": "2017-10-02T22:09:34.622Z",
+        "is_deleted": false,
+        "source_barrier_list": 2,
+        "source_barrier_type": 36,
+        "destination_barrier_list": 1,
+        "destination_barrier_type": 151
+    }
+},
+{
+    "model": "barriers.barriertypemapping",
+    "pk": 46,
+    "fields": {
+        "created_date": "2017-10-02T22:09:59.318Z",
+        "updated_date": "2017-10-02T22:09:59.318Z",
+        "is_deleted": false,
+        "source_barrier_list": 2,
+        "source_barrier_type": 38,
+        "destination_barrier_list": 1,
+        "destination_barrier_type": 152
+    }
+},
+{
+    "model": "barriers.barriertypemapping",
+    "pk": 47,
+    "fields": {
+        "created_date": "2017-10-03T07:28:36.770Z",
+        "updated_date": "2017-10-03T07:28:36.770Z",
+        "is_deleted": false,
+        "source_barrier_list": 2,
+        "source_barrier_type": 72,
+        "destination_barrier_list": 1,
+        "destination_barrier_type": 96
+    }
+},
+{
+    "model": "barriers.barriertypemapping",
+    "pk": 48,
+    "fields": {
+        "created_date": "2017-10-03T07:29:30.823Z",
+        "updated_date": "2017-10-03T07:29:30.823Z",
+        "is_deleted": false,
+        "source_barrier_list": 2,
+        "source_barrier_type": 79,
+        "destination_barrier_list": 1,
+        "destination_barrier_type": 103
+    }
+},
+{
+    "model": "barriers.barriertypemapping",
+    "pk": 49,
+    "fields": {
+        "created_date": "2017-10-03T07:30:01.328Z",
+        "updated_date": "2017-10-03T07:30:01.328Z",
+        "is_deleted": false,
+        "source_barrier_list": 2,
+        "source_barrier_type": 76,
+        "destination_barrier_list": 1,
+        "destination_barrier_type": 100
+    }
+},
+{
+    "model": "barriers.barriertypemapping",
+    "pk": 50,
+    "fields": {
+        "created_date": "2017-10-03T07:30:28.612Z",
+        "updated_date": "2017-10-03T07:30:28.612Z",
+        "is_deleted": false,
+        "source_barrier_list": 2,
+        "source_barrier_type": 75,
+        "destination_barrier_list": 1,
+        "destination_barrier_type": 99
+    }
+},
+{
+    "model": "barriers.barriertypemapping",
+    "pk": 51,
+    "fields": {
+        "created_date": "2017-10-03T07:30:54.849Z",
+        "updated_date": "2017-10-03T07:30:54.849Z",
+        "is_deleted": false,
+        "source_barrier_list": 2,
+        "source_barrier_type": 73,
+        "destination_barrier_list": 1,
+        "destination_barrier_type": 97
+    }
+},
+{
+    "model": "barriers.barriertypemapping",
+    "pk": 52,
+    "fields": {
+        "created_date": "2017-10-03T07:31:17.440Z",
+        "updated_date": "2017-10-03T07:31:17.440Z",
+        "is_deleted": false,
+        "source_barrier_list": 2,
+        "source_barrier_type": 78,
+        "destination_barrier_list": 1,
+        "destination_barrier_type": 102
+    }
+},
+{
+    "model": "barriers.barriertypemapping",
+    "pk": 53,
+    "fields": {
+        "created_date": "2017-10-03T07:31:39.991Z",
+        "updated_date": "2017-10-03T07:31:39.991Z",
+        "is_deleted": false,
+        "source_barrier_list": 2,
+        "source_barrier_type": 77,
+        "destination_barrier_list": 1,
+        "destination_barrier_type": 101
+    }
+},
+{
+    "model": "barriers.barriertypemapping",
+    "pk": 54,
+    "fields": {
+        "created_date": "2017-10-03T07:32:10.085Z",
+        "updated_date": "2017-10-03T07:32:10.085Z",
+        "is_deleted": false,
+        "source_barrier_list": 2,
+        "source_barrier_type": 80,
+        "destination_barrier_list": 1,
+        "destination_barrier_type": 104
+    }
+},
+{
+    "model": "barriers.barriertypemapping",
+    "pk": 55,
+    "fields": {
+        "created_date": "2017-10-03T07:32:46.509Z",
+        "updated_date": "2017-10-03T07:32:46.510Z",
+        "is_deleted": false,
+        "source_barrier_list": 2,
+        "source_barrier_type": 74,
+        "destination_barrier_list": 1,
+        "destination_barrier_type": 98
+    }
+},
+{
+    "model": "barriers.barriertypemapping",
+    "pk": 56,
+    "fields": {
+        "created_date": "2017-10-03T07:33:47.361Z",
+        "updated_date": "2017-10-03T07:33:47.361Z",
+        "is_deleted": false,
+        "source_barrier_list": 2,
+        "source_barrier_type": 70,
+        "destination_barrier_list": 1,
+        "destination_barrier_type": 110
+    }
+},
+{
+    "model": "barriers.barriertypemapping",
+    "pk": 57,
+    "fields": {
+        "created_date": "2017-10-03T07:34:18.725Z",
+        "updated_date": "2017-10-03T07:34:18.725Z",
+        "is_deleted": false,
+        "source_barrier_list": 2,
+        "source_barrier_type": 69,
+        "destination_barrier_list": 1,
+        "destination_barrier_type": 109
+    }
+},
+{
+    "model": "barriers.barriertypemapping",
+    "pk": 58,
+    "fields": {
+        "created_date": "2017-10-03T07:46:04.852Z",
+        "updated_date": "2017-10-03T07:46:04.852Z",
+        "is_deleted": false,
+        "source_barrier_list": 2,
+        "source_barrier_type": 67,
+        "destination_barrier_list": 1,
+        "destination_barrier_type": 105
+    }
+},
+{
+    "model": "barriers.barriertypemapping",
+    "pk": 59,
+    "fields": {
+        "created_date": "2017-10-03T07:47:02.866Z",
+        "updated_date": "2017-10-03T07:47:02.866Z",
+        "is_deleted": false,
+        "source_barrier_list": 2,
+        "source_barrier_type": 49,
+        "destination_barrier_list": 1,
+        "destination_barrier_type": 169
+    }
+},
+{
+    "model": "barriers.barriertypemapping",
+    "pk": 60,
+    "fields": {
+        "created_date": "2017-10-03T07:47:40.715Z",
+        "updated_date": "2017-10-03T07:47:40.715Z",
+        "is_deleted": false,
+        "source_barrier_list": 2,
+        "source_barrier_type": 52,
+        "destination_barrier_list": 1,
+        "destination_barrier_type": 170
+    }
+},
+{
+    "model": "barriers.barriertypemapping",
+    "pk": 61,
+    "fields": {
+        "created_date": "2017-10-03T07:48:08.368Z",
+        "updated_date": "2017-10-03T07:48:08.368Z",
+        "is_deleted": false,
+        "source_barrier_list": 2,
+        "source_barrier_type": 50,
+        "destination_barrier_list": 1,
+        "destination_barrier_type": 173
+    }
+},
+{
+    "model": "barriers.barriertypemapping",
+    "pk": 62,
+    "fields": {
+        "created_date": "2017-10-03T07:48:33.279Z",
+        "updated_date": "2017-10-03T07:48:33.279Z",
+        "is_deleted": false,
+        "source_barrier_list": 2,
+        "source_barrier_type": 51,
+        "destination_barrier_list": 1,
+        "destination_barrier_type": 173
+    }
+},
+{
+    "model": "barriers.barriertypemapping",
+    "pk": 63,
+    "fields": {
+        "created_date": "2017-10-03T07:49:07.043Z",
+        "updated_date": "2017-10-03T07:49:07.043Z",
+        "is_deleted": false,
+        "source_barrier_list": 2,
+        "source_barrier_type": 53,
+        "destination_barrier_list": 1,
+        "destination_barrier_type": 171
+    }
+},
+{
+    "model": "barriers.barriertypemapping",
+    "pk": 64,
+    "fields": {
+        "created_date": "2017-10-03T07:49:56.538Z",
+        "updated_date": "2017-10-03T07:49:56.538Z",
+        "is_deleted": false,
+        "source_barrier_list": 2,
+        "source_barrier_type": 88,
+        "destination_barrier_list": 1,
+        "destination_barrier_type": 113
+    }
+},
+{
+    "model": "barriers.barriertypemapping",
+    "pk": 65,
+    "fields": {
+        "created_date": "2017-10-03T07:50:25.420Z",
+        "updated_date": "2017-10-03T07:50:25.420Z",
+        "is_deleted": false,
+        "source_barrier_list": 2,
+        "source_barrier_type": 87,
+        "destination_barrier_list": 1,
+        "destination_barrier_type": 112
+    }
+},
+{
+    "model": "barriers.barriertypemapping",
+    "pk": 66,
+    "fields": {
+        "created_date": "2017-10-03T07:50:50.168Z",
+        "updated_date": "2017-10-03T07:50:50.168Z",
+        "is_deleted": false,
+        "source_barrier_list": 2,
+        "source_barrier_type": 89,
+        "destination_barrier_list": 1,
+        "destination_barrier_type": 114
+    }
+},
+{
+    "model": "barriers.barriertypemapping",
+    "pk": 67,
+    "fields": {
+        "created_date": "2017-10-03T07:51:23.278Z",
+        "updated_date": "2017-10-03T07:51:23.278Z",
+        "is_deleted": false,
+        "source_barrier_list": 2,
+        "source_barrier_type": 90,
+        "destination_barrier_list": 1,
+        "destination_barrier_type": 111
+    }
+},
+{
+    "model": "barriers.barriertypemapping",
+    "pk": 68,
+    "fields": {
+        "created_date": "2017-10-03T07:51:46.224Z",
+        "updated_date": "2017-10-03T07:51:46.224Z",
+        "is_deleted": false,
+        "source_barrier_list": 2,
+        "source_barrier_type": 86,
+        "destination_barrier_list": 1,
+        "destination_barrier_type": 107
+    }
+},
+{
+    "model": "barriers.barriertypemapping",
+    "pk": 69,
+    "fields": {
+        "created_date": "2017-10-03T07:52:28.145Z",
+        "updated_date": "2017-10-03T07:52:28.145Z",
+        "is_deleted": false,
+        "source_barrier_list": 2,
+        "source_barrier_type": 84,
+        "destination_barrier_list": 1,
+        "destination_barrier_type": 120
+    }
+},
+{
+    "model": "barriers.barriertypemapping",
+    "pk": 70,
+    "fields": {
+        "created_date": "2017-10-03T07:52:51.961Z",
+        "updated_date": "2017-10-03T07:52:51.961Z",
+        "is_deleted": false,
+        "source_barrier_list": 2,
+        "source_barrier_type": 85,
+        "destination_barrier_list": 1,
+        "destination_barrier_type": 121
+    }
+},
+{
+    "model": "barriers.barriertypemapping",
+    "pk": 71,
+    "fields": {
+        "created_date": "2017-10-03T09:50:17.230Z",
+        "updated_date": "2017-10-03T09:50:17.230Z",
+        "is_deleted": false,
+        "source_barrier_list": 2,
+        "source_barrier_type": 83,
+        "destination_barrier_list": 1,
+        "destination_barrier_type": 119
+    }
+},
+{
+    "model": "barriers.barriertypemapping",
+    "pk": 72,
+    "fields": {
+        "created_date": "2017-10-03T09:52:04.630Z",
+        "updated_date": "2017-10-03T09:52:04.630Z",
+        "is_deleted": false,
+        "source_barrier_list": 2,
+        "source_barrier_type": 60,
+        "destination_barrier_list": 1,
+        "destination_barrier_type": 93
+    }
+},
+{
+    "model": "barriers.barriertypemapping",
+    "pk": 73,
+    "fields": {
+        "created_date": "2017-10-03T09:54:13.220Z",
+        "updated_date": "2017-10-03T09:54:13.220Z",
+        "is_deleted": false,
+        "source_barrier_list": 2,
+        "source_barrier_type": 65,
+        "destination_barrier_list": 1,
+        "destination_barrier_type": 91
+    }
+},
+{
+    "model": "barriers.barriertypemapping",
+    "pk": 74,
+    "fields": {
+        "created_date": "2017-10-03T09:54:55.490Z",
+        "updated_date": "2017-10-03T09:54:55.490Z",
+        "is_deleted": false,
+        "source_barrier_list": 2,
+        "source_barrier_type": 82,
+        "destination_barrier_list": 1,
+        "destination_barrier_type": 118
+    }
+},
+{
+    "model": "barriers.barriertypemapping",
+    "pk": 75,
+    "fields": {
+        "created_date": "2017-10-03T09:56:34.473Z",
+        "updated_date": "2017-10-03T09:56:34.473Z",
+        "is_deleted": false,
+        "source_barrier_list": 2,
+        "source_barrier_type": 63,
+        "destination_barrier_list": 1,
+        "destination_barrier_type": 95
+    }
+},
+{
+    "model": "barriers.barriertypemapping",
+    "pk": 76,
+    "fields": {
+        "created_date": "2017-10-03T09:58:04.038Z",
+        "updated_date": "2017-10-03T09:58:04.038Z",
+        "is_deleted": false,
+        "source_barrier_list": 2,
+        "source_barrier_type": 59,
+        "destination_barrier_list": 1,
+        "destination_barrier_type": 122
+    }
+},
+{
+    "model": "barriers.barriertypemapping",
+    "pk": 77,
+    "fields": {
+        "created_date": "2017-10-03T10:42:42.545Z",
+        "updated_date": "2017-10-03T10:42:42.545Z",
+        "is_deleted": false,
+        "source_barrier_list": 2,
+        "source_barrier_type": 64,
+        "destination_barrier_list": 1,
+        "destination_barrier_type": 94
+    }
+},
+{
+    "model": "barriers.barriertypemapping",
+    "pk": 78,
+    "fields": {
+        "created_date": "2017-10-03T10:43:57.202Z",
+        "updated_date": "2017-10-03T10:43:57.202Z",
+        "is_deleted": false,
+        "source_barrier_list": 2,
+        "source_barrier_type": 66,
+        "destination_barrier_list": 1,
+        "destination_barrier_type": 122
+    }
+},
+{
+    "model": "barriers.barriertypemapping",
+    "pk": 79,
+    "fields": {
+        "created_date": "2017-10-03T10:46:06.210Z",
+        "updated_date": "2017-10-03T10:46:06.210Z",
+        "is_deleted": false,
+        "source_barrier_list": 2,
+        "source_barrier_type": 61,
+        "destination_barrier_list": 1,
+        "destination_barrier_type": 92
+    }
+},
+{
+    "model": "barriers.barriertypemapping",
+    "pk": 80,
+    "fields": {
+        "created_date": "2017-10-03T10:46:59.955Z",
+        "updated_date": "2017-10-03T10:46:59.955Z",
+        "is_deleted": false,
+        "source_barrier_list": 2,
+        "source_barrier_type": 17,
+        "destination_barrier_list": 1,
+        "destination_barrier_type": 126
+    }
+},
+{
+    "model": "barriers.barriertypemapping",
+    "pk": 81,
+    "fields": {
+        "created_date": "2017-10-03T10:48:13.303Z",
+        "updated_date": "2017-10-03T10:48:13.303Z",
+        "is_deleted": false,
+        "source_barrier_list": 2,
+        "source_barrier_type": 34,
+        "destination_barrier_list": 1,
+        "destination_barrier_type": 138
+    }
+},
+{
+    "model": "barriers.barriertypemapping",
+    "pk": 82,
+    "fields": {
+        "created_date": "2017-10-03T10:49:09.514Z",
+        "updated_date": "2017-10-03T10:49:09.514Z",
+        "is_deleted": false,
+        "source_barrier_list": 2,
+        "source_barrier_type": 62,
+        "destination_barrier_list": 1,
+        "destination_barrier_type": 108
+    }
+},
+{
+    "model": "barriers.barriertypemapping",
+    "pk": 83,
+    "fields": {
+        "created_date": "2017-10-03T10:50:50.056Z",
+        "updated_date": "2017-10-03T10:50:50.056Z",
+        "is_deleted": false,
+        "source_barrier_list": 2,
+        "source_barrier_type": 81,
+        "destination_barrier_list": 1,
+        "destination_barrier_type": 117
+    }
+},
+{
+    "model": "barriers.barriertypemapping",
+    "pk": 84,
+    "fields": {
+        "created_date": "2017-10-03T10:58:30.149Z",
+        "updated_date": "2017-10-03T10:58:30.149Z",
+        "is_deleted": false,
+        "source_barrier_list": 2,
+        "source_barrier_type": 55,
+        "destination_barrier_list": 1,
+        "destination_barrier_type": 171
+    }
+},
+{
+    "model": "barriers.barriertypemapping",
+    "pk": 85,
+    "fields": {
+        "created_date": "2017-10-03T10:58:51.874Z",
+        "updated_date": "2017-10-03T11:00:15.753Z",
+        "is_deleted": false,
+        "source_barrier_list": 2,
+        "source_barrier_type": 56,
+        "destination_barrier_list": 1,
+        "destination_barrier_type": 171
+    }
+},
+{
+    "model": "barriers.barriertypemapping",
+    "pk": 86,
+    "fields": {
+        "created_date": "2017-10-03T10:59:13.269Z",
+        "updated_date": "2017-10-03T10:59:59.157Z",
+        "is_deleted": false,
+        "source_barrier_list": 2,
+        "source_barrier_type": 58,
+        "destination_barrier_list": 1,
+        "destination_barrier_type": 171
+    }
+},
+{
+    "model": "barriers.barriertypemapping",
+    "pk": 87,
+    "fields": {
+        "created_date": "2017-10-03T10:59:39.864Z",
+        "updated_date": "2017-10-03T10:59:39.864Z",
+        "is_deleted": false,
+        "source_barrier_list": 2,
+        "source_barrier_type": 57,
+        "destination_barrier_list": 1,
+        "destination_barrier_type": 171
+    }
+},
+{
+    "model": "barriers.barriertypemapping",
+    "pk": 88,
+    "fields": {
+        "created_date": "2017-10-03T11:00:52.859Z",
+        "updated_date": "2017-10-03T11:00:52.859Z",
+        "is_deleted": false,
+        "source_barrier_list": 2,
+        "source_barrier_type": 54,
+        "destination_barrier_list": 1,
+        "destination_barrier_type": 171
+    }
+},
+{
+    "model": "barriers.barriertypemapping",
+    "pk": 89,
+    "fields": {
+        "created_date": "2017-10-03T11:01:55.658Z",
+        "updated_date": "2017-10-03T11:01:55.658Z",
+        "is_deleted": false,
+        "source_barrier_list": 2,
+        "source_barrier_type": 68,
+        "destination_barrier_list": 1,
+        "destination_barrier_type": 107
+    }
+}
+]

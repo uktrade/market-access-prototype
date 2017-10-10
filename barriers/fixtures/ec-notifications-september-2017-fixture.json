@@ -1,10 +1,10 @@
 [
     {
         "pk": 1,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-10560",
             "barrier_symbol": "EC-MADB-10560",
@@ -28,10 +28,10 @@
     },
     {
         "pk": 2,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-11381",
             "barrier_symbol": "EC-MADB-11381",
@@ -55,10 +55,10 @@
     },
     {
         "pk": 3,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-11980",
             "barrier_symbol": "EC-MADB-11980",
@@ -82,10 +82,10 @@
     },
     {
         "pk": 4,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-12063",
             "barrier_symbol": "EC-MADB-12063",
@@ -109,10 +109,10 @@
     },
     {
         "pk": 5,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-12062",
             "barrier_symbol": "EC-MADB-12062",
@@ -137,10 +137,10 @@
     },
     {
         "pk": 6,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-12942",
             "barrier_symbol": "EC-MADB-12942",
@@ -164,10 +164,10 @@
     },
     {
         "pk": 7,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-11981",
             "barrier_symbol": "EC-MADB-11981",
@@ -191,10 +191,10 @@
     },
     {
         "pk": 8,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-12660",
             "barrier_symbol": "EC-MADB-12660",
@@ -218,10 +218,10 @@
     },
     {
         "pk": 9,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-11268",
             "barrier_symbol": "EC-MADB-11268",
@@ -245,10 +245,10 @@
     },
     {
         "pk": 10,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-12141",
             "barrier_symbol": "EC-MADB-12141",
@@ -272,10 +272,10 @@
     },
     {
         "pk": 11,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-12061",
             "barrier_symbol": "EC-MADB-12061",
@@ -299,10 +299,10 @@
     },
     {
         "pk": 12,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-12060",
             "barrier_symbol": "EC-MADB-12060",
@@ -326,10 +326,10 @@
     },
     {
         "pk": 13,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-11271",
             "barrier_symbol": "EC-MADB-11271",
@@ -353,10 +353,10 @@
     },
     {
         "pk": 14,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-11960",
             "barrier_symbol": "EC-MADB-11960",
@@ -380,10 +380,10 @@
     },
     {
         "pk": 15,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-12020",
             "barrier_symbol": "EC-MADB-12020",
@@ -407,10 +407,10 @@
     },
     {
         "pk": 16,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-12080",
             "barrier_symbol": "EC-MADB-12080",
@@ -434,10 +434,10 @@
     },
     {
         "pk": 17,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-12142",
             "barrier_symbol": "EC-MADB-12142",
@@ -461,10 +461,10 @@
     },
     {
         "pk": 18,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-11267",
             "barrier_symbol": "EC-MADB-11267",
@@ -488,10 +488,10 @@
     },
     {
         "pk": 19,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-11274",
             "barrier_symbol": "EC-MADB-11274",
@@ -515,10 +515,10 @@
     },
     {
         "pk": 20,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-11265",
             "barrier_symbol": "EC-MADB-11265",
@@ -542,10 +542,10 @@
     },
     {
         "pk": 21,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-11269",
             "barrier_symbol": "EC-MADB-11269",
@@ -569,10 +569,10 @@
     },
     {
         "pk": 22,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-11982",
             "barrier_symbol": "EC-MADB-11982",
@@ -596,10 +596,10 @@
     },
     {
         "pk": 23,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-11272",
             "barrier_symbol": "EC-MADB-11272",
@@ -623,10 +623,10 @@
     },
     {
         "pk": 24,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-10941",
             "barrier_symbol": "EC-MADB-10941",
@@ -650,10 +650,10 @@
     },
     {
         "pk": 25,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-12202",
             "barrier_symbol": "EC-MADB-12202",
@@ -677,10 +677,10 @@
     },
     {
         "pk": 26,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-12301",
             "barrier_symbol": "EC-MADB-12301",
@@ -704,10 +704,10 @@
     },
     {
         "pk": 27,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-10684",
             "barrier_symbol": "EC-MADB-10684",
@@ -732,10 +732,10 @@
     },
     {
         "pk": 28,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-10901",
             "barrier_symbol": "EC-MADB-10901",
@@ -761,10 +761,10 @@
     },
     {
         "pk": 29,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-10682",
             "barrier_symbol": "EC-MADB-10682",
@@ -788,10 +788,10 @@
     },
     {
         "pk": 30,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-10680",
             "barrier_symbol": "EC-MADB-10680",
@@ -816,10 +816,10 @@
     },
     {
         "pk": 31,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-10761",
             "barrier_symbol": "EC-MADB-10761",
@@ -845,10 +845,10 @@
     },
     {
         "pk": 32,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-10681",
             "barrier_symbol": "EC-MADB-10681",
@@ -872,10 +872,10 @@
     },
     {
         "pk": 33,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-10760",
             "barrier_symbol": "EC-MADB-10760",
@@ -900,10 +900,10 @@
     },
     {
         "pk": 34,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-10124",
             "barrier_symbol": "EC-MADB-10124",
@@ -927,10 +927,10 @@
     },
     {
         "pk": 35,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-12740",
             "barrier_symbol": "EC-MADB-12740",
@@ -955,10 +955,10 @@
     },
     {
         "pk": 36,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-12741",
             "barrier_symbol": "EC-MADB-12741",
@@ -983,10 +983,10 @@
     },
     {
         "pk": 37,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-12842",
             "barrier_symbol": "EC-MADB-12842",
@@ -1010,10 +1010,10 @@
     },
     {
         "pk": 38,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-12922",
             "barrier_symbol": "EC-MADB-12922",
@@ -1038,10 +1038,10 @@
     },
     {
         "pk": 39,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-12862",
             "barrier_symbol": "EC-MADB-12862",
@@ -1066,10 +1066,10 @@
     },
     {
         "pk": 40,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-10118",
             "barrier_symbol": "EC-MADB-10118",
@@ -1093,10 +1093,10 @@
     },
     {
         "pk": 41,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-11362",
             "barrier_symbol": "EC-MADB-11362",
@@ -1120,10 +1120,10 @@
     },
     {
         "pk": 42,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-12902",
             "barrier_symbol": "EC-MADB-12902",
@@ -1147,10 +1147,10 @@
     },
     {
         "pk": 43,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-10983",
             "barrier_symbol": "EC-MADB-10983",
@@ -1174,10 +1174,10 @@
     },
     {
         "pk": 44,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-11880",
             "barrier_symbol": "EC-MADB-11880",
@@ -1201,10 +1201,10 @@
     },
     {
         "pk": 45,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-12401",
             "barrier_symbol": "EC-MADB-12401",
@@ -1228,10 +1228,10 @@
     },
     {
         "pk": 46,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-10720",
             "barrier_symbol": "EC-MADB-10720",
@@ -1257,10 +1257,10 @@
     },
     {
         "pk": 47,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-10709",
             "barrier_symbol": "EC-MADB-10709",
@@ -1285,10 +1285,10 @@
     },
     {
         "pk": 48,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-10208",
             "barrier_symbol": "EC-MADB-10208",
@@ -1312,10 +1312,10 @@
     },
     {
         "pk": 49,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-11226",
             "barrier_symbol": "EC-MADB-11226",
@@ -1339,10 +1339,10 @@
     },
     {
         "pk": 50,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-10042",
             "barrier_symbol": "EC-MADB-10042",
@@ -1367,10 +1367,10 @@
     },
     {
         "pk": 51,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-12180",
             "barrier_symbol": "EC-MADB-12180",
@@ -1394,10 +1394,10 @@
     },
     {
         "pk": 52,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-12204",
             "barrier_symbol": "EC-MADB-12204",
@@ -1421,10 +1421,10 @@
     },
     {
         "pk": 53,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-12201",
             "barrier_symbol": "EC-MADB-12201",
@@ -1448,10 +1448,10 @@
     },
     {
         "pk": 54,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-12360",
             "barrier_symbol": "EC-MADB-12360",
@@ -1476,10 +1476,10 @@
     },
     {
         "pk": 55,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-12168",
             "barrier_symbol": "EC-MADB-12168",
@@ -1503,10 +1503,10 @@
     },
     {
         "pk": 56,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-10207",
             "barrier_symbol": "EC-MADB-10207",
@@ -1530,10 +1530,10 @@
     },
     {
         "pk": 57,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-11624",
             "barrier_symbol": "EC-MADB-11624",
@@ -1557,10 +1557,10 @@
     },
     {
         "pk": 58,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-10962",
             "barrier_symbol": "EC-MADB-10962",
@@ -1584,10 +1584,10 @@
     },
     {
         "pk": 59,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-10217",
             "barrier_symbol": "EC-MADB-10217",
@@ -1611,10 +1611,10 @@
     },
     {
         "pk": 60,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-12260",
             "barrier_symbol": "EC-MADB-12260",
@@ -1639,10 +1639,10 @@
     },
     {
         "pk": 61,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-11660",
             "barrier_symbol": "EC-MADB-11660",
@@ -1666,10 +1666,10 @@
     },
     {
         "pk": 62,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-11720",
             "barrier_symbol": "EC-MADB-11720",
@@ -1693,10 +1693,10 @@
     },
     {
         "pk": 63,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-10361",
             "barrier_symbol": "EC-MADB-10361",
@@ -1720,10 +1720,10 @@
     },
     {
         "pk": 64,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-10406",
             "barrier_symbol": "EC-MADB-10406",
@@ -1747,10 +1747,10 @@
     },
     {
         "pk": 65,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-12321",
             "barrier_symbol": "EC-MADB-12321",
@@ -1774,10 +1774,10 @@
     },
     {
         "pk": 66,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-10801",
             "barrier_symbol": "EC-MADB-10801",
@@ -1801,10 +1801,10 @@
     },
     {
         "pk": 67,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-11522",
             "barrier_symbol": "EC-MADB-11522",
@@ -1828,10 +1828,10 @@
     },
     {
         "pk": 68,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-11500",
             "barrier_symbol": "EC-MADB-11500",
@@ -1855,10 +1855,10 @@
     },
     {
         "pk": 69,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-10821",
             "barrier_symbol": "EC-MADB-10821",
@@ -1882,10 +1882,10 @@
     },
     {
         "pk": 70,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-11940",
             "barrier_symbol": "EC-MADB-11940",
@@ -1910,10 +1910,10 @@
     },
     {
         "pk": 71,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-10120",
             "barrier_symbol": "EC-MADB-10120",
@@ -1937,10 +1937,10 @@
     },
     {
         "pk": 72,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-12240",
             "barrier_symbol": "EC-MADB-12240",
@@ -1964,10 +1964,10 @@
     },
     {
         "pk": 73,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-11320",
             "barrier_symbol": "EC-MADB-11320",
@@ -1991,10 +1991,10 @@
     },
     {
         "pk": 74,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-12561",
             "barrier_symbol": "EC-MADB-12561",
@@ -2018,10 +2018,10 @@
     },
     {
         "pk": 75,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-12380",
             "barrier_symbol": "EC-MADB-12380",
@@ -2046,10 +2046,10 @@
     },
     {
         "pk": 76,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-10003",
             "barrier_symbol": "EC-MADB-10003",
@@ -2073,10 +2073,10 @@
     },
     {
         "pk": 77,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-10134",
             "barrier_symbol": "EC-MADB-10134",
@@ -2101,10 +2101,10 @@
     },
     {
         "pk": 78,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-10408",
             "barrier_symbol": "EC-MADB-10408",
@@ -2128,10 +2128,10 @@
     },
     {
         "pk": 79,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-11460",
             "barrier_symbol": "EC-MADB-11460",
@@ -2155,10 +2155,10 @@
     },
     {
         "pk": 80,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-10540",
             "barrier_symbol": "EC-MADB-10540",
@@ -2184,10 +2184,10 @@
     },
     {
         "pk": 81,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-10704",
             "barrier_symbol": "EC-MADB-10704",
@@ -2213,10 +2213,10 @@
     },
     {
         "pk": 82,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-10521",
             "barrier_symbol": "EC-MADB-10521",
@@ -2241,10 +2241,10 @@
     },
     {
         "pk": 83,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-10600",
             "barrier_symbol": "EC-MADB-10600",
@@ -2268,10 +2268,10 @@
     },
     {
         "pk": 84,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-11860",
             "barrier_symbol": "EC-MADB-11860",
@@ -2295,10 +2295,10 @@
     },
     {
         "pk": 85,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-10781",
             "barrier_symbol": "EC-MADB-10781",
@@ -2322,10 +2322,10 @@
     },
     {
         "pk": 86,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-10782",
             "barrier_symbol": "EC-MADB-10782",
@@ -2350,10 +2350,10 @@
     },
     {
         "pk": 87,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-10783",
             "barrier_symbol": "EC-MADB-10783",
@@ -2379,10 +2379,10 @@
     },
     {
         "pk": 88,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-10784",
             "barrier_symbol": "EC-MADB-10784",
@@ -2408,10 +2408,10 @@
     },
     {
         "pk": 89,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-12002",
             "barrier_symbol": "EC-MADB-12002",
@@ -2435,10 +2435,10 @@
     },
     {
         "pk": 90,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-10214",
             "barrier_symbol": "EC-MADB-10214",
@@ -2462,10 +2462,10 @@
     },
     {
         "pk": 91,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-10110",
             "barrier_symbol": "EC-MADB-10110",
@@ -2489,10 +2489,10 @@
     },
     {
         "pk": 92,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-10162",
             "barrier_symbol": "EC-MADB-10162",
@@ -2516,10 +2516,10 @@
     },
     {
         "pk": 93,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-10216",
             "barrier_symbol": "EC-MADB-10216",
@@ -2543,10 +2543,10 @@
     },
     {
         "pk": 94,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-10222",
             "barrier_symbol": "EC-MADB-10222",
@@ -2570,10 +2570,10 @@
     },
     {
         "pk": 95,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-10081",
             "barrier_symbol": "EC-MADB-10081",
@@ -2598,10 +2598,10 @@
     },
     {
         "pk": 96,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-11240",
             "barrier_symbol": "EC-MADB-11240",
@@ -2625,10 +2625,10 @@
     },
     {
         "pk": 97,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-12460",
             "barrier_symbol": "EC-MADB-12460",
@@ -2652,10 +2652,10 @@
     },
     {
         "pk": 98,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-11191",
             "barrier_symbol": "EC-MADB-11191",
@@ -2679,10 +2679,10 @@
     },
     {
         "pk": 99,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-11001",
             "barrier_symbol": "EC-MADB-11001",
@@ -2706,10 +2706,10 @@
     },
     {
         "pk": 100,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-11028",
             "barrier_symbol": "EC-MADB-11028",
@@ -2733,10 +2733,10 @@
     },
     {
         "pk": 101,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-12160",
             "barrier_symbol": "EC-MADB-12160",
@@ -2760,10 +2760,10 @@
     },
     {
         "pk": 102,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-12172",
             "barrier_symbol": "EC-MADB-12172",
@@ -2787,10 +2787,10 @@
     },
     {
         "pk": 103,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-11020",
             "barrier_symbol": "EC-MADB-11020",
@@ -2814,10 +2814,10 @@
     },
     {
         "pk": 104,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-11003",
             "barrier_symbol": "EC-MADB-11003",
@@ -2841,10 +2841,10 @@
     },
     {
         "pk": 105,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-11027",
             "barrier_symbol": "EC-MADB-11027",
@@ -2868,10 +2868,10 @@
     },
     {
         "pk": 106,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-11030",
             "barrier_symbol": "EC-MADB-11030",
@@ -2895,10 +2895,10 @@
     },
     {
         "pk": 107,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-11021",
             "barrier_symbol": "EC-MADB-11021",
@@ -2922,10 +2922,10 @@
     },
     {
         "pk": 108,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-12163",
             "barrier_symbol": "EC-MADB-12163",
@@ -2949,10 +2949,10 @@
     },
     {
         "pk": 109,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-11461",
             "barrier_symbol": "EC-MADB-11461",
@@ -2976,10 +2976,10 @@
     },
     {
         "pk": 110,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-10131",
             "barrier_symbol": "EC-MADB-10131",
@@ -3004,10 +3004,10 @@
     },
     {
         "pk": 111,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-12760",
             "barrier_symbol": "EC-MADB-12760",
@@ -3031,10 +3031,10 @@
     },
     {
         "pk": 112,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-10210",
             "barrier_symbol": "EC-MADB-10210",
@@ -3058,10 +3058,10 @@
     },
     {
         "pk": 113,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-11246",
             "barrier_symbol": "EC-MADB-11246",
@@ -3085,10 +3085,10 @@
     },
     {
         "pk": 114,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-11261",
             "barrier_symbol": "EC-MADB-11261",
@@ -3112,10 +3112,10 @@
     },
     {
         "pk": 115,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-12200",
             "barrier_symbol": "EC-MADB-12200",
@@ -3139,10 +3139,10 @@
     },
     {
         "pk": 116,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-11262",
             "barrier_symbol": "EC-MADB-11262",
@@ -3166,10 +3166,10 @@
     },
     {
         "pk": 117,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-11263",
             "barrier_symbol": "EC-MADB-11263",
@@ -3193,10 +3193,10 @@
     },
     {
         "pk": 118,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-11821",
             "barrier_symbol": "EC-MADB-11821",
@@ -3220,10 +3220,10 @@
     },
     {
         "pk": 119,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-11820",
             "barrier_symbol": "EC-MADB-11820",
@@ -3248,10 +3248,10 @@
     },
     {
         "pk": 120,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-12320",
             "barrier_symbol": "EC-MADB-12320",
@@ -3275,10 +3275,10 @@
     },
     {
         "pk": 121,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-10400",
             "barrier_symbol": "EC-MADB-10400",
@@ -3302,10 +3302,10 @@
     },
     {
         "pk": 122,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-10402",
             "barrier_symbol": "EC-MADB-10402",
@@ -3329,10 +3329,10 @@
     },
     {
         "pk": 123,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-10360",
             "barrier_symbol": "EC-MADB-10360",
@@ -3356,10 +3356,10 @@
     },
     {
         "pk": 124,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-11620",
             "barrier_symbol": "EC-MADB-11620",
@@ -3383,10 +3383,10 @@
     },
     {
         "pk": 125,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-10404",
             "barrier_symbol": "EC-MADB-10404",
@@ -3410,10 +3410,10 @@
     },
     {
         "pk": 126,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-10340",
             "barrier_symbol": "EC-MADB-10340",
@@ -3437,10 +3437,10 @@
     },
     {
         "pk": 127,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-11622",
             "barrier_symbol": "EC-MADB-11622",
@@ -3464,10 +3464,10 @@
     },
     {
         "pk": 128,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-10206",
             "barrier_symbol": "EC-MADB-10206",
@@ -3491,10 +3491,10 @@
     },
     {
         "pk": 129,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-12600",
             "barrier_symbol": "EC-MADB-12600",
@@ -3518,10 +3518,10 @@
     },
     {
         "pk": 130,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-10215",
             "barrier_symbol": "EC-MADB-10215",
@@ -3545,10 +3545,10 @@
     },
     {
         "pk": 131,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-12480",
             "barrier_symbol": "EC-MADB-12480",
@@ -3572,10 +3572,10 @@
     },
     {
         "pk": 132,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-10303",
             "barrier_symbol": "EC-MADB-10303",
@@ -3599,10 +3599,10 @@
     },
     {
         "pk": 133,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-10185",
             "barrier_symbol": "EC-MADB-10185",
@@ -3626,10 +3626,10 @@
     },
     {
         "pk": 134,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-11561",
             "barrier_symbol": "EC-MADB-11561",
@@ -3653,10 +3653,10 @@
     },
     {
         "pk": 135,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-10129",
             "barrier_symbol": "EC-MADB-10129",
@@ -3681,10 +3681,10 @@
     },
     {
         "pk": 136,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-10382",
             "barrier_symbol": "EC-MADB-10382",
@@ -3708,10 +3708,10 @@
     },
     {
         "pk": 137,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-12325",
             "barrier_symbol": "EC-MADB-12325",
@@ -3735,10 +3735,10 @@
     },
     {
         "pk": 138,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-11621",
             "barrier_symbol": "EC-MADB-11621",
@@ -3762,10 +3762,10 @@
     },
     {
         "pk": 139,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-10863",
             "barrier_symbol": "EC-MADB-10863",
@@ -3789,10 +3789,10 @@
     },
     {
         "pk": 140,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-10300",
             "barrier_symbol": "EC-MADB-10300",
@@ -3816,10 +3816,10 @@
     },
     {
         "pk": 141,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-11060",
             "barrier_symbol": "EC-MADB-11060",
@@ -3843,10 +3843,10 @@
     },
     {
         "pk": 142,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-11040",
             "barrier_symbol": "EC-MADB-11040",
@@ -3870,10 +3870,10 @@
     },
     {
         "pk": 143,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-12300",
             "barrier_symbol": "EC-MADB-12300",
@@ -3897,10 +3897,10 @@
     },
     {
         "pk": 144,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-11900",
             "barrier_symbol": "EC-MADB-11900",
@@ -3924,10 +3924,10 @@
     },
     {
         "pk": 145,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-11264",
             "barrier_symbol": "EC-MADB-11264",
@@ -3951,10 +3951,10 @@
     },
     {
         "pk": 146,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-10943",
             "barrier_symbol": "EC-MADB-10943",
@@ -3978,10 +3978,10 @@
     },
     {
         "pk": 147,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-12843",
             "barrier_symbol": "EC-MADB-12843",
@@ -4005,10 +4005,10 @@
     },
     {
         "pk": 148,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-11414",
             "barrier_symbol": "EC-MADB-11414",
@@ -4032,10 +4032,10 @@
     },
     {
         "pk": 149,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-12065",
             "barrier_symbol": "EC-MADB-12065",
@@ -4059,10 +4059,10 @@
     },
     {
         "pk": 150,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-11760",
             "barrier_symbol": "EC-MADB-11760",
@@ -4086,10 +4086,10 @@
     },
     {
         "pk": 151,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-11192",
             "barrier_symbol": "EC-MADB-11192",
@@ -4113,10 +4113,10 @@
     },
     {
         "pk": 152,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-11248",
             "barrier_symbol": "EC-MADB-11248",
@@ -4140,10 +4140,10 @@
     },
     {
         "pk": 153,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-11843",
             "barrier_symbol": "EC-MADB-11843",
@@ -4167,10 +4167,10 @@
     },
     {
         "pk": 154,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-11540",
             "barrier_symbol": "EC-MADB-11540",
@@ -4194,10 +4194,10 @@
     },
     {
         "pk": 155,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-12800",
             "barrier_symbol": "EC-MADB-12800",
@@ -4221,10 +4221,10 @@
     },
     {
         "pk": 156,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-10126",
             "barrier_symbol": "EC-MADB-10126",
@@ -4248,10 +4248,10 @@
     },
     {
         "pk": 157,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-10860",
             "barrier_symbol": "EC-MADB-10860",
@@ -4275,10 +4275,10 @@
     },
     {
         "pk": 158,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-12682",
             "barrier_symbol": "EC-MADB-12682",
@@ -4302,10 +4302,10 @@
     },
     {
         "pk": 159,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-10820",
             "barrier_symbol": "EC-MADB-10820",
@@ -4329,10 +4329,10 @@
     },
     {
         "pk": 160,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-10780",
             "barrier_symbol": "EC-MADB-10780",
@@ -4357,10 +4357,10 @@
     },
     {
         "pk": 161,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-11228",
             "barrier_symbol": "EC-MADB-11228",
@@ -4384,10 +4384,10 @@
     },
     {
         "pk": 162,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-12661",
             "barrier_symbol": "EC-MADB-12661",
@@ -4411,10 +4411,10 @@
     },
     {
         "pk": 163,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-10163",
             "barrier_symbol": "EC-MADB-10163",
@@ -4439,10 +4439,10 @@
     },
     {
         "pk": 164,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-11083",
             "barrier_symbol": "EC-MADB-11083",
@@ -4466,10 +4466,10 @@
     },
     {
         "pk": 165,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-10401",
             "barrier_symbol": "EC-MADB-10401",
@@ -4493,10 +4493,10 @@
     },
     {
         "pk": 166,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-11241",
             "barrier_symbol": "EC-MADB-11241",
@@ -4520,10 +4520,10 @@
     },
     {
         "pk": 167,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-10409",
             "barrier_symbol": "EC-MADB-10409",
@@ -4547,10 +4547,10 @@
     },
     {
         "pk": 168,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-12822",
             "barrier_symbol": "EC-MADB-12822",
@@ -4574,10 +4574,10 @@
     },
     {
         "pk": 169,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-12780",
             "barrier_symbol": "EC-MADB-12780",
@@ -4601,10 +4601,10 @@
     },
     {
         "pk": 170,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-11220",
             "barrier_symbol": "EC-MADB-11220",
@@ -4628,10 +4628,10 @@
     },
     {
         "pk": 171,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-12680",
             "barrier_symbol": "EC-MADB-12680",
@@ -4655,10 +4655,10 @@
     },
     {
         "pk": 172,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-12681",
             "barrier_symbol": "EC-MADB-12681",
@@ -4682,10 +4682,10 @@
     },
     {
         "pk": 173,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-11227",
             "barrier_symbol": "EC-MADB-11227",
@@ -4709,10 +4709,10 @@
     },
     {
         "pk": 174,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-11224",
             "barrier_symbol": "EC-MADB-11224",
@@ -4736,10 +4736,10 @@
     },
     {
         "pk": 175,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-10862",
             "barrier_symbol": "EC-MADB-10862",
@@ -4763,10 +4763,10 @@
     },
     {
         "pk": 176,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-11380",
             "barrier_symbol": "EC-MADB-11380",
@@ -4790,10 +4790,10 @@
     },
     {
         "pk": 177,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-11382",
             "barrier_symbol": "EC-MADB-11382",
@@ -4817,10 +4817,10 @@
     },
     {
         "pk": 178,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-10861",
             "barrier_symbol": "EC-MADB-10861",
@@ -4844,10 +4844,10 @@
     },
     {
         "pk": 179,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-11363",
             "barrier_symbol": "EC-MADB-11363",
@@ -4871,10 +4871,10 @@
     },
     {
         "pk": 180,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-10640",
             "barrier_symbol": "EC-MADB-10640",
@@ -4898,10 +4898,10 @@
     },
     {
         "pk": 181,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-11100",
             "barrier_symbol": "EC-MADB-11100",
@@ -4925,10 +4925,10 @@
     },
     {
         "pk": 182,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-11121",
             "barrier_symbol": "EC-MADB-11121",
@@ -4952,10 +4952,10 @@
     },
     {
         "pk": 183,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-11102",
             "barrier_symbol": "EC-MADB-11102",
@@ -4980,10 +4980,10 @@
     },
     {
         "pk": 184,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-10143",
             "barrier_symbol": "EC-MADB-10143",
@@ -5008,10 +5008,10 @@
     },
     {
         "pk": 185,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-11120",
             "barrier_symbol": "EC-MADB-11120",
@@ -5035,10 +5035,10 @@
     },
     {
         "pk": 186,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-11101",
             "barrier_symbol": "EC-MADB-11101",
@@ -5062,10 +5062,10 @@
     },
     {
         "pk": 187,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-10304",
             "barrier_symbol": "EC-MADB-10304",
@@ -5089,10 +5089,10 @@
     },
     {
         "pk": 188,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-10144",
             "barrier_symbol": "EC-MADB-10144",
@@ -5117,10 +5117,10 @@
     },
     {
         "pk": 189,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-12700",
             "barrier_symbol": "EC-MADB-12700",
@@ -5144,10 +5144,10 @@
     },
     {
         "pk": 190,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-12165",
             "barrier_symbol": "EC-MADB-12165",
@@ -5171,10 +5171,10 @@
     },
     {
         "pk": 191,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-11141",
             "barrier_symbol": "EC-MADB-11141",
@@ -5198,10 +5198,10 @@
     },
     {
         "pk": 192,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-11140",
             "barrier_symbol": "EC-MADB-11140",
@@ -5225,10 +5225,10 @@
     },
     {
         "pk": 193,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-11122",
             "barrier_symbol": "EC-MADB-11122",
@@ -5252,10 +5252,10 @@
     },
     {
         "pk": 194,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-11145",
             "barrier_symbol": "EC-MADB-11145",
@@ -5279,10 +5279,10 @@
     },
     {
         "pk": 195,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-11142",
             "barrier_symbol": "EC-MADB-11142",
@@ -5306,10 +5306,10 @@
     },
     {
         "pk": 196,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-10985",
             "barrier_symbol": "EC-MADB-10985",
@@ -5333,10 +5333,10 @@
     },
     {
         "pk": 197,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-11143",
             "barrier_symbol": "EC-MADB-11143",
@@ -5360,10 +5360,10 @@
     },
     {
         "pk": 198,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-11144",
             "barrier_symbol": "EC-MADB-11144",
@@ -5387,10 +5387,10 @@
     },
     {
         "pk": 199,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-11420",
             "barrier_symbol": "EC-MADB-11420",
@@ -5414,10 +5414,10 @@
     },
     {
         "pk": 200,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-12540",
             "barrier_symbol": "EC-MADB-12540",
@@ -5444,10 +5444,10 @@
     },
     {
         "pk": 201,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-10800",
             "barrier_symbol": "EC-MADB-10800",
@@ -5471,10 +5471,10 @@
     },
     {
         "pk": 202,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-12100",
             "barrier_symbol": "EC-MADB-12100",
@@ -5498,10 +5498,10 @@
     },
     {
         "pk": 203,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-12140",
             "barrier_symbol": "EC-MADB-12140",
@@ -5525,10 +5525,10 @@
     },
     {
         "pk": 204,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-11903",
             "barrier_symbol": "EC-MADB-11903",
@@ -5552,10 +5552,10 @@
     },
     {
         "pk": 205,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-11580",
             "barrier_symbol": "EC-MADB-11580",
@@ -5579,10 +5579,10 @@
     },
     {
         "pk": 206,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-11600",
             "barrier_symbol": "EC-MADB-11600",
@@ -5608,10 +5608,10 @@
     },
     {
         "pk": 207,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-11623",
             "barrier_symbol": "EC-MADB-11623",
@@ -5635,10 +5635,10 @@
     },
     {
         "pk": 208,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-10112",
             "barrier_symbol": "EC-MADB-10112",
@@ -5662,10 +5662,10 @@
     },
     {
         "pk": 209,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-10101",
             "barrier_symbol": "EC-MADB-10101",
@@ -5689,10 +5689,10 @@
     },
     {
         "pk": 210,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-11201",
             "barrier_symbol": "EC-MADB-11201",
@@ -5716,10 +5716,10 @@
     },
     {
         "pk": 211,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-11203",
             "barrier_symbol": "EC-MADB-11203",
@@ -5743,10 +5743,10 @@
     },
     {
         "pk": 212,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-10116",
             "barrier_symbol": "EC-MADB-10116",
@@ -5770,10 +5770,10 @@
     },
     {
         "pk": 213,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-10082",
             "barrier_symbol": "EC-MADB-10082",
@@ -5797,10 +5797,10 @@
     },
     {
         "pk": 214,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-10703",
             "barrier_symbol": "EC-MADB-10703",
@@ -5825,10 +5825,10 @@
     },
     {
         "pk": 215,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-10280",
             "barrier_symbol": "EC-MADB-10280",
@@ -5852,10 +5852,10 @@
     },
     {
         "pk": 216,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-10284",
             "barrier_symbol": "EC-MADB-10284",
@@ -5880,10 +5880,10 @@
     },
     {
         "pk": 217,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-11225",
             "barrier_symbol": "EC-MADB-11225",
@@ -5907,10 +5907,10 @@
     },
     {
         "pk": 218,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-10063",
             "barrier_symbol": "EC-MADB-10063",
@@ -5935,10 +5935,10 @@
     },
     {
         "pk": 219,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-11223",
             "barrier_symbol": "EC-MADB-11223",
@@ -5962,10 +5962,10 @@
     },
     {
         "pk": 220,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-10984",
             "barrier_symbol": "EC-MADB-10984",
@@ -5989,10 +5989,10 @@
     },
     {
         "pk": 221,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-10119",
             "barrier_symbol": "EC-MADB-10119",
@@ -6016,10 +6016,10 @@
     },
     {
         "pk": 222,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-12641",
             "barrier_symbol": "EC-MADB-12641",
@@ -6043,10 +6043,10 @@
     },
     {
         "pk": 223,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-11181",
             "barrier_symbol": "EC-MADB-11181",
@@ -6070,10 +6070,10 @@
     },
     {
         "pk": 224,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-11345",
             "barrier_symbol": "EC-MADB-11345",
@@ -6097,10 +6097,10 @@
     },
     {
         "pk": 225,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-11800",
             "barrier_symbol": "EC-MADB-11800",
@@ -6124,10 +6124,10 @@
     },
     {
         "pk": 226,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-11781",
             "barrier_symbol": "EC-MADB-11781",
@@ -6151,10 +6151,10 @@
     },
     {
         "pk": 227,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-11780",
             "barrier_symbol": "EC-MADB-11780",
@@ -6178,10 +6178,10 @@
     },
     {
         "pk": 228,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-11901",
             "barrier_symbol": "EC-MADB-11901",
@@ -6205,10 +6205,10 @@
     },
     {
         "pk": 229,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-11902",
             "barrier_symbol": "EC-MADB-11902",
@@ -6232,10 +6232,10 @@
     },
     {
         "pk": 230,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-11361",
             "barrier_symbol": "EC-MADB-11361",
@@ -6259,10 +6259,10 @@
     },
     {
         "pk": 231,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-12220",
             "barrier_symbol": "EC-MADB-12220",
@@ -6287,10 +6287,10 @@
     },
     {
         "pk": 232,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-11183",
             "barrier_symbol": "EC-MADB-11183",
@@ -6314,10 +6314,10 @@
     },
     {
         "pk": 233,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-10282",
             "barrier_symbol": "EC-MADB-10282",
@@ -6341,10 +6341,10 @@
     },
     {
         "pk": 234,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-11182",
             "barrier_symbol": "EC-MADB-11182",
@@ -6368,10 +6368,10 @@
     },
     {
         "pk": 235,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-11340",
             "barrier_symbol": "EC-MADB-11340",
@@ -6395,10 +6395,10 @@
     },
     {
         "pk": 236,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-11189",
             "barrier_symbol": "EC-MADB-11189",
@@ -6422,10 +6422,10 @@
     },
     {
         "pk": 237,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-11300",
             "barrier_symbol": "EC-MADB-11300",
@@ -6449,10 +6449,10 @@
     },
     {
         "pk": 238,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-11344",
             "barrier_symbol": "EC-MADB-11344",
@@ -6476,10 +6476,10 @@
     },
     {
         "pk": 239,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-12001",
             "barrier_symbol": "EC-MADB-12001",
@@ -6503,10 +6503,10 @@
     },
     {
         "pk": 240,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-10184",
             "barrier_symbol": "EC-MADB-10184",
@@ -6530,10 +6530,10 @@
     },
     {
         "pk": 241,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-11284",
             "barrier_symbol": "EC-MADB-11284",
@@ -6557,10 +6557,10 @@
     },
     {
         "pk": 242,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-11281",
             "barrier_symbol": "EC-MADB-11281",
@@ -6584,10 +6584,10 @@
     },
     {
         "pk": 243,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-11280",
             "barrier_symbol": "EC-MADB-11280",
@@ -6611,10 +6611,10 @@
     },
     {
         "pk": 244,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-11277",
             "barrier_symbol": "EC-MADB-11277",
@@ -6638,10 +6638,10 @@
     },
     {
         "pk": 245,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-11282",
             "barrier_symbol": "EC-MADB-11282",
@@ -6665,10 +6665,10 @@
     },
     {
         "pk": 246,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-11283",
             "barrier_symbol": "EC-MADB-11283",
@@ -6692,10 +6692,10 @@
     },
     {
         "pk": 247,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-12161",
             "barrier_symbol": "EC-MADB-12161",
@@ -6719,10 +6719,10 @@
     },
     {
         "pk": 248,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-12162",
             "barrier_symbol": "EC-MADB-12162",
@@ -6746,10 +6746,10 @@
     },
     {
         "pk": 249,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-12170",
             "barrier_symbol": "EC-MADB-12170",
@@ -6773,10 +6773,10 @@
     },
     {
         "pk": 250,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-11365",
             "barrier_symbol": "EC-MADB-11365",
@@ -6800,10 +6800,10 @@
     },
     {
         "pk": 251,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-11364",
             "barrier_symbol": "EC-MADB-11364",
@@ -6827,10 +6827,10 @@
     },
     {
         "pk": 252,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-10064",
             "barrier_symbol": "EC-MADB-10064",
@@ -6855,10 +6855,10 @@
     },
     {
         "pk": 253,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-10982",
             "barrier_symbol": "EC-MADB-10982",
@@ -6882,10 +6882,10 @@
     },
     {
         "pk": 254,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-10066",
             "barrier_symbol": "EC-MADB-10066",
@@ -6910,10 +6910,10 @@
     },
     {
         "pk": 255,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-10240",
             "barrier_symbol": "EC-MADB-10240",
@@ -6937,10 +6937,10 @@
     },
     {
         "pk": 256,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-11273",
             "barrier_symbol": "EC-MADB-11273",
@@ -6964,10 +6964,10 @@
     },
     {
         "pk": 257,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-11242",
             "barrier_symbol": "EC-MADB-11242",
@@ -6991,10 +6991,10 @@
     },
     {
         "pk": 258,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-10142",
             "barrier_symbol": "EC-MADB-10142",
@@ -7019,10 +7019,10 @@
     },
     {
         "pk": 259,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-10164",
             "barrier_symbol": "EC-MADB-10164",
@@ -7046,10 +7046,10 @@
     },
     {
         "pk": 260,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-11341",
             "barrier_symbol": "EC-MADB-11341",
@@ -7073,10 +7073,10 @@
     },
     {
         "pk": 261,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-10160",
             "barrier_symbol": "EC-MADB-10160",
@@ -7100,10 +7100,10 @@
     },
     {
         "pk": 262,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-11360",
             "barrier_symbol": "EC-MADB-11360",
@@ -7127,10 +7127,10 @@
     },
     {
         "pk": 263,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-10182",
             "barrier_symbol": "EC-MADB-10182",
@@ -7154,10 +7154,10 @@
     },
     {
         "pk": 264,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-10181",
             "barrier_symbol": "EC-MADB-10181",
@@ -7181,10 +7181,10 @@
     },
     {
         "pk": 265,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-12341",
             "barrier_symbol": "EC-MADB-12341",
@@ -7208,10 +7208,10 @@
     },
     {
         "pk": 266,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-12340",
             "barrier_symbol": "EC-MADB-12340",
@@ -7235,10 +7235,10 @@
     },
     {
         "pk": 267,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-11061",
             "barrier_symbol": "EC-MADB-11061",
@@ -7262,10 +7262,10 @@
     },
     {
         "pk": 268,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-11081",
             "barrier_symbol": "EC-MADB-11081",
@@ -7289,10 +7289,10 @@
     },
     {
         "pk": 269,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-12120",
             "barrier_symbol": "EC-MADB-12120",
@@ -7316,10 +7316,10 @@
     },
     {
         "pk": 270,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-11200",
             "barrier_symbol": "EC-MADB-11200",
@@ -7343,10 +7343,10 @@
     },
     {
         "pk": 271,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-11406",
             "barrier_symbol": "EC-MADB-11406",
@@ -7370,10 +7370,10 @@
     },
     {
         "pk": 272,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-10132",
             "barrier_symbol": "EC-MADB-10132",
@@ -7398,10 +7398,10 @@
     },
     {
         "pk": 273,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-10708",
             "barrier_symbol": "EC-MADB-10708",
@@ -7426,10 +7426,10 @@
     },
     {
         "pk": 274,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-10707",
             "barrier_symbol": "EC-MADB-10707",
@@ -7455,10 +7455,10 @@
     },
     {
         "pk": 275,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-10721",
             "barrier_symbol": "EC-MADB-10721",
@@ -7485,10 +7485,10 @@
     },
     {
         "pk": 276,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-10706",
             "barrier_symbol": "EC-MADB-10706",
@@ -7514,10 +7514,10 @@
     },
     {
         "pk": 277,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-10723",
             "barrier_symbol": "EC-MADB-10723",
@@ -7544,10 +7544,10 @@
     },
     {
         "pk": 278,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-10724",
             "barrier_symbol": "EC-MADB-10724",
@@ -7572,10 +7572,10 @@
     },
     {
         "pk": 279,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-11680",
             "barrier_symbol": "EC-MADB-11680",
@@ -7600,10 +7600,10 @@
     },
     {
         "pk": 280,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-10710",
             "barrier_symbol": "EC-MADB-10710",
@@ -7628,10 +7628,10 @@
     },
     {
         "pk": 281,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-10685",
             "barrier_symbol": "EC-MADB-10685",
@@ -7655,10 +7655,10 @@
     },
     {
         "pk": 282,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-10700",
             "barrier_symbol": "EC-MADB-10700",
@@ -7682,10 +7682,10 @@
     },
     {
         "pk": 283,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-10701",
             "barrier_symbol": "EC-MADB-10701",
@@ -7709,10 +7709,10 @@
     },
     {
         "pk": 284,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-10722",
             "barrier_symbol": "EC-MADB-10722",
@@ -7738,10 +7738,10 @@
     },
     {
         "pk": 285,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-10711",
             "barrier_symbol": "EC-MADB-10711",
@@ -7766,10 +7766,10 @@
     },
     {
         "pk": 286,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-10580",
             "barrier_symbol": "EC-MADB-10580",
@@ -7794,10 +7794,10 @@
     },
     {
         "pk": 287,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-10440",
             "barrier_symbol": "EC-MADB-10440",
@@ -7821,10 +7821,10 @@
     },
     {
         "pk": 288,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-10460",
             "barrier_symbol": "EC-MADB-10460",
@@ -7848,10 +7848,10 @@
     },
     {
         "pk": 289,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-10500",
             "barrier_symbol": "EC-MADB-10500",
@@ -7876,10 +7876,10 @@
     },
     {
         "pk": 290,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-10480",
             "barrier_symbol": "EC-MADB-10480",
@@ -7903,10 +7903,10 @@
     },
     {
         "pk": 291,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-10522",
             "barrier_symbol": "EC-MADB-10522",
@@ -7930,10 +7930,10 @@
     },
     {
         "pk": 292,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-11343",
             "barrier_symbol": "EC-MADB-11343",
@@ -7957,10 +7957,10 @@
     },
     {
         "pk": 293,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-10702",
             "barrier_symbol": "EC-MADB-10702",
@@ -7985,10 +7985,10 @@
     },
     {
         "pk": 294,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-10705",
             "barrier_symbol": "EC-MADB-10705",
@@ -8014,10 +8014,10 @@
     },
     {
         "pk": 295,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-10115",
             "barrier_symbol": "EC-MADB-10115",
@@ -8041,10 +8041,10 @@
     },
     {
         "pk": 296,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-10921",
             "barrier_symbol": "EC-MADB-10921",
@@ -8068,10 +8068,10 @@
     },
     {
         "pk": 297,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-11185",
             "barrier_symbol": "EC-MADB-11185",
@@ -8095,10 +8095,10 @@
     },
     {
         "pk": 298,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-11190",
             "barrier_symbol": "EC-MADB-11190",
@@ -8122,10 +8122,10 @@
     },
     {
         "pk": 299,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-12040",
             "barrier_symbol": "EC-MADB-12040",
@@ -8149,10 +8149,10 @@
     },
     {
         "pk": 300,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-10080",
             "barrier_symbol": "EC-MADB-10080",
@@ -8177,10 +8177,10 @@
     },
     {
         "pk": 301,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-11400",
             "barrier_symbol": "EC-MADB-11400",
@@ -8204,10 +8204,10 @@
     },
     {
         "pk": 302,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-11405",
             "barrier_symbol": "EC-MADB-11405",
@@ -8231,10 +8231,10 @@
     },
     {
         "pk": 303,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-11186",
             "barrier_symbol": "EC-MADB-11186",
@@ -8258,10 +8258,10 @@
     },
     {
         "pk": 304,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-11161",
             "barrier_symbol": "EC-MADB-11161",
@@ -8285,10 +8285,10 @@
     },
     {
         "pk": 305,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-11162",
             "barrier_symbol": "EC-MADB-11162",
@@ -8312,10 +8312,10 @@
     },
     {
         "pk": 306,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-11163",
             "barrier_symbol": "EC-MADB-11163",
@@ -8339,10 +8339,10 @@
     },
     {
         "pk": 307,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-11840",
             "barrier_symbol": "EC-MADB-11840",
@@ -8366,10 +8366,10 @@
     },
     {
         "pk": 308,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-10104",
             "barrier_symbol": "EC-MADB-10104",
@@ -8394,10 +8394,10 @@
     },
     {
         "pk": 309,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-10961",
             "barrier_symbol": "EC-MADB-10961",
@@ -8421,10 +8421,10 @@
     },
     {
         "pk": 310,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-12066",
             "barrier_symbol": "EC-MADB-12066",
@@ -8448,10 +8448,10 @@
     },
     {
         "pk": 311,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-11202",
             "barrier_symbol": "EC-MADB-11202",
@@ -8475,10 +8475,10 @@
     },
     {
         "pk": 312,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-11404",
             "barrier_symbol": "EC-MADB-11404",
@@ -8502,10 +8502,10 @@
     },
     {
         "pk": 313,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-11841",
             "barrier_symbol": "EC-MADB-11841",
@@ -8529,10 +8529,10 @@
     },
     {
         "pk": 314,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-11403",
             "barrier_symbol": "EC-MADB-11403",
@@ -8556,10 +8556,10 @@
     },
     {
         "pk": 315,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-12000",
             "barrier_symbol": "EC-MADB-12000",
@@ -8583,10 +8583,10 @@
     },
     {
         "pk": 316,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-11402",
             "barrier_symbol": "EC-MADB-11402",
@@ -8610,10 +8610,10 @@
     },
     {
         "pk": 317,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-10221",
             "barrier_symbol": "EC-MADB-10221",
@@ -8637,10 +8637,10 @@
     },
     {
         "pk": 318,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-10043",
             "barrier_symbol": "EC-MADB-10043",
@@ -8665,10 +8665,10 @@
     },
     {
         "pk": 319,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-11166",
             "barrier_symbol": "EC-MADB-11166",
@@ -8692,10 +8692,10 @@
     },
     {
         "pk": 320,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-11167",
             "barrier_symbol": "EC-MADB-11167",
@@ -8719,10 +8719,10 @@
     },
     {
         "pk": 321,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-11169",
             "barrier_symbol": "EC-MADB-11169",
@@ -8746,10 +8746,10 @@
     },
     {
         "pk": 322,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-11170",
             "barrier_symbol": "EC-MADB-11170",
@@ -8773,10 +8773,10 @@
     },
     {
         "pk": 323,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-10940",
             "barrier_symbol": "EC-MADB-10940",
@@ -8800,10 +8800,10 @@
     },
     {
         "pk": 324,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-11740",
             "barrier_symbol": "EC-MADB-11740",
@@ -8827,10 +8827,10 @@
     },
     {
         "pk": 325,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-11842",
             "barrier_symbol": "EC-MADB-11842",
@@ -8854,10 +8854,10 @@
     },
     {
         "pk": 326,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-10139",
             "barrier_symbol": "EC-MADB-10139",
@@ -8882,10 +8882,10 @@
     },
     {
         "pk": 327,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-10686",
             "barrier_symbol": "EC-MADB-10686",
@@ -8910,10 +8910,10 @@
     },
     {
         "pk": 328,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-10683",
             "barrier_symbol": "EC-MADB-10683",
@@ -8938,10 +8938,10 @@
     },
     {
         "pk": 329,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-10113",
             "barrier_symbol": "EC-MADB-10113",
@@ -8965,10 +8965,10 @@
     },
     {
         "pk": 330,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-10660",
             "barrier_symbol": "EC-MADB-10660",
@@ -8992,10 +8992,10 @@
     },
     {
         "pk": 331,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-10740",
             "barrier_symbol": "EC-MADB-10740",
@@ -9021,10 +9021,10 @@
     },
     {
         "pk": 332,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-10900",
             "barrier_symbol": "EC-MADB-10900",
@@ -9048,10 +9048,10 @@
     },
     {
         "pk": 333,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-10920",
             "barrier_symbol": "EC-MADB-10920",
@@ -9075,10 +9075,10 @@
     },
     {
         "pk": 334,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-11601",
             "barrier_symbol": "EC-MADB-11601",
@@ -9102,10 +9102,10 @@
     },
     {
         "pk": 335,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-10283",
             "barrier_symbol": "EC-MADB-10283",
@@ -9132,10 +9132,10 @@
     },
     {
         "pk": 336,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-10791",
             "barrier_symbol": "EC-MADB-10791",
@@ -9160,10 +9160,10 @@
     },
     {
         "pk": 337,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-10787",
             "barrier_symbol": "EC-MADB-10787",
@@ -9189,10 +9189,10 @@
     },
     {
         "pk": 338,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-10881",
             "barrier_symbol": "EC-MADB-10881",
@@ -9217,10 +9217,10 @@
     },
     {
         "pk": 339,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-10789",
             "barrier_symbol": "EC-MADB-10789",
@@ -9245,10 +9245,10 @@
     },
     {
         "pk": 340,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-10790",
             "barrier_symbol": "EC-MADB-10790",
@@ -9273,10 +9273,10 @@
     },
     {
         "pk": 341,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-10786",
             "barrier_symbol": "EC-MADB-10786",
@@ -9301,10 +9301,10 @@
     },
     {
         "pk": 342,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-10212",
             "barrier_symbol": "EC-MADB-10212",
@@ -9328,10 +9328,10 @@
     },
     {
         "pk": 343,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-11560",
             "barrier_symbol": "EC-MADB-11560",
@@ -9355,10 +9355,10 @@
     },
     {
         "pk": 344,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-11413",
             "barrier_symbol": "EC-MADB-11413",
@@ -9382,10 +9382,10 @@
     },
     {
         "pk": 345,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-10981",
             "barrier_symbol": "EC-MADB-10981",
@@ -9409,10 +9409,10 @@
     },
     {
         "pk": 346,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-10980",
             "barrier_symbol": "EC-MADB-10980",
@@ -9436,10 +9436,10 @@
     },
     {
         "pk": 347,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-11412",
             "barrier_symbol": "EC-MADB-11412",
@@ -9463,10 +9463,10 @@
     },
     {
         "pk": 348,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-11411",
             "barrier_symbol": "EC-MADB-11411",
@@ -9490,10 +9490,10 @@
     },
     {
         "pk": 349,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-11409",
             "barrier_symbol": "EC-MADB-11409",
@@ -9517,10 +9517,10 @@
     },
     {
         "pk": 350,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-11410",
             "barrier_symbol": "EC-MADB-11410",
@@ -9544,10 +9544,10 @@
     },
     {
         "pk": 351,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-11401",
             "barrier_symbol": "EC-MADB-11401",
@@ -9571,10 +9571,10 @@
     },
     {
         "pk": 352,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-10301",
             "barrier_symbol": "EC-MADB-10301",
@@ -9598,10 +9598,10 @@
     },
     {
         "pk": 353,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-11367",
             "barrier_symbol": "EC-MADB-11367",
@@ -9625,10 +9625,10 @@
     },
     {
         "pk": 354,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-11366",
             "barrier_symbol": "EC-MADB-11366",
@@ -9652,10 +9652,10 @@
     },
     {
         "pk": 355,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-10201",
             "barrier_symbol": "EC-MADB-10201",
@@ -9679,10 +9679,10 @@
     },
     {
         "pk": 356,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-11187",
             "barrier_symbol": "EC-MADB-11187",
@@ -9706,10 +9706,10 @@
     },
     {
         "pk": 357,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-11188",
             "barrier_symbol": "EC-MADB-11188",
@@ -9733,10 +9733,10 @@
     },
     {
         "pk": 358,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-11184",
             "barrier_symbol": "EC-MADB-11184",
@@ -9760,10 +9760,10 @@
     },
     {
         "pk": 359,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-11180",
             "barrier_symbol": "EC-MADB-11180",
@@ -9787,10 +9787,10 @@
     },
     {
         "pk": 360,
-        "model": "barriers.BarrierRecord",
+        "model": "barriers.BarrierNotification",
         "fields": {
-            "created_date": "2017-10-03",
-            "updated_date": "2017-10-03",
+            "created_date": "2017-10-09",
+            "updated_date": "2017-10-09",
             "barrier_source": 2,
             "core_symbol": "EC-MADB-10205",
             "barrier_symbol": "EC-MADB-10205",

@@ -29,16 +29,16 @@ tr-home
       <div class="grid-container grid-container--inner">
         <div class="column-full dit-hero__copy">
             <h1 class="dit-hero__title">{% trans "This barrier is affecting me" %}</h1>
-            <p class="dit-hero__summary">Photo voltaic panels</p>
+            <p class="dit-hero__summary">{{ barrier.title }}</p>
             <div class="grid-container grid-container--inner">
               <div class="column-two-third">
                 <p class="dit-hero__summary">
-                  Country: United States<br>
-                  Sector: Energy equipment<br>
-                  Barrier type: Burdensome customs procedures
+                  Country: {{ barrier.country }}<br>
+                  Sector: {{ barrier.sectors_text }}<br>
+                  Barrier type: {% for type in barrier.barrier_types.all %}{{ type }}{% endfor %}
                 </p>
 
-                <p class="dit-hero__summary">Consignments of photo voltaic panels from EU countries are being subject to particularly rigorous document inspection procedures at all ports of entry to the US. Onward transport has been delayed at San Francisco, New York, Delaware and Houston.</p>
+                <p class="dit-hero__summary">{{ barrier.summary }}</p>
               </div>
               <div class="column-one-third">
                 <form action="{% url 'report-barrier-step1' %}" method="get">
