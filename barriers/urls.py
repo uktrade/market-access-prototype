@@ -104,7 +104,7 @@ urlpatterns = [
         name='report-barrier-register'
     ),
     url(r'^barriers/check',
-        ReportBarrierFormView.as_view(),
+        CheckBarriersFormView.as_view(),
         name='report-barrier-form'
     ),
     url(r'^barriers/notifications/(?P<pk>\w+)/report',
