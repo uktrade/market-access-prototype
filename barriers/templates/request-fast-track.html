@@ -24,9 +24,25 @@ tr-home
     </div>
   </div>
 
+
+
+  <style>
+    @media screen and (min-width: 768px){
+      .request{
+        border-right: 1px solid #979797;
+      }
+    }
+
+    @media screen and (max-width: 767px){
+      .column-one-half{
+        width: calc(100% - 30px);
+      }
+    }
+  </style>
+
   <div class="outer-container">
     <div class="grid-container grid-container--inner">
-      <div class="column-one-half" style="border-right: 1px solid #979797;">
+      <div class="column-one-half request">
         <h2 class="h3">How to request a fast track response</h2>
         <p>Call this 24-hour number: <a href="{% url 'fast-track-phone-text' %}">0800 123 4567</a></p>
 

@@ -33,13 +33,15 @@ tr-home
 
         <p class="push--top">Click on 'this barrier is affecting me' if you are affected by this barrier or a similar one and wish to report it.</p>
 
+        <p>Go straight to <a href="#ec">barriers reported to European Commission</a> or <a href="#wto">WTO Notifications</a></p>
+
         <h3 class="h4 push--top"><strong>Barriers affecting UK exporters</strong></h3>
         <ul class="" data-module="Accordion">
         {% for uk_barrier in object_list %}
           {% include 'components/barrier-detail-accordion.html' with barrier=uk_barrier %}
         {% endfor %}
         </ul>
-        <h3 class="h4" style="margin-top: 60px;"><strong>Barriers reported to European Commission</strong></h3>
+        <h3 id="ec" class="h4" style="margin-top: 60px;"><strong>Barriers reported to European Commission</strong></h3>
         <ul class="">
         {% for ecbarrier in ec_barriers %}
             {% include 'components/barrier-detail.html' with barrier=ecbarrier %}
@@ -56,12 +58,12 @@ tr-home
             {% include 'components/barrier-detail.html' with barrier=wtobarrier %}
         {% endfor %}
         </ul>
-        <h3 class="h4" style="margin-top: 60px;"><strong>WTO Notifications</strong></h3>
+        <h3 id="wto" class="h4" style="margin-top: 60px;"><strong>WTO Notifications</strong></h3>
         <p>The WTO manages a list of self-reported measures that can affect international trade.</p>
-        <p><a href="javascript:void;">Browse notifications related to your search here</a></p>
+        <p><a href="javascript:void(0);">Browse notifications related to your search here</a></p>
 
 
-        <div class="dit-reporting-cta" style="border-top: none;">
+        <div class="dit-reporting-cta">
           <p class="h3 dit-reporting-cta__title">If you are experiencing a trade barrier that isn't listed here you can report it.</p>
           <p class="h3"><a href="{% url 'report-barrier' %}">Report a trade barrier</a></p>
           <p class="h3"><a href="{% url 'report-barrier-form' %}">Check trade barriers in your target market</a></p>

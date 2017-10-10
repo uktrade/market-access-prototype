@@ -17,7 +17,7 @@
 {% block local_header__progress %}{% endblock %}
 
 {% block sidebar %}
-  {% include 'backend/components/sidebar-nav.html' with nav="lead" extraNav="true" %}
+  {% include 'backend/components/sidebar-nav--screening.html' with nav="lead" extraNav="true" %}
 {% endblock %}
 
 {% block content %}
@@ -68,7 +68,7 @@
         Country
       </label>
       <select id="country" class="form-control" name="country">
-        {% include 'components/countries.html' %}
+        {% include 'components/countries-simple.html' %}
       </select>
   </div>
 
@@ -103,7 +103,7 @@
 
 </form>
 
-<form action="{% url 'report-assign-lead-search-results' %}" method="get">
+<form action="{% url 'report-home-ready-to-proceed' %}" method="get">
 
     <label>Alternatively:</label>
 

@@ -15,6 +15,7 @@ from .views import (
     ComponentsView,
     DashboardView,
     DashboardSuccessView,
+    # Screen, find lead, and proceed
     ReportHomeView,
     ReportBarrierTypeView,
     ReportHomeMakeADecisionView,
@@ -28,7 +29,9 @@ from .views import (
     ReportAssignLeadSearchResultsView,
     ReportHomeReadyToProceedCreatedView,
     ReportHomeProceedToAssessmentView,
-    InviteLeadTimePassesView
+    InviteLeadTimePassesView,
+    # Assess and manage
+    BarrierHomeView
 )
 
 urlpatterns = [
@@ -48,6 +51,7 @@ urlpatterns = [
         DashboardSuccessView.as_view(),
         name='dashboard-success'
     ),
+    # Screen, find lead, and proceed
     url(r'^report-home$',
         ReportHomeView.as_view(),
         name='report-home'
@@ -103,5 +107,10 @@ urlpatterns = [
     url(r'^invite-lead-time-passes$',
         InviteLeadTimePassesView.as_view(),
         name='invite-lead-time-passes'
+    ),
+    # Assess and manage
+    url(r'^barrier-home$',
+        BarrierHomeView.as_view(),
+        name='barrier-home'
     ),
 ]

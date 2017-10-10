@@ -16,7 +16,8 @@
 {% block local_header__progress %}{% endblock %}
 
 {% block sidebar %}
-  {% include 'backend/components/sidebar-nav.html' with nav="lead" extraNav="true" %}
+  {% include 'backend/components/sidebar-nav--screening.html' with nav="lead" extraNav="true" %}
+  {% include 'backend/components/sidebar-nav--assess.html' with nav="lead" extraNav="true" %}
   {% include 'backend/components/sidebar-filters.html' %}
 {% endblock %}
 
@@ -94,7 +95,7 @@
             <tr>
                 <th>Client</th>
                 <td>
-                  <a href="javascript:void;">With a link</a>
+                  <a href="javascript:void(0);">With a link</a>
                 </td>
             </tr>
             <tr>

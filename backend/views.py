@@ -23,7 +23,7 @@ class DashboardSuccessView(ListView):
     template_name = 'backend/dashboard-success.html'
     pass
 
-
+# Screen, find lead, and proceed
 class ReportHomeView(ListView):
     model = BarrierReport
     template_name = 'backend/report-home.html'
@@ -102,4 +102,10 @@ class ReportHomeProceedToAssessmentView(ListView):
 class InviteLeadTimePassesView(ListView):
     model = BarrierReport
     template_name = 'backend/invite-lead-time-passes.html'
+    pass
+
+# Assessment and manage
+class BarrierHomeView(ListView):
+    model = BarrierReport
+    template_name = 'backend/barrier-home.html'
     pass

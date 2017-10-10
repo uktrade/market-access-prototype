@@ -2,22 +2,10 @@
               <div class="column-two-third">
 
                 <div class="dit-summary-section dit-accordion" style="border:none;">
-                  <button type="button"
-    								class="dit-accordion__title h4"
-    								id="accordion-button-{{ barrier.pk }}"
-    								aria-selected="false"
-    								role="tab"
-    								tabindex="0"
-    								aria-controls="accordion{{ barrier.pk }}"
-    								aria-expanded="false"
-    						   >
-    						   <span class="dit-accordion__title-wording">{{ barrier.title }}</span><br>
+                  <span class="dit-accordion__title h4" id="accordion-button-{{ barrier.pk }}">
+    						    <span class="dit-accordion__title-wording">{{ barrier.title }}</span><br>
                     <span class="font-small dit-accordion__toggle--show">Country: {{ barrier.country }}</span>
-    								<span class="dit-accordion__btn" aria-hidden="true">
-    									<span class="dit-accordion__toggle--show">+</span>
-    									<span class="dit-accordion__toggle--hide">-</span>
-    								</span>
-                  </button>
+                  </span>
                   <div
     								id="accordion{{ barrier.pk }}"
     								class="dit-accordion__body"

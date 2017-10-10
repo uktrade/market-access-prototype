@@ -17,7 +17,7 @@
 {% block local_header__progress %}{% endblock %}
 
 {% block sidebar %}
-  {% include 'backend/components/sidebar-nav.html' with nav="home" %}
+  {% include 'backend/components/sidebar-nav--screening.html' with nav="home" %}
 {% endblock %}
 
 {% block content %}
@@ -25,7 +25,11 @@
   <form method="get" action="{% url 'report-home-decision-made' %}">
 
     <fieldset class="form-group form-group__checkbox-group" id="decision-wrapper">
-      <legend class="form-label-bold">What’s next?</legend>
+      <legend class="c-form-group__label">
+        <span class="c-form-group__label-text">
+          What's next?
+        </span>
+      </legend>
       <label class="block-label selection-button-radio">
         <input name="decision" value="Approve for assessment" type="radio"> Approve for assessment
       </label>

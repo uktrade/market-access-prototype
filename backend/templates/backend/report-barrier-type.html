@@ -18,68 +18,71 @@
 {% block local_header__progress %}{% endblock %}
 
 {% block sidebar %}
-  {% include 'backend/components/sidebar-nav.html' with nav="home" %}
+  {% include 'backend/components/sidebar-nav--screening.html' with nav="home" %}
 {% endblock %}
 
 {% block content %}
 
   <h2 class="heading-medium">Barrier type</h2>
-  <p>Confirm or change the barrier type for <a href="">the problem reported</a></p>
+  <p>Confirm or change the barrier type for <a href="{% url 'report-home' %}">the problem reported</a></p>
 
-    <table class="table--key-value table--striped">
-        <tbody>
-            <tr>
-                <th>Reported type(s)</th>
-                <td>Easy-read barrier type 1</td>
-            </tr>
-            <tr>
-                <th></th>
-                <td>Easy-read barrier type 2</td>
-            </tr>
-        </tbody>
-    </table>
+  <table class="table--key-value table--striped">
+      <tbody>
+          <tr>
+              <th>Reported type(s)</th>
+              <td>Easy-read barrier type 1</td>
+          </tr>
+          <tr>
+              <th></th>
+              <td>Easy-read barrier type 2</td>
+          </tr>
+      </tbody>
+  </table>
 
-    <form method="get" action="{% url 'report-home-make-a-decision' %}">
-      <div id="group-field-barrier-type" class="c-form-group c-form-group--inline">
-        <label class="c-form-group__label" for="field-barrier-type">
-          <span class="c-form-group__label-text">
-            Select barrier type (method 1)
-          </span>
-        </label>
-          <select id="field-barrier-type" name="barrier_type" class="c-form-control">
-              <option value="">List of HMG barrier types</option>
-            {% recursetree barrier_types %}
-              <option value="{{node.pk}}">{{node.name}}</option>
-              {% if not node.is_leaf_node %}
-                {{ children }}
-              {% endif %}
-            {% endrecursetree %}
-          </select>
-        <div>
-          <a href="#" target="_blank">Learn more about the HMG barrier types</a> (opens in new window)
-        </div>
+  <form method="get" action="{% url 'report-home-make-a-decision' %}">
+    <div id="group-field-barrier-type" class="c-form-group">
+      <label class="c-form-group__label" for="field-barrier-type">
+        <span class="c-form-group__label-text">
+          Select barrier type (method 1)
+        </span>
+      </label>
+      <select id="field-barrier-type" name="barrier_type" class="c-form-control">
+        <option value="">List of HMG barrier types</option>
+        {% recursetree barrier_types %}
+          <option value="{{node.pk}}">{{node.name}}</option>
+          {% if not node.is_leaf_node %}
+            {{ children }}
+          {% endif %}
+        {% endrecursetree %}
+      </select>
+      <span class="form-hint">
+        <br>
+        <a href="javascript:void(0);" target="_blank">Learn more about the HMG barrier types</a> (opens in new window)
+      </span>
+    </div>
+    <div class="c-form-actions">
+      <button class="button" type="submit">Save</button>
+      <a href="{% url 'report-home' %}">Back</a>
+    </div>
+  </form>
+  {% comment %}
+  <form method="get" action="{% url 'report-home-make-a-decision' %}">
+    <div id="group-field-barrier-type" class="c-form-group c-form-group--inline">
+      <label class="c-form-group__label" for="field-barrier-type">
+        <span class="c-form-group__label-text">
+          Select barrier type
+        </span>
+      </label>
+      {{ form.barrier_type }}
+      <div>
+        <a href="" target="_blank">Learn more about the HMG barrier types</a> (opens in new window)
       </div>
-      <div class="c-form-actions">
-        <button class="button" type="submit">Save</button>
-        <a href="{% url 'report-home' %}">Back</a>
-      </div>
-    </form>
-    <form method="get" action="{% url 'report-home-make-a-decision' %}">
-      <div id="group-field-barrier-type" class="c-form-group c-form-group--inline">
-        <label class="c-form-group__label" for="field-barrier-type">
-          <span class="c-form-group__label-text">
-            Select barrier type (method 2)
-          </span>
-        </label>
-        {{ form.barrier_type }}
-         <div>
-          <a href="#" target="_blank">Learn more about the HMG barrier types</a> (opens in new window)
-        </div>
-      </div>
-      <div class="c-form-actions">
-        <button class="button ">Save</button>
-        <a href="{% url 'report-home' %}">Back</a>
-      </div>
-    </form>
- 
+    </div>
+    <div class="c-form-actions">
+      <button class="button ">Save</button>
+      <a href="{% url 'report-home' %}">Back</a>
+    </div>
+  </form>
+  {% endcomment %}
+
 {% endblock %}

@@ -55,13 +55,33 @@ which will help us to focus resources where they can be most effective. </p>
 
         <p>By reporting a trade barrier you can get the help you need, and also provide information which will help us to focus resources where they can be most effective.</p>
         <p>Our team will review your report and respond to it within five days. </p>
+        <h3 class="h4">Your data and privacy</h3>
+        <p>We'll respect any needs you have for confidentiality, and we'll keep you updated on progress.</p>
     </div>
     </div>
   </div>
 
+  <style>
+    @media screen and (min-width: 768px){
+      .how-it-works{
+        border-right: 1px solid #979797;
+      }
+    }
+
+    @media screen and (max-width: 767px){
+      .column-one-half{
+        width: calc(100% - 30px);
+      }
+
+      .how-it-works-button{
+        float: none !important;
+      }
+    }
+  </style>
+
   <div class="outer-container">
     <div class="grid-container grid-container--inner">
-      <div class="column-one-half" style="border-right: 1px solid #979797;">
+      <div class="column-one-half how-it-works">
         <h2 class="h3">How it works</h2>
         <ol class="dit-number-list">
           <li>Tell us about you/your role</li>
@@ -70,11 +90,9 @@ which will help us to focus resources where they can be most effective. </p>
           <li>Review next steps</li>
           <li>Provide additional information that may help us</li>
         </ol>
-        <p>We'll respect any needs you have for confidentiality, and we'll keep
-you updated on progress.</p>
         <form action="{% url 'report-barrier-step1' %}" method="get">
           <input type="hidden" name="existing" value="false">
-          <button type="submit" class="button button-red button-large float--right push--right">Report a barrier</button>
+          <button type="submit" class="button button-red button-large float--right push--right how-it-works-button">Report a barrier</button>
         </form>
       </div>
       <div class="column-one-half">

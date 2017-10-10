@@ -17,7 +17,7 @@
 {% block local_header__progress %}{% endblock %}
 
 {% block sidebar %}
-  {% include 'backend/components/sidebar-nav.html' with nav="barrier" extraNav="true" %}
+  {% include 'backend/components/sidebar-nav--screening.html' with nav="barrier" extraNav="true" %}
 {% endblock %}
 
 {% block content %}
@@ -45,11 +45,48 @@ exported to eg. Import of steel rods into India
       <span class="form-hint">
         Provide a brief summary of the report. It is for government use only.
       </span>
-      <textarea id="summary" class="form-control" name="summary" cols="10" rows="5"></textarea>
-      <span class="form-hint">
+      <textarea id="summary" class="form-control" name="summary" cols="10" rows="5" maxlength="200"></textarea>
+      <span class="form-hint" id="summary-count">
         200 characters max.
       </span>
   </div>
+  <script>
+    // Feedback to user how many characters they have left in their textarea
+    // NOTE: This JS has been inlined because it's a prototype and only used once
+    (function(){
+
+      /**
+       * {var} object
+       * DOM element
+       */
+      var summary = document.getElementById('summary');
+
+      /**
+       * update the count message
+       * @param {object} textarea the DOM object we are testing
+       *
+       * @return {void}
+       */
+      function updateCount(textarea){
+        var length = textarea.value.length;
+        var maxLength = parseInt(textarea.getAttribute('maxlength'), 10);
+        var whatsLeft = (maxLength - length);
+        var summaryCount = document.getElementById('summary-count');
+
+        summaryCount.innerHTML = whatsLeft + ' character(s) left';
+      }
+
+      // Run everytime the user types _ no delay here we *don't* need to throttle/debounce
+      summary.addEventListener('keyup', function(event){
+        updateCount(event.target);
+      });
+
+      // Run onload, when data may be pre-populated
+      window.addEventListener('load', function(){
+        updateCount(summary);
+      });
+    })();
+  </script>
 
   <div class="c-form-actions">
     <button class="button" type="submit">Save</button>
