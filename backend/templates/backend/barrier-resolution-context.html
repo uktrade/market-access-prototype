@@ -1,0 +1,59 @@
+{% extends './datahub_layout.html' %}
+{% load staticfiles %}
+{% load trans from i18n %}
+{% block css %}
+{% endblock %}
+{% block head_title %}Data Hub - Trade Barriers{% endblock %}
+{% block breadcrumb %}{% include 'backend/components/breadcrumb.html' with title="Barrier record" %}{% endblock %}
+{% block local_header__title_before %}{% endblock %}
+{% block local_header__title %}
+  Barrier name consisting of country and product at minimum
+{% endblock %}
+{% block local_header__meta %}
+<div class="c-meta-list">
+  Sector, Her Majesty’s Government barrier type, Country, Date added
+</div>
+{% endblock %}
+{% block local_header__progress %}
+<div class="c-progress">
+  <ol class="c-progress-bar">
+      <li class="c-progress__stage">
+        <span class="c-progress__stage-title">Assessment</span>
+      </li>
+      <li class="c-progress__stage is-active">
+        <span class="c-progress__stage-title">Resolution / Close</span>
+      </li>
+  </ol>
+</div>
+{% endblock %}
+
+{% block sidebar %}
+  {% include 'backend/components/sidebar-nav--assess.html' with nav="resolution" %}
+{% endblock %}
+
+{% block content %}
+  <h2 class="heading-medium" id="heading-1">Opportunities and issues</h2>
+  <div class="flash flash--info-muted">
+      <p>Opportunities or issues that impede or aid the barrier’s resolution</p>
+  </div>
+  <p><a href="javascript:void(0);" class="button" aria-labelledby="heading-1">Add detail</a></p>
+
+  <h2 class="heading-medium" id="heading-2">WTO infringments</h2>
+  <div class="flash flash--info-muted">
+      <p>Detail WTO procedural or legal obligations not met</p>
+  </div>
+  <p><a href="javascript:void(0);" class="button" aria-labelledby="heading-2">Add detail</a></p>
+
+  <h2 class="heading-medium" id="heading-3">Trade agreements</h2>
+  <div class="flash flash--info-muted">
+      <p>Provide details on how the barrier affects trade agreements</p>
+  </div>
+  <p><a href="javascript:void(0);" class="button" aria-labelledby="heading-3">Add detail</a></p>
+
+  <h2 class="heading-medium" id="heading-4">Other countries affected</h2>
+  <div class="flash flash--info-muted">
+      <p>Provide details on how the barrier affects trade agreements</p>
+  </div>
+  <p><a href="javascript:void(0);" class="button" aria-labelledby="heading-4">Add detail</a></p>
+
+{% endblock %}

@@ -3,7 +3,7 @@
 {% load trans from i18n %}
 {% block css %}
 {% endblock %}
-{% block head_title %}Barrier record: Data Hub - Trade barriers{% endblock %}
+{% block head_title %}Data Hub - Trade Barriers{% endblock %}
 {% block breadcrumb %}{% include 'backend/components/breadcrumb.html' with title="Barrier record" %}{% endblock %}
 {% block local_header__title_before %}{% endblock %}
 {% block local_header__title %}
@@ -17,10 +17,10 @@
 {% block local_header__progress %}
 <div class="c-progress">
   <ol class="c-progress-bar">
-      <li class="c-progress__stage is-active">
-        <span class="c-progress__stage-title">Assessment <br> (<a href="#">3 tasks remaining</a>)</span>
-      </li>
       <li class="c-progress__stage">
+        <span class="c-progress__stage-title">Assessment
+      </li>
+      <li class="c-progress__stage is-active">
         <span class="c-progress__stage-title">Resolution / Close</span>
       </li>
   </ol>
@@ -28,20 +28,22 @@
 {% endblock %}
 
 {% block sidebar %}
-  {% include 'backend/components/sidebar-nav--assess.html' with nav="home" %}
+  {% include 'backend/components/sidebar-nav--assess.html' with nav="sensitivities" %}
 {% endblock %}
 
 {% block content %}
-  <h2 class="heading-medium">Assessment</h2>
-  <p>Click to complete the following sections before making your assessment</p>
-
-  <div class="flash flash--info">
-      <p><a href="{% url 'barrier-home' %}">Organisational impact</a></p>
-      <p><a href="{% url 'barrier-home' %}">Impact on the UK</a></p>
-      <p><a href="{% url 'barrier-home' %}">Chance of success</a></p>
-  </div>
-
+  <h2 class="heading-medium">Commercial/confidential sensitivities</h2>
+  <table class="table--key-value table--striped">
+      <tbody>
+          <tr>
+              <th><a href="javascript:void(0);">Sensitivity 1</a></th>
+              <td>Name of UK exporting company X</td>
+              <td>Date of entry</td>
+          </tr>
+      </tbody>
+  </table>
   <p>
-      <div class="button disabled">Make a screening decision</div>
+      <a href="javascript:void(0);" class="button-secondary">Add sensitivity</a>
   </p>
+
 {% endblock %}

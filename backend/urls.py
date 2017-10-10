@@ -30,8 +30,19 @@ from .views import (
     ReportHomeReadyToProceedCreatedView,
     ReportHomeProceedToAssessmentView,
     InviteLeadTimePassesView,
-    # Assess and manage
-    BarrierHomeView
+    # Assessment and resolutions
+    BarrierSummaryView,
+    BarrierOrganisationalImpactView,
+    BarrierImpactOnTheUKView,
+    BarrierChanceOfSuccessView,
+    BarrierAssociatedBarriersView,
+    BarrierResolutionContextView,
+    BarrierInteractionsView,
+    BarrierEventsView,
+    BarrierContactsView,
+    BarrierInstancesView,
+    BarrierSensitivitiesView,
+    BarrierPublicSummaryView
 )
 
 urlpatterns = [
@@ -108,9 +119,53 @@ urlpatterns = [
         InviteLeadTimePassesView.as_view(),
         name='invite-lead-time-passes'
     ),
-    # Assess and manage
-    url(r'^barrier-home$',
-        BarrierHomeView.as_view(),
-        name='barrier-home'
+    # Assessment and resolutions
+    url(r'^barrier-summary$',
+        BarrierSummaryView.as_view(),
+        name='barrier-summary'
+    ),
+    url(r'^barrier/organisational-impact$',
+        BarrierOrganisationalImpactView.as_view(),
+        name='barrier-organisational-impact'
+    ),
+    url(r'^barrier/impact-on-the-uk',
+        BarrierImpactOnTheUKView.as_view(),
+        name='barrier-impact-on-the-uk'
+    ),
+    url(r'^barrier/chance-of-success$',
+        BarrierChanceOfSuccessView.as_view(),
+        name='barrier-chance-of-success'
+    ),
+    url(r'^barrier/associated-barriers$',
+        BarrierAssociatedBarriersView.as_view(),
+        name='barrier-associated-barriers'
+    ),
+    url(r'^barrier/resolution-context$',
+        BarrierResolutionContextView.as_view(),
+        name='barrier-resolution-context'
+    ),
+    url(r'^barrier/interactions$',
+        BarrierInteractionsView.as_view(),
+        name='barrier-interactions'
+    ),
+    url(r'^barrier/events$',
+        BarrierEventsView.as_view(),
+        name='barrier-events'
+    ),
+    url(r'^barrier/contacts$',
+        BarrierContactsView.as_view(),
+        name='barrier-contacts'
+    ),
+    url(r'^barrier/instances$',
+        BarrierInstancesView.as_view(),
+        name='barrier-instances'
+    ),
+    url(r'^barrier/sensitivities$',
+        BarrierSensitivitiesView.as_view(),
+        name='barrier-sensitivities'
+    ),
+    url(r'^barrier/public-summary$',
+        BarrierPublicSummaryView.as_view(),
+        name='barrier-public-summary'
     ),
 ]

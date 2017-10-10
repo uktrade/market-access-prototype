@@ -1,0 +1,42 @@
+<li class="c-entity-list__item">
+  <div class="c-entity c-entity--contact">
+      <div class="c-entity__header">
+          <h3 class="c-entity__title">
+              <a href="javascript:void(0);">Barrier name consisting of country and product at minimum</a>
+          </h3>
+          <div class="c-entity__badges">
+              <div class="c-meta-list ">
+                  {% if country1 %}
+                  <div class="c-meta-list__item">
+                      <span class="c-meta-list__item-label u-visually-hidden">
+                        Country
+                      </span>
+                      <span class="c-badge">{{ country1 }}</span>
+                  </div>
+                  {% endif %}
+              </div>
+          </div>
+      </div>
+
+      <div class="c-entity__content">
+          <div class="c-meta-list  c-meta-list--split c-meta-list--inline">
+              <div class="c-meta-list__item">
+                  <span class="c-meta-list__item-label  u-visually-hidden">
+                    Sector
+                  </span>
+                  <span class="c-meta-list__item-value">Sector name</span>
+              </div>
+
+              <div class="c-meta-list__item">
+                  <a href="javascript:void(0);" class="button-secondary">Disassociate</a>
+              </div>
+              <div class="c-meta-list__item">
+                  <span class="c-meta-list__item-label  u-visually-hidden">
+                    Barrier
+                  </span>
+                  <span class="c-meta-list__item-value">HMG barrier name</span>
+              </div>
+          </div>
+      </div>
+  </div>
+</li>

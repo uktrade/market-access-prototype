@@ -28,9 +28,18 @@
 {% endblock %}
 
 {% block sidebar %}
-  {% include 'backend/components/sidebar-nav--assess.html' with nav="home" %}
+  {% include 'backend/components/sidebar-nav--assess.html' with nav="organisational" %}
 {% endblock %}
 
 {% block content %}
+  <h2 class="heading-medium">Organisational impact</h2>
+  <p class="heading-small">Name of UK exporting Company X</p>
+  <div class="flash flash--info-muted">
+      <p>Add at least one impact description / detail</p>
+  </div>
+
+  <p>
+      <a href="{% url 'barrier-organisational-impact' %}" class="button">Add impact</a>
+  </p>
 
 {% endblock %}

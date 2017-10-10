@@ -17,10 +17,10 @@
 {% block local_header__progress %}
 <div class="c-progress">
   <ol class="c-progress-bar">
-      <li class="c-progress__stage is-active">
-        <span class="c-progress__stage-title">Assessment <br> (<a href="#">3 tasks remaining</a>)</span>
-      </li>
       <li class="c-progress__stage">
+        <span class="c-progress__stage-title">Assessment
+      </li>
+      <li class="c-progress__stage is-active">
         <span class="c-progress__stage-title">Resolution / Close</span>
       </li>
   </ol>
@@ -28,9 +28,30 @@
 {% endblock %}
 
 {% block sidebar %}
-  {% include 'backend/components/sidebar-nav--assess.html' with nav="home" %}
+  {% include 'backend/components/sidebar-nav--assess.html' with nav="contacts" %}
 {% endblock %}
 
 {% block content %}
+  <h2 class="heading-medium">Community of resolution</h2>
+
+  <ol class="c-entity-list">
+    {% include 'backend/components/associated-barriers-result.html' %}
+    {% include 'backend/components/associated-barriers-result.html' %}
+  </ol>
+
+  <p>
+      <a href="{% url 'barrier-contacts' %}" class="button-secondary">Add member</a>
+  </p>
+
+  <h2 class="heading-medium">Other contacts</h2>
+
+  <ol class="c-entity-list">
+    {% include 'backend/components/associated-barriers-result.html' %}
+    {% include 'backend/components/associated-barriers-result.html' %}
+  </ol>
+
+  <p>
+      <a href="{% url 'barrier-contacts' %}" class="button-secondary">Add member</a>
+  </p>
 
 {% endblock %}

@@ -1,4 +1,14 @@
 <nav class="c-local-nav" aria-label="local navigation">
-    <a class="c-local-nav__link {% if nav == 'home' %}is-active{% endif %}" href="{% url 'barrier-home' %}">Barrier summary</a>
-    <a class="c-local-nav__link {% if nav == 'organisational' %}is-active{% endif %}" href="{% url 'barrier-home' %}">Organisational impact</a>
+    <a class="c-local-nav__link {% if nav == 'home' %}is-active{% endif %}" href="{% url 'barrier-summary' %}">Barrier summary</a>
+    <a class="c-local-nav__link {% if nav == 'organisational' %}is-active{% endif %}" href="{% url 'barrier-organisational-impact' %}">Organisational impact</a>
+    <a class="c-local-nav__link {% if nav == 'impact' %}is-active{% endif %}" href="{% url 'barrier-impact-on-the-uk' %}">Impact on the UK</a>
+    <a class="c-local-nav__link {% if nav == 'chance' %}is-active{% endif %}" href="{% url 'barrier-chance-of-success' %}">Chance of success</a>
+    <a class="c-local-nav__link {% if nav == 'associated' %}is-active{% endif %}" href="{% url 'barrier-associated-barriers' %}">Associated barriers</a>
+    <a class="c-local-nav__link {% if nav == 'resolution' %}is-active{% endif %}" href="{% url 'barrier-resolution-context' %}">Resolution context</a>
+    <a class="c-local-nav__link {% if nav == 'interactions' %}is-active{% endif %}" href="{% url 'barrier-interactions' %}">Interactions</a>
+    <a class="c-local-nav__link {% if nav == 'events' %}is-active{% endif %}" href="{% url 'barrier-events' %}">Events</a>
+    <a class="c-local-nav__link {% if nav == 'contacts' %}is-active{% endif %}" href="{% url 'barrier-contacts' %}">Contacts</a>
+    <a class="c-local-nav__link {% if nav == 'instances' %}is-active{% endif %}" href="javascript:void(0);">Barrier instances</a>
+    <a class="c-local-nav__link {% if nav == 'sensitivities' %}is-active{% endif %}" href="{% url 'barrier-sensitivities' %}">Sensitivities</a>
+    <a class="c-local-nav__link {% if nav == 'public' %}is-active{% endif %}" href="javascript:void(0);">Public summary</a>
 </nav>
