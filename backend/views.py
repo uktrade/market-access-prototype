@@ -104,8 +104,63 @@ class InviteLeadTimePassesView(ListView):
     template_name = 'backend/invite-lead-time-passes.html'
     pass
 
-# Assessment and manage
-class BarrierHomeView(ListView):
+# Assessment and resolutions
+class BarrierSummaryView(ListView):
     model = BarrierReport
-    template_name = 'backend/barrier-home.html'
+    template_name = 'backend/barrier-summary.html'
+    pass
+
+class BarrierOrganisationalImpactView(ListView):
+    model = BarrierReport
+    template_name = 'backend/barrier-organisational-impact.html'
+    pass
+
+class BarrierImpactOnTheUKView(ListView):
+    model = BarrierReport
+    template_name = 'backend/barrier-impact-on-the-uk.html'
+    pass
+
+class BarrierChanceOfSuccessView(ListView):
+    model = BarrierReport
+    template_name = 'backend/barrier-chance-of-success.html'
+    pass
+
+class BarrierAssociatedBarriersView(ListView):
+    model = BarrierReport
+    template_name = 'backend/barrier-associated-barriers.html'
+    pass
+
+class BarrierResolutionContextView(ListView):
+    model = BarrierReport
+    template_name = 'backend/barrier-resolution-context.html'
+    pass
+
+class BarrierInteractionsView(ListView):
+    model = BarrierReport
+    template_name = 'backend/barrier-interactions.html'
+    pass
+
+class BarrierEventsView(ListView):
+    model = BarrierReport
+    template_name = 'backend/barrier-events.html'
+    pass
+
+class BarrierContactsView(ListView):
+    model = BarrierReport
+    template_name = 'backend/barrier-contacts.html'
+    pass
+
+class BarrierInstancesView(ListView):
+    model = BarrierReport
+    template_name = 'backend/barrier-instances.html'
+    pass
+
+class BarrierSensitivitiesView(ListView):
+    model = BarrierReport
+    template_name = 'backend/barrier-sensitivities.html'
+    pass
+
+class BarrierPublicSummaryView(ListView):
+    model = BarrierReport
+    template_name = 'backend/barrier-public-summary.html'
     pass

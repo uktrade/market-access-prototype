@@ -1,0 +1,77 @@
+{% extends './datahub_layout.html' %}
+{% load staticfiles %}
+{% load trans from i18n %}
+{% block css %}
+{% endblock %}
+{% block head_title %}Data Hub - Trade Barriers{% endblock %}
+{% block breadcrumb %}{% include 'backend/components/breadcrumb.html' with title="Barrier record" %}{% endblock %}
+{% block local_header__title_before %}{% endblock %}
+{% block local_header__title %}
+  Barrier name consisting of country and product at minimum
+{% endblock %}
+{% block local_header__meta %}
+<div class="c-meta-list">
+  Sector, Her Majesty’s Government barrier type, Country, Date added
+</div>
+{% endblock %}
+{% block local_header__progress %}
+<div class="c-progress">
+  <ol class="c-progress-bar">
+      <li class="c-progress__stage is-active">
+        <span class="c-progress__stage-title">Assessment <br> (<a href="#">1 task remaining</a>)</span>
+      </li>
+      <li class="c-progress__stage">
+        <span class="c-progress__stage-title">Resolution / Close</span>
+      </li>
+  </ol>
+</div>
+{% endblock %}
+
+{% block sidebar %}
+  {% include 'backend/components/sidebar-nav--assess.html' with nav="chance" %}
+{% endblock %}
+
+{% block content %}
+  <h2 class="heading-medium">Chance of success</h2>
+  <p>Choose a score to indicate the chance of successfully resolving this barrier should action be taken to resolve it.</p>
+
+  {# link to barrier-summary-make-assessment #}
+  <form action="{% url 'barrier-summary' %}" method="get">
+
+  <style scoped>
+    .table-search .block-label {
+      min-height: 35px;
+    }
+    .table-search.table-search thead tr{
+      background: transparent;
+    }
+    .table-search thead th,
+    .table-search thead td{
+      font-weight: normal;
+    }
+  </style>
+
+  <table class="table--key-value table--striped table-search">
+    <thead>
+      <tr>
+        <td></td>
+        <th scope="col" colspan="2">Score</th>
+      </tr>
+    </thead>
+    <tbody>
+        {% include 'backend/components/score-table-row.html' with id="1" type="Certain" score="100%" %}
+        {% include 'backend/components/score-table-row.html' with id="2" type="Highly likely" score="80%" %}
+        {% include 'backend/components/score-table-row.html' with id="3" type="Likely" score="60%" %}
+        {% include 'backend/components/score-table-row.html' with id="4" type="Possible" score="50%" %}
+        {% include 'backend/components/score-table-row.html' with id="5" type="Unlikely" score="30%" %}
+        {% include 'backend/components/score-table-row.html' with id="6" type="Highly unlikely" score="10%" %}
+    </tbody>
+  </table>
+
+  <div class="c-form-actions">
+    <button class="button">Save</button>
+  </div>
+
+</form>
+
+{% endblock %}

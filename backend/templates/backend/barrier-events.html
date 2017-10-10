@@ -1,0 +1,79 @@
+{% extends './datahub_layout.html' %}
+{% load staticfiles %}
+{% load trans from i18n %}
+{% block css %}
+{% endblock %}
+{% block head_title %}Data Hub - Trade Barriers{% endblock %}
+{% block breadcrumb %}{% include 'backend/components/breadcrumb.html' with title="Barrier record" %}{% endblock %}
+{% block local_header__title_before %}{% endblock %}
+{% block local_header__title %}
+  Barrier name consisting of country and product at minimum
+{% endblock %}
+{% block local_header__meta %}
+<div class="c-meta-list">
+  Sector, Her Majesty’s Government barrier type, Country, Date added
+</div>
+{% endblock %}
+{% block local_header__progress %}
+<div class="c-progress">
+  <ol class="c-progress-bar">
+      <li class="c-progress__stage">
+        <span class="c-progress__stage-title">Assessment
+      </li>
+      <li class="c-progress__stage is-active">
+        <span class="c-progress__stage-title">Resolution / Close</span>
+      </li>
+  </ol>
+</div>
+{% endblock %}
+
+{% block sidebar %}
+  {% include 'backend/components/sidebar-nav--assess.html' with nav="events" %}
+{% endblock %}
+
+{% block content %}
+  <h2 class="heading-medium">Events</h2>
+  <ol class="c-entity-list">
+    <li class="c-entity-list__item">
+      <div class="c-entity c-entity--contact">
+          <div class="c-entity__header">
+              <h3 class="c-entity__title">
+                  <a href="javascript:void(0);">Event title</a>
+              </h3>
+          </div>
+
+          <div class="c-entity__content">
+              <div class="c-meta-list  c-meta-list--split c-meta-list--inline">
+                  <div class="c-meta-list__item">
+                      <span class="c-meta-list__item-label">
+                        Type:
+                      </span>
+                      <span class="c-meta-list__item-value">e.g. event</span>
+                  </div>
+
+                  <div class="c-meta-list__item">
+
+                  </div>
+                  <div class="c-meta-list__item">
+                      <span class="c-meta-list__item-label">
+                        Meeting author:
+                      </span>
+                      <span class="c-meta-list__item-value">User name</span>
+                  </div>
+                  <div class="c-meta-list__item">
+                      <span class="c-meta-list__item-label">
+                        Date:
+                      </span>
+                      <span class="c-meta-list__item-value">Date of meeting</span>
+                  </div>
+              </div>
+          </div>
+      </div>
+    </li>
+  </ol>
+
+  <p>
+      <a href="javascript:void(0);" class="button-secondary">Add meeting</a>
+  </p>
+
+{% endblock %}

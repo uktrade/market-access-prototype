@@ -145,7 +145,7 @@
                   </div>
                   <div class="form-group">
                     <div class="form-label">
-                        Your product/commodity code
+                        List the relevant commodity code or codes, if known
                     </div>
                     <div class="js-form-field" data-name="dit[step2][code]">Lorem ipsum</div>
                   </div>
@@ -163,20 +163,27 @@
                     <div class="js-form-field" data-name="dit[step4][export_yn]">Yes</div>
                   </div>
                   <div class="form-group">
-                    <div class="form-label">If yes, have you experienced this problem in your other export markets?</div>
+                    <div class="form-label">If yes, provide details of the problem, explanations given, and any steps taken to resolve the problem </div>
                     <div class="js-form-field" data-name="dit[step2][export_to_other_countries]">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean scelerisque suscipit vulputate. Aliquam vitae congue arcu. In congue mi non orci elementum, ut imperdiet nisi ultricies. Nulla in mollis mi. Aliquam sit amet nisl id ex auctor scelerisque hendrerit at nunc. Pellentesque ultricies molestie quam. Proin ultrices hendrerit risus id eleifend. Aliquam erat volutpat. Cras tempus lorem massa.
                     </div>
                   </div>
                   <div class="form-group">
                     <div class="form-label">
                       {% if is_trade_association == True %}
-                        What impact do you expect this to have on your member(s)?
+                        What impact would you expect the problem to have on your member(s) if it is not resolved?
                       {% else %}
-                        What impact do you expect this to have on your business?
+                        What impact would you expect the problem to have on your business if it is not resolved?
                       {% endif %}
                       </div>
-                    <div class="js-form-field" data-name="dit[step2][impact]">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean scelerisque suscipit vulputate. Aliquam vitae congue arcu. In congue mi non orci elementum, ut imperdiet nisi ultricies. Nulla in mollis mi. Aliquam sit amet nisl id ex auctor scelerisque hendrerit at nunc. Pellentesque ultricies molestie quam. Proin ultrices hendrerit risus id eleifend. Aliquam erat volutpat. Cras tempus lorem massa. </div>
+                      <div class="js-form-field" data-name="dit[step2][impact]">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean scelerisque suscipit vulputate. Aliquam vitae congue arcu. In congue mi non orci elementum, ut imperdiet nisi ultricies. Nulla in mollis mi. Aliquam sit amet nisl id ex auctor scelerisque hendrerit at nunc. Pellentesque ultricies molestie quam. Proin ultrices hendrerit risus id eleifend. Aliquam erat volutpat. Cras tempus lorem massa. </div>
                   </div>
+                  {% if is_trade_association == True %}
+                  {% else %}
+                  <div class="form-group">
+                    <div class="form-label">What is your company's annual turnover? </div>
+                    <div class="js-form-field" data-name="dit[step2][duration]">&pound;x,xxx,xx.xx</div>
+                  </div>
+                  {% endif %}
                   <div class="form-group">
                     <div class="form-label">What's the duration of the problem: </div>
                     <div class="js-form-field" data-name="dit[step2][duration]">Lorem ipsum dolor sit amet, consectetur adipiscing elit. </div>
@@ -260,16 +267,16 @@
 							>
   							<div class="dit-accordion__inner">
                   <div class="form-group">
-                    <div class="form-label">Tell us about any steps you have taken to resolve the problem: </div>
+                    <div class="form-label">Tell us about any steps you have taken to resolve the problem:</div>
                     <div class="js-form-field" data-name="dit[step4][steps]">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean scelerisque suscipit vulputate. Aliquam vitae congue arcu. In congue mi non orci elementum, ut imperdiet nisi ultricies. Nulla in mollis mi. Aliquam sit amet nisl id ex auctor scelerisque hendrerit at nunc. Pellentesque ultricies molestie quam. Proin ultrices hendrerit risus id eleifend. Aliquam erat volutpat. Cras tempus lorem massa. </div>
                   </div>
                   <div class="form-group">
-                    <div class="form-label">What outcome are you looking for? </div>
+                    <div class="form-label">Do you have a view on how the problem is most likely to be resolved?</div>
                     <div class="js-form-field" data-name="dit[step4][outcome]">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean scelerisque suscipit vulputate. Aliquam vitae congue arcu. In congue mi non orci elementum, ut imperdiet nisi ultricies. Nulla in mollis mi. Aliquam sit amet nisl id ex auctor scelerisque hendrerit at nunc. Pellentesque ultricies molestie quam. Proin ultrices hendrerit risus id eleifend. Aliquam erat volutpat. Cras tempus lorem massa. </div>
                   </div>
                   <div class="form-group">
-                    <div class="form-label">What kind of UK Government support would you like? </div>
-                    <div class="js-form-field" data-name="dit[step4][support]">Broader UK Government involvement</div>
+                    <div class="form-label">What kind of UK government support would you like?</div>
+                    <div class="js-form-field" data-name="dit[step4][support]">Broader UK government involvement</div>
                   </div>
                   <div class="form-group">
                     <div class="form-label">Are there confidentiality issues that you need us to be aware of, e.g. commercial sensitivity </div>
@@ -311,7 +318,7 @@
 							>
   							<div class="dit-accordion__inner">
                   <div class="form-group">
-                    <div class="form-label">Is there anything else we need to know about the problem?</div>
+                    <div class="form-label">Is there anything else you would like us to understand about the situation?</div>
                     <div class="js-form-field" data-name="dit[step5][extra]">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean scelerisque suscipit vulputate. Aliquam vitae congue arcu. In congue mi non orci elementum, ut imperdiet nisi ultricies. Nulla in mollis mi. Aliquam sit amet nisl id ex auctor scelerisque hendrerit at nunc. Pellentesque ultricies molestie quam. Proin ultrices hendrerit risus id eleifend. Aliquam erat volutpat. Cras tempus lorem massa. </div>
                   </div>
                 <a href="{% url 'report-barrier-step5' %}" class="button button-blue" aria-labelledby="accordion-button5">Edit</a>
