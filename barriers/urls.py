@@ -12,8 +12,8 @@ from django.conf.urls import url  # , include
 
 from .views import (
     HomeView,
-    BarriersCheckResultsView,
-    ReportBarrierView, ReportBarrierExistingView, ReportBarrierShowCurrentBarriersView, ReportBarrierFormView,
+    CheckBarriersFormView, CheckBarriersResultsView,
+    ReportBarrierView, ReportBarrierExistingView, ReportBarrierShowCurrentBarriersView,
     BarrierDetailView, BarrierDetailStaticView, BarrierTypeDetailView, BarrierSubscribeView,
     ReportBarrierStep1View, ReportBarrierStep2View, ReportBarrierStep3View,
     ReportBarrierStep4View, ReportBarrierStep5View, ReportBarrierStep6View,
@@ -32,7 +32,7 @@ urlpatterns = [
     #    name='barriers-check-form'
     #),
     url(r'^barriers/check/results',
-        BarriersCheckResultsView.as_view(),
+        CheckBarriersResultsView.as_view(),
         name='barriers-check-results'
     ),
     url(r'^barrier/subscribe',
@@ -103,7 +103,7 @@ urlpatterns = [
         ReportBarrierRegisterView.as_view(),
         name='report-barrier-register'
     ),
-    url(r'^report/form',
+    url(r'^barriers/check',
         ReportBarrierFormView.as_view(),
         name='report-barrier-form'
     ),

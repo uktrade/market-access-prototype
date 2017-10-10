@@ -115,8 +115,8 @@ class ReportBarrierShowCurrentBarriersView(ListView):
         return context_data
 
 
-class ReportBarrierFormView(FormView):
-    template_name = 'report-barrier-form.html'
+class CheckBarriersFormView(FormView):
+    template_name = 'check-barriers-form.html'
     form_class = ReportBarrierForm
 
     countries = ''
@@ -132,7 +132,7 @@ class ReportBarrierFormView(FormView):
         return super(ReportBarrierView, self).form_valid(form)
 
 
-class BarriersCheckResultsView(ListView):
+class CheckBarriersResultsView(ListView):
     template_name = 'barriers-check-results.html'
     country_text = ''
     country_object = None
