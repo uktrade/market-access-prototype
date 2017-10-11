@@ -3,7 +3,7 @@
 
     <div class="dit-summary-section dit-accordion" style="border:none;">
       <div class="h4">
-        <a href="{% url 'notification-detail-static' pk=notification.pk %}" id="wto-title-{{ notification.pk }}">{{ notification.title }}</a><br>
+        <a href="{% url 'notification-detail' pk=notification.pk %}" id="wto-title-{{ notification.pk }}">{{ notification.title }}</a><br>
         <span class="font-small">Country: {{ notification.country }}</span>
       </div>
     </div>

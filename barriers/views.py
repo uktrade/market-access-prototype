@@ -52,8 +52,7 @@ class ReportBarrierView(FormView):
 
     def get_success_url(self, **kwargs):
         return reverse_lazy(
-                    'report-barrier-show-current-barriers',
-                    kwargs= { 'countries' : self.countries }
+                    'home'
                )
 
     def form_valid(self, form):
@@ -76,8 +75,7 @@ class ReportExistingBarrierView(FormView):
 
     def get_success_url(self, **kwargs):
         return reverse_lazy(
-                    'report-barrier-show-current-barriers',
-                    kwargs= { 'countries' : self.countries }
+                    'home'
                )
 
     def form_valid(self, form):
@@ -105,8 +103,7 @@ class ReportExistingNotificationView(FormView):
 
     def get_success_url(self, **kwargs):
         return reverse_lazy(
-                    'report-barrier-show-current-barriers',
-                    kwargs= { 'countries' : self.countries }
+                    'home'
                )
 
     def form_valid(self, form):
@@ -119,45 +116,24 @@ class ReportExistingNotificationView(FormView):
         return context
 
 
-
-class ReportBarrierShowCurrentBarriersView(ListView):
-    template_name = 'report-barrier-show-current-barriers.html'
-    country = ''
-    model = BarrierRecord
-
-    def dispatch(self, request, *args, **kwargs):
-        self.country = kwargs['countries']
-        return super(ReportBarrierShowCurrentBarriersView, self).dispatch(*args, **kwargs)
-
-    def get_queryset(self, *args, **kwargs):
-        db_country = BarrierCountry.objects.get(name=self.country)
-        return BarrierRecord.objects.filter(country=db_country)
-
-    def get_context_data(self, **kwargs):
-        context_data =  super(ReportBarrierShowCurrentBarriersView, self).get_context_data(**kwargs)
-        context_data['countries_affected'] = self.db_country.name
-        return context_data
-
-
-class CheckBarriersFormView(FormView):
-    template_name = 'check-barriers-form.html'
+class SearchView(FormView):
+    template_name = 'search.html'
     form_class = ReportBarrierForm
 
     countries = ''
 
     def get_success_url(self, **kwargs):
         return reverse_lazy(
-                    'report-barrier-show-current-barriers',
-                    kwargs= { 'countries' : self.countries }
+                    'home'
                )
 
     def form_valid(self, form):
         self.countries = form.cleaned_data['countries_affected']
-        return super(ReportBarrierView, self).form_valid(form)
+        return super(SearchView, self).form_valid(form)
 
 
-class CheckBarriersResultsView(ListView):
-    template_name = 'barriers-check-results.html'
+class SearchResultsView(ListView):
+    template_name = 'search-results.html'
     country_text = ''
     country_object = None
     model = BarrierRecord
@@ -170,7 +146,7 @@ class CheckBarriersResultsView(ListView):
         self.uk_source = BarrierSource.objects.get(short_name='UK')
         #self.wto_source = BarrierSource.objects.get(short_name='WTO')
         self.ec_source = BarrierSource.objects.get(short_name='EC MADB')
-        return super(CheckBarriersResultsView, self).__init__(*args, **kwargs)
+        return super(SearchResultsView, self).__init__(*args, **kwargs)
 
     def dispatch(self, request, *args, **kwargs):
         self.country_search_text = request.GET.get('countries', None)
@@ -178,7 +154,7 @@ class CheckBarriersResultsView(ListView):
         self.sector_search_text = request.GET.get('sectors', None)
         self.commoditycode_search_text = request.GET.get('commoditycodes', None)
         self.uk_barriers_page_number = kwargs.get('page', 1)
-        return super(CheckBarriersResultsView, self).dispatch(request, *args, **kwargs)
+        return super(SearchResultsView, self).dispatch(request, *args, **kwargs)
 
     def get_queryset(self, *args, **kwargs):
         self.uk_barriers = BarrierRecord.objects.all()  # BarrierRecord doesn't have a source
@@ -198,7 +174,7 @@ class CheckBarriersResultsView(ListView):
         return self.uk_barriers
 
     def get_context_data(self, **kwargs):
-        context_data =  super(CheckBarriersResultsView, self).get_context_data(**kwargs)
+        context_data =  super(SearchResultsView, self).get_context_data(**kwargs)
         context_data['country'] = self.country_text
         # uk_barriers will be created by default
         context_data['ec_notifications'] = Paginator(self.ec_notifications, self.EC_NOTIFICATIONS_PAGE_SIZE).page(1)
@@ -228,13 +204,9 @@ class SessionContextMixin(object):
         return context
 
 
-class BarrierDetailStaticView(DetailView):
-    model = BarrierRecord
-    template_name = 'barrier-detail-static.html'
-
-class NotificationDetailStaticView(DetailView):
+class NotificationDetailView(DetailView):
     model = BarrierNotification
-    template_name = 'notification-detail-static.html'
+    template_name = 'notification-detail.html'
     
 class BarrierTypeDetailView(SessionContextMixin, DetailView):
     model = BarrierType

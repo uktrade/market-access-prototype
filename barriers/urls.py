@@ -12,16 +12,14 @@ from django.conf.urls import url  # , include
 
 from .views import (
     HomeView,
-    CheckBarriersFormView, CheckBarriersResultsView,
+    BarriersGeneralInfoView,
+    SearchView, SearchResultsView,
     ReportBarrierView, ReportExistingBarrierView, ReportExistingNotificationView,
-    ReportBarrierShowCurrentBarriersView,
-    BarrierDetailView, BarrierDetailStaticView, BarrierTypeDetailView, BarrierSubscribeView,
-    NotificationDetailStaticView,
+    BarrierDetailView, BarrierTypeDetailView, NotificationDetailView,
+    BarrierSubscribeView,
     ReportBarrierStep1View, ReportBarrierStep2View, ReportBarrierStep3View,
     ReportBarrierStep4View, ReportBarrierStep5View, ReportBarrierStep6View,
-    ReportBarrierStep7View,
-    ReportBarrierRegisterView,
-    BarriersGeneralInfoView,
+    ReportBarrierStep7View, ReportBarrierRegisterView,
     BarriersCaseStudyView, BarriersCaseStudy2View, BarriersCaseStudy3View,
     RequestFastTrackView, FastTrackPhoneTextView,
     ExampleSummaryView,
@@ -29,26 +27,25 @@ from .views import (
 )
 
 urlpatterns = [
-    url(r'^$', HomeView.as_view(), name='home'),
-    #url(r'^barriers/check/form',
-    #    BarriersCheckFormView.as_view(),
-    #    name='barriers-check-form'
-    #),
-    url(r'^barriers/check/results',
-        CheckBarriersResultsView.as_view(),
-        name='barriers-check-results'
+    url(r'^$',
+        HomeView.as_view(),
+        name='home'
     ),
-    url(r'^barrier/subscribe',
+    url(r'^search/results',
+        SearchResultsView.as_view(),
+        name='search-results'
+    ),
+    url(r'^search',
+        SearchView.as_view(),
+        name='search'
+    ),
+    url(r'^barriers/(?P<pk>\d+)?/subscribe',
         BarrierSubscribeView.as_view(),
         name='barrier-subscribe'
     ),
-    url(r'^barriers/(?P<pk>\d+)/detail',
-        BarrierDetailStaticView.as_view(),
-        name='barrier-detail-static'
-    ),
-    url(r'^barriers/notifications/(?P<pk>\d+)/detail',
-        NotificationDetailStaticView.as_view(),
-        name='notification-detail-static'
+    url(r'^notifications/(?P<pk>\d+)',
+        NotificationDetailView.as_view(),
+        name='notification-detail'
     ),
     url(r'^barriers/types/(?P<pk>\d+)/',
         BarrierTypeDetailView.as_view(),
@@ -61,10 +58,6 @@ urlpatterns = [
     url(r'^barriers/(?P<pk>\d+)',
         BarrierDetailView.as_view(),
         name='barrier-detail'
-    ),
-    url(r'^report/show-current-barriers/countries/(?P<countries>\w+)',
-        ReportBarrierShowCurrentBarriersView.as_view(),
-        name='report-barrier-show-current-barriers'
     ),
     url(r'^barriers/general-info',
         BarriersGeneralInfoView.as_view(),
@@ -114,11 +107,7 @@ urlpatterns = [
         ReportBarrierRegisterView.as_view(),
         name='report-barrier-register'
     ),
-    url(r'^barriers/check',
-        CheckBarriersFormView.as_view(),
-        name='report-barrier-form'
-    ),
-    url(r'^barriers/notifications/(?P<pk>\w+)/report',
+    url(r'^notifications/(?P<pk>\w+)/report',
         ReportExistingNotificationView.as_view(),
         name='report-notification-existing'
     ),

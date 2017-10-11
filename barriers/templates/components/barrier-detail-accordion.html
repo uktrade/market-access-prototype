@@ -19,7 +19,7 @@
                         Barrier type: {% for type in barrier.barrier_types.all %}{{type}}{% endfor %}</p>
 
                       <p>{{ barrier.summary }} </p>
-                      <p><a href="{% url 'barrier-detail-static' pk=barrier.pk %}" aria-labelledby="accordion-button-{{ barrier.pk }}">More detail</a></p>
+                      <p><a href="{% url 'barrier-detail' pk=barrier.pk %}" aria-labelledby="accordion-button-{{ barrier.pk }}">More detail</a></p>
       							</div>
                 </div>
                 </div>
