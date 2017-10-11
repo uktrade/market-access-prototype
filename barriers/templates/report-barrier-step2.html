@@ -2,38 +2,12 @@
 {% load staticfiles %}
 {% load trans from i18n %}
 {% block css %}
-<style>
-  .select2-container{
-    background-color: inherit;
-    border: 1px solid #6f777b;
-    display: block;
-    width: 75% !important;
-  }
-
-  .select2-container input{
-    font-family: "Roboto",arial,helvetica,sans-serif;
-    font-size: 16px;
-    padding: 10px;
-  }
-
-  .select2-selection__choice{
-    position: relative;
-    top: -3px;
-  }
-
-  .select2-container{
-    max-width: 560px !important;
-  }
-
-  .select2-search__field{
-    appearance: none;
-    border: none;
-  }
-</style>
+    <style>
+    </style>
 {% endblock %}
 {% block bodyScripts %}
 {% endblock bodyScripts %}
-{% block head_title %}Report a trade barrier - Section 2 of 6: About the problem{% endblock %}
+{% block head_title %}Report a trade barrier - Section 2 of 7: About you{% endblock %}
 {% block sub_header %}{# prevent the subheader from showing on form pages #}{% endblock %}
 {% block css_layout_class %}
 {% endblock %}
@@ -42,7 +16,7 @@
   <div class="outer-container">
     <div class="dit-breadcrumb grid-container grid-container--inner">
         <div class="column-full flush--bottom">
-          <a href="https://www.great.gov.uk/">Great.gov.uk</a> <span aria-hidden="true">></span> <a href="/">Trade barriers</a> <span aria-hidden="true">></span> <a href="{% url 'report-barrier' %}">Report a barrier</a> <span aria-hidden="true">></span> <strong>Section 2 of 6: About the problem</strong>
+          <a href="https://www.great.gov.uk/">Great.gov.uk</a> <span aria-hidden="true">></span> <a href="/">Trade barriers</a> <span aria-hidden="true">></span> <a href="{% url 'report-barrier' %}">Report a barrier</a> <span aria-hidden="true">></span> <strong>Section 2 - About your organisation</strong>
         </div>
     </div>
   </div>
@@ -53,187 +27,115 @@
         <div class="h4">Section</div>
         <ol>
           <li><a href="{% url 'report-barrier-step1' %}"><span>1 About you</span> <img src="{% static 'images/tick.svg' %}" alt="Completed step"></a></li>
-          <li class="is-selected">2 About the problem</li>
-          <li><a href="{% url 'report-barrier-step3' %}">3 Select the type of barrier</a></li>
-          <li><a href="{% url 'report-barrier-step4' %}">4 Working out the next steps</a></li>
-          <li><a href="{% url 'report-barrier-step5' %}">5 Any other details</a></li>
-          <li>6 Summary</li>
+          <li class="is-selected">2 About your organisation</li>
+          <li><a href="{% url 'report-barrier-step3' %}"><span>3 About the problem</span></a></li>
+          <li><a href="{% url 'report-barrier-step4' %}"><span>4 Select the type of barrier</span></a></li>
+          <li><a href="{% url 'report-barrier-step5' %}"><span>5 Working out the next steps</span></a></li>
+          <li><a href="{% url 'report-barrier-step6' %}"><span>6 Any other details</span></a></li>
+          <li>7 Summary</li>
         </ol>
       </div>
       <div class="column-two-third">
-        <h1 class="h3 push--bottom push--top">Section 2 of 6: About the problem</h1>
+        <h1 class="h3 push--bottom push--top">Section 2 of 7: About your organisation</h1>
         <form action="{% url 'report-barrier-step3' %}" method="post" class="dit-form">
           {% csrf_token %}
 
           {% include 'components/form-validation.html' %}
 
           <div class="form-group">
-            <label class="form-label" for="dit-step2-product">
-              {% if is_trade_association == True %}
-                What product or service are your member(s) wanting to export?
-              {% else %}
-                What is the product or service you want to export?
-              {% endif %}
+            <label class="form-label" for="dit-step1-company-name">
+              Your organisation
             </label>
-            <span class="error-message hidden" aria-hidden="true">Enter a product or service</span>
-            <input class="form-control" id="dit-step2-product" type="text" name="dit[step2][product]" required>
+            <span class="form-hint">Enter your organisation name then search to get details from Companies House</span>
+            <span class="error-message hidden" aria-hidden="true">Enter an organisation name</span>
+            <input class="form-control js-companies-house-input" id="dit-step1-company-name" type="text" name="dit[step1][company_name]" required>
           </div>
 
           <div class="form-group">
-            <label class="form-label" for="dit-step2-code">
-              List the relevant commodity code or codes, if known
-              <span class="form-hint">
-                Commodity codes/HS codes are part of an internationally standardised system of names and numbers to classify traded products. You can <a href="https://www.gov.uk/trade-tariff">look up commodity codes on GOV.UK</a>.
-              </span>
-            </label>
-            <span class="error-message hidden" aria-hidden="true">Enter your product/commodity code</span>
-            <textarea class="form-control" id="dit-step2-code" name="dit[step2][code]" rows="3" cols="10"></textarea>
+            <span class="error-message hidden" aria-hidden="true">Enter an organisation name to search with</span>
+            <button class="button button-blue js-companies-house" id="companies-house-button" type="button" aria-expanded="false" aria-controls="companies-house-results" data-copy-loading="Searching Companies House database..." data-copy-original="Search Companies House">Search Companies House</button>
           </div>
 
-          <div class="form-group">
-            <label class="form-label" for="dit-step2-country">
-              Which country/bloc are you trying to export to?
-            </label>
-            <span class="error-message hidden" aria-hidden="true">Enter a country/bloc</span>
-            <select id="dit-step2-country" name="dit[step2][country]" autocomplete="off" class="form-control select-custom select2-hidden-accessible" data-placeholder="Type to find country" multiple required>
-              {% include 'components/countries.html' %}
-            </select>
-          </div>
-
-          <div class="form-group">
-            <label class="form-label" for="dit-step2-description">
-              Provide a brief description of the problem, including:
-              <span class="form-hint">
-                - What is obstructing your export<br>
-                - Any explanation you've been given
-              </span>
-            </label>
-            <span class="error-message hidden" aria-hidden="true">Enter a brief description of the problem</span>
-            <textarea class="form-control" id="dit-step2-description" name="dit[step2][description]" rows="10" cols="5" required></textarea>
-          </div>
-
-          <div class="form-group">
+          <div class="form-group hidden js-companies-house-list form-group-child" aria-hidden="true" id="companies-house-results">
             <fieldset>
 
               <legend>
-                <span class="form-label" title="export-yn">
-                  Have you experienced this problem in other markets?
-                </span>
+                <h2 class="form-label" style="width: 100%;">
+                  Companies House listings
+                </h2>
               </legend>
 
-              <span class="error-message hidden" aria-hidden="true">Select whether you have experienced this problem in other markets or not</span>
+              <span class="error-message hidden" aria-hidden="true">Choose organisation from the list</span>
 
-              <div class="multiple-choice">
-                <input id="dit-step4-export-yn-yes" name="dit[step4][export_yn]" value="Yes" type="radio" required>
-                <label for="dit-step4-export-yn-yes">Yes</label>
-              </div>
+              <div class="push--top js-companies-house-callback">
 
-              <div class="multiple-choice">
-                <input id="dit-step4-export-yn-no" name="dit[step4][export_yn]" value="No" type="radio" required>
-                <label for="dit-step4-export-yn-no">No</label>
               </div>
             </fieldset>
           </div>
-          <div class="form-group">
-            <label class="form-label" for="dit-step2-export-to-other-countries" aria-labelledby="export-yn">
-              If yes, provide details of the problem, explanations given, and any steps taken to resolve the problem
-            </label>
-            <textarea class="form-control" id="dit-step2-export-to-other-countries" name="dit[step2][export_to_other_countries]" rows="10" cols="5"></textarea>
-          </div>
-
-          <div class="form-group">
-            <label class="form-label" for="dit-step2-impact">
-              {% if is_trade_association == True %}
-                What impact do you expect this to have on your member(s)?
-              {% else %}
-                What impact would you expect the problem to have on your business if it is not resolved?
-                <span class="form-hint">
-                  If possible, include an estimate of the financial value of sales lost over a five year period.
-                </span>
-              {% endif %}
-            </label>
-            <span class="error-message hidden" aria-hidden="true">Enter the impact you expect this to have</span>
-            <textarea class="form-control" id="dit-step2-impact" name="dit[step2][impact]" rows="10" cols="5" required></textarea>
-          </div>
-
-          {% if is_trade_association == True %}
-
-          {% else %}
-          <div class="form-group">
-            <label class="form-label" for="dit-step2-sales">
-              What is your company's annual turnover?
-
-              <span class="form-hint">
-                Leave blank if you are unsure
-              </span>
-            </label>
-            <input class="form-control" id="dit-step2-sales" name="dit[step2][sales]" value="">
-          </div>
-          {% endif %}
-
-          <!--
-          <div class="form-group multiple-choice">
-            <input id="dit-step2-sales-dont-know" name="dit[step2][sales_dont_know]" value="Don't Know Sales Figures" type="radio">
-            <label for="dit-step2-sales-dont-know">Don't know</label>
-          </div>-->
-
-          <div class="form-group">
-            <label class="form-label" for="dit-step2-duration">
-              What's the duration of the problem, including:
-              <span class="form-hint">
-                - When it started<br>
-                - If it's a one-off, ongoing or anticipated problem
-              </span>
-            </label>
-            <span class="error-message hidden" aria-hidden="true">Enter the duration of the problem</span>
-            <textarea class="form-control" id="dit-step2-duration" name="dit[step2][duration]" rows="5" cols="10" required></textarea>
-          </div>
-
-          <div class="form-group">
-            <fieldset class="inline">
-
-              <legend class="form-label">
-                {% if is_trade_association == True %}
-                  Are any companies who are not members of your association affected?
-                {% else %}
-                  Are any other companies affected?
-                {% endif %}
-              </legend>
-
-
-            <span class="error-message hidden" aria-hidden="true">Select whether this affects other companies</span>
-
-              <div class="multiple-choice">
-                <input id="dit-step2-others-affected-yes" name="dit[step2][others_affected]" value="Yes" type="radio">
-                <label for="dit-step2-others-affected-yes">Yes</label>
+          <script type="text/template" class="js-companies-house-template">
+            <div class="multiple-choice">
+                <input id="dit-step1-{NUMBER}" name="dit[step1][organisation_name_radio]" value="{NUMBER}" type="radio">
+                <label for="dit-step1-{NUMBER}" class="form-label">
+                  {NAME}
+                  <span class="form-hint">{ADDRESS}</span>
+                </label>
               </div>
-              <div class="multiple-choice">
-                <input id="dit-step2-others-affected-no" name="dit[step2][others_affected]" value="No" type="radio">
-                <label for="dit-step2-others-affected-no">No</label>
-              </div>
-              <div class="multiple-choice">
-                <input id="dit-step2-others-affected-dont-know" name="dit[step2][others_affected]" value="Don't Know" type="radio" required>
-                <label for="dit-step2-others-affected-dont-know">Don't know</label>
-              </div>
+          </script>
 
-            </fieldset>
-          </div>
+          <script type="text/template" class="js-companies-house-template-error">
+            <p>There are no results for your search, please try again with a different search term or if you do not have a Companies House number check the 'My organisation is not registered with Companies House' box below.</p>
+          </script>
+
+          <script type="text/template" class="js-companies-house-template-fail">
+            <p>There was a problem with the Companies House Search. Please try again or check the 'My organisation is not registered with Companies House' box below and fill in your organisation address manually.</p>
+          </script>
 
           <div class="form-group">
-            <label class="form-label form-label--light" for="dit-step2-others-affected-details">
-              If you can, list the other companies affected by the problem.
-            </label>
-            <textarea class="form-control" id="dit-step2-others-affected-details" name="dit[step2][others_affected_details]" rows="10" cols="5"></textarea>
+            <div class="multiple-choice">
+              <input name="dit[step1][no_companies_house_number]" value="false" type="checkbox">
+              <input id="dit-step1-no-companies-house" name="dit[step1][no_companies_house_number]" value="My organisation is no registered with Companies House" type="checkbox" class="js-dit-step1-no-companies-house">
+              <label for="dit-step1-no-companies-house">My organisation is not registered with Companies House</label>
+            </div>
           </div>
+
+          <fieldset class="js-company-address hidden" aria-hidden="true">
+
+            <legend class="form-label">Enter your organisation details</legend>
+
+            <div class="form-group form-group-child">
+            <label class="form-label" for="dit-step1-organisation-name">
+              Organisation name
+            </label>
+            <span class="error-message hidden" aria-hidden="true">Enter an organisation name</span>
+            <input class="form-control" id="dit-step1-organisation-name" type="text" name="dit[step1][organisation_name]">
+          </div>
+
+            <div class="form-group  form-group-child">
+              <label class="form-label" for="dit-step1-organisation-address">
+                Address first line and city/town
+              </label>
+              <span class="error-message hidden" aria-hidden="true">Enter the organisation address first line and city/town</span>
+              <input class="form-control" id="dit-step1-organisation-address" type="text" name="dit[step1][organisation_address]">
+            </div>
+
+            <div class="form-group form-group-child">
+              <label class="form-label" for="dit-step1-organisation-postcode">
+                Postcode
+              </label>
+              <span class="error-message hidden" aria-hidden="true">Enter the organisation postcode</span>
+              <input class="form-control" id="dit-step1-organisation-postcode" type="text" name="dit[step1][organisation_postcode]">
+            </div>
+
+          </fieldset>
+
 
           <div class="dit-buttons">
-            <a href="{% url 'report-barrier-step1' %}" class="button button-transparent-blue button-border">Back</a>
             <button class="button button-blue" type="submit">Next</button>
-            <button class="button button-transparent-blue button-border float--right js-save-button" type="submit">Save Progress</button>
+            <button class="button button-transparent-blue button-border float--right js-save-button" type="submit">Save progress</button>
           </div>
         </form>
       </div>
     </div>
-  </div>
+ </div>
 
 {% endblock %}

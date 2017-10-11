@@ -255,10 +255,14 @@ class ReportBarrierStep2View(SessionContextMixin, TemplateView):
 class ReportBarrierStep3View(SessionContextMixin, TemplateView):
     model = BarrierRecord
     template_name = 'report-barrier-step3.html'
+
+class ReportBarrierStep4View(SessionContextMixin, TemplateView):
+    model = BarrierRecord
+    template_name = 'report-barrier-step4.html'
     # https://django-mptt.github.io/django-mptt/tutorial.html#template
 
     def get_context_data(self, *args, **kwargs):
-        context = super(ReportBarrierStep3View, self).get_context_data(*args, **kwargs)
+        context = super(ReportBarrierStep4View, self).get_context_data(*args, **kwargs)
         # warning - this will need to change if we change
         # the code of the UK barrier source
         uk_source = BarrierSource.objects.get(short_name='UK')
@@ -267,10 +271,6 @@ class ReportBarrierStep3View(SessionContextMixin, TemplateView):
         context['barrier_types'] = uk_barrier_types
         return context
 
-class ReportBarrierStep4View(SessionContextMixin, TemplateView):
-    model = BarrierRecord
-    template_name = 'report-barrier-step4.html'
-
 class ReportBarrierStep5View(SessionContextMixin, TemplateView):
     model = BarrierRecord
     template_name = 'report-barrier-step5.html'
@@ -278,6 +278,10 @@ class ReportBarrierStep5View(SessionContextMixin, TemplateView):
 class ReportBarrierStep6View(SessionContextMixin, TemplateView):
     model = BarrierRecord
     template_name = 'report-barrier-step6.html'
+
+class ReportBarrierStep7View(SessionContextMixin, TemplateView):
+    model = BarrierRecord
+    template_name = 'report-barrier-step7.html'
 
 class ReportBarrierRegisterView(SessionContextMixin, TemplateView):
     model = BarrierRecord
