@@ -1,30 +1,26 @@
 <li class="grid-container grid-container--inner" style="border-bottom: 1px solid #E8E8E8; margin-bottom: 20px;">
-              <div class="column-two-third">
+  <div class="column-two-third">
 
-                <div class="dit-summary-section dit-accordion" style="border:none;">
-                  <span class="dit-accordion__title h4" id="accordion-button-{{ barrier.pk }}">
-    						    <span class="dit-accordion__title-wording">{{ barrier.title }}</span><br>
-                    <span class="font-small dit-accordion__toggle--show">Country: {{ barrier.country }}</span>
-                  </span>
-                  <div
-    								id="accordion{{ barrier.pk }}"
-    								class="dit-accordion__body"
-    								aria-labelledby="accordion-button-{{ barrier.pk }}"
-    								aria-hidden="true"
-    								role="tabpanel"
-    							>
-      							<div class="dit-accordion__inner">
-                      <p>Country: {{ barrier.country }}<br>
-                        Sector: {{ barrier.sectors_text }}<br>
-                        Barrier type: {% for type in barrier.barrier_types.all %}{{type}}{% endfor %}</p>
-
-                      <p>{{ barrier.summary }} </p>
-                      <p><a href="{% url 'barrier-detail' pk=barrier.pk %}" aria-labelledby="accordion-button-{{ barrier.pk }}">More detail</a></p>
-      							</div>
-                </div>
-                </div>
-              </div>
-              <div class="column-one-third">
-                <a href="{% url 'report-barrier-existing' pk=barrier.pk %}" class="button button-red" aria-labelledby="accordion-button-{{ barrier.pk }}">This barrier is affecting me</a>
-              </div>
-            </li>
+    <div class="dit-summary-section" style="border:none;">
+      <span class="dit-accordion__title h4" id="accordion-button-{{ barrier.pk }}">
+		    <span class="dit-accordion__title-wording">{{ barrier.title }}</span>
+      </span>
+      <div
+				id="accordion{{ barrier.pk }}"
+				class="dit-accordion__body"
+				aria-labelledby="accordion-button-{{ barrier.pk }}"
+			>
+				<div class="dit-accordion__inner">
+          <p>Country: {{ barrier.country }}<br>
+            Sector: {{ barrier.sectors_text }}<br>
+            Barrier type: {% for type in barrier.barrier_types.all %}{{type}}{% endfor %}</p>
+          <p>{{ barrier.summary }} </p>
+          <p><a href="{% url 'barrier-detail' pk=barrier.pk %}" aria-labelledby="accordion-button-{{ barrier.pk }}">More detail</a></p>
+				</div>
+    </div>
+    </div>
+  </div>
+  <div class="column-one-third">
+    <a href="{% url 'report-barrier-existing' pk=barrier.pk %}" class="button button-red" aria-labelledby="accordion-button-{{ barrier.pk }}">This barrier is affecting me</a>
+  </div>
+</li>
