@@ -1,12 +1,39 @@
 {% extends './govuk_layout.html' %}
 {% load staticfiles %}
 {% load trans from i18n %}
-{% load mptt_tags %}
 {% block css %}
+<style>
+  .select2-container{
+    background-color: inherit;
+    border: 1px solid #6f777b;
+    display: block;
+    width: 75% !important;
+  }
+
+  .select2-container input{
+    font-family: "Roboto",arial,helvetica,sans-serif;
+    font-size: 16px;
+    padding: 10px;
+  }
+
+  .select2-selection__choice{
+    position: relative;
+    top: -3px;
+  }
+
+  .select2-container{
+    max-width: 560px !important;
+  }
+
+  .select2-search__field{
+    appearance: none;
+    border: none;
+  }
+</style>
 {% endblock %}
 {% block bodyScripts %}
 {% endblock bodyScripts %}
-{% block head_title %}Report a trade barrier - Section 3 of 6: Select the type of barrier{% endblock %}
+{% block head_title %}Report a trade barrier - Section 3 of 7: About the problem{% endblock %}
 {% block sub_header %}{# prevent the subheader from showing on form pages #}{% endblock %}
 {% block css_layout_class %}
 {% endblock %}
@@ -15,8 +42,8 @@
   <div class="outer-container">
     <div class="dit-breadcrumb grid-container grid-container--inner">
         <div class="column-full flush--bottom">
-        <a href="https://www.great.gov.uk/">Great.gov.uk</a> <span aria-hidden="true">></span> <a href="/">Trade barriers</a> <span aria-hidden="true">></span> <a href="{% url 'report-barrier' %}">Report a barrier</a> <span aria-hidden="true">></span> <strong>Section 3 of 6: Select the type of barrier</strong>
-      </div>
+          <a href="https://www.great.gov.uk/">Great.gov.uk</a> <span aria-hidden="true">></span> <a href="/">Trade barriers</a> <span aria-hidden="true">></span> <a href="{% url 'report-barrier' %}">Report a barrier</a> <span aria-hidden="true">></span> <strong>Section 2 of 7: About the problem</strong>
+        </div>
     </div>
   </div>
   <div class="outer-container push--top">
@@ -26,144 +53,184 @@
         <div class="h4">Section</div>
         <ol>
           <li><a href="{% url 'report-barrier-step1' %}"><span>1 About you</span> <img src="{% static 'images/tick.svg' %}" alt="Completed step"></a></li>
-          <li><a href="{% url 'report-barrier-step2' %}"><span>2 About the problem</span> <img src="{% static 'images/tick.svg' %}" alt="Completed step"></a></li>
-          <li class="is-selected">3 Select the type of barrier</li>
-          <li><a href="{% url 'report-barrier-step4' %}">4 Working out the next steps</a></li>
-          <li><a href="{% url 'report-barrier-step5' %}">5 Any other details</a></li>
-          <li>6 Summary</li>
+          <li><a href="{% url 'report-barrier-step2' %}"><span>2 About your organisation</span> <img src="{% static 'images/tick.svg' %}" alt="Completed step"></a></li>
+          <li class="is-selected">3 About the problem</li>
+          <li><a href="{% url 'report-barrier-step4' %}">4 Select the type of barrier</a></li>
+          <li><a href="{% url 'report-barrier-step5' %}">5 Working out the next steps</a></li>
+          <li><a href="{% url 'report-barrier-step6' %}"><span>6 Any other details</span></a></li>
+          <li>7 Summary</li>
         </ol>
       </div>
       <div class="column-two-third">
-        <h1 class="h3 push--bottom push--top">Section 3 of 6: Select the type(s) of barrier</h1>
+        <h1 class="h3 push--bottom push--top">Section 3 of 7: About the problem</h1>
         <form action="{% url 'report-barrier-step4' %}" method="post" class="dit-form">
-
           {% csrf_token %}
 
           {% include 'components/form-validation.html' %}
 
-          <div class="form-group push--top required-checkboxes">
+          <div class="form-group">
+            <label class="form-label" for="dit-step2-product">
+              {% if is_trade_association == True %}
+                What product or service are your member(s) wanting to export?
+              {% else %}
+                What is the product or service you want to export?
+              {% endif %}
+            </label>
+            <span class="error-message hidden" aria-hidden="true">Enter a product or service</span>
+            <input class="form-control" id="dit-step2-product" type="text" name="dit[step2][product]" required>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="dit-step2-code">
+              List the relevant commodity code or codes, if known
+              <span class="form-hint">
+                Commodity codes/HS codes are part of an internationally standardised system of names and numbers to classify traded products. You can <a href="https://www.gov.uk/trade-tariff">look up commodity codes on GOV.UK</a>.
+              </span>
+            </label>
+            <span class="error-message hidden" aria-hidden="true">Enter your product/commodity code</span>
+            <textarea class="form-control" id="dit-step2-code" name="dit[step2][code]" rows="3" cols="10"></textarea>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="dit-step2-country">
+              Which country/bloc are you trying to export to?
+            </label>
+            <span class="error-message hidden" aria-hidden="true">Enter a country/bloc</span>
+            <select id="dit-step2-country" name="dit[step2][country]" autocomplete="off" class="form-control select-custom select2-hidden-accessible" data-placeholder="Type to find country" multiple required>
+              {% include 'components/countries.html' %}
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="dit-step2-description">
+              Provide a brief description of the problem, including:
+              <span class="form-hint">
+                - What is obstructing your export<br>
+                - Any explanation you've been given
+              </span>
+            </label>
+            <span class="error-message hidden" aria-hidden="true">Enter a brief description of the problem</span>
+            <textarea class="form-control" id="dit-step2-description" name="dit[step2][description]" rows="10" cols="5" required></textarea>
+          </div>
+
+          <div class="form-group">
             <fieldset>
 
               <legend>
-                <h2 class="form-label">
-                  Choose one or more barrier types which best describe the problem you are reporting, or select 'Other/Not sure'.
-                </h2>
+                <span class="form-label" title="export-yn">
+                  Have you experienced this problem in other markets?
+                </span>
               </legend>
 
-              <span class="error-message hidden" aria-hidden="true">Choose a type of barrier</span>
+              <span class="error-message hidden" aria-hidden="true">Select whether you have experienced this problem in other markets or not</span>
 
-            {% recursetree barrier_types %}
-              <div class="multiple-choice {% if node.tree_id == 1 %}push--top{% endif %}">
-                <input id="dit-step3-{{node.tree_id}}" name="dit[step3][choice]" value="{{ node.pk }}" type="checkbox" required>
-                <label for="dit-step3-{{node.tree_id}}" class="form-label"
-                {% if node.barrier_code == "11" %}style="white-space: nowrap;"{% endif %}>
-                  {{ node.barrier_code }}) {{ node.name }}
-                  {% if node.description %}
-                  <span class="form-hint">
-                    {{ node.description }}
-                  </span>
-                  {% endif %}
-                </label>
-              </div>
-            {% endrecursetree %}
-              <!-- div class="multiple-choice">
-                <input id="dit-step3-3" name="dit[step3][choice]" value="Unreasonable import quotas" type="checkbox" required>
-                <label for="dit-step3-3" class="form-label">
-                  2) Unreasonable import quotas
-                  <span class="form-hint">
-                    Restrictions on what can be sold in a country which go beyond what is allowed by
-relevant trade agreements or which seem unjustified.
-                  </span>
-                </label>
-              </div>
               <div class="multiple-choice">
-                <input id="dit-step3-4" name="dit[step3][choice]" value="Burdensome customs procedures" type="checkbox" required>
-                <label for="dit-step3-4" class="form-label">
-                  3) Burdensome customs procedures
-                  <span class="form-hint">
-                    Requirements that goods go through checks, or provide documentation, which seem to serve no practical purpose.
-                  </span>
-                </label>
-              </div>
-              <div class="multiple-choice">
-                <input id="dit-step3-5" name="dit[step3][choice]" value="Restrictive government procurement rules and practices" type="checkbox" required>
-                <label for="dit-step3-5" class="form-label">
-                  4) Restrictive government procurement rules and practices
-                  <span class="form-hint">
-                    Regulations or special requirements which make it difficult or impossible for non-domestic suppliers to
-  compete for a contract.
-                  </span>
-                </label>
-              </div>
-              <div class="multiple-choice">
-                <input id="dit-step3-6" name="dit[step3][choice]" value="Technical regulations, standards and conformity assessment procedures" type="checkbox" required>
-                <label for="dit-step3-6" class="form-label">
-                  5) Unreasonable technical regulations, standards and conformity assessment procedures
-                  <span class="form-hint">
-                    Regulations or processes which don't seem to serve any legitimate purpose, or which discriminate against importers. This can include arbitrary rules around product labelling.
-                  </span>
-                </label>
-              </div>
-              <div class="multiple-choice">
-                <input id="dit-step3-7" name="dit[step3][choice]" value="Poor protection of intellectual property rights and geographical indicators" type="checkbox" required>
-                <label for="dit-step3-7" class="form-label">
-                  6) Poor protection of intellectual property rights and geographical indicators
-
-                  <span class="form-hint">
-                    Instances of piracy, counterfeiting or mis-labelling which undermine legitimate export trade. Geographical
-  indicators include Scotch whisky and Stilton cheese.
-                  </span>
-                </label>
-              </div>
-              <div class="multiple-choice">
-                <input id="dit-step3-8" name="dit[step3][choice]" value="Unreasonable sanitary and phytosanitary measures" type="checkbox" required>
-                <label for="dit-step3-8" class="form-label">
-                  7) Unreasonable sanitary and phytosanitary measures
-                  <span class="form-hint">
-                    Measures purporting to protect consumer health, animal and plant welfare or the environment which seem unreasonable.</span>
-                </label>
-              </div>
-              <div class="multiple-choice">
-                <input id="dit-step3-1" name="dit[step3][choice]" value="Restrictive rules of origin" type="checkbox" required>
-                <label for="dit-step3-1" class="form-label">
-                  8) Restrictive rules of origin
-                  <span class="form-hint">
-                    Rules requiring products to be able to demonstrate in which countries they were produced, often so that it can be determined whether the good can benefit from preferential access under a bilateral free trade agreement.
-                  </span>
-                </label>
-              </div>
-              <div class="multiple-choice">
-                <input id="dit-step3-10" name="dit[step3][choice]" value="Barriers to trade in services and investment, such as unjustified foreign ownership caps, joint
-  venture  obligations and discriminatory treatment" type="checkbox" required>
-                <label for="dit-step3-10" class="form-label">
-                  9) Barriers to trade in services and investment, such as unjustified foreign ownership caps, joint
-  venture  obligations and discriminatory treatment
-                  <span class="form-hint">
-                    Financial rules which make imported services uncompetitive, or unreasonably discourage foreign investment.
-                  </span>
-                </label>
-              </div>
-              <div class="multiple-choice">
-                <input id="dit-step3-9" name="dit[step3][choice]" value="Limits on a country’s own exporters" type="checkbox" required>
-                <label for="dit-step3-9" class="form-label">
-                  10) Limits on a country’s own exporters
-                  <span class="form-hint">Unreasonable export limits designed to keep domestic product prices low and which make it difficult for other countries’ exporters to compete.
-                  </span>
-                </label>
+                <input id="dit-step4-export-yn-yes" name="dit[step4][export_yn]" value="Yes" type="radio" required>
+                <label for="dit-step4-export-yn-yes">Yes</label>
               </div>
 
               <div class="multiple-choice">
-                <input id="dit-step3-11" name="dit[step3][choice]" value="Not sure" type="checkbox" required>
-                <label for="dit-step3-11" class="form-label" style="white-space: nowrap;">
-                  11) Other/Not sure
-                </label>
-              </div -->
+                <input id="dit-step4-export-yn-no" name="dit[step4][export_yn]" value="No" type="radio" required>
+                <label for="dit-step4-export-yn-no">No</label>
+              </div>
             </fieldset>
           </div>
+          <div class="form-group">
+            <label class="form-label" for="dit-step2-export-to-other-countries" aria-labelledby="export-yn">
+              If yes, provide details of the problem, explanations given, and any steps taken to resolve the problem
+            </label>
+            <textarea class="form-control" id="dit-step2-export-to-other-countries" name="dit[step2][export_to_other_countries]" rows="10" cols="5"></textarea>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="dit-step2-impact">
+              {% if is_trade_association == True %}
+                What impact do you expect this to have on your member(s)?
+              {% else %}
+                What impact would you expect the problem to have on your business if it is not resolved?
+                <span class="form-hint">
+                  If possible, include an estimate of the financial value of sales lost over a five year period.
+                </span>
+              {% endif %}
+            </label>
+            <span class="error-message hidden" aria-hidden="true">Enter the impact you expect this to have</span>
+            <textarea class="form-control" id="dit-step2-impact" name="dit[step2][impact]" rows="10" cols="5" required></textarea>
+          </div>
+
+          {% if is_trade_association == True %}
+
+          {% else %}
+          <div class="form-group">
+            <label class="form-label" for="dit-step2-sales">
+              What is your company's annual turnover?
+
+              <span class="form-hint">
+                Leave blank if you are unsure
+              </span>
+            </label>
+            <input class="form-control" id="dit-step2-sales" name="dit[step2][sales]" value="">
+          </div>
+          {% endif %}
+
+          <!--
+          <div class="form-group multiple-choice">
+            <input id="dit-step2-sales-dont-know" name="dit[step2][sales_dont_know]" value="Don't Know Sales Figures" type="radio">
+            <label for="dit-step2-sales-dont-know">Don't know</label>
+          </div>-->
+
+          <div class="form-group">
+            <label class="form-label" for="dit-step2-duration">
+              What's the duration of the problem, including:
+              <span class="form-hint">
+                - When it started<br>
+                - If it's a one-off, ongoing or anticipated problem
+              </span>
+            </label>
+            <span class="error-message hidden" aria-hidden="true">Enter the duration of the problem</span>
+            <textarea class="form-control" id="dit-step2-duration" name="dit[step2][duration]" rows="5" cols="10" required></textarea>
+          </div>
+
+          <div class="form-group">
+            <fieldset class="inline">
+
+              <legend class="form-label">
+                {% if is_trade_association == True %}
+                  Are any companies who are not members of your association affected?
+                {% else %}
+                  Are any other companies affected?
+                {% endif %}
+              </legend>
+
+
+            <span class="error-message hidden" aria-hidden="true">Select whether this affects other companies</span>
+
+              <div class="multiple-choice">
+                <input id="dit-step2-others-affected-yes" name="dit[step2][others_affected]" value="Yes" type="radio">
+                <label for="dit-step2-others-affected-yes">Yes</label>
+              </div>
+              <div class="multiple-choice">
+                <input id="dit-step2-others-affected-no" name="dit[step2][others_affected]" value="No" type="radio">
+                <label for="dit-step2-others-affected-no">No</label>
+              </div>
+              <div class="multiple-choice">
+                <input id="dit-step2-others-affected-dont-know" name="dit[step2][others_affected]" value="Don't Know" type="radio" required>
+                <label for="dit-step2-others-affected-dont-know">Don't know</label>
+              </div>
+
+            </fieldset>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label form-label--light" for="dit-step2-others-affected-details">
+              If you can, list the other companies affected by the problem.
+            </label>
+            <textarea class="form-control" id="dit-step2-others-affected-details" name="dit[step2][others_affected_details]" rows="10" cols="5"></textarea>
+          </div>
+
           <div class="dit-buttons">
-            <a href="{% url 'report-barrier-step2' %}" class="button button-white button-border">Back</a>
+            <a href="{% url 'report-barrier-step1' %}" class="button button-transparent-blue button-border">Back</a>
             <button class="button button-blue" type="submit">Next</button>
-            <button class="button button-transparent-blue button-border float--right js-save-button" type="submit">Save progress</button>
+            <button class="button button-transparent-blue button-border float--right js-save-button" type="submit">Save Progress</button>
           </div>
         </form>
       </div>

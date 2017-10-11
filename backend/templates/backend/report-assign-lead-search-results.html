@@ -4,10 +4,10 @@
 {% block css %}
 {% endblock %}
 {% block head_title %}Data Hub - Trade Barriers{% endblock %}
-{% block breadcrumb %}{% include 'backend/components/breadcrumb.html' with title="Company X v Country 1" %}{% endblock %}
+{% block breadcrumb %}{% include 'backend/components/breadcrumb.html' with title="Barrier name consisting of country and product at minimum" %}{% endblock %}
 {% block local_header__title_before %}{% endblock %}
 {% block local_header__title %}
-  Company X v Country 1
+  Barrier name consisting of country and product at minimum
 {% endblock %}
 {% block local_header__meta %}
 <div class="c-meta-list">
@@ -36,7 +36,7 @@ role.</p>
 
   <table class="table--key-value table--striped table-search">
     <thead>
-      <tr>
+      <tr style="background: transparent;">
         <th scope="col" colspan="2">1) DIT people finder results</th>
         <th scope="col" colspan="2">Invite</th>
       </tr>
@@ -65,7 +65,7 @@ role.</p>
 
   <table class="table--key-value table--striped table-search">
     <thead>
-      <tr>
+      <tr style="background: transparent;">
         <th scope="col" colspan="2">2) Barrier record results</th>
         <th scope="col" colspan="2">Invite</th>
       </tr>

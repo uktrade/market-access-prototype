@@ -19,6 +19,7 @@ from .views import (
     NotificationDetailStaticView,
     ReportBarrierStep1View, ReportBarrierStep2View, ReportBarrierStep3View,
     ReportBarrierStep4View, ReportBarrierStep5View, ReportBarrierStep6View,
+    ReportBarrierStep7View,
     ReportBarrierRegisterView,
     BarriersGeneralInfoView,
     BarriersCaseStudyView, BarriersCaseStudy2View, BarriersCaseStudy3View,
@@ -104,6 +105,10 @@ urlpatterns = [
     url(r'^report/step6',
         ReportBarrierStep6View.as_view(),
         name='report-barrier-step6'
+    ),
+    url(r'^report/step7',
+        ReportBarrierStep7View.as_view(),
+        name='report-barrier-step7'
     ),
     url(r'^report/register',
         ReportBarrierRegisterView.as_view(),

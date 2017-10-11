@@ -5,7 +5,7 @@
 {% endblock %}
 {% block bodyScripts %}
 {% endblock bodyScripts %}
-{% block head_title %}Report a trade barrier - Section 6 of 6: Summary of your report{% endblock %}
+{% block head_title %}Report a trade barrier - Section 5 of 7: Any other details{% endblock %}
 {% block sub_header %}{# prevent the subheader from showing on form pages #}{% endblock %}
 {% block css_layout_class %}
 {% endblock %}
@@ -14,7 +14,7 @@
   <div class="outer-container">
     <div class="dit-breadcrumb grid-container grid-container--inner">
         <div class="column-full flush--bottom">
-        <a href="https://www.great.gov.uk/">Great.gov.uk</a> <span aria-hidden="true">></span> <a href="/">Trade barriers</a> <span aria-hidden="true">></span> <a href="{% url 'report-barrier' %}">Report a barrier</a> <span aria-hidden="true">></span> <strong>Section 6 of 6: Summary of your report</strong>
+        <a href="https://www.great.gov.uk/">Great.gov.uk</a> <span aria-hidden="true">></span> <a href="/">Trade barriers</a> <span aria-hidden="true">></span> <a href="{% url 'report-barrier' %}">Report a barrier</a> <span aria-hidden="true">></span> <strong>Section 6 of 7: Any other details</strong>
       </div>
     </div>
   </div>
@@ -25,365 +25,31 @@
         <div class="h4">Section</div>
         <ol>
           <li><a href="{% url 'report-barrier-step1' %}"><span>1 About you</span> <img src="{% static 'images/tick.svg' %}" alt="Completed step"></a></li>
-          <li><a href="{% url 'report-barrier-step2' %}"><span>2 About the problem</span> <img src="{% static 'images/tick.svg' %}" alt="Completed step"></a></li>
-          <li><a href="{% url 'report-barrier-step3' %}"><span>3 Select the type of barrier</span> <img src="{% static 'images/tick.svg' %}" alt="Completed step"></a></li>
-          <li><a href="{% url 'report-barrier-step4' %}"><span>4 Working out the next steps</span> <img src="{% static 'images/tick.svg' %}" alt="Completed step"></a></li>
-          <li><a href="{% url 'report-barrier-step5' %}"><span>5 Any other details</span> <img src="{% static 'images/tick.svg' %}" alt="Completed step"></a></li>
-          <li class="is-selected">6 Summary</li>
+          <li><a href="{% url 'report-barrier-step2' %}"><span>2 About your organisation</span> <img src="{% static 'images/tick.svg' %}" alt="Completed step"></a></li>
+          <li><a href="{% url 'report-barrier-step3' %}"><span>3 About the problem</span> <img src="{% static 'images/tick.svg' %}" alt="Completed step"></a></li>
+          <li><a href="{% url 'report-barrier-step4' %}"><span>4 Select the type of barrier</span> <img src="{% static 'images/tick.svg' %}" alt="Completed step"></a></li>
+          <li><a href="{% url 'report-barrier-step6' %}"><span>5 Working out the next steps</span> <img src="{% static 'images/tick.svg' %}" alt="Completed step"></a></li>
+          <li class="is-selected">6 Any other details</li>
+          <li>7 Summary</li>
         </ol>
       </div>
       <div class="column-two-third">
-        <h1 class="h3 push--bottom push--top">Step 6 of 6: Summary of your report</h1>
-        <form action="{% url 'report-barrier-register' %}" method="post" class="dit-form">
+        <h1 class="h3 push--bottom push--top">Section 6 of 7: Any other details?</h1>
+        <form action="{% url 'report-barrier-step7' %}" method="post" class="dit-form">
           {% csrf_token %}
 
           {% include 'components/form-validation.html' %}
-          <div class="dit-summary-sections dit-accordion-list" data-module="Accordion">
 
-            <!-- Tab 1 -->
-            <div class="dit-summary-section dit-accordion">
-              <button type="button"
-								class="dit-accordion__title h3" id="accordion-button1"
-								aria-selected="false"
-								role="tab"
-								tabindex="0"
-								aria-controls="accordion1"
-								aria-expanded="false"
-              >
-							  About you
-								<span class="dit-accordion__btn" aria-hidden="true">
-									<span class="dit-accordion__toggle--show">+</span>
-									<span class="dit-accordion__toggle--hide">-</span>
-								</span>
-              </button>
-              <div
-								id="accordion1"
-								class="dit-accordion__body"
-								aria-labelledby="accordion-button1"
-								aria-hidden="true"
-								role="tabpanel"
-							>
-  							<div class="dit-accordion__inner">
-                  <div class="form-group">
-                    <div class="form-label">Your name</div>
-                    <div class="js-form-field" data-name="dit[step1][your_name]">Dr L. Ipsum</div>
-                  </div>
-
-                  <div class="form-group">
-                    <div class="form-label">Details</div>
-                    <div class="js-form-field" data-name="dit[step1][type]">I am an exporter/seeking to export</div>
-                  </div>
-
-                  <div class="form-group">
-                    <div class="form-label">Organisation name</div>
-                    <div class="js-form-field" data-name="dit[step1][company_name]">Lorem Ipsum Ltd</div>
-                  </div>
-
-                  <div class="form-group">
-                    <div class="form-label">Companies House number</div>
-                    <div class="js-form-field" data-name="dit[step1][no_companies_house_number]">1234567890</div>
-                  </div>
-
-                  <div class="form-group">
-                    <div class="form-label">Organisation address</div>
-                    <div class="js-form-field" data-name="dit[step1][organisation_address]">123 Lorem Ipsum Road</div>
-                  </div>
-
-                  <div class="form-group">
-                    <div class="form-label">Your role / job title</div>
-                    <div class="js-form-field" data-name="dit[step1][your_role_job_title]">Lorem Ispum</div>
-                  </div>
-
-                  <div class="form-group">
-                    <div class="form-label">Email address</div>
-                    <div class="js-form-field" data-name="dit[step1][em,ail_address]">lorem@ipsum.com</div>
-                  </div>
-
-                  <div class="form-group">
-                    <div class="form-label">Contact telephone number</div>
-                    <div class="js-form-field" data-name="dit[step1][contact_telephone_number]">0776123456789</div>
-                  </div>
-  							</div>
-                <a href="{% url 'report-barrier-step1' %}" class="button button-blue" aria-labelledby="accordion-button1">Edit</a>
-              </div>
-            </div>
-            <!--/ Tab 1 -->
-
-            <!-- Tab 2 -->
-            <div class="dit-summary-section dit-accordion">
-              <button type="button"
-								class="dit-accordion__title h3" id="accordion-button2"
-								aria-selected="false"
-								role="tab"
-								tabindex="0"
-								aria-controls="accordion2"
-								aria-expanded="false"
-              >
-							  About the problem
-								<span class="dit-accordion__btn" aria-hidden="true">
-									<span class="dit-accordion__toggle--show">+</span>
-									<span class="dit-accordion__toggle--hide">-</span>
-								</span>
-              </button>
-              <div
-								id="accordion2"
-								class="dit-accordion__body"
-								aria-labelledby="accordion-button2"
-								aria-hidden="true"
-								role="tabpanel"
-							>
-  							<div class="dit-accordion__inner">
-                  <div class="form-group">
-                    <div class="form-label">
-                      {% if is_trade_association == True %}
-                        What product or service are your member(s) wanting to export?
-                      {% else %}
-                        What is the product or service you want to export?
-                      {% endif %}
-                    </div>
-                    <div class="js-form-field" data-name="dit[step2][product]">Lorem ipsum</div>
-                  </div>
-                  <div class="form-group">
-                    <div class="form-label">
-                        List the relevant commodity code or codes, if known
-                    </div>
-                    <div class="js-form-field" data-name="dit[step2][code]">Lorem ipsum</div>
-                  </div>
-                  <div class="form-group">
-                    <div class="form-label">Which country/bloc are you trying to export to?</div>
-                    <div class="js-form-field" data-name="dit[step2][country]">Lorem ipsum</div>
-                  </div>
-                  <div class="form-group">
-                    <div class="form-label">Provide a brief description of the problem: </div>
-                    <div class="js-form-field" data-name="dit[step2][description]">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean scelerisque suscipit vulputate. Aliquam vitae congue arcu. In congue mi non orci elementum, ut imperdiet nisi ultricies. Nulla in mollis mi. Aliquam sit amet nisl id ex auctor scelerisque hendrerit at nunc. Pellentesque ultricies molestie quam. Proin ultrices hendrerit risus id eleifend. Aliquam erat volutpat. Cras tempus lorem massa. </div>
-                  </div>
-
-                  <div class="form-group">
-                    <div class="form-label">Have you experienced this problem in other markets?</div>
-                    <div class="js-form-field" data-name="dit[step4][export_yn]">Yes</div>
-                  </div>
-                  <div class="form-group">
-                    <div class="form-label">If yes, provide details of the problem, explanations given, and any steps taken to resolve the problem </div>
-                    <div class="js-form-field" data-name="dit[step2][export_to_other_countries]">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean scelerisque suscipit vulputate. Aliquam vitae congue arcu. In congue mi non orci elementum, ut imperdiet nisi ultricies. Nulla in mollis mi. Aliquam sit amet nisl id ex auctor scelerisque hendrerit at nunc. Pellentesque ultricies molestie quam. Proin ultrices hendrerit risus id eleifend. Aliquam erat volutpat. Cras tempus lorem massa.
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <div class="form-label">
-                      {% if is_trade_association == True %}
-                        What impact would you expect the problem to have on your member(s) if it is not resolved?
-                      {% else %}
-                        What impact would you expect the problem to have on your business if it is not resolved?
-                      {% endif %}
-                      </div>
-                      <div class="js-form-field" data-name="dit[step2][impact]">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean scelerisque suscipit vulputate. Aliquam vitae congue arcu. In congue mi non orci elementum, ut imperdiet nisi ultricies. Nulla in mollis mi. Aliquam sit amet nisl id ex auctor scelerisque hendrerit at nunc. Pellentesque ultricies molestie quam. Proin ultrices hendrerit risus id eleifend. Aliquam erat volutpat. Cras tempus lorem massa. </div>
-                  </div>
-                  {% if is_trade_association == True %}
-                  {% else %}
-                  <div class="form-group">
-                    <div class="form-label">What is your company's annual turnover? </div>
-                    <div class="js-form-field" data-name="dit[step2][duration]">&pound;x,xxx,xx.xx</div>
-                  </div>
-                  {% endif %}
-                  <div class="form-group">
-                    <div class="form-label">What's the duration of the problem: </div>
-                    <div class="js-form-field" data-name="dit[step2][duration]">Lorem ipsum dolor sit amet, consectetur adipiscing elit. </div>
-                  </div>
-                  <div class="form-group">
-                    <div class="form-label">
-                      {% if is_trade_association == True %}
-                        Are any companies who are not members of your association affected?
-                      {% else %}
-                        Are any other companies affected?
-                      {% endif %}
-                      </div>
-                    <div class="js-form-field" data-name="dit[step2][others_affected]">Yes</div>
-                  </div>
-                  <div class="form-group">
-                    <div class="form-label">If yes, please describe below </div>
-                    <div class="js-form-field" data-name="dit[step2][others_affected_details]">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean scelerisque suscipit vulputate. Aliquam vitae congue arcu. In congue mi non orci elementum, ut imperdiet nisi ultricies. Nulla in mollis mi. Aliquam sit amet nisl id ex auctor scelerisque hendrerit at nunc. Pellentesque ultricies molestie quam. Proin ultrices hendrerit risus id eleifend. Aliquam erat volutpat. Cras tempus lorem massa. </div>
-                  </div>
-  							</div>
-                <a href="{% url 'report-barrier-step2' %}" class="button button-blue" aria-labelledby="accordion-button2">Edit</a>
-              </div>
-            </div>
-            <!--/ Tab 2 -->
-
-            <!-- Tab 3 -->
-            <div class="dit-summary-section dit-accordion">
-              <button type="button"
-								class="dit-accordion__title h3" id="accordion-button3"
-								aria-selected="false"
-								role="tab"
-								tabindex="0"
-								aria-controls="accordion3"
-								aria-expanded="false"
-              >
-							  Select the type of barrier
-								<span class="dit-accordion__btn" aria-hidden="true">
-									<span class="dit-accordion__toggle--show">+</span>
-									<span class="dit-accordion__toggle--hide">-</span>
-								</span>
-              </button>
-              <div
-								id="accordion3"
-								class="dit-accordion__body"
-								aria-labelledby="accordion-button3"
-								aria-hidden="true"
-								role="tabpanel"
-							>
-  							<div class="dit-accordion__inner">
-                  <div class="form-group">
-                    <div class="form-label">Choose the type(s) of barrier which best describes your problem. </div>
-                    <div class="js-form-field" data-name="dit[step3][choice]">Burdensome customs procedures</div>
-                  </div>
-                <a href="{% url 'report-barrier-step3' %}" class="button button-blue" aria-labelledby="accordion-button3">Edit</a>
-  							</div>
-              </div>
-            </div>
-            <!--/ Tab 3 -->
-
-            <!-- Tab 4 -->
-            <div class="dit-summary-section dit-accordion">
-              <button type="button"
-								class="dit-accordion__title h3" id="accordion-button4"
-								aria-selected="false"
-								role="tab"
-								tabindex="0"
-								aria-controls="accordion4"
-								aria-expanded="false"
-              >
-							  Working out the next steps
-								<span class="dit-accordion__btn" aria-hidden="true">
-									<span class="dit-accordion__toggle--show">+</span>
-									<span class="dit-accordion__toggle--hide">-</span>
-								</span>
-              </button>
-              <div
-								id="accordion4"
-								class="dit-accordion__body"
-								aria-labelledby="accordion-button4"
-								aria-hidden="true"
-								role="tabpanel"
-							>
-  							<div class="dit-accordion__inner">
-                  <div class="form-group">
-                    <div class="form-label">Tell us about any steps you have taken to resolve the problem:</div>
-                    <div class="js-form-field" data-name="dit[step4][steps]">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean scelerisque suscipit vulputate. Aliquam vitae congue arcu. In congue mi non orci elementum, ut imperdiet nisi ultricies. Nulla in mollis mi. Aliquam sit amet nisl id ex auctor scelerisque hendrerit at nunc. Pellentesque ultricies molestie quam. Proin ultrices hendrerit risus id eleifend. Aliquam erat volutpat. Cras tempus lorem massa. </div>
-                  </div>
-                  <div class="form-group">
-                    <div class="form-label">Do you have a view on how the problem is most likely to be resolved?</div>
-                    <div class="js-form-field" data-name="dit[step4][outcome]">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean scelerisque suscipit vulputate. Aliquam vitae congue arcu. In congue mi non orci elementum, ut imperdiet nisi ultricies. Nulla in mollis mi. Aliquam sit amet nisl id ex auctor scelerisque hendrerit at nunc. Pellentesque ultricies molestie quam. Proin ultrices hendrerit risus id eleifend. Aliquam erat volutpat. Cras tempus lorem massa. </div>
-                  </div>
-                  <div class="form-group">
-                    <div class="form-label">What kind of UK government support would you like?</div>
-                    <div class="js-form-field" data-name="dit[step4][support]">Broader UK government involvement</div>
-                  </div>
-                  <div class="form-group">
-                    <div class="form-label">Are there confidentiality issues that you need us to be aware of, e.g. commercial sensitivity </div>
-                    <div class="js-form-field" data-name="dit[step4][confidentiality]">N/a</div>
-                  </div>
-                  <div class="form-group">
-                    <div class="form-label">Are you happy for us to publish a summary of your problem on Great.gov.uk?</div>
-                    <div class="js-form-field" data-name="dit[step4][publish]">Yes</div>
-                  </div>
-
-  							</div>
-                <a href="{% url 'report-barrier-step4' %}" class="button button-blue" aria-labelledby="accordion-button4">Edit</a>
-              </div>
-            </div>
-            <!--/ Tab 4 -->
-
-            <!-- Tab 5 -->
-            <div class="dit-summary-section dit-accordion">
-              <button type="button"
-								class="dit-accordion__title h3" id="accordion-button5"
-								aria-selected="false"
-								role="tab"
-								tabindex="0"
-								aria-controls="accordion5"
-								aria-expanded="false"
-              >
-							  Any other details
-								<span class="dit-accordion__btn" aria-hidden="true">
-									<span class="dit-accordion__toggle--show">+</span>
-									<span class="dit-accordion__toggle--hide">-</span>
-								</span>
-              </button>
-              <div
-								id="accordion5"
-								class="dit-accordion__body"
-								aria-labelledby="accordion-button5"
-								aria-hidden="true"
-								role="tabpanel"
-							>
-  							<div class="dit-accordion__inner">
-                  <div class="form-group">
-                    <div class="form-label">Is there anything else you would like us to understand about the situation?</div>
-                    <div class="js-form-field" data-name="dit[step5][extra]">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean scelerisque suscipit vulputate. Aliquam vitae congue arcu. In congue mi non orci elementum, ut imperdiet nisi ultricies. Nulla in mollis mi. Aliquam sit amet nisl id ex auctor scelerisque hendrerit at nunc. Pellentesque ultricies molestie quam. Proin ultrices hendrerit risus id eleifend. Aliquam erat volutpat. Cras tempus lorem massa. </div>
-                  </div>
-                <a href="{% url 'report-barrier-step5' %}" class="button button-blue" aria-labelledby="accordion-button5">Edit</a>
-  							</div>
-              </div>
-            </div>
-            <!--/ Tab 5 -->
-
-
-            <!-- Tab 5 -->
-            <div class="dit-summary-section dit-accordion">
-              <button type="button"
-								class="dit-accordion__title h3" id="accordion-button6"
-								aria-selected="true"
-								role="tab"
-								tabindex="0"
-								aria-controls="accordion6"
-								aria-expanded="true"
-              >
-							  Your data and our service: privacy and confidentiality
-								<span class="dit-accordion__btn" aria-hidden="false">
-									<span class="dit-accordion__toggle--show">+</span>
-									<span class="dit-accordion__toggle--hide">-</span>
-								</span>
-              </button>
-              <div
-								id="accordion6"
-								class="dit-accordion__body"
-								aria-labelledby="accordion-button5"
-								aria-hidden="false"
-								role="tabpanel"
-							>
-  							<div class="dit-accordion__inner">
-                  <div class="form-group">
-                    <div class="form-group">
-                      <fieldset>
-
-                        <legend class="form-label">
-                          Vivamus congue ligula a molestie tincidunt. Integer fringilla elit id ultrices porttitor. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Duis id congue justo, ut ullamcorper diam. Morbi auctor odio eros, et interdum turpis blandit a.
-                        </legend>
-
-                        <span class="error-message hidden" aria-hidden="true">Check both 'your data and our service: privacy and confidentiality' checkboxes</span>
-
-                        <div class="multiple-choice">
-                          <input id="dit-step6-privacy-1" name="dit[step6][privacy_1]" value="Y" type="checkbox" required>
-                          <label for="dit-step6-privacy-1">Privacy and consent requirement 1</label>
-                        </div>
-                        <div class="multiple-choice">
-                          <input id="dit-step6-privacy-2" name="dit[step6][privacy_2]" value="Y" required type="checkbox">
-                          <label for="dit-step6-privacy-2">Privacy and consent requirement 2</label>
-                        </div>
-
-                      </fieldset>
-                    </div>
-                  </div>
-  							</div>
-              </div>
-            </div>
-            <!--/ Tab 6 -->
-
-
+          <div class="form-group">
+            <label class="form-label" for="dit-step5-extra">
+              Is there anything else you would like us to understand about the situation?
+            </label>
+            <textarea class="form-control" id="dit-step5-extra" name="dit[step4][extra]" rows="5" cols="10"></textarea>
           </div>
+
           <div class="dit-buttons">
-            <a href="{% url 'report-barrier-step5' %}" class="button button-white button-border">Back</a>
-            <button class="button button-red" type="submit">Submit</button>
+            <a href="{% url 'report-barrier-step4' %}" class="button button-white button-border">Back</a>
+            <button class="button button-blue" type="submit">Next</button>
             <button class="button button-transparent-blue button-border float--right js-save-button" type="submit">Save progress</button>
           </div>
         </form>
