@@ -232,6 +232,10 @@ class BarrierDetailStaticView(DetailView):
     model = BarrierRecord
     template_name = 'barrier-detail-static.html'
 
+class NotificationDetailStaticView(DetailView):
+    model = BarrierNotification
+    template_name = 'barrier-detail-static.html'
+    
 class BarrierTypeDetailView(SessionContextMixin, DetailView):
     model = BarrierType
     template_name = 'barrier-type-detail.html'
