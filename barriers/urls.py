@@ -13,8 +13,10 @@ from django.conf.urls import url  # , include
 from .views import (
     HomeView,
     CheckBarriersFormView, CheckBarriersResultsView,
-    ReportBarrierView, ReportBarrierExistingView, ReportBarrierShowCurrentBarriersView,
+    ReportBarrierView, ReportExistingBarrierView, ReportExistingNotificationView,
+    ReportBarrierShowCurrentBarriersView,
     BarrierDetailView, BarrierDetailStaticView, BarrierTypeDetailView, BarrierSubscribeView,
+    NotificationDetailStaticView,
     ReportBarrierStep1View, ReportBarrierStep2View, ReportBarrierStep3View,
     ReportBarrierStep4View, ReportBarrierStep5View, ReportBarrierStep6View,
     ReportBarrierRegisterView,
@@ -43,12 +45,16 @@ urlpatterns = [
         BarrierDetailStaticView.as_view(),
         name='barrier-detail-static'
     ),
+    url(r'^barriers/notifications/(?P<pk>\d+)/detail',
+        NotificationDetailStaticView.as_view(),
+        name='notification-detail-static'
+    ),
     url(r'^barriers/types/(?P<pk>\d+)/',
         BarrierTypeDetailView.as_view(),
         name='barrier-type-detail'
     ),
     url(r'^barriers/(?P<pk>\w+)/report',
-        ReportBarrierExistingView.as_view(),
+        ReportExistingBarrierView.as_view(),
         name='report-barrier-existing'
     ),
     url(r'^barriers/(?P<pk>\d+)',
@@ -108,7 +114,7 @@ urlpatterns = [
         name='report-barrier-form'
     ),
     url(r'^barriers/notifications/(?P<pk>\w+)/report',
-        ReportBarrierExistingView.as_view(),
+        ReportExistingNotificationView.as_view(),
         name='report-notification-existing'
     ),
     url(r'^report',

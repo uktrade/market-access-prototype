@@ -34,7 +34,7 @@ tr-home
               <div class="column-two-third">
                 <p class="dit-hero__summary">
                   Country: {{ barrier.country }}<br>
-                  Sector: {{ barrier.sectors_text }}<br>
+                  {% if barrier.sectors_text %}Sector: {{ barrier.sectors_text }}<br>{% endif %}
                   Barrier type: {% for type in barrier.barrier_types.all %}{{ type }}{% endfor %}
                 </p>
 

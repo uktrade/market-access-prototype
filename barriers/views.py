@@ -61,7 +61,7 @@ class ReportBarrierView(FormView):
         return super(ReportBarrierView, self).form_valid(form)
 
 
-class ReportBarrierExistingView(FormView):
+class ReportExistingBarrierView(FormView):
     template_name = 'report-barrier-existing.html'
     form_class = BarrierCountryForm
 
@@ -70,15 +70,9 @@ class ReportBarrierExistingView(FormView):
     def get(self, request, *args, **kwargs):
         self.barrier = BarrierRecord.objects.get(pk = kwargs['pk'])
         request.session['existingbarrier'] = self.barrier.pk
-        #if 'existing' in request.GET:
-        #    if request.GET['existing'] == False:
-        #        del request.session['existingbarrier']
-        #        del request.session['existing']
-        #    else:
-        #        barrier_id = request.GET['existing']
-        #        # put barrier info in the session
-        #        request.session['existing'] = True
-        return super(ReportBarrierExistingView, self).get(request, *args, **kwargs)
+        if 'existingnotification' in request.session:
+            del request.session['existingnotification']
+        return super(ReportExistingBarrierView, self).get(request, *args, **kwargs)
 
     def get_success_url(self, **kwargs):
         return reverse_lazy(
@@ -88,12 +82,42 @@ class ReportBarrierExistingView(FormView):
 
     def form_valid(self, form):
         self.countries = form.cleaned_data['countries_affected']
-        return super(ReportBarrierView, self).form_valid(form)
+        return super(ReportExistingBarrierView, self).form_valid(form)
 
     def get_context_data(self, *args, **kwargs):
-        context = super(ReportBarrierExistingView, self).get_context_data(*args, **kwargs)
+        context = super(ReportExistingBarrierView, self).get_context_data(*args, **kwargs)
         context['barrier'] = self.barrier
         return context
+
+
+class ReportExistingNotificationView(FormView):
+    template_name = 'report-barrier-existing.html'
+    form_class = BarrierCountryForm
+
+    countries = ''
+
+    def get(self, request, *args, **kwargs):
+        self.notification = BarrierNotification.objects.get(pk = kwargs['pk'])
+        request.session['existingnotification'] = self.notification.pk
+        if 'existingbarrier' in request.session:
+            del request.session['existingbarrier']
+        return super(ReportExistingNotificationView, self).get(request, *args, **kwargs)
+
+    def get_success_url(self, **kwargs):
+        return reverse_lazy(
+                    'report-barrier-show-current-barriers',
+                    kwargs= { 'countries' : self.countries }
+               )
+
+    def form_valid(self, form):
+        self.countries = form.cleaned_data['countries_affected']
+        return super(ReportExistingNotificationView, self).form_valid(form)
+
+    def get_context_data(self, *args, **kwargs):
+        context = super(ReportExistingNotificationView, self).get_context_data(*args, **kwargs)
+        context['barrier'] = self.notification
+        return context
+
 
 
 class ReportBarrierShowCurrentBarriersView(ListView):
@@ -196,6 +220,9 @@ class SessionContextMixin(object):
         if 'existingbarrier' in self.request.session:
             existing_barrier_id = self.request.session['existingbarrier']
             context['existingbarrier'] = BarrierRecord.objects.get(pk=existing_barrier_id)
+        if 'existingnotification' in self.request.session:
+            existing_notification_id = self.request.session['existingnotification']
+            context['existingnotification'] = BarrierNotification.objects.get(pk=existing_notification_id)
         if 'is_trade_association' in self.request.session:
             context['is_trade_association'] = self.request.session['is_trade_association']
         return context
