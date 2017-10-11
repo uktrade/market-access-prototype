@@ -21,8 +21,8 @@
       {% include 'backend/components/dashboard-table-header.html' with totalBarriers="309" screening="2" assessment="33" resolution="109" currentPage="1" totalPages="17" %}
 
       <ol class="c-entity-list">
-        {% include 'backend/components/dashboard-result.html' with title="Company X vs Country 1" template="report-home" country1="Country 1" country2="Country 2" status="Screening" sector="Sector" barrier="Barrier" date="Date updated" %}
-        {% include 'backend/components/dashboard-result.html' with title="Company Y vs Country 2" template="report-home" country1="Country 1" country2="Country 2" status="Screening" sector="Sector" barrier="Barrier" date="Date updated" %}
+        {% include 'backend/components/dashboard-result.html' with title="Company X vs Country 1" template="report-home" country1="Country 1" status="Screening" sector="Sector" barrier="Barrier" date="Date updated" %}
+        {% include 'backend/components/dashboard-result.html' with title="Company Y vs Country 2" template="report-home" country2="Country 2" status="Screening" sector="Sector" barrier="Barrier" date="Date updated" %}
         {% include 'backend/components/dashboard-result.html' with title="Barrier name consisting of country and product at minimum" template="barrier-summary" country1="Multiple countries" status="Assessment" sector="Sector" barrier="Barrier" date="Date updated" %}
         {% include 'backend/components/dashboard-result.html' with title="Barrier name consisting of country and product at minimum" template="barrier-summary" country1="Multiple countries" status="Assessment" sector="Sector" barrier="Barrier" date="Date updated" %}
         {% include 'backend/components/dashboard-result.html' with title="Barrier name consisting of country and product at minimum" template="barrier-summary" country1="Multiple countries" status="Resolution" sector="Sector" barrier="Barrier" date="Date updated" %}
