@@ -1,0 +1,14 @@
+<li class="grid-container grid-container--inner" style="border-bottom: 1px solid #E8E8E8; margin-bottom: 20px;">
+  <div class="column-two-third">
+
+    <div class="dit-summary-section dit-accordion" style="border:none;">
+      <div class="h4">
+        <a href="{% url 'notification-detail-static' pk=notification.pk %}" id="wto-title-{{ notification.pk }}">{{ notification.title }}</a><br>
+        <span class="font-small">Country: {{ notification.country }}</span>
+      </div>
+    </div>
+  </div>
+  <div class="column-one-third">
+    <a href="{% url 'report-notification-existing' pk=notification.pk %}" class="button button-red" aria-labelledby="wto-title-{{ notification.pk }}">This barrier is affecting me</a>
+  </div>
+</li>

@@ -163,8 +163,8 @@ class CheckBarriersResultsView(ListView):
     model = BarrierRecord
     context_object_name = 'uk_barriers'
     paginate_by = 10 # page size for default queryset ie UK barrier reports
-    EC_BARRIERS_PAGE_SIZE = 5
-    WTO_BARRIERS_PAGE_SIZE = 5
+    EC_NOTIFICATIONS_PAGE_SIZE = 5
+    WTO_NOTIFICATIONS_PAGE_SIZE = 5
 
     def __init__(self, *args, **kwargs):
         self.uk_source = BarrierSource.objects.get(short_name='UK')
@@ -182,17 +182,17 @@ class CheckBarriersResultsView(ListView):
 
     def get_queryset(self, *args, **kwargs):
         self.uk_barriers = BarrierRecord.objects.all()  # BarrierRecord doesn't have a source
-        self.ec_barriers = BarrierNotification.objects.filter(barrier_source=self.ec_source)
+        self.ec_notifications = BarrierNotification.objects.filter(barrier_source=self.ec_source)
         #self.wto_barriers = BarrierNotification.objects.filter(barrier_source=self.wto_source)
         if self.country_search_text:
             # FIXME currently assumes only one country in country_search_text
             self.country_object = BarrierCountry.objects.get(name__iexact=self.country_search_text)
             self.uk_barriers = self.uk_barriers.filter(country=self.country_object)
-            self.ec_barriers = self.ec_barriers.filter(country=self.country_object)
+            self.ec_notifications = self.ec_notifications.filter(country=self.country_object)
             #self.wto_barriers = self.wto_barriers.filter(country=self.country_object)
         if self.product_search_text:
             self.uk_barriers = self.uk_barriers.filter(products=self.country_object)
-            self.ec_barriers = self.ec_barriers.filter(country=self.country_object)
+            self.ec_notifications = self.ec_notifications.filter(country=self.country_object)
             #self.wto_barriers = self.wto_barriers.filter(country=self.country_object)
         # uk_paginator = Paginator(self.uk_barriers, 25) # Show 25 contacts per page
         return self.uk_barriers
@@ -201,8 +201,8 @@ class CheckBarriersResultsView(ListView):
         context_data =  super(CheckBarriersResultsView, self).get_context_data(**kwargs)
         context_data['country'] = self.country_text
         # uk_barriers will be created by default
-        context_data['ec_barriers'] = Paginator(self.ec_barriers, self.EC_BARRIERS_PAGE_SIZE).page(1)
-        #context_data['wto_barriers'] = Paginator(self.wto_barriers, self.WTO_BARRIERS_PAGE_SIZE).page(1)
+        context_data['ec_notifications'] = Paginator(self.ec_notifications, self.EC_NOTIFICATIONS_PAGE_SIZE).page(1)
+        #context_data['wto_barriers'] = Paginator(self.wto_barriers, self.WTO_NOTIFICATIONS_PAGE_SIZE).page(1)
         return context_data
 
 
@@ -234,7 +234,7 @@ class BarrierDetailStaticView(DetailView):
 
 class NotificationDetailStaticView(DetailView):
     model = BarrierNotification
-    template_name = 'barrier-detail-static.html'
+    template_name = 'notification-detail-static.html'
     
 class BarrierTypeDetailView(SessionContextMixin, DetailView):
     model = BarrierType

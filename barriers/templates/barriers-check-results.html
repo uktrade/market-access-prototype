@@ -41,21 +41,16 @@ tr-home
         </ul>
         <h3 id="ec" class="h4" style="margin-top: 60px;"><strong>Barriers reported to European Commission</strong></h3>
         <ul class="">
-        {% for ecbarrier in ec_barriers %}
-            {% include 'components/barrier-detail.html' with barrier=ecbarrier %}
+        {% for ecnotifications in ec_notifications %}
+            {% include 'components/notification-detail.html' with notification=ecnotifications %}
         {% endfor %}
         </ul>
-        {% if ec_barriers.paginator.num_pages > 1 %}
+        {% if ec_notifications.paginator.num_pages > 1 %}
         <p>
-            EC barriers {{ec_barriers.start_index}}-{{ec_barriers.end_index}} of {{ ec_barriers.paginator.count }}
-            <a href="?page={{ ec_barriers.next_page_number }}">Next page &raquo;</a>
+            EC notifications {{ec_notifications.start_index}}-{{ec_notifications.end_index}} of {{ ec_notifications.paginator.count }}
+            <a href="?page={{ ec_notifications.next_page_number }}">Next page &raquo;</a>
         </p>
         {% endif %}
-        <ul class="">
-        {% for wtobarrier in wto_barriers %}
-            {% include 'components/barrier-detail.html' with barrier=wtobarrier %}
-        {% endfor %}
-        </ul>
         <h3 id="wto" class="h4" style="margin-top: 60px;"><strong>WTO Notifications</strong></h3>
         <p>The WTO manages a list of self-reported measures that can affect international trade.</p>
         <p><a href="javascript:void(0);">Browse notifications related to your search here</a></p>
