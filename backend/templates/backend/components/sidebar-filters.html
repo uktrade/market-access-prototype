@@ -1,4 +1,4 @@
-<form method="get" class="c-collection-filters js-AutoSubmit">
+<form method="get" class="c-collection-filters">
   <input name="sortby" value="modified_on:desc" type="hidden">
   <input name="custom" value="true" type="hidden">
   <header class="u-clearfix">
@@ -99,13 +99,13 @@
         </label>
       </div>
       <div class="c-multiple-choice">
-        <input class="c-multiple-choice__input" name="sidebar_stage" value="In resolution" id="field-sidebar-status-6" type="checkbox">
+        <input class="c-multiple-choice__input" name="sidebar_stage" value="In resolution" id="field-sidebar-status-6" checked="checked" type="checkbox">
         <label class="c-multiple-choice__label" for="field-sidebar-status-6">
           <span class="c-multiple-choice__label-text">In resolution</span>
         </label>
       </div>
       <div class="c-multiple-choice">
-        <input class="c-multiple-choice__input" name="sidebar_stage" value="Hibernated" id="field-sidebar-status-5" checked="checked" type="checkbox">
+        <input class="c-multiple-choice__input" name="sidebar_stage" value="Hibernated" id="field-sidebar-status-5" type="checkbox">
         <label class="c-multiple-choice__label" for="field-sidebar-status-5">
             <span class="c-multiple-choice__label-text">Hibernated</span>
         </label>
@@ -135,8 +135,7 @@
         </label>
       </div>
   </fieldset>
-  <div style="clear:both;">&nbsp;</div>
-  <div class="c-form-actions u-js-hidden">
+  <div class="c-form-actions">
       <button class="button">Refresh results</button>
   </div>
 </form>
