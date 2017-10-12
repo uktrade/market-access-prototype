@@ -46,15 +46,7 @@
           Select barrier type
         </span>
       </label>
-      <select id="field-barrier-type" name="barrier_type" class="c-form-control">
-        <option value="">List of HMG barrier types</option>
-        {% recursetree barrier_types %}
-          <option value="{{node.pk}}">{{node.name}}</option>
-          {% if not node.is_leaf_node %}
-            {{ children }}
-          {% endif %}
-        {% endrecursetree %}
-      </select>
+      {{ form.barrier_type }}
       <span class="form-hint">
         <br>
         <a href="javascript:void(0);" target="_blank">Learn more about the HMG barrier types</a> (opens in new window)

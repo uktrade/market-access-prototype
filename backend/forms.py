@@ -1,11 +1,11 @@
 # backend/forms.py
 
 from django import forms
-from mptt.forms import TreeNodeMultipleChoiceField
+from mptt.forms import TreeNodeChoiceField
 from barriers.models import BarrierRecord, BarrierType
 
 class ChooseBarrierTypeForm(forms.Form):
-    barrier_type = TreeNodeMultipleChoiceField(
+    barrier_type = TreeNodeChoiceField(
         queryset=BarrierType.objects.filter(barrier_source=1),
     )
 
