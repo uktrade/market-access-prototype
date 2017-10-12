@@ -90,15 +90,7 @@ existing barrier record</p>
       <label class="form-label-bold" for="barrier">
         HMG barrier type
       </label>
-      <select id="barrier" class="form-control" name="barrier">
-        <option value="">List of HMG barrier types</option>
-        {% recursetree barrier_types %}
-          <option value="{{node.pk}}">{{node.name}}</option>
-          {% if not node.is_leaf_node %}
-            {{ children }}
-          {% endif %}
-        {% endrecursetree %}
-      </select>
+      {{ form.barrier_type }}
   </div>
 
     {# Lead facilitator #}

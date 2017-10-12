@@ -32,6 +32,7 @@ from .views import (
     InviteLeadTimePassesView,
     # Assessment and resolutions
     BarrierSummaryView,
+    BarrierSummaryResolutionView,
     BarrierOrganisationalImpactView,
     BarrierImpactOnTheUKView,
     BarrierChanceOfSuccessView,
@@ -123,6 +124,10 @@ urlpatterns = [
     url(r'^barrier-summary$',
         BarrierSummaryView.as_view(),
         name='barrier-summary'
+    ),
+    url(r'^barrier-summary-resolution$',
+        BarrierSummaryResolutionView.as_view(),
+        name='barrier-summary-resolution'
     ),
     url(r'^barrier/organisational-impact$',
         BarrierOrganisationalImpactView.as_view(),

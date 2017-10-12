@@ -1,0 +1,106 @@
+{% extends './datahub_layout.html' %}
+{% load staticfiles %}
+{% load trans from i18n %}
+{% block css %}
+{% endblock %}
+{% block head_title %}Barrier record: Data Hub - Trade barriers{% endblock %}
+{% block breadcrumb %}{% include 'backend/components/breadcrumb.html' with title="Barrier record" %}{% endblock %}
+{% block local_header__title_before %}{% endblock %}
+{% block local_header__title %}
+  Barrier name consisting of country and product at minimum
+{% endblock %}
+{% block local_header__meta %}
+<div class="c-meta-list">
+  Sector, Her Majesty’s Government barrier type, Country, Date added
+</div>
+{% endblock %}
+{% block local_header__progress %}
+<div class="c-progress">
+  <ol class="c-progress-bar">
+      <li class="c-progress__stage">
+        <span class="c-progress__stage-title">Assessment</span>
+      </li>
+      <li class="c-progress__stage is-active">
+        <span class="c-progress__stage-title">Resolution / Close</span>
+      </li>
+  </ol>
+</div>
+{% endblock %}
+
+{% block sidebar %}
+  {% include 'backend/components/sidebar-nav--assess.html' with nav="home" %}
+{% endblock %}
+
+{% block content %}
+
+  <h2 class="heading-medium">Resolution</h2>
+  <table class="table--key-value table--striped">
+      <tbody>
+          <tr>
+            <th>Start date</th>
+            <td>dd/mm/yyyy</td>
+          </tr>
+          <tr>
+            <th>Lead faciliator</th>
+            <td>L. Ipsum</td>
+          </tr>
+      </tbody>
+  </table>
+
+  <h2 class="heading-medium">Chance of success</h2>
+  <table class="table--key-value table--striped">
+      <tbody>
+          <tr>
+            <th>Score</th>
+            <td>Likely to succeed</td>
+          </tr>
+      </tbody>
+  </table>
+
+  <h2 class="heading-medium">Barrier summary</h2>
+  <div class="dark-panel">
+    <p>Lorem ipsum.</p>
+    <p>Lorem ipsum.</p>
+    <p>Lorem ipsum.</p>
+  </div>
+
+  <p>
+      <a href="javascript:void(0);" class="button-secondary">Edit</a>
+  </p>
+
+  <h2 class="heading-medium">Reports for instances of this barrier</h2>
+  <table class="table--key-value table--striped">
+      <tbody>
+          <tr>
+            <td><a href="javascript:void(0);">Exporting UK Company Z vs Country 3</a></td>
+            <td>Date of report</td>
+          </tr>
+      </tbody>
+  </table>
+
+  <h2 class="heading-medium">About the barrier</h2>
+  <table class="table--key-value table--striped">
+      <tbody>
+          <tr>
+              <th>Product / service</th>
+              <td><a href="javascript:void(0);">Product A</a></td>
+          </tr>
+          <tr>
+              <th>Commodity code</th>
+              <td><a href="javascript:void(0);">01110111</a></td>
+          </tr>
+          <tr>
+              <th>Country</th>
+              <td>Country 3</td>
+          </tr>
+      </tbody>
+  </table>
+  <p>
+      <a href="javascript:void(0);" class="button-secondary">Review / comment</a>
+  </p>
+
+  <h2 class="heading-medium">Recent updates</h2>
+  <div class="flash flash--info-muted">
+      <p>Recent updates to the barrier will appear here when assessment starts</p>
+  </div>
+{% endblock %}

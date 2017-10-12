@@ -59,9 +59,10 @@ class ReportHomeDecisionMadeView(ListView):
     template_name = 'backend/report-home-decision-made.html'
     pass
 
-class ReportCreateBarrierView(ListView):
+class ReportCreateBarrierView(FormView):
     model = BarrierReport
     template_name = 'backend/report-create-barrier.html'
+    form_class = ChooseBarrierTypeForm
 
     def get_context_data(self, *args, **kwargs):
         context = super(ReportCreateBarrierView, self).get_context_data(*args, **kwargs)
@@ -87,7 +88,7 @@ class ReportHomeBarrierCreatedView(ListView):
     template_name = 'backend/report-home-barrier-created.html'
     pass
 
-class ReportAssignLeadView(ListView):
+class ReportAssignLeadView(FormView):
     model = BarrierReport
     template_name = 'backend/report-assign-lead.html'
     form_class = ChooseBarrierTypeForm
@@ -125,6 +126,11 @@ class InviteLeadTimePassesView(ListView):
 class BarrierSummaryView(ListView):
     model = BarrierReport
     template_name = 'backend/barrier-summary.html'
+    pass
+
+class BarrierSummaryResolutionView(ListView):
+    model = BarrierReport
+    template_name = 'backend/barrier-summary-resolution.html'
     pass
 
 class BarrierOrganisationalImpactView(ListView):
