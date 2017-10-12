@@ -315,28 +315,41 @@ $(document).ready(function(){
 // Quick and simple toggle to show/hide the companies house list
 $(document).ready(function(){
 
-  /**
-   * @param {object}
-   */
-  var $checkbox = $('.js-dit-step1-no-companies-house');
+  // Loop through all checkboxes and assign click events to them and their
+  // related other checkboxes/radios
+  function init(){
+    $('.js-dit-toggle-field').each(function(){
+      var $checkbox = $(this);
+      var $checkboxes = $('[name="' + $checkbox.attr('name') + '"]');
 
-  /**
-   * @param {object}
-   */
-  var $field = $('.js-company-address');
+      // Set event listener
+      $checkboxes.on('change', function(){
+        toggle($checkbox);
+      });
 
-  // Set event listener
-  $checkbox.on('change', function(){
+    });
+  }
+
+  // If active then show related field and make it required (or vice versa)
+  function toggle($checkbox){
+
+    var $field = $('#' + $checkbox.attr('aria-controls'));
+
     if($checkbox.is(':checked')){
       $field.attr('aria-hidden', 'false');
+      $field.attr('aria-expanded', 'true');
       $field.removeClass('hidden');
-      $field.find('input').attr('required', 'required');
+      $field.find('input, select, textarea').attr('required', 'required');
     } else{
       $field.attr('aria-hidden', 'true');
+      $field.attr('aria-expanded', 'false');
       $field.addClass('hidden');
-      $field.find('input').removeAttr('required');
+      $field.find('input, select, textarea').removeAttr('required');
     }
-  });
+
+  }
+
+  init();
 
 });
 

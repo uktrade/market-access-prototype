@@ -93,12 +93,12 @@
           <div class="form-group">
             <div class="multiple-choice">
               <input name="dit[step1][no_companies_house_number]" value="false" type="checkbox">
-              <input id="dit-step1-no-companies-house" name="dit[step1][no_companies_house_number]" value="My organisation is no registered with Companies House" type="checkbox" class="js-dit-step1-no-companies-house">
+              <input id="dit-step1-no-companies-house" name="dit[step1][no_companies_house_number]" value="My organisation is no registered with Companies House" type="checkbox" class="js-dit-toggle-field" aria-expanded="false" aria-controls="js-company-address">
               <label for="dit-step1-no-companies-house">My organisation is not registered with Companies House</label>
             </div>
           </div>
 
-          <fieldset class="js-company-address hidden" aria-hidden="true">
+          <fieldset class="hidden" id="js-company-address" aria-hidden="true">
 
             <legend class="form-label">Enter your organisation details</legend>
 

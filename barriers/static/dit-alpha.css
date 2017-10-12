@@ -43,7 +43,8 @@ textarea{
   padding: 15px;
 }
 
-.form-hint{
+.form-hint,
+.error-message{
   font-size: 100%;
   width: 75%;
 }
