@@ -1,6 +1,7 @@
 {% extends './datahub_layout.html' %}
 {% load staticfiles %}
 {% load trans from i18n %}
+{% load mptt_tags %}
 {% block css %}
 {% endblock %}
 {% block head_title %}Data Hub - Trade Barriers{% endblock %}
@@ -49,6 +50,22 @@
         Team
       </label>
       <input id="team" class="form-control" name="team" value="" type="text">
+  </div>
+
+  {# Barrier type #}
+  <div class="form-group " id="barrier-wrapper">
+      <label class="form-label-bold" for="barrier">
+        Barrier type
+      </label>
+      <select id="barrier" class="form-control" name="barrier">
+        <option value="">List of HMG barrier types</option>
+        {% recursetree barrier_types %}
+          <option value="{{node.pk}}">{{node.name}}</option>
+          {% if not node.is_leaf_node %}
+            {{ children }}
+          {% endif %}
+        {% endrecursetree %}
+      </select>
   </div>
 
   {# Sector #}
