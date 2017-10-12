@@ -36,15 +36,7 @@
               </div>
 
               <div class="c-meta-list__item">
-                  <span class="c-meta-list__item-value">Status:
-                  {% if status == 'Screening' %}
-                    <span style="color: #D0021B;">
-                  {% elif status == 'Assessment' %}
-                    <span style="color: #F5A623;">
-                  {% else %}
-                    <span style="color: #1BAC19;">
-                  {% endif %}
-                  {{ status }}</span>
+                  <span class="c-meta-list__item-value">Status: {{ status }}</span>
 
               </div>
               <div class="c-meta-list__item">
