@@ -62,7 +62,15 @@ class ReportHomeDecisionMadeView(ListView):
 class ReportCreateBarrierView(ListView):
     model = BarrierReport
     template_name = 'backend/report-create-barrier.html'
-    pass
+
+    def get_context_data(self, *args, **kwargs):
+        context = super(ReportCreateBarrierView, self).get_context_data(*args, **kwargs)
+        # warning - this will need to change if we change
+        # the code of the UK barrier source
+        uk_source = BarrierSource.objects.get(short_name='UK')
+        uk_barrier_types = BarrierType.objects.filter(barrier_source=uk_source)
+        context['barrier_types'] = uk_barrier_types
+        return context
 
 class ReportNewUKView(ListView):
     model = BarrierReport
