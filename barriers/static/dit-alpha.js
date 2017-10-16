@@ -255,6 +255,8 @@ $(document).ready(function(){
       $countFeedback.attr('aria-hidden', 'true');
       $countFeedback.addClass('hidden');
 
+      console.log($input.val());
+
       // Fetch JSON results from API/this app
       $.ajax({
         url: AJAX_URL + $input.val(),
@@ -273,6 +275,7 @@ $(document).ready(function(){
 
         // Build up the HTML
         resultsHTML = '';
+        activeCompanies = [];
 
         // strip out non-active companies
         if(json && json.total_results > 0){
