@@ -202,15 +202,82 @@ class BarrierNotification(AuditableModel):
         from django.db.models import Count
         return get_user_model().objects.values("country").annotate(count=Count("id")).order_by('-count')
 
+class BarrierReporterOrganisation(AuditableModel):
+    """
+    Company/organisation of a person who has
+    filled in a barrier report. Doesn't
+    necessarily have a Companies House record.
+    """
+    organisation_name = models.CharField(
+        _('Company name'),
+        max_length=1500,
+        blank=True
+    )
+    BARRIER_REPORTER_ORGTYPE_COMPANY = "Company"
+    BARRIER_REPORTER_ORGTYPE_TRADE_ASSOCIATION = "Trade Association"
+    BARRIER_REPORTER_ORGTYPE_CHOICES = (
+        (BARRIER_REPORTER_ORGTYPE_COMPANY, "I am an exporter/seeking to export"),
+        (BARRIER_REPORTER_ORGTYPE_TRADE_ASSOCIATION, "I work for a trade association"),
+    )
+    organisation_type = models.CharField(
+        max_length=30,
+        choices=BARRIER_REPORTER_ORGTYPE_CHOICES,
+        default=BARRIER_REPORTER_ORGTYPE_COMPANY,
+        null=True, blank=True
+    )
+
+    companies_house_number = models.CharField(
+        _('Companies House number'),
+        max_length=100,
+        blank=True
+    )
+    registered_with_companies_house = models.NullBooleanField(
+        _('Registered with Companies House?'),
+        blank=True,
+        null=True
+    )
+    address_first_line_and_city = models.CharField(
+        _('First line of address and city'),
+        max_length=500,
+        blank=True
+    )
+    postcode = models.CharField(
+        _('Postcode'),
+        max_length=20,
+        blank=True
+    )
+
 
 class BarrierReporter(AuditableModel):
     """
     Person who has filled in a barrier report.
     """
-    name = models.CharField(_('Reporter name'), max_length=1500, blank=True)
-    company = models.CharField(_('Company name'), max_length=1500, blank=True)
+    name = models.CharField(
+        _('Reporter name'),
+        max_length=1500,
+        blank=True
+    )
+    organisation = models.ForeignKey(
+        'BarrierReporterOrganisation',
+        null=True, blank=True
+    )
+    role = models.CharField(
+        _('Your role / job title'),
+        max_length=100,
+        blank=True
+    )
+    email_address = models.CharField(
+        _('Email address'),
+        max_length=300,
+        blank=True
+    )
+    telephone_number = models.CharField(
+        _('Telephone number'),
+        max_length=100,
+        blank=True
+    )
 
-
+    
 class BarrierReport(AuditableModel):
     """
     A report from a member of the public (or from someone at a post)

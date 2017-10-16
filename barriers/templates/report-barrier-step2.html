@@ -1,9 +1,11 @@
 {% extends './govuk_layout.html' %}
 {% load staticfiles %}
 {% load trans from i18n %}
+{% load addcss %}
 {% block css %}
     <style>
     </style>
+    {{ wizard.form.media }}
 {% endblock %}
 {% block bodyScripts %}
 {% endblock bodyScripts %}
@@ -22,33 +24,23 @@
   </div>
   <div class="outer-container push--top">
     <div class="grid-container grid-container--inner">
+      <form action="" method="post" class="dit-form">
+        {% csrf_token %}
+        {{ wizard.management_form }}
       <div class="column-one-third dit-progress-bar">
         {% include 'components/form-existing-message.html' with existingbarrier=existingbarrier %}
-        <div class="h4">Section</div>
-        <ol>
-          <li><a href="{% url 'report-barrier-step1' %}"><span>1 About you</span> <img src="{% static 'images/tick.svg' %}" alt="Completed step"></a></li>
-          <li class="is-selected">2 About your organisation</li>
-          <li><a href="{% url 'report-barrier-step3' %}"><span>3 About the problem</span></a></li>
-          <li><a href="{% url 'report-barrier-step4' %}"><span>4 Select the type of barrier</span></a></li>
-          <li><a href="{% url 'report-barrier-step5' %}"><span>5 Working out the next steps</span></a></li>
-          <li><a href="{% url 'report-barrier-step6' %}"><span>6 Any other details</span></a></li>
-          <li>7 Summary</li>
-        </ol>
+        {% include 'components/section-nav.html' %}
       </div>
       <div class="column-two-third">
         <h1 class="h3 push--bottom push--top">Section 2 of 7: About your organisation</h1>
-        <form action="{% url 'report-barrier-step3' %}" method="post" class="dit-form">
-          {% csrf_token %}
-
-          {% include 'components/form-validation.html' %}
-
+          {# include 'components/form-validation.html' #}
           <div class="form-group">
-            <label class="form-label" for="dit-step1-company-name">
+            <label class="form-label" for="{{ wizard.form.name_field.id_for_label }}">
               Your organisation
             </label>
             <span class="form-hint">Enter your organisation name then search to get details from Companies House</span>
             <span class="error-message hidden" aria-hidden="true">Enter an organisation name</span>
-            <input class="form-control js-companies-house-input" id="dit-step1-company-name" type="text" name="dit[step1][company_name]" required>
+            <input class="form-control js-companies-house-input" id="dit-step1-company-name" type="text" name="dit[step1][company_name]">
           </div>
 
           <div class="form-group">
@@ -128,13 +120,9 @@
 
           </fieldset>
 
-
-          <div class="dit-buttons"><a href="{% url 'report-barrier-step1' %}" class="button button-transparent-blue button-border">Back</a>
-            <button class="button button-blue" type="submit">Next</button>
-            <button class="button button-transparent-blue button-border float--right js-save-button" type="submit">Save progress</button>
-          </div>
-        </form>
+            {% include "components/wizard-prevnext-buttons.html" %}
       </div>
+      </form>
     </div>
  </div>
 

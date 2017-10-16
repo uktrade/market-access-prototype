@@ -12,6 +12,8 @@ from django.views.generic import (
 from django.urls import reverse_lazy
 
 from api_client import api_client
+from formtools.wizard.views import SessionWizardView
+
 from .helpers import (
     store_companies_house_profile_in_session_and_validate,
     has_company
@@ -20,7 +22,17 @@ from .models import (
     BarrierNotification, BarrierRecord, BarrierSource,
     BarrierReport, BarrierCountry, BarrierType
 )
-from .forms import BarrierCountryForm, ReportBarrierForm
+from .forms import (
+    BarrierCountryForm,
+    ReportBarrierStep1Form,
+    ReportBarrierStep2Form,
+    ReportBarrierStep3Form,
+    ReportBarrierStep4Form,
+    ReportBarrierStep5Form,
+    ReportBarrierStep6Form,
+    ReportBarrierStep7Form,
+    ReportBarrierRegisterForm,
+)
 
 from sso.utils import SSOSignUpRequiredMixin
 
@@ -36,6 +48,59 @@ class HomeView(TemplateView):
         )
         context['num_barriers'] = BarrierRecord.objects.count
         return context
+
+class ReportBarrierWizardView(SessionWizardView):
+    form_list = [
+        ("step1", ReportBarrierStep1Form),
+        ("step2", ReportBarrierStep2Form),
+        ("step3", ReportBarrierStep3Form),
+        ("step4", ReportBarrierStep4Form),
+        ("step5", ReportBarrierStep5Form),
+        ("step6", ReportBarrierStep6Form),
+        ("step7", ReportBarrierStep7Form),
+        ("register", ReportBarrierRegisterForm)
+    ]
+
+    TEMPLATES = {
+        "step1": "report-barrier-step1.html",
+        "step2": "report-barrier-step2.html",
+        "step3": "report-barrier-step3.html",
+        "step4": "report-barrier-step4.html",
+        "step5": "report-barrier-step5.html",
+        "step6": "report-barrier-step6.html",
+        "step7": "report-barrier-step7.html"
+    }
+
+    condition_list = {
+        "step1": ReportBarrierStep1Form.is_complete,
+        "step2": ReportBarrierStep2Form.is_complete,
+        "step3": ReportBarrierStep2Form.is_complete,
+        "step4": ReportBarrierStep2Form.is_complete,
+        "step5": ReportBarrierStep2Form.is_complete,
+        "step6": ReportBarrierStep2Form.is_complete,
+        "step7": ReportBarrierStep2Form.is_complete
+    }
+
+    def get_template_names(self):
+        return [self.TEMPLATES[self.steps.current]]
+
+    def __init__(self, *args, **kwargs):
+        # Pre-load list of barrier types for use in our forms.
+        # warning - this will need to change if we change
+        # the code of the UK barrier source
+        self.uk_source = BarrierSource.objects.get(short_name='UK')
+        self.uk_barrier_types = BarrierType.objects.filter(barrier_source=self.uk_source)
+        return super(ReportBarrierWizardView, self).__init__(*args, **kwargs)
+
+    def done(self, form_list, **kwargs):
+        do_something_with_the_form_data(form_list)
+        return HttpResponseRedirect(reverse_lazy(''))
+
+    def get_context_data(self, *args, **kwargs):
+        context = super(ReportBarrierWizardView, self).get_context_data(*args, **kwargs)
+        context['barrier_types'] = self.uk_barrier_types
+        return context
+
 
 class ReportBarrierView(FormView):
     template_name = 'report-barrier.html'
@@ -118,7 +183,7 @@ class ReportExistingNotificationView(FormView):
 
 class SearchView(FormView):
     template_name = 'search.html'
-    form_class = ReportBarrierForm
+    form_class = ReportBarrierStep1Form
 
     countries = ''
 

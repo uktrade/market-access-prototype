@@ -1,8 +1,10 @@
 {% extends './govuk_layout.html' %}
 {% load staticfiles %}
+{% load addcss %}
 {% load trans from i18n %}
 {% load mptt_tags %}
 {% block css %}
+    {{ wizard.form.media }}
 {% endblock %}
 {% block bodyScripts %}
 {% endblock bodyScripts %}
@@ -21,26 +23,16 @@
   </div>
   <div class="outer-container push--top">
     <div class="grid-container grid-container--inner">
+      <form action="" method="post" class="dit-form">
+        {% csrf_token %}
+        {{ wizard.management_form }}
       <div class="column-one-third dit-progress-bar">
         {% include 'components/form-existing-message.html' with existingbarrier=existingbarrier %}
-        <div class="h4">Section</div>
-        <ol>
-          <li><a href="{% url 'report-barrier-step1' %}"><span>1 About you</span> <img src="{% static 'images/tick.svg' %}" alt="Completed step"></a></li>
-          <li><a href="{% url 'report-barrier-step2' %}"><span>2 About your organisation</span> <img src="{% static 'images/tick.svg' %}" alt="Completed step"></a></li>
-          <li><a href="{% url 'report-barrier-step3' %}"><span>3 About the problem</span>  <img src="{% static 'images/tick.svg' %}" alt="Completed step"></a></li>
-          <li class="is-selected">4 Select the type of barrier</li>
-          <li><a href="{% url 'report-barrier-step5' %}">5 Working out the next steps</a></li>
-          <li><a href="{% url 'report-barrier-step6' %}"><span>6 Any other details</span></a></li>
-          <li>7 Summary</li>
-        </ol>
+        {% include 'components/section-nav.html' %}
       </div>
       <div class="column-two-third">
         <h1 class="h3 push--bottom push--top">Section 4 of 7: Select the type(s) of barrier</h1>
-        <form action="{% url 'report-barrier-step5' %}" method="post" class="dit-form">
-
-          {% csrf_token %}
-
-          {% include 'components/form-validation.html' %}
+          {# include 'components/form-validation.html' #}
 
           <div class="form-group push--top required-checkboxes">
             <fieldset>
@@ -55,7 +47,7 @@
 
             {% recursetree barrier_types %}
               <div class="multiple-choice {% if node.tree_id == 1 %}push--top{% endif %}">
-                <input id="dit-step3-{{node.tree_id}}" name="dit[step3][choice]" value="{{ node.pk }}" type="checkbox" required>
+                <input id="dit-step3-{{node.tree_id}}" name="dit[step3][choice]" value="{{ node.pk }}" type="checkbox" >
                 <label for="dit-step3-{{node.tree_id}}" class="form-label"
                 {% if node.barrier_code == "11" %}style="white-space: nowrap;"{% endif %}>
                   {{ node.barrier_code }}) {{ node.name }}
@@ -68,7 +60,7 @@
               </div>
             {% endrecursetree %}
               <!-- div class="multiple-choice">
-                <input id="dit-step3-3" name="dit[step3][choice]" value="Unreasonable import quotas" type="checkbox" required>
+                <input id="dit-step3-3" name="dit[step3][choice]" value="Unreasonable import quotas" type="checkbox" >
                 <label for="dit-step3-3" class="form-label">
                   2) Unreasonable import quotas
                   <span class="form-hint">
@@ -78,7 +70,7 @@ relevant trade agreements or which seem unjustified.
                 </label>
               </div>
               <div class="multiple-choice">
-                <input id="dit-step3-4" name="dit[step3][choice]" value="Burdensome customs procedures" type="checkbox" required>
+                <input id="dit-step3-4" name="dit[step3][choice]" value="Burdensome customs procedures" type="checkbox" >
                 <label for="dit-step3-4" class="form-label">
                   3) Burdensome customs procedures
                   <span class="form-hint">
@@ -87,7 +79,7 @@ relevant trade agreements or which seem unjustified.
                 </label>
               </div>
               <div class="multiple-choice">
-                <input id="dit-step3-5" name="dit[step3][choice]" value="Restrictive government procurement rules and practices" type="checkbox" required>
+                <input id="dit-step3-5" name="dit[step3][choice]" value="Restrictive government procurement rules and practices" type="checkbox" >
                 <label for="dit-step3-5" class="form-label">
                   4) Restrictive government procurement rules and practices
                   <span class="form-hint">
@@ -97,7 +89,7 @@ relevant trade agreements or which seem unjustified.
                 </label>
               </div>
               <div class="multiple-choice">
-                <input id="dit-step3-6" name="dit[step3][choice]" value="Technical regulations, standards and conformity assessment procedures" type="checkbox" required>
+                <input id="dit-step3-6" name="dit[step3][choice]" value="Technical regulations, standards and conformity assessment procedures" type="checkbox" >
                 <label for="dit-step3-6" class="form-label">
                   5) Unreasonable technical regulations, standards and conformity assessment procedures
                   <span class="form-hint">
@@ -106,7 +98,7 @@ relevant trade agreements or which seem unjustified.
                 </label>
               </div>
               <div class="multiple-choice">
-                <input id="dit-step3-7" name="dit[step3][choice]" value="Poor protection of intellectual property rights and geographical indicators" type="checkbox" required>
+                <input id="dit-step3-7" name="dit[step3][choice]" value="Poor protection of intellectual property rights and geographical indicators" type="checkbox" >
                 <label for="dit-step3-7" class="form-label">
                   6) Poor protection of intellectual property rights and geographical indicators
 
@@ -117,7 +109,7 @@ relevant trade agreements or which seem unjustified.
                 </label>
               </div>
               <div class="multiple-choice">
-                <input id="dit-step3-8" name="dit[step3][choice]" value="Unreasonable sanitary and phytosanitary measures" type="checkbox" required>
+                <input id="dit-step3-8" name="dit[step3][choice]" value="Unreasonable sanitary and phytosanitary measures" type="checkbox" >
                 <label for="dit-step3-8" class="form-label">
                   7) Unreasonable sanitary and phytosanitary measures
                   <span class="form-hint">
@@ -125,7 +117,7 @@ relevant trade agreements or which seem unjustified.
                 </label>
               </div>
               <div class="multiple-choice">
-                <input id="dit-step3-1" name="dit[step3][choice]" value="Restrictive rules of origin" type="checkbox" required>
+                <input id="dit-step3-1" name="dit[step3][choice]" value="Restrictive rules of origin" type="checkbox" >
                 <label for="dit-step3-1" class="form-label">
                   8) Restrictive rules of origin
                   <span class="form-hint">
@@ -135,7 +127,7 @@ relevant trade agreements or which seem unjustified.
               </div>
               <div class="multiple-choice">
                 <input id="dit-step3-10" name="dit[step3][choice]" value="Barriers to trade in services and investment, such as unjustified foreign ownership caps, joint
-  venture  obligations and discriminatory treatment" type="checkbox" required>
+  venture  obligations and discriminatory treatment" type="checkbox" >
                 <label for="dit-step3-10" class="form-label">
                   9) Barriers to trade in services and investment, such as unjustified foreign ownership caps, joint
   venture  obligations and discriminatory treatment
@@ -145,7 +137,7 @@ relevant trade agreements or which seem unjustified.
                 </label>
               </div>
               <div class="multiple-choice">
-                <input id="dit-step3-9" name="dit[step3][choice]" value="Limits on a country’s own exporters" type="checkbox" required>
+                <input id="dit-step3-9" name="dit[step3][choice]" value="Limits on a country’s own exporters" type="checkbox" >
                 <label for="dit-step3-9" class="form-label">
                   10) Limits on a country’s own exporters
                   <span class="form-hint">Unreasonable export limits designed to keep domestic product prices low and which make it difficult for other countries’ exporters to compete.
@@ -154,20 +146,16 @@ relevant trade agreements or which seem unjustified.
               </div>
 
               <div class="multiple-choice">
-                <input id="dit-step3-11" name="dit[step3][choice]" value="Not sure" type="checkbox" required>
+                <input id="dit-step3-11" name="dit[step3][choice]" value="Not sure" type="checkbox" >
                 <label for="dit-step3-11" class="form-label" style="white-space: nowrap;">
                   11) Other/Not sure
                 </label>
               </div -->
             </fieldset>
           </div>
-          <div class="dit-buttons">
-            <a href="{% url 'report-barrier-step3' %}" class="button button-white button-border">Back</a>
-            <button class="button button-blue" type="submit">Next</button>
-            <button class="button button-transparent-blue button-border float--right js-save-button" type="submit">Save progress</button>
-          </div>
-        </form>
+            {% include "components/wizard-prevnext-buttons.html" %}
       </div>
+      </form>
     </div>
   </div>
 

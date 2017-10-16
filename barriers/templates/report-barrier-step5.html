@@ -1,7 +1,9 @@
 {% extends './govuk_layout.html' %}
 {% load staticfiles %}
 {% load trans from i18n %}
+{% load addcss %}
 {% block css %}
+    {{ wizard.form.media }}
 {% endblock %}
 {% block bodyScripts %}
 {% endblock bodyScripts %}
@@ -20,28 +22,19 @@
   </div>
   <div class="outer-container push--top">
     <div class="grid-container grid-container--inner">
+      <form action="" method="post" class="dit-form">
+        {% csrf_token %}
+        {{ wizard.management_form }}
       <div class="column-one-third dit-progress-bar">
         {% include 'components/form-existing-message.html' with existingbarrier=existingbarrier %}
-        <div class="h4">Section</div>
-        <ol>
-          <li><a href="{% url 'report-barrier-step1' %}"><span>1 About you</span> <img src="{% static 'images/tick.svg' %}" alt="Completed step"></a></li>
-          <li><a href="{% url 'report-barrier-step2' %}"><span>2 About your organisation</span> <img src="{% static 'images/tick.svg' %}" alt="Completed step"></a></li>
-          <li><a href="{% url 'report-barrier-step3' %}"><span>3 About the problem</span>  <img src="{% static 'images/tick.svg' %}" alt="Completed step"></a></li>
-          <li><a href="{% url 'report-barrier-step4' %}"><span>4 Select the type of barrier</span> <img src="{% static 'images/tick.svg' %}" alt="Completed step"></a></li>
-          <li class="is-selected">5 Working out the next steps</li>
-          <li><a href="{% url 'report-barrier-step6' %}"><span>6 Any other details</span></a></li>
-          <li>7 Summary</li>
-        </ol>
+        {% include 'components/section-nav.html' %}
       </div>
       <div class="column-two-third">
         <h1 class="h3 push--bottom push--top">Step 5 of 7: Working out the next steps</h1>
-        <form action="{% url 'report-barrier-step6' %}" method="post" class="dit-form">
-          {% csrf_token %}
-
-          {% include 'components/form-validation.html' %}
+          {# include 'components/form-validation.html' #}
 
           <div class="form-group">
-            <label class="form-label" for="dit-step4-steps-taken">
+            <label class="form-label" for="{{ wizard.form.steps_taken_field.id_for_label }}">
               Tell us about any steps you have taken to resolve the problem, including:
               <span class="form-hint">
                 - people you have contacted<br>
@@ -49,15 +42,15 @@
                 - what happened
               </span>
             </label>
-            <textarea class="form-control" id="dit-step4-steps-taken" name="dit[step4][steps_taken]" rows="5" cols="10"></textarea>
+            {{ wizard.form.steps_taken_field|addcss:"form-control" }}
           </div>
 
           <div class="form-group">
-            <label class="form-label" for="dit-step4-outcome">
+            <label class="form-label" for="{{ wizard.form.how_likely_to_be_resolved_field.id_for_label }}">
               Do you have a view on how the problem is most likely to be resolved?
             </label>
             <span class="error-message hidden" aria-hidden="true">Enter the outcome you are looking for</span>
-            <textarea class="form-control" id="dit-step4-outcome" name="dit[step4][outcome]" rows="5" cols="10" required></textarea>
+            {{ wizard.form.how_likely_to_be_resolved_field|addcss:"form-control" }}
           </div>
 
           <div class="form-group">
@@ -69,20 +62,21 @@
 
               <span class="error-message hidden" aria-hidden="true">Select the kind of UK government support you would like</span>
 
+              <!-- TODO in Django -->
               <div class="multiple-choice">
-                <input id="dit-step4-support-1" name="dit[step4][support]" value="None - this is for your information only" type="radio" required>
+                <input id="dit-step4-support-1" name="dit[step4][support]" value="None - this is for your information only" type="radio" >
                 <label for="dit-step4-support-1">None - this is for your information only</label>
               </div>
               <div class="multiple-choice">
-                <input id="dit-step4-support-2" name="dit[step4][support]" value="Local engagement only with UK government officials in the country I am trying to export to" type="radio" required>
+                <input id="dit-step4-support-2" name="dit[step4][support]" value="Local engagement only with UK government officials in the country I am trying to export to" type="radio" >
                 <label for="dit-step4-support-2">Local engagement only with UK government officials in the country I am trying to export to</label>
               </div>
               <div class="multiple-choice">
-                <input id="dit-step4-support-3" name="dit[step4][support]" value="Broader UK government involvement" type="radio" required>
+                <input id="dit-step4-support-3" name="dit[step4][support]" value="Broader UK government involvement" type="radio" >
                 <label for="dit-step4-support-3">Broader UK government involvement</label>
               </div>
               <div class="multiple-choice">
-                <input id="dit-step4-support-4" name="dit[step4][support]" value="Not sure" type="radio" required>
+                <input id="dit-step4-support-4" name="dit[step4][support]" value="Not sure" type="radio" >
                 <label for="dit-step4-support-4">Not sure</label>
               </div>
 
@@ -90,10 +84,10 @@
           </div>
 
           <div class="form-group">
-            <label class="form-label" for="dit-step4-confidentiality">
+            <label class="form-label" for="{{ wizard.form.confidentiality_issues_field.id_for_label }}">
               Are there confidentiality issues that you need us to be aware of, e.g. commercial sensitivity?
             </label>
-            <textarea class="form-control" id="dit-step4-confidentiality" name="dit[step4][confidentiality]" rows="5" cols="10"></textarea>
+            {{ wizard.form.confidentiality_issues_field|addcss:"form-control" }}
           </div>
 
           <div class="form-group">
@@ -111,30 +105,26 @@
               <span class="error-message hidden" aria-hidden="true">Select whether or not you are happy for us to publish a summary of your problem</span>
 
               <div class="multiple-choice">
-                <input id="dit-step4-publish-yes" name="dit[step4][publish]" value="Yes, I give my permission" type="radio" required>
+                <input id="dit-step4-publish-yes" name="dit[step4][publish]" value="Yes, I give my permission" type="radio" >
                 <label for="dit-step4-publish-yes">Yes, I give my permission</label>
               </div>
 
               <div class="multiple-choice">
-                <input id="dit-step4-publish-no" name="dit[step4][publish]" value="No, I don’t give my permission" type="radio" required>
+                <input id="dit-step4-publish-no" name="dit[step4][publish]" value="No, I don’t give my permission" type="radio" >
                 <label for="dit-step4-publish-no">No, I don’t give my permission</label>
               </div>
 
               <div class="multiple-choice">
-                <input id="dit-step4-publish-maybe" name="dit[step4][publish]" value="Don’t publish before consulting me " type="radio" required>
+                <input id="dit-step4-publish-maybe" name="dit[step4][publish]" value="Don’t publish before consulting me " type="radio" >
                 <label for="dit-step4-publish-maybe">Don’t publish before consulting me </label>
               </div>
 
             </fieldset>
           </div>
 
-          <div class="dit-buttons">
-            <a href="{% url 'report-barrier-step4' %}" class="button button-white button-border">Back</a>
-            <button class="button button-blue" type="submit">Next</button>
-            <button class="button button-transparent-blue button-border float--right js-save-button" type="submit">Save progress</button>
-          </div>
-        </form>
+            {% include "components/wizard-prevnext-buttons.html" %}
       </div>
+      </form>
     </div>
   </div>
 

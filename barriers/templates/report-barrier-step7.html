@@ -1,6 +1,7 @@
 {% extends './govuk_layout.html' %}
 {% load staticfiles %}
 {% load trans from i18n %}
+{% load addcss %}
 {% block css %}
 {% endblock %}
 {% block bodyScripts %}
@@ -20,25 +21,17 @@
   </div>
   <div class="outer-container push--top">
     <div class="grid-container grid-container--inner">
+      <form action="" method="post" class="dit-form">
+      {% csrf_token %}
+      {{ wizard.management_form }}
       <div class="column-one-third dit-progress-bar">
         {% include 'components/form-existing-message.html' with existingbarrier=existingbarrier %}
-        <div class="h4">Section</div>
-        <ol>
-          <li><a href="{% url 'report-barrier-step1' %}"><span>1 About you</span> <img src="{% static 'images/tick.svg' %}" alt="Completed step"></a></li>
-          <li><a href="{% url 'report-barrier-step2' %}"><span>2 About your organisation</span> <img src="{% static 'images/tick.svg' %}" alt="Completed step"></a></li>
-          <li><a href="{% url 'report-barrier-step3' %}"><span>3 About the problem</span> <img src="{% static 'images/tick.svg' %}" alt="Completed step"></a></li>
-          <li><a href="{% url 'report-barrier-step4' %}"><span>4 Select the type of barrier</span> <img src="{% static 'images/tick.svg' %}" alt="Completed step"></a></li>
-          <li><a href="{% url 'report-barrier-step5' %}"><span>5 Working out the next steps</span> <img src="{% static 'images/tick.svg' %}" alt="Completed step"></a></li>
-          <li><a href="{% url 'report-barrier-step6' %}"><span>6 Any other details</span> <img src="{% static 'images/tick.svg' %}" alt="Completed step"></a></li>
-          <li class="is-selected">7 Summary</li>
-        </ol>
+        {% include 'components/section-nav.html' %}
       </div>
       <div class="column-two-third">
         <h1 class="h3 push--bottom push--top">Step 7 of 7: Summary of your report</h1>
-        <form action="{% url 'report-barrier-register' %}" method="post" class="dit-form">
-          {% csrf_token %}
 
-          {% include 'components/form-validation.html' %}
+          {# include 'components/form-validation.html' #}
           <div class="dit-summary-sections dit-accordion-list" data-module="Accordion">
 
             <!-- Tab 1 -->
@@ -67,7 +60,7 @@
   							<div class="dit-accordion__inner">
                   <div class="form-group">
                     <div class="form-label">Your name</div>
-                    <div class="js-form-field" data-name="dit[step1][your_name]">Dr L. Ipsum</div>
+                    <div class="js-form-field" data-name="dit[step1][your_name]">{{ wizard.steps.step1.name_field.value }}</div>
                   </div>
 
                   <div class="form-group">
@@ -90,7 +83,7 @@
                     <div class="js-form-field" data-name="dit[step1][contact_telephone_number]">0776123456789</div>
                   </div>
   							</div>
-                <a href="{% url 'report-barrier-step1' %}" class="button button-blue" aria-labelledby="accordion-button1">Edit</a>
+                <button name="wizard_goto_step" class="button button-blue" type="submit" value="step1">Edit</button>
               </div>
             </div>
             <!--/ Tab 1 -->
@@ -136,7 +129,7 @@
                   </div>
 
   							</div>
-                <a href="{% url 'report-barrier-step2' %}" class="button button-blue" aria-labelledby="accordion-button1a">Edit</a>
+                <button name="wizard_goto_step" class="button button-blue" type="submit" value="step2">Edit</button>
               </div>
             </div>
             <!--/ Tab 2 -->
@@ -235,7 +228,7 @@
                     <div class="js-form-field" data-name="dit[step2][others_affected_details]">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean scelerisque suscipit vulputate. Aliquam vitae congue arcu. In congue mi non orci elementum, ut imperdiet nisi ultricies. Nulla in mollis mi. Aliquam sit amet nisl id ex auctor scelerisque hendrerit at nunc. Pellentesque ultricies molestie quam. Proin ultrices hendrerit risus id eleifend. Aliquam erat volutpat. Cras tempus lorem massa. </div>
                   </div>
   							</div>
-                <a href="{% url 'report-barrier-step3' %}" class="button button-blue" aria-labelledby="accordion-button2">Edit</a>
+                <button name="wizard_goto_step" class="button button-blue" type="submit" value="step3">Edit</button>
               </div>
             </div>
             <!--/ Tab 3 -->
@@ -270,6 +263,7 @@
                   </div>
                 <a href="{% url 'report-barrier-step4' %}" class="button button-blue" aria-labelledby="accordion-button3">Edit</a>
   							</div>
+                <button name="wizard_goto_step" class="button button-blue" type="submit" value="step1">Edit</button>
               </div>
             </div>
             <!--/ Tab 4 -->
@@ -321,6 +315,7 @@
 
   							</div>
                 <a href="{% url 'report-barrier-step5' %}" class="button button-blue" aria-labelledby="accordion-button4">Edit</a>
+                <button name="wizard_goto_step" class="button button-blue" type="submit" value="step1">Edit</button>
               </div>
             </div>
             <!--/ Tab 5 -->
@@ -353,7 +348,7 @@
                     <div class="form-label">Is there anything else you would like us to understand about the situation?</div>
                     <div class="js-form-field" data-name="dit[step5][extra]">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean scelerisque suscipit vulputate. Aliquam vitae congue arcu. In congue mi non orci elementum, ut imperdiet nisi ultricies. Nulla in mollis mi. Aliquam sit amet nisl id ex auctor scelerisque hendrerit at nunc. Pellentesque ultricies molestie quam. Proin ultrices hendrerit risus id eleifend. Aliquam erat volutpat. Cras tempus lorem massa. </div>
                   </div>
-                <a href="{% url 'report-barrier-step6' %}" class="button button-blue" aria-labelledby="accordion-button5">Edit</a>
+                <button name="wizard_goto_step" class="button button-blue" type="submit" value="step6">Edit</button>
   							</div>
               </div>
             </div>
@@ -395,11 +390,11 @@
                         <span class="error-message hidden" aria-hidden="true">Check both 'your data and our service: privacy and confidentiality' checkboxes</span>
 
                         <div class="multiple-choice">
-                          <input id="dit-step6-privacy-1" name="dit[step6][privacy_1]" value="Y" type="checkbox" required>
+                          <input id="dit-step6-privacy-1" name="dit[step6][privacy_1]" value="Y" type="checkbox" >
                           <label for="dit-step6-privacy-1">Privacy and consent requirement 1</label>
                         </div>
                         <div class="multiple-choice">
-                          <input id="dit-step6-privacy-2" name="dit[step6][privacy_2]" value="Y" required type="checkbox">
+                          <input id="dit-step6-privacy-2" name="dit[step6][privacy_2]" value="Y" type="checkbox">
                           <label for="dit-step6-privacy-2">Privacy and consent requirement 2</label>
                         </div>
 
@@ -413,7 +408,7 @@
 
           </div>
           <div class="dit-buttons">
-            <a href="{% url 'report-barrier-step6' %}" class="button button-white button-border">Back</a>
+            <button name="wizard_goto_step" class="button button-white button-border" type="submit" value="step6">Back</button>
             <button class="button button-red" type="submit">Submit</button>
             <button class="button button-transparent-blue button-border float--right js-save-button" type="submit">Save progress</button>
           </div>

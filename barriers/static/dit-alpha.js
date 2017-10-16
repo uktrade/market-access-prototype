@@ -516,7 +516,9 @@ window.DITAlpha = window.DITAlpha || {};
 
 	"use strict";
 
-	window.DITAlpha.FormValidation = {
+    /* BQ 2017-10-16 to turn off JS validation for now */
+	window.DITAlpha.FormValidation = 
+     {
 
     /**
      * @param {object}
@@ -656,7 +658,7 @@ window.DITAlpha = window.DITAlpha || {};
 
 	};
 
-	window.DITAlpha.FormValidation.init();
+    /* window.DITAlpha.FormValidation.init(); */
 
 }(jQuery));
 

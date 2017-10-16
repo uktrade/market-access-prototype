@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.admin',
     # django library for dealing with hierarchical elements
     'mptt',
+    'formtools',
     # our apps
     'govuk_template',
     'barriers',

@@ -1,6 +1,7 @@
 {% extends './govuk_layout.html' %}
 {% load staticfiles %}
 {% load trans from i18n %}
+{% load addcss %}
 {% block css %}
 <style>
   .select2-container{
@@ -30,6 +31,7 @@
     border: none;
   }
 </style>
+    {{ wizard.form.media }}
 {% endblock %}
 {% block bodyScripts %}
 {% endblock bodyScripts %}
@@ -48,28 +50,18 @@
   </div>
   <div class="outer-container push--top">
     <div class="grid-container grid-container--inner">
+      <form action="" method="post" class="dit-form">
+        {% csrf_token %}
+        {{ wizard.management_form }}
       <div class="column-one-third dit-progress-bar">
         {% include 'components/form-existing-message.html' with existingbarrier=existingbarrier %}
-        <div class="h4">Section</div>
-        <ol>
-          <li><a href="{% url 'report-barrier-step1' %}"><span>1 About you</span> <img src="{% static 'images/tick.svg' %}" alt="Completed step"></a></li>
-          <li><a href="{% url 'report-barrier-step2' %}"><span>2 About your organisation</span> <img src="{% static 'images/tick.svg' %}" alt="Completed step"></a></li>
-          <li class="is-selected">3 About the problem</li>
-          <li><a href="{% url 'report-barrier-step4' %}">4 Select the type of barrier</a></li>
-          <li><a href="{% url 'report-barrier-step5' %}">5 Working out the next steps</a></li>
-          <li><a href="{% url 'report-barrier-step6' %}"><span>6 Any other details</span></a></li>
-          <li>7 Summary</li>
-        </ol>
+        {% include 'components/section-nav.html' %}
       </div>
       <div class="column-two-third">
         <h1 class="h3 push--bottom push--top">Section 3 of 7: About the problem</h1>
-        <form action="{% url 'report-barrier-step4' %}" method="post" class="dit-form">
-          {% csrf_token %}
-
-          {% include 'components/form-validation.html' %}
-
+          {# include 'components/form-validation.html' #}
           <div class="form-group">
-            <label class="form-label" for="dit-step2-product">
+            <label class="form-label" for="{{ wizard.form.product_text_field.id_for_label }}">
               {% if is_trade_association == True %}
                 What product or service are your member(s) wanting to export?
               {% else %}
@@ -77,11 +69,12 @@
               {% endif %}
             </label>
             <span class="error-message hidden" aria-hidden="true">Enter a product or service</span>
-            <input class="form-control" id="dit-step2-product" type="text" name="dit[step2][product]" required>
+            {{ wizard.form.product_text_field|addcss:"form-control" }}
+            <!-- input class="form-control" id="dit-step2-product" type="text" name="dit[step2][product]" required -->
           </div>
 
           <div class="form-group">
-            <label class="form-label" for="dit-step2-code">
+            <label class="form-label" for="{{ wizard.form.product_codes_field.id_for_label }}">
               List the relevant commodity code or codes, if known
               <span class="form-hint">
                 Commodity codes/HS codes are part of an internationally standardised system of names and numbers to classify traded products. You can <a href="https://www.gov.uk/trade-tariff">look up commodity codes on GOV.UK</a>.
@@ -92,17 +85,18 @@
           </div>
 
           <div class="form-group">
-            <label class="form-label" for="dit-step2-country">
+            <label class="form-label" for="{{ wizard.form.countries_field.id_for_label }}">
               Which country/bloc are you trying to export to?
             </label>
             <span class="error-message hidden" aria-hidden="true">Enter a country/bloc</span>
-            <select id="dit-step2-country" name="dit[step2][country]" autocomplete="off" class="form-control select-custom select2-hidden-accessible" data-placeholder="Type to find country" multiple required>
+            {# wizard.form.countries_field #}
+            <select id="dit-step2-country" name="dit[step2][country]" autocomplete="off" class="form-control select-custom select2-hidden-accessible" data-placeholder="Type to find country" multiple>
               {% include 'components/countries.html' %}
             </select>
           </div>
 
           <div class="form-group">
-            <label class="form-label" for="dit-step2-description">
+            <label class="form-label" for="{{ wizard.form.problem_description_field.id_for_label }}">
               Provide a brief description of the problem, including:
               <span class="form-hint">
                 - What is obstructing your export<br>
@@ -110,7 +104,7 @@
               </span>
             </label>
             <span class="error-message hidden" aria-hidden="true">Enter a brief description of the problem</span>
-            <textarea class="form-control" id="dit-step2-description" name="dit[step2][description]" rows="10" cols="5" required></textarea>
+            {{ wizard.form.problem_description_field|addcss:"form-control" }}
           </div>
 
           <div class="form-group">
@@ -124,19 +118,20 @@
 
               <span class="error-message hidden" aria-hidden="true">Select whether you have experienced this problem in other markets or not</span>
 
+            <!-- TODO fi this for Django forms -->
               <div class="multiple-choice">
-                <input id="dit-step4-export-yn-yes" name="dit[step4][export_yn]" value="Yes" type="radio" required class="js-dit-toggle-field" aria-expanded="false" aria-controls="js-dit-export-to-other-countries">
+                <input id="dit-step4-export-yn-yes" name="dit[step4][export_yn]" value="Yes" type="radio" class="js-dit-toggle-field" aria-expanded="false" aria-controls="js-dit-export-to-other-countries">
                 <label for="dit-step4-export-yn-yes">Yes</label>
               </div>
 
               <div class="multiple-choice">
-                <input id="dit-step4-export-yn-no" name="dit[step4][export_yn]" value="No" type="radio" required>
+                <input id="dit-step4-export-yn-no" name="dit[step4][export_yn]" value="No" type="radio" >
                 <label for="dit-step4-export-yn-no">No</label>
               </div>
             </fieldset>
           </div>
           <div class="form-group form-group-child hidden" id="js-dit-export-to-other-countries" aria-hidden="true">
-            <label class="form-label" for="dit-step2-export-to-other-countries" aria-labelledby="export-yn">
+            <label class="form-label" for="{{ wizard.form.export_to_other_countries_description_field.id_for_label" aria-labelledby="export-yn">
               If yes, provide details of the problem, explanations given, and any steps taken to resolve the problem
             </label>
             <span class="error-message hidden" aria-hidden="true">Provide details of the problem, explanations given, and any steps taken to resolve the problem</span>
@@ -144,7 +139,7 @@
           </div>
 
           <div class="form-group">
-            <label class="form-label" for="dit-step2-impact">
+            <label class="form-label" for="{{ impact_you_would_expect_field.id_for_label }}">
               {% if is_trade_association == True %}
                 What impact do you expect this to have on your member(s)?
               {% else %}
@@ -155,21 +150,21 @@
               {% endif %}
             </label>
             <span class="error-message hidden" aria-hidden="true">Enter the impact you expect this to have</span>
-            <textarea class="form-control" id="dit-step2-impact" name="dit[step2][impact]" rows="10" cols="5" required></textarea>
+            {{ wizard.form.impact_you_would_expect_field|addcss:"form-control" }}
           </div>
 
           {% if is_trade_association == True %}
 
           {% else %}
           <div class="form-group">
-            <label class="form-label" for="dit-step2-sales">
+            <label class="form-label" for="{{ wizard.form.annual_turnover_field.id_for_label }}">
               What is your company's annual turnover?
 
               <span class="form-hint">
                 Leave blank if you are unsure
               </span>
             </label>
-            <input class="form-control" id="dit-step2-sales" name="dit[step2][sales]" value="">
+            {{ wizard.form.annual_turnover_field|addcss:"form-control" }}
           </div>
           {% endif %}
 
@@ -180,7 +175,7 @@
           </div>-->
 
           <div class="form-group">
-            <label class="form-label" for="dit-step2-duration">
+            <label class="form-label" for="{{ wizard.form.problem_duration_field.id_for_label }}">
               What's the duration of the problem, including:
               <span class="form-hint">
                 - When it started<br>
@@ -188,7 +183,7 @@
               </span>
             </label>
             <span class="error-message hidden" aria-hidden="true">Enter the duration of the problem</span>
-            <textarea class="form-control" id="dit-step2-duration" name="dit[step2][duration]" rows="5" cols="10" required></textarea>
+            {{ wizard.form.problem_duration_field|addcss:"form-control" }}
           </div>
 
           <div class="form-group">
@@ -213,7 +208,7 @@
                 <label for="dit-step2-others-affected-no">No</label>
               </div>
               <div class="multiple-choice">
-                <input id="dit-step2-others-affected-dont-know" name="dit[step2][others_affected]" value="Don't Know" type="radio" required>
+                <input id="dit-step2-others-affected-dont-know" name="dit[step2][others_affected]" value="Don't Know" type="radio">
                 <label for="dit-step2-others-affected-dont-know">Don't know</label>
               </div>
 
@@ -221,20 +216,16 @@
           </div>
 
           <div class="form-group form-group-child hidden" aria-hidden="true" id="js-dit-others-affected-details">
-            <label class="form-label form-label--light" for="dit-step2-others-affected-details">
+            <label class="form-label form-label--light" for="{{ wizard.form.other_companies_affected_field.label_for_id }}">
               If you can, list the other companies affected by the problem.
             </label>
             <span class="error-message hidden" aria-hidden="true">List the other companies affected by the problem</span>
-            <textarea class="form-control" id="dit-step2-others-affected-details" name="dit[step2][others_affected_details]" rows="10" cols="5"></textarea>
+            {{ wizard.form.other_companies_affected_field|addcss:"form-control" }}
           </div>
 
-          <div class="dit-buttons">
-            <a href="{% url 'report-barrier-step2' %}" class="button button-transparent-blue button-border">Back</a>
-            <button class="button button-blue" type="submit">Next</button>
-            <button class="button button-transparent-blue button-border float--right js-save-button" type="submit">Save Progress</button>
-          </div>
-        </form>
+            {% include "components/wizard-prevnext-buttons.html" %}
       </div>
+      </form>
     </div>
   </div>
 

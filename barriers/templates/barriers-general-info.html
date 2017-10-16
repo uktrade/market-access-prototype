@@ -53,9 +53,12 @@ tr-home
 
             {% recursetree object_list %}
             <h3 class="h4"><a href="{% url 'barrier-type-detail' pk=node.pk %}">{{ node.barrier_code }})&nbsp;{{ node.name }}</a></h3>
-            <p>
-               {{ node.description }}
-            </p>
+            {% if node.description %}<p> {{ node.description }} </p>{% endif %}
+            {% if not node.is_leaf_node %}
+                <ul class="children">
+                    <li>{{ children }}</li>
+                </ul>
+            {% endif %}
             {% endrecursetree %}
         </div>
 

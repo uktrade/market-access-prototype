@@ -37,7 +37,7 @@ work together to understand the problems and develop action plans to resolve the
                 <p>Learn more about your target market in our <a href="javascript:void(0);">export country profiles</a></p>
               </div>
               <div class="column-one-third">
-                <form action="{% url 'report-barrier-step1' %}" method="get">
+                <form action="{% url 'report-barrier-wizard' %}" method="get">
                   <input type="hidden" name="existing" value="false">
                   <button type="submit" class="button button-red button-large">Report a barrier</button>
                 </form>
@@ -90,7 +90,7 @@ work together to understand the problems and develop action plans to resolve the
           <li>Review next steps</li>
           <li>Provide additional information that may help us</li>
         </ol>
-        <form action="{% url 'report-barrier-step1' %}" method="get">
+        <form action="{% url 'report-barrier-wizard' %}" method="get">
           <input type="hidden" name="existing" value="false">
           <button type="submit" class="button button-red button-large float--right push--right how-it-works-button">Report a barrier</button>
         </form>

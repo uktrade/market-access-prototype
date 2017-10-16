@@ -41,7 +41,7 @@ tr-home
                 <p class="dit-hero__summary">{{ barrier.summary }}</p>
               </div>
               <div class="column-one-third">
-                <form action="{% url 'report-barrier-step1' %}" method="get">
+                <form action="{% url 'report-barrier-wizard' %}" method="get">
                   <input type="hidden" name="existing" value="true">
                   <button type="submit" class="button button-red button-large">Start your report</button>
                 </form>

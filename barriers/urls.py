@@ -15,6 +15,7 @@ from .views import (
     BarriersGeneralInfoView,
     SearchView, SearchResultsView,
     ReportBarrierView, ReportExistingBarrierView, ReportExistingNotificationView,
+    ReportBarrierWizardView,
     BarrierDetailView, BarrierTypeDetailView, NotificationDetailView,
     BarrierSubscribeView,
     ReportBarrierStep1View, ReportBarrierStep2View, ReportBarrierStep3View,
@@ -42,6 +43,10 @@ urlpatterns = [
     url(r'^barriers/(?P<pk>\d+)?/subscribe',
         BarrierSubscribeView.as_view(),
         name='barrier-subscribe'
+    ),
+    url(r'^notifications/(?P<pk>\w+)/report',
+        ReportExistingNotificationView.as_view(),
+        name='report-notification-existing'
     ),
     url(r'^notifications/(?P<pk>\d+)',
         NotificationDetailView.as_view(),
@@ -75,9 +80,9 @@ urlpatterns = [
         BarriersCaseStudy3View.as_view(),
         name='barriers-case-study-3'
     ),
-    url(r'^report/step1',
-        ReportBarrierStep1View.as_view(),
-        name='report-barrier-step1'
+    url(r'^report/steps',
+        ReportBarrierWizardView.as_view(),
+        name='report-barrier-wizard'
     ),
     url(r'^report/step2',
         ReportBarrierStep2View.as_view(),
@@ -106,10 +111,6 @@ urlpatterns = [
     url(r'^report/register',
         ReportBarrierRegisterView.as_view(),
         name='report-barrier-register'
-    ),
-    url(r'^notifications/(?P<pk>\w+)/report',
-        ReportExistingNotificationView.as_view(),
-        name='report-notification-existing'
     ),
     url(r'^report',
         ReportBarrierView.as_view(),

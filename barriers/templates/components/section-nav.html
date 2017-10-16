@@ -1,0 +1,34 @@
+        <div class="h4">Section</div>
+        <ol>
+          {% if wizard.steps.current == "step1" %}
+            <li class="is-selected"><span>1 About you</span></li>
+          {% else %}
+            <li><button name="wizard_goto_step" class="button" type="submit" value="step1">1 About you</button></li>
+          {% endif %}
+          {% if wizard.steps.current == "step2" %}
+            <li class="is-selected"><span>2 About your organisation</span></li>
+          {% else %}
+            <li><button name="wizard_goto_step" class="button" type="submit" value="step2">2 About your organisation</button></li>
+          {% endif %}
+          {% if wizard.steps.current == "step3" %}
+            <li class="is-selected">3 About the problem<span></span></li>
+          {% else %}
+            <li><button name="wizard_goto_step" class="button" type="submit" value="step3">3 About the problem</button></li>
+          {% endif %}
+          {% if wizard.steps.current == "step4" %}
+            <li class="is-selected"><span>4 Select the type of barrier</span></li>
+          {% else %}
+            <li><button name="wizard_goto_step" class="button" type="submit" value="step4">4 Select the type of barrier</button></li>
+          {% endif %}
+          {% if wizard.steps.current == "step5" %}
+            <li class="is-selected"><span>5 Working out the next steps</span></li>
+          {% else %}
+            <li><button name="wizard_goto_step" class="button" type="submit" value="step5">5 Working out the next steps</button></li>
+          {% endif %}
+          {% if wizard.steps.current == "step6" %}
+            <li class="is-selected"><span>6 Any other details</span></li>
+          {% else %}
+            <li><button name="wizard_goto_step" class="button" type="submit" value="step6">6 Any other details</button></li>
+          {% endif %}
+          <li>7 Summary</li>
+        </ol>

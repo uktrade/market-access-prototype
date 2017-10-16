@@ -1,9 +1,11 @@
 {% extends './govuk_layout.html' %}
 {% load staticfiles %}
 {% load trans from i18n %}
+{% load addcss %}
 {% block css %}
     <style>
     </style>
+    {{ wizard.form.media }}
 {% endblock %}
 {% block bodyScripts %}
 {% endblock bodyScripts %}
@@ -22,32 +24,23 @@
   </div>
   <div class="outer-container push--top">
     <div class="grid-container grid-container--inner">
+      <form action="" method="post" class="dit-form">
+        {% csrf_token %}
+        {{ wizard.management_form }}
       <div class="column-one-third dit-progress-bar">
         {% include 'components/form-existing-message.html' with existingbarrier=existingbarrier %}
-        <div class="h4">Section</div>
-        <ol>
-          <li class="is-selected"><span>1 About you</span></li>
-          <li><a href="{% url 'report-barrier-step2' %}"><span>2 About your organisation</span></a></li>
-          <li><a href="{% url 'report-barrier-step3' %}"><span>3 About the problem</span></a></li>
-          <li><a href="{% url 'report-barrier-step4' %}"><span>4 Select the type of barrier</span></a></li>
-          <li><a href="{% url 'report-barrier-step5' %}"><span>5 Working out the next steps</span></a></li>
-          <li><a href="{% url 'report-barrier-step6' %}"><span>6 Any other details</span></a></li>
-          <li>7 Summary</li>
-        </ol>
+          {# include 'components/form-validation.html' #}
+          {% include 'components/section-nav.html' %}
       </div>
       <div class="column-two-third">
         <h1 class="h3 push--bottom push--top">Section 1 of 7: About you</h1>
-        <form action="{% url 'report-barrier-step2' %}" method="post" class="dit-form">
-          {% csrf_token %}
-
-          {% include 'components/form-validation.html' %}
 
           <div class="form-group">
-            <label class="form-label" for="dit-step1-your-name">
+            <label class="form-label" for="{{ wizard.form.name_field.id_for_label }}">
               Your name
             </label>
             <span class="error-message hidden" aria-hidden="true">Enter your name</span>
-            <input class="form-control" id="dit-step1-your-name" type="text" name="dit[step1][your_name]" required>
+            {{ wizard.form.name_field|addcss:"form-control" }}
           </div>
 
           <div class="form-group">
@@ -59,12 +52,14 @@
 
               <span class="error-message hidden" aria-hidden="true">Select whether you are an exporter/seeking to export or working for a trade association</span>
 
+              <!-- TODO in Django forms -->
               <div class="multiple-choice">
-                <input id="dit-step1-type-1" name="dit[step1][type]" value="I am an exporter/seeking to export" type="radio">
-                <label for="dit-step1-type-1">I am an exporter/seeking to export</label>
+                {{ wizard.form.org_type_field }}
+                <!-- input id="dit-step1-type-1" name="dit[step1][type]" value="I am an exporter/seeking to export" type="radio" -->
+                <label for="{{ wizard.form.org_type_field.id_for_label }}">I am an exporter/seeking to export</label>
               </div>
               <div class="multiple-choice">
-                <input id="dit-step1-type-2" name="dit[step1][type]" value="I work for a trade association" type="radio" required>
+                <input id="dit-step1-type-2" name="dit[step1][type]" value="I work for a trade association" type="radio">
                 <label for="dit-step1-type-2">I work for a trade association</label>
               </div>
 
@@ -72,35 +67,32 @@
           </div>
 
           <div class="form-group">
-            <label class="form-label" for="dit-step1-your-role-job-title">
+            <label class="form-label" for="{{ wizard.form.role_field.id_for_label }}">
               Your role / job title
             </label>
             <span class="error-message hidden" aria-hidden="true">Enter your role / your title</span>
-            <input class="form-control" id="dit-step1-your-role-job-title" type="text" name="dit[step1][your_role_job_title]" required>
+            {{ wizard.form.role_field|addcss:"form-control" }}
           </div>
 
           <div class="form-group">
-            <label class="form-label" for="dit-step1-email-address">
+            <label class="form-label" for="{{ wizard.form.email_address_field.id_for_label }}">
               Email address
             <span class="error-message hidden" aria-hidden="true">Enter an email address</span>
             </label>
-            <input class="form-control" id="dit-step1-email-address" type="email" name="dit[step1][email_address]" required>
+            {{ wizard.form.email_address_field|addcss:"form-control" }}
           </div>
 
           <div class="form-group">
-            <label class="form-label" for="dit-step1-contact-telephone-number">
+            <label class="form-label" for="{{ wizard.form.telephone_number_field.id_for_label }}">
               Contact telephone number
             <span class="error-message hidden" aria-hidden="true">Enter a contact number</span>
             </label>
-            <input class="form-control" id="dit-step1-contact-telephone-number" type="tel" name="dit[step1][contact_telephone_number]" required>
+            {{ wizard.form.telephone_number_field|addcss:"form-control" }}
           </div>
 
-          <div class="dit-buttons">
-            <button class="button button-blue" type="submit">Next</button>
-            <button class="button button-transparent-blue button-border float--right js-save-button" type="submit">Save progress</button>
-          </div>
-        </form>
+          {% include "components/wizard-prevnext-buttons.html" %}
       </div>
+      </form>
     </div>
  </div>
 
