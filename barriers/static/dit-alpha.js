@@ -209,8 +209,13 @@ $(document).ready(function(){
   var $callback = $('.js-companies-house-callback');
   var $templateError = $('.js-companies-house-template-error');
   var $templateFail = $('.js-companies-house-template-fail');
+  var $countFeedback = $('.js-companies-count-feedback');
+  var $templateCountFeedback = $('.js-companies-house-template-count-feedback');
   var resultsHTML = '';
-  var AJAX_URL = '/api/companieshouse?company='
+  var countFeedbackHTML = '';
+  var AJAX_URL = '/api/companieshouse?company=';
+  var perPage = 20;
+  var activeCompanies = [];
 
   $button.on('click', function(){
 
@@ -246,6 +251,10 @@ $(document).ready(function(){
       $list.removeClass('hidden');
       $list.find('input').attr('required', 'required');
 
+      // Hide the count feedback e.g. `Showing x results of Y`
+      $countFeedback.attr('aria-hidden', 'true');
+      $countFeedback.addClass('hidden');
+
       // Fetch JSON results from API/this app
       $.ajax({
         url: AJAX_URL + $input.val(),
@@ -265,9 +274,18 @@ $(document).ready(function(){
         // Build up the HTML
         resultsHTML = '';
 
+        // strip out non-active companies
         if(json && json.total_results > 0){
-          json.items.forEach(function(obj) {
-            resultsHTML = resultsHTML + convertJSONToHTML(obj);
+          json.items.forEach(function(company) {
+            if(company.company_status == 'active'){
+              activeCompanies.push(company);
+            }
+          });
+        }
+
+        if(activeCompanies.length > 0){
+          activeCompanies.forEach(function(company) {
+            resultsHTML = resultsHTML + convertJSONToHTML(company);
           });
         } else {
           resultsHTML = $templateError.html();
@@ -278,6 +296,13 @@ $(document).ready(function(){
         $callback.html(resultsHTML);
 
         $list.find('input:first').focus();
+
+        // Display our count feedback e.g. `Showing x results of y`
+        if(activeCompanies.length > 0){
+          $countFeedback.attr('aria-hidden', 'false');
+          $countFeedback.removeClass('hidden');
+          $countFeedback.html($templateCountFeedback.html().replace('{COUNT}', numberWithCommas(json.total_results)));
+        }
 
       });
 
@@ -306,8 +331,21 @@ $(document).ready(function(){
     x = x.replace(/\{NAME\}/g, json.title);
     x = x.replace(/\{NUMBER\}/g, json.company_number);
     x = x.replace(/\{ADDRESS\}/g, json.address_snippet);
+    x = x.replace(/\{DESCRIPTION\}/g, json.description);
 
     return x;
+  }
+
+  /**
+   * numberWithCommas
+   * Take a number like 1000000 and return 1,000,000
+   * @seee https://stackoverflow.com/questions/2901102/how-to-print-a-number-with-commas-as-thousands-separators-in-javascript
+   * @param {int} x - the number
+   *
+   * @return {string}
+   */
+  function numberWithCommas(x) {
+    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
   }
 });
 

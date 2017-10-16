@@ -46,7 +46,7 @@
             <label class="form-label" for="dit-step1-company-name">
               Your organisation
             </label>
-            <span class="form-hint">Enter your organisation name then search to get details from Companies House</span>
+            <span class="form-hint">Enter your organisation name, registered postcode, or companies house number then search to get details from Companies House</span>
             <span class="error-message hidden" aria-hidden="true">Enter an organisation name</span>
             <input class="form-control js-companies-house-input" id="dit-step1-company-name" type="text" name="dit[step1][company_name]" required>
           </div>
@@ -65,6 +65,8 @@
                 </h2>
               </legend>
 
+              <span class="form-hint js-companies-count-feedback hidden" aria-hidden="true"></span>
+
               <span class="error-message hidden" aria-hidden="true">Choose organisation from the list</span>
 
               <div class="push--top js-companies-house-callback">
@@ -78,8 +80,13 @@
                 <label for="dit-step1-{NUMBER}" class="form-label">
                   {NAME}
                   <span class="form-hint">{ADDRESS}</span>
+                  <span class="form-hint">{DESCRIPTION}</span>
                 </label>
               </div>
+          </script>
+
+          <script type="text/template" class="js-companies-house-template-count-feedback">
+            There are {COUNT} results for your search. If you do not see your organisation here try searching again with a more specific search term.
           </script>
 
           <script type="text/template" class="js-companies-house-template-error">
