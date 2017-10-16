@@ -43,6 +43,10 @@ urlpatterns = [
         BarrierSubscribeView.as_view(),
         name='barrier-subscribe'
     ),
+    url(r'^notifications/(?P<pk>\w+)/report',
+        ReportExistingNotificationView.as_view(),
+        name='report-notification-existing'
+    ),
     url(r'^notifications/(?P<pk>\d+)',
         NotificationDetailView.as_view(),
         name='notification-detail'
@@ -106,10 +110,6 @@ urlpatterns = [
     url(r'^report/register',
         ReportBarrierRegisterView.as_view(),
         name='report-barrier-register'
-    ),
-    url(r'^notifications/(?P<pk>\w+)/report',
-        ReportExistingNotificationView.as_view(),
-        name='report-notification-existing'
     ),
     url(r'^report',
         ReportBarrierView.as_view(),

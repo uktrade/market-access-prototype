@@ -48,6 +48,8 @@ class ReportBarrierView(FormView):
         # any existing barriers from the session
         if 'existingbarrier' in request.session:
             del request.session['existingbarrier']
+        if 'existingnotification' in request.session:
+            del request.session['existingnotification']
         return super(ReportBarrierView, self).get(request, *args, **kwargs)
 
     def get_success_url(self, **kwargs):
@@ -249,7 +251,7 @@ class ReportBarrierStep2View(SessionContextMixin, TemplateView):
         if 'dit[step1][type]' in self.request.POST:
             if request.POST['dit[step1][type]'] == 'I work for a trade association':
                 request.session['is_trade_association'] = True
-            else:
+            elif 'is_trade_association' in request.session:
                 # Allow it to be turned off again
                 del request.session['is_trade_association']
         return self.get(request, *args, **kwargs)
