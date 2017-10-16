@@ -255,8 +255,6 @@ $(document).ready(function(){
       $countFeedback.attr('aria-hidden', 'true');
       $countFeedback.addClass('hidden');
 
-      console.log($input.val());
-
       // Fetch JSON results from API/this app
       $.ajax({
         url: AJAX_URL + $input.val(),
