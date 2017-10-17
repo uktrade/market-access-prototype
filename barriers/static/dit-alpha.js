@@ -138,6 +138,7 @@ ukti.ScrollTo = (function($) {
 var selectCustom = $('.select-custom');
 if (selectCustom.length) {
 
+  // Ensure the old element is properly hidden from (modern) screen-readers
   selectCustom.addClass('select2-hidden-accessible');
   selectCustom.attr('aria-hidden', 'true');
 
@@ -150,6 +151,13 @@ if (selectCustom.length) {
 			return '<svg class="icon icon-check"><use xlink:href="#icon-ditcheckmark" /></svg>' + result.text;
     	}
 	});
+
+
+  // Ensure the new field is labelled by the old dropdown's label for (modern) screen-readers
+  var $label = $('label[for="' + selectCustom.attr('id') + '"]');
+  selectCustom.parent().find('.select2-search__field').attr('aria-labelledby', $label.attr('id'));
+
+  console.log(selectCustom.parent().find('.select2-search__field'), $label.attr('id'));
 
 	/* prevent dropdown from opening when deselecting tag */
 	/* and clear label when deselecting - particularly with backspace */

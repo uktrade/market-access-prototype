@@ -99,7 +99,7 @@
 
           <div class="form-group">
             <div class="multiple-choice">
-              <input name="dit[step1][no_companies_house_number]" value="false" type="checkbox">
+              <input name="dit[step1][no_companies_house_number]" value="false" type="hidden">
               <input id="dit-step1-no-companies-house" name="dit[step1][no_companies_house_number]" value="My organisation is no registered with Companies House" type="checkbox" class="js-dit-toggle-field" aria-expanded="false" aria-controls="js-company-address">
               <label for="dit-step1-no-companies-house">My organisation is not registered with Companies House</label>
             </div>
@@ -136,7 +136,7 @@
           </fieldset>
 
 
-          <div class="dit-buttons"><a href="{% url 'report-barrier-step1' %}" class="button button-transparent-blue button-border">Back</a>
+          <div class="dit-buttons"><a href="{% url 'report-barrier-step1' %}" class="button button-transparent-blue button-border" aria-label="Step 1">Back</a>
             <button class="button button-blue" type="submit">Next</button>
             <button class="button button-transparent-blue button-border float--right js-save-button" type="submit">Save progress</button>
           </div>

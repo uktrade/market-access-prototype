@@ -92,7 +92,7 @@
           </div>
 
           <div class="form-group">
-            <label class="form-label" for="dit-step2-country">
+            <label class="form-label" for="dit-step2-country" id="dit-step2-country-label">
               Which country/bloc are you trying to export to?
             </label>
             <span class="error-message hidden" aria-hidden="true">Enter a country/bloc</span>
@@ -117,7 +117,7 @@
             <fieldset>
 
               <legend>
-                <span class="form-label" title="export-yn">
+                <span class="form-label" id="export-yn">
                   Have you experienced this problem in other markets?
                 </span>
               </legend>
@@ -229,7 +229,7 @@
           </div>
 
           <div class="dit-buttons">
-            <a href="{% url 'report-barrier-step2' %}" class="button button-transparent-blue button-border">Back</a>
+            <a href="{% url 'report-barrier-step2' %}" class="button button-transparent-blue button-border" aria-label="Step 2">Back</a>
             <button class="button button-blue" type="submit">Next</button>
             <button class="button button-transparent-blue button-border float--right js-save-button" type="submit">Save Progress</button>
           </div>
