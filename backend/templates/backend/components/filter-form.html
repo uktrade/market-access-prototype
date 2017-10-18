@@ -1,0 +1,336 @@
+{% load staticfiles %}
+{% load static from staticfiles %}
+
+<style>
+      .hidden{
+        display: none;
+      }
+
+      .dit-create-barrier-filter-button{
+        -webkit-appearance: none;
+        appearance: none;
+        background-color: transparent;
+        border: none;
+        display: block;
+        padding: 0 30px 0 0;
+        position: relative;
+        text-align: left;
+        width: 100%;
+      }
+
+      .js-dit-toggle__icon{
+        position: absolute;
+        right: 50px;
+        top: 5px;
+        transform: rotate(180deg);
+      }
+
+      [aria-expanded="true"] .js-dit-toggle__icon{
+        transform: none;
+      }
+
+      .dit-create-barrier-filter-form{
+        background-color: #f7f7f7;
+        margin-top: 0 !important;
+        padding: 20px 40px 20px 20px;
+      }
+
+      .dit-create-barrier-filter-form .c-form-control  c-form-control--light c-form-control--small{
+        background-color: #fff;
+      }
+
+      .dit-create-barrier-filter-form__fields{
+
+      }
+
+      @media (min-width: 768px){
+        @supports(display: grid){
+          .dit-create-barrier-filter-form__fields{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-column-gap: 20px;
+          }
+        }
+      }
+
+      .js-companys-involved-wrapper{
+        position: relative;
+      }
+
+      .js-dit-add-company,
+      .js-dit-remove-company{
+        -webkit-appearance: none;
+        appearance: none;
+        background: transparent;
+        border: none;
+        color: #005EA4;
+        cursor: pointer;
+        font-size: 100%;
+        padding: 10px 5px;
+      }
+
+      .js-dit-add-company:hover,
+      .js-dit-remove-company:hover{
+        color: #2b8cc4;
+      }
+
+      .js-dit-add-company{
+        text-align: left;
+        text-decoration: underline;
+      }
+
+      .js-dit-remove-company{
+        position: absolute;
+        right: -25px;
+        top: 25px;
+        width: 20px;
+      }
+
+    </style>
+
+    <div class="c-collection__header-row">
+      {% comment %}
+      Hi Brendan!
+
+      To show/hide the filter form on page load set data-onload-toggle-state="shown"
+      on the <button> to show it or data-onload-toggle-state="hidden" to hide it
+      e.g. if we have just done a search then we want the form to be visible on load
+
+      Phil
+      {% endcomment %}
+      <button type="button" class="js-dit-toggle dit-create-barrier-filter-button" aria-controls="create-barrier-filter-form" aria-expanded="true" data-onload-toggle-state="shown">
+        <span class="heading-medium">Filter results</span>
+        <span class="js-dit-toggle__icon"><img src="{% static 'images/down-arrow.svg' %}" alt=""></span>
+      </div>
+      <form action="{% url 'report-new-instance' %}" method="get" style="" class="dit-create-barrier-filter-form" aria-hidden="false" id="create-barrier-filter-form">
+
+        <div class="dit-create-barrier-filter-form__fields">
+          <div>
+            {# Barrier record name #}
+            <div class="c-form-group c-form-group--light" id="barrier-record-name-wrapper">
+                <label class="form-label-bold" for="barrier-record-name">
+                    Barrier record name
+                </label>
+                <input id="barrier-record-name" class="c-form-control c-form-control--light c-form-control--small" name="barrier_record_name" value="" type="text">
+            </div>
+
+            {# Sector #}
+            <div class="c-form-group c-form-group--light" id="sector-wrapper">
+                <label class="form-label-bold" for="sector">
+                    Sector
+                </label>
+                <select id="sector" class="c-form-control  c-form-control--light c-form-control--small" name="sector">
+                  <option></option>
+                  <option value="1">Choose</option>
+                </select>
+            </div>
+
+            {# Country #}
+            <div class="c-form-group c-form-group--light" id="country-wrapper">
+                <label class="form-label-bold" for="country">
+                    Country
+                </label>
+                {# <input id="country" class="c-form-control  c-form-control--light c-form-control--small" name="country" value="" type="text"> #}
+                <select id="country" class="c-form-control  c-form-control--light c-form-control--small" name="country">
+                  <option value=""></option>
+                  {% include 'components/countries-simple.html' %}
+                </select>
+            </div>
+
+            {# Date reported #}
+            <div class="c-form-group c-form-group--light" id="date-reported-wrapper">
+                <label class="form-label-bold" for="date-reported">
+                    Date reported (range)
+                </label>
+                <input id="date-reported" class="c-form-control  c-form-control--light c-form-control--small" name="date_reported" type="text">
+            </div>
+          </div>
+
+          <div>
+
+            {# Lead facilitator #}
+            <div class="c-form-group c-form-group--light" id="lead-facilitator-wrapper">
+                <label class="form-label-bold" for="lead-facilitator">
+                    Lead facilitator
+                </label>
+                <input id="lead-facilitator" class="c-form-control  c-form-control--light c-form-control--small" name="lead_facilitator" value="" type="text">
+            </div>
+
+            {# Product #}
+            <div class="c-form-group c-form-group--light" id="product-wrapper">
+                <label class="form-label-bold" for="product">
+                    Product
+                </label>
+                <input id="product" class="c-form-control  c-form-control--light c-form-control--small" name="product" type="text">
+            </div>
+
+            {# HMG barrier type #}
+            <div class="c-form-group c-form-group--light" id="barrier-wrapper">
+                <label class="form-label-bold" for="barrier">
+                  HMG barrier type
+                </label>
+                {{ form.barrier_type }}
+            </div>
+
+
+
+            {# HMG sub barrier type #}
+            <div class="c-form-group c-form-group--light" id="sub-barrier-wrapper">
+                <label class="form-label-bold" for="sub-barrier">
+                  HMG sub barrier type
+                </label>
+                {{ form.barrier_type }}
+            </div>
+
+          </div>
+
+          <div>
+
+            {# Company(s) involved #}
+            <div class="js-companys-involved-wrapper" id="companys-involved-wrapper">
+                <label class="form-label-bold" for="companys-involved">
+                    Companies involved
+                </label>
+                <input id="companys-involved" class="c-form-control  c-form-control--light c-form-control--small" name="companys_involved[]" value="" type="text">
+                <button type="button" class="js-dit-add-company" aria-hidden="false">Add company</button>
+            </div>
+
+          </div>
+
+
+          <script id="js-dit-add-company-template" type="template/html">
+            <div class="js-companys-involved-wrapper">
+              <label class="form-label-bold" for="companys-involved">
+                  Companies involved
+              </label>
+              <input id="companys-involved" class="c-form-control  c-form-control--light c-form-control--small" name="companys_involved[]" value="" type="text">
+              <button type="button" class="js-dit-remove-company" aria-label="Remove company">x</button>
+              <button type="button" class="js-dit-add-company" aria-hidden="false">Add company</button>
+            </div>
+          </script>
+
+        {# Submit / actions #}
+        <div class="c-form-actions">
+          <button class="button" type="submit">Search</button>
+          <a href="{% url 'report-home-decision-made' %}">Back</a>
+        </div>
+
+      </form>
+    </div>
+
+    <script>
+      // Toggle the filter form
+      var button = document.querySelector('.js-dit-toggle');
+      var content = document.querySelector('#' + button.getAttribute('aria-controls'));
+      var toggleState = button.getAttribute('data-onload-toggle-state');
+
+      // Hide the form
+      function hideFilterForm(){
+        button.setAttribute('aria-expanded', 'false');
+        content.setAttribute('aria-hidden', 'true');
+        content.classList.add('hidden');
+      }
+
+      // Show the form
+      function showFilterForm(){
+        button.setAttribute('aria-expanded', 'true');
+        content.setAttribute('aria-hidden', 'false');
+        content.classList.remove('hidden');
+      }
+
+      // Show/Hide then set the state
+      function toggleFilterForm(){
+        if(toggleState === 'shown'){
+          hideFilterForm();
+          toggleState = 'hidden';
+        } else{
+          showFilterForm();
+          toggleState = 'shown';
+        }
+      }
+
+      // On load - should we hide it?
+      if(toggleState === 'hidden'){
+        hideFilterForm();
+      }
+
+      // Set event listener to toggle on click
+      button.addEventListener('click', function(){
+        toggleFilterForm();
+      });
+
+
+      // Add new company
+      var template = document.querySelector('#js-dit-add-company-template');
+      var addButton;
+      var removeButtons;
+
+      // Add a company
+      function addCompany(event){
+        var button = event.target;
+        var parent = button.parentNode;
+
+        // Hide this add button (in a good a11y way) - we ight re-show it later
+        // the put the new HTML in place
+        button.setAttribute('aria-hidden', 'true');
+        button.classList.add('hidden');
+        parent.parentNode.innerHTML = parent.parentNode.innerHTML + template.innerHTML;
+
+        // Put the event listeners back in because the DOM has changed
+        addButtonListener();
+        removeButtonListener();
+
+      }
+
+      // Remove a company
+      function removeCompany(event){
+        var button = event.target;
+        var parent = button.parentNode;
+        var newAddButton;
+        var allFields = document.querySelectorAll('.js-companys-involved-wrapper');
+
+        // If it was the last one that was removed then we need to show the add
+        // button on the previous field
+        if(allFields[allFields.length - 1] == parent){
+          newAddButton = parent.previousElementSibling.querySelector('.js-dit-add-company');
+          newAddButton.setAttribute('aria-hidden', 'false');
+          newAddButton.classList.remove('hidden');
+        }
+
+        parent.parentNode.removeChild(parent);
+
+        // Put the event listeners back in because the DOM has changed
+        addButtonListener();
+        removeButtonListener();
+
+      }
+
+      // Event listeners for adding a new company
+      function addButtonListener(){
+        addButton = document.querySelector('.js-dit-add-company:not([aria-hidden="true"])');
+
+        if(addButton){
+          addButton.removeEventListener('click', addCompany);
+          addButton = document.querySelector('.js-dit-add-company:not([aria-hidden="true"])')
+          addButton.addEventListener('click', addCompany);
+        }
+      }
+
+      // Event listeners for removing a company
+      function removeButtonListener(){
+
+        removeButtons = document.querySelectorAll('.js-dit-remove-company');
+
+        if(removeButtons){
+          removeButtons.forEach(function(button){
+            button.removeEventListener('click', removeCompany);
+            button.addEventListener('click', removeCompany);
+          });
+        }
+      }
+
+      // Listeners
+      addButtonListener();
+      removeButtonListener();
+
+    </script>
