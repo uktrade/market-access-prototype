@@ -43,7 +43,7 @@
     <a href="javascript:void(0);" target="_blank">Learn more about the HMG barrier types</a> (opens in new window)
   </p>
 
-  <form method="get" action="{% url 'report-barrier-type-child' %}">
+  <form method="get" action="{% url 'report-home-make-a-decision' %}">
     <div id="group-field-barrier-type" class="c-form-group">
       <label class="c-form-group__label" for="field-barrier-type">
         <span class="c-form-group__label-text">
@@ -51,6 +51,14 @@
         </span>
       </label>
       {{ form.barrier_type }}
+    </div>
+    <div id="group-field-barrier-type2" class="c-form-group">
+      <label class="c-form-group__label" for="field-barrier-type2">
+        <span class="c-form-group__label-text">
+          Select sub barrier type
+        </span>
+      </label>
+      {{ form.barrier_type}}
     </div>
     <div class="c-form-actions">
       <button class="button" type="submit">Save</button>

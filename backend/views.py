@@ -43,6 +43,21 @@ class ReportBarrierTypeView(FormView):
         context['barrier_types'] = uk_barrier_types
         return context
 
+class ReportBarrierTypeChildView(FormView):
+    model = BarrierReport
+    template_name = 'backend/report-barrier-type-child.html'
+    form_class = ChooseBarrierTypeForm
+
+    def get_context_data(self, *args, **kwargs):
+        context = super(ReportBarrierTypeChildView, self).get_context_data(*args, **kwargs)
+        # warning - this will need to change if we change
+        # the code of the UK barrier source
+        uk_source = BarrierSource.objects.get(short_name='UK')
+        uk_barrier_types = BarrierType.objects.filter(barrier_source=uk_source)
+        context['barrier_types'] = uk_barrier_types
+        context['barrier_types_children'] = uk_barrier_types
+        return context
+
 
 class ReportHomeMakeADecisionView(ListView):
     model = BarrierReport

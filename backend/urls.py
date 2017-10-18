@@ -18,6 +18,7 @@ from .views import (
     # Screen, find lead, and proceed
     ReportHomeView,
     ReportBarrierTypeView,
+    ReportBarrierTypeChildView,
     ReportHomeMakeADecisionView,
     ReportBarrierMakeADecisionView,
     ReportHomeDecisionMadeView,
@@ -71,6 +72,10 @@ urlpatterns = [
     url(r'^report-barrier-type$',
         ReportBarrierTypeView.as_view(),
         name='report-barrier-type'
+    ),
+    url(r'^report-barrier-type-child$',
+        ReportBarrierTypeChildView.as_view(),
+        name='report-barrier-type-child'
     ),
     url(r'^report-home/make-a-decision$',
         ReportHomeMakeADecisionView.as_view(),

@@ -24,107 +24,325 @@
 {% block content %}
 
 <h2 class="heading-medium">Log report - new or existing</h2>
-<p>You must create a new barrier record from this report or log it
-as a new instance of an existing barrier record. Before creating
-a new record, check that no existing record matches the report.</p>
+<p>You must create a new barrier record from this report or log it as a new instance of an existing barrier record. Before creating a new record, <strong>please check that no existing record matches the report</strong>.<br>
+<a href="javascript:void(0);">Find out more about creating a barrier record or instances of an existing barrier record</a></p>
 
-<p>Find out more about creating a barrier record or instances of an
-existing barrier record</p>
+<p><strong>Use the filters to search for an existing barrier record and create an instance</strong><br>
+You don’t have to complete all fields but, enter as much detail as possible to improve your filter results:</p>
 
-<form action="{% url 'report-new-instance' %}" method="get">
+<article class="c-collection">
 
-  <fieldset>
-    <legend>
-      <span class="form-label-bold">
-        1) Search for an existing barrier record and create an instance
+  <header class="c-collection__header">
+    <div class="c-collection__header-row">
+
+      <div class="c-collection__header-intro">
+          <span class="c-collection__result-count">405</span> barriers
+      </div>
+
+    </div>
+
+    <style>
+      .hidden{
+        display: none;
+      }
+
+      .dit-create-barrier-filter-button{
+        -webkit-appearance: none;
+        appearance: none;
+        background-color: transparent;
+        border: none;
+        display: block;
+        padding: 0 30px 0 0;
+        position: relative;
+        text-align: left;
+        width: 100%;
+      }
+
+      .js-dit-toggle__icon{
+        position: absolute;
+        right: 0;
+      }
+
+      [aria-expanded="true"] .js-dit-toggle__icon{
+        transform: rotate(180deg);
+      }
+
+      .dit-create-barrier-filter-form{
+        background-color: #f7f7f7;
+        padding: 20px;
+      }
+
+      .dit-create-barrier-filter-form .form-control{
+        background-color: #fff;
+      }
+
+      .dit-create-barrier-filter-form__fields{
+
+      }
+
+      @media (min-width: 768px){
+        @supports(display: grid){
+          .dit-create-barrier-filter-form__fields{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-column-gap: 20px;
+          }
+        }
+      }
+
+    </style>
+
+    <div class="c-collection__header-row">
+      {% comment %}
+      Hi Brendan!
+
+      To show/hide the filter form on page load set data-onload-toggle-state="shown"
+      on the <button> to show it or data-onload-toggle-state="hidden" to hide it
+      e.g. if we have just done a search then we want the form to be visible on load
+
+      Phil
+      {% endcomment %}
+      <button type="button" class="js-dit-toggle dit-create-barrier-filter-button" aria-controls="create-barrier-filter-form" aria-expanded="true" data-onload-toggle-state="shown">
+        <span class="heading-medium">Filter results</span>
+        <span class="js-dit-toggle__icon">V</span>
+      </div>
+      <form action="{% url 'report-new-instance' %}" method="get" style="" class="dit-create-barrier-filter-form" aria-hidden="false" id="create-barrier-filter-form">
+
+        <div class="dit-create-barrier-filter-form__fields">
+          <div>
+            {# Barrier record name #}
+            <div class="form-group " id="barrier-record-name-wrapper">
+                <label class="form-label-bold" for="barrier-record-name">
+                    Barrier record name
+                </label>
+                <input id="barrier-record-name" class="form-control" name="barrier_record_name" value="" type="text">
+            </div>
+
+            {# Sector #}
+            <div class="form-group " id="sector-wrapper">
+                <label class="form-label-bold" for="sector">
+                    Sector
+                </label>
+                <select id="sector" class="form-control" name="sector">
+                  <option></option>
+                  <option value="1">Choose</option>
+                </select>
+            </div>
+
+            {# Country #}
+            <div class="form-group" id="country-wrapper">
+                <label class="form-label-bold" for="country">
+                    Country
+                </label>
+                {# <input id="country" class="form-control" name="country" value="" type="text"> #}
+                <select id="country" class="form-control" name="country">
+                  <option value=""></option>
+                  {% include 'components/countries-simple.html' %}
+                </select>
+            </div>
+
+            {# Date reported #}
+            <div class="form-group " id="date-reported-wrapper">
+                <label class="form-label-bold" for="date-reported">
+                    Date reported (range)
+                </label>
+                <input id="date-reported" class="form-control" name="date_reported" type="text">
+            </div>
+          </div>
+
+          <div>
+
+            {# Lead facilitator #}
+            <div class="form-group " id="lead-facilitator-wrapper">
+                <label class="form-label-bold" for="lead-facilitator">
+                    Lead facilitator
+                </label>
+                <input id="lead-facilitator" class="form-control" name="lead_facilitator" value="" type="text">
+            </div>
+
+            {# Product #}
+            <div class="form-group " id="product-wrapper">
+                <label class="form-label-bold" for="product">
+                    Product
+                </label>
+                <input id="product" class="form-control" name="product" type="text">
+            </div>
+
+            {# HMG barrier type #}
+            <div class="form-group " id="barrier-wrapper">
+                <label class="form-label-bold" for="barrier">
+                  HMG barrier type
+                </label>
+                {{ form.barrier_type }}
+            </div>
+
+          </div>
+
+          <div>
+
+            {# Company(s) involved #}
+            <div class="form-group js-companys-involved-wrapper" id="companys-involved-wrapper">
+                <label class="form-label-bold" for="companys-involved">
+                    Companies involved
+                </label>
+                <input id="companys-involved" class="form-control" name="companys_involved[]" value="" type="text">
+                <button type="button" class="js-dit-add-company" aria-hidden="false">Add company</button>
+            </div>
+
+          </div>
+
+
+          <script id="js-dit-add-company-template" type="template/html">
+            <div class="form-group js-companys-involved-wrapper">
+              <label class="form-label-bold" for="companys-involved">
+                  Companies involved
+              </label>
+              <input id="companys-involved" class="form-control" name="companys_involved[]" value="" type="text">
+              <button type="button" class="js-dit-remove-company" aria-label="Remove company">x</button>
+              <button type="button" class="js-dit-add-company" aria-hidden="false">Add company</button>
+            </div>
+          </script>
+
+        {# Submit / actions #}
+        <div class="c-form-actions">
+          <button class="button" type="submit">Search</button>
+          <a href="{% url 'report-home-decision-made' %}">Back</a>
+        </div>
+
+      </form>
+    </div>
+
+    <script>
+      // Toggle the filter form
+      var button = document.querySelector('.js-dit-toggle');
+      var content = document.querySelector('#' + button.getAttribute('aria-controls'));
+      var toggleState = button.getAttribute('data-onload-toggle-state');
+
+      // Hide the form
+      function hideFilterForm(){
+        button.setAttribute('aria-expanded', 'false');
+        content.setAttribute('aria-hidden', 'true');
+        content.classList.add('hidden');
+      }
+
+      // Show the form
+      function showFilterForm(){
+        button.setAttribute('aria-expanded', 'true');
+        content.setAttribute('aria-hidden', 'false');
+        content.classList.remove('hidden');
+      }
+
+      // Show/Hide then set the state
+      function toggleFilterForm(){
+        if(toggleState === 'shown'){
+          hideFilterForm();
+          toggleState = 'hidden';
+        } else{
+          showFilterForm();
+          toggleState = 'shown';
+        }
+      }
+
+      // On load - should we hide it?
+      if(toggleState === 'hidden'){
+        hideFilterForm();
+      }
+
+      // Set event listener to toggle on click
+      button.addEventListener('click', function(){
+        toggleFilterForm();
+      });
+
+
+      // Add new company
+      var template = document.querySelector('#js-dit-add-company-template');
+      var addButton;
+      var removeButtons;
+
+      // Add a company
+      function addCompany(event){
+        var button = event.target;
+        var parent = button.parentNode;
+
+        // Hide this add button (in a good a11y way) - we ight re-show it later
+        // the put the new HTML in place
+        button.setAttribute('aria-hidden', 'true');
+        button.classList.add('hidden');
+        parent.parentNode.innerHTML = parent.parentNode.innerHTML + template.innerHTML;
+
+        // Put the event listeners back in because the DOM has changed
+        addButtonListener();
+        removeButtonListener();
+
+      }
+
+      // Remove a company
+      function removeCompany(event){
+        var button = event.target;
+        var parent = button.parentNode;
+        var newAddButton;
+        var allFields = document.querySelectorAll('.js-companys-involved-wrapper');
+
+        // If it was the last one that was removed then we need to show the add
+        // button on the previous field
+        if(allFields[allFields.length - 1] == parent){
+          newAddButton = parent.previousElementSibling.querySelector('.js-dit-add-company');
+          newAddButton.setAttribute('aria-hidden', 'false');
+          newAddButton.classList.remove('hidden');
+        }
+
+        parent.parentNode.removeChild(parent);
+
+        // Put the event listeners back in because the DOM has changed
+        addButtonListener();
+        removeButtonListener();
+
+      }
+
+      // Event listeners for adding a new company
+      function addButtonListener(){
+        addButton = document.querySelector('.js-dit-add-company:not([aria-hidden="true"])');
+
+        if(addButton){
+          addButton.removeEventListener('click', addCompany);
+          addButton = document.querySelector('.js-dit-add-company:not([aria-hidden="true"])')
+          addButton.addEventListener('click', addCompany);
+        }
+      }
+
+      // Event listeners for removing a company
+      function removeButtonListener(){
+
+        removeButtons = document.querySelectorAll('.js-dit-remove-company');
+
+        if(removeButtons){
+          removeButtons.forEach(function(button){
+            button.removeEventListener('click', removeCompany);
+            button.addEventListener('click', removeCompany);
+          });
+        }
+      }
+
+      // Listeners
+      addButtonListener();
+      removeButtonListener();
+
+    </script>
+
+    <div class="c-collection__header-row">
+      <span class="c-collection__pagination-summary">
+        Page 1 of 17
       </span>
-    </legend>
 
-    <p>If you find an appropriate barrier you can create a new instance of it
-    from this report.</p>
+      {% include 'backend/components/sort.html' with active="address_country.name:asc" %}
 
-    <p>You don’t have to complete all fields but, enter as much detail as
-    possible to improve your search results:</p>
-
-    {# Barrier name #}
-    <div class="form-group " id="barrier-name-wrapper">
-        <label class="form-label-bold" for="barrier-name">
-            Barrier name
-        </label>
-        <input id="barrier-name" class="form-control" name="barrier_name" value="" type="text">
     </div>
+  </header>
 
-    {# Company(s) involved #}
-    <div class="form-group " id="companys-involved-wrapper">
-        <label class="form-label-bold" for="companys-involved">
-            Company(s) involved
-        </label>
-        <input id="companys-involved" class="form-control" name="companys_involved" value="" type="text">
-    </div>
+  <ol class="c-entity-list">
+    {% include 'backend/components/dashboard-result.html' with title="Company X vs Country 1" template="report-home" country1="Country 1" status="Reported" sector="Sector" barrier="Barrier" date="Date updated" %}
+  </ol>
 
-    {# Sector #}
-    <div class="form-group " id="sector-wrapper">
-        <label class="form-label-bold" for="sector">
-            Sector
-        </label>
-        <select id="sector" class="form-control" name="sector">
-          <option></option>
-          <option value="1">Choose</option>
-        </select>
-    </div>
-
-    {# Country (select) #}
-    <div class="form-group " id="-wrapper">
-        <label class="form-label-bold" for="country">
-            Country
-        </label>
-        {# <input id="country" class="form-control" name="country" value="" type="text"> #}
-        <select id="country" class="form-control" name="country">
-          <option value=""></option>
-          {% include 'components/countries-simple.html' %}
-        </select>
-    </div>
-
-  {# HMG barrier type #}
-  <div class="form-group " id="barrier-wrapper">
-      <label class="form-label-bold" for="barrier">
-        HMG barrier type
-      </label>
-      {{ form.barrier_type }}
-  </div>
-
-    {# Lead facilitator #}
-    <div class="form-group " id="lead-facilitator-wrapper">
-        <label class="form-label-bold" for="lead-facilitator">
-            Lead facilitator
-        </label>
-        <input id="lead-facilitator" class="form-control" name="lead_facilitator" value="" type="text">
-    </div>
-
-    {# Submit / Actions #}
-    <div class="c-form-actions">
-      <button class="button-secondary" type="submit">Search</button>
-    </div>
-
-  </fieldset>
-
-</form>
-
-<form action="{% url 'report-new-uk' %}" method="get">
-
-  <fieldset>
-    <legend>
-      <span class="form-label-bold">
-        2) Create a new barrier record
-      </span>
-    </legend>
-
-    <div class="c-form-actions">
-      <button class="button" type="submit">Create</button>
-    </div>
-
-  </fieldset>
-
-</form>
-
+  {% include 'backend/components/pagination.html' with totalPages="17" currentPage="1" %}
+</article>
 {% endblock %}

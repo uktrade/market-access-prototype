@@ -22,9 +22,22 @@
 {% endblock %}
 
 {% block content %}
-<h2 class="heading-medium">Search for a lead facilitator</h2>
+
+<h2 class="heading-medium">Assign a lead facilitator</h2>
+
+<form action="{% url 'report-home-ready-to-proceed' %}" method="get">
+    <div class="c-form-actions">
+      <button class="button" type="submit">Assign yourself as lead facilitator</button>
+      <a href="{% url 'report-home-barrier-created' %}">Back</a>
+    </div>
+</form>
+<br>
+<p>Alternatively&hellip;</p>
+<h2 class="heading-medium">Search for and invite a lead facilitator</h2>
 <p>Search existing barrier records and the DIT people finder.</p>
-<p>You don’t have to complete all fields, but enter as much detail as possible to improve your search results.</p>
+
+<p>You don’t have to complete all fields, but enter as much detail
+as possible to improve your search results.</p>
 
 <form action="{% url 'report-assign-lead-search-results' %}" method="get">
 
@@ -109,17 +122,6 @@
     <button class="button" type="submit">Search</button>
     <a href="{% url 'report-home-barrier-created' %}">Back</a>
   </div>
-
-</form>
-
-<form action="{% url 'report-home-ready-to-proceed' %}" method="get">
-
-    <label>Alternatively:</label>
-
-    <div class="c-form-actions">
-      <button class="button" type="submit">Assign yourself as lead facilitator</button>
-      <a href="{% url 'report-home-barrier-created' %}">Back</a>
-    </div>
 
 </form>
 

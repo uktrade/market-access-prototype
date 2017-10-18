@@ -34,17 +34,21 @@ role.</p>
     }
   </style>
 
+  <h3 class="heading-small">1) Search results</h3>
   <table class="table--key-value table--striped table-search">
     <thead>
       <tr style="background: transparent;">
-        <th scope="col" colspan="2">1) DIT people finder results</th>
+        <th scope="col">Match</th>
+        <th scope="col">Name</th>
+        <th scope="col">Department</th>
+        <th scope="col">Database</th>
         <th scope="col" colspan="2">Invite</th>
       </tr>
     </thead>
     <tbody>
-        {% include 'backend/components/person-result.html' with id="1" name="Firstname Lastname" department="Department A" %}
-        {% include 'backend/components/person-result.html' with id="2" name="Firstname Lastname" department="Department B" %}
-        {% include 'backend/components/person-result.html' with id="3" name="Firstname Lastname" department="Department C" %}
+        {% include 'backend/components/person-result.html' with id="1" match="30%" name="Firstname Lastname" department="Department A" database="DIT People finder" %}
+        {% include 'backend/components/person-result.html' with id="2" match="20%" name="Firstname Lastname" department="Department B" database="Barrier record" %}
+        {% include 'backend/components/person-result.html' with id="3" match="10%" name="Firstname Lastname" department="Department C" database="DIT People finder, Barrier record" %}
     </tbody>
   </table>
 
@@ -55,36 +59,10 @@ role.</p>
 
 </form>
 
-<form action="{% url 'invite-lead-time-passes' %}" method="get">
-
-  <style scoped>
-    .table-search .block-label {
-      min-height: 35px;
-    }
-  </style>
-
-  <table class="table--key-value table--striped table-search">
-    <thead>
-      <tr style="background: transparent;">
-        <th scope="col" colspan="2">2) Barrier record results</th>
-        <th scope="col" colspan="2">Invite</th>
-      </tr>
-    </thead>
-    <tbody>
-        {% include 'backend/components/person-result.html' with id="1" name="Firstname Lastname" department="Department A" %}
-    </tbody>
-  </table>
-
-  <div class="c-form-actions">
-    <button class="button">Invite</button>
-    <a href="{% url 'report-assign-lead' %}">Back</a>
-  </div>
-
-</form>
 
 <form action="{% url 'report-assign-lead' %}" method="get">
 
-  <label class="form-label-bold">3) Couldn’t find the right person?</label>
+  <label class="form-label-bold">2) Couldn’t find the right person?</label>
 
   <div class="c-form-actions">
     <button class="button">Search again</button>
@@ -92,8 +70,6 @@ role.</p>
   </div>
 
 </form>
-
-
 
 <form action="{% url 'invite-lead-time-passes' %}" method="get">
 
