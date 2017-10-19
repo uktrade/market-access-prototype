@@ -11,11 +11,16 @@
         appearance: none;
         background-color: transparent;
         border: none;
+        cursor: s-resize;
         display: block;
         padding: 0 30px 0 0;
         position: relative;
         text-align: left;
         width: 100%;
+      }
+
+      .dit-create-barrier-filter-button[aria-expanded="true"]{
+        cursor: n-resize;
       }
 
       .js-dit-toggle__icon{
@@ -35,7 +40,8 @@
         padding: 20px 40px 20px 20px;
       }
 
-      .dit-create-barrier-filter-form .c-form-control  c-form-control--light c-form-control--small{
+      .dit-create-barrier-filter-form .c-form-control,
+      .dit-create-barrier-filter-form .c-form-control--light{
         background-color: #fff;
       }
 
@@ -47,7 +53,7 @@
         @supports(display: grid){
           .dit-create-barrier-filter-form__fields{
             display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-columns: 230px 1fr 1fr;
             grid-column-gap: 20px;
           }
         }
@@ -137,13 +143,74 @@
                 </select>
             </div>
 
-            {# Date reported #}
-            <div class="c-form-group c-form-group--light" id="date-reported-wrapper">
-                <label class="form-label-bold" for="date-reported">
-                    Date reported (range)
-                </label>
-                <input id="date-reported" class="c-form-control  c-form-control--light c-form-control--small" name="date_reported" type="text">
+            {# Date reported - start #}
+            <div class="c-form-group c-form-group--light">
+              <fieldset>
+                <legend>
+                  <span class="form-label-bold">
+                    Date reported (start)
+                  </span>
+                </legend>
+                <div class="form-date">
+                  <div class="form-group form-group-day">
+                    <label class="form-label" for="date-reported-start-day">Day</label>
+                    <input class="c-form-control c-form-control--light" id="date-reported-start-day" name="date-reported-start-day" pattern="[0-9]*" min="0" max="31" type="number">
+                  </div>
+                  <div class="form-group form-group-month">
+                    <label class="form-label" for="date-reported-start-month">Month</label>
+                    <input class="c-form-control c-form-control--light" id="date-reported-start-month" name="date-reported-start-month" pattern="[0-9]*" min="0" max="12" type="number">
+                  </div>
+                  <div class="form-group form-group-year">
+                    <label class="form-label" for="date-reported-start-year">Year</label>
+                    <input class="c-form-control c-form-control--light" id="date-reported-start-year" name="dob-year" pattern="[0-9]*" min="0" max="2016" type="number">
+                  </div>
+                </div>
+              </fieldset>
             </div>
+
+            {# Date reported - start #}
+            <div class="c-form-group c-form-group--light">
+              <fieldset>
+                <legend>
+                  <span class="form-label-bold">
+                    Date reported (end)
+                  </span>
+                </legend>
+                <div class="form-date">
+                  <div class="form-group form-group-day">
+                    <label class="form-label" for="date-reported-end-day">Day</label>
+                    <input class="c-form-control c-form-control--light" id="date-reported-end-day" name="date-reported-end-day" pattern="[0-9]*" min="0" max="31" type="number">
+                  </div>
+                  <div class="form-group form-group-month">
+                    <label class="form-label" for="date-reported-end-month">Month</label>
+                    <input class="c-form-control c-form-control--light" id="date-reported-end-month" name="date-reported-end-month" pattern="[0-9]*" min="0" max="12" type="number">
+                  </div>
+                  <div class="form-group form-group-year">
+                    <label class="form-label" for="date-reported-end-year">Year</label>
+                    <input class="c-form-control c-form-control--light" id="date-reported-end-year" name="dob-year" pattern="[0-9]*" min="0" max="2016" type="number">
+                  </div>
+                </div>
+              </fieldset>
+            </div>
+
+            {% comment %}
+            {# Date reported - start #}
+            <div class="c-form-group c-form-group--light" id="date-reported-start-wrapper">
+                <label class="form-label-bold" for="date-reported-start">
+                    Date reported (start)
+                </label>
+                <input id="date-reported-start" class="c-form-control c-form-control--light c-form-control--small" name="date_reported[start]" type="text">
+            </div>
+
+            {# Date reported - end #}
+            <div class="c-form-group c-form-group--light" id="date-reported-end-wrapper">
+                <label class="form-label-bold" for="date-reported-end">
+                    Date reported (end)
+                </label>
+                <input id="date-reported-end" class="c-form-control c-form-control--light c-form-control--small" name="date_reported[end]" type="text">
+            </div>
+            {% endcomment %}
+
           </div>
 
           <div>
@@ -187,7 +254,7 @@
           <div>
 
             {# Company(s) involved #}
-            <div class="js-companys-involved-wrapper" id="companys-involved-wrapper">
+            <div class="js-companys-involved-wrapper c-form-group c-form-group--light" id="companys-involved-wrapper">
                 <label class="form-label-bold" for="companys-involved">
                     Companies involved
                 </label>
@@ -199,11 +266,11 @@
 
 
           <script id="js-dit-add-company-template" type="template/html">
-            <div class="js-companys-involved-wrapper">
+            <div class="js-companys-involved-wrapper c-form-group c-form-group--light">
               <label class="form-label-bold" for="companys-involved">
                   Companies involved
               </label>
-              <input id="companys-involved" class="c-form-control  c-form-control--light c-form-control--small" name="companys_involved[]" value="" type="text">
+              <input id="companys-involved" class="c-form-control c-form-control--light c-form-control--small" name="companys_involved[]" value="" type="text">
               <button type="button" class="js-dit-remove-company" aria-label="Remove company">x</button>
               <button type="button" class="js-dit-add-company" aria-hidden="false">Add company</button>
             </div>
