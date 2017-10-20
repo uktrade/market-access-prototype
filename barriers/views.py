@@ -278,8 +278,7 @@ class ReportBarrierStep4View(SessionContextMixin, TemplateView):
         # warning - this will need to change if we change
         # the code of the UK barrier source
         uk_source = BarrierSource.objects.get(short_name='UK')
-        # exclude our tariffs category for now
-        uk_barrier_types = BarrierType.objects.filter(barrier_source=uk_source).exclude(barrier_code=12)
+        uk_barrier_types = BarrierType.objects.filter(barrier_source=uk_source)
         context['barrier_types'] = uk_barrier_types
         return context
 
