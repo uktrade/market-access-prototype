@@ -227,9 +227,8 @@ class BarriersGeneralInfoView(SessionContextMixin, ListView):
     template_name = 'barriers-general-info.html'
 
     def get_queryset(self):
-        # All UK Barrier Types excluding the "Other" category
         uk_source = BarrierSource.objects.get(short_name='UK')
-        return BarrierType.objects.filter(barrier_source=uk_source).exclude(pk=122)
+        return BarrierType.objects.filter(barrier_source=uk_source)
 
 class BarriersCaseStudyView(SessionContextMixin, TemplateView):
     model = BarrierRecord
