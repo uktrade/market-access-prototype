@@ -29,15 +29,13 @@ tr-home
       <div class="grid-container grid-container--inner">
         <div class="column-full dit-hero__copy">
             <h1 class="dit-hero__title">{% trans "Report a trade barrier" %}</h1>
-            <p class="dit-hero__summary">The government works with the WTO and other governments around the world to reduce the impact of trade barriers. Departments and agencies
-work together to understand the problems and develop action plans to resolve them. Steps may include using our representatives abroad, Ministerial visits, or direct negotiations with overseas governments or the WTO.</p>
+            <p class="dit-hero__summary">The government works with the WTO and other governments around the world to reduce the impact of trade barriers. Departments and agencies work together to understand the problems and develop action plans to resolve them. Steps may include using our representatives abroad, ministerial visits or direct negotiations with overseas governments or the WTO.</p>
             <div class="grid-container grid-container--inner">
               <div class="column-two-third">
-                <p class="dit-hero__summary">By reporting a trade barrier you can get the help you need and also help us to understand the issues businesses are facing and to concentrate our resources where they are most needed.</p>
-                <p>Learn more about your target market in our <a href="javascript:void(0);">export country profiles</a></p>
+                <p class="dit-hero__summary">Find out more about <a href="javascript:void(0);">different types of trade barrier</a>, <a href="javascript:void(0);">check barriers in a particular market</a> or learn about opportunities in our <a href="javascript:void(0);">export country profiles</a>.</p>
               </div>
               <div class="column-one-third">
-                <form action="{% url 'report-barrier-step1' %}" method="get">
+                <form action="{% url 'report-barrier-task-list' %}" method="get">
                   <input type="hidden" name="existing" value="false">
                   <button type="submit" class="button button-red button-large">Report a barrier</button>
                 </form>
@@ -53,6 +51,7 @@ work together to understand the problems and develop action plans to resolve the
     @media screen and (min-width: 768px){
       .how-it-works{
         border-right: 1px solid #979797;
+        padding-right: 20px;
       }
     }
 
@@ -71,32 +70,26 @@ work together to understand the problems and develop action plans to resolve the
     <div class="grid-container grid-container--inner">
       <div class="column-one-half how-it-works">
         <h2 class="h3">Why report?</h2>
-
         <p>By reporting a trade barrier you can get the help you need, and also provide information which will help us to focus resources where they can be most effective.</p>
-        <p>Our team will review your report and respond to it within five days. </p>
+        <p>Our team will review your report and respond to it within five working days.</p>
         <h3 class="h3">Your data and privacy</h3>
         <p>We'll respect any needs you have for confidentiality, and we'll keep you updated on progress.</p>
-
         <h2 class="h3">How it works</h2>
-        <ol class="dit-number-list">
-          <li>Tell us about you/your role</li>
-          <li>Describe the problem</li>
-          <li>Select the trade barrier from a list</li>
-          <li>Review next steps</li>
-          <li>Provide additional information that may help us</li>
-        </ol>
-        <form action="{% url 'report-barrier-step1' %}" method="get">
-          <input type="hidden" name="existing" value="false">
-          <button type="submit" class="button button-red button-large float--right push--right how-it-works-button">Report a barrier</button>
-        </form>
+        <ul>
+          <li>Tell us about a problem you’re experiencing</li>
+          <li>Tell us how you think it should be handled</li>
+          <li>Get the right kind of help</li>
+          <li>Keep your information confidential</li>
+          <li>Get updates on progress</li>
+        </ul>
       </div>
       <div class="column-one-half">
         <h2 class="h3">In an emergency</h2>
         <p><a href="{% url 'request-fast-track' %}">Request a fast track response to a trade barrier problem</a></p>
-        <p>Only make a fast track request if:</p>
+        <p>Only make a fast track request if:</p>
         <p>
-          - you are facing significant and imminent financial or other loss<br>
-          - you need action to be taken within the next 48 hours
+        - you are facing significant and imminent financial or other loss<br>
+        - you need action to be taken within the next 48 hours
         </p>
       </div>
     </div>

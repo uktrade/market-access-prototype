@@ -37,6 +37,10 @@ class HomeView(TemplateView):
         context['num_barriers'] = BarrierRecord.objects.count
         return context
 
+class PrototypesView(TemplateView):
+    template_name = 'prototypes.html'
+    pass
+
 class ReportBarrierView(FormView):
     template_name = 'report-barrier.html'
     form_class = BarrierCountryForm
@@ -209,7 +213,7 @@ class SessionContextMixin(object):
 class NotificationDetailView(DetailView):
     model = BarrierNotification
     template_name = 'notification-detail.html'
-    
+
 class BarrierTypeDetailView(SessionContextMixin, DetailView):
     model = BarrierType
     template_name = 'barrier-type-detail.html'
@@ -238,6 +242,10 @@ class BarriersCaseStudy2View(SessionContextMixin, TemplateView):
 class BarriersCaseStudy3View(SessionContextMixin, TemplateView):
     model = BarrierRecord
     template_name = 'barriers-case-study3.html'
+
+class ReportBarrierTaskListView(SessionContextMixin, TemplateView):
+    model = BarrierRecord
+    template_name = 'report-barrier-task-list.html'
 
 class ReportBarrierStep1View(SessionContextMixin, TemplateView):
     model = BarrierRecord
@@ -291,6 +299,14 @@ class ReportBarrierStep7View(SessionContextMixin, TemplateView):
 class ReportBarrierRegisterView(SessionContextMixin, TemplateView):
     model = BarrierRecord
     template_name = 'report-barrier-register.html'
+
+class ReportBarrierSaveView(SessionContextMixin, TemplateView):
+    model = BarrierRecord
+    template_name = 'report-barrier-save.html'
+
+class ReportBarrierSuccessView(SessionContextMixin, TemplateView):
+    model = BarrierRecord
+    template_name = 'report-barrier-success.html'
 
 class RequestFastTrackView(SessionContextMixin, TemplateView):
     model = BarrierRecord

@@ -12,14 +12,17 @@ from django.conf.urls import url  # , include
 
 from .views import (
     HomeView,
+    PrototypesView,
     BarriersGeneralInfoView,
     SearchView, SearchResultsView,
     ReportBarrierView, ReportExistingBarrierView, ReportExistingNotificationView,
     BarrierDetailView, BarrierTypeDetailView, NotificationDetailView,
     BarrierSubscribeView,
+    ReportBarrierTaskListView,
     ReportBarrierStep1View, ReportBarrierStep2View, ReportBarrierStep3View,
     ReportBarrierStep4View, ReportBarrierStep5View, ReportBarrierStep6View,
-    ReportBarrierStep7View, ReportBarrierRegisterView,
+    ReportBarrierStep7View, ReportBarrierRegisterView, ReportBarrierSuccessView,
+    ReportBarrierSaveView,
     BarriersCaseStudyView, BarriersCaseStudy2View, BarriersCaseStudy3View,
     RequestFastTrackView, FastTrackPhoneTextView,
     ExampleSummaryView,
@@ -30,6 +33,10 @@ urlpatterns = [
     url(r'^$',
         HomeView.as_view(),
         name='home'
+    ),
+    url(r'^prototypes$',
+        PrototypesView.as_view(),
+        name='index'
     ),
     url(r'^search/results',
         SearchResultsView.as_view(),
@@ -79,6 +86,10 @@ urlpatterns = [
         BarriersCaseStudy3View.as_view(),
         name='barriers-case-study-3'
     ),
+    url(r'^report/task-list',
+        ReportBarrierTaskListView.as_view(),
+        name='report-barrier-task-list'
+    ),
     url(r'^report/step1',
         ReportBarrierStep1View.as_view(),
         name='report-barrier-step1'
@@ -110,6 +121,14 @@ urlpatterns = [
     url(r'^report/register',
         ReportBarrierRegisterView.as_view(),
         name='report-barrier-register'
+    ),
+    url(r'^report/success',
+        ReportBarrierSuccessView.as_view(),
+        name='report-barrier-success'
+    ),
+    url(r'^report/save',
+        ReportBarrierSaveView.as_view(),
+        name='report-barrier-save'
     ),
     url(r'^report',
         ReportBarrierView.as_view(),

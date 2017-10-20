@@ -7,7 +7,7 @@
 {% endblock %}
 {% block bodyScripts %}
 {% endblock bodyScripts %}
-{% block head_title %}Report a trade barrier - Section 1 of 7: About you{% endblock %}
+{% block head_title %}Report a trade barrier - Section 1 of 6: About you{% endblock %}
 {% block sub_header %}{# prevent the subheader from showing on form pages #}{% endblock %}
 {% block css_layout_class %}
 {% endblock %}
@@ -16,7 +16,7 @@
   <div class="outer-container">
     <div class="dit-breadcrumb grid-container grid-container--inner">
         <div class="column-full flush--bottom">
-          <a href="https://www.great.gov.uk/">Great.gov.uk</a> <span aria-hidden="true">></span> <a href="/">Trade barriers</a> <span aria-hidden="true">></span> <a href="{% url 'report-barrier' %}">Report a barrier</a> <span aria-hidden="true">></span> <strong>Section 1 - About you</strong>
+          <a href="https://www.great.gov.uk/">Great.gov.uk</a> <span aria-hidden="true">></span> <a href="/">Trade barriers</a> <span aria-hidden="true">></span> <a href="{% url 'report-barrier' %}">Report a barrier</a> <span aria-hidden="true">></span> <strong>Section 1 of 6: About you</strong>
         </div>
     </div>
   </div>
@@ -31,16 +31,17 @@
           <li><a href="{% url 'report-barrier-step3' %}"><span>3 About the problem</span></a></li>
           <li><a href="{% url 'report-barrier-step4' %}"><span>4 Select the type of barrier</span></a></li>
           <li><a href="{% url 'report-barrier-step5' %}"><span>5 Working out the next steps</span></a></li>
-          <li><a href="{% url 'report-barrier-step6' %}"><span>6 Any other details</span></a></li>
-          <li>7 Summary</li>
+          <li><a href="{% url 'report-barrier-step6' %}"><span>6 Confidentiality and privacy</span></a></li>
         </ol>
       </div>
       <div class="column-two-third">
-        <h1 class="h3 push--bottom push--top">Section 1 of 7: About you</h1>
+        <h1 class="h3 push--bottom push--top">Section 1 of 6: About you</h1>
         <form action="{% url 'report-barrier-step2' %}" method="post" class="dit-form">
           {% csrf_token %}
 
           {% include 'components/form-validation.html' %}
+
+          <h2 class="dit-form-section-title is-first" id="your-details">Your details</h2>
 
           <div class="form-group">
             <label class="form-label" for="dit-step1-your-name">
@@ -48,35 +49,6 @@
             </label>
             <span class="error-message hidden" aria-hidden="true">Enter your name</span>
             <input class="form-control" id="dit-step1-your-name" type="text" name="dit[step1][your_name]" required>
-          </div>
-
-          <div class="form-group">
-            <fieldset>
-
-              <legend class="visuallyhidden">
-                Describe your position
-              </legend>
-
-              <span class="error-message hidden" aria-hidden="true">Select whether you are an exporter/seeking to export or working for a trade association</span>
-
-              <div class="multiple-choice">
-                <input id="dit-step1-type-1" name="dit[step1][type]" value="I am an exporter/seeking to export" type="radio">
-                <label for="dit-step1-type-1">I am an exporter/seeking to export</label>
-              </div>
-              <div class="multiple-choice">
-                <input id="dit-step1-type-2" name="dit[step1][type]" value="I work for a trade association" type="radio" required>
-                <label for="dit-step1-type-2">I work for a trade association</label>
-              </div>
-
-            </fieldset>
-          </div>
-
-          <div class="form-group">
-            <label class="form-label" for="dit-step1-your-role-job-title">
-              Your role / job title
-            </label>
-            <span class="error-message hidden" aria-hidden="true">Enter your role / your title</span>
-            <input class="form-control" id="dit-step1-your-role-job-title" type="text" name="dit[step1][your_role_job_title]" required>
           </div>
 
           <div class="form-group">
@@ -95,9 +67,40 @@
             <input class="form-control" id="dit-step1-contact-telephone-number" type="tel" name="dit[step1][contact_telephone_number]" required>
           </div>
 
+          <h2 class="dit-form-section-title" id="your-role">Your role</h2>
+
+          <div class="form-group">
+            <fieldset>
+
+              <legend class="visuallyhidden">
+                Describe your position
+              </legend>
+
+              <span class="error-message hidden" aria-hidden="true">Select whether you are an exporter/seeking to export or working for a trade association</span>
+
+              <div class="multiple-choice">
+                <input id="dit-step1-type-1" name="dit[step1][type]" value="I am an exporter/seeking to export" type="radio">
+                <label for="dit-step1-type-1">I’m an exporter / seeking to export</label>
+              </div>
+              <div class="multiple-choice">
+                <input id="dit-step1-type-2" name="dit[step1][type]" value="I work for a trade association" type="radio" required>
+                <label for="dit-step1-type-2">I work for a trade association</label>
+              </div>
+
+            </fieldset>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="dit-step1-your-role-job-title">
+              Role / job title
+            </label>
+            <span class="error-message hidden" aria-hidden="true">Enter your role / your title</span>
+            <input class="form-control" id="dit-step1-your-role-job-title" type="text" name="dit[step1][your_role_job_title]" required>
+          </div>
+
           <div class="dit-buttons">
             <button class="button button-blue" type="submit">Next</button>
-            <button class="button button-transparent-blue button-border float--right js-save-button" type="submit">Save progress</button>
+            <a  href="{% url 'report-barrier-save' %}" class="button button-transparent-grey button-border float--right">Save progress</a>
           </div>
         </form>
       </div>

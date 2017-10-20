@@ -1,0 +1,34 @@
+{% extends './govuk_layout.html' %}
+{% load staticfiles %}
+{% load trans from i18n %}
+{% block css %}
+{% endblock %}
+{% block bodyScripts %}
+{% endblock bodyScripts %}
+{% block head_title %}Report a trade barrier - Thank you{% endblock %}
+{% block sub_header %}{# prevent the subheader from showing on form pages #}{% endblock %}
+{% block css_layout_class %}
+{% endblock %}
+
+{% block content %}
+  <div class="outer-container">
+    <div class="dit-breadcrumb grid-container grid-container--inner">
+        <div class="column-full flush--bottom">
+          <a href="https://www.great.gov.uk/">Great.gov.uk</a> <span aria-hidden="true">></span> <a href="/">Trade barriers</a> <span aria-hidden="true">></span> <a href="{% url 'report-barrier' %}">Report a barrier</a> <span aria-hidden="true">></span> <strong>Thank you</strong>
+        </div>
+    </div>
+  </div>
+  <div class="outer-container">
+    <div class="grid-container grid-container--inner">
+      <div class="column-two-third">
+        <h1 class="h3 push--top">Thank you for submitting your report</h1>
+        <p class="push--top">Your reference number is: 54321<br>
+        You will shortly receive an email to confirm this submission.</p>
+        <p>We’ll process your report within 5 working days and keep you updated on progress.</p>
+
+
+      </div>
+    </div>
+  </div>
+
+{% endblock %}

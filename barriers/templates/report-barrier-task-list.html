@@ -25,59 +25,55 @@
       <div class="column-two-third">
         <h1 class="h2">Report a trade barrier</h1>
         <div class="dit-infostrip">
-          <p>Review your answers before submitting your report.</p>
+          <p>Complete all the sections and submit your report.</p>
         </div>
-        <form action="{% url 'report-barrier-register' %}" method="get">
+        <form action="{% url 'report-barrier-step1' %}" method="get">
           <input type="hidden" name="existing" value="false">
-          <button type="submit" class="button button-green button-large">Submit</button>
+          <button type="submit" class="button button-blue button-large">Start</button>
         </form>
         <ol class="dit-task-list">
           <li>
             <a href="{% url 'report-barrier-step1' %}" class="dit-task-list__step"><span class="dit-task-list__step-title">About you</span></a>
             <ul>
-              <li><a href="{% url 'report-barrier-step1' %}#your-details">Your details</a> <span class="dit-task-list__status">completed</span></li>
-              <li><a href="{% url 'report-barrier-step1' %}#your-role">Your role</a> <span class="dit-task-list__status">completed</span></li>
+              <li><a href="{% url 'report-barrier-step1' %}#your-details">Your details</a></li>
+              <li><a href="{% url 'report-barrier-step1' %}#your-role">Your role</a></li>
             </ul>
           </li>
           <li>
             <a href="{% url 'report-barrier-step2' %}" class="dit-task-list__step"><span class="dit-task-list__step-title">About your organisation</span></a>
             <ul>
-              <li><a href="{% url 'report-barrier-step2' %}#organisation-details">Organisation details</a> <span class="dit-task-list__status">completed</span></li>
+              <li><a href="{% url 'report-barrier-step2' %}#organisation-details">Organisation details</a></li>
             </ul>
           </li>
           <li>
             <a href="{% url 'report-barrier-step3' %}" class="dit-task-list__step"><span class="dit-task-list__step-title">About the problem and its impact</span></a>
             <ul>
-              <li><a href="{% url 'report-barrier-step3' %}#your-product">Your product or service</a> <span class="dit-task-list__status">completed</span></li>
-              <li><a href="{% url 'report-barrier-step3' %}#the-problem">The problem</a> <span class="dit-task-list__status">completed</span></li>
-              <li><a href="{% url 'report-barrier-step3' %}#the-impact">The impact on your business</a> <span class="dit-task-list__status">completed</span></li>
-              <li><a href="{% url 'report-barrier-step3' %}#other-companies">Other affected companies</a> <span class="dit-task-list__status">completed</span></li>
+              <li><a href="{% url 'report-barrier-step3' %}#your-product">Your product or service</a></li>
+              <li><a href="{% url 'report-barrier-step3' %}#the-problem">The problem</a></li>
+              <li><a href="{% url 'report-barrier-step3' %}#the-impact">The impact on your business</a></li>
+              <li><a href="{% url 'report-barrier-step3' %}#other-companies">Other affected companies</a></li>
             </ul>
           </li>
           <li>
             <a href="{% url 'report-barrier-step4' %}" class="dit-task-list__step"><span class="dit-task-list__step-title">Select the type of barrier</span></a>
             <ul>
-              <li><a href="{% url 'report-barrier-step4' %}">Type of barrier</a> <span class="dit-task-list__status">completed</span></li>
+              <li><a href="{% url 'report-barrier-step4' %}">Type of barrier</a></li>
             </ul>
           </li>
           <li>
             <a href="{% url 'report-barrier-step5' %}" class="dit-task-list__step"><span class="dit-task-list__step-title">Working out the next steps</span></a>
             <ul>
-              <li><a href="{% url 'report-barrier-step5' %}#steps">Steps already taken, your view and support needed</a> <span class="dit-task-list__status">completed</span></li>
-              <li><a href="{% url 'report-barrier-step5' %}#other">Any other details</a> <span class="dit-task-list__status">completed</span></li>
+              <li><a href="{% url 'report-barrier-step5' %}#steps">Steps already taken, your view and support needed</a></li>
+              <li><a href="{% url 'report-barrier-step5' %}#other">Any other details</a></li>
             </ul>
           </li>
           <li>
             <a href="{% url 'report-barrier-step6' %}" class="dit-task-list__step"><span class="dit-task-list__step-title">Confidentiality and privacy</span></a>
             <ul>
-              <li><a href="{% url 'report-barrier-step6' %}">Confidentiality and privacy</a> <span class="dit-task-list__status">completed</span></li>
+              <li><a href="{% url 'report-barrier-step6' %}">Confidentiality and privacy</a></li>
             </ul>
           </li>
         </ol>
-        <form action="{% url 'report-barrier-register' %}" method="get">
-          <input type="hidden" name="existing" value="false">
-          <button type="submit" class="button button-green button-large">Submit</button>
-        </form>
       </div>
     </div>
  </div>

@@ -49,6 +49,13 @@ textarea{
   width: 75%;
 }
 
+@media screen and (max-width: 767px){
+  .form-hint,
+  .error-message{
+    width: 100%;
+  }
+}
+
 legend .form-label,
 .form-label .form-hint{
   width: 100%;
@@ -56,6 +63,18 @@ legend .form-label,
 
 .error-message--global[aria-hidden="false"]{
   margin-bottom: 40px;
+}
+
+.dit-form-section-title{
+  clear: both;
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 30px;
+  padding-top: 30px;
+}
+
+.dit-form-section-title:not(.is-first){
+  padding-top: 40px;
 }
 
 main a{
@@ -85,6 +104,13 @@ main a:hover{
 
 .dit-button-link:hover{
   text-decoration: none;
+}
+
+.dit-buttons{
+  border-top: 1px solid #e8e8e8;
+  clear: both;
+  margin-top: 20px;
+  padding-top: 40px;
 }
 
 @media screen and (max-width: 767px){
@@ -811,10 +837,12 @@ main a:hover{
 
 .dit-progress-bar ol{
   background: #f0f0f0;
+  border: 1px solid #979797;
+  border-width: 1px 0;
   font-size: 16px;
   margin: 10px 0;
   max-width: 260px;
-  padding: 20px 0;
+  padding: 0;
 }
 
 .dit-progress-bar a span{
@@ -829,11 +857,12 @@ main a:hover{
 .dit-progress-bar li{
   clear: both;
   display: block;
-  padding: 15px 10px;
+  margin: 0;
+  padding: 20px 10px;
 }
 
-.dit-progress-bar li + li{
-  margin-top: 15px;
+.dit-progress-bar li:not(:first-child){
+  border-top: 1px solid #979797;
 }
 
 .dit-progress-bar .is-selected{
@@ -1044,4 +1073,62 @@ If you have 2 sets of tabs on the same page e.g.
     margin-left: 0;
     margin-top: 20px;
   }
+}
+
+/* Task list */
+.dit-task-list{
+  background: #f7f7f7;
+  margin: 50px 0 20px;
+  padding: 20px 20px 20px 30px;
+  counter-reset: step;
+}
+
+.dit-task-list li{
+  display: block;
+  position: relative;
+}
+
+.dit-task-list > li{
+  counter-increment: step;
+}
+
+.dit-task-list ul{
+  border-top: 1px solid #979797;
+  margin-bottom: 50px;
+  margin-top: 10px;
+}
+
+.dit-task-list ul li{
+  border-bottom: 1px solid #979797;
+  padding: 15px 0;
+}
+
+.dit-task-list__step{
+  color: currentColor;
+  text-decoration: none;
+}
+
+.dit-task-list__step-title{
+  font-weight: bold;
+}
+
+.dit-task-list__step-title::before{
+  content: counter(step) '.';
+  display: inline-block;
+  margin-left: -1em;
+  margin-right: 5px;
+  position: relative;
+}
+
+.dit-task-list__status{
+  background: #fff;
+  border: 1px solid;
+  color: #389E12;
+  display: inline-block;
+  font-weight: bold;
+  padding: 8px 20px 6px;
+  position: absolute;
+  right: 0;
+  text-transform: uppercase;
+  top: 5px;
 }

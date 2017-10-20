@@ -1202,6 +1202,23 @@ a:focus {
 .button-blue:focus {
     outline: 3px solid #ffbf47
 }
+.button-green {
+    background-color: #389E12;
+    color: #fff;
+    outline: 0
+}
+.button-green:hover {
+    background-color: #297e52;
+    color: #fff
+}
+.button-green:active {
+    background-color: #297e52;
+    outline: 0
+}
+.button-green:focus {
+  outline: 3px solid #ffbf47;
+}
+
 .button-red {
     background-color: #e41f13;
     color: #fff;
@@ -1242,6 +1259,27 @@ a:focus {
     outline: 0
 }
 .button-transparent-blue:focus {
+    outline: 3px solid #ffbf47
+}
+.button-transparent-blue {
+    background-color: transparent;
+    color: #00549f;
+    outline: 1px
+}
+.button-transparent-grey {
+    background-color: transparent;
+    color: #4a4a4a;
+}
+.button-transparent-grey:hover {
+    background-color: transparent;
+    color: #000;
+}
+.button-transparent-grey:active {
+    background-color: #4a4a4a;
+    color: #fff;
+    outline: 0
+}
+.button-transparent-grey:focus {
     outline: 3px solid #ffbf47
 }
 .button-transparent-red {

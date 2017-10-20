@@ -5,7 +5,7 @@
 {% endblock %}
 {% block bodyScripts %}
 {% endblock bodyScripts %}
-{% block head_title %}Report a trade barrier - Section 5 of 7: Any other details{% endblock %}
+{% block head_title %}Report a trade barrier - Section 6 of 6: Confidentiality and privacy{% endblock %}
 {% block sub_header %}{# prevent the subheader from showing on form pages #}{% endblock %}
 {% block css_layout_class %}
 {% endblock %}
@@ -14,7 +14,7 @@
   <div class="outer-container">
     <div class="dit-breadcrumb grid-container grid-container--inner">
         <div class="column-full flush--bottom">
-        <a href="https://www.great.gov.uk/">Great.gov.uk</a> <span aria-hidden="true">></span> <a href="/">Trade barriers</a> <span aria-hidden="true">></span> <a href="{% url 'report-barrier' %}">Report a barrier</a> <span aria-hidden="true">></span> <strong>Section 6 of 7: Any other details</strong>
+        <a href="https://www.great.gov.uk/">Great.gov.uk</a> <span aria-hidden="true">></span> <a href="/">Trade barriers</a> <span aria-hidden="true">></span> <a href="{% url 'report-barrier' %}">Report a barrier</a> <span aria-hidden="true">></span> <strong>Section 6 of 6: Confidentiality and privacy</strong>
       </div>
     </div>
   </div>
@@ -29,28 +29,83 @@
           <li><a href="{% url 'report-barrier-step3' %}"><span>3 About the problem</span> <img src="{% static 'images/tick.svg' %}" alt="Completed step"></a></li>
           <li><a href="{% url 'report-barrier-step4' %}"><span>4 Select the type of barrier</span> <img src="{% static 'images/tick.svg' %}" alt="Completed step"></a></li>
           <li><a href="{% url 'report-barrier-step6' %}"><span>5 Working out the next steps</span> <img src="{% static 'images/tick.svg' %}" alt="Completed step"></a></li>
-          <li class="is-selected">6 Any other details</li>
-          <li>7 Summary</li>
+          <li class="is-selected">6 Confidentiality and privacy</li>
         </ol>
       </div>
       <div class="column-two-third">
-        <h1 class="h3 push--bottom push--top">Section 6 of 7: Any other details?</h1>
+        <h1 class="h3 push--bottom push--top">Section 6 of 6: Any other details?</h1>
         <form action="{% url 'report-barrier-step7' %}" method="post" class="dit-form">
           {% csrf_token %}
 
           {% include 'components/form-validation.html' %}
 
           <div class="form-group">
-            <label class="form-label" for="dit-step5-extra">
-              Is there anything else you would like us to understand about the situation?
+            <label class="form-label" for="dit-step4-confidentiality">
+              Are there confidentiality issues that you need us to be aware of, e.g. commercial sensitivity?
             </label>
-            <textarea class="form-control" id="dit-step5-extra" name="dit[step4][extra]" rows="5" cols="10"></textarea>
+            <textarea class="form-control" id="dit-step4-confidentiality" name="dit[step4][confidentiality]" rows="5" cols="10"></textarea>
+          </div>
+
+          <div class="form-group">
+            <fieldset>
+
+              <legend>
+                <span class="form-label">
+                  We’d like to publish a summary of this problem on Great.gov.uk.
+                </span>
+              </legend>
+
+              <span class="form-hint">This will mean other UK exporters can be made aware of the problem and they
+may then report similar experiences. We will only publish a summary with your
+permission. <a href="{% url 'example-summary' %}" target="_blank">View an existing summary (opens in a new window)</a><br><br>
+              </span>
+
+              <span class="error-message hidden" aria-hidden="true">Select whether or not you are happy for us to publish a summary of your problem</span>
+
+              <div class="multiple-choice">
+                <input id="dit-step4-publish-yes" name="dit[step4][publish]" value="Yes" type="radio" required>
+                <label for="dit-step4-publish-yes">Yes</label>
+              </div>
+
+              <div class="multiple-choice">
+                <input id="dit-step4-publish-no" name="dit[step4][publish]" value="No" type="radio" required>
+                <label for="dit-step4-publish-no">No</label>
+              </div>
+
+              <div class="multiple-choice">
+                <input id="dit-step4-publish-maybe" name="dit[step4][publish]" value="Only after consultation with me" type="radio" required>
+                <label for="dit-step4-publish-maybe">Only after consultation with me</label>
+              </div>
+
+            </fieldset>
+          </div>
+
+          <div class="form-group">
+            <fieldset>
+
+              <legend class="form-label">Your data and our service: privacy and confidentiality
+              </legend>
+
+              <span class="form-hint">Vivamus congue ligula a molestie tincidunt. Integer fringilla elit id ultrices porttitor. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Duis id congue justo, ut ullamcorper diam. Morbi auctor odio eros, et interdum turpis blandit a.</span>
+
+              <span class="error-message hidden" aria-hidden="true">Check both 'your data and our service: privacy and confidentiality' checkboxes</span>
+
+              <div class="multiple-choice">
+                <input id="dit-step6-privacy-1" name="dit[step6][privacy_1]" value="Y" type="checkbox" required>
+                <label for="dit-step6-privacy-1">Privacy and consent requirement 1</label>
+              </div>
+              <div class="multiple-choice">
+                <input id="dit-step6-privacy-2" name="dit[step6][privacy_2]" value="Y" required type="checkbox">
+                <label for="dit-step6-privacy-2">Privacy and consent requirement 2</label>
+              </div>
+
+            </fieldset>
           </div>
 
           <div class="dit-buttons">
             <a href="{% url 'report-barrier-step5' %}" class="button button-white button-border" aria-label="Step 5">Back</a>
             <button class="button button-blue" type="submit">Next</button>
-            <button class="button button-transparent-blue button-border float--right js-save-button" type="submit">Save progress</button>
+            <a  href="{% url 'report-barrier-save' %}" class="button button-transparent-grey button-border float--right">Save progress</a>
           </div>
         </form>
       </div>

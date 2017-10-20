@@ -5,7 +5,7 @@
 {% endblock %}
 {% block bodyScripts %}
 {% endblock bodyScripts %}
-{% block head_title %}Report a trade barrier - Thank you{% endblock %}
+{% block head_title %}Report a trade barrier - Trade profile{% endblock %}
 {% block sub_header %}{# prevent the subheader from showing on form pages #}{% endblock %}
 {% block css_layout_class %}
 {% endblock %}
@@ -14,28 +14,38 @@
   <div class="outer-container">
     <div class="dit-breadcrumb grid-container grid-container--inner">
         <div class="column-full flush--bottom">
-          <a href="https://www.great.gov.uk/">Great.gov.uk</a> <span aria-hidden="true">></span> <a href="/">Trade barriers</a> <span aria-hidden="true">></span> <a href="{% url 'report-barrier' %}">Report a barrier</a> <span aria-hidden="true">></span> <strong>Thank you</strong>
+          <a href="https://www.great.gov.uk/">Great.gov.uk</a> <span aria-hidden="true">></span> <a href="/">Trade barriers</a> <span aria-hidden="true">></span> <a href="{% url 'report-barrier' %}">Report a barrier</a> <span aria-hidden="true">></span> <strong>Trade profile</strong>
         </div>
     </div>
   </div>
   <div class="outer-container">
     <div class="grid-container grid-container--inner">
       <div class="column-two-third">
-        <h1 class="h3 push--top">Thank you</h1>
-        <p class="push--top"><strong>You will shortly receive an email to confirm this submission.</strong> We will process your report within five days and contact you to keep you updated.</p>
-        <p>Your case number is: XXXXXX</p>
-
-        <div class="panel panel--border-top-none">
-          <h2 class="h3">Stay updated</h1>
-          <p>Save this report to your trade profile, and get updates from UK government</p>
-          <div class="dit-create-parent">
-            <a href="" class="button button-blue push--right flush--bottom ">Create a Trade Profile</a>
-          </div>
-          <a href="" class="button button-blue push--left flush--bottom ">Log in to your Trade Profile</a>
-          <p style="clear:both;"><br><a href="javascript:void(0);">Find out more about Trade Profiles here</a></p>
+        <div class="dit-infostrip">
+          <h1 id="title">Would you like to link this report to your existing trade profile or create a trade profile?</h1>
         </div>
-
+        <p id="old-buttons" aria-hidden="false"><button type="button" class="button button-blue" aria-controls="new-buttons" aria-labelledby="title" aria-expanded="false" id="yes-button">Yes</button>&nbsp; &nbsp;<a href="{% url 'report-barrier-success' %}" class="button button-blue" aria-labelledby="title">No</a></p>
+        <p class="hidden" id="new-buttons" aria-hidden="true">
+          <a href="{% url 'report-barrier-success' %}" class="button button-blue">Create a trade profile</a>&nbsp;&nbsp;<a href="{% url 'report-barrier-success' %}" class="button button-blue">Log in to your great.gov.uk account</a>
+        </p>
       </div>
+      <script>
+        var oldButtons = document.getElementById('old-buttons');
+        var yesButton = document.getElementById('yes-button');
+        var newButtons = document.getElementById('new-buttons');
+
+        yesButton.addEventListener('click', function(e){
+          oldButtons.setAttribute('aria-hidden', 'true');
+          oldButtons.classList.add('hidden');
+
+          yesButton.setAttribute('aria-expanded', 'true');
+
+          newButtons.setAttribute('aria-hidden', 'false');
+          newButtons.classList.remove('hidden');
+        });
+
+
+      </script>
     </div>
   </div>
 

@@ -1,0 +1,38 @@
+{% extends './govuk_layout.html' %}
+{% load staticfiles %}
+{% load trans from i18n %}
+{% block css %}
+{% endblock %}
+{% block head_title %}Exporting is great - Trade barriers{% endblock %}
+{% block sub_header %}{# prevent the subheader from showing on form pages #}{% endblock %}
+{% block hero_title %}
+Get seen by motivated overseas buyers
+{% endblock %}
+
+{% block css_layout_class %}
+tr-home
+{% endblock %}
+
+{% block content %}
+  <div class="outer-container" style="margin-top: 50px;">
+    <div class="grid-container grid-container--inner">
+      <div class="column-full">
+        <h1 class="h2">Trade barriers prototypes</h1>
+      </div>
+    </div>
+  </div>
+
+  <div class="outer-container">
+    <div class="grid-container grid-container--inner">
+      <div class="column-one-half">
+        <h2 class="h3">Exporter-facing</h2>
+        <a href="{% url 'home' %}" class="button button-blue">Exporter-facing screens</a>
+      </div>
+      <div class="column-one-half">
+        <h2 class="h3">Government-facing</h2>
+        <a href="{% url 'report-home' %}" class="button button-blue">Screening journey</a>
+        <a href="https://projects.invisionapp.com/share/G5DO6B1YH#/screens/255337975" class="button button-blue">Report a barrier for Government staff in Post (DIT & FCO)</a> password: Transf0rmingTrade
+      </div>
+    </div>
+  </div>
+{% endblock %}
