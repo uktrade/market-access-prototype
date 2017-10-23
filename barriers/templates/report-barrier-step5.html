@@ -14,7 +14,7 @@
   <div class="outer-container">
     <div class="dit-breadcrumb grid-container grid-container--inner">
         <div class="column-full flush--bottom">
-        <a href="https://www.great.gov.uk/">Great.gov.uk</a> <span aria-hidden="true">></span> <a href="/">Trade barriers</a> <span aria-hidden="true">></span> <a href="{% url 'report-barrier' %}">Report a barrier</a> <span aria-hidden="true">></span> <strong>Section 5 of 6: Working out the next steps</strong>
+        <a href="javascript:void(0);">Great.gov.uk</a> <span aria-hidden="true">></span> <a href="/">Trade barriers</a> <span aria-hidden="true">></span> <a href="{% url 'report-barrier' %}">Report a barrier</a> <span aria-hidden="true">></span> <strong>Section 5 of 6: Working out the next steps</strong>
       </div>
     </div>
   </div>
@@ -34,7 +34,7 @@
       </div>
       <div class="column-two-third">
         <h1 class="h3 push--bottom push--top">Section 5 of 6: Working out the next steps</h1>
-        <form action="{% url 'report-barrier-step6' %}" method="post" class="dit-form">
+        <form action="{% url 'report-barrier-step6' %}" method="post" class="dit-form js-dit-validate" novalidate>
           {% csrf_token %}
 
           {% include 'components/form-validation.html' %}

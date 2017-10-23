@@ -402,6 +402,32 @@ main a:hover{
   background: rgba(0, 0, 0, .5);
   color: #fff;
   padding: 18px;
+  position: relative;
+}
+
+.dit-hero__form-errors{
+  background-color: #fff;
+  border-width: 0;
+  color: #000;
+  font-weight: bold;
+  left: 0;
+  padding: 20px 10px 10px;
+  position: absolute;
+  top: -90px;
+  width: 100%;
+}
+
+.dit-hero__form-errors > p{
+  border-left: 5px solid #b10e1e;
+  padding-left: 10px;
+}
+
+.dit-hero__form-errors:focus{
+  outline: none;
+}
+
+.dit-hero__form.has-errors{
+  margin-top: 100px;
 }
 
 .dit-hero__form button [aria-hidden="true"]{

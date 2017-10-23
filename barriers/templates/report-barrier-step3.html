@@ -42,7 +42,7 @@
   <div class="outer-container">
     <div class="dit-breadcrumb grid-container grid-container--inner">
         <div class="column-full flush--bottom">
-          <a href="https://www.great.gov.uk/">Great.gov.uk</a> <span aria-hidden="true">></span> <a href="/">Trade barriers</a> <span aria-hidden="true">></span> <a href="{% url 'report-barrier' %}">Report a barrier</a> <span aria-hidden="true">></span> <strong>Section 3 of 6: About the problem</strong>
+          <a href="javascript:void(0);">Great.gov.uk</a> <span aria-hidden="true">></span> <a href="/">Trade barriers</a> <span aria-hidden="true">></span> <a href="{% url 'report-barrier' %}">Report a barrier</a> <span aria-hidden="true">></span> <strong>Section 3 of 6: About the problem</strong>
         </div>
     </div>
   </div>
@@ -62,7 +62,7 @@
       </div>
       <div class="column-two-third">
         <h1 class="h3 push--bottom push--top">Section 3 of 6: About the problem</h1>
-        <form action="{% url 'report-barrier-step4' %}" method="post" class="dit-form">
+        <form action="{% url 'report-barrier-step4' %}" method="post" class="dit-form js-dit-validate" novalidate>
           {% csrf_token %}
 
           {% include 'components/form-validation.html' %}
@@ -148,7 +148,13 @@ codes on GOV.UK</a>.
             <textarea class="form-control" id="dit-step2-export-to-other-countries" name="dit[step2][export_to_other_countries]" rows="10" cols="5"></textarea>
           </div>
 
-          <h2 class="dit-form-section-title" id="the-impact">The impact on your business</h2>
+          <h2 class="dit-form-section-title" id="the-impact">
+            {% if is_trade_association == True %}
+            The impact on your member(s)
+            {% else %}
+            The impact on your business
+            {% endif %}
+            </h2>
 
           <div class="form-group">
             <label class="form-label" for="dit-step2-impact">
@@ -162,23 +168,41 @@ codes on GOV.UK</a>.
               {% endif %}
             </label>
             <span class="error-message hidden" aria-hidden="true">Enter the impact you expect this to have</span>
-            <textarea class="form-control" id="dit-step2-impact" name="dit[step2][impact]" rows="10" cols="5" required></textarea>
+            <textarea class="form-control" id="dit-step2-impact" name="dit[step2][impact]" rows="5" cols="5" required></textarea>
           </div>
 
-          {% if is_trade_association == True %}
+          <div class="form-group  required-checkboxes">
+            <fieldset>
 
-          {% else %}
-          <div class="form-group">
-            <label class="form-label" for="dit-step2-sales">
-              What is your company's annual turnover?
+              <legend class="form-label">
+              {% if is_trade_association == True %}
+                Estimate the financial value of sales lost for your sector over a five year period
+              {% else %}
+                Estimate the financial value of sales lost over a five year period
+              {% endif %}
+              </legend>
 
-              <span class="form-hint">
-                Leave blank if you are unsure
-              </span>
-            </label>
-            <input class="form-control" id="dit-step2-sales" name="dit[step2][sales]" value="">
+              <span class="error-message hidden" aria-hidden="true">Estimate the financial value of sales lost</span>
+
+              <div class="multiple-choice">
+                <input id="dit-step2-sales-lost-0-1" name="dit[step2][sales_lost]" value="0-1" type="radio" required>
+                <label for="dit-step2-sales-lost-0-1">less than £1m</label>
+              </div>
+              <div class="multiple-choice">
+                <input id="dit-step2-sales-lost-1-10" name="dit[step2][sales_lost]" value="1-10" type="radio">
+                <label for="dit-step2-sales-lost-1-10">£1m &ndash; £10m</label>
+              </div>
+              <div class="multiple-choice">
+                <input id="dit-step2-sales-lost-10-100" name="dit[step2][sales_lost]" value="10-100" type="radio">
+                <label for="dit-step2-sales-lost-10-100">£10m &ndash; £100m</label>
+              </div>
+              <div class="multiple-choice">
+                <input id="dit-step2-sales-lost-100-plus" name="dit[step2][sales_lost]" value="100+" type="radio">
+                <label for="dit-step2-sales-lost-100-plus">£100m +</label>
+              </div>
+
+            </fieldset>
           </div>
-          {% endif %}
 
           <div class="form-group">
             <label class="form-label" for="dit-step2-duration">

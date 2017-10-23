@@ -12,19 +12,25 @@
       <div class="grid-container grid-container--inner">
         <div class="column-full dit-hero__copy">
           <h1 class="dit-hero__title">Check trade barriers in your target market</h1>
-          <p class="dit-hero__summary" style="max-width: 66.66%;">Use the fields provided to narrow your search. The more fields you fill in, the more likely you are to get relevant results. If you don’t know your commodity code or codes, you can look them up on <a href="https://www.gov.uk/trade-tariff">GOV.UK</a></p>
+          <p class="dit-hero__summary" style="max-width: 66.66%;">Use the fields provided to narrow your search. The more fields you fill in, the more likely you are to get relevant results. If you don’t know your commodity code or codes, you can look them up on <a href="https://www.gov.uk/trade-tariff" target="_blank">GOV.UK</a> (opens in new window).</p>
           <div class="js-filters">
-            <form action="{% url 'search-results' %}" method="get" class="dit-hero__form">
+            <form action="{% url 'search-results' %}#results" method="get" class="dit-hero__form js-dit-validate" novalidate="true">
+
+                <div class="error-summary dit-hero__form-errors hidden" aria-hidden="true" tabindex="-1" aria-labelledby="error-summary-heading" role="alert">
+                  <h2 class="h3 error-summary-heading visuallyhidden" id="error-summary-heading">Error</h2>
+                  <p>Enter at least one search term to proceed</p>
+                </div>
+
                 {% csrf_token %}
                 {# form #}
-                <div class="dit-inline-form-fields">
+                <div class="dit-inline-form-fields js-require-one-in-group">
                   <div class="dit-input-field">
                     <label for="searchinput">What product or service are you selling?</label>
-                    <input name="s" id="searchinput" placeholder="Product or service keyword" class="filters__field" autocomplete="off" type="search">
+                    <input name="s" id="searchinput" placeholder="Product or service keyword" class="filters__field" autocomplete="off" type="search" required>
                   </div>
                   <div class="dit-input-field">
                     <label for="countries" id="countries-label">What country/bloc are you planning to sell to?</label>
-                    <select autocomplete="off" class="select-custom select2-hidden-accessible" data-placeholder="Filter by country/bloc" id="countries" multiple="" name="countries">
+                    <select autocomplete="off" class="select-custom select2-hidden-accessible" data-placeholder="Filter by country/bloc" id="countries" multiple="" name="countries" required>
                       {% include 'components/countries.html' %}
                     </select>
                   </div>
@@ -71,11 +77,6 @@
                   </div>
                   <div class="dit-input-field dit-input-field--advanced" aria-hidden="false">
                     <label class="filters__label" for="values">Commodity code(s)</label>
-                    <!-- select autocomplete="off" class="select-custom select2-hidden-accessible" data-placeholder="" id="values" multiple="" name="values[]" tabindex="0" aria-hidden="true">
-                      <option >100087</option>
-                      <option>450756</option>
-                      <option value="">Unknown</option>
-                    </select -->
                     <input autocomplete="off" id="commoditycodes" type="search" name="commoditycodes" class="filters__field">
                   </div>
                   <div class="dit-input-field dit-input-field--advanced" aria-hidden="false">

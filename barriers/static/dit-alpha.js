@@ -157,8 +157,6 @@ if (selectCustom.length) {
   var $label = $('label[for="' + selectCustom.attr('id') + '"]');
   selectCustom.parent().find('.select2-search__field').attr('aria-labelledby', $label.attr('id'));
 
-  console.log(selectCustom.parent().find('.select2-search__field'), $label.attr('id'));
-
 	/* prevent dropdown from opening when deselecting tag */
 	/* and clear label when deselecting - particularly with backspace */
 	selectCustom.on('select2:unselect', function() {
@@ -387,11 +385,19 @@ $(document).ready(function(){
       $field.attr('aria-expanded', 'true');
       $field.removeClass('hidden');
       $field.find('input, select, textarea').attr('required', 'required');
+
+      if($checkbox.attr('id') == 'dit-step1-no-companies-house'){
+        $('#dit-step1-company-name').prop('required', false);
+      }
     } else{
       $field.attr('aria-hidden', 'true');
       $field.attr('aria-expanded', 'false');
       $field.addClass('hidden');
       $field.find('input, select, textarea').removeAttr('required');
+
+      if($checkbox.attr('id') == 'dit-step1-no-companies-house'){
+        $('#dit-step1-company-name').prop('required', true);
+      }
     }
 
   }
@@ -499,7 +505,7 @@ window.DITAlpha = window.DITAlpha || {};
     /**
      * @param {object}
      */
-  	$form: $('.dit-form'),
+  	$form: $('.js-dit-validate'),
 
     /**
      * init
@@ -512,6 +518,7 @@ window.DITAlpha = window.DITAlpha || {};
     	self.$form.attr('novalidate', 'true');
 
       self.$form.submit(function(e){
+        self.requireOneInGroup(e);
         self.checkForErrors(e);
       });
 
@@ -550,6 +557,7 @@ window.DITAlpha = window.DITAlpha || {};
       self.$form.find('.form-group-error').removeClass('form-group-error');
       self.$form.find('.form-control-error').removeClass('form-control-error');
       $globalError.find('ul').html('');
+      self.$form.removeClass('has-errors');
 
       // Now check the form and if it isn't valid then show them
       if(self.$form[0].checkValidity() !== true){
@@ -558,6 +566,7 @@ window.DITAlpha = window.DITAlpha || {};
         e.preventDefault();
 
         // Unhide the main error message
+        self.$form.addClass('has-errors');
         $globalError.removeClass('hidden').attr('aria-hidden', 'false');
 
         // Unhide inline error message for individual fields
@@ -629,6 +638,45 @@ window.DITAlpha = window.DITAlpha || {};
       $group.prop('required', true);
       if($group.is(":checked")){
         $group.prop('required', false);
+      }
+    },
+
+
+    /**
+     * Swap around the required attribute of an inotu field inside a group where
+     * the user only needs one field to be valid to move on.
+     *
+     * This would work for a group of any inputs with a little
+     * work.
+     *
+     * @param {object} e
+     */
+    requireOneInGroup: function(e){
+
+      var $group = $(e.currentTarget).closest('form').find('.js-require-one-in-group');
+      var $inputs = $group.find('input, textarea, select');
+      var isValid = 0;
+
+      if($group.length === 0){
+        return;
+      }
+
+      // Start by setting all fields to `required` then check if any of there are
+      // valid - this only works if we set at leats one field as being valid on
+      // the front-end to start with.
+      $inputs.prop('required', true);
+
+      $inputs.each(function(){
+        if($(this)[0].checkValidity()){
+          isValid = isValid + 1;
+        }
+      });
+
+      // At least one field is valid so we are happy
+      if(isValid > 0){
+        $inputs.each(function(){
+          $(this).prop('required', false);
+        });
       }
     }
 
