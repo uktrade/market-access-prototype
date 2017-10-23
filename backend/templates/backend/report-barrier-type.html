@@ -43,7 +43,7 @@
     <a href="javascript:void(0);" target="_blank">Learn more about the HMG barrier types</a> (opens in new window)
   </p>
 
-  <form method="get" action="{% url 'report-barrier-type-child' %}">
+  <form method="get" action="{% url 'report-home-make-a-decision' %}">
     <div id="group-field-barrier-type" class="c-form-group">
       <label class="c-form-group__label" for="field-barrier-type">
         <span class="c-form-group__label-text">
@@ -52,6 +52,90 @@
       </label>
       {{ form.barrier_type }}
     </div>
+    <div id="group-field-sub-barrier-type" class="c-form-group u-hidden" aria-hidden="true">
+      <label class="c-form-group__label" for="field-sub-barrier-type">
+        <span class="c-form-group__label-text">
+          Select sub-barrier type
+        </span>
+      </label>
+      <select name="sub_barrier_type" id="field-sub-barrier-type" class="c-form-control"></select>
+    </div>
+    <script>
+      var bt = document.getElementById('id_barrier_type');
+      var btOptions = bt.querySelectorAll('option');
+      var endpoint = '/api/barriersubtypes?barrier_type=';
+      var sub = document.getElementById('field-sub-barrier-type');
+      var subParent = document.getElementById('group-field-sub-barrier-type');
+
+      // Hide grand kids to make the dropdown smaller
+      btOptions.forEach(function(el){
+        if(el.innerHTML.indexOf('------') == 0){
+          el.style.display = 'none';
+        }
+      });
+
+      if(sub && subParent){
+
+        // update the dropdown with AJAX after every change
+        bt.addEventListener('change', function(e){
+
+          var HTML = '';
+          var DONE = 4; // readyState 4 means the request is done.
+          var OK = 200; // status 200 is a successful return.
+          var xhr = new XMLHttpRequest();
+          var ajaxSuccess = false;
+          var JSONx = null;
+
+
+          xhr.open('GET', endpoint + bt.value);
+          xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+          xhr.setRequestHeader('X_REQUESTED_WITH', 'XMLHttpRequest');
+          xhr.setRequestHeader('X-Requested-By', 'XMLHttpRequest');
+          xhr.send();
+
+          xhr.onreadystatechange = function () {
+
+            if (xhr.readyState === DONE) {
+              if (xhr.status === OK) {
+
+                var JSONx = JSON.parse(xhr.responseText);
+
+                if(JSONx.children){
+                  HTML = HTML + '<option value="">' + subParent.querySelector('label').innerHTML + '</option>';
+                  JSONx.children.forEach(function(el){
+                    HTML = HTML + '<option value="' + el.id + '">' + el.name + '</option>';
+
+                    if(el.children){
+                      el.children.forEach(function(el){
+                        HTML = HTML + '<option value="' + el.id + '">--- ' + el.name + '</option>';
+                      });
+                    }
+
+                  });
+                  subParent.setAttribute('aria-hidden', 'false');
+                  subParent.classList.remove('u-hidden');
+                  sub.innerHTML = HTML;
+                  sub.setAttribute('required', true);
+                } else{
+                  subParent.setAttribute('aria-hidden', 'true');
+                  subParent.classList.add('u-hidden');
+                  sub.innerHTML = '';
+                  sub.setAttribute('required', false);
+                }
+              }
+            }
+          };
+
+          // XHR error = send user to linked URL
+          if(!xhr) {
+            alert('Something went wrong when selecting a HMG barrier type');
+          }
+
+        });
+
+      }
+
+    </script>
     <div class="c-form-actions">
       <button class="button" type="submit">Save</button>
       <a href="{% url 'report-home' %}">Back</a>
