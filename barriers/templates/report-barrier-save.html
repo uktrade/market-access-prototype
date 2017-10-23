@@ -20,6 +20,7 @@
         </div>
     </div>
   </div>
+
   <div class="outer-container push--top">
     <div class="grid-container grid-container--inner">
       <div class="column-two-third">
@@ -32,42 +33,42 @@
           <li>
             <a href="{% url 'report-barrier-step1' %}" class="dit-task-list__step"><span class="dit-task-list__step-title">About you</span></a>
             <ul>
-              <li><a href="{% url 'report-barrier-step1' %}#your-details">Your details</a> <span class="dit-task-list__status">completed</span></li>
-              <li><a href="{% url 'report-barrier-step1' %}#your-role">Your role</a> <span class="dit-task-list__status">completed</span></li>
+              <li><a href="{% url 'report-barrier-step1' %}#your-details">Your details</a> {% if completed_1 == 'true' %}<span class="dit-task-list__status">completed</span>{% endif %}</li>
+              <li><a href="{% url 'report-barrier-step1' %}#your-role">Your role</a> {% if completed_1 == 'true' %}<span class="dit-task-list__status">completed</span>{% endif %}</li>
             </ul>
           </li>
           <li>
             <a href="{% url 'report-barrier-step2' %}" class="dit-task-list__step"><span class="dit-task-list__step-title">About your organisation</span></a>
             <ul>
-              <li><a href="{% url 'report-barrier-step2' %}#organisation-details">Organisation details</a></li>
+              <li><a href="{% url 'report-barrier-step2' %}#organisation-details">Organisation details</a>{% if completed_2 == 'true' %}<span class="dit-task-list__status">completed</span>{% endif %}</li>
             </ul>
           </li>
           <li>
             <a href="{% url 'report-barrier-step3' %}" class="dit-task-list__step"><span class="dit-task-list__step-title">About the problem and its impact</span></a>
             <ul>
-              <li><a href="{% url 'report-barrier-step3' %}#your-product">Your product or service</a></li>
-              <li><a href="{% url 'report-barrier-step3' %}#the-problem">The problem</a></li>
-              <li><a href="{% url 'report-barrier-step3' %}#the-impact">The impact on your business</a></li>
-              <li><a href="{% url 'report-barrier-step3' %}#other-companies">Other affected companies</a></li>
+              <li><a href="{% url 'report-barrier-step3' %}#your-product">Your product or service</a> {% if completed_3 == 'true' %}<span class="dit-task-list__status">completed</span>{% endif %}</li>
+              <li><a href="{% url 'report-barrier-step3' %}#the-problem">The problem</a> {% if completed_3 == 'true' %}<span class="dit-task-list__status">completed</span>{% endif %}</li>
+              <li><a href="{% url 'report-barrier-step3' %}#the-impact">The impact on your business</a> {% if completed_3 == 'true' %}<span class="dit-task-list__status">completed</span>{% endif %}</li>
+              <li><a href="{% url 'report-barrier-step3' %}#other-companies">Other affected companies</a> {% if completed_3 == 'true' %}<span class="dit-task-list__status">completed</span>{% endif %}</li>
             </ul>
           </li>
           <li>
             <a href="{% url 'report-barrier-step4' %}" class="dit-task-list__step"><span class="dit-task-list__step-title">Select the type of barrier</span></a>
             <ul>
-              <li><a href="{% url 'report-barrier-step4' %}">Type of barrier</a></li>
+              <li><a href="{% url 'report-barrier-step4' %}">Type of barrier</a>{% if completed_4 == 'true' %}<span class="dit-task-list__status">completed</span>{% endif %}</li>
             </ul>
           </li>
           <li>
             <a href="{% url 'report-barrier-step5' %}" class="dit-task-list__step"><span class="dit-task-list__step-title">Working out the next steps</span></a>
             <ul>
-              <li><a href="{% url 'report-barrier-step5' %}#steps">Steps already taken, your view and support needed</a></li>
-              <li><a href="{% url 'report-barrier-step5' %}#other">Any other details</a></li>
+              <li><a href="{% url 'report-barrier-step5' %}#steps">Steps already taken, your view and support needed{% if completed_5 == 'true' %}<span class="dit-task-list__status">completed</span>{% endif %}</a></li>
+              <li><a href="{% url 'report-barrier-step5' %}#other">Any other details{% if completed_5 == 'true' %}<span class="dit-task-list__status">completed</span>{% endif %}</a></li>
             </ul>
           </li>
           <li>
             <a href="{% url 'report-barrier-step6' %}" class="dit-task-list__step"><span class="dit-task-list__step-title">Confidentiality and privacy</span></a>
             <ul>
-              <li><a href="{% url 'report-barrier-step6' %}">Confidentiality and privacy</a></li>
+              <li><a href="{% url 'report-barrier-step6' %}">Confidentiality and privacy</a>{% if completed_6 == 'true' %}<span class="dit-task-list__status">completed</span>{% endif %}</li>
             </ul>
           </li>
         </ol>

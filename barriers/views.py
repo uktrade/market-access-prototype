@@ -303,6 +303,46 @@ class ReportBarrierSaveView(SessionContextMixin, TemplateView):
     model = BarrierRecord
     template_name = 'report-barrier-save.html'
 
+
+    def get_context_data(self, **kwargs):
+        context = super(ReportBarrierSaveView, self).get_context_data(**kwargs)
+        context['completed_1'] = 'false'
+        context['completed_2'] = 'false'
+        context['completed_3'] = 'false'
+        context['completed_4'] = 'false'
+        context['completed_5'] = 'false'
+        context['completed_6'] = 'false'
+
+        if context['step'] == '1':
+          context['completed_1'] = 'true'
+        elif context['step'] == '2':
+          context['completed_1'] = 'true'
+          context['completed_2'] = 'true'
+        elif context['step'] == '3':
+          context['completed_1'] = 'true'
+          context['completed_2'] = 'true'
+          context['completed_3'] = 'true'
+        elif context['step'] == '4':
+          context['completed_1'] = 'true'
+          context['completed_2'] = 'true'
+          context['completed_3'] = 'true'
+          context['completed_4'] = 'true'
+        elif context['step'] == '5':
+          context['completed_1'] = 'true'
+          context['completed_2'] = 'true'
+          context['completed_3'] = 'true'
+          context['completed_4'] = 'true'
+          context['completed_5'] = 'true'
+        elif context['step'] == '6':
+          context['completed_1'] = 'true'
+          context['completed_2'] = 'true'
+          context['completed_3'] = 'true'
+          context['completed_4'] = 'true'
+          context['completed_5'] = 'true'
+          context['completed_6'] = 'true'
+
+        return context
+
 class ReportBarrierSuccessView(SessionContextMixin, TemplateView):
     model = BarrierRecord
     template_name = 'report-barrier-success.html'

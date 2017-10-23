@@ -90,6 +90,10 @@ urlpatterns = [
         ReportBarrierTaskListView.as_view(),
         name='report-barrier-task-list'
     ),
+    url(r'^report/step(?P<step>\d{1})/save',
+        ReportBarrierSaveView.as_view(),
+        name='report-barrier-save'
+    ),
     url(r'^report/step1',
         ReportBarrierStep1View.as_view(),
         name='report-barrier-step1'
@@ -125,10 +129,6 @@ urlpatterns = [
     url(r'^report/success',
         ReportBarrierSuccessView.as_view(),
         name='report-barrier-success'
-    ),
-    url(r'^report/save',
-        ReportBarrierSaveView.as_view(),
-        name='report-barrier-save'
     ),
     url(r'^report',
         ReportBarrierView.as_view(),
