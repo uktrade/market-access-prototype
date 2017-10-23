@@ -370,6 +370,20 @@ class BarrierType(MPTTModel, AuditableModel):
     def multiselect_label(self, obj):
         return obj.barrier_code + ': ' + obj.name
 
+    def children_as_dict(self, node=None):
+        if node == None:
+            node = self
+        result = {
+            'id': node.pk,
+            'name': node.name,
+            'description': node.description,
+            'barrier_code': node.barrier_code,
+        }
+        children = [node.children_as_dict(c) for c in node.get_children()]
+        if children:
+            result['children'] = children
+        return result
+
 class BarrierTypeMapping(AuditableModel):
     """
     Mapping between one of the existing barrier type lists and ours.

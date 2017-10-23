@@ -26,7 +26,7 @@ from .views import (
     BarriersCaseStudyView, BarriersCaseStudy2View, BarriersCaseStudy3View,
     RequestFastTrackView, FastTrackPhoneTextView,
     ExampleSummaryView,
-    CompaniesHouseRequestView
+    CompaniesHouseRequestView, BarrierSubtypesLookupView
 )
 
 urlpatterns = [
@@ -149,5 +149,9 @@ urlpatterns = [
     url(r'^api/companieshouse',
         CompaniesHouseRequestView.as_view(),
         name='companies-house-lookup'
+    ),
+    url(r'^api/barriersubtypes',
+        BarrierSubtypesLookupView.as_view(),
+        name='barrier-subtypes-lookup'
     ),
 ]

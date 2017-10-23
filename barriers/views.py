@@ -2,6 +2,7 @@
 
 import json
 import requests
+from mptt.templatetags.mptt_tags import cache_tree_children
 
 from django.core.paginator import Paginator
 from django.conf import settings
@@ -330,3 +331,14 @@ class CompaniesHouseRequestView(View):
                          auth=(settings.COMPANIES_HOUSE_API_KEY, ''))
         kwargs['content_type'] = 'application/json'
         return HttpResponse(api_response.text, **kwargs)
+
+
+
+class BarrierSubtypesLookupView(View):
+    def get(self, request, *args, **kwargs):
+        self.barrier_type = request.GET.get('barrier_type', '')
+        tree_node = BarrierType.objects.get(pk=self.barrier_type)
+        tree_children_dict= tree_node.children_as_dict()
+        kwargs['content_type'] = 'application/json'
+        api_response = json.dumps(tree_children_dict)
+        return HttpResponse(api_response, **kwargs)
