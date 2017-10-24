@@ -76,7 +76,9 @@ class ReportHomeDecisionMadeView(ListView):
 class ReportCreateBarrierView(FormView):
     model = BarrierReport
     template_name = 'backend/report-create-barrier.html'
-    form_class = ChooseBarrierTypeForm
+
+    def get_form(self, *args, **kwargs):
+        return ChooseBarrierTypeForm(initial={'barrier_type': '92'})
 
     def get_context_data(self, *args, **kwargs):
         context = super(ReportCreateBarrierView, self).get_context_data(*args, **kwargs)
