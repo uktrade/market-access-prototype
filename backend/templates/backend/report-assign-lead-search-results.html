@@ -4,10 +4,10 @@
 {% block css %}
 {% endblock %}
 {% block head_title %}Data Hub - Trade Barriers{% endblock %}
-{% block breadcrumb %}{% include 'backend/components/breadcrumb.html' with title="Barrier name consisting of country and product at minimum" %}{% endblock %}
+{% block breadcrumb %}{% include 'backend/components/breadcrumb.html' with title="Export of steel rods into China facing unreasonable import quotas" %}{% endblock %}
 {% block local_header__title_before %}{% endblock %}
 {% block local_header__title %}
-  Barrier name consisting of country and product at minimum
+  Export of steel rods into China facing unreasonable import quotas
 {% endblock %}
 {% block local_header__meta %}
 <div class="c-meta-list">
@@ -46,9 +46,9 @@ role.</p>
       </tr>
     </thead>
     <tbody>
-        {% include 'backend/components/person-result.html' with id="1" match="30%" name="Firstname Lastname" department="Department A" database="DIT People finder" %}
-        {% include 'backend/components/person-result.html' with id="2" match="20%" name="Firstname Lastname" department="Department B" database="Barrier record" %}
-        {% include 'backend/components/person-result.html' with id="3" match="10%" name="Firstname Lastname" department="Department C" database="DIT People finder, Barrier record" %}
+        {% include 'backend/components/person-result.html' with id="1" match="30%" name="Firstname Lastname" department="Department A" database="DIT People finder" link="true" %}
+        {% include 'backend/components/person-result.html' with id="2" match="20%" name="Firstname Lastname" department="Department B" database="Barrier record" link="false" %}
+        {% include 'backend/components/person-result.html' with id="3" match="10%" name="Firstname Lastname" department="Department C" database="DIT People finder, Barrier record" link="true" %}
     </tbody>
   </table>
 

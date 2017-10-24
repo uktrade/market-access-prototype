@@ -108,8 +108,8 @@
       <button type="button" class="js-dit-toggle dit-create-barrier-filter-button" aria-controls="create-barrier-filter-form" aria-expanded="true" data-onload-toggle-state="shown">
         <span class="heading-medium">Filter results</span>
         <span class="js-dit-toggle__icon"><img src="{% static 'images/down-arrow.svg' %}" alt=""></span>
-      </div>
-      <form action="{% url 'report-new-instance' %}" method="get" style="" class="dit-create-barrier-filter-form" aria-hidden="false" id="create-barrier-filter-form">
+      </button>
+      <form action="{% url 'report-create-barrier-filtered' %}" method="get" style="" class="dit-create-barrier-filter-form" aria-hidden="false" id="create-barrier-filter-form" novalidate="true">
 
         <div class="dit-create-barrier-filter-form__fields">
           <div>
@@ -140,7 +140,7 @@
                 {# <input id="country" class="c-form-control  c-form-control--light c-form-control--small" name="country" value="" type="text"> #}
                 <select id="country" class="c-form-control  c-form-control--light c-form-control--small" name="country">
                   <option value=""></option>
-                  {% include 'components/countries-simple.html' %}
+                  {% include 'components/countries-simple.html' with country="China" %}
                 </select>
             </div>
 
@@ -229,7 +229,7 @@
                 <label class="form-label-bold" for="product">
                     Product
                 </label>
-                <input id="product" class="c-form-control  c-form-control--light c-form-control--small" name="product" type="text">
+                <input id="product" class="c-form-control c-form-control--light c-form-control--small" name="product" type="text" value="Steel">
             </div>
 
             {# HMG barrier type #}
@@ -240,16 +240,13 @@
                 {{ form.barrier_type }}
             </div>
 
-
-
             {# HMG sub barrier type #}
-            <div class="c-form-group c-form-group--light" id="sub-barrier-wrapper">
+            <div class="c-form-group c-form-group--light u-hidden" id="group-field-sub-barrier-type" aria-hidden="true">
                 <label class="form-label-bold" for="sub-barrier">
                   HMG sub barrier type
                 </label>
-                {{ form.barrier_type }}
+                <select name="sub_barrier_type" id="field-sub-barrier-type" class="c-form-control"></select>
             </div>
-
           </div>
 
           <div>

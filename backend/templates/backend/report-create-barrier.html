@@ -6,10 +6,10 @@
 {% block css %}
 {% endblock %}
 {% block head_title %}Data Hub - Trade Barriers{% endblock %}
-{% block breadcrumb %}{% include 'backend/components/breadcrumb.html' with title="Company X v Country 1" %}{% endblock %}
+{% block breadcrumb %}{% include 'backend/components/breadcrumb.html' with title="Barrier name consisting of country and product at minimum" %}{% endblock %}
 {% block local_header__title_before %}{% endblock %}
 {% block local_header__title %}
-  Company X v Country 1
+  Barrier name consisting of country and product at minimum
 {% endblock %}
 {% block local_header__meta %}
 <div class="c-meta-list">
@@ -25,9 +25,9 @@
 {% block content %}
 
 <h2 class="heading-medium">Log report - new or existing</h2>
-<p>You must create a new barrier record from this report or log it as a new instance of an existing barrier record. Before creating a new record, <strong>please check that no existing record matches the report</strong>.<br>
-<a href="javascript:void(0);">Find out more about creating a barrier record or instances of an existing barrier record</a></p>
-
+<p>You must create a new barrier record from this report or log it as a new instance of an existing barrier record. Before creating a new record, <strong>please check that no existing record matches the report</strong>.</p>
+<p><a href="javascript:void(0);">Find out more about creating a barrier record or instances of an existing barrier record</a></p>
+<br>
 <p><strong>Use the filters to search for an existing barrier record and create an instance</strong><br>
 You don’t have to complete all fields but, enter as much detail as possible to improve your filter results:</p>
 
@@ -55,16 +55,16 @@ You don’t have to complete all fields but, enter as much detail as possible to
   </header>
 
   <ol class="c-entity-list">
-    {% include 'backend/components/dashboard-result.html' with title="Company X vs Country 1" template="report-home" country1="Country 1" status="Reported" sector="Sector" barrier="Barrier" date="Date updated" %}
-    {% include 'backend/components/dashboard-result.html' with title="Company X vs Country 1" template="report-home" country1="Country 1" status="Reported" sector="Sector" barrier="Barrier" date="Date updated" %}
-    {% include 'backend/components/dashboard-result.html' with title="Company X vs Country 1" template="report-home" country1="Country 1" status="Reported" sector="Sector" barrier="Barrier" date="Date updated" %}
-    {% include 'backend/components/dashboard-result.html' with title="Company X vs Country 1" template="report-home" country1="Country 1" status="Reported" sector="Sector" barrier="Barrier" date="Date updated" %}
-    {% include 'backend/components/dashboard-result.html' with title="Company X vs Country 1" template="report-home" country1="Country 1" status="Reported" sector="Sector" barrier="Barrier" date="Date updated" %}
-    {% include 'backend/components/dashboard-result.html' with title="Company X vs Country 1" template="report-home" country1="Country 1" status="Reported" sector="Sector" barrier="Barrier" date="Date updated" %}
-    {% include 'backend/components/dashboard-result.html' with title="Company X vs Country 1" template="report-home" country1="Country 1" status="Reported" sector="Sector" barrier="Barrier" date="Date updated" %}
-    {% include 'backend/components/dashboard-result.html' with title="Company X vs Country 1" template="report-home" country1="Country 1" status="Reported" sector="Sector" barrier="Barrier" date="Date updated" %}
-    {% include 'backend/components/dashboard-result.html' with title="Company X vs Country 1" template="report-home" country1="Country 1" status="Reported" sector="Sector" barrier="Barrier" date="Date updated" %}
-    {% include 'backend/components/dashboard-result.html' with title="Company X vs Country 1" template="report-home" country1="Country 1" status="Reported" sector="Sector" barrier="Barrier" date="Date updated" %}
+    {% include 'backend/components/dashboard-result.html' with title="Barrier name consisting of country and product at minimum" template="report-new-instance" country1="China" status="Reported" sector="Sector" barrier="Unreasonable import quotas" date="Date updated" %}
+    {% include 'backend/components/dashboard-result.html' with title="Barrier name consisting of country and product at minimum" template="report-new-instance" country1="Country 1" status="Reported" sector="Sector" barrier="Barrier" date="Date updated" %}
+    {% include 'backend/components/dashboard-result.html' with title="Barrier name consisting of country and product at minimum" template="report-new-instance" country1="China" status="Reported" sector="Sector" barrier="Unreasonable import quotas" date="Date updated" %}
+    {% include 'backend/components/dashboard-result.html' with title="Barrier name consisting of country and product at minimum" template="report-new-instance" country1="Country 1" status="Reported" sector="Sector" barrier="Barrier" date="Date updated" %}
+    {% include 'backend/components/dashboard-result.html' with title="Barrier name consisting of country and product at minimum" template="report-new-instance" country1="Country 1" status="Reported" sector="Sector" barrier="Barrier" date="Date updated" %}
+    {% include 'backend/components/dashboard-result.html' with title="Barrier name consisting of country and product at minimum" template="report-new-instance" country1="Country 1" status="Reported" sector="Sector" barrier="Barrier" date="Date updated" %}
+    {% include 'backend/components/dashboard-result.html' with title="Barrier name consisting of country and product at minimum" template="report-new-instance" country1="Country 1" status="Reported" sector="Sector" barrier="Barrier" date="Date updated" %}
+    {% include 'backend/components/dashboard-result.html' with title="Barrier name consisting of country and product at minimum" template="report-new-instance" country1="Country 1" status="Reported" sector="Sector" barrier="Barrier" date="Date updated" %}
+    {% include 'backend/components/dashboard-result.html' with title="Barrier name consisting of country and product at minimum" template="report-new-instance" country1="Country 1" status="Reported" sector="Sector" barrier="Barrier" date="Date updated" %}
+    {% include 'backend/components/dashboard-result.html' with title="Barrier name consisting of country and product at minimum" template="report-new-instance" country1="Country 1" status="Reported" sector="Sector" barrier="Barrier" date="Date updated" %}
   </ol>
 
   {% include 'backend/components/pagination.html' with totalPages="17" currentPage="1" %}

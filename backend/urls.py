@@ -23,6 +23,7 @@ from .views import (
     ReportBarrierMakeADecisionView,
     ReportHomeDecisionMadeView,
     ReportCreateBarrierView,
+    ReportCreateBarrierFilteredView,
     ReportNewUKView,
     ReportNewInstanceView,
     ReportHomeBarrierCreatedView,
@@ -92,6 +93,10 @@ urlpatterns = [
     url(r'^report-create-barrier$',
         ReportCreateBarrierView.as_view(),
         name='report-create-barrier'
+    ),
+    url(r'^report-create-barrier/filtered$',
+        ReportCreateBarrierFilteredView.as_view(),
+        name='report-create-barrier-filtered'
     ),
     url(r'^report-new-uk$',
         ReportNewUKView.as_view(),

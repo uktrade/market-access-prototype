@@ -22,6 +22,11 @@
   </div>
   <div class="outer-container push--top">
     <div class="grid-container grid-container--inner">
+      {% if existingbarrier or existingnotification %}
+      <div class="column-one-third dit-progress-bar">
+        {% include 'components/form-existing-message.html' with existingbarrier=existingbarrier %}
+      </div>
+      {% endif %}
       <div class="column-two-third">
         <h1 class="h2">Report a trade barrier</h1>
         <div class="dit-infostrip">

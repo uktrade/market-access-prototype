@@ -5,10 +5,10 @@
 {% block css %}
 {% endblock %}
 {% block head_title %}Data Hub - Trade Barriers{% endblock %}
-{% block breadcrumb %}{% include 'backend/components/breadcrumb.html' with title="Barrier name consisting of country and product at minimum" %}{% endblock %}
+{% block breadcrumb %}{% include 'backend/components/breadcrumb.html' with title="Export of steel rods into China facing unreasonable import quotas" %}{% endblock %}
 {% block local_header__title_before %}{% endblock %}
 {% block local_header__title %}
-  Barrier name consisting of country and product at minimum
+  Export of steel rods into China facing unreasonable import quotas
 {% endblock %}
 {% block local_header__meta %}
 <div class="c-meta-list">
@@ -39,7 +39,7 @@
 <p>You don’t have to complete all fields, but enter as much detail
 as possible to improve your search results.</p>
 
-<form action="{% url 'report-assign-lead-search-results' %}" method="get">
+<form action="{% url 'report-assign-lead-search-results' %}" method="get" novalidate="true">
 
   {# Name #}
   <div class="form-group " id="name-wrapper">
@@ -73,6 +73,14 @@ as possible to improve your search results.</p>
       {{ form.barrier_type }}
   </div>
 
+  {# HMG sub barrier type #}
+  <div class="form-group u-hidden" id="group-field-sub-barrier-type" aria-hidden="true">
+      <label class="form-label-bold" for="sub-barrier">
+        HMG sub barrier type
+      </label>
+      <select name="sub_barrier_type" id="field-sub-barrier-type" class="form-control"></select>
+  </div>
+
   {# Sector #}
   <div class="form-group " id="sector-wrapper">
       <label class="form-label-bold" for="sector">
@@ -90,6 +98,7 @@ as possible to improve your search results.</p>
         Country
       </label>
       <select id="country" class="form-control" name="country">
+        <option value=""></option>
         {% include 'components/countries-simple.html' %}
       </select>
   </div>

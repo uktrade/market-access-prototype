@@ -1,0 +1,154 @@
+{% extends './datahub_layout.html' %}
+{% load staticfiles %}
+{% load trans from i18n %}
+{% load mptt_tags %}
+{% block css %}
+{% endblock %}
+{% block head_title %}Data Hub - Trade Barriers{% endblock %}
+{% block breadcrumb %}{% include 'backend/components/breadcrumb.html' with title="Barrier name consisting of country and product at minimum" %}{% endblock %}
+{% block local_header__title_before %}{% endblock %}
+{% block local_header__title %}
+  Barrier name consisting of country and product at minimum
+{% endblock %}
+{% block local_header__meta %}
+<div class="c-meta-list">
+  Sector, Her Majesty’s Government barrier type, Country, Date added
+</div>
+{% endblock %}
+{% block local_header__progress %}{% endblock %}
+
+{% block sidebar %}
+  {% include 'backend/components/sidebar-nav--screening.html' with nav="assign" extraNav="true" %}
+{% endblock %}
+
+{% block content %}
+
+<h2 class="heading-medium">Log report - new or existing</h2>
+<p>You must create a new barrier record from this report or log it as a new instance of an existing barrier record. Before creating a new record, <strong>please check that no existing record matches the report</strong>.<br>
+<a href="javascript:void(0);">Find out more about creating a barrier record or instances of an existing barrier record</a></p>
+
+<p><strong>Use the filters to search for an existing barrier record and create an instance</strong><br>
+You don’t have to complete all fields but, enter as much detail as possible to improve your filter results:</p>
+
+<article class="c-collection">
+
+  <header class="c-collection__header">
+    <div class="c-collection__header-row">
+
+      <div class="c-collection__header-intro">
+          <span class="c-collection__result-count">245</span> barriers
+      </div>
+
+    </div>
+
+    <style>
+      .dit-edit-filters{
+        background: #f7f7f7;
+        margin: 15px 0 10px;
+        padding: 20px 20px 0;
+      }
+
+      .dit-edit-filters__section:not(:last-child){
+        border-bottom: 1px solid #ccc;
+        margin-bottom: 10px;
+      }
+
+      .dit-edit-filters__field{
+        padding: 0 0 20px;
+      }
+
+      @media (min-width: 768px){
+
+
+        .dit-edit-filters__section:not(:last-child){
+          border-bottom: none;
+          border-right: 1px solid #ccc;
+          margin-bottom: 0;
+        }
+
+        @supports(display: grid){
+          .dit-edit-filters{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-column-gap: 20px;
+          }
+        }
+      }
+
+    </style>
+
+    <div class="dit-edit-filters">
+      <div class="dit-edit-filters__section">
+        <div class="dit-edit-filters__field">
+          <div class="form-label-bold">Barrier record name</div>
+          <div>Name vs Name</div>
+        </div>
+        <div class="dit-edit-filters__field">
+          <div class="form-label-bold">Sector</div>
+          <div>Steel work</div>
+        </div>
+        <div class="dit-edit-filters__field">
+          <div class="form-label-bold">Country</div>
+          <div>England</div>
+        </div>
+        <div class="dit-edit-filters__field">
+          <div class="form-label-bold">Date reported</div>
+          <div>15/11/2016&ndash;02/04/2017 </div>
+        </div>
+      </div>
+      <div class="dit-edit-filters__section">
+        <div class="dit-edit-filters__field">
+          <div class="form-label-bold">Lead facilitator</div>
+          <div>L. Ipsum</div>
+        </div>
+        <div class="dit-edit-filters__field">
+          <div class="form-label-bold">Product type</div>
+          <div>Steel</div>
+        </div>
+        <div class="dit-edit-filters__field">
+          <div class="form-label-bold">Barrier type</div>
+          <div>Lorem</div>
+        </div>
+        <div class="dit-edit-filters__field">
+          <div class="form-label-bold">Sub barrier type</div>
+          <div>Ipsum</div>
+        </div>
+      </div>
+      <div class="dit-edit-filters__section">
+        <div class="dit-edit-filters__field">
+          <div class="form-label-bold">Companies involved</div>
+          <div>Company 1</div>
+          <div>Company 2</div>
+        </div>
+      </div>
+
+    </div>
+
+    <p><a href="{% url 'report-create-barrier' %}" class="button-secondary">Edit</a></p>
+
+    <div class="flash flash--info">
+      <p>1. Review your search results to log a new instance of an existing barrier record. </p>
+      <p>2. If there is no match <a href="{% url 'report-new-uk' %}">Log a new barrier record</a>  </p>
+    </div>
+
+    <div class="c-collection__header-row">
+      <span class="c-collection__pagination-summary">
+        Page 1 of 6
+      </span>
+
+      {% include 'backend/components/sort.html' with active="address_country.name:asc" %}
+
+    </div>
+  </header>
+
+  <ol class="c-entity-list">
+    {% include 'backend/components/dashboard-result.html' with title="Barrier name consisting of country and product at minimum" template="report-new-instance" country1="China" status="Reported" sector="Sector" barrier="Unreasonable import quotas" date="Date updated" %}
+    {% include 'backend/components/dashboard-result.html' with title="Barrier name consisting of country and product at minimum" template="report-new-instance" country1="China" status="Reported" sector="Sector" barrier="Unreasonable import quotas" date="Date updated" %}
+    {% include 'backend/components/dashboard-result.html' with title="Barrier name consisting of country and product at minimum" template="report-new-instance" country1="Country 1" status="Reported" sector="Sector" barrier="Barrier" date="Date updated" %}
+    {% include 'backend/components/dashboard-result.html' with title="Barrier name consisting of country and product at minimum" template="report-new-instance" country1="Country 1" status="Reported" sector="Sector" barrier="Barrier" date="Date updated" %}
+    {% include 'backend/components/dashboard-result.html' with title="Barrier name consisting of country and product at minimum" template="report-new-instance" country1="Country 1" status="Reported" sector="Sector" barrier="Barrier" date="Date updated" %}
+  </ol>
+
+  {% include 'backend/components/pagination.html' with totalPages="6" currentPage="1" %}
+</article>
+{% endblock %}

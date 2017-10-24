@@ -58,7 +58,6 @@ class ReportBarrierTypeChildView(FormView):
         context['barrier_types_children'] = uk_barrier_types
         return context
 
-
 class ReportHomeMakeADecisionView(ListView):
     model = BarrierReport
     template_name = 'backend/report-home-make-a-decision.html'
@@ -87,6 +86,11 @@ class ReportCreateBarrierView(FormView):
         uk_barrier_types = BarrierType.objects.filter(barrier_source=uk_source)
         context['barrier_types'] = uk_barrier_types
         return context
+
+class ReportCreateBarrierFilteredView(ListView):
+    model = BarrierReport
+    template_name = 'backend/report-create-barrier-filtered.html'
+    pass
 
 class ReportNewUKView(ListView):
     model = BarrierReport

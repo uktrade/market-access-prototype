@@ -8,5 +8,5 @@
       <input name="invite" value="{{ id }}" type="radio" aria-labelledby="facilitator-{{ id }}">
     </label>
   </td>
-  <td><a href="javascript:void(0);" aria-labelledby="facilitator-{{ id }}">View profile</a></td>
+  <td>{% if link == 'true' %}<a href="javascript:void(0);" aria-labelledby="facilitator-{{ id }}">View profile</a>{% endif %}</td>
 </tr>
