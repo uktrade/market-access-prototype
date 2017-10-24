@@ -76,7 +76,7 @@ function btUpdate(event){
             subParent.setAttribute('aria-hidden', 'true');
             subParent.classList.add('u-hidden');
             sub.innerHTML = '';
-            sub.setAttribute('required', false);
+            sub.removeAttribute('required');
           }
         }
       }
