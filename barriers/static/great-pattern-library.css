@@ -244,7 +244,8 @@ textarea.form-control {
     opacity: 0
 }
 .multiple-choice label {
-    cursor: pointer
+    cursor: pointer;
+    width: auto;
 }
 .multiple-choice [type=radio]+label::before {
     content: "";

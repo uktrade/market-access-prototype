@@ -76,7 +76,13 @@
               </div>
               <div class="multiple-choice">
                 <input id="dit-step4-support-2" name="dit[step4][support]" value="Local engagement only with UK government officials in the country I am trying to export to" type="radio" required>
-                <label for="dit-step4-support-2">Local engagement only with UK government officials in the country I am trying to export to</label>
+                <label for="dit-step4-support-2">
+                  {% if is_trade_association == True %}
+                    Local engagement only with UK government officials in the country my members are trying to export to
+                  {% else %}
+                    Local engagement only with UK government officials in the country I am trying to export to
+                  {% endif %}
+                </label>
               </div>
               <div class="multiple-choice">
                 <input id="dit-step4-support-3" name="dit[step4][support]" value="Broader UK government engagement" type="radio" required>
@@ -90,7 +96,7 @@
             </fieldset>
           </div>
 
-          <h2 class="dit-form-section-title" id="other">Any other details?</h2>
+          <h2 class="dit-form-section-title" id="other">Any other details</h2>
 
           <div class="form-group">
             <label class="form-label" for="dit-step5-extra">

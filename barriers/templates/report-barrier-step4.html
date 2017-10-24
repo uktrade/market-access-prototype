@@ -55,8 +55,7 @@
               {% recursetree barrier_types %}
                 <div class="multiple-choice {% if node.tree_id == 1 %}push--top{% endif %}">
                   <input id="dit-step3-{{node.tree_id}}" name="dit[step3][choice]" value="{{ node.pk }}" type="checkbox" required>
-                  <label for="dit-step3-{{node.tree_id}}" class="form-label"
-                  {% if node.barrier_code == "11" %}style="white-space: nowrap;"{% endif %}>
+                  <label for="dit-step3-{{node.tree_id}}" class="form-label">
                     {{ node.barrier_code }}) {{ node.name }}
                     {% if node.description %}
                     <span class="form-hint">
