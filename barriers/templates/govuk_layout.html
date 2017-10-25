@@ -26,9 +26,9 @@
         {% endblock %}
     </head>
 
-    <body>
+    <body class="js-disabled">
 
-        <script>document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script>
+        <script>document.body.className = (document.body.className.replace('js-disabled' : 'js-enabled');</script>
 
         {# include 'google_tag_manager_body.html' #}
 

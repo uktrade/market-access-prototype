@@ -23,6 +23,10 @@
         cursor: n-resize;
       }
 
+      .js-disabled .dit-create-barrier-filter-button{
+        cursor: default;
+      }
+
       .js-dit-toggle__icon{
         position: absolute;
         right: 50px;
@@ -32,6 +36,10 @@
 
       [aria-expanded="true"] .js-dit-toggle__icon{
         transform: none;
+      }
+
+      .js-disabled .js-dit-toggle__icon{
+        display: none;
       }
 
       .dit-create-barrier-filter-form{
@@ -91,6 +99,10 @@
         right: -44px;
         top: 25px;
         width: 44px;
+      }
+
+      .js-disabled .js-dit-add-company{
+        display: none;
       }
 
     </style>

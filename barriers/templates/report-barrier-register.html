@@ -24,10 +24,18 @@
         <div class="dit-infostrip">
           <h1 id="title">Would you like to link this report to your existing trade profile or create a great.gov.uk trade profile?</h1>
         </div>
-        <p id="old-buttons" aria-hidden="false"><button type="button" class="button button-blue" aria-controls="new-buttons" aria-labelledby="title" aria-expanded="false" id="yes-button">Yes</button>&nbsp; &nbsp;<a href="{% url 'report-barrier-success' %}" class="button button-blue" aria-labelledby="title">No</a></p>
+        <p id="old-buttons" aria-hidden="false"><button type="button" class="button button-blue" aria-controls="new-buttons" aria-labelledby="title" aria-expanded="false" id="yes-button">Yes</button>&nbsp; &nbsp;<a href="{% url 'report-barrier-success' %}" class="button button-blue" aria-labelledby="title" id="dit-no-button">No</a></p>
         <p class="hidden" id="new-buttons" aria-hidden="true">
           <a href="{% url 'report-barrier-success' %}" class="button button-blue">Create a trade profile</a>&nbsp;&nbsp;<a href="{% url 'report-barrier-success' %}" class="button button-blue">Log in to your great.gov.uk account</a>
         </p>
+        <style>
+          .js-disabled #yes-button{
+            display: none;
+          }
+          .js-disabled #new-buttons{
+            display: block;
+          }
+        </style>
       </div>
       <script>
         var oldButtons = document.getElementById('old-buttons');

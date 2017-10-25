@@ -30,9 +30,9 @@
 
 </head>
 
-<body class=" ">
+<body class="js-disabled">
     <script>
-        document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');
+        document.body.className = document.body.className.replace('js-disabled', 'js-enabled');
     </script>
 
     <div class="skip-links">
