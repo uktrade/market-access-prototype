@@ -45,9 +45,9 @@ exported to eg. Import of steel rods into India
       <span class="form-hint">
         Provide a brief summary of the report. It is for government use only.
       </span>
-      <textarea id="summary" class="form-control" name="summary" cols="10" rows="5" maxlength="200"></textarea>
+      <textarea id="summary" class="form-control" name="summary" cols="10" rows="5" data-maxwords="2"></textarea>
       <span class="form-hint" id="summary-count">
-        200 characters max.
+        100 words max.
       </span>
   </div>
   <script>
@@ -67,23 +67,45 @@ exported to eg. Import of steel rods into India
        *
        * @return {void}
        */
-      function updateCount(textarea){
-        var length = textarea.value.length;
-        var maxLength = parseInt(textarea.getAttribute('maxlength'), 10);
+      function updateCount(textarea, event){
+        var words = textarea.value.trim().split(' ');
+        var length = words.length;
+        var maxLength = parseInt(textarea.getAttribute('data-maxwords'), 10);
         var whatsLeft = (maxLength - length);
         var summaryCount = document.getElementById('summary-count');
+        var SPACE = 32;
+        var ENTER = 13;
 
-        summaryCount.innerHTML = whatsLeft + ' character(s) left';
+        // Make sure we don't say N-1 words left when the user hasn't typed anything yet
+        if(textarea.value.trim().length === 0){
+          whatsLeft = maxLength;
+        }
+
+        summaryCount.innerHTML = whatsLeft + ' word(s) left';
+
+        // Don't let the user type any more words once they have reached the limit
+        // NOTE: this may still allow a user to copy and paste into the space and/or
+        // cause user confusion if they do/try to copy and paste
+        if(0 > whatsLeft || (1 > whatsLeft && event !== null && (event.keyCode == SPACE || event.keyCode == ENTER))){
+          words = words.slice(0, maxLength);
+          textarea.value = words.join(' ').trim();
+          summaryCount.setAttribute('role', 'alert');
+          // Ensure the count is correct again
+          updateCount(textarea, null);
+        } else{
+          summaryCount.removeAttribute('role');
+        }
+
       }
 
       // Run everytime the user types _ no delay here we *don't* need to throttle/debounce
       summary.addEventListener('keyup', function(event){
-        updateCount(event.target);
+        updateCount(event.target, event);
       });
 
       // Run onload, when data may be pre-populated
       window.addEventListener('load', function(){
-        updateCount(summary);
+        updateCount(summary, null);
       });
     })();
   </script>
