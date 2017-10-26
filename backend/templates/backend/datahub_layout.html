@@ -228,16 +228,6 @@
 
     {% block bodyScripts %}{% endblock bodyScripts %}
 
-    <script>
-      // Remove Django debug toolbar
-      setTimeout(function(){
-        var djdt = document.getElementById('djDebug');
-        if(djdt){
-          djdt.parentNode.removeChild(djdt);
-        }
-      }, 2000);
-    </script>
-
 </body>
 
 </html>
