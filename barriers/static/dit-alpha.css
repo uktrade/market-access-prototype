@@ -693,6 +693,12 @@ main a:hover{
   width: 100%;
 }
 
+@media screen and (min-width: 1180px){
+  .select2-results__options{
+    min-width: 342px;
+  }
+}
+
 .select2-results__options .select2-results__options{
   border: none;
   border-top: 1px solid #ccc;
