@@ -90,12 +90,12 @@
 
                         <li><a href="/" class="dit-header__nav-link">Home</a></li>
                         <li>
-                          <button type="button" class="js-dit-toggle-nav dit-header__nav-link" aria-has-popup="true" aria-expanded="false" aria-controls="menu1">
+                          <button type="button" class="js-dit-toggle-nav dit-header__nav-link" aria-expanded="false" aria-controls="menu1">
                             Export readiness <img src="{% static 'images/down-arrow.png' %}" alt="" aria-hidden="true" height="5" width="8">
                           </button>
                         </li>
                         <li>
-                          <button type="button" class="js-dit-toggle-nav dit-header__nav-link" aria-has-popup="true" aria-expanded="false" aria-controls="menu2">
+                          <button type="button" class="js-dit-toggle-nav dit-header__nav-link" aria-expanded="false" aria-controls="menu2">
                             Services <img src="{% static 'images/down-arrow.png' %}" alt="" aria-hidden="true" height="5" width="8">
                           </button>
                         </li>
@@ -234,5 +234,16 @@
         <script src="{% static 'select2.js' %}"></script>
         <script src="{% static 'dit-alpha.js' %}"></script>
         {% block bodyScripts %}{% endblock bodyScripts %}
+
+        <script>
+          // Remove Django debug toolbar
+          setTimeout(function(){
+            var djdt = document.getElementById('djDebug');
+            if(djdt){
+              djdt.parentNode.removeChild(djdt);
+            }
+          }, 2000);
+        </script>
+
     </body>
 </html>
