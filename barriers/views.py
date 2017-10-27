@@ -42,6 +42,10 @@ class GovUKView(TemplateView):
     template_name = 'govuk.html'
     pass
 
+class GovUKDITView(TemplateView):
+    template_name = 'govuk-dit.html'
+    pass
+
 class PrototypesView(TemplateView):
     template_name = 'prototypes.html'
     pass
