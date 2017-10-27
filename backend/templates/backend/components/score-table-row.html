@@ -1,9 +1,9 @@
 <tr>
   <th scope="row">{{ type }}</th>
-  <td id="score">{{ score }}</td>
+  <td id="score-{{ id }}">{{ score }}</td>
   <td>
-    <label class="block-label selection-button-radio">
-      <input name="score" value="{{ score }}" type="radio" aria-labelledby="score-{{ id }}">
+    <label class="block-label selection-button-radio" for="radio-{{ id }}">
+      <input name="score" value="{{ score }}" type="radio" aria-labelledby="score-{{ id }}" id="radio-{{ id }}">
     </label>
   </td>
 </tr>

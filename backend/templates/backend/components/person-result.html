@@ -1,11 +1,11 @@
 <tr>
   <td>{{ match }}</td>
-  <td id="facilitator-1">{{ name }}</td>
+  <td id="facilitator-{{ id }}">{{ name }}</td>
   <td>{{ department }}</td>
   <td>{{ database }}</td>
   <td>
-    <label class="block-label selection-button-radio">
-      <input name="invite" value="{{ id }}" type="radio" aria-labelledby="facilitator-{{ id }}">
+    <label class="block-label selection-button-radio" for="radio-facilitator-{{ id }}">
+      <input name="invite" value="{{ id }}" type="radio" aria-labelledby="facilitator-{{ id }}" id="radio-facilitator-{{ id }}">
     </label>
   </td>
   <td>{% if link == 'true' %}<a href="javascript:void(0);" aria-labelledby="facilitator-{{ id }}">View profile</a>{% endif %}</td>
