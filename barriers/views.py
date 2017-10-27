@@ -38,6 +38,10 @@ class HomeView(TemplateView):
         context['num_barriers'] = BarrierRecord.objects.count
         return context
 
+class GovUKView(TemplateView):
+    template_name = 'govuk.html'
+    pass
+
 class PrototypesView(TemplateView):
     template_name = 'prototypes.html'
     pass

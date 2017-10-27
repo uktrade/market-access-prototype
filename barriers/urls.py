@@ -11,6 +11,7 @@ from django.conf.urls import url  # , include
 # from django.views import generic
 
 from .views import (
+    GovUKView,
     HomeView,
     PrototypesView,
     BarriersGeneralInfoView,
@@ -33,6 +34,10 @@ urlpatterns = [
     url(r'^$',
         HomeView.as_view(),
         name='home'
+    ),
+    url(r'^govuk$',
+        GovUKView.as_view(),
+        name='govuk'
     ),
     url(r'^prototypes$',
         PrototypesView.as_view(),
