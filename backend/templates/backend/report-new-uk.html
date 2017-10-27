@@ -45,7 +45,7 @@ exported to eg. Import of steel rods into India
       <span class="form-hint">
         Provide a brief summary of the report. It is for government use only.
       </span>
-      <textarea id="summary" class="form-control" name="summary" cols="10" rows="5" data-maxwords="2"></textarea>
+      <textarea id="summary" class="form-control" name="summary" cols="10" rows="5" data-maxwords="100"></textarea>
       <span class="form-hint" id="summary-count">
         100 words max.
       </span>
@@ -60,6 +60,10 @@ exported to eg. Import of steel rods into India
        * DOM element
        */
       var summary = document.getElementById('summary');
+      var summaryCount = document.getElementById('summary-count');
+
+      summaryCount.setAttribute('aria-live', 'polite');
+      summaryCount.setAttribute('aria-busy', 'false');
 
       /**
        * update the count message
@@ -72,7 +76,6 @@ exported to eg. Import of steel rods into India
         var length = words.length;
         var maxLength = parseInt(textarea.getAttribute('data-maxwords'), 10);
         var whatsLeft = (maxLength - length);
-        var summaryCount = document.getElementById('summary-count');
         var SPACE = 32;
         var ENTER = 13;
 
@@ -81,7 +84,9 @@ exported to eg. Import of steel rods into India
           whatsLeft = maxLength;
         }
 
+        summaryCount.setAttribute('aria-busy', 'true');
         summaryCount.innerHTML = whatsLeft + ' word(s) left';
+        summaryCount.setAttribute('aria-busy', 'false');
 
         // Don't let the user type any more words once they have reached the limit
         // NOTE: this may still allow a user to copy and paste into the space and/or
@@ -89,7 +94,7 @@ exported to eg. Import of steel rods into India
         if(0 > whatsLeft || (1 > whatsLeft && event !== null && (event.keyCode == SPACE || event.keyCode == ENTER))){
           words = words.slice(0, maxLength);
           textarea.value = words.join(' ').trim();
-          summaryCount.setAttribute('role', 'alert');
+
           // Ensure the count is correct again
           updateCount(textarea, null);
         } else{
