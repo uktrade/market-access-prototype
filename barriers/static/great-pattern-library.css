@@ -243,6 +243,13 @@ textarea.form-control {
     filter: alpha(opacity=0);
     opacity: 0
 }
+
+.lte-ie8 .multiple-choice input {
+  filter: none;
+  opacity: 1;
+  position: relative;
+}
+
 .multiple-choice label {
     cursor: pointer;
     width: auto;

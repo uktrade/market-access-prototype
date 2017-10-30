@@ -85,7 +85,11 @@ exported to eg. Import of steel rods into India
         }
 
         summaryCount.setAttribute('aria-busy', 'true');
-        summaryCount.innerHTML = whatsLeft + ' word(s) left';
+        if(whatsLeft === 1){
+          summaryCount.innerHTML = whatsLeft + ' word left';
+        } else{
+          summaryCount.innerHTML = whatsLeft + ' words left';
+        }
         summaryCount.setAttribute('aria-busy', 'false');
 
         // Don't let the user type any more words once they have reached the limit
@@ -103,15 +107,19 @@ exported to eg. Import of steel rods into India
 
       }
 
-      // Run everytime the user types _ no delay here we *don't* need to throttle/debounce
-      summary.addEventListener('keyup', function(event){
-        updateCount(event.target, event);
-      });
+      if(document.addEventListener){
 
-      // Run onload, when data may be pre-populated
-      window.addEventListener('load', function(){
-        updateCount(summary, null);
-      });
+        // Run everytime the user types _ no delay here we *don't* need to throttle/debounce
+        summary.addEventListener('keyup', function(event){
+          updateCount(event.target, event);
+        });
+
+        // Run onload, when data may be pre-populated
+        window.addEventListener('load', function(){
+          updateCount(summary, null);
+        });
+
+      }
     })();
   </script>
 

@@ -215,7 +215,7 @@ main a:hover{
   background: transparent;
   appearance: none;
   border: none;
-  color: currentColor;
+  color: #fff;
   cursor: pointer;
   display: block;
   font-size: 14px;
@@ -341,7 +341,8 @@ main a:hover{
 }
 
 .dit-breadcrumb a{
-  color: currentColor;
+  color: #000;
+  display: inline-block;
   font-weight: bold;
   text-decoration: underline;
 }
@@ -572,6 +573,10 @@ main a:hover{
 .dit-inline-form-fields input,
 .dit-inline-form-fields select{
   box-sizing: border-box;
+}
+
+.dit-inline-form-fields .form-control-error{
+  border: 2px solid #b10e1e;
 }
 
 @media screen and (min-width: 768px){
@@ -1066,6 +1071,10 @@ If you have 2 sets of tabs on the same page e.g.
 
 .dit-accordion__body .table{
 	border: none;
+}
+
+.dit-report-title{
+  margin-top: 25px;
 }
 
 /**

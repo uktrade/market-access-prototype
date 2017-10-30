@@ -17,13 +17,49 @@
 
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta property="og:image" content="{% static 'govuk-0.18.0/assets/images/opengraph-image.png' %}">
+
+        <!--[if lt IE 9]>
+        	<script src="{% static 'html5-shiv.js' %}"></script>
+        <![endif]-->
+
         <link href="{% static 'great-pattern-library.css' %}" media="all" rel="stylesheet" />
         <link href="{% static 'main.css' %}" media="all" rel="stylesheet" />
         <link href="{% static 'dit-alpha.css' %}" media="all" rel="stylesheet" />
 
+        <!--[if lt IE 9]>
+          <style>
+          	.outer-container, .inner-container,
+          	.grid-container--inner,
+          	header, .header, .navigation,
+          	footer, .footer, .dit-hero, main, .tr-home{
+              clear: both;
+            }
+
+            .header,
+            .footer{
+              float: left;
+              width: 100%;
+            }
+          </style>
+        <![endif]-->
+        <style>
+          .lte-ie8-only{
+            display: none !important;
+          }
+
+          .lte-ie8 .lte-ie8-only{
+            display: block !important;
+          }
+
+          .lte-ie8 .lte-ie8-hidden{
+            display: none !important;
+          }
+        </style>
+
         {% block css %}
 
         {% endblock %}
+
     </head>
 
     <body class="js-disabled">
@@ -49,13 +85,18 @@
           </defs>
         </svg>
 
-        <header role="banner">
+        <header role="banner" class="header background--great-blue">
           <div class="navigation">
             <div class="navigation-strip background--dark-navy">
               <div class="outer-container">
                 <ul class="list-inline">
                   <li class="float--left soft-half--right navigation-skip-to"><a class="link link--grey" href="#content"><strong>Skip to main content</strong></a></li>
-                  <li class="float--left soft-half--right"><a class="logo-hmg" href="javascript:void(0);" title="Go to the GOV.UK homepage"><img src="{% static 'images/hm-gov-horizontal.svg' %}" alt="HM Government"></a></li>
+                  <li class="float--left soft-half--right">
+                  <a class="logo-hmg" href="javascript:void(0);" title="Go to the GOV.UK homepage">
+                    <img src="{% static 'images/hm-gov-horizontal.svg' %}" alt="HM Government" class="lte-ie8-hidden">
+                    <img src="{% static 'images/hm-gov-horizontal.png' %}" alt="HM Government" class="lte-ie8-only" wdth="129" height="20">
+                  </a>
+                  </li>
                   <li class="float--left soft-half--left"><a class="link link--white" href="javascript:void(0);"><span class="hide-mobile font-light-grey font-light">Part of </span><span class="font-regular">great.gov.uk</span></a></li>
                 </ul>
 
@@ -83,7 +124,8 @@
               <div class="outer-container">
                 <div class="dit-header">
                     <a href="javascript:void(0);" title="Go to the Exporting is GREAT homepage" class="navigation-logo-link float--left">
-                      <img src="{% static 'images/dfit-logo-white.svg' %}" alt="Department for International Trade" class="xnavigation-logo" width="148" height="70">
+                      <img src="{% static 'images/dfit-logo-white.svg' %}" alt="Department for International Trade" class="lte-ie8-hidden" width="148" height="70">
+                      <img src="{% static 'images/dfit-logo-white.png' %}" alt="Department for International Trade" class="lte-ie8-only" width="148" height="70">
                     </a>
                     <nav class="dit-header__nav">
                       <ul class="dit-header__nav-list">
@@ -234,6 +276,16 @@
         <script src="{% static 'select2.js' %}"></script>
         <script src="{% static 'dit-alpha.js' %}"></script>
         {% block bodyScripts %}{% endblock bodyScripts %}
+
+        <script>
+          // Remove Django debug toolbar
+          setTimeout(function(){
+            var djdt = document.getElementById('djDebug');
+            if(djdt){
+              djdt.parentNode.removeChild(djdt);
+            }
+          }, 2000);
+        </script>
 
     </body>
 </html>

@@ -50,6 +50,7 @@ tr-home
             <p>No EC Notifications match your search.</p>
         {% endfor %}
         </ul>
+        <div style="clear:both;"></div>
         {% if ec_notifications.paginator.num_pages > 1 %}
         <p>
             EC notifications {{ec_notifications.start_index}}-{{ec_notifications.end_index}} of {{ ec_notifications.paginator.count }}

@@ -4,30 +4,32 @@
  *
  */
 
-var bt = document.getElementById('id_barrier_type');
+if(Array.prototype.forEach) {
 
-if(bt){
+  var bt = document.getElementById('id_barrier_type');
 
-  var btOptions = bt.querySelectorAll('option');
+  if(bt){
 
-  // Hide grand kids to make the dropdown smaller
-  btOptions.forEach(function(el){
-    if(el.innerHTML.indexOf('------') == 0){
-      el.style.display = 'none';
-    }
-  });
+    var btOptions = bt.querySelectorAll('option');
 
-}
+    // Hide grand kids to make the dropdown smaller
+    btOptions.forEach(function(el){
+      if(el.innerHTML.indexOf('------') == 0){
+        el.style.display = 'none';
+      }
+    });
 
-/**
- * btUpdate
- * Send an AJAX call to our API with the selected id and populate a secondary
- * <select> with the JSON that comes back
- * @param {object} event
- *
- * @return {void}
- */
-function btUpdate(event){
+  }
+
+  /**
+   * btUpdate
+   * Send an AJAX call to our API with the selected id and populate a secondary
+   * <select> with the JSON that comes back
+   * @param {object} event
+   *
+   * @return {void}
+   */
+  function btUpdate(event){
 
     var HTML = '';
     var DONE = 4; // readyState 4 means the request is done.
@@ -88,6 +90,7 @@ function btUpdate(event){
     }
 
   }
+}
 
 if(bt){
   // update the dropdown with AJAX after every change

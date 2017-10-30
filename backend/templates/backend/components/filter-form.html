@@ -23,7 +23,8 @@
         cursor: n-resize;
       }
 
-      .js-disabled .dit-create-barrier-filter-button{
+      .js-disabled .dit-create-barrier-filter-button,
+      .lte-ie8 .dit-create-barrier-filter-button{
         cursor: default;
       }
 
@@ -332,9 +333,11 @@
       }
 
       // Set event listener to toggle on click
-      button.addEventListener('click', function(){
-        toggleFilterForm();
-      });
+      if(document.addEventListener){
+        button.addEventListener('click', function(){
+          toggleFilterForm();
+        });
+      }
 
 
       // Add new company
@@ -407,7 +410,9 @@
       }
 
       // Listeners
-      addButtonListener();
-      removeButtonListener();
+      if(document.addEventListener){
+        addButtonListener();
+        removeButtonListener();
+      }
 
     </script>

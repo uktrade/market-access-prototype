@@ -465,6 +465,26 @@ textarea.form-control {
 .inline .block-label {
     clear: none
 }
+
+.lte-ie8 .selection-button-checkbox,
+.lte-ie8 .selection-button-radio {
+  padding-left: 0 !important;
+}
+
+.lte-ie8 .selection-button-checkbox input,
+.lte-ie8 .selection-button-radio input {
+  filter: none;
+  opacity: 1;
+  position: relative !important;
+}
+
+.lte-ie8 .block-label.selection-button-checkbox:before,
+.lte-ie8 .block-label.selection-button-checkbox:after,
+.lte-ie8 .block-label.selection-button-radio:before,
+.lte-ie8 .block-label.selection-button-radio:after{
+  display: none;
+}
+
 @media (min-width: 641px) {
     .inline .block-label {
         margin-bottom: 0;
