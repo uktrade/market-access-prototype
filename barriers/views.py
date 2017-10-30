@@ -172,20 +172,21 @@ class SearchResultsView(ListView):
         return super(SearchResultsView, self).dispatch(request, *args, **kwargs)
 
     def get_queryset(self, *args, **kwargs):
-        self.uk_barriers = BarrierRecord.objects.all()  # BarrierRecord doesn't have a source
+        self.uk_barriers = BarrierRecord.objects.all()  # BarrierRecord doesn't need to be filtered
         self.ec_notifications = BarrierNotification.objects.filter(barrier_source=self.ec_source)
-        #self.wto_barriers = BarrierNotification.objects.filter(barrier_source=self.wto_source)
         if self.country_search_text:
             # FIXME currently assumes only one country in country_search_text
-            self.country_object = BarrierCountry.objects.get(name__iexact=self.country_search_text)
-            self.uk_barriers = self.uk_barriers.filter(country=self.country_object)
-            self.ec_notifications = self.ec_notifications.filter(country=self.country_object)
-            #self.wto_barriers = self.wto_barriers.filter(country=self.country_object)
+            try:
+                self.country_object = BarrierCountry.objects.get(name__iexact=self.country_search_text)
+            except BarrierCountry.DoesNotExist:
+                self.uk_barriers = []
+                self.ec_notifications = []
+            else:
+                self.uk_barriers = self.uk_barriers.filter(country=self.country_object)
+                self.ec_notifications = self.ec_notifications.filter(country=self.country_object)
         if self.product_search_text:
             self.uk_barriers = self.uk_barriers.filter(products=self.country_object)
             self.ec_notifications = self.ec_notifications.filter(country=self.country_object)
-            #self.wto_barriers = self.wto_barriers.filter(country=self.country_object)
-        # uk_paginator = Paginator(self.uk_barriers, 25) # Show 25 contacts per page
         return self.uk_barriers
 
     def get_context_data(self, **kwargs):
