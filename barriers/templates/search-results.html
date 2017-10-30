@@ -38,12 +38,16 @@ tr-home
         <ul class="">
         {% for uk_barrier in object_list %}
             {% include 'components/barrier-detail-accordion.html' with barrier=uk_barrier %}
+        {% empty %}
+            <p>No UK Barriers match your search.</p>
         {% endfor %}
         </ul>
         <h3 id="ec" class="h4" style="margin-top: 60px;"><strong>Barriers reported to European Commission</strong></h3>
         <ul class="">
         {% for ecnotifications in ec_notifications %}
             {% include 'components/notification-detail.html' with notification=ecnotifications %}
+        {% empty %}
+            <p>No EC Notifications match your search.</p>
         {% endfor %}
         </ul>
         {% if ec_notifications.paginator.num_pages > 1 %}
