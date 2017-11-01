@@ -6,11 +6,12 @@ from mptt.templatetags.mptt_tags import cache_tree_children
 
 from django.core.paginator import Paginator
 from django.conf import settings
+from django.db.models import Q
 from django.shortcuts import HttpResponse
+from django.urls import reverse_lazy
 from django.views.generic import (
     View, TemplateView, FormView, ListView, DetailView
 )
-from django.urls import reverse_lazy
 
 from api_client import api_client
 from .helpers import (
@@ -164,34 +165,45 @@ class SearchResultsView(ListView):
         return super(SearchResultsView, self).__init__(*args, **kwargs)
 
     def dispatch(self, request, *args, **kwargs):
-        self.country_search_text = request.GET.get('countries', None)
-        self.product_search_text = request.GET.get('products', None)
+        self.countries_search_text = request.GET.getlist('countries')
+        self.product_search_text = request.GET.get('s', None)
         self.sector_search_text = request.GET.get('sectors', None)
         self.commoditycode_search_text = request.GET.get('commoditycodes', None)
         self.uk_barriers_page_number = kwargs.get('page', 1)
         return super(SearchResultsView, self).dispatch(request, *args, **kwargs)
 
     def get_queryset(self, *args, **kwargs):
-        self.uk_barriers = BarrierRecord.objects.all()  # BarrierRecord doesn't need to be filtered
-        self.ec_notifications = BarrierNotification.objects.filter(barrier_source=self.ec_source)
-        if self.country_search_text:
-            # FIXME currently assumes only one country in country_search_text
+        self.uk_barriers = BarrierRecord.objects.order_by('pk')  # BarrierRecord doesn't need to be filtered
+        self.ec_notifications = BarrierNotification.objects.filter(barrier_source=self.ec_source).order_by('pk')
+        if self.countries_search_text:
+            countries = []
             try:
-                self.country_object = BarrierCountry.objects.get(name__iexact=self.country_search_text)
+                for country in self.countries_search_text:
+                    country_object = BarrierCountry.objects.get(name__iexact=country)
+                    countries.append(country_object)
             except BarrierCountry.DoesNotExist:
                 self.uk_barriers = []
                 self.ec_notifications = []
             else:
-                self.uk_barriers = self.uk_barriers.filter(country=self.country_object)
-                self.ec_notifications = self.ec_notifications.filter(country=self.country_object)
+                self.uk_barriers = self.uk_barriers.filter(country__in=countries)
+                self.ec_notifications = self.ec_notifications.filter(country__in=countries)
         if self.product_search_text:
-            self.uk_barriers = self.uk_barriers.filter(products=self.country_object)
-            self.ec_notifications = self.ec_notifications.filter(country=self.country_object)
+            self.uk_barriers = self.uk_barriers.filter(
+                Q(title__icontains=self.product_search_text)
+                | Q(description__icontains=self.product_search_text)
+            )
+            self.ec_notifications = self.ec_notifications.filter(
+                Q(title__icontains=self.product_search_text)
+                | Q(description__icontains=self.product_search_text)
+                | Q(products_text__icontains=self.product_search_text)
+            )
         return self.uk_barriers
 
     def get_context_data(self, **kwargs):
         context_data =  super(SearchResultsView, self).get_context_data(**kwargs)
-        context_data['country'] = self.country_text
+        context_data['countries'] = self.countries_search_text
+        context_data['products'] = self.product_search_text
+        context_data['sector'] = self.sector_search_text
         # uk_barriers will be created by default
         context_data['ec_notifications'] = Paginator(self.ec_notifications, self.EC_NOTIFICATIONS_PAGE_SIZE).page(1)
         #context_data['wto_barriers'] = Paginator(self.wto_barriers, self.WTO_NOTIFICATIONS_PAGE_SIZE).page(1)
