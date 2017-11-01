@@ -222,6 +222,7 @@ $(document).ready(function(){
   var AJAX_URL = '/api/companieshouse?company=';
   var perPage = 20;
   var activeCompanies = [];
+  var company = null;
 
   $button.on('click', function(){
 
@@ -283,17 +284,20 @@ $(document).ready(function(){
 
         // strip out non-active companies
         if(json && json.total_results > 0){
-          json.items.forEach(function(company) {
+          for(var i = 0; i < json.items.length; i++){
+            company = json.items[i];
             if(company.company_status == 'active'){
               activeCompanies.push(company);
             }
-          });
+          }
         }
 
         if(activeCompanies.length > 0){
-          activeCompanies.forEach(function(company) {
+          for(var j = 0; j < activeCompanies.length; j++){
+            company = activeCompanies[j];
             resultsHTML = resultsHTML + convertJSONToHTML(company);
-          });
+          }
+
         } else {
           resultsHTML = $templateError.html();
         }

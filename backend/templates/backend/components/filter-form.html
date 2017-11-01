@@ -401,7 +401,7 @@
 
         removeButtons = document.querySelectorAll('.js-dit-remove-company');
 
-        if(removeButtons){
+        if(removeButtons && Array.prototype.forEach){
           removeButtons.forEach(function(button){
             button.removeEventListener('click', removeCompany);
             button.addEventListener('click', removeCompany);
