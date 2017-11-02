@@ -1,0 +1,50 @@
+{% extends './govuk_layout.html' %}
+{% load staticfiles %}
+{% load trans from i18n %}
+{% block css %}
+    <style>
+    </style>
+{% endblock %}
+{% block bodyScripts %}
+{% endblock bodyScripts %}
+{% block head_title %}Log in{% endblock %}
+{% block sub_header %}{# prevent the subheader from showing on form pages #}{% endblock %}
+{% block css_layout_class %}
+{% endblock %}
+
+{% block content %}
+  <div class="outer-container">
+    <div class="dit-breadcrumb grid-container grid-container--inner">
+        <div class="column-full flush--bottom">
+          <a href="https://www.great.gov.uk/">Great.gov.uk</a> <span aria-hidden="true">></span> <a href="/">Trade barriers</a> <span aria-hidden="true">></span> <a href="{% url 'report-barrier' %}">Report a trade barrier</a> <span aria-hidden="true">></span> <strong>Log in</strong>
+        </div>
+    </div>
+  </div>
+  <div class="outer-container push--top">
+    <div class="grid-container grid-container--inner">
+
+      <div class="column-two-third">
+        <h1 class="h2">Log in</h1>
+        <form action="{% url 'report-barrier-step1' %}/save" method="get" novalidate="true">
+          <div class="form-group">
+            <label class="form-label" for="dit-login-email-address">
+              Your email address
+            <span class="error-message hidden" aria-hidden="true">Enter your email address</span>
+            </label>
+            <input class="form-control" id="dit-login-email-address" type="email" name="dit[login][email_address]" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="dit-login-password">
+              Password
+            <span class="error-message hidden" aria-hidden="true">Enter a password</span>
+            </label>
+            <input class="form-control" id="dit-login-password" type="password" name="dit[login][password]" required>
+          </div>
+          <input type="hidden" name="logged_in" value="true">
+          <button type="submit" class="button button-blue">Submit</button>
+        </form>
+      </div>
+    </div>
+ </div>
+
+{% endblock %}

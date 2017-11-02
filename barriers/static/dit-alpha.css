@@ -1184,3 +1184,38 @@ If you have 2 sets of tabs on the same page e.g.
     top: 5px;
   }
 }
+
+.dit-contact{
+  border-left: 1px solid #bfc1c3;
+  padding-left: 15px;
+}
+
+
+.govuk-report-form{
+  border-top: 2px solid #e8e8e8;
+  font-size: 18px;
+  padding-top: 40px;
+}
+
+.govuk-report-form button[aria-controls]{
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent;
+  border: none;
+  color: #6f777b;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 100%;
+  line-height: inherit;
+  margin: 0 0 20px;
+  padding: 0;
+  text-decoration: underline;
+}
+
+.govuk-report-form button[aria-controls]:hover{
+  text-decoration: none;
+}
+
+.govuk-report-form h2{
+  margin-top: 30px;
+}

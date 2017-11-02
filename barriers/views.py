@@ -320,13 +320,17 @@ class ReportBarrierRegisterView(SessionContextMixin, TemplateView):
     model = BarrierRecord
     template_name = 'report-barrier-register.html'
 
+class ReportBarrierLoginView(SessionContextMixin, TemplateView):
+    model = BarrierRecord
+    template_name = 'report-barrier-login.html'
+
 class ReportBarrierSaveView(SessionContextMixin, TemplateView):
     model = BarrierRecord
     template_name = 'report-barrier-save.html'
 
-
     def get_context_data(self, **kwargs):
         context = super(ReportBarrierSaveView, self).get_context_data(**kwargs)
+        context['logged_in'] = 'false'
         context['completed_1'] = 'false'
         context['completed_2'] = 'false'
         context['completed_3'] = 'false'
@@ -379,6 +383,10 @@ class FastTrackPhoneTextView(SessionContextMixin, TemplateView):
 class ExampleSummaryView(SessionContextMixin, TemplateView):
     model = BarrierRecord
     template_name = 'example-summary.html'
+
+class ThanksView(SessionContextMixin, TemplateView):
+    model = BarrierRecord
+    template_name = 'thanks.html'
 
 
 class CompaniesHouseRequestView(View):

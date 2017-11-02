@@ -1,0 +1,31 @@
+{% extends './govuk_layout.html' %}
+{% load staticfiles %}
+{% load trans from i18n %}
+{% block css %}
+{% endblock %}
+{% block bodyScripts %}
+{% endblock bodyScripts %}
+{% block head_title %}Trade barriers - Thank you{% endblock %}
+{% block sub_header %}{# prevent the subheader from showing on form pages #}{% endblock %}
+{% block css_layout_class %}
+{% endblock %}
+
+{% block content %}
+  <div class="outer-container">
+    <div class="dit-breadcrumb grid-container grid-container--inner">
+        <div class="column-full flush--bottom">
+          <a href="https://www.great.gov.uk/">Great.gov.uk</a> <span aria-hidden="true">></span> <a href="/">Trade barriers</a> <span aria-hidden="true">></span> <strong>Thank you</strong>
+        </div>
+    </div>
+  </div>
+  <div class="outer-container">
+    <div class="grid-container grid-container--inner">
+      <div class="column-two-third">
+        <h1 class="h3 push--top">Thank you for submitting your issue</h1>
+        <p><a href="javascript:history.go(-1);" class="button button-white button-border">Back to previous page</a></p>
+
+      </div>
+    </div>
+  </div>
+
+{% endblock %}

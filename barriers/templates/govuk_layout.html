@@ -196,6 +196,96 @@
         <main id="content" class="{% block css_layout_class %}{% endblock css_layout_class %}" role="main">
             {% block content %}
             {% endblock content %}
+
+            <div class="outer-container push--top govuk-report-form">
+              <div class="grid-container grid-container--inner">
+                <div class="column-one-half">
+                  <p>If you need support using this digital service you can email us at:</p>
+                  <div class="dit-contact">
+                    <p><a href="mailto:barriers@trade.gov.uk">barriers@trade.gov.uk</a></p>
+                  </div>
+
+                  <div class="report-a-problem-container">
+                    <div class="report-a-problem-inner">
+                      <div class="report-a-problem-content">
+                        <button type="button" class="js-toggle-govuk-help" aria-controls="govuk-help-form" aria-expanded="false" data-onload-toggle-state="hidden">Is there anything wrong with this page?</button>
+                        <div id="govuk-help-form" aria-hidden="true" class="hidden">
+                          <h2 class="h3">
+                            Help us improve GOV.UK
+                          </h2>
+                          <form accept-charset="UTF-8" action="{% url 'thanks' %}" method="get">
+                            {% csrf_token %}
+                            <p>Don’t include personal or financial information like your National Insurance number or credit card details.</p>
+                            <div class="form-group">
+                              <label for="what_doing" class="form-label">What you were doing</label>
+                              <input id="what_doing" name="what_doing" type="text" class="form-control">
+                            </div>
+                            <div class="form-group">
+                              <label for="what_wrong" class="form-label">What went wrong</label>
+                              <input id="what_wrong" name="what_wrong" type="text" class="form-control">
+                            </div>
+                            <div class="form-group">
+                              <button name="commit" type="submit" class="button button-blue">Send</button>
+                            </div>
+                          </form>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+            </div>
+          </div>
+          <script>
+
+            // Toggle the filter form
+            var button = document.querySelector('.js-toggle-govuk-help');
+            var content = document.querySelector('#' + button.getAttribute('aria-controls'));
+            var toggleState = button.getAttribute('data-onload-toggle-state');
+
+            // Hide the form
+            function hideGOVUKHelpForm(){
+              button.setAttribute('aria-expanded', 'false');
+              content.setAttribute('aria-hidden', 'true');
+              content.classList.add('hidden');
+            }
+
+            // Show the form
+            function showGOVUKHelpForm(){
+              button.setAttribute('aria-expanded', 'true');
+              content.setAttribute('aria-hidden', 'false');
+              content.classList.remove('hidden');
+            }
+
+            // Show/Hide then set the state
+            function toggleGOVUKHelpForm(){
+              if(toggleState === 'shown'){
+                hideGOVUKHelpForm();
+                toggleState = 'hidden';
+              } else{
+                showGOVUKHelpForm();
+                toggleState = 'shown';
+              }
+            }
+
+            // On load - should we hide it?
+            if(toggleState === 'hidden'){
+              hideGOVUKHelpForm();
+            }
+
+            // Set event listener to toggle on click but if it's an older browser
+            // simpyl show the form all the time
+            if(document.addEventListener){
+              button.addEventListener('click', function(){
+                toggleGOVUKHelpForm();
+              });
+            } else{
+              showGOVUKHelpForm();
+              toggleState = 'shown';
+            }
+
+          </script>
+
         </main>
 
         {% load trans from i18n %}

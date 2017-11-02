@@ -23,10 +23,11 @@ from .views import (
     ReportBarrierStep1View, ReportBarrierStep2View, ReportBarrierStep3View,
     ReportBarrierStep4View, ReportBarrierStep5View, ReportBarrierStep6View,
     ReportBarrierStep7View, ReportBarrierRegisterView, ReportBarrierSuccessView,
-    ReportBarrierSaveView,
+    ReportBarrierSaveView, ReportBarrierLoginView,
     BarriersCaseStudyView, BarriersCaseStudy2View, BarriersCaseStudy3View,
     RequestFastTrackView, FastTrackPhoneTextView,
     ExampleSummaryView,
+    ThanksView,
     CompaniesHouseRequestView, BarrierSubtypesLookupView
 )
 
@@ -135,6 +136,10 @@ urlpatterns = [
         ReportBarrierRegisterView.as_view(),
         name='report-barrier-register'
     ),
+    url(r'^report/login',
+        ReportBarrierLoginView.as_view(),
+        name='report-barrier-login'
+    ),
     url(r'^report/success',
         ReportBarrierSuccessView.as_view(),
         name='report-barrier-success'
@@ -154,6 +159,10 @@ urlpatterns = [
     url(r'^summary',
         ExampleSummaryView.as_view(),
         name='example-summary'
+    ),
+    url(r'^thanks',
+        ThanksView.as_view(),
+        name='thanks'
     ),
     url(r'^api/companieshouse',
         CompaniesHouseRequestView.as_view(),

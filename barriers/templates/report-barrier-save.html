@@ -30,10 +30,17 @@
       {% endif %}
       <div class="column-two-third">
         <h1 class="h2">Report a trade barrier</h1>
-        <div class="dit-infostrip">
-          <p>Log in to save your progress, access an existing trade profile or create a new one.</p>
-        </div>
-        <p><a href="javascript:void(0);" class="button button-blue">Create a trade profile</a>&nbsp;&nbsp;<a href="javascript:void(0);" class="button button-blue">Log in to your great.gov.uk account</a></p>
+
+        {% if logged_in == 'true' %}
+          <div class="dit-infostrip">
+            <p>Your progress has been saved.</p>
+          </div>
+        {% else %}
+          <div class="dit-infostrip">
+            <p>Log in to save your progress, access an existing trade profile or create a new one.</p>
+          </div>
+          <p><a href="javascript:void(0);" class="button button-blue">Create a trade profile</a>&nbsp;&nbsp;<a href="{% url 'report-barrier-login' %}" class="button button-blue">Log in to your great.gov.uk account</a></p>
+        {% endif %}
         <ol class="dit-task-list">
           <li>
             <a href="{% url 'report-barrier-step1' %}" class="dit-task-list__step"><span class="dit-task-list__step-title">About you</span></a>
