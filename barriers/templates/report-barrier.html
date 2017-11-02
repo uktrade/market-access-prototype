@@ -27,9 +27,11 @@ tr-home
   <div class="dit-hero" style="background-image: url({% static 'images/placeholder-hero.png' %});">
     <div class="outer-container">
       <div class="grid-container grid-container--inner">
-        <div class="column-full dit-hero__copy">
+        <div class="column-two-third dit-hero__copy">
             <h1 class="dit-hero__title">{% trans "Report a trade barrier" %}</h1>
             <p class="dit-hero__summary">The government works with the World Trade Organisation and other governments around the world to reduce the impact of trade barriers. Departments and agencies work together to understand the problems and develop action plans to resolve them. Steps may include using our representatives abroad, ministerial visits or direct negotiations.</p>
+        </div>
+        <div class="column-full">
             <div class="grid-container grid-container--inner">
               <div class="column-two-third">
                 <p class="dit-hero__summary">Find out more about <a href="{% url 'barriers-general-info' %}">different types of trade barrier</a>, <a href="{% url 'search' %}">check barriers in a particular market</a> or learn about opportunities in our <a href="javascript:void(0);">export country profiles</a>.</p>
