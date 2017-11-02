@@ -5,15 +5,15 @@
 {% load mptt_tags %}
 {% block css %}
 {% endblock %}
-{% block head_title %}Log report - new or existing{% endblock %}
-{% block breadcrumb %}{% include 'backend/components/breadcrumb.html' with title="Barrier name consisting of country and product at minimum" %}{% endblock %}
+{% block head_title %}Link to a record - new or existing{% endblock %}
+{% block breadcrumb %}{% include 'backend/components/breadcrumb.html' with title="Fashion UK Ltd vs South Korea" %}{% endblock %}
 {% block local_header__title_before %}{% endblock %}
 {% block local_header__title %}
-  Barrier name consisting of country and product at minimum
+  Fashion UK Ltd vs South Korea
 {% endblock %}
 {% block local_header__meta %}
 <div class="c-meta-list">
-  Sector, Her Majesty’s Government barrier type, Country, Date added
+  Fashion, Burdensome customs procedure, South Korea, 1st Nov 2017
 </div>
 {% endblock %}
 {% block local_header__progress %}{% endblock %}
@@ -24,7 +24,7 @@
 
 {% block content %}
 
-<h2 class="heading-medium">Log report - new or existing</h2>
+<h2 class="heading-medium">Link to a record - new or existing</h2>
 <p>You must create a new barrier record from this report or log it as a new instance of an existing barrier record. Before creating a new record, <strong>please check that no existing record matches the report</strong>.</p>
 <p><a href="javascript:void(0);">Find out more about creating a barrier record or instances of an existing barrier record</a></p>
 <br>
@@ -55,16 +55,16 @@ You don’t have to complete all fields but, enter as much detail as possible to
   </header>
 
   <ol class="c-entity-list">
-    {% include 'backend/components/dashboard-result.html' with title="Barrier name consisting of country and product at minimum" template="report-new-instance" country1="China" status="Reported" sector="Sector" barrier="Unreasonable import quotas" date="Date updated" %}
-    {% include 'backend/components/dashboard-result.html' with title="Barrier name consisting of country and product at minimum" template="report-new-instance" country1="Country 1" status="Reported" sector="Sector" barrier="Barrier" date="Date updated" %}
-    {% include 'backend/components/dashboard-result.html' with title="Barrier name consisting of country and product at minimum" template="report-new-instance" country1="China" status="Reported" sector="Sector" barrier="Unreasonable import quotas" date="Date updated" %}
-    {% include 'backend/components/dashboard-result.html' with title="Barrier name consisting of country and product at minimum" template="report-new-instance" country1="Country 1" status="Reported" sector="Sector" barrier="Barrier" date="Date updated" %}
-    {% include 'backend/components/dashboard-result.html' with title="Barrier name consisting of country and product at minimum" template="report-new-instance" country1="Country 1" status="Reported" sector="Sector" barrier="Barrier" date="Date updated" %}
-    {% include 'backend/components/dashboard-result.html' with title="Barrier name consisting of country and product at minimum" template="report-new-instance" country1="Country 1" status="Reported" sector="Sector" barrier="Barrier" date="Date updated" %}
-    {% include 'backend/components/dashboard-result.html' with title="Barrier name consisting of country and product at minimum" template="report-new-instance" country1="Country 1" status="Reported" sector="Sector" barrier="Barrier" date="Date updated" %}
-    {% include 'backend/components/dashboard-result.html' with title="Barrier name consisting of country and product at minimum" template="report-new-instance" country1="Country 1" status="Reported" sector="Sector" barrier="Barrier" date="Date updated" %}
-    {% include 'backend/components/dashboard-result.html' with title="Barrier name consisting of country and product at minimum" template="report-new-instance" country1="Country 1" status="Reported" sector="Sector" barrier="Barrier" date="Date updated" %}
-    {% include 'backend/components/dashboard-result.html' with title="Barrier name consisting of country and product at minimum" template="report-new-instance" country1="Country 1" status="Reported" sector="Sector" barrier="Barrier" date="Date updated" %}
+    {% include 'backend/components/dashboard-result.html' with title="Restrictions to provide satellite services" template="report-new-instance" country1="Argentina" status="Reported" sector="Services - communication, incl. postal services" barrier="Discriminatory treatment" date="29/08/2008" %}
+    {% include 'backend/components/dashboard-result.html' with title="Labelling" template="report-new-instance" country1="Mexico" status="Reported" sector="Horizontal" barrier="Standards and other technical requirements" date="16/04/2010" %}
+    {% include 'backend/components/dashboard-result.html' with title="Pricing issues faced by the pharmaceutical industry" template="report-new-instance" country1="Pakistan" status="Reported" sector="Pharmaceuticals" barrier="Registration, documentation, customs procedures" date="05/03/2015" %}
+    {% include 'backend/components/dashboard-result.html' with title="Investment restrictions: foreign ownership caps" template="report-new-instance" country1="Philippines" status="Reported" sector="Horizontal" barrier="Foreign direct investment limitations" date="20/04/2017" %}
+    {% include 'backend/components/dashboard-result.html' with title="Provincial Liquor Board practices" template="report-new-instance" country1="Canada" status="Reported" sector="Wines & spirits" barrier="Competition Issues" date="03/08/2017" %}
+    {% include 'backend/components/dashboard-result.html' with title="Ban on imports of several products on BSE grounds" template="report-new-instance" country1="Ecuador" status="Reported" sector="Agriculture and fisheries" barrier="Bovine spongiform encephalopaty (BSE)" date="14/12/2016" %}
+    {% include 'backend/components/dashboard-result.html' with title="Non-recognition of regionalisation in the EU due to African Swine Fever (ASF)" template="report-new-instance" country1="Taiwan" status="Reported" sector="Agriculture and fisheries" barrier="Non recognition of regionalisation" date="06/04/2017" %}
+    {% include 'backend/components/dashboard-result.html' with title="Price control. Organic law of fair prices" template="report-new-instance" country1="Venezuela" status="Reported" sector="Horizontal" barrier="Other non-tariff measures" date="23/01/2017" %}
+    {% include 'backend/components/dashboard-result.html' with title="Airbus A380 restricted access to Tokyo Haneda airport" template="report-new-instance" country1="Japan" status="Reported" sector="Aircraft" barrier="Standards and other technical requirements" date="27/07/2017" %}
+    {% include 'backend/components/dashboard-result.html' with title="Excise discrimination on imported spirits" template="report-new-instance" country1="Turkey" status="Reported" sector="Wines & spirits" barrier="Tariffs and duties" date="02/12/2016" %}
   </ol>
 
   {% include 'backend/components/pagination.html' with totalPages="17" currentPage="1" %}

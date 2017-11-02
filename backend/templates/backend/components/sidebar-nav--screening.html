@@ -4,7 +4,7 @@
     <a class="c-local-nav__link {% if nav == 'barrier' %}is-active{% endif %}" href="{% url 'report-barrier-type' %}">Barrier type</a>
     <a class="c-local-nav__link {% if nav == 'requested' %}is-active{% endif %}" href="javascript:void(0);">Requested action</a>
     {% if extraNav %}
-    <a class="c-local-nav__link {% if nav == 'assign' %}is-active{% endif %}" href="{% url 'report-create-barrier' %}">Log report</a>
+    <a class="c-local-nav__link {% if nav == 'assign' %}is-active{% endif %}" href="{% url 'report-create-barrier' %}">Link to a record</a>
     <a class="c-local-nav__link {% if nav == 'associated' %}is-active{% endif %}" href="javascript:void(0);">Associated barriers</a>
     <a class="c-local-nav__link {% if nav == 'lead' %}is-active{% endif %}" href="{% url 'report-assign-lead' %}">Lead facilitator</a>
     {% endif %}

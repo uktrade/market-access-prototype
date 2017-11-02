@@ -4,10 +4,10 @@
 {% block css %}
 {% endblock %}
 {% block head_title %}Report summary{% endblock %}
-{% block breadcrumb %}{% include 'backend/components/breadcrumb.html' with title="Company X v Country 1" %}{% endblock %}
+{% block breadcrumb %}{% include 'backend/components/breadcrumb.html' with title="Fashion UK Ltd vs South Korea" %}{% endblock %}
 {% block local_header__title_before %}{% endblock %}
 {% block local_header__title %}
-  Company X v Country 1
+  Fashion UK Ltd vs South Korea
 {% endblock %}
 {% block local_header__meta %}
 <div class="c-meta-list">
@@ -35,89 +35,7 @@
         <div class="button disabled">Make a screening decision</div>
     </p>
 
-    <h2 class="heading-medium">About the reporter</h2>
-
-    <table class="table--key-value table--striped">
-        <tbody>
-            <tr>
-                <th>Company</th>
-                <td><a href="javascript:void(0);">Company X</a></td>
-            </tr>
-            <tr>
-                <th>Contact</th>
-                <td><a href="javascript:void(0);">Person A</a></td>
-            </tr>
-            <tr>
-                <th>Type</th>
-                <td>Private Ltd</td>
-            </tr>
-        </tbody>
-    </table>
-
-    <h2 class="heading-medium">About the problem</h2>
-
-    <table class="table--key-value table--striped">
-        <tbody>
-            <tr>
-                <th>Product / service</th>
-                <td><a href="javascript:void(0);">Steel rods</a></td>
-            </tr>
-            <tr>
-                <th>Commodity code</th>
-                <td><a href="javascript:void(0);">01110111</a></td>
-            </tr>
-            <tr>
-                <th>Country</th>
-                <td>China</td>
-            </tr>
-            <tr>
-                <th>Brief description</th>
-                <td>We have run into a few problems exporting our…</td>
-            </tr>
-        </tbody>
-    </table>
-
-    <div>
-      <a href="javascript:void(0);" class="button-secondary">Review / comment</a>
-    </div>
-
-    <h2 class="heading-medium">Barrier type</h2>
-
-    <table class="table--key-value table--striped">
-        <tbody>
-            <tr>
-                <th>Reported type(s)</th>
-                <td>Unfair use of state help of subsidies</td>
-            </tr>
-            <tr>
-                <td></td>
-                <td>Unreasonable import quotas</td>
-            </tr>
-        </tbody>
-    </table>
-
-    <div>
-      <a href="{% url 'report-barrier-type' %}" class="button">Confirm/change the HMG barrier type</a>
-    </div>
-
-    <h2 class="heading-medium">Requested action</h2>
-
-    <table class="table--key-value table--striped">
-        <tbody>
-            <tr>
-                <th>Level of support requested</th>
-                <td>Local engagement only</td>
-            </tr>
-            <tr>
-                <th>Published</th>
-                <td>Perhaps following consultation</td>
-            </tr>
-        </tbody>
-    </table>
-
-    <div>
-      <a href="javascript:void(0);" class="button-secondary">Review / comment</a>
-    </div>
+    {% include 'backend/components/report-details.html' %}
 
 </article>
 

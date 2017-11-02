@@ -36,7 +36,7 @@ tr-home
             Companies affected: {{ object.companies_affected }}<br>
             Status: {{ object.status }}</p>
 
-          <p><a href="{% url 'search-results' %}" class="button button-white button-border">Back to search results</a></p>
+          <p><a href="javascript:history.go(-1);" class="button button-white button-border">Back to search results</a></p>
       </div>
       <div class="column-one-third">
           <p><a href="{% url 'report-notification-existing' pk=object.pk %}" class="button button-red" aria-labelledby="barrier-title">Report if this affects you</a></p>

@@ -1,122 +1,115 @@
 {% load staticfiles %}
 {% load static from staticfiles %}
 
+<!-- Inline styles - only because this is an ALPHA phase project -->
 <style>
-      .hidden{
-        display: none;
-      }
+  .hidden{
+    display: none;
+  }
 
-      .dit-create-barrier-filter-button{
-        -webkit-appearance: none;
-        appearance: none;
-        background-color: transparent;
-        border: none;
-        cursor: s-resize;
-        display: block;
-        padding: 0 30px 0 0;
-        position: relative;
-        text-align: left;
-        width: 100%;
-      }
+  .dit-create-barrier-filter-button{
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: transparent;
+    border: none;
+    cursor: s-resize;
+    display: block;
+    padding: 0 30px 0 0;
+    position: relative;
+    text-align: left;
+    width: 100%;
+  }
 
-      .dit-create-barrier-filter-button[aria-expanded="true"]{
-        cursor: n-resize;
-      }
+  .dit-create-barrier-filter-button[aria-expanded="true"]{
+    cursor: n-resize;
+  }
 
-      .js-disabled .dit-create-barrier-filter-button,
-      .lte-ie8 .dit-create-barrier-filter-button{
-        cursor: default;
-      }
+  .js-disabled .dit-create-barrier-filter-button,
+  .lte-ie8 .dit-create-barrier-filter-button{
+    cursor: default;
+  }
 
-      .js-dit-toggle__icon{
-        position: absolute;
-        right: 50px;
-        top: 5px;
-        transform: rotate(180deg);
-      }
+  .js-dit-toggle__icon{
+    position: absolute;
+    right: 50px;
+    top: 5px;
+    transform: rotate(180deg);
+  }
 
-      [aria-expanded="true"] .js-dit-toggle__icon{
-        transform: none;
-      }
+  [aria-expanded="true"] .js-dit-toggle__icon{
+    transform: none;
+  }
 
-      .js-disabled .js-dit-toggle__icon{
-        display: none;
-      }
+  .js-disabled .js-dit-toggle__icon{
+    display: none;
+  }
 
-      .dit-create-barrier-filter-form{
-        background-color: #f7f7f7;
-        margin-top: 0 !important;
-        padding: 20px 44px 20px 20px;
-      }
+  .dit-create-barrier-filter-form{
+    background-color: #f7f7f7;
+    margin-top: 0 !important;
+    padding: 20px 44px 20px 20px;
+  }
 
-      .dit-create-barrier-filter-form .c-form-control,
-      .dit-create-barrier-filter-form .c-form-control--light{
-        background-color: #fff;
-      }
+  .dit-create-barrier-filter-form .c-form-control,
+  .dit-create-barrier-filter-form .c-form-control--light{
+    background-color: #fff;
+  }
 
+  @media (min-width: 768px){
+    @supports(display: grid){
       .dit-create-barrier-filter-form__fields{
-
+        display: grid;
+        grid-template-columns: 230px 1fr 1fr;
+        grid-column-gap: 20px;
       }
+    }
+  }
 
-      @media (min-width: 768px){
-        @supports(display: grid){
-          .dit-create-barrier-filter-form__fields{
-            display: grid;
-            grid-template-columns: 230px 1fr 1fr;
-            grid-column-gap: 20px;
-          }
-        }
-      }
+  .js-companys-involved-wrapper{
+    position: relative;
+  }
 
-      .js-companys-involved-wrapper{
-        position: relative;
-      }
+  .js-dit-add-company,
+  .js-dit-remove-company{
+    -webkit-appearance: none;
+    appearance: none;
+    background: transparent;
+    border: none;
+    color: #005EA4;
+    cursor: pointer;
+    font-size: 100%;
+    padding: 10px 5px;
+  }
 
-      .js-dit-add-company,
-      .js-dit-remove-company{
-        -webkit-appearance: none;
-        appearance: none;
-        background: transparent;
-        border: none;
-        color: #005EA4;
-        cursor: pointer;
-        font-size: 100%;
-        padding: 10px 5px;
-      }
+  .js-dit-add-company:hover,
+  .js-dit-remove-company:hover{
+    color: #2b8cc4;
+  }
 
-      .js-dit-add-company:hover,
-      .js-dit-remove-company:hover{
-        color: #2b8cc4;
-      }
+  .js-dit-add-company{
+    text-align: left;
+    text-decoration: underline;
+  }
 
-      .js-dit-add-company{
-        text-align: left;
-        text-decoration: underline;
-      }
+  .js-dit-remove-company{
+    height: 44px;
+    position: absolute;
+    right: -44px;
+    top: 25px;
+    width: 44px;
+  }
 
-      .js-dit-remove-company{
-        height: 44px;
-        position: absolute;
-        right: -44px;
-        top: 25px;
-        width: 44px;
-      }
+  .js-disabled .js-dit-add-company{
+    display: none;
+  }
 
-      .js-disabled .js-dit-add-company{
-        display: none;
-      }
-
-    </style>
+</style>
 
     <div class="c-collection__header-row">
       {% comment %}
-      Hi Brendan!
-
       To show/hide the filter form on page load set data-onload-toggle-state="shown"
       on the <button> to show it or data-onload-toggle-state="hidden" to hide it
       e.g. if we have just done a search then we want the form to be visible on load
-
-      Phil
       {% endcomment %}
       <button type="button" class="js-dit-toggle dit-create-barrier-filter-button" aria-controls="create-barrier-filter-form" aria-expanded="true" data-onload-toggle-state="shown">
         <span class="heading-medium">Filter results</span>
@@ -153,7 +146,7 @@
                 {# <input id="country" class="c-form-control  c-form-control--light c-form-control--small" name="country" value="" type="text"> #}
                 <select id="country" class="c-form-control  c-form-control--light c-form-control--small" name="country">
                   <option value=""></option>
-                  {% include 'components/countries-simple.html' with country="China" %}
+                  {% include 'components/countries-simple.html' %}
                 </select>
             </div>
 

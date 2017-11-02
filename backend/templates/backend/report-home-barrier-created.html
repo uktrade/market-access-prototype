@@ -4,14 +4,14 @@
 {% block css %}
 {% endblock %}
 {% block head_title %}Screening - Barrier created{% endblock %}
-{% block breadcrumb %}{% include 'backend/components/breadcrumb.html' with title="Export of steel rods into China facing unreasonable import quotas" %}{% endblock %}
+{% block breadcrumb %}{% include 'backend/components/breadcrumb.html' with title="Make-up blocked by South Korean customs officials" %}{% endblock %}
 {% block local_header__title_before %}{% endblock %}
 {% block local_header__title %}
-  Export of steel rods into China facing unreasonable import quotas
+  Make-up blocked by South Korean customs officials
 {% endblock %}
 {% block local_header__meta %}
 <div class="c-meta-list">
-  Sector, Her Majesty’s Government barrier type, Country, Date added
+  Fashion, Burdensome customs procedures, South Korea, 1st Nov 2017
 </div>
 {% endblock %}
 {% block local_header__progress %}{% endblock %}
@@ -25,21 +25,21 @@
   <article>
 
     <h2 class="heading-medium">Screening</h2>
-    <p>Complete the following tasks to go to assessment</p>
+    <p>Complete the following tasks to go to assessment and response</p>
 
     <div class="flash flash--info">
         <p><a href="{% url 'report-assign-lead' %}">Invite a lead facilitator</a></p>
     </div>
 
     <p>
-        <div class="button disabled">Go to assessment</div>
+        <div class="button disabled">Go to assessment and response</div>
     </p>
 
     <table class="table--key-value table--striped">
         <tbody>
             <tr>
                 <th>Decision</th>
-                <td>Go to assessment</td>
+                <td>Go to assessment and response</td>
             </tr>
         </tbody>
     </table>
@@ -48,86 +48,8 @@
         <a class="button-secondary" href="{% url 'report-barrier-type' %}">Change</a>
     </p>
 
-    <h2 class="heading-medium">About the reporter</h2>
+    {% include 'backend/components/report-details.html' %}
 
-    <table class="table--key-value table--striped">
-        <tbody>
-            <tr>
-                <th>Company</th>
-                <td><a href="javascript:void(0);">Company X</a></td>
-            </tr>
-            <tr>
-                <th>Contact</th>
-                <td><a href="javascript:void(0);">Person A</a></td>
-            </tr>
-            <tr>
-                <th>Type</th>
-                <td>Private Ltd</td>
-            </tr>
-        </tbody>
-    </table>
-
-    <h2 class="heading-medium">About the problem</h2>
-
-    <table class="table--key-value table--striped">
-        <tbody>
-            <tr>
-                <th>Product / service</th>
-                <td><a href="javascript:void(0);">Steel rods</a></td>
-            </tr>
-            <tr>
-                <th>Commodity code</th>
-                <td><a href="javascript:void(0);">01110111</a></td>
-            </tr>
-            <tr>
-                <th>Country</th>
-                <td>China</td>
-            </tr>
-            <tr>
-                <th>Brief description</th>
-                <td>We have run into a few problems exporting our…</td>
-            </tr>
-        </tbody>
-    </table>
-
-    <div>
-      <a href="javascript:void(0);" class="button-secondary">Review / comment</a>
-    </div>
-
-    <h2 class="heading-medium">Barrier type</h2>
-
-    <table class="table--key-value table--striped">
-        <tbody>
-            <tr>
-                <th>Amended type:</th>
-                <td>Unreasonable import quotas</td>
-            </tr>
-        </tbody>
-    </table>
-
-    <div>
-      <a href="{% url 'report-barrier-type' %}" class="button">Edit HMG barrier type</a>
-    </div>
-
-    <h2 class="heading-medium">Requested action</h2>
-
-    <table class="table--key-value table--striped">
-        <tbody>
-            <tr>
-                <th>Level of support requested</th>
-                <td>Local engagement only</td>
-            </tr>
-            <tr>
-                <th>Published</th>
-                <td>Perhaps following consultation</td>
-            </tr>
-        </tbody>
-    </table>
-
-    <div>
-      <a href="javascript:void(0);" class="button-secondary">Review / comment</a>
-    </div>
-
-</article>
+  </article>
 
 {% endblock %}
