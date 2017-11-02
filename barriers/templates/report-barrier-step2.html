@@ -36,7 +36,7 @@
       </div>
       <div class="column-two-third">
         <h1 class="h3 push--bottom dit-report-title">Section 2 of 6: About your organisation</h1>
-        <form action="{% url 'report-barrier-step3' %}" method="post" class="dit-form js-dit-validate" novalidate>
+        <form action="{% url 'report-barrier-step3' %}" method="post" class="dit-form" novalidate>
           {% csrf_token %}
 
           {% include 'components/form-validation.html' %}
