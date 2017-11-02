@@ -4780,7 +4780,8 @@ span.phase-badge {
 }
 .flash.flash--info {
     background-color: #e5eef6;
-    border-left: 8px solid #005ea5
+    border-left: 8px solid #005ea5;
+    color: #005ea5;
 }
 .flash.flash--info-muted {
     background-color: #e9e9e9;

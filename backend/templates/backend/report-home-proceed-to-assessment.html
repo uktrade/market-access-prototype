@@ -3,7 +3,7 @@
 {% load trans from i18n %}
 {% block css %}
 {% endblock %}
-{% block head_title %}Go to assessment and response{% endblock %}
+{% block head_title %}Invite a lead facilitator{% endblock %}
 {% block breadcrumb %}{% include 'backend/components/breadcrumb.html' with title="Make-up blocked by South Korean customs officials" %}{% endblock %}
 {% block local_header__title_before %}{% endblock %}
 {% block local_header__title %}
@@ -21,23 +21,30 @@
 {% endblock %}
 
 {% block content %}
-<h2 class="heading-medium">Go to assessment and response</h2>
-<p>Edit the message below and then click Proceed to start assessment and response of the barrier.</p>
-<p>The invitee will receive your message below and a summary of the barrier. </p>
+<h2 class="heading-medium">Invite a lead facilitator</h2>
+<p>You have chosen to invite: <br>
+<strong>Name:</strong> James Smith<br>
+<strong>Department:</strong> The Department for International Trade</p>
+<p>They will receive your request to act as the lead facilitator with a summary of the trade barrier.</p>
+<p>The following message will also be sent with the invitation. This message can be edited if you would like to do so below:</p>
+<form action="{% url 'report-home-ready-to-proceed' %}" method="get">
 
-<form action="{% url 'dashboard-success' %}" method="get">
+    <div class="form-group " id="message-wrapper">
+        <label class="form-label-bold visually-hidden" for="message">
+          Enter message
+        </label>
 
     {# Message #}
     <div class="form-group " id="message-wrapper">
         <label class="form-label-bold visually-hidden" for="message">
           Enter message
         </label>
-        <textarea id="message" class="form-control" name="message" rows="5" cols="10">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sit amet lacus tellus. Fusce ac massa ac arcu laoreet dictum in ut sapien. Aliquam congue dolor congue, malesuada nisl id, rutrum lectus. Sed non bibendum neque. Donec ullamcorper congue elementum. Aliquam maximus nibh a mauris dapibus, sit amet semper elit pharetra. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Pellentesque tempor posuere magna a ornare. Duis dapibus in tortor ac varius. Donec varius turpis ac sem interdum, et convallis justo placerat. Proin sodales nunc et justo venenatis auctor. </textarea>
+        <textarea id="message" class="form-control" name="message" rows="5" cols="10">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sit amet lacus tellus. Fusce ac massa ac arcu laoreet dictum in ut sapien. Aliquam congue dolor congue, malesuada nisl id, rutrum lectus. Sed non bibendum neque. Donec ullamcorper congue elementum. Aliquam maximus nibh a mauris dapibus, sit amet semper elit pharetra. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae.</textarea>
     </div>
 
     <div class="c-form-actions">
-      <button class="button" type="submit">Proceed</button>
-      <a href="{% url 'report-home-ready-to-proceed' %}">Back</a>
+      <button class="button" type="submit">Invite</button>
+      <a href="{% url 'report-assign-lead-search-results' %}">Back</a>
     </div>
 
 </form>

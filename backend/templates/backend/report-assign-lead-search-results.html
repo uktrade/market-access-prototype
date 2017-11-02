@@ -26,7 +26,7 @@
 invite to be lead facilitator will receive an invitation to take on the
 role.</p>
 
-<form action="{% url 'invite-lead-time-passes' %}" method="get">
+<form action="{% url 'report-home-proceed-to-assessment' %}" method="get">
 
   <style scoped>
     .table-search .block-label {
@@ -46,14 +46,14 @@ role.</p>
       </tr>
     </thead>
     <tbody>
-        {% include 'backend/components/person-result.html' with id="1" match="30%" name="Aaron Coleman" department="DIT" database="DIT People finder" link="true" %}
+        {% include 'backend/components/person-result.html' with id="1" match="30%" name="James Smith" department="DIT" database="DIT People finder" link="true" %}
         {% include 'backend/components/person-result.html' with id="2" match="20%" name="Karen Cooper" department="DEFRA" database="Barrier record" link="false" %}
         {% include 'backend/components/person-result.html' with id="3" match="10%" name="Denise Gutierrez" department="FCO" database="DIT People finder, Barrier record" link="true" %}
     </tbody>
   </table>
 
   <div class="c-form-actions">
-    <button class="button">Invite</button>
+    <button class="button">Send</button>
     <a href="{% url 'report-assign-lead' %}">Back</a>
   </div>
 
@@ -71,7 +71,7 @@ role.</p>
 
 </form>
 
-<form action="{% url 'invite-lead-time-passes' %}" method="get">
+<form action="{% url 'report-home-proceed-to-assessment' %}" method="get">
 
   <div class="form-group " id="email-wrapper">
       <label class="form-label" for="email">or enter their email address below if you know it:</label>
@@ -79,7 +79,7 @@ role.</p>
   </div>
 
   <div class="c-form-actions">
-    <button class="button">Invite</button>
+    <button class="button">Submit</button>
     <a href="{% url 'report-assign-lead' %}">Back</a>
   </div>
 
