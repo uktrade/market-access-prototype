@@ -382,7 +382,6 @@ class ReportBarrierSaveView(SessionContextMixin, TemplateView):
           context['completed_5'] = 'true'
           context['completed_6'] = 'true'
 
-        context['logged_in'] = self.request.session['logged_in']
         return context
 
 class ReportBarrierSuccessView(SessionContextMixin, TemplateView):
