@@ -229,6 +229,8 @@ class SessionContextMixin(object):
             context['existingnotification'] = BarrierNotification.objects.get(pk=existing_notification_id)
         if 'is_trade_association' in self.request.session:
             context['is_trade_association'] = self.request.session['is_trade_association']
+        if 'logged_in' in self.request.session:
+            context['logged_in'] = self.request.session['logged_in']
         return context
 
 
@@ -324,9 +326,23 @@ class ReportBarrierLoginView(SessionContextMixin, TemplateView):
     model = BarrierRecord
     template_name = 'report-barrier-login.html'
 
+class ReportBarrierLogoutView(SessionContextMixin, TemplateView):
+    model = BarrierRecord
+    template_name = 'report-barrier-logout.html'
+
+    def dispatch(self, request, *args, **kwargs):
+        if 'logged_in' in request.session:
+            request.session['logged_in'] = False
+        return super(ReportBarrierLogoutView, self).dispatch(request, *args, **kwargs)
+
 class ReportBarrierSaveView(SessionContextMixin, TemplateView):
     model = BarrierRecord
     template_name = 'report-barrier-save.html'
+
+    def dispatch(self, request, *args, **kwargs):
+        if 'logged_in' in request.GET:
+            request.session['logged_in'] = True
+        return super(ReportBarrierSaveView, self).dispatch(request, *args, **kwargs)
 
     def get_context_data(self, **kwargs):
         context = super(ReportBarrierSaveView, self).get_context_data(**kwargs)
@@ -366,6 +382,7 @@ class ReportBarrierSaveView(SessionContextMixin, TemplateView):
           context['completed_5'] = 'true'
           context['completed_6'] = 'true'
 
+        context['logged_in'] = self.request.session['logged_in']
         return context
 
 class ReportBarrierSuccessView(SessionContextMixin, TemplateView):

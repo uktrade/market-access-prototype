@@ -79,7 +79,7 @@
             </ul>
           </li>
         </ol>
-        {% if logged_in == 'true' %}
+        {% if logged_in %}
         <form action="{% url 'report-barrier-success' %}" method="get">
         {% else %}
         <form action="{% url 'report-barrier-register' %}" method="get">

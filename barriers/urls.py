@@ -23,7 +23,7 @@ from .views import (
     ReportBarrierStep1View, ReportBarrierStep2View, ReportBarrierStep3View,
     ReportBarrierStep4View, ReportBarrierStep5View, ReportBarrierStep6View,
     ReportBarrierStep7View, ReportBarrierRegisterView, ReportBarrierSuccessView,
-    ReportBarrierSaveView, ReportBarrierLoginView,
+    ReportBarrierSaveView, ReportBarrierLoginView, ReportBarrierLogoutView,
     BarriersCaseStudyView, BarriersCaseStudy2View, BarriersCaseStudy3View,
     RequestFastTrackView, FastTrackPhoneTextView,
     ExampleSummaryView,
@@ -139,6 +139,10 @@ urlpatterns = [
     url(r'^report/login',
         ReportBarrierLoginView.as_view(),
         name='report-barrier-login'
+    ),
+    url(r'^report/logout',
+        ReportBarrierLogoutView.as_view(),
+        name='report-barrier-logout'
     ),
     url(r'^report/success',
         ReportBarrierSuccessView.as_view(),

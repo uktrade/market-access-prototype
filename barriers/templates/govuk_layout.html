@@ -101,12 +101,12 @@
                 </ul>
 
                 <ul class="list-inline float--right navigation-login font-regular">
-                  {% if not sso_is_logged_in %}
-                  <li class="float--left soft-half--right"><a class="link--yellow" href="javascript:void(0);">Sign in</a></li>
+                  {% if not logged_in %}
+                  <li class="float--left soft-half--right"><a class="link--yellow" href="{% url 'report-barrier-login' %}">Sign in</a></li>
                   <li class="float--left"><a class="link--yellow" href="javascript:void(0);">Register</a></li>
                   {% else %}
                   <li class="float--left soft-half--right"><a class="link--yellow" href="javascript:void(0);">Profile</a></li>
-                  <li class="float--left"><a class="link--yellow" href="javascript:void(0);">Sign out</a></li>
+                  <li class="float--left"><a class="link--yellow" href="{% url 'report-barrier-logout' %}">Sign out</a></li>
                   {% endif %}
                 </ul>
                 <ul class="list-inline list-separators float--right navigation-login font-regular" id="sso-signout" style="display:none">

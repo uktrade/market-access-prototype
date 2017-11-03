@@ -1,0 +1,33 @@
+{% extends './govuk_layout.html' %}
+{% load staticfiles %}
+{% load trans from i18n %}
+{% block css %}
+    <style>
+    </style>
+{% endblock %}
+{% block bodyScripts %}
+{% endblock bodyScripts %}
+{% block head_title %}Log in{% endblock %}
+{% block sub_header %}{# prevent the subheader from showing on form pages #}{% endblock %}
+{% block css_layout_class %}
+{% endblock %}
+
+{% block content %}
+  <div class="outer-container">
+    <div class="dit-breadcrumb grid-container grid-container--inner">
+        <div class="column-full flush--bottom">
+          <a href="https://www.great.gov.uk/">Great.gov.uk</a> <span aria-hidden="true">></span> <a href="/">Trade barriers</a> <span aria-hidden="true">></span> <a href="{% url 'report-barrier' %}">Report a trade barrier</a> <span aria-hidden="true">></span> <strong>Log in</strong>
+        </div>
+    </div>
+  </div>
+  <div class="outer-container push--top">
+    <div class="grid-container grid-container--inner">
+
+      <div class="column-two-third">
+        <h1 class="h2">Logged out</h1>
+        <p>You are now logged out.</p>
+      </div>
+    </div>
+ </div>
+
+{% endblock %}
