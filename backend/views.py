@@ -78,7 +78,7 @@ class ReportCreateBarrierView(FormView):
     template_name = 'backend/report-create-barrier.html'
 
     def get_form(self, *args, **kwargs):
-        return ChooseBarrierTypeForm(initial={'barrier_type': '92'})
+        return ChooseBarrierTypeForm()
 
     def get_context_data(self, *args, **kwargs):
         context = super(ReportCreateBarrierView, self).get_context_data(*args, **kwargs)
@@ -89,10 +89,21 @@ class ReportCreateBarrierView(FormView):
         context['barrier_types'] = uk_barrier_types
         return context
 
-class ReportCreateBarrierFilteredView(ListView):
+class ReportCreateBarrierFilteredView(FormView):
     model = BarrierReport
     template_name = 'backend/report-create-barrier-filtered.html'
-    pass
+
+    def get_form(self, *args, **kwargs):
+        return ChooseBarrierTypeForm(initial={'barrier_type': '93'})
+
+    def get_context_data(self, *args, **kwargs):
+        context = super(ReportCreateBarrierFilteredView, self).get_context_data(*args, **kwargs)
+        # warning - this will need to change if we change
+        # the code of the UK barrier source
+        uk_source = BarrierSource.objects.get(short_name='UK')
+        uk_barrier_types = BarrierType.objects.filter(barrier_source=uk_source)
+        context['barrier_types'] = uk_barrier_types
+        return context
 
 class ReportNewUKView(ListView):
     model = BarrierReport

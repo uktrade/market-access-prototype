@@ -1,10 +1,11 @@
 {% extends './datahub_layout.html' %}
 {% load staticfiles %}
+{% load static from staticfiles %}
 {% load trans from i18n %}
 {% load mptt_tags %}
 {% block css %}
 {% endblock %}
-{% block head_title %}Link to a record - new or existing search results{% endblock %}
+{% block head_title %}Link to a record - new or existing{% endblock %}
 {% block breadcrumb %}{% include 'backend/components/breadcrumb.html' with title="Fashion UK Ltd vs South Korea" %}{% endblock %}
 {% block local_header__title_before %}{% endblock %}
 {% block local_header__title %}
@@ -24,15 +25,20 @@
 {% block content %}
 
 <h2 class="heading-medium">Link to a record - new or existing</h2>
-<p>You must create a new barrier record from this report or log it as a new instance of an existing barrier record. Before creating a new record, <strong>please check that no existing record matches the report</strong>.<br>
-<a href="javascript:void(0);">Find out more about creating a barrier record or instances of an existing barrier record</a></p>
-
-<p><strong>Use the filters to search for an existing barrier record and create an instance</strong><br>
-You don’t have to complete all fields but, enter as much detail as possible to improve your filter results:</p>
-
+<p>Search and link the report to an existing barrier record, or create a new one.</p>
+<p>Before creating a new record, <strong>please check that no existing record matches the report</strong>.</p>
+<p><a href="javascript:void(0);">Find out more about linking to or creating new records</a></p>
 <article class="c-collection">
 
   <header class="c-collection__header">
+
+    {% include 'backend/components/filter-form.html' with state="hidden" %}
+
+    <div class="flash flash--info">
+      <p>1. Review your search results to log a new instance of an existing barrier record.</p>
+      <p>2. If there is no match <a href="{% url 'report-new-uk' %}">create a new barrier record</a></p>
+    </div>
+
     <div class="c-collection__header-row">
 
       <div class="c-collection__header-intro">
@@ -41,105 +47,19 @@ You don’t have to complete all fields but, enter as much detail as possible to
 
     </div>
 
-    <style>
-      .dit-edit-filters{
-        background: #f7f7f7;
-        margin: 15px 0 10px;
-        padding: 20px 20px 0;
-      }
-
-      .dit-edit-filters__section:not(:last-child){
-        border-bottom: 1px solid #ccc;
-        margin-bottom: 10px;
-      }
-
-      .dit-edit-filters__field{
-        padding: 0 0 20px;
-      }
-
-      @media (min-width: 768px){
-
-
-        .dit-edit-filters__section:not(:last-child){
-          border-bottom: none;
-          border-right: 1px solid #ccc;
-          margin-bottom: 0;
-        }
-
-        @supports(display: grid){
-          .dit-edit-filters{
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
-            grid-column-gap: 20px;
-          }
-        }
-      }
-
-    </style>
-
-    <div class="dit-edit-filters">
-      <div class="dit-edit-filters__section">
-        <div class="dit-edit-filters__field">
-          <div class="form-label-bold">Barrier record name</div>
-          <div></div>
-        </div>
-        <div class="dit-edit-filters__field">
-          <div class="form-label-bold">Sector</div>
-          <div></div>
-        </div>
-        <div class="dit-edit-filters__field">
-          <div class="form-label-bold">Country</div>
-          <div>South Korea</div>
-        </div>
-        <div class="dit-edit-filters__field">
-          <div class="form-label-bold">Date reported</div>
-          <div></div>
-        </div>
-      </div>
-      <div class="dit-edit-filters__section">
-        <div class="dit-edit-filters__field">
-          <div class="form-label-bold">Lead facilitator</div>
-          <div></div>
-        </div>
-        <div class="dit-edit-filters__field">
-          <div class="form-label-bold">Product type</div>
-          <div>Make-up</div>
-        </div>
-        <div class="dit-edit-filters__field">
-          <div class="form-label-bold">Barrier type</div>
-          <div>Burdensome customs procedure</div>
-        </div>
-        <div class="dit-edit-filters__field">
-          <div class="form-label-bold">Sub barrier type</div>
-          <div>N/A</div>
-        </div>
-      </div>
-      <div class="dit-edit-filters__section">
-        <div class="dit-edit-filters__field">
-          <div class="form-label-bold">Companies involved</div>
-          <div></div>
-        </div>
-      </div>
-
-    </div>
-
-    <p><a href="{% url 'report-create-barrier' %}" class="button-secondary">Edit</a></p>
-
-    <div class="flash flash--info">
-      <p>1. Review your search results to log a new instance of an existing barrier record. </p>
-      <p>2. If there is no match <a href="{% url 'report-new-uk' %}">create a new barrier record</a>  </p>
-    </div>
-
     <div class="c-collection__header-row">
       <span class="c-collection__pagination-summary">
         Page 1 of 1
       </span>
 
+      {% include 'backend/components/sort.html' with active="address_country.name:asc" %}
+
     </div>
   </header>
 
+
   <ol class="c-entity-list">
-    {% include 'backend/components/dashboard-result.html' with title="South Korea only permits make-up ingredients tested locally" template="report-new-instance" country1="South Korea" status="Reported" sector="Fashion" barrier="Burdensome customs procedures" date="1st Nov 2017" %}
+    {% include 'backend/components/dashboard-result.html' with title="South Korea only permits make-up ingredients tested locally" template="report-new-instance" country1="South Korea" status="Assessment and response" sector="Fashion" barrier="Burdensome customs procedures" date="1st Nov 2017" %}
   </ol>
 
 </article>

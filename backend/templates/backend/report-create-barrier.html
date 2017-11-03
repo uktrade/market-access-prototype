@@ -25,15 +25,14 @@
 {% block content %}
 
 <h2 class="heading-medium">Link to a record - new or existing</h2>
-<p>You must create a new barrier record from this report or log it as a new instance of an existing barrier record. Before creating a new record, <strong>please check that no existing record matches the report</strong>.</p>
-<p><a href="javascript:void(0);">Find out more about creating a barrier record or instances of an existing barrier record</a></p>
-<br>
-<p><strong>Use the filters to search for an existing barrier record and create an instance</strong><br>
-You don’t have to complete all fields, but enter as much detail as possible to improve your filter results:</p>
-
+<p>Search and link the report to an existing barrier record, or create a new one.</p>
+<p>Before creating a new record, <strong>please check that no existing record matches the report</strong>.</p>
+<p><a href="javascript:void(0);">Find out more about linking to or creating new records</a></p>
 <article class="c-collection">
 
   <header class="c-collection__header">
+
+    {% include 'backend/components/filter-form.html' with state="shown" %}
     <div class="c-collection__header-row">
 
       <div class="c-collection__header-intro">
@@ -41,8 +40,6 @@ You don’t have to complete all fields, but enter as much detail as possible to
       </div>
 
     </div>
-
-    {% include 'backend/components/filter-form.html' %}
 
     <div class="c-collection__header-row">
       <span class="c-collection__pagination-summary">

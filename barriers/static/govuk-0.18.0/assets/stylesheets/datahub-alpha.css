@@ -2841,7 +2841,7 @@ only screen and (min-resolution: 192dpi) {
     font-weight: 600;
     line-height: 32px;
     text-transform: none;
-    margin: 0
+    margin: 0;
 }
 @media (min-width: 641px) {
     .c-entity__title {
@@ -2852,7 +2852,8 @@ only screen and (min-resolution: 192dpi) {
 @media (min-width: 925px) {
     .c-entity__title {
         font-size: 20px;
-        line-height: 32px
+        line-height: 32px;
+        max-width: 75%;
     }
 }
 .c-entity__title a {
