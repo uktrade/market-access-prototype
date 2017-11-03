@@ -3,8 +3,7 @@ Alpha of Market Access / Trade Barriers portal and backend
 
 ## Features of this application
 
-To be added??
-First-time setup
+Runs the front- and back-end of the Market Access (aka Trade Barriers) application for the alpha phase.
 
 ## Languages/applications used
 
