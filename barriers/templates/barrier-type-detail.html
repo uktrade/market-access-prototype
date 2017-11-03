@@ -44,9 +44,18 @@ tr-home
           {% include 'components/reporting-cta.html' %}
       </div>
       <div class="column-one-third">
-          <p><a href="{% url 'report-barrier' %}" class="button button-red" aria-labelledby="barrier-title">Report if this affects you</a></p>
+          <p><a href="{% url 'report-barrier-task-list' %}" class="button button-red" aria-labelledby="barrier-title">Report a barrier</a></p>
           <p><strong>Why report the problem?</strong></p>
           <p>The government can be aware of a trade barrier without knowing how many companies it affects. The more we understand the scale of a trade barrier the more likely we are to be able to do something about it. </p>
+
+
+          <h2><strong>In an emergency</strong></h2>
+
+          <p><a href="{% url 'request-fast-track' %}">Request a fast track response to a trade barrier problem</a></p>
+          <p>Only make a fast track request if:<br>
+          - you are facing significant and imminent financial or other loss<br>
+          - you need action to be taken within the next 48 hours</p>
+
       </div>
     </div>
   </div>
