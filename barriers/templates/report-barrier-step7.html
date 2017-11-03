@@ -32,7 +32,11 @@
         <div class="dit-infostrip">
           <p>Review your answers before submitting your report.</p>
         </div>
+        {% if logged_in %}
+        <form action="{% url 'report-barrier-success' %}" method="get">
+        {% else %}
         <form action="{% url 'report-barrier-register' %}" method="get">
+        {% endif %}
           <input type="hidden" name="existing" value="false">
           <button type="submit" class="button button-green button-large">Submit</button>
         </form>
