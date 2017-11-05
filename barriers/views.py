@@ -410,13 +410,14 @@ class CompaniesHouseRequestView(View):
 
     def get(self, request, *args, **kwargs):
         self.search_company = request.GET.get('company', '')
-        api_response = requests.get('https://api.companieshouse.gov.uk/search/companies'
-                         '?q={}'
-                         .format(self.search_company),
-                         auth=(settings.COMPANIES_HOUSE_API_KEY, ''))
+        api_response = requests.get(
+            'https://api.companieshouse.gov.uk/search/companies'
+            '?q={}&items_per_page={}'
+            .format(self.search_company, settings.COMPANIES_HOUSE_ITEMS_PER_PAGE),
+            auth=(settings.COMPANIES_HOUSE_API_KEY, '')
+        )
         kwargs['content_type'] = 'application/json'
         return HttpResponse(api_response.text, **kwargs)
-
 
 
 class BarrierSubtypesLookupView(View):
